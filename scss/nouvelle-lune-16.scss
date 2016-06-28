@@ -1,0 +1,315 @@
+/* 
+    ----------------------------
+    --    nouvelle-lune-16    --
+    ----------------------------
+
+    Created on : 25 avril 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "s-landing-voyance-2";
+
+/* Dossier images */
+$img_dir : "../images_landing/nouvelle-lune-16/";
+/* Palette */
+$darkblue : #04001F;
+$bg : $darkblue;
+$bg-blue : rgba(56, 164, 250, 0.2);
+$blue-transparent : rgba(56, 164, 250, 0.54);
+$orange : #FD7D00;
+$btn-border : rgba(18, 18, 19, 0.33);
+$blue : #38A4FA;
+$woman : $orange;
+$men : $blue;
+
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: white;
+    background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
+    background-size: cover;
+}
+
+.ContentBand {
+    margin-top: 0;
+}
+
+.SiteLogo {
+    background: url($img_dir+"logo-myastro.png") 2rem no-repeat;
+    background-size: contain;
+    height: 107px;
+    width: 100%;
+    position: absolute;
+}
+.PageLogo {
+    background: url($img_dir+"title.png") center no-repeat;
+    background-size: contain;
+    height: 135px;
+    display: inline-block;
+    width: 100%;
+}
+.TextContent .ContentBand-ColumnHeader {
+    background: url($img_dir+"marie.png") bottom left no-repeat;
+}
+    
+.DescText-Title {
+    background-color: transparent;
+    padding-left: 30%;
+    text-align: center;
+    font-family: 'Dancing Script', 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    margin-bottom: 4rem;
+    text-shadow: 0 0 4px $darkblue;
+    
+    &-Legend {
+        padding-top: 0;
+        background-color: transparent;
+        text-align: right;
+        font-size: 1.9rem;
+        text-shadow: 0 0 4px $darkblue;
+    }
+}
+.DescText-Content {
+    background: transparent;
+    text-indent: 5rem;
+}
+.FormContainer {
+    background-color: $bg-blue;
+    
+    &-Header {
+        font-family: 'Ubuntu Condensed';
+        color: $orange;
+        padding-bottom: 3rem; 
+        background: url($img_dir+"fleche.png") no-repeat bottom center;
+    }
+    
+    &-Submit {
+        padding: 1rem 4rem;
+        border: 1px solid $btn-border;
+        border-radius: 4rem;
+        background-color: $orange;
+        box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
+        color: $darkblue;
+        font-family: 'Ubuntu Condensed';
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        
+        &:hover {
+            box-shadow: inset 4px 4px 1px rgba(0, 0, 0, 0.5), inset -4px -4px 2px rgba(255, 255, 255, 0.5);
+        }
+    }
+    
+    &.DRI .DRI {
+        &-Intro {
+            background-color: $blue;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            
+            &-Title {
+                color: $darkblue;
+                text-transform: uppercase;
+            }
+            &-Text {
+                color: white;
+            }
+        }
+        &-Slogan {
+            background-color: $orange;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            color: $darkblue;
+            text-transform: uppercase;
+        }
+        &-Form {
+            padding: 2rem;
+            background-color: $bg;
+            
+            .FormField-Input {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        &-Sent {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            
+            strong {
+                font-weight: normal;
+                color: $orange;
+            }
+        }
+    }
+}
+
+.FormField-Label {
+    text-transform: uppercase;
+    
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $men;
+    }
+}
+
+.FormField-Input {
+    border: none;
+    
+    &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
+        outline-width: 0;
+        box-shadow: 0 0 6px -1px $darkblue;
+        border-color: transparent;
+    }
+}
+
+.FormField-Info {
+    border: none;
+    color: $darkblue;
+    box-shadow: 0 0 6px -1px $darkblue;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.How-header {
+    font-weight: normal;
+    font-size: 2.4rem;
+    font-family: inherit;
+}
+.How-Wizard {
+    border-color: $darkblue;
+    color: $darkblue;
+    
+    &Item-Img.form {
+        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
+        background-size: contain;
+    }
+    &Item-Img.phone {
+        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
+        background-size: contain;
+    }
+}
+
+.ReassuranceList {
+    background-color: $blue;
+    color: $darkblue;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($img_dir+"ico-star-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($img_dir+"ico-lock-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($img_dir+"ico-gift-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($img_dir+"ico-trophy-dark.png") center no-repeat;
+    background-size: contain;
+}
+
+.alert {
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+@media screen and (min-height: 1000px){
+    body {
+        padding-top: 3.5rem;
+    }
+}
+@media screen and (max-width: 1000px){
+    .TextContent .ContentBand-ColumnHeader {
+        background-position: top left;
+        background-size: auto 75%;
+    }
+}
+@media screen and (max-width: 730px){
+    .SiteHeader {
+        margin-bottom: 4rem;
+        .SiteLogo, .PageLogo {
+            display: table-cell;
+            position: static;
+            width: auto;
+            height: auto;
+        }
+        .SiteLogo {
+            height: 107px;
+            width: 107px;
+            background-position: left;
+        }
+    }
+    .TextContent {
+        max-width: 500px;
+        margin: auto;
+        
+        .ContentBand-ColumnHeader {
+            background-size: initial;
+            background-position: bottom left;
+        }
+    }
+    .DescText-Title {
+        line-height: 4.2rem;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+    }
+    .DescText {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 470px){
+    .SiteHeader {
+        margin-bottom: 0;
+        .SiteLogo, .PageLogo {
+            display: block;
+            width: 100%;
+            background-position: center;
+        }
+        .PageLogo {
+            height: 120px;
+        }
+    }
+    .DescText-Title-Legend {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .TextContent .ContentBand-ColumnHeader {
+        background-position: top left;
+        background-size: auto 75%;
+    }
+}

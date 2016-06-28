@@ -1,0 +1,504 @@
+
+.form-payment .form-control{
+
+	width:90%;
+	border-radius: 5px;
+}
+
+.form-payment{
+	margin-left: 15px;
+}
+
+.btn-payment{
+	margin-left: 128px;
+}
+
+.bloc-forfait-abonnement{
+
+	height:1355px;
+}
+
+.bloc-forfait,.bloc-abonnement{
+position: absolute;
+width:600px;
+
+}
+
+.bloc-abonnement .text-abonnement {
+	
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.text-abonnement h4,.text-forfait h4,.frt-name{
+
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.forfait-cgu,.abo-cgu{
+font-size: 11px;
+
+}
+
+.bloc-forfait .text-forfait{
+	margin-bottom: 0px;
+	text-align: center;
+}
+.bloc-forfait .title-forfait{
+
+width:584px; 
+height:38px;
+margin-top: 20px;
+
+}
+
+.bloc-forfait h3, .bloc-abonnement h3{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.bloc-abonnement .title-abonnement{
+
+width:584px;
+height:38px;
+margin-top: 518px;
+font-weight: bold;
+
+}
+
+.bloc-forfait .tarifs-min{
+width:338px;
+height:171px;
+margin-top: 100px;
+margin-left: 46px;
+}
+
+.bloc-forfait .tarifs-min ul{
+	list-style-type: none;
+	line-height: 27px;
+	font-size: 22px;
+	color: #d04e8c;
+	padding-left: 20px;
+	padding-top:14px;
+	border:1px solid #dfdfdf;
+	box-shadow:-7px 7px 7px #dfdfdf;
+	background-color: #fff;
+}
+
+.bloc-forfait .btn-acheter ul{
+	box-shadow: none;
+	border:none;
+	background: none;
+}
+
+.bloc-forfait .btn-acheter{
+
+background-color: transparent;
+margin-left: 339px;
+margin-top: -172px;
+position:relative;
+z-index: 100;
+}
+
+.bloc-forfait .tarifs-min ul li{
+
+	padding-bottom: 15px;
+}
+
+.bloc-forfait .tarifs-min ul sup{
+	font-size: 13px;
+}
+.bloc-forfait .tarifs-min .txt-nb-min{
+	font-weight: bold;
+}
+
+.bloc-forfait .tarifs-min .pts-pts{
+	color:#848286;
+}
+
+.bloc-forfait .forfait-name{
+	height: 117px;
+	width: 275px;
+	margin:17px 47px;
+}
+
+.bloc-forfait .forfait-secure{
+	background-image: transparent;
+	height: 117px;
+	width: 190px;
+	margin:-110px 353px;
+}
+
+.bloc-forfait .tarifs-min .prix-ini{
+	text-decoration: none;
+	color: #848286;
+	font-size: 16px;
+	text-decoration: line-through;
+}
+
+.bloc-abonnement .offre1{
+	background-image: transparent;
+	height: auto;
+	width: 535px;
+	opacity:0.99;
+}
+
+
+.bloc-abonnement .offre2{
+background-image:transparent;
+	height: auto;
+	width: 540px;
+	margin: -16px 49px;
+}
+
+.bloc-abonnement .offre2 >img{
+	margin-left: -37px;
+}
+
+.bloc-abonnement .offre3{
+	background-image:transparent;
+	height: auto;
+	width: 585px;
+}
+
+.bloc-abonnement .offre1 .btn-cmd{
+	margin-left: -30px;
+	padding-top: 26px;
+}
+
+.bloc-abonnement .offre2 .btn-cmd{
+	/*margin: 96px -137px;*/
+	padding-top: 20px;
+}
+
+.bloc-abonnement .offre3 .btn-cmd{
+	/*margin: 109px 368px;*/
+	margin-left:-40px;
+	padding-top: 55px;
+}
+
+#form-msg{
+text-align: center;
+
+}
+
+/* Large desktop 1 */
+@media (min-width: 1126px) and (max-width: 1500px) {
+
+	.bloc-abonnement .offre1 > img{
+		height:auto;
+		width:301px;
+
+	}
+
+	.bloc-abonnement .offre2 > img{
+		height:auto;
+		width:345px;
+
+	}
+
+	.bloc-abonnement .offre3 > img{
+		height:auto;
+		width:373px;
+
+	}
+
+	.offre1 .btn-cmd,.offre2 .btn-cmd,.offre3 .btn-cmd{
+
+		height:auto;
+		width:150px;
+	}
+}
+
+.txt-pay{
+	font-size: 12px;
+}
+
+/* Portrait tablet to landscape and desktop 2 */
+@media (min-width: 1126px) and (max-width: 1272px) {
+
+	.bloc-forfait .text-forfait, .bloc-abonnement .text-abonnement{
+		width:515px;
+	}
+
+	.bloc-forfait .title-forfait,.bloc-abonnement .title-abonnement{
+		width:515px;
+	}
+
+	.bloc-forfait .tarifs-min{
+		margin-left: 14px;
+	}
+
+	.bloc-forfait .btn-acheter{
+		margin-left: 306px;
+	}
+
+
+	.bloc-forfait .forfait-name{
+		margin:17px 0px;
+	}
+
+	.bloc-forfait .forfait-secure{
+		margin:-110px 289px;
+	}
+
+}
+
+/* 3 */
+@media (min-width: 979px) and (max-width: 1126px) {
+
+
+	.bloc-forfait .title-forfait,.bloc-abonnement .title-abonnement{
+		width:432px;
+	}
+
+	.bloc-forfait .text-forfait{
+		width:432px;
+	}
+
+	.bloc-abonnement .text-abonnement{
+		width:440px;
+	}
+
+	.bloc-forfait .forfait-name{
+		width:160px;
+		margin-left: 
+	}
+
+	.bloc-forfait .forfait-name img{
+		height:auto;
+		width:160px;
+	}
+
+	.bloc-forfait .forfait-secure{
+		width:140px;
+		margin:-134px 234px;
+
+	}
+
+	.bloc-forfait .forfait-secure img{
+		height:auto;
+		width:140px;
+	}
+
+	.bloc-forfait .tarifs-min{
+		width:292px;
+		margin-left:4px;
+
+	}
+	.bloc-forfait .tarifs-min ul{
+		font-size: 18px;
+		padding-left: 13px;
+	}
+
+	.bloc-forfait .btn-acheter{
+		margin-left: 255px;
+	}
+
+	.txt-pay{
+		font-size: 11px;
+	}
+
+	.bloc-abonnement .offre1 > img{
+		height:auto;
+		width:274px;
+	}
+
+	.bloc-abonnement .offre2 > img{
+		height:auto;
+		width:306px;
+	}
+
+	.bloc-abonnement .offre3 > img{
+		height:auto;
+		width:350px;
+	}
+
+	.offre1 .btn-cmd,.offre2 .btn-cmd,.offre3 .btn-cmd{
+
+		height:auto;
+		width:129px;
+	}
+
+	.bloc-abonnement .offre2{
+		margin:-16px 37px;
+	}
+
+	.bloc-abonnement .offre3{
+		margin-left: -5px;
+	}
+
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (min-width: 767px) and (max-width: 979px) {
+	.row-fluid .main-content{
+		width:81% !important;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+	.bloc-forfait-abonnement{
+		height:1174px;
+	}
+
+	.bloc-forfait .forfait-name{
+		width:220px;
+	}
+	.bloc-forfait .forfait-secure{
+		width:126px;
+		margin-left: 300px;
+	}
+
+	.bloc-forfait .title-forfait,.bloc-abonnement .title-abonnement{
+		width:456px;
+	}
+
+	.bloc-forfait .text-forfait,.bloc-abonnement .text-abonnement{
+		width:450px;
+	}
+	.bloc-forfait .tarifs-min{
+		margin-left: 5px;
+		width:320px;
+	}
+	.bloc-forfait .tarifs-min ul{
+		font-size: 20px;
+		padding-left: 5px;
+	}
+
+	.bloc-forfait .btn-acheter{
+		margin-left: 266px;
+	}
+
+	.bloc-abonnement .offre1 > img{
+		height:auto;
+		width:250px;
+	}
+
+	.bloc-abonnement .offre2 > img{
+		height:auto;
+		width:255px;
+	}
+
+	.bloc-abonnement .offre3 > img{
+		height:auto;
+		width:300px;
+	}
+
+	.offre1 .btn-cmd,.offre2 .btn-cmd,.offre3 .btn-cmd{
+		height:auto;
+		width:129px;
+	}
+
+	.bloc-abonnement .offre2{
+		margin:-16px 110px;
+	}
+
+	.offre3 .btn-cmd{
+		margin-left: 0px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	.bloc-forfait-abonnement{
+		height:1063px;
+	}
+
+	.bloc-forfait .title-forfait, .bloc-abonnement .title-abonnement{
+		width:285px;
+	}
+
+	.bloc-forfait .text-forfait, .bloc-abonnement .text-abonnement{
+		width:277px;
+	}
+
+	.bloc-forfait .forfait-name{
+		width:117px;
+		margin: 17px 8px;
+	}
+
+	.bloc-forfait .forfait-secure{
+		margin:-128px 159px;
+		width:112px;
+	}
+
+	.bloc-forfait .tarifs-min{
+		width:245px;
+	}
+
+	.bloc-forfait .text-forfait{
+		font-size: 11px;
+	}
+	.forfait-cgu, .abo-cgu{
+		font-size: 10px;
+	}
+
+	.bloc-forfait .text-forfait h4,.bloc-abonnement .text-abonnement h4{
+		font-size: 13px
+	}
+	
+	.bloc-forfait .tarifs-min ul{
+		box-shadow: none;
+		font-size: 16px;
+	}
+
+	.bloc-forfait .btn-acheter{
+		margin-left: 162px;
+		margin-top: -177px;
+	}
+	.pay-nb-x{
+		display:none;
+	}
+
+	.bloc-abonnement .offre1 > img{
+		height:auto;
+		width:175px;
+
+	}
+
+	.bloc-abonnement .offre2 > img{
+		height:auto;
+		width:180px;
+
+	}
+
+	.bloc-abonnement .offre3 > img{
+		height:auto;
+		width:225px;
+	}
+
+	.offre1 .btn-cmd,.offre2 .btn-cmd,.offre3 .btn-cmd{
+		height:auto;
+		width:100px;
+	}
+
+	.bloc-abonnement .offre2{
+		margin:-16px 40px;
+	}
+
+	.bloc-abonnement .offre3{
+		margin:8px -7px;
+	}
+
+	.bloc-abonnement .offre1 .btn-cmd{
+		margin-left: -10px;
+	}
+	.bloc-abonnement .offre2 .btn-cmd{
+		margin-left: -10px;
+		margin-right: 10px;
+	}
+
+	.bloc-abonnement .offre3 .btn-cmd{
+		margin-left: -36px;
+		padding-top: 18px;
+	}
+}

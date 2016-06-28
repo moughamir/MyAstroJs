@@ -1,0 +1,608 @@
+/* 
+    ----------------------------------------
+    --      structure landing tarot 1     --
+    --        formulaire en dessous       --
+    ----------------------------------------
+
+    Created on : 25 mars 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "knacss/knacss";
+
+.PageWrapper {
+    display: table;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.SiteHeader {
+    text-align: right;
+    font-size: 1.2rem;
+    background-color: grey;
+    padding: 0.5rem 0;
+    
+    &-Nav a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.WidgetBand {
+    background-color: lightgrey;
+}
+
+.SiteLogo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: grey;
+}
+
+.ContentBand {
+    margin-bottom: 5rem;
+    
+    &-Column {
+        display: table-cell;
+        vertical-align: top;
+
+        &Header {
+            margin-bottom: 20px;
+        }
+
+        &.WidgetBand-DescText {
+            width: 30%;
+            padding-right: 1.5rem;
+            padding-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.DescText-Title {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 2.5rem;
+    text-align: center;
+    white-space: nowrap;
+    
+    strong {
+        font-weight: bold;
+    }
+}
+
+.DescText-Content {
+    background: silver;
+    padding: 1.2rem 1.8rem;
+}
+
+.WidgetBand {
+    padding-top: 3rem;
+}
+
+.WidgetBand-Tarot .ContentBand-ColumnHeader {
+    text-align: center;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 4rem;
+    
+    strong {
+        font-weight: bold;
+    }
+}
+
+.WidgetTarot {
+    text-align: center;
+    position: relative;
+    
+    &-Draw, &-Result {
+        margin-bottom: 3rem;
+    }
+    
+    &-Card {
+        display: inline-block;
+        position: relative;
+        width: 89px;
+        height: 170px;
+        overflow: hidden;
+        cursor: pointer;
+        perspective-origin: center bottom;
+        z-index: 5;
+        margin-right: -30px;
+        margin-left: -30px;
+        
+        &.notFlipped {
+            background: white;
+            position: relative;
+        }
+        
+        &.Flipped {
+            z-index: 10;
+        }
+        
+        &-Face {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition-duration: 0.5s;
+            -webkit-transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transition-duration: 0.5s;
+            transition-property: transform;
+            transition-timing-function: ease-out;
+            backface-visibility: hidden;
+            
+            &.front {
+                z-index: 5;
+                border: 3px solid grey;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+            
+            &.back {
+                z-index: 0;
+                -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+                border: 3px solid orange;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                background-size: cover;
+            }
+        }
+        
+        &.Flipped &-Face.front {
+            z-index: 10;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+        &.Flipped &-Face.back {
+            z-index: 5;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+        
+        &.place {
+            background: white;
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
+}
+
+.FormBand-How {
+    &Wrapper {
+        max-width: 580px;
+        margin-right: 3rem;
+    }
+    .ContentBand-ColumnHeader {
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 2.5rem;
+    }
+    .ContentBand-Footer {
+        width: 100%;
+    }
+}
+
+.How-List {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    &Item {
+        display: table;
+        width: 100%;
+        margin-left: 0px;
+        border: 1px solid black;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-style: italic;
+        
+        &-Num {
+            display: table-cell;
+            width: 5rem;
+            padding: 0.4rem 0.8rem;
+            border-right: 1px solid black;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: bold;
+            font-size: 3.4rem;
+            font-style: normal;
+        }
+        
+        &-Img {
+            display: table-cell;
+            width: 5rem;
+            padding: 0.4rem;
+            padding-left: 0.8rem;
+            vertical-align: middle;
+            
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 5.6rem;
+                background-color: grey;
+            }
+        }
+        
+        &-Txt {
+            display: table-cell;
+            padding: 0.4rem 1.6rem 0.4rem 0.8rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.alert {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    border: 1px solid;
+}
+
+.fa img {
+    display: none;
+}
+
+.ContentBand-Column.FormBand-Form {
+    position: relative;
+    text-align: right;
+}
+
+.FormContainer {
+    display: inline-block;
+    max-width: 520px;
+    width: 100%;
+    padding: 2.5rem;
+    padding-top: 1.5rem;
+    margin: auto;
+    text-align: left;
+    border: 1px solid black;
+    
+    &.overlay {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        border: none;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    &-Header {
+        margin: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: inherit;
+        font-size: 3.5rem;
+        font-weight: inherit;
+        border-bottom: 1px solid;
+        white-space: nowrap;
+    }
+    
+    &-Slogan {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    &-Submit {
+        display: block;
+        min-width: 60%;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 1rem 2rem;
+        font-family: inherit;
+        font-size: 2.2rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+.FormField {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+    
+    &-Label {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+    }
+    
+    &-Input {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid;
+        &.radio {
+            display: inline-block;
+        }
+    }
+    
+    &-TableInputContainer {
+        display: table;
+        width: 100%;
+        margin: auto;
+        
+        &-Cell {
+            display: table-cell;
+            padding-right: 1rem;
+            text-align: center;
+            white-space: nowrap;
+            
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        
+        &.fixed-2-col &-Cell {
+            width: 33.333%;
+        }
+        &.fixed-3-col &-Cell {
+            width: 33.333%;
+        }
+        
+        &.gender {
+            max-width: 300px;
+        }    
+        &.relationship-status {
+            max-width: 400px;
+        }
+    }
+    
+    &.radio &-Label, &.radio &-Input {
+        display: inline-block;
+        width: auto;
+        margin-top: 0;
+        vertical-align: middle;
+        margin: 0 0.2rem;
+    }
+    
+    &-Info {
+        display: block;
+        position: absolute;
+        margin-top: -3.7rem;
+        padding: 0.8rem 1.4rem;
+        background-color: white;
+        border: 1px solid;
+        transition: all 0.25s;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    &-Input:focus + &-Info {
+        margin-top: -8rem;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.SiteFooter {
+    background-color: grey;
+}
+
+.ReassuranceList {
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    padding: 1.5rem 0;
+    text-align: center;
+    
+    &-Item {
+        display: table-cell;
+        border-right: 1px solid;
+        padding: 0 2rem;
+        font-size: 1.5rem;
+        text-align: left;
+        
+        &-Img {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 2rem;
+            background-color: white;
+        }
+        
+        &-Txt {
+            display: inline-block;
+        }
+        
+        &:last-child {
+            border-right: 0;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+.SiteCopyright {
+    text-align: center;
+}
+
+/* Règles responsive tirage tarot */
+@media screen and (min-width: 970px) and (max-width: 1200px) {
+    .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (min-width: 970px) and (max-width: 1050px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (max-width: 880px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped, .WidgetTarot-Card[data-card="11"].notFlipped, .WidgetTarot-Card[data-card="12"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (max-width: 610px){
+    .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="13"].notFlipped, .WidgetTarot-Card[data-card="14"].notFlipped, .WidgetTarot-Card[data-card="15"].notFlipped, .WidgetTarot-Card[data-card="16"].notFlipped, .WidgetTarot-Card[data-card="17"].notFlipped, .WidgetTarot-Card[data-card="18"].notFlipped, .WidgetTarot-Card[data-card="19"].notFlipped, .WidgetTarot-Card[data-card="20"].notFlipped, .WidgetTarot-Card[data-card="21"].notFlipped, .WidgetTarot-Card[data-card="22"].notFlipped {
+        display: none;
+    }
+    
+    .WidgetTarot {
+        &-Card {
+            margin: 0;
+        }
+        &-Result {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 510px){
+    .WidgetTarot-Card {
+        width: 70px;
+        height: 134px;
+    }
+}
+@media screen and (max-width: 410px){
+    .WidgetTarot-Card {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+}
+@media screen and (max-width: 360px){
+    .WidgetTarot-Card {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
+/* Autres règles responsives */
+@media screen and (max-width: 1200px){
+    .How-ListItem {
+        font-size: 1.6rem;
+        &-Num, &-Img {
+            margin-right: 1rem;
+        }
+    }
+    
+    .ReassuranceList-Item {
+        padding: 0 1rem;
+        &-Img {
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 970px){
+    .WidgetBand {
+        padding-top: 1.5rem;
+    }
+    .ContentBand.WidgetBand .ContentBand-Column {
+        display: table;
+        width: 100%;
+        margin: auto;
+    }
+    .ContentBand-Column.WidgetBand-DescText { 
+        width: 100%;
+        padding-right: 0;
+        
+        .ContentBand-ColumnHeader {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 2rem;
+            text-align: left;
+        }
+        
+        .DescText {
+            display: table-cell;
+        }
+    }
+    .ContentBand-Column.FormBand-How {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .ContentBand-Column.FormBand-Form {
+        text-align: center;
+    }
+    .How-ListItem {
+        font-size: 1.4rem;
+    }
+    .ReassuranceList-Item {
+        font-size: 1.3rem;
+    }
+    .FormContainer-Submit {
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 900px){
+    .FormContainer-Header {
+        font-size: 3rem;
+    }
+    .ReassuranceList {
+        text-align: left;
+        &-Item {
+            display: inline-block;
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
+    .FormContainer-Submit {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 690px){
+    .ContentBand-Column.FormBand-How {
+        display: none;
+    }
+}
+@media screen and (max-width: 580px){
+    .ContentBand-Column {
+        display: table;
+        width: 100%;
+        margin: auto;
+    }
+    .ContentBand, .ContentBand.FormBand {
+        margin-bottom: 3rem;
+    }
+    .ContentBand-Column.WidgetBand-DescText .ContentBand-ColumnHeader {
+        display: block;
+        float: left;
+        margin-bottom: 0;
+        padding: 1.8rem;
+        padding-bottom: 0;
+    }
+    .ContentBand-Column.WidgetBand-DescText .DescText {
+        display: block;
+    }
+    .DescText-Title {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 470px){
+    .SiteHeader {
+        font-size: 1rem;
+    }
+    .FormContainer {
+        border: none !important;
+        padding: 0;
+        &-Header {
+            font-size: 2.7rem;
+        }
+        
+        &-Submit {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+    .relationship-status .FormField-TableInputContainer-Cell {
+        display: block;
+        margin-left: 20%;
+        text-align: left;
+    }
+}

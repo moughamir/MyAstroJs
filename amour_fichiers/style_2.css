@@ -1,0 +1,1001 @@
+/*
+	Theme Name: Horoskopi
+	Description: Wordpress theme tutorrial
+	Version: 1.0
+	Author: RedSand
+	Author ARI:http://www.redsand.vn
+*/
+/* CSS Document */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.625em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.625em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear{
+	clear:both;
+}
+body {
+    background: none repeat scroll 0 0 #ffffff;
+    margin: 0;
+}
+.header{
+	width:100%;
+}
+#header {
+    background: url("voyance_2.jpg") repeat-x scroll 0 0 transparent;
+    height: 61px;
+    position: relative;
+    z-index: 99;
+}
+.inner_header{
+	width:960px;
+	position: relative;
+	margin:0 auto;
+}
+.logo{
+    
+    left: 10px;
+    margin: 0;
+    width: 410px;
+    float: left;
+}
+
+.share-face{
+    
+    left: 10px;
+    margin: 0;
+    width: 225px;
+    float: right;
+}
+
+.in-share-face{
+    position: relative;
+    right: 5px;
+    top: 19px;
+    width: 250px;
+}
+
+.fb-like{
+}
+
+.twitter-like{
+    padding-left: 20px;
+}
+
+.logo img {
+    width: 240px;
+    height: 90px;
+
+}
+.border_top {
+    border: 1px solid #E3E3E3;
+    left: 410px;
+    margin-top: 22px;
+    position: absolute;
+    width: 275px;
+}
+.like_suivre {
+    float: right;
+    margin-top: 22px;
+}
+.content {
+    min-height: 1023px;
+    padding-bottom: 20px;
+	background: url("voyance_2.jpg") no-repeat center center fixed;
+}
+.content_top {
+    background-color: url("voyance_2.jpg") no-repeat scroll left 0 #ffffff;
+    height: 713px;
+    position: relative;
+}
+.bg_content_index {
+    left: 50%;
+    margin-left: -700px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.af-form-wrapper #af-form .af-body input.text, .af-form-wrapper #af-form .af-body textarea {
+
+width: 100%;
+height: 20px;
+padding: 6px 12px;
+font-size: 14px;
+line-height: 1.428571429;
+color: #555555;
+vertical-align: middle;
+background-color: #CECFD1;
+border: 1px solid #c1bdb8;
+border-top: 1px solid #a9a49d;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1),0px 2px 2px #fff;
+box-shadow: inset 0 2px 2px rgba(0,0,0,0.1),0px 2px 2px #fff;
+-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+background-image: none;
+	font-family: inherit;
+}
+
+
+#af-form select {
+
+
+
+height: 25px;
+
+font-size: 14px;
+line-height: 1.428571429;
+color: #555555;
+vertical-align: middle;
+background-color: #CECFD1;
+border: 1px solid #c1bdb8;
+border-top: 1px solid #a9a49d;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,0.1),0px 2px 2px #fff;
+box-shadow: inset 0 2px 2px rgba(0,0,0,0.1),0px 2px 2px #fff;
+-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.inner_content {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+    z-index: 9;
+}
+.right_form{
+	float:left;
+}
+#af-form.af-form {
+    background-color: #fff;
+-webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+border: 1px solid #CECAC4;
+border-bottom: 1px solid #B2ACA4;
+border-radius: 4px;
+}
+#logo_2 {
+margin-top:20px;
+margin-bottom: 20px;
+text-align:center;
+    background-color: #fff;
+-webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+border: 1px solid #CECAC4;
+border-bottom: 1px solid #B2ACA4;
+border-radius: 4px;
+}
+
+.af-form-wrapper #af-form .af-body label.previewLabel {
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+.af-form-wrapper #af-form .af-body label.choice {
+    color: #2b2b2b;
+}
+.inner_form {
+    padding-bottom: 35px;
+    /*padding-top: 50px;*/
+    position: relative;
+    width: 338px;
+}
+.inner_form h2 {
+    color: #502463;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 0;
+    padding-top: 8px;
+    text-transform: uppercase;
+}
+.prenom {
+    border:1px solid #905fa4;
+	height:25px;
+	font-size:14px;
+	color:#000000;
+	font-weight:bold;
+}
+.inner_form input#partenaire{
+	width:305px;
+}
+.inner_form input#prenom {
+    width: 305px;
+}
+.group-select {
+	width:200px;
+	float:left;
+}
+.group-select select {
+    margin-top: 5px;
+}
+.gender {
+    margin: 3px 0 0;
+    padding: 0;
+    color: #502463;
+    font-size: 14px;
+}
+.gender label, .vote-pay label{
+    font-family: Corbel;
+}
+.vote-pay{
+	color: #502463;
+    font-size: 14px;
+}
+.inner_form input#votre, .inner_form input#confirmez {
+    width: 305px;
+}
+.email{
+    border: 1px solid #905FA4;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+}
+.list_img a{
+	width:75px;
+	height:80px;
+	float:left;
+}
+.list_img a.lion{
+	background:url(images/img-1.png) left bottom no-repeat;
+    
+}
+.list_img a.buffalo{
+	background:url(images/img-2.png) left bottom no-repeat;
+    
+}
+.list_img a.sheep{
+	background:url(images/img-3.png) left bottom no-repeat;
+   
+}
+.list_img a.fish{
+	background:url(images/img-4.png) left bottom no-repeat;
+   
+}
+.list_img a.scorpion{
+	background:url(images/img-5.png) left bottom no-repeat;
+    
+}
+.list_img a.two_child{
+	background:url(images/img-6.png) left bottom no-repeat;
+  
+}
+.list_img a.goat{
+	background:url(images/img-7.png) left bottom no-repeat;
+   
+}
+.list_img a.angels{
+	background:url(images/img-8.png) left bottom no-repeat;
+   
+}
+.list_img a.scales{
+	background:url(images/img-9.png) left bottom no-repeat;
+   
+}
+.list_img a.angel_love{
+	background:url(images/img-10.png) left bottom no-repeat;
+   
+}
+.list_img a.crawfish{
+	background:url(images/img-11.png) left bottom no-repeat;
+    
+}
+.list_img a.girl_love{
+	background:url(images/img-12.png) left bottom no-repeat;
+   
+}
+.list_img a.active {
+    background-position:left top;
+}
+.checkbox{
+	margin-top:5px;
+}
+.checkbox p {
+    line-height: 18px;
+    margin: 0;
+}
+.checkbox span {
+    font-size: 11px;
+    vertical-align: text-top;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#502463;
+}
+.checkbox input {
+    margin: 0;
+}
+.submit-form {
+    background: url("images/recevoir.png") no-repeat scroll center 0 transparent;
+    border: medium none;
+    bottom: -25px;
+    cursor: pointer;
+    height: 57px;
+    margin-top: 10px;
+    position: absolute;
+    width: 305px;
+}
+.content_footer{
+	background: url("images/bg_content2.png") repeat-x scroll center top #745500;
+}
+.inner_ct_footer {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 960px;
+}
+.ct_ft_left {
+    background: url("images/heart2.png") no-repeat scroll left 31px transparent;
+    float: left;
+    height: 105px;
+    padding-left: 73px;
+    padding-top: 12px;
+    width: 375px;
+}
+.ct_ft_left h1 {
+    color: #FDEEB3;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.ct_ft_left p {
+    color: #fff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.ct_ft_right {
+    /*background: url("images/bg_content_ft_right.png") no-repeat scroll left top transparent;*/
+    float: right;
+    height: 119px;
+    padding-left: 56px;
+}
+.inner_ct_ft_right {
+    background: url("images/phone2.png") no-repeat scroll left 32px transparent;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 87px;
+    margin-right: 15px;
+    padding-left: 75px;
+    padding-top: 14px;
+    width: 365px;
+}
+.voyance_par{
+	float:left;
+}
+.voyance_par h1 {
+    color: #76e653;
+    font-size: 18px;
+    margin-bottom: 2px;
+    margin-top: 13px;
+    text-transform: uppercase;
+}
+.voyance_par h3 {
+    color: #76e653;
+    font-size: 18px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}
+.voyance_par h4{
+	font-size:11px;
+	color:#76e653;
+	margin-bottom: 2px;
+    margin-top: 3px;
+}
+.paienemt{
+	float:right;
+}
+.footer{
+	width:100%;
+}
+.inner_footer{
+	margin:0 auto;
+	width:960px;
+	border-top:1px solid #ebe5ea;	
+}
+.ft_left{
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#cdb6c7;
+	font-size:12px;
+}
+.menu_ft{
+	float:right;
+}
+.menu_ft ul li{
+	list-style:none;
+	padding:0 10px;
+	float:left;
+	border-left:1px solid #cdb6c7;
+	line-height:11px;
+}
+.menu_ft ul li:first-child{
+	border:0;
+}
+.menu_ft ul {
+    height: 16px;
+    margin-top: 10px;
+}
+.menu_ft ul li a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#cdb6c7;
+}
+.menu_ft ul li a:hover{
+	color:#8645a1;
+}
+.content_page .title {
+    background: none repeat scroll 0 0 #f6f6f6;
+    height: 66px;
+}
+.inner_title{
+	width:960px;
+	margin:0 auto;
+	text-align:left;	
+}
+.inner_title h3 {
+    color: #745500;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.inner_title h2 {
+    color: #745500;
+    font-family: arial;
+    font-size: 21px;
+    margin: 0;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+.form_chat {
+    float: left;
+    font-family: arial;
+    width: 625px;
+}
+.sidebar_right {
+    background: none repeat scroll 0 0 #756a22;
+    border: 1px solid #756a22;
+    float: right;
+    padding: 2px;
+    width: 303px;
+}
+.content_page .inner_content {
+    padding-bottom: 80px;
+    padding-top: 95px;
+}
+.content.content_page {
+    background: url("images/bg_content_page.png") repeat scroll center center transparent;
+    min-height: 0;
+    padding-bottom: 0;
+}
+.camille {
+    background: none repeat scroll 0 0 #ffffff;
+    font-family: tahoma;
+    padding-bottom: 1px;
+}
+.camille h4 {
+    color: #4d3800;
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 2px;
+    padding-top: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.camille .title_box {
+    background: none repeat scroll 0 0 #4d3800;
+    color: #fbd96a;
+    font-size: 18px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.camille .title_box.bottom {
+    background: none repeat scroll 0 0 #b99c53;
+    color: #4d3800;
+}
+.camille p.dispon {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 12px;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+.camille p.tel.tel-number {
+    font-size: 21px;
+	text-align: left;
+    color: #745500; 
+}
+.camille p.tel {
+    color: #ec2327;
+    font-family: tahoma;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 13px;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.camille p.tel span {
+	font-size:15px;
+    display: block;
+}
+.camille p.tel.tel-number span {
+    display: block;
+    float: right;
+    font-size: 21px;
+    margin-left: 6px;
+}
+.camille .sub {
+    color: #402f00;
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+}
+.camille .last {
+    color: #88573e;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+}
+.camille .last span{
+    color: #ff0000;
+}
+.camille .red {
+    color: #D11101;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+	font-size:15px;
+}
+.camille .red span{
+	color:#8544a0;
+}
+/*---------------------------------------Page Chat------------------------------------*/
+body.submit-page{
+	background:none;
+}
+.wrapper-chat{
+	width:1000px;
+	margin:5px auto;
+}
+
+.header-chat {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-radius: 3px 3px 0 0;
+    height: 45px;
+    margin: auto;
+    position: relative;
+    width: 982px;
+}
+.logo-chat{
+	margin-left:6px;
+}
+.banner-chat{
+	background:url(../images/bg-blue.png) no-repeat;
+	height:70px;	
+}
+
+.banner-chat h2 {
+    color: #FEFEFE;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 50px;
+    padding-top: 3px;
+    text-transform: uppercase;
+}
+
+.banner-chat h3 {
+    color: #FFCCDF;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.content-chat {
+    border-left: 5px solid #F3F3F3;
+    border-right: 5px solid #F3F3F3;
+    margin: -7px auto auto 10px;
+    min-height: 385px;
+    width: 974px;
+}
+.frame-chat {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #756a22;
+    float: left;
+    min-height: 350px;
+    width: 580px;
+}
+.top-frame {
+    background: none repeat scroll 0 0 #745500;
+    height: 53px;
+    margin: 4px 4px 0;
+}
+.avatar {
+    float: left;
+    height: 53px;
+    margin-right: 15px;
+    width: 50px;
+}
+.top-frame > h2 {
+    padding-top: 7px !important;
+}
+.top-frame > h2,.top-frame > h3 {
+    margin: 0;
+    padding-top: 2px;
+	font-size:14px;
+	color:#fff;
+	font-weight:normal;
+}
+.top-frame > h3 {
+	font-weight:bold;
+}
+.text-chat {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: medium none;
+    color: #735c5d;
+    font-size: 15px;
+    height: 238px;
+    overflow: auto;
+    padding-left: 10px;
+    width: 566px;
+}
+.text-chat span {
+    color: #745500;
+    font-weight: bold;
+}
+.space-chat{
+	height:15px;
+	height: 20px;
+    padding-left: 10px;
+	background: none repeat scroll 0 0 #fff;
+}
+.chat_footer {
+	border-top: 1px solid #756a22;
+	background: none repeat scroll 0 0 #fff;
+	height:34px;
+}
+.bottom-frame {
+    float: left;
+    margin-right: 15px;
+	
+}
+.chat_footer .bottom-frame
+{
+	border-right: 1px solid #756a22;
+}
+.chat_footer p{
+	margin:0;
+	line-height:34px;
+	padding-left:10px;
+	color:#735c5d;
+	font-size:14px;
+}
+.contact-chat {
+    border: 2px solid #6F7C84;
+    border-radius: 3px 3px 3px 3px;
+    float: right;
+    height: 310px;
+    margin-right: 20px;
+    margin-top: 25px;
+    width: 300px;
+}
+
+.contact-name {
+    background: none repeat scroll 0 0 #6F7C84;
+    color: #FFFFFF;
+    font-family: georgia;
+    font-style: italic;
+    font-weight: bold;
+    padding: 2px 0 3px;
+    text-align: center;
+}
+
+.voyan-phone {
+    background: none repeat scroll 0 0 #B8E5FA;
+    color: #6F7C84;
+    font-family: times new roman;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+	text-shadow: 0 0 0;
+}
+
+.group-contact {
+    float: left;
+    width: 200px;
+}
+
+.avatar-contact {
+    float: right;
+    height: 115px;
+    width: 100px;
+}
+
+.dispo {
+    color: #3FA575;
+    font-size: 18px;
+    font-style: italic;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+.phone-number {
+    color: #686868;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.phone-number > span {
+    color: #0FBCDA;
+}
+
+.img-contact {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+
+.offre {
+    background: none repeat scroll 0 0 #F934A8;
+    color: #DFFBED;
+    font-family: times new roman;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    text-shadow: 0 0 0;
+    text-transform: uppercase;
+}
+.text-chat > p {
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-shadow: 0 0 0;
+	
+}
+.inner-text-chat p {
+	margin: 5px 0;
+}
+
+.contact-chat  h2 {
+    color: #34076C;
+    font-family: arial;
+    font-size: 17px;
+    margin-left: 5px;
+    margin-top: 3px;
+    text-shadow: 0 0 0;
+    text-transform: uppercase;
+}
+
+.contact-chat  h3 {
+    color: #9F90AF;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.promo {
+    color: #E341AE;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.promo > span {
+    color: #8A8490;
+}
+.content-chat-bottom {
+    background: none repeat scroll 0 0 #F3F3F3;
+    margin-left: 10px;
+    margin-top: -7px;
+    padding-top: 5px;
+    width: 984px;
+}
+
+.content-chat-bottom.content-bottom-home {
+    margin: 30px auto;
+    width: 1000px;
+}
+
+.content-bottom-home .couple {
+    margin-left: 30px;
+}
+.footer-chat {
+    border-top: 2px solid #F2F2F2;
+    margin-top: 170px;
+}
+
+.couple {
+    float: left;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 300px;
+}
+
+.couple h2 {
+    color: #3C007E;
+    font-size: 22px;
+    font-weight: bold;
+}
+.couple p , .couple .textwidget  {
+    color: #81598B;
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.signature {
+    float: left;
+    margin-left: 20px;
+}
+
+
+.voyance {
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+    width: 275px;
+}
+
+.voyance h2 {
+    color: #3C007E;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.voyance p{
+    color: #9E6BA3;
+    font-size: 24px;
+    margin-top: 5px;
+}
+.voyance span {
+    font-size: 18px;
+}
+
+.security {
+    margin-top: 12px;
+}
+
+.contact-link.submit-link {
+    bottom: 3px;
+    position: absolute;
+    right: 15px;
+}
+/*----------------------------------Add CSS---------------------------------------*/
+.big-sign{
+	display:none;
+	padding:0px 30px;
+}
+
+.big-sign > h2 {
+    font-size: 16px;
+}
+
+.big-img {
+    margin-top: 5px;
+}
+
+
+.big-sign > p {
+    color: #FA67AB;
+    font-size: 15px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    text-shadow: 0 0 0;
+}
+
+.big-sign > a {
+    color: #333333;
+	font-size:15px;
+	text-shadow:0 0 0;
+}
+.content_page.page .inner_content {
+    padding: 15px 0;
+}
+.content-page {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 0 10px;
+}
+.content-page h1 {
+    font-family: arial;
+    font-size: 24px;
+    margin: 0;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+.text_footer {
+    background: none repeat scroll 0 0 #443360;
+    color: #fff;
+    font-family: arial;
+    font-size: 14px;
+    height: 3px;
+    margin: 0;
+    overflow-x: hidden;
+}
+.tel-number span
+{
+	display:inline !important;
+}
+
+#af-form .af-body .af-textWrap, #af-form .af-body .af-dateWrap, #af-form .af-body .af-selectWrap, #af-form .choiceList-radio-inline, #af-form .choiceList-radio-stacked{width:98%;display:block;float:none;}
+#af-form .af-body a{color:#094C80;text-decoration:underline;font-style:normal;font-weight:normal;}
+#af-form .af-body input.text, #af-form .af-body textarea{background-color:#ffffff;color:#000000;border-color:#7A4995;border-width:1px;border-style:solid;color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:Verdana, sans-serif;}
+#af-form .af-body input.text:focus, #af-form .af-body textarea:focus{background-color:#FFFAD6;color:#000000;border-color:#5F6BB4;border-width:2px;border-style:solid;}
+#af-form .af-body label.choice{color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:inherit;}
+#af-form .af-body label.previewLabel{display:block;float:none;text-align:left;width:auto;color:#3C1852;text-decoration:none;font-style:normal;font-weight:bold;font-size:14px;font-family:Arial, sans-serif;}
+#af-form .af-body{padding-bottom:15px;padding-top:15px;background-repeat:no-repeat;background-position:inherit;background-image:none;color:#000000;font-size:11px;font-family:Verdana, sans-serif;}
+#af-form .af-element-radio{margin-left:10px;}
+#af-form .af-footer{padding-right:15px;padding-left:15px;background-color:#transparent;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#000000;font-size:12px;font-family:Verdana, sans-serif;}
+#af-form .af-header{padding-bottom:9px;padding-top:9px;padding-right:10px;padding-left:10px;background-color:transparent;background-repeat:no-repeat;background-position:center;background-image:url("http://www.voyancecouple.net/wp-content/themes/horoskopi/images/voyance_couple.png");border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#FFFFFF;font-size:16px;font-family:Verdana, sans-serif;}
+#af-form .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}
+#af-form .af-quirksMode{padding-right:15px;padding-left:15px;}
+#af-form .af-standards .af-element{padding-right:15px;padding-left:15px;}
+#af-form .bodyText p{margin:1em 0;}
+#af-form .buttonContainer input.submit{background-color:#0479c2;background-image:url("http://www.voyancecouple.net/wp-content/themes/horoskopi/images/recevoir-btn.png");color:#FFFFFF;text-decoration:none;font-style:normal;font-weight:normal;font-size:14px;font-family:Verdana, sans-serif;}
+#af-form .buttonContainer input.submit{width:auto;}
+#af-form .buttonContainer{text-align:center;}
+#af-form .choiceList-radio-inline .af-element-radio{margin-right:0px;}
+#af-form body,#af-form dl,#af-form dt,#af-form dd,#af-form h1,#af-form h2,#af-form h3,#af-form h4,#af-form h5,#af-form h6,#af-form pre,#af-form code,#af-form fieldset,#af-form legend,#af-form blockquote,#af-form th,#af-form td{float:none;color:inherit;position:static;margin:0;padding:0;}
+#af-form button,#af-form input,#af-form submit,#af-form textarea,#af-form select,#af-form label,#af-form optgroup,#af-form option{float:none;position:static;margin:0;}
+#af-form div{margin:0;}
+#af-form fieldset{border:0;}
+#af-form form,#af-form textarea,.af-form-wrapper,.af-form-close-button,#af-form img{float:none;color:inherit;position:static;background-color:none;border:none;margin:0;padding:0;}
+#af-form input,#af-form button,#af-form textarea,#af-form select{font-size:100%;}
+#af-form p{color:inherit;}
+#af-form select,#af-form label,#af-form optgroup,#af-form option{padding:0;}
+#af-form table{border-collapse:collapse;border-spacing:0;}
+#af-form ul,#af-form ol{list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}
+#af-form,#af-form .quirksMode{width:338px;}
+#af-form.af-quirksMode{overflow-x:hidden;}
+#af-form{background-color:#DFBCD4;border-color:#FFFFFF;border-width:2px;border-style:solid;}
+#af-form{display:block;}
+#af-form{overflow:hidden;}
+.af-body .af-textWrap{text-align:left;}
+.af-body input.image{border:none!important;}
+.af-body input.submit,.af-body input.image,.af-form .af-element input.button{float:none!important;}
+.af-body input.text{width:100%;float:none;padding:2px!important;}
+.af-body.af-standards input.submit{padding:4px 12px;}
+.af-clear{clear:both;}
+.af-element input.radio{width:inherit!important;}
+.af-element label{text-align:left;display:block;float:left;}
+.af-element-radio label,.af-element-radio input.radio{display:inline!important;float:none!important;}
+.af-element-radio label{display:inline;}
+.af-element-radio.inline{float:left;margin-left:0;margin-right:7px;}
+.af-element.radio{display:block!important;}
+.af-element{padding:5px 0;}
+.af-form-wrapper{text-indent:0;}
+.af-form{text-align:left;margin:auto;}
+.af-header,.af-footer{margin-bottom:0;margin-top:0;padding:10px;}
+.af-quirksMode .af-element{padding-left:0!important;padding-right:0!important;}
+.choiceList-radio-inline .af-element-radio{float:left;}
+.lbl-right .af-element label{text-align:right;}

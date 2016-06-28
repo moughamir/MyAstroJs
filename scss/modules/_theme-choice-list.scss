@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* 
+    ---------------------------------------------------
+    --      module liste de choix de la question     --
+    ---------------------------------------------------
+
+    Created on : 26 mai 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+.ThemeChoice-List {
+    width: 60%;
+    margin: auto;
+    &Item {
+        display: block;
+        margin: 0;
+        margin-bottom: 8px;
+        padding: 0.8rem 1.5rem;
+        border: 1px solid;
+        
+        &-Icon {
+            display: block;
+            height: 3.5rem;
+            width: 3.5rem;
+            float: left;
+            background-color: darkgrey;
+        }
+        &-Input {
+            display: none;
+        }
+        &-Label {
+            display: block;
+            padding-left: 5rem;
+            hyphens: none;
+            font-size: 1.8rem;
+            line-height: 3.5rem;
+        }
+        
+        &:hover, &:active, &:focus {
+            color: steelblue;
+        }
+        &:hover &-Icon {
+            background-color: lightblue;
+        }
+        
+        &-Input:checked + & {
+            color: coral;
+            .ThemeChoice-ListItem-Icon {
+                background-color: peachpuff;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 980px){
+    .ThemeChoice-List {
+        width: 80%;
+        
+        &Item-Label {
+            padding-left: 4rem;
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+        &Item-Icon {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}
+
+@media all and (max-width: 460px){
+    .ThemeChoice-List {
+        width: 100%;
+    }
+}

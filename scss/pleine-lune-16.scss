@@ -1,0 +1,243 @@
+/* 
+    --------------------------
+    --    pleine-lune-16    --
+    --------------------------
+
+    Created on : 20 avril 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "s-landing-voyance-2";
+
+/* Dossier images */
+$img_dir : "../images_landing/pleine-lune-16/";
+/* Palette */
+$bg : #000916;
+$darkpurple : #04001F;
+$bg-blue : rgba(31, 77, 112, 0.2);
+$bg-darkblue : #001220;
+$darkblue : #050120;
+$pink : #F3AAB4;
+$pink-transparent : rgba(243, 170, 180, 0.54);
+$cyan : #3BDBE6;
+$btn-cyan : #20BDCF;
+$woman : $pink;
+$men : $cyan;
+
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: white;
+    background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
+    background-size: cover;
+}
+
+.SiteLogo {
+    background: url($img_dir+"logo-myastro.png") 2rem no-repeat;
+    background-size: contain;
+    height: 107px;
+    width: 100%;
+}
+.DescText-Title {
+    background: url($img_dir+"title.png") no-repeat;
+    background-size: contain;
+    height: 292px;
+    margin-bottom: 0;
+    
+    &-Legend {
+        padding-top: 0;
+        background-color: transparent;
+        text-align: right;
+        font-size: 1.9rem;
+    }
+}
+.DescText-Content {
+    background: transparent;
+}
+.FormContainer {
+    background-color: $bg-blue;
+    
+    &-Header {
+        font-family: 'Ubuntu Condensed';
+        color: $pink;
+        padding-bottom: 3rem; 
+        background: url($img_dir+"fleche.png") no-repeat bottom center;
+    }
+    
+    &-Submit {
+        padding: 1rem 4rem;
+        border: 1px solid $darkblue;
+        border-radius: 4rem;
+        background-color: $cyan;
+        background: -webkit-linear-gradient(to bottom, $cyan 0%, $btn-cyan 100%);
+        background: linear-gradient(to bottom, $cyan 0%, $btn-cyan 100%);
+        box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
+        color: $darkblue;
+        font-family: 'Ubuntu Condensed';
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        
+        &:hover {
+            box-shadow: inset 4px 4px 1px rgba(0, 0, 0, 0.5), inset -4px -4px 2px rgba(255, 255, 255, 0.5);
+        }
+    }
+    
+    &.DRI .DRI {
+        &-Intro {
+            background-color: $pink-transparent;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            
+            &-Title {
+                color: $darkpurple;
+                text-transform: uppercase;
+            }
+            &-Text {
+                color: white;
+            }
+        }
+        &-Slogan {
+            background-color: $cyan;
+            font-family: 'Ubuntu Condensed', sans-serif;
+            color: $darkblue;
+            text-transform: uppercase;
+        }
+        &-Form {
+            padding: 2rem;
+            background-color: $bg-darkblue;
+            
+            .FormField-Input {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        &-Sent {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            
+            strong {
+                font-weight: normal;
+                color: $cyan;
+            }
+        }
+    }
+}
+
+.FormField-Label {
+    text-transform: uppercase;
+    
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $men;
+    }
+}
+
+.FormField-Input {
+    border: none;
+    
+    &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
+        outline-width: 0;
+        box-shadow: 0 0 6px -1px $darkblue;
+        border-color: transparent;
+    }
+}
+
+.FormField-Info {
+    border: none;
+    color: $darkblue;
+    box-shadow: 0 0 6px -1px $darkblue;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.How-header {
+    font-weight: normal;
+    font-size: 2.4rem;
+    font-family: inherit;
+}
+.How-Wizard {
+    border-color: $darkblue;
+    color: $darkblue;
+    
+    &Item-Img.form {
+        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
+        background-size: contain;
+    }
+    &Item-Img.phone {
+        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
+        background-size: contain;
+    }
+}
+
+.ReassuranceList {
+    background-color: $pink;
+    color: $darkpurple;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($img_dir+"ico-star-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($img_dir+"ico-lock-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($img_dir+"ico-gift-dark.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($img_dir+"ico-trophy-dark.png") center no-repeat;
+    background-size: contain;
+}
+
+.alert {
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .DescText {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 470px){
+    .SiteLogo, .DescText-Title {
+        background-position: center;
+    }
+    .DescText-Title {
+        height: 240px;
+    }
+}

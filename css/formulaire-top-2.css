@@ -1,0 +1,6 @@
+/*========== Afficher le formulaire en haut de page =========*/
+ @media screen and (max-width: 480px){
+  .article-content .social-share-footer,.row-fluid .span270{
+    display: none;
+  }
+ }

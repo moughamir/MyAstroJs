@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/* 
+    ----------------------------
+    --      tarot-direct      --
+    ----------------------------
+
+    Created on : 25 mai 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "templates/s-landing-tarot-3";
+
+/* Dossier images */
+$img_dir : "../images_landing/tarot-direct/";
+$logo : $img_dir + "logo.png";
+$dos_carte : $img_dir + "cardback.png";
+$place_carte : $img_dir + "cardplace.png";
+$bg_fleche : $img_dir + "bg_fleche.png";
+$hexagone_bleu : $img_dir + "hexagone_bleu.png";
+$hexagone_rose : $img_dir + "hexagone_rose.png";
+$hexagone_turquoise : $img_dir + "hexagone_turquoise.png";
+$christelle : $img_dir + "christelle.png";
+$sonia : $img_dir + "sonia.png";
+$icon_amour_bleu : $img_dir + "coeur_bleu.png";
+$icon_argent_bleu : $img_dir + "argent_bleu.png";
+$icon_travail_bleu : $img_dir + "travail_bleu.png";
+$icon_amour_rose : $img_dir + "coeur_rose.png";
+$icon_argent_rose : $img_dir + "argent_rose.png";
+$icon_travail_rose : $img_dir + "travail_rose.png";
+$icon_amour_turquoise : $img_dir + "coeur_turquoise.png";
+$icon_argent_turquoise : $img_dir + "argent_turquoise.png";
+$icon_travail_turquoise : $img_dir + "travail_turquoise.png";
+$icon_tel: $img_dir + "tel.png";
+
+/* Palette */
+$grey: #454545;
+$bleu: #2E4980;
+$rose: #F57F9B;
+$turquoise: #1BEBDA;
+$lightgrey: #C0C3C8;
+$bg-bleu: #EAEEF4;
+$bg-grey: #616161;
+$woman: $rose;
+$men: $bleu;
+$tchat-bg: #E8E8E8;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $grey;
+}
+
+.ContentBand.Principal {
+    padding-bottom: 127px;
+    margin-bottom: -117px;
+    background-color: $bg-bleu;
+    background-image: url($bg-fleche);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+    .ContentBand-ColumnHeader {
+        background-color: white;
+        box-shadow: 0 0 10px 1px $lightgrey;
+    }
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.SiteHeader {
+    position: relative;
+    z-index: 2;
+    background-color: $bleu;
+    color: $turquoise;
+    
+    &-Logo {
+        height: 119px;
+        background-color: transparent;
+        background-image: url($logo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &-Slogan1 {
+        font-family: 'Indie Flower';
+    }
+    &-Slogan2 {
+        font-weight: bold;
+        background-color: $turquoise;
+        color: $bleu;
+        
+        strong {
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+}
+
+.Title {
+    font-weight: bold;
+    color: $bleu;
+    
+    strong {
+        font-family: 'Lobster';
+        color: $turquoise;
+        font-weight: normal;
+    }
+}
+
+/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+
+.PsychicChoice-Psychic {
+    &-VisualForm {
+        color: $bleu;
+    }
+    &-Picture {
+        position: relative;
+        display: inline-block;
+        width: 237px;
+        height: 205px;
+        background-color: transparent;
+        background-image: url($hexagone_bleu);
+    }
+    &-VisualForm:hover {
+        color: $rose;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_rose);
+        }
+    }
+    &-Input:checked + &-VisualForm {
+        color: $turquoise;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_turquoise);
+            &:after {
+                content: "\f00c";
+                font-family: 'FontAwesome';
+                background-color: transparent;
+                color: $turquoise;
+            }
+        }
+    }
+}
+
+.PsychicChoice-Psychic.Christelle .PsychicChoice-Psychic-Photo {
+    background-image: url($christelle);
+}
+
+.PsychicChoice-Psychic.Sonia .PsychicChoice-Psychic-Photo {
+    background-image: url($sonia);
+}
+
+/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+
+.ThemeChoice-ListItem {
+    border-radius: 3rem;
+    border-color: $lightgrey;
+    color: $bleu;
+    font-weight: bold;
+    
+    &-Icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        &.Amour {
+            background-image: url($icon_amour_bleu);
+        }
+        &.Argent {
+            background-image: url($icon_argent_bleu);
+        }
+        &.Travail {
+            background-image: url($icon_travail_bleu);
+        }
+    }
+    
+    &:hover, &:active, &:focus {
+        color: $rose;
+    }
+    &:hover &-Icon {
+        background-color: transparent;
+        &.Amour {
+            background-image: url($icon_amour_rose);
+        }
+        &.Argent {
+            background-image: url($icon_argent_rose);
+        }
+        &.Travail {
+            background-image: url($icon_travail_rose);
+        }
+    }
+    &-Input:checked + & {
+        color: $turquoise;
+        .ThemeChoice-ListItem-Icon {
+            background-color: transparent;
+            &.Amour {
+                background-image: url($icon_amour_turquoise);
+            }
+            &.Argent {
+                background-image: url($icon_argent_turquoise);
+            }
+            &.Travail {
+                background-image: url($icon_travail_turquoise);
+            }
+        }
+    }
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+.WidgetTarot-Card {
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        border: none;
+        background: transparent url($dos_carte) center no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+        background-color: transparent;
+    }
+    
+    &.place {
+        background-color: transparent;
+        background-image: url($place_carte);
+        border-radius: 6px;
+    }
+}
+
+.WidgetTarot-ResultMsg {
+    font-weight: bold;
+    color: $bleu;
+}
+
+/* ------------------------------- POP VOYANT ------------------------------- */
+
+.Pop.Pop-Voyant {
+    background-color: transparent;
+    background-image: url($hexagone_turquoise);
+    &.Christelle .Pop-Voyant-Photo{
+        background-image: url($christelle);
+    }
+    &.Sonia .Pop-Voyant-Photo{
+        background-image: url($sonia);
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.FormContainer {
+    background-color: $bg-grey;
+    color: white;
+}
+
+.FormField-Label {
+    font-weight: bold;
+}
+.FormField-Input {
+    border: none;
+    border-radius: 8px;
+    &.has-error {
+        box-shadow: 0 0 8px 1px #a94442 inset;
+    }
+}
+.FormContainer-Submit {
+    background-color: $turquoise;
+    color: $grey;
+    border: none;
+}
+
+.FormField-Label {  
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $men;
+    }
+}
+
+.FormField-Info:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.alert {
+    text-align: center;
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+
+.DRI-Promo {
+    font-weight: bold;
+    
+    &-Slogan {
+        
+        &-Tel {
+            font-size: 2.8rem;
+            text-decoration: underline;
+            color: $turquoise;
+            
+            &:hover {
+                color: $bleu;
+            }
+            
+            &Icon {
+                background-image: url($icon_tel);
+            }
+        }
+        
+        &-CodePromo {
+            font-size: 2.8rem;
+            color: $turquoise;
+        }
+    }
+}
+
+/* ---------------------------------- TCHAT --------------------------------- */
+.Tchat-Gratuit-Title {
+    color: $bleu;
+}
+.Tchat-Overlay {
+    border-radius: 10px;
+}
+.Tchat-Window {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px $lightgrey;
+    
+    &-Output {
+        background-color: $tchat-bg;
+        border-radius: 10px;
+    }
+    &-Input {
+        .FormField-Input {
+            border: 2px solid $lightgrey;
+            color: inherit;
+        }
+        .FormField.withAside .aside {
+            background-color: $bleu;
+            border: 2px solid $lightgrey;
+            border-radius: 8px;
+            color: $lightgrey;
+        }
+    }
+}
+
+.codeastro {
+    font-size: 1.6rem;
+    color: $turquoise;
+}
+
+.Tchat-Message-Person.F {
+    color: $rose;
+}
+.Tchat-Message-Person.M {
+    color: $bleu;
+}
+
+@media all and (max-width: 510px){
+    .Tchat-Overlay {
+        border-radius: 0;
+    }
+    .Tchat-Window {
+        border-radius: 0;
+    }
+    .Tchat-Message {
+        padding: 0 1rem;
+    }
+}

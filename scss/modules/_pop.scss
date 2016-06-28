@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* 
+    -------------------------
+    --      module pop     --
+    -------------------------
+
+    Created on : 3 juin 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+.withPop {
+    position: relative;
+}
+
+.Pop {
+    position: absolute;
+    background-color: silver;
+    z-index: 2;
+}

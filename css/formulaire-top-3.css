@@ -1,0 +1,10 @@
+/*========== Afficher le formulaire en haut de page =========*/
+ @media screen and (max-width: 480px){
+  .article-content .social-share-footer,.row-fluid .span270,section.cat-widget,.text-justify{
+    display: none;
+  }
+
+   .flexslider .slides > li{
+  	display: block;
+  }
+ }

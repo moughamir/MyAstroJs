@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* 
+    -------------------------
+    --      module roue    --
+    -------------------------
+
+    Created on : 10 juin 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+.Wheel {
+    position: relative;
+    height: 688px;
+    
+    &-Core {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        box-sizing: border-box;
+        width: 480px !important;
+        height: 480px !important;
+        margin-top: -240px !important;
+        margin-left: -240px !important;
+        padding: 70px;
+        padding-bottom: 0;
+        background-color: grey;
+        border-radius: 50%;
+        
+        &-Title {
+            height: 7rem;
+            max-height: 7rem;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        &.overlay {
+            padding-top: 100px;
+        }
+    }
+    
+    &-Item {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        margin-left: -40px;
+        margin-top: -40px;
+        background-color: silver;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        &.n01 { margin-top: -299px; margin-left: 116px;}
+        &.n02 { margin-top: -196px; margin-left: 229px;}
+        &.n03 { margin-left: 252px;}
+        &.n04 { margin-top: 116px; margin-left: 229px;}
+        &.n05 { margin-top: 219px; margin-left: 116px;}
+        &.n06 { margin-top: 252px;}
+        &.n07 { margin-top: 219px; margin-left: -196px;}
+        &.n08 { margin-top: 116px; margin-left: -299px;}
+        &.n09 { margin-left: -332px;}
+        &.n10 { margin-top: -196px; margin-left: -299px;}
+        &.n11 { margin-top: -299px; margin-left: -196px;}
+        &.n12 { margin-top: -332px;}
+    }
+}

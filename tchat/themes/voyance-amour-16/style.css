@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/* 
+    int├®gration pour TCHAT - voyance-amour-16 
+    auteur(s) : guillaume deschamps <guillaumedeschamps75@gmail.com>
+    20/06/2016 pour KGCOM
+*/
+/* 
+    ----------------------------------
+    --   Th├¿me nouvelle-lune-2016   --
+    ----------------------------------
+
+    Created on : 25 avril 2016
+    Author     : Laur├¿ne Dourdin <2aurene@gmail.com>
+*/
+/* line 14, style.scss */
+body.voyance-telephone-1 {
+  background: url("header_bg.jpg") no-repeat top center;
+  background-color: #fff;
+  padding-top: 30px !important;
+}
+
+/* line 19, style.scss */
+body.voyance-telephone-1 .top-nav {
+  display: none;
+}
+
+/* line 22, style.scss */
+body.voyance-telephone-1 .left-part {
+  float: right;
+}
+
+/* line 25, style.scss */
+body.voyance-telephone-1 .right-part {
+  background: transparent;
+}
+
+/* line 29, style.scss */
+body.voyance-telephone-1 .right-part.tchat {
+  margin-top: 95px;
+}
+
+/* line 32, style.scss */
+body.voyance-telephone-1 .right-part.tchat > * {
+  float: left;
+}
+
+/* line 36, style.scss */
+.tchat .advert-online {
+  text-align: left;
+}
+
+/* line 39, style.scss */
+.tchat .advert-online h2 {
+  color: #28627a;
+  font-weight: normal;
+  right: 0;
+}
+
+/* line 44, style.scss */
+.tchat .overlay {
+  right: 4%;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 2px;
+}
+
+/* line 50, style.scss */
+.tchat .screen {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 2px;
+  opacity: 1;
+}
+
+/* line 56, style.scss */
+body.voyance-telephone-1 .left-part .logo img {
+  display: none;
+}
+
+/* line 61, style.scss */
+body.voyance-telephone-1 .right-part.logo-right {
+  height: 107px;
+  background: transparent url("logo_MYASTRO.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: initial;
+}
+
+/* line 69, style.scss */
+body.voyance-telephone-1 .voyant-membre {
+  max-width: none;
+  margin: 0;
+  padding: 1px 10% 20px;
+  background: white;
+  border-radius: 0;
+}
+
+/* line 76, style.scss */
+body.voyance-telephone-1 .voyant-membre h2 {
+  color: #fc2c93;
+  border-bottom: 3px dotted #28627a;
+  padding-bottom: 10px;
+  margin: 20px auto;
+}
+
+/* line 82, style.scss */
+body.voyance-telephone-1 .voyant-membre h2 strong {
+  font-weight: normal;
+}
+
+/* line 85, style.scss */
+body.voyance-telephone-1 .voyant-membre .slogan {
+  font-weight: normal;
+  color: #28627a;
+}
+
+/* line 90, style.scss */
+body.voyance-telephone-1 .right-part .widget {
+  background-color: #d6e2d9;
+  border-radius: 0;
+}
+
+/* line 95, style.scss */
+body.voyance-telephone-1 .right-part .widget .widget-title {
+  background: #28627a;
+  color: #fff;
+}
+
+/* line 99, style.scss */
+body.voyance-telephone-1 .right-part .widget .widget-title strong {
+  font-weight: normal;
+}
+
+/* line 102, style.scss */
+body.voyance-telephone-1 .right-part .widget .li-form input {
+  height: auto;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 0;
+  color: #333333;
+  font-size: 1.2em;
+}
+
+/* line 110, style.scss */
+body.voyance-telephone-1 .right-part .widget input[type="submit"] {
+  border: 0;
+  background: #fc2c93 radial-gradient(circle at center, #fd77ba, #fc2c93);
+  padding: 15px 45px;
+  border-radius: 0px;
+  color: #fff;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  transition: background 0.2s ease-in;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 122, style.scss */
+body.voyance-telephone-1 .right-part .widget input[type="submit"]:hover, body.voyance-telephone-1 .right-part .widget input[type="submit"]:focus {
+  background: #d8036d;
+}
+
+/* line 129, style.scss */
+#rappel input.form-control {
+  padding: 7px 12px;
+  width: auto;
+}
+
+/* line 134, style.scss */
+#rappel .btn-primary {
+  position: relative;
+  top: -5px;
+  left: 8px;
+  padding: 6px 20px;
+  background: #fc2c93 radial-gradient(circle at center, #fd77ba, #fc2c93);
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+/* line 150, style.scss */
+#rappel .btn-primary:hover {
+  background: #d8036d;
+}
+
+/* line 153, style.scss */
+.theEnd.pull-left.bg-info {
+  margin-top: 6px;
+  padding-top: 8px;
+}
+
+/* line 158, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche {
+  margin-top: 3.25rem;
+}
+
+/* line 162, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche h2 {
+  color: white;
+  text-transform: none;
+  font-size: 2em;
+}
+
+/* line 168, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq {
+  background: white url("diag.svg") center no-repeat;
+  border-radius: 0;
+  opacity: 0.7;
+}
+
+/* line 173, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3 {
+  color: #211A38;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* line 179, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.first {
+  background: url("ico-formulaire.png") no-repeat 20px center transparent;
+}
+
+/* line 182, style.scss */
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.last {
+  background: url("ico-standardiste.png") no-repeat 20px center transparent;
+}
+
+/* line 186, style.scss */
+body.voyance-telephone-1 .subfooter {
+  margin-top: 30px;
+  background: transparent;
+}
+
+/* line 191, style.scss */
+body.voyance-telephone-1 .subfooter ul {
+  background: #595959 linear-gradient(#595959, #343434);
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* line 197, style.scss */
+body.voyance-telephone-1 .subfooter ul li.first {
+  background-image: url("ico-star.png");
+}
+
+/* line 200, style.scss */
+body.voyance-telephone-1 .subfooter ul li.second {
+  background-image: url("ico-lock.png");
+}
+
+/* line 203, style.scss */
+body.voyance-telephone-1 .subfooter ul li.third {
+  background-image: url("ico-gift.png");
+}
+
+/* line 206, style.scss */
+body.voyance-telephone-1 .subfooter ul li.fourth {
+  background-image: url("ico-trophy.png");
+}
+
+/* line 209, style.scss */
+body.voyance-telephone-1 .subfooter ul li.fifth {
+  background-image: url("ico-secure.png");
+}
+
+/* line 213, style.scss */
+body.voyance-telephone-1 .footer {
+  color: #000;
+}

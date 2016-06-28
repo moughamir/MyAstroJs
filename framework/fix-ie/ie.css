@@ -1,0 +1,24 @@
+﻿ul.widget-sponsor > li {
+    margin: auto 7.6% 7.6% auto !important;
+}
+
+.flex-control-nav {
+    top: -24px !important;
+}
+
+.cat-widget-content .cat-horiz .flex-control-nav {
+    top: -10px !important;
+}
+
+.cat-review .review > .content .post-info .post-desc ul.criteria > li > .title {
+    width: 83.5% !important;
+    padding: 0 0 0 5px !important;
+}
+
+.cat-vertical-widget-content .flex-control-nav {
+    top: -10px !important;
+}
+
+.cat-vertical-widget-content .flexslider .flex-direction-nav > li {
+    top: 43px !important;
+}

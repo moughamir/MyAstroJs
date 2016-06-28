@@ -1,0 +1,250 @@
+﻿/* Skin Color: 29B6D1 */
+/* Skin Color: 007acc */
+
+/* Skin Color: 009CC7 */
+/* Skin Color: 00A2D3 */
+
+body {
+}
+
+/* Scroll bar - Handle */
+::-webkit-scrollbar-thumb {
+    background: #00ADFF;
+}
+
+/*Color Skin Theme */
+
+/* Font-Color */
+a:hover, a:focus,
+i:hover, i:focus,
+.ticker-content a:hover,
+.breaking-news-widget > .row-fluid > .content .ticker-content a:hover,
+.widget a:hover, .widget-300 a:hover, .cat-widget a:hover,
+.cat-horiz a:hover,
+.cat-horiz .related-posts .media-list a:hover,
+.cat-horiz .last-post .post-info .post-meta a:hover,
+.cat-horiz .related-posts .media-list .post-meta a:hover,
+.cat-horiz .last-post .post-info .post-meta a:hover > i,
+.cat-horiz .related-posts .media-list .post-meta a:hover > i,
+.cat-horiz-divided a:hover,
+.cat-horiz-divided .related-posts .media-list a:hover,
+.cat-horiz-divided .last-post .post-meta a:hover,
+.cat-horiz-divided .last-post .post-meta a:hover > i,
+.cat-horiz-divided .last-post .post-meta a:focus,
+.cat-horiz-divided .last-post .post-meta a:focus > i,
+.cat-horiz-divided .related-posts .media-list .post-meta a:hover,
+.cat-horiz-divided .related-posts .media-list .post-meta a:hover > i,
+.cat-vertical a:hover,
+.cat-vertical a:hover > i,
+.cat-vertical a:hover > span,
+.cat-vertical .last-post .post-info .post-meta a:hover,
+.cat-vertical .last-post .post-info .post-meta a:hover > i,
+.cat-vertical .last-post .post-info .post-meta a:focus,
+.cat-vertical .last-post .post-info .post-meta a:focus > i,
+.cat-vertical .related-posts .media-list a:hover,
+.cat-vertical .related-posts .media-list .post-meta a:hover,
+.cat-vertical .related-posts .media-list a:hover > i,
+.cat-vertical .related-posts .media-list .post-meta a:hover > i,
+.cat-vertical .related-posts .media-list a:focus > i,
+.cat-vertical .related-posts .media-list .post-meta a:focus > i,
+.posts-in-thumbs .media-list a:hover,
+.posts-in-scrolling-box .media-list a:hover,
+.posts-in-thumbs .media-list li:hover a,
+.posts-in-scrolling-box .media-list li:hover a,
+.widget .widget-content .tabs-body-style .media-list li:hover a,
+.article-content .post-info .post-meta a:hover,
+.article-content .post-info .breadcrumb a:hover,
+.article-content .post-info .post-meta a:hover > i,
+.article-content .post-info .breadcrumb a:hover > i,
+.comments-box .cat-widget-content .media-body .media ul > li > a:hover,
+.comments-box .cat-widget-content .media-body .media ul > li > a:hover > i,
+.comments-box .cat-widget-content .media-body .media .media-body .media ul > li > a:hover,
+.comments-box .cat-widget-content .media-body .media .media-body .media ul > li > a:hover > i,
+.post-navigation a:hover,
+.posts-in-thumbs .media-list .post-meta a:hover,
+.posts-in-scrolling-box .media-list .post-meta a:hover,
+.widget .widget-content .tabs-body-style .media-list .post-meta a:hover,
+.post-navigation div a:hover > span,
+.post-navigation div a:hover > i,
+.blog-item .post-meta ul li a:hover,
+.blog-item .post-meta ul li a:hover > i,
+.navbar-main .navbar .nav > li > a:focus,
+.navbar-main .navbar .nav > li > a:hover,
+.navbar-main .navbar .nav > li > i:focus,
+.navbar-main .navbar .nav > li > i:hover,
+.navbar-main .navbar .dropdown .caret:hover,
+.posts-in-widget .carousel-nav > .arrow:hover > i,
+.posts-in-widget .comments .leave-comment a,
+.da-slide h3,
+.input-append .add-on, .input-prepend .add-on,
+.article-content .social-share-footer .share-icon,
+.modern-footer .f-copyright a:hover,
+.modern-footer .f-copyright a:focus,
+.modern-footer .f-copyright i:hover,
+.modern-footer .f-copyright i:focus {
+    color: #00ADFF;
+}
+
+/* Background Colors */
+.breaking-news-widget > .row-fluid > .title,
+.widget-title > h3:after,
+.cat-widget-title h3:after,
+.widget-title > h4:after,
+.f-widget-title > h4:after,
+.btn-theme,
+ul.modern-tabs .btn-theme:hover,
+ul.modern-tabs .btn-theme.active,
+.widget .widget-content ul.tabs-header > li.btn-theme.active > a,
+.modern-accordion-container > .accordion > .accordion-group > .accordion-heading > .btn-theme:hover,
+.article-content .social-share-footer .figure,
+.article-content .blog .social-share-footer .pagination ul > li > a:hover,
+.article-content .blog .social-share-footer .pagination ul > li > a:focus,
+.carousel-nav .carousel-indicators .active,
+.flexslider .flex-direction-nav > li:hover,
+.article-content .blog .paging-footer .pagination ul > .active a,
+.article-content .blog .paging-footer .pagination ul > .active > a:hover,
+.article-content .blog .paging-footer .pagination ul > .active > span:hover {
+    background: #00ADFF;
+    background-color: #00ADFF;
+}
+
+.btn-theme:hover, .btn-theme:focus,
+.btn-theme:active, .btn-theme.active {
+    color: #fff !important;
+}
+
+.cat-widget .cat-widget-title,
+.widget .widget-title,
+.widget-300 .widget-300-title,
+.author-bio .cat-widget-title,
+.cat-related-news .cat-widget-title,
+.comments-box .cat-widget-title {
+}
+
+.navbar-main .dropdown-menu {
+    border-color: rgb(49, 49, 49);
+}
+
+.navbar-main .dropdown-menu,
+.navbar-main .navbar .nav li.dropdown.open > .dropdown-toggle {
+    background: rgb(66, 66, 66);
+    background-color: rgb(66, 66, 66);
+     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-main .navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar-main .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background: #00adff;
+    background-color: #00adff;
+     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-main .navbar .navbar-inner .nav > li > .dropdown-menu:after {
+    border-bottom: 5px solid transparent;
+}
+
+.navbar-main .navbar .navbar-inner .nav > li > .dropdown-menu:before {
+    border-bottom: none;
+}
+
+.navbar-main .navbar .nav > .active > a,
+.navbar-main .navbar .nav > li > a:focus,
+.navbar-main .navbar .nav > li > a:hover,
+.navbar-main .navbar .nav > li > i:focus,
+.navbar-main .navbar .nav > li > i:hover,
+.navbar-main .navbar .dropdown .caret:hover,
+.navbar-main .navbar .nav > .active > a,
+.navbar-main .navbar .nav > .active > a:hover,
+.navbar-main .navbar .nav > .active > a:focus,
+.navbar-main .dropdown-menu > li > a:hover,
+.navbar-main .dropdown-menu > li > a:focus,
+.navbar-main .dropdown-menu > li:hover > a,
+.navbar-main .dropdown-menu > li:hover > a,
+.navbar-main .dropdown-submenu:hover > a,
+.navbar-main .dropdown-submenu:focus > a {
+    background: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.navbar-main .dropdown-menu > li {
+    border-bottom: 1px solid #585858;
+}
+
+.tags-cloud a.btn-theme:hover {
+    background-color: #00adff !important;
+}
+
+.modern-footer .tags-cloud a.btn-theme:hover {
+    border-color: #00ADFF !important;
+    background-color: rgb(34, 34, 34) !important;
+}
+
+.modern-items-list .fold-item .description,
+.cat-review .review .img-container .img-meta .post-result .percent {
+    background: rgba(0, 173, 255, 0.87);
+    background-color: rgba(0, 173, 255, 0.87);
+}
+
+.thumb-effect:hover .mask {
+    background-color: rgba(0, 173, 255, 0.94) !important;
+}
+
+/* Border Color */
+.flex-control-nav {
+    border-color: rgba(0, 173, 255, 0.27);
+}
+
+.breaking-news-widget,
+.top-menu-2 .btn-theme:hover {
+    border-color: #00ADFF;
+}
+
+.twitter-ticker-widget .widget-inner > .title,
+#divLatestTweets ul.tweet_list,
+#divLatestNews ul.news_list {
+    border-right-color: #00ADFF;
+}
+
+.top-menu-2 .navbar-inner .brand:after,
+.top-menu-2 .about-company .title > h3:after {
+    border-bottom-color: #00ADFF;
+}
+
+.top-menu-2 ul.nav > .dropdown > .dropdown-menu > li:first-child,
+.top-menu-2 .dropdown-submenu > .dropdown-menu > li:first-child,
+.modern-footer {
+    border-top-color: #00ADFF;
+}
+
+/* Login Form */
+.input-append .add-on, .input-prepend .add-on {
+    /*color: #00ADFF;*/
+}
+
+/* Elastic Slide */
+.ei-title h4, .ei-slider-thumbs li.ei-slider-element {
+    /*background-color: rgba(208, 34, 34, 0.79);*/
+    background: #00ADFF;
+    background-color: #00ADFF;
+}
+
+/* Individuals Items */
+
+.modern-footer {
+}
+
+.cat-widget .widget-icon {
+    color: #00ADFF;
+}
+
+.article-content > header .breadcrumb {
+    /*background-color: #00ADFF !important;*/
+}

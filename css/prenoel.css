@@ -1,0 +1,246 @@
+body{
+  background: url("../images_landing/bg-noel.jpg") center center no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+body .top-nav {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+body .top-nav .nav-content {
+    font-family: open sans;
+    font-size: 13px;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+body .top-nav .nav-content a {
+    color: #fff;
+    text-decoration: none;
+}
+.header{
+	padding-top: 10px;
+}
+.header img{
+	max-width: 165px;
+}
+.header p{
+	font-family: "segoe print","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #ffffff;
+}
+.header span{
+	color: #ff6c6c;
+}
+.text-upper{
+	text-transform: uppercase;
+}
+.form-control{
+	margin: 0 auto;
+	width: 80%;
+}
+.title h1{
+	color: #ffffff;
+	font-size: 30px;
+	text-shadow:0 0 4px rgba(0, 0, 0, 0.50);
+}
+.title span{
+	font-weight: bold;
+}
+.main-2-left h2{
+	font-family: "segoe print","Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin-bottom: 20px;
+  margin-top: 0px;
+  color: #ff6c6c;
+  font-weight: 600;
+}
+.main-2-right h2{
+	font-size: 22px;
+	color: #ffffff;
+}
+.main-2-right p{
+	font-size: 18px;
+	color: #ffffff;
+  margin-bottom: 20px;
+}
+.main-2-right span{
+	font-weight: bold;
+}
+.main-1{
+	margin-top: 20px;
+}
+.main-2{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.main-2-left-1{
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border: 2px solid #e6a8b3;
+	background: #ffffff;
+	box-shadow: -1px 3px 3px #888888;
+}
+.main-2-left-1 p{
+	color: #6f6f6f;
+  line-height: 18px;
+}
+.main-2-left-1 .first{
+	background: transparent url("../images_landing/ico-tel.png") no-repeat scroll 30px 0;
+	background-size: contain;
+	padding-left: 56px;
+}
+.main-2-left-1 .last{
+	 background: transparent url("../images_landing/ico-tel2.png") no-repeat scroll 35px 0;
+	 background-size: contain;
+}
+.main-1-left{
+	background: rgba(255, 255, 255, 0.80);
+	padding-bottom: 15px;
+	padding-top: 20px;
+}
+.main-1-left p{
+	font-size: 12px;
+    line-height: 14px;
+    color: #6f6f6f;
+}
+.main-1-right img{
+	border: solid 4px #ffffff;
+}
+.main-1-right span{
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 22px;
+}
+.main-2-left-2{
+	margin-bottom: 10px;
+}
+.main-2-left-2 .text-center{
+	border: 2px solid #e6a8b3;
+	margin-left: 8px;
+	background: #ffffff none repeat scroll 0 0;
+    box-shadow: -1px 3px 3px #888888;
+    cursor: default;
+    font-size: 18px;
+    margin-bottom: 5px;
+    width: 23%;
+}
+.main-2-left-2  span{
+	font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+.main-2-left-2 img{
+	display: block;
+    margin: 10px auto 5px;
+}
+.main-2-right{
+	border: solid 4px #ffffff;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ff6c6c 0%, #e16060 100%) repeat scroll 0 0;
+	box-shadow: -1px 3px 3px #888888;
+  margin-bottom: 26px;
+}
+.main-2-right .btn-default{
+	display: block;
+    margin: 35px auto -18px;
+    height: 45px;
+    width: 220px;
+    background: #56e0a0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer{
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f87f7f 0%, #e16060 100%) repeat scroll 0 0;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.footer-2{
+	margin-bottom: 10px;
+}
+.footer p{
+	text-align: left;
+	margin-left: 28px;
+	margin-bottom: 0px;
+	line-height: 17px;
+  width: 100%;
+}
+.footer .row div{
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.footer .one{
+	 background: transparent url("../images_landing/ico-arg1.png") no-repeat scroll 5px center;
+	 border-right: 1px solid;
+}
+.footer .two{
+	 background: transparent url("../images_landing/ico-arg2.png") no-repeat scroll 14px center;
+	 border-right: 1px solid;
+}
+.footer .three{
+	 background: transparent url("../images_landing/ico-three.png") no-repeat scroll 3px center;
+	 border-right: 1px solid;
+}
+.footer .four{
+	background: transparent url("../images_landing/ico-arg4.png") no-repeat scroll 3px center;
+	border-right: 1px solid;
+}
+.footer .five{
+	 background: transparent url("../images_landing/ico-cb.png") no-repeat scroll 5px center; 
+}
+.main-2-right .message_envoye{
+  color: #caff7a;
+}
+/*******************************/
+
+@media (max-width: 767px) {
+  .main-2-left-2 .text-center{
+  	width: 45%
+  }
+  .footer .row div{
+  	border-right: none !important;
+  }
+  .title h1{
+  	font-size: 18px;
+  }
+  .header p{
+  	font-size: 14px;
+  	margin-top: 5px;
+  }
+  .main-1-right span{
+  	font-size: 18px;
+  }
+  .main-2-right h2{
+  	font-size: 14px;
+  }
+  .main-2-right p{
+  	font-size: 14px;
+  }
+  .main-2-right{
+  	margin-bottom: 30px;
+  }
+  .form-control{
+  	font-size: 12px;
+  }
+  body .top-nav .nav-content{
+  	font-size: 10px;
+  }
+  body .top-nav{
+  	text-align: left;
+  	padding-left: 5px;
+  }
+  .img-responsive{
+  	margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer .row div{
+  	border-right: none !important;
+  }
+}

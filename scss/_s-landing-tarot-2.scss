@@ -1,0 +1,645 @@
+/* 
+    -----------------------------------------
+    --      structure landing tarot 2      --
+    --         formulaire à droite         --
+    -----------------------------------------
+
+    Created on : 11 avril 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "knacss/knacss";
+
+body {
+    font-size: 1.3rem;
+}
+
+.PageWrapper {
+    display: table;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+
+.SiteLogo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: grey;
+}
+
+.ContentBand {
+    margin-top: 5.5rem;
+    margin-bottom: 4rem;
+    
+    &-Column {
+        display: table-cell;
+        vertical-align: bottom;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+.DescText-Title {
+    height: 150px;
+    margin-top: 0;
+    background-color: silver;
+}
+
+.DescText-Content {
+    background: silver;
+    padding: 1.2rem 1.8rem;
+    text-align: left;
+}
+
+.ContentBand-Column.Column-Tarot {
+    padding-right: 2rem;
+}
+
+.WidgetTarot {
+    text-align: center;
+    position: relative;
+    
+    &-Draw, &-Result {
+        margin-bottom: 3rem;
+    }
+    
+    &-Card {
+        display: inline-block;
+        position: relative;
+        width: 55px;
+        height: 105px;
+        overflow: hidden;
+        cursor: pointer;
+        perspective-origin: center bottom;
+        z-index: 5;
+        margin-right: -20px;
+        margin-left: -20px;
+        
+        &.notFlipped {
+            background: white;
+            position: relative;
+        }
+        
+        &.Flipped {
+            z-index: 10;
+        }
+        
+        &-Face {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition-duration: 0.5s;
+            -webkit-transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transition-duration: 0.5s;
+            transition-property: transform;
+            transition-timing-function: ease-out;
+            backface-visibility: hidden;
+            
+            &.front {
+                z-index: 5;
+                border: 3px solid grey;
+            }
+            
+            &.back {
+                z-index: 0;
+                -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+                border: 3px solid orange;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        
+        &.Flipped &-Face.front {
+            z-index: 10;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+        &.Flipped &-Face.back {
+            z-index: 5;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+        
+        &.place {
+            background: silver;
+            margin: 0;
+            margin-right: 10px;
+        }
+        
+        &.place:last-child {
+            margin-right: 0;   
+        }
+    }
+}
+
+.alert {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    border: 1px solid;
+}
+
+.fa img {
+    display: none;
+}
+
+.Column-Form {
+    text-align: right;
+}
+
+.FormContainer {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    padding: 3rem;
+    padding-top: 1.5rem;
+    margin: auto;
+    text-align: left;
+    background-color: grey;
+    
+    &.overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        border: none;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    &-Header {
+        margin: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: inherit;
+        font-size: 2.8rem;
+        font-weight: inherit;
+    }
+    
+    &-Slogan {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    &-Fields {
+        padding: 0 2rem;
+    }
+    
+    &-Submit {
+        display: block;
+        min-width: 60%;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 1rem 2rem;
+        font-family: inherit;
+        font-size: 2.2rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    
+    &.DRI {
+        background-color: transparent;
+        text-align: center;
+        
+        .DRI {
+            &-Intro {
+                padding: 2rem;
+                background-color: lightgrey;
+                * {
+                    margin: 0;
+                    font-family: inherit;
+                    font-weight: normal;
+                }
+                &-Title {
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 3px dotted;
+                    font-size: 2.2rem;
+                }
+                &-Text {
+                    font-size: 2rem;
+                    color: grey;
+                }
+            }
+            &-Slogan {
+                padding: 1rem 2rem;
+                margin: 0;
+                background-color: grey;
+                color: white;
+                font-size: 2.2rem;
+                font-family: inherit;
+                font-weight: normal;
+            }
+            &-Form {
+                padding: 2rem;
+                background-color: silver;
+            }
+            &-Sent {
+                padding: 2rem;
+                font-family: inherit;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.FormField {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+    
+    &-Label {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+    }
+    
+    &-Input {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid;
+        &.radio {
+            display: inline-block;
+        }
+    }
+    
+    &-TableInputContainer {
+        display: table;
+        width: 100%;
+        margin: auto;
+        
+        &-Cell {
+            display: table-cell;
+            padding-right: 1rem;
+            text-align: center;
+            white-space: nowrap;
+            
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        
+        &.fixed-2-col &-Cell {
+            width: 33.333%;
+        }
+        &.fixed-3-col &-Cell {
+            width: 33.333%;
+        }
+        
+        &.gender {
+            max-width: 300px;
+        }    
+        &.relationship-status {
+            max-width: 400px;
+        }
+    }
+    
+    &.radio &-Label, &.radio &-Input {
+        display: inline-block;
+        width: auto;
+        margin-top: 0;
+        vertical-align: middle;
+        margin: 0 0.2rem;
+    }
+    
+    &-Info {
+        display: block;
+        position: absolute;
+        margin-top: -3.7rem;
+        padding: 0.8rem 1.4rem;
+        background-color: white;
+        border: 1px solid;
+        transition: all 0.25s;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    &-Input:focus + &-Info {
+        margin-top: -8rem;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+.How {
+    display: inline-block;
+    padding: 0 3rem;
+    text-align: left;
+}
+
+.How-Wizard {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 1rem;
+    height: 8rem;
+    box-sizing: content-box;
+    border: 1px solid;
+    background-color: white;
+    
+    &Item {
+        display: inline-block;
+        height: 8rem;
+        position: relative;
+        box-sizing: border-box;
+        border: 4rem solid transparent;
+        border-left-color: inherit;
+        border-right: 0;
+        
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -4rem;
+            left: -4.1rem;
+            border: 4rem solid transparent;
+            border-left-color: white;
+            border-right: 0;
+        }
+        
+        &:first-child {
+            border: none;
+            &:before {
+                display: none;
+            }
+        }
+        
+        > * {
+            display: inline-block;
+            position: relative;
+            top: -4rem;
+        }
+        
+        &-Img {
+            width: 5rem;
+            height: 5rem;
+            margin: 1.5rem;
+            margin-right: 0;
+            float: left;
+            background-color: grey;
+        }
+        
+        &-Txt {
+            line-height: 2rem;
+            margin: 2rem 1rem;
+            height: 4rem;
+        }
+    }
+}
+
+.ReassuranceList {
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    padding: 1.2rem 0;
+    text-align: center;
+    background-color: grey;
+    
+    &-Item {
+        display: table-cell;
+        border-right: 1px solid;
+        padding: 0 2rem;
+        text-align: left;
+        
+        &-Img {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 2rem;
+            background-color: white;
+        }
+        
+        &-Txt {
+            display: inline-block;
+        }
+        
+        &:last-child {
+            border-right: 0;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+.SiteCopyright {
+    text-align: center;
+}
+
+/* Règles responsive tirage tarot */
+@media screen and (min-width: 970px) and (max-width: 1200px) {
+    .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (min-width: 970px) and (max-width: 1050px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (max-width: 880px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped, .WidgetTarot-Card[data-card="11"].notFlipped, .WidgetTarot-Card[data-card="12"].notFlipped {
+        display: none;
+    }
+    .WidgetTarot-Card.place {
+        margin-right: 0.8rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .WidgetTarot-Card {
+        width: 70px;
+        height: 134px;
+    }
+}
+@media screen and (max-width: 610px){
+    .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="13"].notFlipped, .WidgetTarot-Card[data-card="14"].notFlipped, .WidgetTarot-Card[data-card="15"].notFlipped, .WidgetTarot-Card[data-card="16"].notFlipped, .WidgetTarot-Card[data-card="17"].notFlipped, .WidgetTarot-Card[data-card="18"].notFlipped, .WidgetTarot-Card[data-card="19"].notFlipped, .WidgetTarot-Card[data-card="20"].notFlipped, .WidgetTarot-Card[data-card="21"].notFlipped, .WidgetTarot-Card[data-card="22"].notFlipped {
+        display: none;
+    }
+    
+    .WidgetTarot {
+        &-Card {
+            margin: 0;
+        }
+        &-Result {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 410px){
+    .WidgetTarot-Card {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+}
+@media screen and (max-width: 360px){
+    .WidgetTarot-Card {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
+/* Autres règles responsives */
+@media screen and (max-width: 1200px){
+    .ReassuranceList-Item {
+        padding: 0 1rem;
+        &-Img {
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    .How-Wizard {
+        height: auto;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 970px){
+    .WidgetBand {
+        padding-top: 1.5rem;
+    }
+    .ContentBand-Column.WidgetBand-DescText { 
+        width: 100%;
+        padding-right: 0;
+        
+        .ContentBand-ColumnHeader {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 2rem;
+            text-align: left;
+        }
+        
+        .DescText {
+            display: table-cell;
+        }
+    }
+    .ContentBand-Column.FormBand-Form {
+        text-align: center;
+    }
+    .ReassuranceList-Item {
+        font-size: 1.3rem;
+    }
+    .FormContainer-Submit {
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 900px){
+    .ContentBand {
+        margin-top: 3rem;
+    }
+    .How {
+        text-align: center;
+        &-Header {
+            text-align: left;
+        }
+        &-Wizard {
+            margin-bottom: 4rem;
+            &Item {
+                border-left-width: 2.5rem;
+                &::before {
+                    left: -2.6rem;
+                    border-left-width: 2.5rem;
+                }
+            }
+        }
+    }
+    .ReassuranceList {
+        text-align: left;
+        &-Item {
+            display: inline-block;
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
+    .FormContainer-Fields {
+        padding: 0;
+    }
+    .FormContainer-Submit {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .ContentBand {
+        margin-bottom: 3rem;
+        &-Column {
+            display: table;
+            width: 100%;
+            margin: auto;
+        }
+    }
+    .ContentBand-Column.Column-Form {
+        text-align: center;
+    }
+    .ContentBand-Column.Column-Tarot {
+        padding: 2rem;
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 695px){
+    .How {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 485px){
+    .PageWrapper {
+        padding: 0;
+    }
+    
+    .How-Header {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .How-Wizard {
+        height: auto;
+        width: 100%;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+    
+    .FormContainer {
+        &-Header {
+            font-size: 2.5rem;
+        }
+        
+        &-Submit {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+    .relationship-status .FormField-TableInputContainer-Cell {
+        display: block;
+        margin-left: 20%;
+        text-align: left;
+    }
+}

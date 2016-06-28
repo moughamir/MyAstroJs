@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* 
+    ----------------------------------
+    --      module choix voyant     --
+    ----------------------------------
+
+    Created on : 26 mai 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+.PsychicChoice {
+    &-Psychic {
+        padding: 0 2rem;
+        
+        &-Input {
+            display: none;
+        }
+        &-VisualForm {
+            padding: 0 2rem;
+        }
+        &-Picture {
+            position: relative;
+            display: inline-block;
+            width: 240px;
+            height: 210px;
+            background-color: lightgrey;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &:after {
+                content: " ";
+                position: absolute;
+                display: block;
+                height: 3rem;
+                width: 3rem;
+                right: 0;
+                bottom: 1rem;
+                font-size: 2.6rem;
+            }
+        }
+        &-Photo {
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        &-Name {
+            position: relative;
+            top: -1rem;
+            font-size: 3.2rem;
+            font-weight: bold;
+        }
+        
+        &-VisualForm:hover {
+            color: steelblue;
+            .PsychicChoice-Psychic-Picture {
+                background-size: contain;
+                background-color: lightblue;
+            }
+        }
+        
+        &-Input:checked + &-VisualForm {
+            color: coral;
+            .PsychicChoice-Psychic-Picture {
+                background-size: contain;
+                background-color: peachpuff;
+                &:after {
+                    background-color: coral;
+                }
+            }
+        }
+        &-Introduction:before {
+            content: "“";
+            display: block;
+            margin-bottom: -6.5rem;
+            margin-top: -1rem;
+            text-align: center;
+            font-size: 10rem;
+            font-family: Times, serif;
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    .PsychicChoice-Psychic-Picture {
+        width: 170px !important;
+        height: 149px !important;
+    }
+    .PsychicChoice-Psychic-Name {
+        font-size: 2.3rem;
+    }
+}
+
+@media all and (max-width: 768px){
+    .PsychicChoice-Psychic-Picture::after {
+        right: initial;
+    }
+    .PsychicChoice-Psychic-Name {
+        top: initial;
+        display: block;
+        text-align: center;
+    }
+    .PsychicChoice-Psychic-Introduction {
+        display: none;
+    }
+}
+@media all and (max-width: 680px){
+    .PsychicChoice-Psychic {
+        padding: 0;
+        text-align: center;
+        
+        &-VisualForm {
+            padding: 0;
+        }
+        
+        &-Picture {
+            width: 120px !important;
+            height: 105px !important;
+            
+            &::after {
+                font-size: 2rem;
+                height: 1.8rem;
+                width: 1.8rem;
+                bottom: 0;
+            }
+        }
+        &-Name {
+            font-size: 2rem;
+        }
+    }
+}

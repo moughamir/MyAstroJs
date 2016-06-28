@@ -1,0 +1,143 @@
+/* 
+    Created on : 15 mars 2016, 10:44:03
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@font-face{
+    font-family:'Fjalla One';
+    font-style:normal;
+    font-weight:400;
+    src:local("Fjalla One") , local("Fjalla One-Regular") , url(https://fonts.gstatic.com/s/fjallaone/v4/rxxXUYj4oZ6Q5oDJFtEd6i3USBnSvpkopQaUR-2r7iU.ttf) format("truetype")
+}
+@font-face{
+    font-family:'Lobster';
+    font-style:normal;
+    font-weight:400;
+    src:local("Lobster") , local("Lobster-Regular") , url(https://fonts.gstatic.com/s/lobster/v16/TSDaXhyJuDJ-NBU0popSWA.ttf) format("truetype")
+}
+
+body.voyance-telephone-1 {
+    background: url('background.png') no-repeat;
+    background-color: linear-gradient(to right, #226325 0%, #93bc45 50%, #669936 100%);
+}
+
+body.voyance-telephone-1 .top-nav {
+    color: #333333;
+    height: auto;
+    border-bottom: 1px solid #b3930e;
+    background: linear-gradient(to bottom, #e6a513 0%, #eec904 100%);
+    box-shadow: 0px 5px 10px rgba(53,43,1,0.8);
+    margin-bottom: 30px;
+}
+body.voyance-telephone-1 .top-nav .nav-content .logo {
+    background-image: url('logo-myastro.png');
+    width: 316px;
+    height: 81px;
+    display: inline-block;
+}
+body.voyance-telephone-1 .top-nav .nav-content .links a {
+    color: #333333;
+}
+
+body.voyance-telephone-1 .left-part .logo img {
+    display: none;
+}
+
+body.voyance-telephone-1 .right-part {
+    font-family: Arial, sans-serif;
+    background: transparent;
+}
+
+body.voyance-telephone-1 .voyant-membre {
+    max-width: none;
+    margin: 0;
+    padding: 1px 10% 20px;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+body.voyance-telephone-1 .voyant-membre h2 {
+    color: #333333;
+    border-bottom: 3px dotted #333;
+    padding-bottom: 10px;
+    margin: 20px auto;
+}
+
+body.voyance-telephone-1 .voyant-membre .slogan {
+    color: #3c893a;
+}
+
+body.voyance-telephone-1 .right-part .widget {
+    background: #a1c74b;
+}
+
+body.voyance-telephone-1 .right-part .widget .widget-title {
+    background: #004a10;
+}
+body.voyance-telephone-1 .right-part .widget .li-form input {
+    height: auto;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 10px;
+    color: #333333;
+    font-size: 1.2em;
+}
+body.voyance-telephone-1 .right-part .widget input[type="submit"]{
+    border-color: #b3930e;
+    border-radius: 10px;
+    color: #333333;
+    background: linear-gradient(to bottom, #e6a513 0%, #eec904 100%);
+    box-shadow: 0px 5px 10px rgba(53,43,1,0.8);
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche h2 {
+    font-family: "Lobster";
+    color: white;
+    text-transform: none;
+    font-size: 2em;
+}
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq {
+    background-color: white;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.first {
+    background: url('ico-form-telephone1.png') no-repeat 20px center transparent;
+}
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.last {
+    background: url('ico-rappel1.png') no-repeat 20px center transparent;
+}
+
+.tchat .advert-online h2 {
+    font-family:'Fjalla One';
+    color: white;
+    font-weight: normal;
+}
+
+
+body.voyance-telephone-1 .subfooter {
+    margin-top: 60px;
+    background: transparent;
+    color: #006832;
+}
+body.voyance-telephone-1 .subfooter ul {
+    background-color: white;
+    box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.70);
+}
+body.voyance-telephone-1 .subfooter ul li.first{
+    background: url('star.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.second {
+    background: url('lock.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.third {
+    background: url('chat.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.fourth {
+    background: url('trophy.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.fifth {
+    background: url('secure.png') no-repeat 45px center transparent;
+}
+
+body.voyance-telephone-1 .footer {
+    color: white;
+}

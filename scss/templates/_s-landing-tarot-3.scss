@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/* 
+    -----------------------------------------
+    --      structure landing tarot 3      --
+    -----------------------------------------
+
+    Created on : 25 mai 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "../knacss/knacss";
+
+body {
+    font-size: 1.3rem;
+}
+
+.PageWrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.ContentBand {
+    &-Table {
+        display: table;
+        width: 100%;
+    }
+    &-Column {
+        display: table-cell;
+        vertical-align: middle;
+        
+        &Header {
+            text-align: center;
+            font-size: 3.5rem;
+            padding: 1rem;
+            margin-bottom: 4rem;
+            strong {
+                font-size: 5.5rem;
+            }
+        }
+    }
+    
+    &.TwoCols &-Column {
+        width: 50%;
+    }
+    &.ThreeCols &-Column {
+        width: 33.33%;
+    }
+}
+
+@media all and (max-width: 580px){
+    .ContentBand-ColumnHeader {
+        font-size: 2.8rem;
+        strong {
+            font-size: 4.4rem;
+        }
+    }
+}
+@media all and (max-width: 420px){
+    .ContentBand-ColumnHeader {
+        font-size: 2.2rem;
+        strong {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.SiteHeader {
+    background-color: darkgrey;
+    color: white;
+    font-size: 2.4rem;
+    
+    &-Logo {
+        display: block;
+        height: 120px;
+        width: 300px;
+        background-color: grey;
+        margin: auto;
+    }
+    &-Slogan1 {
+        padding-right: 2rem;
+    }
+    &-Slogan2 {
+        padding: 0 3.5rem;
+        background-color: silver;
+        color: black;
+    }
+}
+
+@media all and (max-width: 960px){
+    .SiteHeader-Slogan1 {
+        display: none;
+    }
+    .SiteHeader-Logo {
+        margin: initial;
+    }
+}
+@media all and (max-width: 680px){
+    .SiteHeader-Slogan2 {
+        display: none;
+    }
+    .SiteHeader-Logo {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+
+@import "../modules/psychic-choice";
+
+.PsychicChoice {
+    margin-bottom: 3rem;
+}
+
+
+/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+
+@import "../modules/theme-choice-list";
+
+.ThemeChoice {
+    margin-bottom: 3rem;
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+$card-width: 135px;
+$card-height: 240px;
+$overlap: -47px;
+
+@import "../modules/tarot-draw";
+
+
+/* ------------------------------- POP VOYANT ------------------------------- */
+
+@import "../modules/pop";
+
+.Pop.Pop-Voyant {
+    width: 150px;
+    height: 131px;
+    left: -60px;
+    top: -25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    .Pop-Voyant-Photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media all and (max-width: 680px){    
+    .Pop.Pop-Voyant {
+        width: 120px;
+        height: 105px;
+        left: -30px;
+    }
+}
+@media all and (max-width: 480px){
+    .Pop.Pop-Voyant {
+        left: 50%;
+        top: -70px;
+        margin-left: -60px;
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+@import "../modules/form";
+
+.FormContainer {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+    
+    &.overlay {
+        width: 100%;
+    }
+}
+
+.Fields-Table-Row > .FormField-Label:after {
+    content: " :";
+}
+
+@media all and (max-width: 680px){
+    .Fields-Table-Row > .FormField-Label {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .Fields-Table-Row.gender > .FormField-Label {
+        text-align: center;
+    }
+    
+    .Fields-Table-Row > .FormField {
+        display: block;
+        margin-bottom: 0;
+    }
+    .Fields-Table-Row .FormField-Info {
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 480px){
+    .Form .PageWrapper {
+        padding: 0;
+    }
+    .FormContainer-Fields {
+        padding: 0;
+    }
+    .FormContainer {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+
+.DRI-Promo {
+    text-align: center;
+    font-size: 1.4rem;
+    
+    &-DescText {
+        padding: 0 10rem;
+    }
+    
+    &-Slogan {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 2.4rem;
+        
+        &-TelIcon {
+            display: inline-block;
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            margin-left: -65px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+        }
+    }
+}
+
+@media all and (max-width: 740px){
+    .DRI-Promo {
+        &-DescText {
+            display: none;
+        }
+        &-Slogan {
+            margin-top: 0px;
+            padding-left: 160px;
+            height: 131px;
+        }
+        .Pop.Pop-Voyant {
+            top: 0;
+            left: 0;
+        }
+    }
+}
+@media all and (max-width: 680px){
+    .DRI-Promo {
+        &-Slogan {
+            font-size: 2.2rem;
+            &-TelIcon {
+                width: 35px;
+                height: 35px;
+                margin-left: -40px;
+            }
+        }
+        .Pop.Pop-Voyant {
+            width: 151px;
+            height: 131px;
+        }
+    }
+}
+@media all and (max-width: 510px){
+    .DRI-Promo {
+        .Pop.Pop-Voyant {
+            width: 120px;
+            height: 105px;
+            left: 50%;
+            top: -25px;
+            margin-left: -60px;
+        }
+        &-Slogan {
+            height: auto;
+            margin-bottom: 2rem;
+            padding: 0;
+            padding-top: 80px;
+        }
+    }
+}
+
+/* ---------------------------------- TCHAT --------------------------------- */
+
+@import "../modules/tchat";
+
+.Tchat-Gratuit {
+    &-Title {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+}
+@media all and (max-width: 510px){
+    .Tchat-Gratuit {
+        &-Title {
+            text-align: center;
+        }
+        .PageWrapper {
+            padding: 0;
+        }
+    }
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteCopyright {
+    text-align: center;
+    margin-bottom: 2rem;
+}

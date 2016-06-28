@@ -1,0 +1,331 @@
+﻿
+.form-payment .form-control{
+
+	width:90%;
+	border-radius: 5px;
+}
+
+.form-payment{
+	margin-left: 15px;
+}
+
+.btn-payment{
+	margin-left: 128px;
+}
+
+
+
+.bloc-forfait-abonnement{
+
+	height:1355px;
+}
+
+.bloc-forfait,.bloc-abonnement{
+position: absolute;
+width:600px;
+
+}
+
+
+.bloc-abonnement .text-abonnement {
+	
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.text-abonnement h4,.text-forfait h4,.frt-name{
+
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.forfait-cgu,.abo-cgu{
+font-size: 11px;
+
+}
+
+.bloc-forfait .text-forfait{
+	margin-bottom: 0px;
+	text-align: center;
+}
+.bloc-forfait .title-forfait{
+
+width:584px; 
+height:38px;
+margin-top: 20px;
+
+}
+
+.bloc-forfait h3, .bloc-abonnement h3{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
+.bloc-abonnement .title-abonnement{
+
+width:584px;
+height:38px;
+margin-top: 518px;
+font-weight: bold;
+
+}
+
+.bloc-forfait .tarifs-min{
+width:338px;
+height:171px;
+margin-top: 100px;
+background-color: #fff;
+margin-left: 52px;
+}
+
+.bloc-forfait .tarifs-min ul{
+	list-style-type: none;
+	line-height: 27px;
+	font-size: 22px;
+	color: #d04e8c;
+	padding-left: 20px;
+	padding-top:14px;
+	border:1px solid #dfdfdf;
+	box-shadow:-7px 7px 7px #dfdfdf;
+}
+
+.bloc-forfait .btn-acheter ul{
+	box-shadow: none;
+	border:none;
+}
+
+.bloc-forfait .btn-acheter{
+
+background-color: transparent;
+margin-left: 346px;
+margin-top: -172px;
+position:relative;
+z-index: 100;
+}
+
+.bloc-forfait .tarifs-min ul li{
+
+	padding-bottom: 15px;
+}
+
+.bloc-forfait .tarifs-min ul sup{
+	font-size: 13px;
+}
+.bloc-forfait .tarifs-min .txt-nb-min{
+	font-weight: bold;
+}
+
+.bloc-forfait .tarifs-min .pts-pts{
+	color:#848286;
+}
+
+.need-help{
+
+background-image: url("../images/abonnement/banniere_forfait.png");
+background-repeat: no-repeat;
+
+}
+.bloc-forfait .forfait-name{
+	background-image: url("../images/abonnement/diamant/diamant.png");
+	background-repeat: no-repeat;
+	height: 116px;
+	width: 286px;
+	margin:17px 45px;
+}
+
+.bloc-forfait .forfait-secure{
+	background-image: url("../images/abonnement/paiement-securise.png");
+	background-repeat: no-repeat;
+	height: 116px;
+	width: 286px;
+	margin:-110px 340px;
+}
+
+.bloc-forfait .forfait-emeraude{
+
+	background-image: url("../images/abonnement/emeraude/emeraude.png");
+}
+
+.bloc-forfait .forfait-rubis{
+
+	background-image: url("../images/abonnement/rubis/rubis.png");
+}
+
+.bloc-forfait .forfait-saphir{
+
+	background-image: url("../images/abonnement/saphir/saphir.png");
+}
+
+.bloc-forfait .tarifs-min .prix-ini{
+	text-decoration: none;
+	color: #848286;
+	font-size: 16px;
+	text-decoration: line-through;
+}
+
+
+.bloc-abonnement .offre1{
+	background-image: url("../images/abonnement/diamant/diamant-offre1.png");
+	background-repeat: no-repeat;
+	height: 194px;
+	width: 347px;
+	opacity:0.99;
+}
+
+.bloc-abonnement .emeraude-offre1{
+	background-image: url("../images/abonnement/emeraude/emeraude-offre1.png");
+}
+
+.bloc-abonnement .rubis-offre1{
+	background-image: url("../images/abonnement/rubis/rubis-offre1.png");
+}
+
+.bloc-abonnement .saphir-offre1{
+	background-image: url("../images/abonnement/saphir/saphir-offre1.png");
+}
+
+.bloc-abonnement .offre2{
+
+background-image: url("../images/abonnement/diamant/diamant-offre2.png");
+background-repeat: no-repeat;
+	height: 214px;
+	width: 400px;
+	margin: -21px 197px;
+}
+
+.bloc-abonnement .emeraude-offre2{
+
+background-image: url("../images/abonnement/emeraude/emeraude-offre2.png");
+
+}
+
+.bloc-abonnement .rubis-offre2{
+	background-image: url("../images/abonnement/rubis/rubis-offre2.png");
+}
+
+.bloc-abonnement .saphir-offre2{
+	background-image: url("../images/abonnement/saphir/saphir-offre2.png");
+}
+
+.bloc-abonnement .offre3{
+
+background-image: url("../images/abonnement/diamant/diamant-offre3.png");
+background-repeat: no-repeat;
+	height: 219px;
+	width: 422px;
+	margin: -31px 2px;
+
+}
+
+.bloc-abonnement .emeraude-offre3{
+
+background-image: url("../images/abonnement/emeraude/emeraude-offre3.png");
+
+}
+
+.bloc-abonnement .rubis-offre3{
+	background-image: url("../images/abonnement/rubis/rubis-offre3.png");
+}
+
+.bloc-abonnement .saphir-offre3{
+	background-image: url("../images/abonnement/saphir/saphir-offre3.png");
+}
+
+.bloc-abonnement .offre1 img{
+	margin: 77px 317px;
+
+}
+
+.bloc-abonnement .offre2 img{
+	margin: 96px -137px;
+}
+
+.bloc-abonnement .offre3 img{
+	margin: 109px 368px;
+}
+
+#form-msg{
+text-align: center;
+
+}
+
+.txt-pay{
+	font-size: 12px;
+	color:#d04e8c;
+}
+
+/* test */
+@media (max-width: 1285px) {
+	
+	/*.bloc-forfait .text-forfait{
+		width:533px;
+	}
+
+	.bloc-abonnement .text-abonnement{
+		width:533px;
+	}
+}
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1272px) {
+
+	.bloc-forfait .text-forfait{
+		width:533px;
+	}
+
+	.bloc-abonnement .text-abonnement{
+		width:533px;
+	}
+
+	.bloc-forfait .tarifs-min{
+		margin-left: 55px;
+	}
+
+	.bloc-forfait .btn-acheter{
+		margin-left: 347px;
+	}
+
+	.bloc-abonnement .rubis-offre1{
+
+	}
+
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+	/*.bloc-forfait .text-forfait{
+		width:533px;
+	}
+
+	.bloc-abonnement .text-abonnement{
+		width:533px;
+	}*/
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {}

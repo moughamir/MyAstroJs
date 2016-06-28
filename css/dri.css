@@ -1,0 +1,410 @@
+/*================DRI-1==========================*/
+body.dri-3 .subfooter ul li.first {
+    background: transparent url("../images_landing/ico-kit1.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.second {
+    background: transparent url("../images_landing/ico-kit2.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.third {
+    background: transparent url("../images_landing/ico-kit3.png") no-repeat scroll 45px center;
+    background-size: 27px;
+}
+body.dri-3 .subfooter ul li.fourth {
+    background: transparent url("../images_landing/ico-kit4.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.fifth {
+    background: transparent url("../images_landing/ico-kit5.png") no-repeat scroll 45px center;
+    background-size: 24px;
+}
+body.dri-3 .subfooter ul li{
+	border-right: none !important;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+body.dri-3 .subfooter{
+	background:#333333;
+}
+body.dri-3 .footer{
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+}
+body.dri-3 .top-header {
+    background: url("../images_landing/bg-header-dri3.jpg") repeat-x scroll center -47px;
+    background-size: cover;
+}
+body.dri-3 .header-container {
+    text-align: center;
+    padding-bottom: 40px;
+    background: url("../images_landing/bg-header-dri3.jpg") repeat-x scroll center -200px;
+    padding-top: 10px;
+    background-size: cover;
+}
+body.dri-3 {
+    background: #f6d6db url("../images_landing/bg-dri3.png") no-repeat scroll center bottom -120px;
+}
+body.dri-3 .container-header p{
+	text-align: center;
+}
+body.dri-3 .right-part{
+	max-width: none;
+	font-family: arial;
+	background: none;
+	margin-top: 0px;
+}
+body.dri-3 .right-part .widget{
+	max-width: 1010px;
+	margin: 0 auto;
+	padding-top: 20px;
+	border:4px solid #e6a8b3;
+	height: 330px;
+	background: #ffffff;
+	box-shadow: -5px 10px 10px #888888;
+}
+body.dri-3 .content-container{
+	padding-top: 20px;
+}
+body.dri-3 .voyant-membre{
+	max-width: 1010px;
+	margin: 0 auto;
+}
+body.dri-3 .row-voyant{
+	margin-top: 50px;
+}
+body.dri-3 .right-part .widget label{
+	text-transform: lowercase;
+	margin-right: 35px;
+	color:#575757;
+	font-weight:normal;
+	font-style: italic;
+	font-family: "Myriad Pro", arial;
+	font-size: 18px;
+}
+body.dri-3 select{
+	width: 200px;
+	font-style: italic;
+	font-family: "Myriad Pro", arial;
+	font-size: 18px;
+}
+body.dri-3 .voyant-membre .cols4{
+	border:4px solid #e6a8b3;
+	width: 24%;
+	margin-bottom: 5px;
+	background: #ffffff;
+	box-shadow: -1px 3px 3px #888888;
+	cursor: default;
+	font-size: 18px;
+}
+body.dri-3 .voyant-membre .cols4 span{
+	font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+body.dri-3 .voyant-membre .mg-right{
+	margin-right: 10px;
+}
+body.dri-3 .comment-ca-marche{
+	text-align: center;
+}
+body.dri-3 .comment-ca-marche p{
+	text-transform: uppercase;
+	color: #8a8888;
+	font-size: 18px;
+}
+body.dri-3 .comment-ca-marche .cols-3 {
+    color: #333;
+    float: left;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 25px;
+    max-width: 50%;
+    min-height: 54px;
+    text-align: center;
+    width: 100%;
+}
+body.dri-3 .comment-ca-marche .cols-3 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #333333;
+	font-style: normal;
+}
+body.dri-3 .comment-ca-marche .faq .cols-3.first {
+    background: transparent url("../images_landing/ico-tel.png") no-repeat scroll 0px center;
+    padding-left: 48px;
+    max-width: 55%;
+}
+body.dri-3 .comment-ca-marche .faq .cols-3.last {
+    background: transparent url("../images_landing/ico-tel2.png") no-repeat scroll 19px 0px;
+    margin-right: 0;
+    padding-left: 80px;
+    max-width: 45%;
+}
+body.dri-3 .comment-ca-marche .faq{
+    margin-top: 50px;
+}
+body.dri-3 .comment-ca-marche h2{
+	font-weight: bold;
+	color: #5f8bb7;
+	font-style: italic;
+}
+body.dri-3 .main{
+	max-width: none;
+}
+body.dri-3 .top-header img{
+	padding-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10px;
+}
+body.dri-3 .header-container{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #575757;
+}
+body.dri-3 .header-container .header-txt-1{
+	font-size: 23px;
+}
+body.dri-3 .header-container .header-txt-2{
+	font-size: 15px;
+	
+}
+body.dri-3 .header-container .header-txt-3{
+	font-size: 30px;
+	color: #ee7890;	
+	margin-top: 10px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+body.dri-3 .header-container .header-txt-4 img{
+	margin-left: auto;
+    margin-right: auto;	
+    max-height: 96px;
+    max-width: 1000px;
+}
+body.dri-3 .right-part .widget .li-form input{
+	 border-radius: 28px;
+	 font-family: "Myriad Pro", arial;
+	 font-size: 18px;
+}
+body.dri-3 .img-promo {
+    margin: -15% 0 0 86%;
+    max-width: 183px;
+    position: absolute;
+}
+body.dri-3 .right-part .widget input[type="submit"]{
+	border-radius: 17px;
+	background: #7eaad5;
+	background: url("../images_landing/btn-rappel-dri3.png") no-repeat scroll -12px -12px;
+    border: medium none;
+    border-radius: 17px;
+    height: 75px;
+}
+/*================DRI-4==========================*/
+body.dri-4 .top-header {
+    background: #fde5e5 url("../images_landing/bg-header-dri4.png") repeat-x scroll center -47px;
+}
+body.dri-4 .header-container {
+    background: #fde5e5 url("../images_landing/bg-header-dri4.png") repeat-x scroll -112px -203px;
+}
+body.dri-4 {
+    background: #84b5e0 url("../images_landing/bg-dri4.png") repeat-x scroll -180px bottom;
+}
+body.dri-4 .right-part .widget input[type="submit"]{
+	background: url("../images_landing/btn-rappel-dri4.png") no-repeat scroll -12px -12px;
+}
+body.dri-4 .right-part .widget{
+	border:4px solid #5491c7;
+}
+body.dri-4 .voyant-membre .cols4{
+	border: 4px solid #5491c7;
+}
+body.dri-4 .header-container .header-txt-3{
+	color: #4784b9;
+}
+body.dri-4 .comment-ca-marche h2{
+	color: #eb0f69;
+}
+/*================DRI-5==========================*/
+body.dri-5 .top-header {
+    background: transparent;
+}
+body.dri-5 .header-container {
+    background: #fff6eb;
+}
+body.dri-5{
+	background: #fedbbf;
+	background: linear-gradient(to right, #fedbbf, #fdf7e6, #fcd6b4);
+}
+body.dri-5 .right-part .widget input[type="submit"]{
+	background: url("../images_landing/btn-rappel-dri5.png") no-repeat scroll -12px -12px;
+}
+body.dri-5 .right-part .widget{
+	border:4px solid #f5d4af;
+}
+body.dri-5 .voyant-membre .cols4{
+	border: 4px solid #f5d4af;
+}
+body.dri-5 .header-container .header-txt-3{
+	color: #fb204f;
+}
+body.dri-5 .comment-ca-marche h2{
+	color: #f71243;
+}
+/*================DRI-6==========================*/
+body.dri-6 .top-header {
+    background: transparent;
+}
+body.dri-6 .header-container {
+    background: transparent url("../images_landing/bg-header-dri6.png") no-repeat;
+}
+body.dri-6 {
+    background: url("../images_landing/bg-dri6.png"),url("../images_landing/bg-dri6.png");
+    background-position: center top, center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body.dri-6 .right-part .widget input[type="submit"]{
+	background: url("../images_landing/btn-rappel-dri6.png") no-repeat scroll -12px -12px;
+}
+body.dri-6 .right-part .widget{
+	border:4px solid #e5aaaa;
+}
+body.dri-6 .voyant-membre .cols4{
+	border: 4px solid #e5aaaa;
+}
+body.dri-6 .header-container .header-txt-3{
+	color: #d8899d;
+}
+body.dri-6 .comment-ca-marche h2{
+	color: #9dd14e;
+}
+body.dri-6 .subfooter{
+	background: #e49cae;
+}
+/*================DRI-CHINOIS======================*/
+body.dri-chinois {
+    background: #9d0000;
+}
+body.dri-chinois .top-nav, body.dri-chinois .subfooter {
+    background-color: black;
+}
+body.dri-chinois .top-header {
+    background-image: url("../images_landing/dri-chinois-lampions.png"), url("../images_landing/header-dri-chinois.png") ;
+    background-position: center top, center bottom;
+    background-repeat:  no-repeat, repeat-x;
+    background-size: auto 85%, contain;
+}
+body.dri-chinois .top-header img {
+    padding: 20px 0px;
+}
+body.dri-chinois .header-container {
+    background: #f7e0e0;
+    padding-bottom: 10px;
+}
+body.dri-chinois .header-container p {
+    max-width: 1200px;
+    margin: auto; padding: 10px 0;
+    background-image: url("../images_landing/header-chinois-2016.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+body.dri-chinois .header-container .header-title {
+    font-family: 'Courgette';
+    font-size: 6rem;
+    color: black;
+    text-transform: none;
+}
+body.dri-chinois .header-container .header-txt-4 img {
+    margin-bottom: 20px;
+}
+body.dri-chinois .right-part {
+    margin-bottom: 0;
+}
+body.dri-chinois .right-part .widget {
+    margin-top: 10px;
+    border: 4px solid #f5d4af;
+    box-shadow: none;
+    border-radius: 0;
+}
+body.dri-chinois .content-container {
+    background-image: url("../images_landing/dri-chinois-tree.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+}
+body.dri-chinois .comment-ca-marche h2 {
+    font-family: 'Courgette';
+    color: #d00000;
+    font-style: normal;
+}
+body.dri-chinois .right-part .widget input[type="submit"]{
+    background-image: url("../images_landing/btn-rappel-chinois.png");
+}
+body.dri-chinois .voyant-membre .cols4 {
+    border: 4px solid #f5d4af;
+    box-shadow: none;
+}
+body.dri-chinois .subfooter ul {
+    margin-top: 0px;
+}
+body.dri-chinois .footer {
+    color: white;
+}
+/*=====================MEDIA QUERIES===============*/
+@media only screen and (max-width: 600px) {
+	body.dri-3 .header-container .header-txt-1{
+		font-size: 16px;
+	}
+	body.dri-3 .header-container .header-txt-2{
+		font-size: 11px;
+	}
+	body.dri-3 .header-container .header-txt-3{
+		font-size: 16px;
+	}
+	body.dri-3 .header-container .header-txt-4 img{
+		display: block;
+    	height: auto;
+    	max-width: 100%;
+	}
+	body.dri-3 .top-header img{
+		display: block;
+    	height: auto;
+    	max-width: 50%;
+	}
+	body.dri-3 .img-promo {
+	    margin: -13% 0 0 85%;
+	    max-width: 22%;
+	    position: absolute;
+	}
+	body.dri-3 .right-part .widget input[type="submit"]{
+	    background-size: contain;
+	    background-position: 0 6px;
+	}
+	body.dri-3 .voyant-membre .cols4{
+		width: 100%;
+	}
+	body.dri-3 .subfooter ul li{
+		max-width: 100%;
+		margin-bottom:30px;
+	}
+	body.dri-3 .right-part .widget .li-form input, select{
+		font-size: 15px;
+		width: 100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  	body.dri-3 .right-part .widget input[type="submit"]{
+	    background-position: 196px 0;
+	    background-size: contain;
+	}
+	body.dri-3 .voyant-membre .cols4{
+		width: 48%;
+	}
+	body.dri-3 .subfooter ul li{
+		max-width: 45%;
+	}
+}

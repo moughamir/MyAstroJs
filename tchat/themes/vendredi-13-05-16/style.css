@@ -1,0 +1,155 @@
+/* 
+    Created on : 11 mai 2016, 16:11:03
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@font-face{
+    font-family:'Fjalla One';
+    font-style:normal;
+    font-weight:400;
+    src:local("Fjalla One") , local("Fjalla One-Regular") , url(https://fonts.gstatic.com/s/fjallaone/v4/rxxXUYj4oZ6Q5oDJFtEd6i3USBnSvpkopQaUR-2r7iU.ttf) format("truetype")
+}
+@font-face{
+    font-family:'Lobster';
+    font-style:normal;
+    font-weight:400;
+    src:local("Lobster") , local("Lobster-Regular") , url(https://fonts.gstatic.com/s/lobster/v16/TSDaXhyJuDJ-NBU0popSWA.ttf) format("truetype")
+}
+
+body.voyance-telephone-1 {
+    background: url('bg.jpg') center no-repeat fixed;
+    background-size: cover;
+}
+
+body.voyance-telephone-1 .top-nav {
+    color: white;
+    height: auto;
+    background-color: #87d8eb;
+    background-image: -webkit-linear-gradient(to bottom, #44c0da 0%, #87d8eb 100%);
+    background-image: linear-gradient(to bottom, #44c0da 0%, #87d8eb 100%);
+    border: 1px solid #b8beb9;
+    box-shadow: -.3px 5px 6px rgba(55, 43, 1, .5) ,  inset 0 1px 1px #fff;
+    margin-bottom: 30px;
+}
+body.voyance-telephone-1 .top-nav .nav-content .logo {
+    background-image: url('logo-myastro.png');
+    width: 569px;
+    height: 81px;
+    display: inline-block;
+}
+body.voyance-telephone-1 .top-nav .nav-content .links a {
+    color: white;
+}
+
+body.voyance-telephone-1 .left-part .logo img {
+    display: none;
+}
+
+body.voyance-telephone-1 .right-part {
+    font-family: Arial, sans-serif;
+    background: transparent;
+}
+
+body.voyance-telephone-1 .voyant-membre {
+    max-width: none;
+    margin: 0;
+    padding: 1px 10% 20px;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+body.voyance-telephone-1 .voyant-membre h2 {
+    color: #333333;
+    border-bottom: 3px dotted #333;
+    padding-bottom: 10px;
+    margin: 20px auto;
+}
+
+body.voyance-telephone-1 .voyant-membre .slogan {
+    color: #dc941b;
+}
+
+body.voyance-telephone-1 .right-part .widget {
+    background: #3fdaea;
+}
+
+body.voyance-telephone-1 .right-part .widget .widget-title {
+    background: #133a8c;
+}
+body.voyance-telephone-1 .right-part .widget .li-form input {
+    height: auto;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 10px;
+    color: #333333;
+    font-size: 1.2em;
+}
+body.voyance-telephone-1 .right-part .widget input[type="submit"]{
+    border-radius: 28px;
+    border: 3px solid white;
+    background-color: #ef0bf7;
+    background-image: -webkit-linear-gradient(right, #e6a513, #eec904 55%, #dfb316);
+    background-image: -moz-linear-gradient(right, #e6a513, #eec904 55%, #dfb316);
+    background-image: -o-linear-gradient(right, #e6a513, #eec904 55%, #dfb316);
+    background-image: -ms-linear-gradient(right, #e6a513, #eec904 55%, #dfb316);
+    background-image: linear-gradient(to right, #e6a513 0%, #eec904 55%, #dfb316 100%);
+    color: white;
+    text-shadow: 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625, 0px 0px 4px #066625;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche h2 {
+    font-family: "Lobster";
+    color: white;
+    text-transform: none;
+    font-size: 2em;
+}
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq {
+    background-color: white;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.first {
+    background: url('ico-form-telephone1.png') no-repeat 20px center transparent;
+}
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.last {
+    background: url('ico-rappel1.png') no-repeat 20px center transparent;
+}
+
+.tchat .advert-online h2 {
+    font-family:'Fjalla One';
+    color: white;
+    font-weight: normal;
+}
+
+
+body.voyance-telephone-1 .subfooter {
+    margin-top: 60px;
+    background: transparent;
+    color: #454545;
+}
+body.voyance-telephone-1 .subfooter ul {
+    background-color: white;
+    box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.70);
+}
+body.voyance-telephone-1 .subfooter ul li.first{
+    background: url('star.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.second {
+    background: url('lock.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.third {
+    background: url('chat.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.fourth {
+    background: url('trophy.png') no-repeat 45px center transparent;
+}
+body.voyance-telephone-1 .subfooter ul li.fifth {
+    background: url('secure.png') no-repeat 45px center transparent;
+}
+
+body.voyance-telephone-1 .footer {
+    color: white;
+}
+
+.tchat {
+    position: relative;
+    top: 94px;
+}

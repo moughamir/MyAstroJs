@@ -1,0 +1,77 @@
+﻿
+.row-fluid .span6{
+	width:95%;
+}
+.ribbon-edge-bottomright{
+	display:none;
+}
+
+.voyant-masculin{
+	background: none;
+}
+
+.voyant-feminin{
+	background:none;
+}
+
+.price{
+	display:none;
+}
+
+.voyant-masculin .ribbon-back-right{
+	background:none;
+}
+
+.voyant-feminin .ribbon-back-right{
+	background:none;
+}
+
+.voyant-masculin .ribbon-wrapper{
+	margin-top: 27px;
+	border-bottom: none;
+}
+
+.voyant-feminin .ribbon-wrapper{
+	margin-top: 27px;
+	border-bottom: none;
+}
+
+.ribbon-wrapper{
+	margin-left: 97px;
+}
+
+.voyant .pic{
+	box-shadow: -4px -1px 10px 0 rgba(50, 50, 50, 0.75)
+}
+
+.ribbon-forfait{
+	position: relative;
+	margin-top: 28px;
+	margin-left: 4px;
+	font-weight: bold;
+}
+
+.ribbon-front h4{
+	font-size: 14px;
+	padding: 4px;
+}
+
+.ribbon-front{
+	width:96px;
+}
+
+.voyant-masculin .ribbon-front{
+	height: 33px;
+}
+
+.voyant-feminin .ribbon-front{
+	height: 33px;
+}
+
+.ribbon-wrapper h4{
+	text-align: center;
+}
+
+.table-voyant{
+	margin-left:3%;
+}

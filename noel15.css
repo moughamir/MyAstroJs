@@ -1,0 +1,267 @@
+body{
+  background-color: #282c41;
+  background-size: cover;
+  background-position: 0 0;
+}
+body .top-nav {
+    background: #333 none repeat scroll 0 0;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+body .top-nav .nav-content {
+    font-family: open sans;
+    font-size: 13px;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+body .top-nav .nav-content a {
+    color: #fff;
+    text-decoration: none;
+}
+.container{
+    background: url('../images_landing/noel2015/fond_noel.png') no-repeat scroll 0px 0px/ cover; 
+    
+}
+
+.header{
+	padding-top: 10px;
+}
+.header img{
+	max-width: 165px;
+    display: block !important;
+    margin-right: auto !important;
+    margin-left: auto;
+}
+.header p{
+	font-family: "segoe print","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #ffffff;
+}
+.header span{
+	color: #ff6c6c;
+}
+
+.form-control{
+	margin: 0 auto;
+	width: 80%;
+}
+.title h1{
+	color: #fa0041;
+	font-size: 60px;
+    text-shadow: #fff 1px 1px,#fff 1px 1px,#fff 1px 1px,#fff 1px 1px;
+    font-family: "Pacifico";
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+.title span{
+	font-weight: bold;
+}
+.main-2-left h2{
+  font-family: "Pacifico";
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #f90040;
+  font-weight: 600;
+}
+.main-2-right h2{
+	font-size: 22px;
+	color: #ffffff;
+}
+.main-2-right p{
+	font-size: 18px;
+	color: #ffffff;
+  margin-bottom: 20px;
+}
+.main-2-right span{
+	font-weight: bold;
+}
+.prix{
+    color:#05e966;
+}
+.main-1{
+	margin-top: 20px;
+}
+.main-2{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.main-2-left-1{
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border: 3px solid #f90040;
+	background: #ffffff;
+}
+.main-2-left-1 p{
+	color: #6f6f6f;
+    line-height: 18px;
+     text-transform: uppercase;
+}
+.col-md-6.first{
+    background: transparent url("../images_landing/ico-tel.png") no-repeat scroll 0px center;
+    padding-left: 12%;
+    max-width: 46%;
+    margin-left: 30px;
+}
+.col-md-6.last{
+    background: transparent url("../images_landing/ico-tel2.png") no-repeat scroll 0px center;
+    padding-left: 14%;
+    max-width: 40%;
+    margin-left: 20px;
+
+}
+
+.main-1-left{
+	background: rgba(255, 255, 255, 0.80);
+	padding-bottom: 15px;
+	padding-top: 20px;
+}
+.main-1-left p{
+	font-size: 12px;
+    line-height: 14px;
+    color: #6f6f6f;
+}
+.main-1-right img{
+	border: solid 4px #ffffff;
+}
+.main-1-right span{
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 22px;
+}
+.main-2-left-2{
+	margin-bottom: 10px;
+}
+.main-2-left-2 .text-center{
+	border: 2px solid #e6a8b3;
+	margin-left: 8px;
+	background: #ffffff none repeat scroll 0 0;
+    box-shadow: -1px 3px 3px #888888;
+    cursor: default;
+    font-size: 18px;
+    margin-bottom: 5px;
+    width: 23%;
+}
+.main-2-left-2  span{
+	font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+}
+.main-2-left-2 img{
+	display: block;
+    margin: 10px auto 5px;
+}
+.main-2-right{
+	border: solid 4px #ffffff;
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #282c41 0%, #282c41 100%) repeat scroll 0 0;
+	box-shadow: -1px 3px 3px #888888;
+    margin-bottom: 26px;
+}
+.main-2-right .btn-default{
+	display: block;
+    margin: 35px auto -18px;
+    height: 45px;
+    width: 220px;
+    background: #56e0a0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.footer{
+	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f87f7f 0%, #e16060 100%) repeat scroll 0 0;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-2{
+	margin-bottom: 10px;
+}
+.footer p{
+	text-align: left;
+	margin-left: 28px;
+	margin-bottom: 0px;
+	line-height: 17px;
+  width: 100%;
+}
+.footer .row div{
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+.footer .one{
+	 background: transparent url("../images_landing/ico-arg1.png") no-repeat scroll 5px center;
+	 border-right: 1px solid;
+}
+.footer .two{
+	 background: transparent url("../images_landing/ico-arg2.png") no-repeat scroll 14px center;
+	 border-right: 1px solid;
+}
+.footer .three{
+	 background: transparent url("../images_landing/ico-three.png") no-repeat scroll 3px center;
+	 border-right: 1px solid;
+}
+.footer .four{
+	background: transparent url("../images_landing/ico-arg4.png") no-repeat scroll 3px center;
+	border-right: 1px solid;
+}
+.footer .five{
+	 background: transparent url("../images_landing/ico-cb.png") no-repeat scroll 5px center; 
+}
+.main-2-right .message_envoye{
+  color: #caff7a;
+}
+@font-face{
+    font-family:"Pacifico";
+    font-style:bold;
+    src: url('../fonts/Pacifico.ttf')
+}
+/*******************************/
+
+@media (max-width: 767px) {
+  .main-2-left-2 .text-center{
+  	width: 45%
+  }
+  .footer .row div{
+  	border-right: none !important;
+  }
+  .title h1{
+  	font-size: 18px;
+  }
+  .header p{
+  	font-size: 14px;
+  	margin-top: 5px;
+  }
+  .main-1-right span{
+  	font-size: 18px;
+  }
+  .main-2-right h2{
+  	font-size: 14px;
+  }
+  .main-2-right p{
+  	font-size: 14px;
+  }
+  .main-2-right{
+  	margin-bottom: 30px;
+  }
+  .form-control{
+  	font-size: 12px;
+  }
+  body .top-nav .nav-content{
+  	font-size: 10px;
+  }
+  body .top-nav{
+  	text-align: left;
+  	padding-left: 5px;
+  }
+  .img-responsive{
+  	margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer .row div{
+  	border-right: none !important;
+  }
+}

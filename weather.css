@@ -1,0 +1,81 @@
+﻿body {
+}
+
+[class$="-but-weather"] {
+    float: left;
+    width: 64px;
+    height: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    /* fix padding issue in bootstrap responsive file */
+    padding: 0 !important;
+    background: url('../images/serpentsoft-sprite.png') no-repeat;
+    background-position: 0 -144px;
+    /*opacity: 0.7;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;*/
+}
+
+[class$="-but-weather"]:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+}
+
+.hotsunny-but-weather {
+    background-position: 0 -144px;
+}
+
+.sunny-but-weather {
+    background-position: -64px -144px;
+}
+
+.sunny-mostly-cloudy-but-weather {
+    background-position: -128px -144px;
+}
+
+.sunny-rainy-but-weather {
+    background-position: -192px -144px;
+}
+
+.clear-but-weather {
+    background-position: -256px -144px;
+}
+
+.cloudy-but-weather {
+    background-position: -320px -144px;
+}
+
+.thundershowers-but-weather {
+    background-position: -384px -144px;
+}
+
+.rainy-but-weather {
+    background-position: -448px -144px;
+}
+
+.rainy-windy-but-weather {
+    background-position: -512px -144px;
+}
+
+.thunder-light-but-weather {
+    background-position: -576px -144px;
+}
+
+.icy-rain-but-weather {
+    background-position: -640px -144px;
+}
+
+.few-showers-but-weather {
+    background-position: -704px -144px;
+}
+
+.windy-but-weather {
+    background-position: -768px -144px;
+}
+
+.fog-but-weather {
+    background-position: -832px -144px;
+}

@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/* 
+    ------------------------------
+    --      astro-arabe-16      --
+    ------------------------------
+
+    Created on : 10 juin 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "templates/s-landing-roue-signes";
+
+/* Dossier images */
+$img_dir : "../images_landing/astro-arabe-16/";
+$logo : $img_dir + "logo-myastro.png";
+$bg1 : $img_dir + "bg1.jpg";
+$bg2 : $img_dir + "bg2.jpg";
+$bg_dri : $img_dir + "bg-dri.jpg";
+$bg_form_dri : $img_dir + "bg-form-dri.png";
+$bg2 : $img_dir + "bg2.jpg";
+$bg_dri_amour : $img_dir + "bg-dri-amour.jpg";
+$bg_form_dri_amour : $img_dir + "bg-form-dri-amour.png";
+$bg2_gradient : $img_dir + "bg2-gradient.jpg";
+$icon_star : $img_dir + "ico-star.png";
+$icon_gift : $img_dir + "ico-gift.png";
+$icon_lock : $img_dir + "ico-lock.png";
+$icon_trophy : $img_dir + "ico-trophy.png";
+$how_ico_form : $img_dir + "how-ico-form.png";
+$how_ico_phone : $img_dir + "how-ico-phone.png";
+
+/* Signes */
+$coutelas : $img_dir + "signes/coutelas.png";
+$couteau : $img_dir + "signes/couteau.png";
+$poignard : $img_dir + "signes/poignard.png";
+$lance : $img_dir + "signes/lance.png";
+$masse : $img_dir + "signes/masse-de-fer.png";
+$epee : $img_dir + "signes/epee.png";
+$hache : $img_dir + "signes/hache.png";
+$massue : $img_dir + "signes/massue-paysanne.png";
+$poignard_arabe : $img_dir + "signes/poignard-arabe.png";
+$arc: $img_dir + "signes/arc.png";
+$fronde: $img_dir + "signes/fronde.png";
+$chaine: $img_dir + "signes/chaine.png";
+/* Signes avec Texte */
+$coutelas_txt : $img_dir + "signes_txt/coutelas.png";
+$couteau_txt : $img_dir + "signes_txt/couteau.png";
+$poignard_txt : $img_dir + "signes_txt/poignard.png";
+$lance_txt : $img_dir + "signes_txt/lance.png";
+$masse_txt : $img_dir + "signes_txt/masse-de-fer.png";
+$epee_txt : $img_dir + "signes_txt/epee.png";
+$hache_txt : $img_dir + "signes_txt/hache.png";
+$massue_txt : $img_dir + "signes_txt/massue-paysanne.png";
+$poignard_arabe_txt : $img_dir + "signes_txt/poignard-arabe.png";
+$arc_txt: $img_dir + "signes_txt/arc.png";
+$fronde_txt: $img_dir + "signes_txt/fronde.png";
+$chaine_txt: $img_dir + "signes_txt/chaine.png";
+
+/* Palette */
+$bg1_color : #151426;
+$darkblue : #050418;
+$darkpurple : #1E152D;
+$darkfushia : #2F1930;
+$darkgreyblue : #39384B;
+$darkgreypurple : #261C2E;
+$form_bg : rgba(249, 249, 243, 0.1);
+$border_white : #B3B2B9;
+$gold : #FFCB38;
+$vlightgold : #FFF7E4;
+$man : #0AE9D1;
+$woman : #FA2E54;
+
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: $darkblue;
+    color: white;
+    padding-top: 0;
+}
+
+.Background {
+    padding-top: 2rem;
+    background: $bg1_color url($bg1) no-repeat center;
+    background-size: contain;
+}
+
+body.Step2 {
+    background-color: $darkgreypurple;
+    .Background {
+        background: url($bg2) no-repeat center, url($bg2_gradient) repeat-x center;
+        background-size: cover;
+    }
+    .ReassuranceList {
+        background-color: $darkgreypurple;
+    }
+}
+
+@media all and (max-width: 2170px){
+    .Background {
+        background-size: cover;
+    }
+}
+
+
+/* ---------------------------------- LOGO ---------------------------------- */
+
+.SiteLogo {
+    width: 110px;
+    height: 110px;
+    background-color: transparent;
+    background-image: url($logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media all and (max-width: 620px){
+    .SiteLogo {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.Fields-Table-Row {
+    border: 1px solid $border_white;
+    &.NoBorder {
+        border: none;
+    }
+}
+
+.FormField-Label {
+    padding-left: 1rem;    
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $man;
+    }
+}
+.FormField-Input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+select.FormField-Input {
+    border: 1px solid $border_white;
+    option {
+        background-color: white;
+        color: $darkgreyblue;
+    }
+}
+
+.FormContainer-Submit {
+    min-width: initial;
+    padding: 0.6rem 4rem;
+    border: none;
+    background-color: $gold;
+    background: -webkit-linear-gradient(to bottom, $gold 20%, $vlightgold 50%, $gold 80%);
+    background: linear-gradient(to bottom, $gold 20%, $vlightgold 50%, $gold 80%);
+    color: $darkblue;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+
+    &:hover {
+        background: -webkit-linear-gradient(to bottom, $gold 0%, $vlightgold 50%, $gold 100%);
+        background: linear-gradient(to bottom, $gold 0%, $vlightgold 50%, $gold 100%);
+    }
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.alert {
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+/* ------------------------------ ROUE SIGNES ------------------------------- */
+
+.FormContainer.Wheel-Core {
+    background-color: $form_bg;
+    background-repeat: no-repeat;
+    background-position: center 1.2rem;
+}
+
+.Wheel-Core-Title {
+    font-family: 'Lobster', sans-serif;
+}
+
+.FormSign-Title {
+    margin-top: 6px;
+    &-c1 {
+        display: table-cell;
+        vertical-align: bottom;
+        text-align: right;
+    }
+    &-c2 {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-left: 0.8rem;
+        font-size: 5rem;
+        line-height: 4.8rem;
+    }
+}
+
+@media all and (max-width: 480px){
+    .FormSign-Title {
+        font-size: 2.5rem;
+        &-c2 {
+            font-size: 4.8rem;
+        }
+    }
+}
+
+.Form-Title {
+    display: table;
+    width: 100%;
+    line-height: 2.8rem;
+    > span {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+}
+
+.Wheel-Item {
+    background-color: transparent;
+}
+
+.Signe-Name {
+    color: gold;
+}
+
+.Signe-Coutelas-Txt { background-image: url($coutelas_txt);}
+.Signe-Couteau-Txt { background-image: url($couteau_txt);}
+.Signe-Poignard-Txt { background-image: url($poignard_txt);}
+.Signe-Lance-Txt { background-image: url($lance_txt);}
+.Signe-Masse-Txt { background-image: url($masse_txt);}
+.Signe-Epee-Txt { background-image: url($epee_txt);}
+.Signe-Hache-Txt { background-image: url($hache_txt);}
+.Signe-Massue-Txt { background-image: url($massue_txt);}
+.Signe-Poignardarabe-Txt { background-image: url($poignard_arabe_txt);}
+.Signe-Arc-Txt { background-image: url($arc_txt);}
+.Signe-Fronde-Txt { background-image: url($fronde_txt);}
+.Signe-Chaine-Txt { background-image: url($chaine_txt);}
+
+.Signe-Coutelas { background-image: url($coutelas);}
+.Signe-Couteau { background-image: url($couteau);}
+.Signe-Poignard { background-image: url($poignard);}
+.Signe-Lance { background-image: url($lance);}
+.Signe-Masse { background-image: url($masse);}
+.Signe-Epee { background-image: url($epee);}
+.Signe-Hache { background-image: url($hache);}
+.Signe-Massue { background-image: url($massue);}
+.Signe-Poignardarabe { background-image: url($poignard_arabe);}
+.Signe-Arc { background-image: url($arc);}
+.Signe-Fronde { background-image: url($fronde);}
+.Signe-Chaine { background-image: url($chaine);}
+
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.ReassuranceList {
+    background-color: transparent;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icon_star) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icon_lock) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($icon_gift) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icon_trophy) center no-repeat;
+    background-size: contain;
+}
+
+
+/* ----------------------------------- DRI ---------------------------------- */
+
+body.DRI {
+    padding-top: 2rem;
+    background-image: url($bg_dri);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    .DRI-Intro-Title, .DRI-Slogan {
+        font-family: 'Lobster';
+        color: $gold;
+    }
+    .FormContainer-Wrapper {
+        background-color: transparent;
+        background-image: url($bg_form_dri);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .How {
+        color: white;
+        &-Wizard {
+            background-color: transparent;
+            border: none;
+            &Item:before {
+                border-left-color: $darkpurple;
+            }
+            &Item-Img.form {
+                background: transparent url($how_ico_form) center no-repeat;
+                background-size: contain;
+            }
+            &Item-Img.phone {
+                background: transparent url($how_ico_phone) center no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    
+    .ReassuranceList {
+        background-color: $darkpurple;
+    }
+}
+
+body.DRI.Amour {
+    background-image: url($bg_dri_amour);
+    .DRI-Intro-Title, .DRI-Slogan {
+        color: white;
+    }
+    .FormContainer-Wrapper {
+        background-image: url($bg_form_dri_amour);
+    }
+    .How-WizardItem:before {
+        border-left-color: $darkfushia;
+    }
+    .ReassuranceList {
+        background-color: $darkfushia;
+    }
+}

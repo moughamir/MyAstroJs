@@ -1,0 +1,257 @@
+
+body.dri-3 .subfooter ul li.first {
+    background: transparent url("../images_landing/ico-kit1.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.second {
+    background: transparent url("../images_landing/ico-kit2.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.third {
+    background: transparent url("../images_landing/ico-kit3.png") no-repeat scroll 45px center;
+    background-size: 27px;
+}
+body.dri-3 .subfooter ul li.fourth {
+    background: transparent url("../images_landing/ico-kit4.png") no-repeat scroll 45px center;
+    background-size: 31px;
+}
+body.dri-3 .subfooter ul li.fifth {
+    background: transparent url("../images_landing/ico-kit5.png") no-repeat scroll 45px center;
+    background-size: 24px;
+}
+body.dri-3 .subfooter ul li{
+	border-right: none !important;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+body.dri-3 .subfooter{
+	background:#c7b95f;
+}
+body.dri-3 .footer{
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+}
+body.dri-3 .header-container{
+	text-align: center;
+	padding-bottom: 40px;
+}
+body.dri-3{
+	background:url("../images_landing/background_13.png") no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body.dri-3 .container-header p{
+	text-align: center;
+}
+body.dri-3 .right-part{
+	max-width: none;
+	font-family: arial;
+	background: none;
+	margin-top: 0px;
+}
+body.dri-3 .right-part .widget{
+	max-width: 1010px;
+	margin: 0 auto;
+	padding-top: 20px;
+	height: 330px;
+	background: #ffffff;
+	box-shadow: -5px 10px 10px #888888;
+}
+body.dri-3 .content-container{
+	padding-top: 20px;
+}
+body.dri-3 .voyant-membre{
+	max-width: 1010px;
+	margin: 0 auto;
+}
+body.dri-3 .row-voyant{
+	margin-top: 50px;
+}
+body.dri-3 .right-part .widget label{
+	text-transform: lowercase;
+	margin-right: 35px;
+	color:#575757;
+	font-weight:normal;
+	font-style: italic;
+	font-family: "Myriad Pro", arial;
+	font-size: 18px;
+}
+body.dri-3 select{
+	width: 200px;
+	font-style: italic;
+	font-family: "Myriad Pro", arial;
+	font-size: 18px;
+}
+/*
+body.dri-3 .voyant-membre .cols4{
+	border:4px solid #e6a8b3;
+	width: 24%;
+	margin-bottom: 5px;
+	background: #ffffff;
+	box-shadow: -1px 3px 3px #888888;
+	cursor: default;
+	font-size: 18px;
+}
+body.dri-3 .voyant-membre .cols4 span{
+	font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: lowercase;
+}*/
+body.dri-3 .voyant-membre .mg-right{
+	margin-right: 10px;
+}
+body.dri-3 .comment-ca-marche{
+	text-align: center;
+}
+body.dri-3 .comment-ca-marche p{
+	text-transform: uppercase;
+	color: #8a8888;
+	font-size: 18px;
+}
+body.dri-3 .comment-ca-marche .cols-3 {
+    color: #333;
+    float: left;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 25px;
+    max-width: 50%;
+    min-height: 54px;
+    text-align: center;
+    width: 100%;
+}
+body.dri-3 .comment-ca-marche .cols-3 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #333333;
+	font-style: normal;
+}
+body.dri-3 .comment-ca-marche .faq .cols-3.first {
+    background: transparent url("../images_landing/ico-tel.png") no-repeat scroll 0px center;
+    padding-left: 48px;
+    max-width: 55%;
+}
+body.dri-3 .comment-ca-marche .faq .cols-3.last {
+    background: transparent url("../images_landing/ico-tel2.png") no-repeat scroll 19px 0px;
+    margin-right: 0;
+    padding-left: 80px;
+    max-width: 45%;
+}
+body.dri-3 .comment-ca-marche .faq{
+    margin-top: 50px;
+}
+body.dri-3 .comment-ca-marche h2{
+	font-weight: bold;
+	color: #e60a0a;
+	font-style: italic;
+}
+body.dri-3 .main{
+	max-width: none;
+}
+body.dri-3 .top-header img{
+	padding-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 10px;
+    float:left;
+}
+body.dri-3 .header-container{
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #575757;
+}
+body.dri-3 .header-container .header-txt-1{
+	font-size: 23px;
+}
+body.dri-3 .header-container .header-txt-2{
+	font-size: 15px;
+	
+}
+body.dri-3 .header-container .header-txt-3{
+	font-size: 30px;
+	color: #000;	
+	margin-top: 10px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+body.dri-3 .header-container .header-txt-4 img{
+	margin-left: auto;
+    margin-right: auto;	
+    max-width: 1000px;
+}
+body.dri-3 .right-part .widget .li-form input{
+	 border-radius: 28px;
+	 font-family: "Myriad Pro", arial;
+	 font-size: 18px;
+}
+body.dri-3 .img-promo {
+    margin: -15% 0 0 86%;
+    max-width: 183px;
+    position: absolute;
+}
+body.dri-3 .right-part .widget input[type="submit"]{
+	border-radius: 17px;
+	background: #7eaad5;
+	background: url("../images_landing/btn-or.png") no-repeat scroll -12px -12px;
+    border: medium none;
+    border-radius: 17px;
+    height: 75px;
+}
+
+/*=====================MEDIA QUERIES===============*/
+@media only screen and (max-width: 600px) {
+	body.dri-3 .header-container .header-txt-1{
+		font-size: 16px;
+	}
+	body.dri-3 .header-container .header-txt-2{
+		font-size: 11px;
+	}
+	body.dri-3 .header-container .header-txt-3{
+		font-size: 16px;
+	}
+	body.dri-3 .header-container .header-txt-4 img{
+		display: block;
+    	height: auto;
+    	max-width: 100%;
+	}
+	body.dri-3 .top-header img{
+		display: block;
+    	height: auto;
+    	max-width: 50%;
+	}
+	body.dri-3 .img-promo {
+	    margin: -13% 0 0 85%;
+	    max-width: 22%;
+	    position: absolute;
+	}
+	body.dri-3 .right-part .widget input[type="submit"]{
+	    background-size: contain;
+	    background-position: 0 6px;
+	}
+	body.dri-3 .voyant-membre .cols4{
+		width: 100%;
+	}
+	body.dri-3 .subfooter ul li{
+		max-width: 100%;
+		margin-bottom:30px;
+	}
+	body.dri-3 .right-part .widget .li-form input, select{
+		font-size: 15px;
+		width: 100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  	body.dri-3 .right-part .widget input[type="submit"]{
+	    background-position: 196px 0;
+	    background-size: contain;
+	}
+	body.dri-3 .voyant-membre .cols4{
+		width: 48%;
+	}
+	body.dri-3 .subfooter ul li{
+		max-width: 45%;
+	}
+}

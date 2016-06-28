@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* 
+    ----------------------------------
+    --       module reassurance     --
+    ----------------------------------
+
+    Created on : 10 juin 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+.ReassuranceList {
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    padding: 1.2rem 0;
+    text-align: center;
+    background-color: grey;
+    
+    &-Item {
+        display: table-cell;
+        border-right: 1px solid;
+        padding: 0 2rem;
+        text-align: left;
+        
+        &-Img {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 2rem;
+            background-color: white;
+        }
+        
+        &-Txt {
+            display: inline-block;
+        }
+        
+        &:last-child {
+            border-right: 0;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .ReassuranceList-Item {
+        padding: 0 1rem;
+        &-Img {
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 970px){
+    .ReassuranceList-Item {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 900px){
+    .ReassuranceList {
+        text-align: left;
+        &-Item {
+            display: inline-block;
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+/* 
+    ---------------------------
+    --   Thème tarot-sable   --
+    ---------------------------
+
+    Created on : 18 mars 2016, 12:32:01
+    Author     : gx780-14
+*/
+
+body.voyance-telephone-1 {
+    background: #FFF url("bg-voyance-tarot-gratuit.jpg") repeat-x scroll center top;
+    margin: 0;
+}
+
+body.voyance-telephone-1 .logo {
+    background: url('logo-myastro.png') no-repeat;
+    height: 107px;
+}
+body.voyance-telephone-1 .logo img {
+    display: none;
+}
+
+body.voyance-telephone-1 .right-part {
+    background: transparent;
+}
+
+body.voyance-telephone-1 .right-part .widget {
+    background: #CBC2A4;
+}
+
+body.voyance-telephone-1 .right-part .widget .widget-title {
+    background: #e45d2a;
+}
+.tchat .advert-online h2 {
+    color: #e45d2a;
+}
+
+body.voyance-telephone-1 .voyant-membre {
+    max-width: none;
+    margin: 0;
+    padding: 1px 10% 20px;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+body.voyance-telephone-1 .voyant-membre h2 {
+    color: #2d2925;
+    border-bottom: 3px dotted #333;
+    padding-bottom: 10px;
+    margin: 20px auto;
+    font-variant: small-caps;
+}
+body.voyance-telephone-1 .voyant-membre h2 strong {
+    font-weight: 300;
+}
+body.voyance-telephone-1 .voyant-membre .slogan {
+    font-weight: normal;
+    color: #e45d2a;
+}
+body.voyance-telephone-1 .right-part .widget .li-form input {
+    height: auto;
+    padding: 6px 10px;
+    border: 0;
+    color: #333333;
+    font-size: 1.2em;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche h2 {
+    padding-left: 20px;
+    color: #2d2925;
+    text-transform: none;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq {
+    background-color: white;
+}
+
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.first {
+    background: url('ico-form-telephone1.png') no-repeat 20px center transparent;
+}
+body.voyance-telephone-1 .left-part .comment-ca-marche .faq .cols-3.last {
+    background: url('ico-rappel1.png') no-repeat 20px center transparent;
+}
+
+body.voyance-telephone-1 .subfooter {
+    background: linear-gradient(to bottom, #ddd7c4 0%, #c1b591 100%);
+    background-color: #c1b591;
+    color: #2d2925;
+}
+
+body.voyance-telephone-1 .subfooter ul li.first{
+    background-image: url('ico-star-dark.png');
+}
+body.voyance-telephone-1 .subfooter ul li.second{
+    background-image: url('ico-lock-dark.png');
+}
+body.voyance-telephone-1 .subfooter ul li.third{
+    background-image: url('ico-gift-dark.png');
+}
+body.voyance-telephone-1 .subfooter ul li.fourth{
+    background-image: url('ico-trophy-dark.png');
+}
+body.voyance-telephone-1 .subfooter ul li.fifth{
+    background-image: url('ico-secure-dark.png');
+}
