@@ -1,10 +1,9 @@
 <?php
 
-	/*==================================================* 
-	*		  			BASE DE DONNEES					*
-	*================================================== */
+/* ================================================== *
+ *                   BASE DE DONNEES                  *
+ * ================================================== */
 
-$db_host = "localhost";
 $DB_login = getenv('MYASTRO_DB_LOGIN');
 $DB_pass = getenv('MYASTRO_DB_PASS');
 $DB_name = getenv('MYASTRO_DB_NAME');
@@ -17,12 +16,13 @@ define('TABLE_USERS', 'ag_users');
 define('TABLE_QUEUE', 'ag_tosend');
 define('TABLE_NOT_SENDED', 'ag_users');
 
-	/*==================================================* 
-	*		  				PATHS						*
-	*================================================== */
+/* ================================================== *
+ *                        PATHS                       *
+ * ================================================== */
 
-define('ROOT_URL','http://www.myastro.fr');
-define('URL', 'http://www.myastro.fr/');
+$root_url = getenv('MYASTRO_ROOT_URL');
+define('ROOT_URL', $root_url);
+define('URL', $root_url);
 define('ROOT', URL."/");
 
 // use by php
@@ -34,14 +34,17 @@ define('DIR_TMPL_RESPONSES2', "/zz_tmpl_responses/");
 define('DIR_COMPILED_RESPONSES2', "/zz_compiled_responses/");
 define('DIR_ARCHIVES_COMPILED_RESPONSES2', "/zz_archives_compiled_responses/");
 define('URL_TMPL_MAIL', DIR_TMPL_RESPONSES."/mail_template.html");
-define('S_PATH_CACHE', 'http://www.myastro.fr/cache');
+define('S_PATH_CACHE', ROOT.'cache');
+// Wordpress
+define('ABSPATH', ROOT);
+define('WP_CONTENT_DIR', ABSPATH.'wp-content');
+define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
    
     /*==================================================* 
     *                       OTHERS                      *
     *================================================== */
 
-define('WP_DEBUG', false);
-define('WP_DEBUG_DISPLAY', false);
 
 $sexeMap["F?minin"]		= "femme";
 $sexeMap["Masculin"]	= "homme";

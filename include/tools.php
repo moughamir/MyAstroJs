@@ -1,7 +1,6 @@
 <?php
-
 /* INCLUDES REQUIRED FILES */
-define('ROOT_PATH',dirname(dirname(__FILE__)));
+define('ROOT_PATH', dirname(dirname(__FILE__)));
 
 require_once(ROOT_PATH.'/inc/config.php');
 require_once(ROOT_PATH.'/inc/bdd.php');      // New mysql Class From Wordpress : Wpdb
@@ -13,7 +12,7 @@ require_once(ROOT_PATH.'/lib/APIKGestion/APIKGestion.class.php');
 
 session_start();
 
-$smartFocus = new SmartFocus(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST),new Compteur());
+$smartFocus = new SmartFocus(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST), new Compteur());
 
 if((!isset($_SESSION['tracker']) || empty($_SESSION['tracker']))){
   $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));

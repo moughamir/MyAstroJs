@@ -1,6 +1,7 @@
 blog/*
+cache/*
 logs-perso/*
 yyadmin/cdj/*
 yyadmin/cdjj/*
 yyadmin/media/*
-cache/*
+.htaccess

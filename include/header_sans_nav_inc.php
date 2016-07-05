@@ -55,11 +55,12 @@
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=313112278889346&amp;ev=PixelInitialized" /></noscript>
 	<!-- END SCRIPT TRACKING FB-->
 	
-	<?php if(($_GET['categorie'] == 'voyance-gratuite') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour/') || ($_GET['categorie'] == 'sabonner') || ($_GET['categorie'] == 'sexualite') || ($_GET['categorie'] == 'astrologie/personnalite'))
-	{ 
-	echo '<meta name="robots" content="noindex,follow" />';
-	}
-	?>
+	<?php if(isset($_GET['categorie'])){
+        if(($_GET['categorie'] == 'voyance-gratuite') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour/') || ($_GET['categorie'] == 'sabonner') || ($_GET['categorie'] == 'sexualite') || ($_GET['categorie'] == 'astrologie/personnalite'))
+        { 
+            echo '<meta name="robots" content="noindex,follow" />';
+        }
+    } ?>
     <?php if($_SERVER['PHP_SELF'] == '/index.php'){
      echo '<script type="application/ld+json">
             { "@context": "http://schema.org",
