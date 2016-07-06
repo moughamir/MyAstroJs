@@ -12,7 +12,9 @@ $msg              = array();
 $question         = 'sentimentale';
 $confidentielle   = "1";
 $confidentielle_  = "true";
-$source           = (isset($param['source'])) ? $param['source'] : 'form-widget';
+$website          = isset($param['site']) ? $param['site'] : 'myastro.fr';
+$affiliation      = isset($param['affiliation']) ? $param['affiliation'] : 'naturel';
+$source           = isset($param['source']) ? $param['source'] : 'form-widget';
 $partenaires      = (isset($param['partenaires'])) ? 1 : 0;
 $partenaires2     = (isset($param['partenaires'])) ? "true" : "false";
 $site             = "true";
@@ -21,9 +23,7 @@ $ip               = $_SERVER['REMOTE_ADDR'];
 $page             = 'true';
 $trouve           = false;
 $id_form          = 6;
-$affiliation      = (isset($param['affiliation'])) ? $param['affiliation'] : false;
 $gclid            = (isset($param['gclid'])) ? $param['gclid'] : false;
-
   
   /*===============================================================* 
   *                 TRAITEMENT DES DONNEES ASTRO                   *
@@ -249,28 +249,29 @@ $gclid            = (isset($param['gclid'])) ? $param['gclid'] : false;
     *          INSERTION MEMBRE DANS SMARTFOCUS         *
     *================================================== */
   
-      $params = array(
-     
-                  'DATEJOIN'        => $dateJoin,
-                  'DATEMODIF'       => $today,
-                  'SOURCE'          => $source,
-                  'CLIENTURN'       => $choix_question,
-                  'DATEOFBIRTH'     => $datean1,
-                  'EMVADMIN3'       => $partenaires2,
-                  'SEED3'           => $signe,
-                  'FIRSTNAME'       => $prenom,
-                  'EMVCELLPHONE'    => intval($tel),
-                  'NUMEROTELEPHONE' => $tel,
-                  'TITLE'           => $sexe,
-                  'CODE'            => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
-                  'IDASTRO'         => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
-                  'FIRSTNAME2'      => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
-                  'SEED2'           => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
-                  'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
-                  'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
-                  'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
-                  'GROUPE_FLAG_30'  => $param['compteur']['flag30']
-        );
+    $params = array(
+        'DATEJOIN'        => $dateJoin,
+        'DATEMODIF'       => $today,
+        'SITE'            => $website,
+        'SOURCE'          => $affiliation,
+        'URL'             => $source,
+        'CLIENTURN'       => $choix_question,
+        'DATEOFBIRTH'     => $datean1,
+        'EMVADMIN3'       => $partenaires2,
+        'SIGNE'           => $signe,
+        'FIRSTNAME'       => $prenom,
+        'EMVCELLPHONE'    => intval($tel),
+        'NUMEROTELEPHONE' => $tel,
+        'TITLE'           => $sexe,
+        'CODE'            => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
+        'IDASTRO'         => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
+        'FIRSTNAME2'      => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
+        'SIGNE_P2'        => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
+        'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
+        'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
+        'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
+        'GROUPE_FLAG_30'  => $param['compteur']['flag30']
+    );
 
     $_SESSION['support']        = $param['support'];
     $_SESSION['firstname']      = $prenom;

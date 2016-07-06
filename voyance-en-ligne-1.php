@@ -74,9 +74,10 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                             <form id="">
                                 <input type="hidden" name="source" value="voyance-gratuite-a3" />
                                 <input type="hidden" name="method" value="voyance-landing" />
-                                <input type="hidden" name="support" value="voyance"/>
+                                <input type="hidden" name="support" value="voyance" />
+                                <input type="hidden" name="site" value="myastro.fr" />
+                                <input type="hidden" name="affiliation" value="adwords" />
                                 <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
-                                <input type="hidden" name="affiliation" value="adwords">
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>
                                     <input type="text" id="name" name="prenom" required>

@@ -141,6 +141,7 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                                 <input type="hidden" name="source" value="tarot-direct-rc-tf" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="tarot" />
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
                                 <input type="hidden" name="dri" value="http://www.myastro.fr/tarot-direct-tchat" />
                                 <!-- ########## autres champs pré-remplis ########## -->

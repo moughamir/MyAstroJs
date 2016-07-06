@@ -118,6 +118,7 @@
                                 <input type="hidden" name="source" value="myastro-tarot-a4" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="tarot" />
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
                                 <input type="hidden" name="dri" value="http://www.myastro.fr/tarot-amour-1-tel" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />

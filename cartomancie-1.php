@@ -167,8 +167,9 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="source" value="myastro-cartomancie-a" />
                                 <input type="hidden" name="method" value="tarot-landing" />
                                 <input type="hidden" name="support" value="tarot"/>
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords">
+                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>
                                     <input type="text" id="name" name="prenom" required>

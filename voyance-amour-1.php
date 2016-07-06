@@ -91,6 +91,7 @@
                                 <input type="hidden" name="source" value="voyance-gratuite-a2" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="voyance" />
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
                                 <input type="hidden" name="dri" value="http://www.myastro.fr/tel-voyance-amour-1" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />

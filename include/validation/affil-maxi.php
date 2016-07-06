@@ -16,7 +16,7 @@ $questionSubject  = 'sentimentale';
 $questionCode     = isset($param['theme_id']) && !empty($param['theme_id']) ? $param['theme_id'] : false;
 $questionContent  = isset($param['question']) && !empty($param['question']) ? $param['question'] : NULL;
 $formurl          = isset($param['source']) ? $param['source'] : 'erreur';
-$website          = isset($param['site']) ? $param['source'] : '';
+$website          = isset($param['site']) ? $param['source'] : 'myastro.fr';
 $partenaires      = isset($param['partenaires']) ? 1 : 0;
 $horoscope        = isset($param['horoscope']) && !empty($param['horoscope']) ? 1 : 0;
 $id_random        = uuid();
@@ -25,7 +25,8 @@ $voyant           = isset($param['voyant']) ? $param['voyant'] : '';
 $trouve           = false;
 $id_form          = 6;
 $gclid            = isset($param['gclid']) ? $param['gclid'] : false;
-$affiliation      = (isset($param['affiliation'])) ? $param['affiliation'] : false;
+$affiliation      = isset($param['affiliation']) ? $param['affiliation'] : 'naturel';
+$website          = isset($param['site']) ? $param['site'] : 'myastro.fr';
 $dri              = isset($param['dri']) ? $param['dri'] : false;
 $redirect_method  = isset($param['redirect_method']) ? $param['redirect_method'] : 'url';
 
@@ -311,20 +312,22 @@ if(empty($msg)){ // Si pas d'erreur
     $params = array(
         'DATEJOIN'        => $dateJoin,
         'DATEMODIF'       => $today,
-        'SOURCE'          => $formurl,
+        'SITE'            => $website,
+        'SOURCE'          => $affiliation,
+        'URL'             => $formurl,
         'CLIENTURN'       => $questionCode,
         'EMVADMIN2'       => $horoscope > 0 ? 'true' : 'false',
         'EMVADMIN3'       => $partenaires > 0 ? "true" : "false",
         'DATEOFBIRTH'     => $datean1,
-        'SEED3'           => $signe,
+        'SIGNE'           => $signe,
         'FIRSTNAME'       => $prenom,
         'EMVCELLPHONE'    => intval($tel),
         'NUMEROTELEPHONE' => $tel,
         'TITLE'           => $sexe,
         'CODE'            => isset($idindex) ? base_convert($idindex, 10, 32) : '',
         'IDASTRO'         => isset($idindex) ? base_convert($idindex, 10, 32) : '',
-        'FIRSTNAME2'      => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
-        'SEED2'           => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
+        'FIRSTNAME2'      => isset($conjoint_prenom) ? $conjoint_prenom : '',
+        'SIGNE_P2'        => isset($signe_conjoint) ? $signe_conjoint : '',
         'VOYANT'          => $voyant,
         'VOYANT_CODE'     => getPsychicCode($voyant),
         'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
@@ -359,7 +362,6 @@ if(empty($msg)){ // Si pas d'erreur
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $affiliation;
     $_SESSION['page']           = explode("?", $_SERVER['HTTP_REFERER'])[0];
-
                    
 /* ================================================== * 
  *                     REDIRECTION                    *
