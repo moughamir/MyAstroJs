@@ -41,4 +41,4 @@
                                         <p class="FormContainer-Slogan">
                                             Un voyant vous appelera dès demain,<br />pour vous donner votre réponse en direct.
                                         </p>
-                                        <button class="FormContainer-Submit" type="submit" name="valider">Accédez au tchat gratuit</button>
+                                        <button class="FormContainer-Submit" type="submit" name="valider">Rappel gratuit</button>

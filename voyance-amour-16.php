@@ -137,42 +137,31 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="FormField radio">
-                                    <label class="FormField-Label">Vous êtes...</label>
-                                    <div class="FormField-TableInputContainer fixed-3-col relationship-status">
-                                        <div class="FormField-TableInputContainer-Cell">
-                                            <label for="q-couple" class="FormField-Label">En couple</label>
-                                            <input type="radio" name="theme_id" id="q-couple" value="question_2" class="FormField-Input" required />
-                                        </div>
-                                        <div class="FormField-TableInputContainer-Cell">
-                                            <label for="q-separes" class="FormField-Label">Séparés</label>
-                                            <input type="radio" name="theme_id" id="q-separes" value="question_11" class="FormField-Input" />
-                                        </div>
-                                        <div class="FormField-TableInputContainer-Cell">
-                                            <label for="q-amants" class="FormField-Label">Amants</label>
-                                            <input type="radio" name="theme_id" id="q-amants" value="question_24" class="FormField-Input" />
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="FormField">
                                     <label class="FormField-Label Label-rose" for="theme_id">Votre question</label>
                                     <select class="FormField-Input" name="theme_id" id="theme_id" required>
                                         <option value="" selected disabled>Thème de la question</option>
-                                        <optgroup label="Amour">
-                                            <option value="vam16_question_1">Mon célibat va-t-il prendre fin ?</option>
-                                            <option value="vam16_question_2">Je ne sais plus où j’en suis sentimentalement, que faire ?</option>
-                                            <option value="vam16_question_3"> Ses sentiments pour moi sont-ils sincères ?</option>
-                                            <option value="vam16_question_4">Mon couple va-t-il durer ?</option>
-                                            <option value="vam16_question_4">Dois-je croire à notre histoire ?</option>
-                                        </optgroup>
+                                        <option value="vam16_question_1">Mon célibat va-t-il prendre fin ?</option>
+                                        <option value="vam16_question_2" data-need-spouse="1">Je ne sais plus où j’en suis sentimentalement, que faire ?</option>
+                                        <option value="vam16_question_3" data-need-spouse="1"> Ses sentiments pour moi sont-ils sincères ?</option>
+                                        <option value="vam16_question_4" data-need-spouse="1">Mon couple va-t-il durer ?</option>
+                                        <option value="vam16_question_5" data-need-spouse="1">Dois-je croire à notre histoire ?</option>
                                     </select>
+                                    <div class="FormField sonprenom" >
+                                        <label class="FormField-Label" for="son_prenom">Son prénom</label>
+                                        <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" />
+                                    </div>
+                                    
                                 </div>
                                 
                                 <div class="FormField">
                                     <label for="email" class="FormField-Label Label-rose">E-mail</label>
                                     <input id="email" type="email" name="email" class="FormField-Input" required />
                                 </div>
+                                
                                 <button class="FormContainer-Submit" type="submit" name="valider">Je veux savoir</button>
+                                
                             </form>
                         </div>
                     </article>

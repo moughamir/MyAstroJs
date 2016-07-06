@@ -13,16 +13,17 @@ $(document).ready(function(){
     
     // Gestion affichage du champs du conjoint    
     var toogle_spouse = function(){
-        console.log('toogle');
         var flag = false;
         var questions_amour_p2 = ['question_11', 'question_2', 'question_24' ];
         if($(this).prop("tagName") === 'SELECT'){
-            var question = $(this).find('option:selected').val();
+            var option = $(this).find('option:selected');
+            var question = option.val();
         } else {
-            var question = $(this).val();
+            var option = $(this);
+            var question = option.val();
         }
         for(var i=0 ; i<questions_amour_p2.length ; i++){
-            if( question.indexOf(questions_amour_p2[i]) > -1 || $(this).data('need-spouse') == 1) {
+            if( question.indexOf(questions_amour_p2[i]) > -1 || option.data('need-spouse') == 1) {
                 flag = true;
             }
         }

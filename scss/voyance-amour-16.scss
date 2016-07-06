@@ -1,0 +1,613 @@
+/* 
+    intégration : guillaume deschamps <guillaumedeschamps75@gmail.com>
+    13/06/2016 pour KGCOM
+*/
+// KNACSS imports
+// -----------------
+@import "sass/_knacss";
+
+// mixins
+/*
+ * a small mixin for easy use of rem with px as fallback
+ * usage: @include x-rem(font-size, 14px)
+ * usage: @include x-rem(marign, 0 12px 2 1.2)
+ * usage: @include x-rem(padding, 1.5 24px)
+ *
+ * thanks to Eric Meyer for https://github.com/ericam/susy
+ * and Hans Christian Reinl for http://drublic.de/blog/rem-fallback-sass-less/
+ */
+@mixin x-rem($property, $values) {
+  // Create a couple of empty lists as output buffers.
+  $base-font-size: 16px; // should be consistent with your html/body font-size
+  $px-values: ();
+  $rem-values: ();
+
+  // Loop through the $values list
+  @each $value in $values {
+    // For each property value, if it's in rem or px, derive both rem and
+    // px values for it and add those to the end of the appropriate buffer.
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px {
+      // 0 -- use it without a unit
+      $px-values: join($px-values, 0);
+      $rem-values: join($rem-values, 0);
+    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+      // px value given - calculate rem value from base-font-size
+      $new-rem-value: $value / $base-font-size;
+      $px-values: join($px-values, round($value));
+      $rem-values: join($rem-values, #{$new-rem-value}rem);
+    } @else {
+      // unitless value - use those directly as rem and calculate the px-fallback
+      $px-values: join($px-values, round($value * $base-font-size));
+      $rem-values: join($rem-values, #{$value}rem);
+    }
+  }
+
+  // output the converted rules
+  #{$property}: $px-values;
+  #{$property}: $rem-values;
+}
+
+// modules
+@import "modules/reassurance";
+@import "modules/form";
+
+// your own styles
+// -----------------
+/* --------------- fonts --------------- */
+/*font-family: 'Parisienne', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oxygen', sans-serif;*/
+
+/* --------------- variables  --------------- */
+
+$img_dir : "../images_landing/voyance-amour-16/";
+$gris-texte : #808080;
+$rose: #fc2c93;
+$vert: #d6e2d9;
+$bleuFonce : #1c546d;
+
+body{
+    background: #fff url($img_dir+"header_bg.jpg") no-repeat;
+    background-position: 48% 0%;
+    border: 0;
+    padding-top: 2.2rem;
+}
+
+.PageWrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0rem auto 0;
+    padding: 0 2rem;
+}
+
+.SiteLogo{
+    background: transparent url($img_dir+"logo_MYASTRO.svg") center no-repeat;
+    background-size: contain;
+    content: " ";
+    width: 105px;
+    height: 105px;
+    display: block;
+    color:red;
+    span{
+        display: none;
+    }
+}
+
+.bloc-blanc{
+    background: #fff;
+    padding: 35px 25px;
+    color: $gris-texte; 
+}
+
+
+.bloc-vert{
+    background: $vert;
+    -webkit-transition-property: all;
+    transition-property:all;
+    -webkit-transition-duration:0.5s;
+            transition-duration:0.5s;
+    -webkit-transition-timing-function:ease-in ;
+            transition-timing-function:ease-in ;
+}
+
+.bloc-visage {
+    background: transparent url($img_dir+"voyante.png") 10% 0% no-repeat;
+    padding-top: 14.5rem;
+    color: #808080;
+}
+.noBg{
+    background-color: transparent;   
+}
+.noPadding{padding: 0}
+
+/* FONTS */
+/* --------------- fonts --------------- */
+/*font-family: 'Parisienne', cursive;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oxygen', sans-serif;*/
+
+.title-page {
+    span{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        color:$bleuFonce;
+        @include x-rem(font-size, 36px);
+    }
+    span+span{
+        font-family: 'Parisienne', cursive;
+        text-transform: capitalize;
+        @include x-rem(font-size, 108px);
+    }
+}
+.margin-title{margin: 12rem 0 2rem -12rem !important;}
+.ContentBand-ColumnHeader{
+    margin:11rem 0 0 -16rem; 
+}
+
+.ombrePortee{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* FORM */
+.h540{
+        max-height: 540px;
+}
+.FormContainer-Pop{
+    background: transparent url($img_dir+"bg_cercle.svg") center no-repeat;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin-top: -7.5rem;
+    margin-left: -7.5rem;
+    color:#fff;
+    display: table;
+    
+    div{
+        width: 150px;
+        height: 150px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    /* TYPOS */
+    span{
+        @include x-rem(font-size, 34px);
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300 !important;
+        line-height: 120%;
+    }
+}
+
+
+.Label-rose{
+    color: $rose;
+    text-transform: uppercase;
+}
+
+.FormContainer-Header{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight:inherit;
+    color: $rose;
+    text-align: center;
+    line-height: 120%;
+    padding-bottom: 35px;
+    @include x-rem(font-size, 36px);
+    background: transparent url($img_dir+"triangle.svg") center no-repeat;
+    background-position: center bottom;
+}
+
+.FormDate,
+.FormSituation{
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    &, & option{
+        text-transform: uppercase; 
+    }
+}
+
+.FormDate,
+.themeQuestion{
+    option,
+    optgroup{
+        //background: #fff;
+        //@include x-rem(padding, 0 0 0 1.rem);
+    }
+}
+
+select{
+    option,
+    optgroup{
+        font-style: italic;
+        //text-transform: uppercase;
+        //background: #fff;
+        //-webkitpadding:1rem 1rem;
+        &:nth-child(even) {background: rgba(245,245,245,1)}
+        &:nth-child(odd) {background: #FFF}
+        
+    }
+    
+}
+
+.FormContainer-Submit{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    cusor:pointer;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+.FormField-Input{
+//    height: 30px;
+//    padding-left: 10px;
+    border: 0;
+    background: linear-gradient( #fff, #eee);
+    transition: box-shadow 0.2s ease-out;
+    &:focus{
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    }
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    vertical-align: middle;
+    margin: 0 0.2rem;
+}
+
+.relationship-status{
+    label{color:$gris-texte; font-style: italic}
+}
+
+.FormField-Label{
+   text-transform: uppercase; 
+    color:$rose;
+}
+
+.btn-center{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ico-woman{
+    color:$rose;
+}
+.ico-man{
+    color:$bleuFonce;
+}
+
+.FormContainer-Submit{
+    background: $bleuFonce radial-gradient(circle at center, #36697f, $bleuFonce);
+    border: 0;
+    text-align: center;
+    @include x-rem(padding, 12px 45px);
+    @include x-rem(font-size, 38px);
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: -2px -2px -2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    
+    transition: background 0.1s ease-in;
+    
+    &:hover,
+    &:focus{
+        background:darken($bleuFonce,15%);
+    }
+}
+
+.anim-input{
+    animation-name: anim-input;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+@keyframes anim-input {
+    0%{ width:40%; opacity:0.2 }
+    100% { width:100%;  opacity:1}
+}
+
+/*  ---  page 3  --- */
+.blocs-rappel{
+    font-family: 'Open Sans', sans-serif;
+}
+#bloc-tchat{
+    margin-top: -250px;
+}
+#titre-rappel{
+    color:#454545;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal; 
+}
+.bloc-rappel-1,
+.bloc-rappel-2,
+.bloc-rappel-3{
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+ 
+}
+.bloc-rappel-1{
+    background: #fff;
+    @include x-rem(padding, 30px 0 20px 0); 
+
+}
+
+.DRI-Intro-Title,
+.DRI-Intro-Text{
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: normal !important;
+}
+.DRI-Intro-Title{
+   color:$rose; 
+}
+.DRI-Intro-Text{
+    border-top:$bleuFonce 3px dotted;
+    background: #fff;
+    margin: 1.3rem auto 0;
+    padding-top:1rem; 
+    color:$bleuFonce;
+    width: 90%;
+}
+.DRI-Sent{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bloc-rappel-2{
+    background: $bleuFonce;
+    color:#fff;
+    @include x-rem(padding, 20px 0 15px 0); 
+}
+.bloc-rappel-3{
+    background: $vert;
+    @include x-rem(margin, 0 0 100px 0); 
+    @include x-rem(padding, 17px 0 45px); 
+    
+    input[type="text"],
+    input[type="tel"],
+    select{
+        width: 90%;
+        margin: 1rem auto;
+        @include x-rem(padding, 12px 0); 
+        font-size:1.5rem; 
+        font-style: italic;
+    }
+    
+    input[type="text"],
+    input[type="tel"]{
+        text-align: center;
+    }
+    
+}
+
+.btn-rose{
+    background: $rose radial-gradient(circle at center, lighten($rose, 15%), $rose);
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    cursor:pointer;
+    
+    @include x-rem(padding, 15px 45px); 
+    
+    transition: background 0.2s ease-in;
+    
+    &:hover,
+    &:focus{
+        background: darken($rose, 15%);
+    }
+}
+
+.faq{
+    border: 1px solid #ccc; 
+    background: #fff url($img_dir+"diag.svg") center no-repeat;
+    background-position: 45% 60%;
+    @include x-rem(padding, 30px 25px); 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li{
+        font-style: italic;
+        font-size: 1.6rem;
+        line-height: 120%;
+        list-style: none;
+        @include x-rem(padding, 0 0 10px 85px); 
+    }
+
+    .ico-formulaire{
+        background: transparent url($img_dir+"ico-formulaire.png") center no-repeat;
+        background-position: left;
+    }
+    .ico-standardiste{
+        background: transparent url($img_dir+"ico-standardiste.png") center no-repeat;
+        background-position: left;
+    }
+}
+
+
+
+/* FOOTER */
+.SiteCopyright{
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.SiteFooter{
+    margin-top: 5rem; 
+}
+
+.ReassuranceList {
+    background: $gris-texte linear-gradient(#595959, #343434);
+    color: #fff;
+    margin-top: 5rem;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($img_dir+"ico-star.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($img_dir+"ico-lock.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($img_dir+"ico-gift.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($img_dir+"ico-trophy.png") center no-repeat;
+    background-size: contain;
+}
+
+/* MEDIA QUERIES */
+@include media('>large-screen') {
+    .blocs-rappel article{  margin-top: 15rem }
+}
+
+@include media('>small-screen', '<medium-screen') {
+    
+    .small-header{
+        text-align: center;
+        background: rgba(255, 255, 255, 0.85);
+        width: 80%;
+        padding-top: 1rem;
+        
+        .SiteLogo{
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+    }
+    
+    .PageWrapper div,
+    .flex-container-grid .ContentBand-Column{
+        width: 100%;
+        margin-left: 0rem;
+       
+    }
+    
+    .flex-container-grid {
+        flex-wrap: wrap-reverse; 
+
+        .ContentBand-Column {
+//            margin-left: 10% !important;
+        }
+    }   
+    
+    .ContentBand-ColumnHeader{
+        margin-left: 0;
+    }
+    
+    .bloc-visage{margin-top:1rem;}
+    .blocs-rappel article{  margin-top: 0rem }
+    
+    .FormField-TableInputContainer{
+        display: flex;
+        align-items: center;
+    }
+    
+    .FormField-TableInputContainer.gender{
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        div{width: 100%;}
+    }
+}
+
+/*
+@include media('<medium-screen') {
+
+}
+*/
+
+@include media('<=small-screen') {
+    .SiteHeader{width: 90%; margin: 0 auto 1rem}
+    .small-header{
+        text-align: center;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 1rem;
+        
+        
+        .SiteLogo{    display: inline-block;}
+        h1{margin: 0}
+    }
+    
+    .flex-container-grid {
+        flex-wrap: wrap-reverse; 
+        .ContentBand-Column {
+            margin-left: 1% !important;
+            width: 100%;
+        }
+    }
+    
+    .h540 { max-height:none; }
+    
+    .ContentBand-ColumnHeader{
+        display: none;
+    }
+    
+    .bloc-visage{
+        background-image: none;
+        padding-top: 0;
+    }
+    
+    .blocs-rappel,
+    .blocs-rappel article{margin-top: 1rem}
+    
+    .ReassuranceList-Item{width:50%}
+    
+}
+@include media('<=tiny-plus-screen') {
+    
+    .FormContainer{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    
+    .FormContainer-Submit{
+        width: 100%;
+        padding: 0.75rem 0.2rem;
+        font-size: 1.35rem;
+    }
+    
+    .title-page {
+        display: flex;
+        flex-direction: column;
+        
+        font-size:1rem; 
+        span{
+            line-height: 100%;
+            border: 0px solid red;
+            margin: 0;
+        }
+    }
+    
+    .faq{
+        background-image: none;
+        flex-direction: column;
+        li{
+            margin-top: 1rem; 
+        }
+    }
+    
+    .ReassuranceList{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .ReassuranceList-Item{width:100%}
+}
