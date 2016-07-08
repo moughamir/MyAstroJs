@@ -48,7 +48,7 @@ if($affiliation == $affil1){
 	$content = '<table style=>
 					<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/logo_new.gif" alt="LOGO"/>
+							<img src="http://<?= ROOT_URL ?>/images/logo_new.gif" alt="LOGO"/>
 						</td>
 						<td>
 							Demande de Rappel.
@@ -64,7 +64,7 @@ if($affiliation == $affil1){
 					</tr>
 					<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/user.png"  alt="User : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/user.png"  alt="User : " width="24"/>
 						</td>
 						<td>
 							'. $data['user']['name'] .'
@@ -72,7 +72,7 @@ if($affiliation == $affil1){
 					</tr>
 					<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/'.$gender.'.png"  alt="genre : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/'.$gender.'.png"  alt="genre : " width="24"/>
 						</td>
 						<td>
 							'. $gender .'
@@ -83,7 +83,7 @@ if($affiliation == $affil1){
 
 	$content .=		'<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/birthday.png"  alt="Phone : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/birthday.png"  alt="Phone : " width="24"/>
 						</td>
 						<td>
 							'.  $data['user']['birthdate'] .'
@@ -91,7 +91,7 @@ if($affiliation == $affil1){
 					</tr>
 					<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/'.$pays.'.png"  alt="'.$pays.' : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/'.$pays.'.png"  alt="'.$pays.' : " width="24"/>
 						</td>
 						<td>
 							'.$pays.'
@@ -101,7 +101,7 @@ if($affiliation == $affil1){
 
 	$content .=		'<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/phone.png"  alt="Phone : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/phone.png"  alt="Phone : " width="24"/>
 						</td>
 						<td>
 							'. $phone .'
@@ -109,7 +109,7 @@ if($affiliation == $affil1){
 					</tr>
 					<tr>
 						<td>
-							<img src="http://www.myastro.fr/images/email.png"  alt="Email : " width="24"/>
+							<img src="http://<?= ROOT_URL ?>/images/email.png"  alt="Email : " width="24"/>
 						</td>
 						<td>
 							'. $data['user']['email'] .'

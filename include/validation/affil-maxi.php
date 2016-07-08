@@ -350,11 +350,11 @@ if(empty($msg)){ // Si pas d'erreur
     $_SESSION['voyant']         = $voyant;
     $_SESSION['birthdate']      = $birthdate;
     $_SESSION['sexe']           = $sexe;
-    $_SESSION['cards']          = $param['cards'];
+    $_SESSION['cards']          = isset($param['cards']) ? $param['cards'] : [];
     $_SESSION['phone']          = $tel;
     $_SESSION['question']       = $questionCode;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
-    $_SESSION['birthdateJoint'] = $date2;
+    $_SESSION['birthdateJoint'] = isset($date2) ? $date2 : '';
     $_SESSION['user_id']        = $idindex;
     $_SESSION['pays']           = $pays;
     $_SESSION['trigger']        = $questionCode;
@@ -371,14 +371,14 @@ if(empty($msg)){ // Si pas d'erreur
     $redirect_dri5  = array("tarot-affil-2","tarot-affil-4","tarot-affil-6");
     
     if ($dri) {
-        $redirect_url = $dri;
+        $redirect_url = 'http://'.ROOT_URL.'/'.$dri;
     } else {
         if(in_array($formurl, $redirect_dri4)){
-            $redirect_url = 'http://www.myastro.fr/dri-4';
+            $redirect_url = 'http://'.ROOT_URL.'/dri-4';
         } elseif(in_array($formurl, $redirect_dri5)) {
-            $redirect_url = 'http://www.myastro.fr/dri-5';
+            $redirect_url = 'http://'.ROOT_URL.'/dri-5';
         } else {
-            $redirect_url = 'http://www.myastro.fr/merci-voyance';
+            $redirect_url = 'http://'.ROOT_URL.'/merci-voyance';
         }
     }
 

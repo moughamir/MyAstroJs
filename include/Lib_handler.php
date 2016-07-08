@@ -1,13 +1,16 @@
-<?php 
+<?php
+
+$root = isset($root) && !empty($root) ? $root : '../';
+
 // MyAstro Config + Autoloader
-require_once('/var/www/myastro/www/include/tools.php');
-require_once('/var/www/myastro/www/lib/Autoloader.php');
-require_once('/var/www/myastro/www/inc/config.php');
+require_once('tools.php');
+require_once($root.'lib/Autoloader.php');
+require_once($root.'inc/config.php');
 
 Autoloader::register();
 
 // SWIFT 
-require ('/var/www/myastro/www/include/dependencies/cache_deps.php');
-require ('/var/www/myastro/www/include/dependencies/mime_deps.php');
-require ('/var/www/myastro/www/include/dependencies/message_deps.php');
-require ('/var/www/myastro/www/include/dependencies/transport_deps.php');
+require ('dependencies/cache_deps.php');
+require ('dependencies/mime_deps.php');
+require ('dependencies/message_deps.php');
+require ('dependencies/transport_deps.php');

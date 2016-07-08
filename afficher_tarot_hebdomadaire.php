@@ -19,7 +19,7 @@ session_start();
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Tarot hebdomadaire</h4></li>
                                     </ul>
                                 </div>
@@ -1029,7 +1029,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1046,7 +1046,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1065,7 +1065,7 @@ echo $echo;
  <br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Aficionados de l'horoscope du jour, vous verrez votre chemin de vie au jour le jour. MyAstro et ses équipes vous guideront dans votre trajet du jour.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-du-jour" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1082,7 +1082,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-2015" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1101,7 +1101,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1118,7 +1118,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1137,7 +1137,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1153,7 +1153,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

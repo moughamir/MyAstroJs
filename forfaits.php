@@ -125,7 +125,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 			                            ?>
 			                            <div class="voyant voyant-<?= $data['sexe'] ?>">
 			                                <div class="pic">
-			                                    <a href="http://www.myastro.fr/voyance-par-telephone-<?= $safeName?>"><img src="http://www.myastro.fr/images/voyants/<?= $safeName?>.png" /><a>
+			                                    <a href="http://<?= ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>"><img src="http://<?= ROOT_URL ?>/images/voyants/<?= $safeName?>.png" /><a>
 			                                    </div>
 			                                    <h4 ></h4>-->
 			                                    <div class="ribbon-wrapper">
@@ -140,7 +140,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 			                                     <div class="ribbon-back-left"></div>
 			                                     <div class="ribbon-back-right" style="display:none"></div>
 			                                 </div>
-			                                 <div class="ribbon-forfait"><a href="<?php if($data['price'] == '6,5'){echo 'http://www.myastro.fr/forfait-or';}else if($data['price'] == '5,5'){echo 'http://www.myastro.fr/forfait-saphir';}else if($data['price'] == '4,5'){echo 'http://www.myastro.fr/forfait-rubis';}else if($data['price'] == '4'){echo 'http://www.myastro.fr/forfait-emeraude';}else if($data['price'] == '3,5'){echo 'http://www.myastro.fr/forfait-diamant';}?>" class="seeDetails">
+			                                 <div class="ribbon-forfait"><a href="<?php if($data['price'] == '6,5'){ echo 'http://'.ROOT_URL.'/forfait-or';}else if($data['price'] == '5,5'){echo 'http://'.ROOT_URL.'/forfait-saphir';}else if($data['price'] == '4,5'){echo 'http://'.ROOT_URL.'/forfait-rubis';}else if($data['price'] == '4'){echo 'http://'.ROOT_URL.'/forfait-emeraude';}else if($data['price'] == '3,5'){echo 'http://'.ROOT_URL.'/forfait-diamant';}?>" class="seeDetails">
 			                                    Voir les forfaits
 			                                </a></div>
 			                                <div class="price">
@@ -170,7 +170,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 			<div class="row-fluid">
 				<div itemscope >
 					<ul class="breadcrumb" itemprop="breadcrumb">
-						<li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+						<li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
 						<li>Forfaits</h4></li>
 					</ul>
 				</div>

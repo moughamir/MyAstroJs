@@ -20,9 +20,9 @@ session_start();
 <body class="voyance-telephone-1 voyance-en-ligne-2 page_appel voyance-ligne">
     <div class="top-nav">
         <div class="nav-content"><div class="links">
-            <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-			<a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-			<a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+            <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
+			<a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
+			<a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
         </div></div>
     </div>
     <div class="main">
@@ -97,7 +97,7 @@ session_start();
                 ?>
                 <form id=""  action="" method="post">
                     <input type="text" name="antisp" value="" style="display:none">
-                    <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
+                    <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>"/>
 					 <div class="form-w-one li-form">
                         <label class="label-rappel">Sélectionnez un voyant pour être rappelé :</label>
 					 	<div class="cols4 first"><input type="radio" class="voyant1" name="voyant" value="jean" required ><img src="images_landing/voyants/jean.jpg" alt="" width="110" height="110" />Jean<span>5.50€/min</span></div>

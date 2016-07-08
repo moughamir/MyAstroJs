@@ -1,6 +1,6 @@
     <!-- ########## identification formulaire ########## -->
     <input type="hidden" name="method" value="telnum-save" />
-    <input type="hidden" name="dri" value="http://www.myastro.fr/jour-du-soleil-16-dri" />
+    <input type="hidden" name="dri" value="jour-du-soleil-16-dri" />
     <!-- ############################################### -->
     <div class="FormField">
         <label for="tel" class="FormField-Label">Téléphone</label>

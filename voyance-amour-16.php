@@ -77,7 +77,7 @@
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/voyance-amour-16-tel" />
+                                <input type="hidden" name="dri" value="voyance-amour-16-tel" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />

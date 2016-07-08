@@ -1,5 +1,5 @@
 <!-- fichier conversion facebook -->
-<?php if ($_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'facebook_adds'){ ?>
+<?php if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'facebook_adds'){ ?>
 <!-- Conversion tag Facebook -->
 <script>
     (function() {

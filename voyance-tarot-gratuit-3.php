@@ -250,7 +250,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 <p>Spécialiste dans la voyance web, travaillant avec des experts reconnus dans le milieu de la divination, MyAstro vous propose donc une solution de voyance par tarot gratuit efficace et accessible, pour des recommandations fiables. Pour aujourd'hui ou pour demain, vous pourrez ainsi profiter de nos conseils de vie et vous préparer en toute sérénité à ce que votre destin vous réserve.</p>
             </div>
             <div class="text-center">
-                <a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générales</a>
+                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
             </div>
                     </div>
 

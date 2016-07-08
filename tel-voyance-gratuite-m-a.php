@@ -3,7 +3,7 @@
                                         <!-- ########## identification formulaire ########## -->
                                         <input type="hidden" name="method" value="telnum-save" />
                                         <input type="hidden" name="dri" value="tchat" />
-                                        <input type="hidden" name="dri2" value="http://www.myastro.fr/dri-8" />
+                                        <input type="hidden" name="dri" value="dri-8" />
                                         <!-- ############################################### -->
                                         <div class="li-form">
                                             <textarea name="question" id="message" rows="8" cols="40" placeholder="Écrivez ici votre question avec le plus de détails possible. Pour plus de confidentialité, ne citez aucun nom."></textarea>

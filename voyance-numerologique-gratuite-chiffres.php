@@ -24,8 +24,8 @@ $vt=$_GET["vt"];
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://www.myastro.fr/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="http://<?= ROOT_URL ?>/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Voyance numérologique gratuite chiffres</h4></li>
                                     </ul>
                                 </div>
@@ -62,28 +62,28 @@ $vt=$_GET["vt"];
                 
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-1-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/1.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-1-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/1.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-2-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/2.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-2-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/2.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-3-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/3.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-3-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/3.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-4-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/4.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-4-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/4.jpg" alt=""></a>
 					</div>
 				</td>
 			                
                <td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-5-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/5.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-5-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/5.jpg" alt=""></a>
 					</div>
 				</td>
 				
@@ -92,22 +92,22 @@ $vt=$_GET["vt"];
                 
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-6-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/6.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-6-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/6.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-7-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/7.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-7-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/7.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-8-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/8.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-8-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/8.jpg" alt=""></a>
 					</div>
 				</td>
 				<td>
 					<div class="ch0 pic">
-					  <a href="inscription-voyance-numerologique-gratuite-9-<? echo $vt;?>-<? echo $chv;?>"><img src="images/chiffres/9.jpg" alt=""></a>
+					  <a href="inscription-voyance-numerologique-gratuite-9-<?= $vt;?>-<?= $chv;?>"><img src="images/chiffres/9.jpg" alt=""></a>
 					</div>
 				</td>
                <td>

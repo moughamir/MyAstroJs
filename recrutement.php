@@ -135,7 +135,7 @@ if(isset($_POST['captcha']) && isset($_POST['motivations']) && isset($_POST['mai
      
             <!-- main content -->
             <div class="span6 main-content">
-                   <h2><? echo $message;?></h2><br>
+                   <h2><?= $message;?></h2><br>
                 <div  id="text-candidature">
                      <p>Nous demandons :<br>- un véritable don<br>- un statut professionnel légal<br>- une réelle volonté de travailler et une assiduité sans faille<br>- une expérience audiotel sera un plus<br><br>
 

@@ -10,7 +10,6 @@ header('Content-type: text/json');
 // Include Here to avoid path problems
 include(realpath('../geoiploc.php'));
 include(realpath('../include/tools.php'));
-session_start();
 
 $param = array();
 // On récupère les compteurs et on le stock. On fera l'update après être certain d'avoir validé le formulaire.

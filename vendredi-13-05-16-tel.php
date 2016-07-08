@@ -39,7 +39,7 @@
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="method" value="telnum-save" />
                     <input type="hidden" name="dri" value="tchat" />
-                    <input type="hidden" name="dri2" value="http://www.myastro.fr/vendredi-13-05-16-dri" />
+                    <input type="hidden" name="dri" value="vendredi-13-05-16-dri" />
                     <!-- ############################################### -->
                     <div class="group">
                         <img src="images_landing/vendredi-13-05-16/voyante.png" alt="Voyante"/>

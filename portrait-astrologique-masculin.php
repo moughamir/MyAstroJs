@@ -228,7 +228,7 @@
           <!-- Horizontal Categories -->
           <section class="cat-widget h-cat-1">
             <div class="cat-widget-title">
-              <h3><? echo str_replace('-', ' ', $path);?></h3>
+              <h3><?= str_replace('-', ' ', $path);?></h3>
             </div>
 
             <div class="cat-widget-content">
@@ -256,7 +256,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                   </div>
                                 </article>
                               </div>
@@ -273,7 +273,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -293,7 +293,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-la-semaine" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -311,7 +311,7 @@
                                       <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Les grandes tendances peuvent être dévoilées grance à l'horoscope annuel 2016. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort pour vous est demandé, celui de vous concentrer sur votre propre vie afin d'en extraire les pépites et de savoir comment gérer les accidents de parcours. Alors vite réalisez votre horoscope 2016 gratuit.</h6>                                                                       
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -330,7 +330,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
                                   </div>
                                 </article>
                               </div>
@@ -347,7 +347,7 @@
                                       <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le tarot hebdomadaire peut être réalisé en toute tranquilité. En effet, il s'agit d'un moment privilégié où vous ne pensez qu'à vous. Il n'est pas du nombrilisme ou de l'égoisme. L'homme ne profite pas toujours de ces périodes où il peut se concentrer sur sa vie, la tournure qu'il veut lui imprimer.</h6>                                                                        
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -366,7 +366,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -384,7 +384,7 @@
                                       <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Les tarots peuvent être tirés pour une personne mais aussi pour une association d'individus. C'est bien de cela que l'on parle pour un couple. Chacun amène sa pierre à l'atmosphère générale du couple. Le tarot de couple peut cependant être demandé par l'un des individus le composant, ça reste "fair". Cela lui donne un avantage car il captera des flashs du futur.</h6>                                                                       
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -431,7 +431,7 @@
         <div class="row-fluid">
           <div itemscope >
             <ul class="breadcrumb" itemprop="breadcrumb">
-              <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+              <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
               <li>Portrait astrologique masculin</h4></li>
             </ul>
           </div>

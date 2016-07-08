@@ -75,39 +75,39 @@ if(($_POST['captcha']) && isset($_POST['message']) && isset($_POST['email'])  &&
 	  
 	  
                                                             
-								<h2><? echo $message;?></h2><br>							
+								<h2><?= $message;?></h2><br>							
 															<form method="POST" action="contact" class="login-form">
 															<div class="input-prepend input-block-level">
                                                                     <label>Nom:</label>
                                                                     <input style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="nom" class="span10" type="name" placeholder="<? echo $nom;?>" required="required" />
+font-weight: 400;width:60%;"id="Email1" name="nom" class="span10" type="name" placeholder="<?= $nom;?>" required="required" />
                                                                 </div>
 																
 										<div class="input-prepend input-block-level">
                                                                     <label>Prénom:</label>
                                                                     <input style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="prenom" class="span10" type="name" placeholder="<? echo $prenom;?>" required="required" />
+font-weight: 400;width:60%;"id="Email1" name="prenom" class="span10" type="name" placeholder="<?= $prenom;?>" required="required" />
                                                                 </div>	
 
 <div class="input-prepend input-block-level">
                                                                     <label>Téléphone:</label>
                                                                     <input style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="phone" class="span10" type="phone" placeholder="<? echo $phone;?>" required="required" />
+font-weight: 400;width:60%;"id="Email1" name="phone" class="span10" type="phone" placeholder="<?= $phone;?>" required="required" />
                                                                 </div>											<div class="input-prepend input-block-level">
                                                                     <label>Sujet:</label>
                                                                     <input style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="sujet" class="span10" type="name" placeholder="<? echo $sujet;?>" required="required" />
+font-weight: 400;width:60%;"id="Email1" name="sujet" class="span10" type="name" placeholder="<?= $sujet;?>" required="required" />
                                                                 </div>					
 															
                                                                 <div class="input-prepend input-block-level">
                                                                     <label>Votre Email:</label>
                                                                     <input style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="email" class="span10" type="email" value="<? echo $mail;?>" required="required" />
+font-weight: 400;width:60%;"id="Email1" name="email" class="span10" type="email" value="<?= $mail;?>" required="required" />
                                                                 </div>
 																
 																
@@ -120,7 +120,7 @@ font-weight: 400;width:60%;"id="Email1" name="email" class="span10" type="email"
 																	  
                                                                     <textarea style="color:#ffffff;background-color: #1A1A1A;
 border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:59%;height:250px;" id="Message" name="message"  required="required" ><? echo $message_mail;?></textarea>
+font-weight: 400;width:59%;height:250px;" id="Message" name="message"  required="required" ><?= $message_mail;?></textarea>
 
                                                                 </div>
                                                               

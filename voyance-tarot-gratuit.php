@@ -247,7 +247,7 @@ Vous tirez vous-même les cartes. Vous pourrez ensuite lire la description de ch
 Les questions qui vous hantent ou vos inquiétudes pourront alors se calmer, car vous aurez entendu un début de réponse qui vous aidera à avancer vers la solution final. Le jeu de Tarot vous guide.</p>
             </div>
             <div class="text-center">
-                <a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générales</a>
+                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
             </div>
                     </div>
 

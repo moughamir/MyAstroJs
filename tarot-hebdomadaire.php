@@ -148,7 +148,7 @@ session_unset();
 
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
                                                             </div>
@@ -165,7 +165,7 @@ session_unset();
 
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
@@ -199,7 +199,7 @@ session_unset();
         <div class="row-fluid">
             <div itemscope >
                 <ul class="breadcrumb" itemprop="breadcrumb">
-                    <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                    <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                     <li>Tarot hebdomadaire</span></li>
                 </ul>
             </div>

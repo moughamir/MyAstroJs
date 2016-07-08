@@ -27,7 +27,7 @@ td{
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Conditions générale</span></li>
                                     </ul>
                                 </div>
@@ -64,7 +64,7 @@ td{
           <li>Email de contact :<a href="mailto:contact@myastro.fr">contact@myastro.fr</a>
           </ul>
 
-          <p>Pour consulter les mentions légales du Site Internet MY ASTRO, veuillez vous rendre sur le lien en permanence accessible depuis le site à l’adresse <a href="http://www.myastro.fr/conditions-generale"  rel="nofollow"><u>http://www.myastro.fr/conditions-generale</u></a></p>
+          <p>Pour consulter les mentions légales du Site Internet MY ASTRO, veuillez vous rendre sur le lien en permanence accessible depuis le site à l’adresse <a href="http://<?= ROOT_URL ?>/conditions-generale"  rel="nofollow"><u>http://www.myastro.fr/conditions-generale</u></a></p>
 
           <h2>1. Objet</h2>
           <p>La Société KGCOM (ci-après KGCOM) propose des services à distance d’art divinatoire par le biais de différentes rubriques sur son site Internet (mentions légales consultables sur le site www.myastro.fr) ainsi que des services de voyance par téléphone (ci-après désigné par « les services ou prestations»).</p>
@@ -78,7 +78,7 @@ td{
           <p>A défaut d’une telle acceptation, le client ne pourra recourir aux services de KGCOM. Le client peut en conserver une copie en imprimant les présentes conditions générales lesquelles lui seront également envoyées sur support durable par email et/ou courrier et disponible en permanence à l’adresse http://www.myastro.fr/conditions-generale ainsi que sur le standard téléphonique de KGCOM (04 82 53 71 59).</p>
           <blockquote><b>ATTENTION : IL  EST PRECISE QU’EN TOUT ETAT DE CAUSE ET COMPTE TENU DU FAIT QUE LA PRESTATION S’EFFECTUE TELEPHONIQUEMENT EN UNE FOIS, LES TARIFS, MODALITES DE PAIEMENT  ET  L’ESSENTIEL DES AUTRES CONDITIONS NOTAMMENT DROIT DE RETRACTATION DEFINIES AUX PRESENTES SONT SYSTEMATIQUEMENT  COMMUNIQUES AU  CLIENT, PAR TELEPHONE, PREALABLEMENT  A TOUTE CONSULTATION ET A L’ISSUE DE LA CONSULTATION.</b></blockquote>
           <p>Le contrat est formé par téléphone au jour de l’acceptation fournie par le Client laquelle vaut acceptation sans réserve par le Client des présentes conditions générales de vente.</p>
-          <p>Le site Internet et/ou les services de KGCOM sont ouverts à tous les pays francophone dont la législation n’interdit pas, de manière générale, l’activité de la Société. A défaut, il appartient au client de renoncer à accéder au site et/ou aux services de KGCOM. KGCOM se réserve le droit de modifier les conditions générales tant que nécessaire, selon l’évolution technique de son site et ses services, l’évolution de la législation, à sa seule discrétion. L’utilisation du site et des services de KGCOM qui y sont proposés est toujours soumise à la version la plus récente des Conditions Générales disponibles à l’adresse <a href="http://www.myastro.fr/conditions-generale"  rel="nofollow"><u>http://www.myastro.fr/conditions-generale</u></a> ainsi que sur le standard téléphonique de KGCOM (04 82 53 71 59).</p>
+          <p>Le site Internet et/ou les services de KGCOM sont ouverts à tous les pays francophone dont la législation n’interdit pas, de manière générale, l’activité de la Société. A défaut, il appartient au client de renoncer à accéder au site et/ou aux services de KGCOM. KGCOM se réserve le droit de modifier les conditions générales tant que nécessaire, selon l’évolution technique de son site et ses services, l’évolution de la législation, à sa seule discrétion. L’utilisation du site et des services de KGCOM qui y sont proposés est toujours soumise à la version la plus récente des Conditions Générales disponibles à l’adresse <a href="http://<?= ROOT_URL ?>/conditions-generale"  rel="nofollow"><u>http://www.myastro.fr/conditions-generale</u></a> ainsi que sur le standard téléphonique de KGCOM (04 82 53 71 59).</p>
           <p>KGCOM peut apporter également à tout moment des modifications au contenu éditorial, aux services y compris aux tarifs à tout moment et sans avis préalable. Lors de l’utilisation des services, le client pourra être soumis aux éventuelles directives ou règles postées applicables aux services qui y sont proposés, pouvant contenir des termes et conditions qui s’ajoutent aux présentes conditions générales. Toutes ces directives ou règles sont réputées inclues par référence dans les conditions générales.</p>
           <p>Date de mise en ligne des présentes conditions générales : 03/10/2014</p>
           <p>Date de la dernière révision des présentes conditions générales : 03/10/2014</p>
@@ -261,7 +261,7 @@ td{
           <p><strong>8.6. Afin d’exercer son droit de rétractation, le client doit notifier son intention de se rétracter soit :</strong></p>
           <ul>
             <li>- En envoyant, par courrier recommandé ou courrier suivi afin que la date d’expédition soit fixée, le formulaire de rétractation dument complété et signé à l’adresse : KGCOM - DROIT DE RETRACTATION – 4 quai Joseph GILET 69004 LYON</li>
-            <li>- En se rendant directement sur le formulaire en ligne de droit de rétractation situé à l’adresse : <a href="http://www.myastro.fr/formulaire-de-retractation"><u>http://www.myastro.fr/formulaire-de-retractation</u></a> et en remplissant ledit formulaire</li>
+            <li>- En se rendant directement sur le formulaire en ligne de droit de rétractation situé à l’adresse : <a href="http://<?= ROOT_URL ?>/formulaire-de-retractation"><u>http://www.myastro.fr/formulaire-de-retractation</u></a> et en remplissant ledit formulaire</li>
           </ul>
           <h2>9. Risque contre les addictions</h2>
           <p>KG COM invite le client à être particulièrement vigilant sur ses consultations, leurs fréquences et les sommes dépensées. Dans ce contexte, le client peut également à tout moment demander à KG COM le blocage de l’utilisation de ses services en l’empêchant toute consultation téléphonique pour une durée déterminée de deux (2) mois ou définitivement. Cette demande devra se faire par écrit à l’adresse <a href="mailto:contact@myastro.fr">contact@myastro.fr</a></p>

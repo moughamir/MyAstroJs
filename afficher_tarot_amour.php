@@ -19,7 +19,7 @@ session_start();
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Tarot quotidien</h4></li>
                                     </ul>
                                 </div>
@@ -1024,7 +1024,7 @@ echo $echo;?>
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1041,7 +1041,7 @@ echo $echo;?>
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Un homme est entré dans votre vie, mais cette relation est-elle vouée à évoluer vers le parfait amour? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir? Consultez la compatibilité amoureuse gratuite MyAstro!</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1061,7 +1061,7 @@ echo $echo;?>
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Pourquoi ne pas savoir ce qu’il va vous arriver aujourd’hui? Suivez votre curiosité et tentez l’expérience de l’horoscope quotidien gratuitement avec MyAstro, vous pourriez être surpris en fin de journée de la véracité des prédictions que vous aurez préalablement reçues.</h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-du-jour" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1079,7 +1079,7 @@ echo $echo;?>
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-2015" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1099,7 +1099,7 @@ echo $echo;?>
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1117,7 +1117,7 @@ echo $echo;?>
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1137,7 +1137,7 @@ echo $echo;?>
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Cet homme que vous aimez est-il votre prince charmant? Vous méritez de connaître la vérité pour accéder au bonheur et ne pas perdre votre temps inutilement avec une personne qui ne vous convient pas, pour le savoir, c’est facile : la compatibilité amoureuse gratuite de MyAstro!</h6>                                                                        
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1154,7 +1154,7 @@ echo $echo;?>
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">MyAstro vous propose les services de sa compatibilité amoureuse gratuite et sérieuse, afin de déterminer si entre vous et votre bien-aimée, les choses peuvent fonctionner sur le long terme ou si vos signes astrologiques sont antagonistes… Curieux? N’hésitez pas! </h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

@@ -65,7 +65,7 @@ if(isset($_POST['valider'])){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance par téléphone <? echo $prenom;?>: rapide et efficace - Myastro</title>
+    <title>Voyance par téléphone <?= $prenom;?>: rapide et efficace - Myastro</title>
 	<meta name="description" content="Vous avez besoin de pouvoir prévoir les événements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone." />
 
 	<link href="css/tel.css" type="text/css" rel="stylesheet">
@@ -79,13 +79,13 @@ if(isset($_POST['valider'])){
                     <header>
                         <div itemscope >
                             <ul class="breadcrumb" itemprop="breadcrumb">
-                                <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                <li><a href="http://www.myastro.fr/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
-                                <li>Voyance par téléphone <? echo $prenom;?></h4></li>
+                                <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                <li><a href="http://<?= ROOT_URL ?>/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
+                                <li>Voyance par téléphone <?= $prenom;?></h4></li>
                             </ul>
                         </div>
                         <div class="cat-widget-title">
-                            <h1 itemprop="headline">Voyance par téléphone <? echo $prenom;?></h1>
+                            <h1 itemprop="headline">Voyance par téléphone <?= $prenom;?></h1>
                         </div>
                         <div class="row-fluid social-share-footer">
                             <span class="share-icon icon-caret-right"></span>
@@ -144,7 +144,7 @@ if(isset($_POST['valider'])){
                                 <tr>
                                     <td>
                                         <div style="margin-top:0px;">
-                                            <img src="images_voyance/voyant/<? echo $n_photo;?>.jpg"  class="imgtelvr" />
+                                            <img src="images_voyance/voyant/<?= $n_photo;?>.jpg"  class="imgtelvr" />
                                         </div>
                                     </td>
                                     <td>
@@ -301,14 +301,14 @@ if(isset($_POST['valider'])){
                                 <tr>
                                     <td class="btn-voir-forfait">
                                         <div class="bloc-vf"><br/>
-                                            <a href="http://www.myastro.fr/forfait-emeraude"><h4>VOIR LES FORFAITS</h4></a>
+                                            <a href="http://<?= ROOT_URL ?>/forfait-emeraude"><h4>VOIR LES FORFAITS</h4></a>
                                         </div>
                                     </td>
                                 </tr>
                             </table>
                         </aside>
                         <div class="cadretelv">
-                            <span class="drop-capital"><? echo $text_l;?></span>
+                            <span class="drop-capital"><?= $text_l;?></span>
                             <p><?= $text;?></p>
                         </div>
                         <div class="cat-widget"><br/>
@@ -402,7 +402,7 @@ if(isset($_POST['valider'])){
                         <aside class="widget w-adv">
                             <div class="widget-title"></div>
                             <div class="widget-content clearfix">
-                                <a href="http://www.myastro.fr/voyance-par-telephone">
+                                <a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
                                     <img src="images_voyance/voy_tel_banner_voyants.gif" />
                                 </a>
                             </div>

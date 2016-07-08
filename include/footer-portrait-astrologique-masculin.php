@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/portrait-astrologique-masculin-belier" class="btn-theme">Portrait astrologique masculin Bélier</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-masculin-taureau" class="btn-theme">Portrait astrologique masculin Taureau</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-masculin-gemeaux" class="btn-theme">Portrait astrologique masculin Gémeaux</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-masculin-cancer" class="btn-theme">Portrait astrologique masculin Cancer</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-lion" class="btn-theme">Portrait astrologique masculin Lion</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-vierge" class="btn-theme">Portrait astrologique masculin Vierge</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-balance" class="btn-theme">Portrait astrologique masculin Balance</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-scorpion" class="btn-theme">Portrait astrologique masculin Scorpion</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-sagittaire" class="btn-theme">Portrait astrologique masculin Sagittaire</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-capricorne" class="btn-theme">Portrait astrologique masculin Capricorne</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-verseau" class="btn-theme">Portrait astrologique masculin Verseau</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin-poissons" class="btn-theme">Portrait astrologique masculin Poissons</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-masculin" class="btn-theme">Portrait astrologique masculin</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-belier" class="btn-theme">Portrait astrologique masculin Bélier</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-taureau" class="btn-theme">Portrait astrologique masculin Taureau</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-gemeaux" class="btn-theme">Portrait astrologique masculin Gémeaux</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-cancer" class="btn-theme">Portrait astrologique masculin Cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-lion" class="btn-theme">Portrait astrologique masculin Lion</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-vierge" class="btn-theme">Portrait astrologique masculin Vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-balance" class="btn-theme">Portrait astrologique masculin Balance</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-scorpion" class="btn-theme">Portrait astrologique masculin Scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-sagittaire" class="btn-theme">Portrait astrologique masculin Sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-capricorne" class="btn-theme">Portrait astrologique masculin Capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-verseau" class="btn-theme">Portrait astrologique masculin Verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin-poissons" class="btn-theme">Portrait astrologique masculin Poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin" class="btn-theme">Portrait astrologique masculin</a>
     </td>
   </tr>
 </table>

@@ -10,10 +10,10 @@
             <div id="fil">
             Vous êtes ici
 			<span>»</span>
-			<a href="http://www.myastro.fr/yyadmin/">Accueil</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/">Accueil</a>
 			<span>»</span>
 			
-			<a href="http://www.myastro.fr/yyadmin/liste-des-contacts.php">liste-des-contacts</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/liste-des-contacts.php">liste-des-contacts</a>
 			</div>
 </div>
             

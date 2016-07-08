@@ -292,7 +292,7 @@
                     <p>Aucun contact direct, pas question de timidité ni de gène, le <strong>chat voyance</strong> vous offre la possibilité d’avoir une consultation avec un professionnel de la voyance sans avoir à le rencontrer. L’échange est direct et crée une atmosphère privilégiée avec le voyant, permettant une meilleure analyse de votre situation et une étude plus poussée de vos incertitudes. De quoi vous fournir des réponses et des conseils personnalisés et complets sur les zones d’ombres que vous pouvez traverser.</p>
                 </div><br>
                 <div>
-                    <a href="http://www.myastro.fr/voyance-gratuite"><img alt="voyance par tchat" src="images/bannieres/voyance-tchat.jpg"></a>
+                    <a href="http://<?= ROOT_URL ?>/voyance-gratuite"><img alt="voyance par tchat" src="images/bannieres/voyance-tchat.jpg"></a>
                 </div><br>
                 <div class="text-justify">
                     <h2>Voyance gratuite tchat : Posez toutes vos questions sans aucune restriction</h2>
@@ -322,7 +322,7 @@
     <div class="row-fluid">
         <div itemscope >
             <ul class="breadcrumb" itemprop="breadcrumb">
-                <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                 <li>Voyance par chat</h4></li>
             </ul>
         </div>

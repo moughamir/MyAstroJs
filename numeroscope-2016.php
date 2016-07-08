@@ -15,7 +15,7 @@
                             <header>
                                 <div itemscope >
                                    <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Numéroscope 2016</span></li>
                                     </ul>
                                 </div>
@@ -230,7 +230,7 @@
                            
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="1" title="1">
-                                <a href="http://www.myastro.fr/numeroscope-2016-1">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-1">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/1.jpg" />
@@ -239,7 +239,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="2" title="2">
-                                <a href="http://www.myastro.fr/numeroscope-2016-2">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-2">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/2.jpg" />
@@ -248,7 +248,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="3" title="3">
-                                <a href="http://www.myastro.fr/numeroscope-2016-3">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-3">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/3.jpg" />
@@ -258,7 +258,7 @@
 
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="4" title="4">
-                                <a href="http://www.myastro.fr/numeroscope-2016-4">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-4">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/4.jpg" />
@@ -267,7 +267,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="5" title="5">
-                                <a href="http://www.myastro.fr/numeroscope-2016-5">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-5">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/5.jpg" />
@@ -276,7 +276,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="6" title="6">
-                                <a href="http://www.myastro.fr/numeroscope-2016-6">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-6">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/6.jpg" />
@@ -285,7 +285,7 @@
                             </li>
 							
 							 <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="7" title="7">
-                                <a href="http://www.myastro.fr/numeroscope-2016-7">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-7">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/7.jpg" />
@@ -294,7 +294,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="8" title="8">
-                                <a href="http://www.myastro.fr/numeroscope-2016-8">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-8">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/8.jpg" />
@@ -303,7 +303,7 @@
                             </li>
 
                             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="9" title="9">
-                                <a href="http://www.myastro.fr/numeroscope-2016-9">
+                                <a href="http://<?= ROOT_URL ?>/numeroscope-2016-9">
                                     <div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/chiffres/9.jpg" />

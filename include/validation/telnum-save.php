@@ -7,7 +7,6 @@
 
 $bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
 $err = array();
-$kgestion = new APIKGestion;
 $page = explode("?", $_SERVER['HTTP_REFERER'])[0];
 
 /* ========================================================================== * 
@@ -15,7 +14,6 @@ $page = explode("?", $_SERVER['HTTP_REFERER'])[0];
  * ========================================================================== */
 
 $idindex     = $_SESSION['user_id'];
-$kgestion_id = $_SESSION['kgestion_id'];
 $email       = $_SESSION['email'];
 
 // Numéro de téléphone & Pays --------------------------------------------------
@@ -54,20 +52,6 @@ $question['content'] = isset($param['question_content']) ? $param['question'] : 
 /* ========================================================================== * 
  *                               ENREGISTREMENT                               *
  * ========================================================================== */
-  
-// KGestion --------------------------------------------------------------------
-if(empty($err) && isset($kgestion_id)){
-    $data = array(
-        'phone'   => $tel,
-        'country' => $pays,
-        'questionContent' => $question['content']
-    );
-    $kgestion_update = $kgestion->updateUser($kgestion_id, $data);
-    if (!$kgestion_update->success){
-        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.$kgestion_update->message);
-        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
-    }
-}
 
 // Myastro ---------------------------------------------------------------------
 if(empty($err)){
@@ -90,7 +74,7 @@ if(empty($err)){
  * ========================================================================== */
       
     $dri = (isset($param['dri'])) ? $param['dri'] : false;
-    $dri2 = (isset($param['dri2'])) ? $param['dri2'] : 'http://www.myastro.fr/merci-voyance';
+    $dri2 = (isset($param['dri2'])) ? $param['dri2'] : 'merci-voyance';
     
     if ($dri) {
         if($dri == "tchat"){
@@ -98,7 +82,7 @@ if(empty($err)){
                 & time() < strtotime(date('Y-m-d 23:59:59'))
                 && !isset($_COOKIE['tchat'] ))
             {
-                $redirect_url = 'http://www.myastro.fr/tchat';
+                $redirect_url = 'tchat';
             } else {
                 $redirect_url = $dri2;
             }
@@ -109,6 +93,8 @@ if(empty($err)){
     } else {
         $redirect_url = $dri2;
     }
+    
+    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
     die(json_encode(array('url' => $redirect_url)));
     

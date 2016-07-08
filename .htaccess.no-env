@@ -30,171 +30,171 @@ Options -Multiviews
 # Réécriture d'URL
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^myastro.fr$
-RewriteRule ^(.*) http://www.myastro.fr/$0 [QSA,L,R=301]
-RewriteRule ^voyance-tarot-gratuit$ /voyance-tarot [R=301]
-RewriteRule ^numeroscope-2015$ /numeroscope-2016 [R=301]
-RewriteRule ^numeroscope-2015-1$ /numeroscope-2016-1 [R=301]
-RewriteRule ^numeroscope-2015-2$ /numeroscope-2016-2 [R=301]
-RewriteRule ^numeroscope-2015-3$ /numeroscope-2016-3 [R=301]
-RewriteRule ^numeroscope-2015-4$ /numeroscope-2016-4 [R=301]
-RewriteRule ^numeroscope-2015-5$ /numeroscope-2016-5 [R=301]
-RewriteRule ^numeroscope-2015-6$ /numeroscope-2016-6 [R=301]
-RewriteRule ^numeroscope-2015-7$ /numeroscope-2016-7 [R=301]
-RewriteRule ^numeroscope-2015-8$ /numeroscope-2016-8 [R=301]
-RewriteRule ^numeroscope-2015-9$ /numeroscope-2016-9 [R=301]
-RewriteRule ^horoscope-2015$ /horoscope-2016 [R=301]
-RewriteRule ^horoscope-2015-taureau$ /horoscope-2016-taureau [R=301]
-RewriteRule ^horoscope-2015-lion$ /horoscope-2016-lion [R=301]
-RewriteRule ^horoscope-2015-gemeaux$ /horoscope-2016-gemeaux [R=301]
-RewriteRule ^horoscope-2015-cancer$ /horoscope-2016-cancer [R=301]
-RewriteRule ^horoscope-2015-balance$ /horoscope-2016-balance [R=301]
-RewriteRule ^horoscope-2015-scorpion$ /horoscope-2016-scorpion [R=301]
-RewriteRule ^horoscope-2015-capricorne$ /horoscope-2016-capricorne [R=301]
-RewriteRule ^horoscope-2015-verseau$ /horoscope-2016-verseau [R=301]
-RewriteRule ^horoscope-2015-belier$ /horoscope-2016-belier [R=301]
-RewriteRule ^horoscope-2015-vierge$ /horoscope-2016-vierge [R=301]
-RewriteRule ^horoscope-2015-sagittaire$ /horoscope-2016-sagittaire [R=301]
-RewriteRule ^horoscope-2015-poissons$ /horoscope-2016-poissons [R=301]
-RewriteRule ^index.php http://www.myastro.fr [R=301]
-#Ajout 10/08/2015
-Redirect permanent /partenaires http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-4-HENRI-11 http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-2-CLAUDE-12 http://www.myastro.fr
-Redirect permanent /www.legifrance.fr http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-3-HENRI-11 http://www.myastro.fr
-Redirect permanent /voyance-par-telephone-katy http://www.myastro.fr
-Redirect permanent /astrologie-gratuite-occidentale-astro.php http://www.myastro.fr
-Redirect permanent /photos/ http://www.myastro.fr
-Redirect permanent /images/banniere_gauche_voyance/old/_notes/ http://www.myastro.fr
-Redirect permanent /_vti_log/ http://www.myastro.fr
-Redirect permanent /compatibilite-amoureuse-pour-les-hommes/compatibilite-amoureuse-pour-les-hommes.php http://www.myastro.fr
-Redirect permanent /images/index/_notes/ http://www.myastro.fr
-Redirect permanent /images/fond_rubriques_voyance/_notes/ http://www.myastro.fr
-Redirect permanent /_left.php http://www.myastro.fr
-Redirect permanent /membres-accueil.php http://www.myastro.fr
-Redirect permanent /voyance-telephone http://www.myastro.fr
-Redirect permanent /images/petit_format/ http://www.myastro.fr
-Redirect permanent /images/forum_voyance/_notes/ http://www.myastro.fr
-Redirect permanent /images/numerologie/_notes/ http://www.myastro.fr
-Redirect permanent /rony_voyance-par-telephone.php http://www.myastro.fr
-Redirect permanent /conditions_generales.php http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-2-HENRI-11 http://www.myastro.fr
-Redirect permanent /analyse-numerologique-gratuite-%20VALERIE-06 http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-8-HENRI-11 http://www.myastro.fr
-Redirect permanent /a http://www.myastro.fr
-Redirect permanent /rony_astrologie-gratuite-cartomancie-astro.php http://www.myastro.fr
-Redirect permanent /inscription-voyance-tarot-gratuit-CECILE-05 http://www.myastro.fr
-Redirect permanent /voyance-par-telephone) http://www.myastro.fr
-Redirect permanent /_vti_cnf/ http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-9-HENRI-11 http://www.myastro.fr
-Redirect permanent /inscription-numerologie-gratuite-9-CLAUDE-12 http://www.myastro.fr
-Redirect permanent /inscription-voyance-gratuite-GEORGES-09 http://www.myastro.fr
-Redirect permanent /_ext/ http://www.myastro.fr
-Redirect permanent /www.cnil.fr http://www.myastro.fr
-Redirect permanent /membres-inscription.php http://www.myastro.fr
-Redirect permanent /inscription-voyance-tarot-gratuit-VIKTOR-10 http://www.myastro.fr
-Redirect permanent /voyance-gratuite/ http://www.myastro.fr
-Redirect permanent /horoscope-de-l http://www.myastro.fr
-Redirect permanent /compatibilite-amoureuse-pour-les-femmes/compatibilite-amoureuse-pour-les-femmes.php http://www.myastro.fr
-Redirect permanent /votre-personnalite-astrologique/votre-personnalite-astrologique http://www.myastro.fr
-Redirect permanent /navigation/images/ http://www.myastro.fr
-Redirect permanent /etapes http://www.myastro.fr
-Redirect permanent /rony_faq-voyance.php http://www.myastro.fr
-Redirect permanent /images/banners/ http://www.myastro.fr
-Redirect permanent /forfait-voyance.html http://www.myastro.fr
-Redirect permanent /images/_notes/ http://www.myastro.fr
-Redirect permanent /images/news/ http://www.myastro.fr
-Redirect permanent /horoscope-de http://www.myastro.fr
-Redirect permanent /personnalite-numerologique/personnalite-numerologique.php http://www.myastro.fr
-Redirect permanent /etapes-de-la-vie/etapes-de-la-vie.php http://www.myastro.fr
-Redirect permanent /portrait-astrologique http://www.myastro.fr
-Redirect permanent /astrologie http://www.myastro.fr
-Redirect permanent /numerologie http://www.myastro.fr
-Redirect permanent "/analyse-numerologique-gratuite- VALERIE-06" http://www.myastro.fr
-
-RewriteCond %{REQUEST_URI} /signezodiac.php$
-RewriteCond %{QUERY_STRING} ^signe=verseau$ [OR]
-RewriteCond %{QUERY_STRING} ^signe=capricorne$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /numerologie_gratuite.php$
-RewriteCond %{QUERY_STRING} ^ch=4$ [OR]
-RewriteCond %{QUERY_STRING} ^ch=5$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /voyant_voyante_gratuit.php$
-RewriteCond %{QUERY_STRING} ^vt=LAURENT&ch=1$ [OR]
-RewriteCond %{QUERY_STRING} ^vt=GREGORY&ch=3$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /rony_signe-du-zodiaque.php$
-RewriteCond %{QUERY_STRING} ^signe=lion$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /rony_forum-voyance-2.php$
-RewriteCond %{QUERY_STRING} ^salon=15&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=20&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=22&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=11&forum=Voyance$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=12&forum=Voyance$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /rony_commentaires.php$
-RewriteCond %{QUERY_STRING} ^salon=&forum=&sujet=19$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=14&forum=Horoscope&sujet=34$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=32&forum=Numerologie&sujet=3
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /rony_forum-voyance.php$
-RewriteCond %{QUERY_STRING} ^forum=Numerologie$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-RewriteCond %{REQUEST_URI} /rony_nouveau-sujet.php$
-RewriteCond %{QUERY_STRING} ^salon=10&forum=Voyance$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=14&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=17&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=18&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=23&forum=Horoscope$ [OR]
-RewriteCond %{QUERY_STRING} ^salon=25&forum=Horoscope$
-RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
-
-
-
-
 RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 
-RewriteRule ^tarotdelamour/([a-z0-9-]+)$ tarotdelamour/$1.php [L]
-
-RewriteRule ^forum/index$ forum/index.php [L]
-
-RewriteRule ^inscription-voyance-gratuite-(\w+)-(\d+)$   inscription-voyance-gratuite.php?vt=$1&ch=$2
-
-RewriteRule ^inscription-voyance-gratuite-2-(\w+)-(\d+)$   inscription-voyance-gratuite-2.php?vt=$1&ch=$2
-
-RewriteRule ^inscription-voyance-medium-gratuit-(\w+)-(\d+)$   inscription-voyance-medium-gratuit.php?vt=$1&ch=$2
-
-RewriteRule ^tarotdelamour/tarot_amour-(\w+)-(\d+)$   tarotdelamour/tarot_amour.php?ID=$1&sequence=$2
-
-
-RewriteRule ^inscription-voyance-astrologique-gratuite-(\w+)-(\d+)$   inscription-voyance-astrologique-gratuite.php?vt=$1&ch=$2
-
-RewriteRule ^tirage-tarot-gratuit-(\w+)-(\d+)$   tirage-tarot-gratuit.php?vt=$1&ch=$2
-
-RewriteRule ^inscription-voyance-tarot-gratuit-(\w+)-(\d+)$   inscription-voyance-tarot-gratuit.php?vt=$1&ch=$2
-
-RewriteRule ^voyance-par-telephone-(\w+)-(\d+)$   voyance-par-telephone.php?vt=$1&ch=$2
-
-
-
-RewriteRule ^analyse-numerologique-gratuite-(\w+)-(\d+)$   analyse-numerologique-gratuite.php?vt=$1&chv=$2
-
-RewriteRule ^inscription-numerologie-gratuite-(\d+)-(\w+)-(\d+)$   inscription-numerologie-gratuite.php?ch=$1&vt=$2&chv=$3
-
-
-RewriteRule ^voyance-numerologique-gratuite-chiffres-(\w+)-(\d+)$   voyance-numerologique-gratuite-chiffres.php?vt=$1&chv=$2
-
-RewriteRule ^inscription-voyance-numerologique-gratuite-(\d+)-(\w+)-(\d+)$   inscription-voyance-numerologique-gratuite.php?ch=$1&vt=$2&chv=$3
+#
+#RewriteCond %{HTTP_HOST} ^myastro.fr$
+#RewriteRule ^(.*) http://www.myastro.fr/$0 [QSA,L,R=301]
+#RewriteRule ^voyance-tarot-gratuit$ /voyance-tarot [R=301]
+#RewriteRule ^numeroscope-2015$ /numeroscope-2016 [R=301]
+#RewriteRule ^numeroscope-2015-1$ /numeroscope-2016-1 [R=301]
+#RewriteRule ^numeroscope-2015-2$ /numeroscope-2016-2 [R=301]
+#RewriteRule ^numeroscope-2015-3$ /numeroscope-2016-3 [R=301]
+#RewriteRule ^numeroscope-2015-4$ /numeroscope-2016-4 [R=301]
+#RewriteRule ^numeroscope-2015-5$ /numeroscope-2016-5 [R=301]
+#RewriteRule ^numeroscope-2015-6$ /numeroscope-2016-6 [R=301]
+#RewriteRule ^numeroscope-2015-7$ /numeroscope-2016-7 [R=301]
+#RewriteRule ^numeroscope-2015-8$ /numeroscope-2016-8 [R=301]
+#RewriteRule ^numeroscope-2015-9$ /numeroscope-2016-9 [R=301]
+#RewriteRule ^horoscope-2015$ /horoscope-2016 [R=301]
+#RewriteRule ^horoscope-2015-taureau$ /horoscope-2016-taureau [R=301]
+#RewriteRule ^horoscope-2015-lion$ /horoscope-2016-lion [R=301]
+#RewriteRule ^horoscope-2015-gemeaux$ /horoscope-2016-gemeaux [R=301]
+#RewriteRule ^horoscope-2015-cancer$ /horoscope-2016-cancer [R=301]
+#RewriteRule ^horoscope-2015-balance$ /horoscope-2016-balance [R=301]
+#RewriteRule ^horoscope-2015-scorpion$ /horoscope-2016-scorpion [R=301]
+#RewriteRule ^horoscope-2015-capricorne$ /horoscope-2016-capricorne [R=301]
+#RewriteRule ^horoscope-2015-verseau$ /horoscope-2016-verseau [R=301]
+#RewriteRule ^horoscope-2015-belier$ /horoscope-2016-belier [R=301]
+#RewriteRule ^horoscope-2015-vierge$ /horoscope-2016-vierge [R=301]
+#RewriteRule ^horoscope-2015-sagittaire$ /horoscope-2016-sagittaire [R=301]
+#RewriteRule ^horoscope-2015-poissons$ /horoscope-2016-poissons [R=301]
+#RewriteRule ^index.php http://www.myastro.fr [R=301]
+##Ajout 10/08/2015
+#Redirect permanent /partenaires http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-4-HENRI-11 http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-2-CLAUDE-12 http://www.myastro.fr
+#Redirect permanent /www.legifrance.fr http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-3-HENRI-11 http://www.myastro.fr
+#Redirect permanent /voyance-par-telephone-katy http://www.myastro.fr
+#Redirect permanent /astrologie-gratuite-occidentale-astro.php http://www.myastro.fr
+#Redirect permanent /photos/ http://www.myastro.fr
+#Redirect permanent /images/banniere_gauche_voyance/old/_notes/ http://www.myastro.fr
+#Redirect permanent /_vti_log/ http://www.myastro.fr
+#Redirect permanent /compatibilite-amoureuse-pour-les-hommes/compatibilite-amoureuse-pour-les-hommes.php http://www.myastro.fr
+#Redirect permanent /images/index/_notes/ http://www.myastro.fr
+#Redirect permanent /images/fond_rubriques_voyance/_notes/ http://www.myastro.fr
+#Redirect permanent /_left.php http://www.myastro.fr
+#Redirect permanent /membres-accueil.php http://www.myastro.fr
+#Redirect permanent /voyance-telephone http://www.myastro.fr
+#Redirect permanent /images/petit_format/ http://www.myastro.fr
+#Redirect permanent /images/forum_voyance/_notes/ http://www.myastro.fr
+#Redirect permanent /images/numerologie/_notes/ http://www.myastro.fr
+#Redirect permanent /rony_voyance-par-telephone.php http://www.myastro.fr
+#Redirect permanent /conditions_generales.php http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-2-HENRI-11 http://www.myastro.fr
+#Redirect permanent /analyse-numerologique-gratuite-%20VALERIE-06 http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-8-HENRI-11 http://www.myastro.fr
+#Redirect permanent /a http://www.myastro.fr
+#Redirect permanent /rony_astrologie-gratuite-cartomancie-astro.php http://www.myastro.fr
+#Redirect permanent /inscription-voyance-tarot-gratuit-CECILE-05 http://www.myastro.fr
+#Redirect permanent /voyance-par-telephone) http://www.myastro.fr
+#Redirect permanent /_vti_cnf/ http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-9-HENRI-11 http://www.myastro.fr
+#Redirect permanent /inscription-numerologie-gratuite-9-CLAUDE-12 http://www.myastro.fr
+#Redirect permanent /inscription-voyance-gratuite-GEORGES-09 http://www.myastro.fr
+#Redirect permanent /_ext/ http://www.myastro.fr
+#Redirect permanent /www.cnil.fr http://www.myastro.fr
+#Redirect permanent /membres-inscription.php http://www.myastro.fr
+#Redirect permanent /inscription-voyance-tarot-gratuit-VIKTOR-10 http://www.myastro.fr
+#Redirect permanent /voyance-gratuite/ http://www.myastro.fr
+#Redirect permanent /horoscope-de-l http://www.myastro.fr
+#Redirect permanent /compatibilite-amoureuse-pour-les-femmes/compatibilite-amoureuse-pour-les-femmes.php http://www.myastro.fr
+#Redirect permanent /votre-personnalite-astrologique/votre-personnalite-astrologique http://www.myastro.fr
+#Redirect permanent /navigation/images/ http://www.myastro.fr
+#Redirect permanent /etapes http://www.myastro.fr
+#Redirect permanent /rony_faq-voyance.php http://www.myastro.fr
+#Redirect permanent /images/banners/ http://www.myastro.fr
+#Redirect permanent /forfait-voyance.html http://www.myastro.fr
+#Redirect permanent /images/_notes/ http://www.myastro.fr
+#Redirect permanent /images/news/ http://www.myastro.fr
+#Redirect permanent /horoscope-de http://www.myastro.fr
+#Redirect permanent /personnalite-numerologique/personnalite-numerologique.php http://www.myastro.fr
+#Redirect permanent /etapes-de-la-vie/etapes-de-la-vie.php http://www.myastro.fr
+#Redirect permanent /portrait-astrologique http://www.myastro.fr
+#Redirect permanent /astrologie http://www.myastro.fr
+#Redirect permanent /numerologie http://www.myastro.fr
+#Redirect permanent "/analyse-numerologique-gratuite- VALERIE-06" http://www.myastro.fr
+#
+#RewriteCond %{REQUEST_URI} /signezodiac.php$
+#RewriteCond %{QUERY_STRING} ^signe=verseau$ [OR]
+#RewriteCond %{QUERY_STRING} ^signe=capricorne$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /numerologie_gratuite.php$
+#RewriteCond %{QUERY_STRING} ^ch=4$ [OR]
+#RewriteCond %{QUERY_STRING} ^ch=5$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /voyant_voyante_gratuit.php$
+#RewriteCond %{QUERY_STRING} ^vt=LAURENT&ch=1$ [OR]
+#RewriteCond %{QUERY_STRING} ^vt=GREGORY&ch=3$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /rony_signe-du-zodiaque.php$
+#RewriteCond %{QUERY_STRING} ^signe=lion$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /rony_forum-voyance-2.php$
+#RewriteCond %{QUERY_STRING} ^salon=15&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=20&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=22&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=11&forum=Voyance$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=12&forum=Voyance$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /rony_commentaires.php$
+#RewriteCond %{QUERY_STRING} ^salon=&forum=&sujet=19$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=14&forum=Horoscope&sujet=34$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=32&forum=Numerologie&sujet=3
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /rony_forum-voyance.php$
+#RewriteCond %{QUERY_STRING} ^forum=Numerologie$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#RewriteCond %{REQUEST_URI} /rony_nouveau-sujet.php$
+#RewriteCond %{QUERY_STRING} ^salon=10&forum=Voyance$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=14&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=17&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=18&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=23&forum=Horoscope$ [OR]
+#RewriteCond %{QUERY_STRING} ^salon=25&forum=Horoscope$
+#RewriteRule ^.*$ http://www.myastro.fr? [L,R=301]
+#
+#
+#
+#RewriteRule ^tarotdelamour/([a-z0-9-]+)$ tarotdelamour/$1.php [L]
+#
+#RewriteRule ^forum/index$ forum/index.php [L]
+#
+#RewriteRule ^inscription-voyance-gratuite-(\w+)-(\d+)$   inscription-voyance-gratuite.php?vt=$1&ch=$2
+#
+#RewriteRule ^inscription-voyance-gratuite-2-(\w+)-(\d+)$   inscription-voyance-gratuite-2.php?vt=$1&ch=$2
+#
+#RewriteRule ^inscription-voyance-medium-gratuit-(\w+)-(\d+)$   inscription-voyance-medium-gratuit.php?vt=$1&ch=$2
+#
+#RewriteRule ^tarotdelamour/tarot_amour-(\w+)-(\d+)$   tarotdelamour/tarot_amour.php?ID=$1&sequence=$2
+#
+#
+#RewriteRule ^inscription-voyance-astrologique-gratuite-(\w+)-(\d+)$   inscription-voyance-astrologique-gratuite.php?vt=$1&ch=$2
+#
+#RewriteRule ^tirage-tarot-gratuit-(\w+)-(\d+)$   tirage-tarot-gratuit.php?vt=$1&ch=$2
+#
+#RewriteRule ^inscription-voyance-tarot-gratuit-(\w+)-(\d+)$   inscription-voyance-tarot-gratuit.php?vt=$1&ch=$2
+#
+#RewriteRule ^voyance-par-telephone-(\w+)-(\d+)$   voyance-par-telephone.php?vt=$1&ch=$2
+#
+#
+#
+#RewriteRule ^analyse-numerologique-gratuite-(\w+)-(\d+)$   analyse-numerologique-gratuite.php?vt=$1&chv=$2
+#
+#RewriteRule ^inscription-numerologie-gratuite-(\d+)-(\w+)-(\d+)$   inscription-numerologie-gratuite.php?ch=$1&vt=$2&chv=$3
+#
+#
+#RewriteRule ^voyance-numerologique-gratuite-chiffres-(\w+)-(\d+)$   voyance-numerologique-gratuite-chiffres.php?vt=$1&chv=$2
+#
+#RewriteRule ^inscription-voyance-numerologique-gratuite-(\d+)-(\w+)-(\d+)$   inscription-voyance-numerologique-gratuite.php?ch=$1&vt=$2&chv=$3
 
 
 
@@ -241,10 +241,7 @@ FileETag none
 #ErrorDocument 403 http://www.myastro.fr/403.php
 #ErrorDocument 401 http://www.myastro.fr/401.php
 #ErrorDocument 500 http://www.myastro.fr/500.php
-ErrorDocument 404 http://www.myastro.fr/404
-ErrorDocument 403 http://www.myastro.fr/403
-ErrorDocument 401 http://www.myastro.fr/401
-ErrorDocument 500 http://www.myastro.fr/500
+ErrorDocument 404 http://%{ENV:MYASTRO_ROOT_URL}/404
 
 
 RewriteCond %{QUERY_STRING} categorie=voyance-par-telephone

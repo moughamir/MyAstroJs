@@ -1,5 +1,4 @@
 <?php
-session_start();
 $bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
 
 /*===============================================================* 
@@ -305,11 +304,11 @@ $dri              = (isset($param['dri'])) ? $param['dri'] : false;
     $_SESSION['email']          = $email;
     $_SESSION['birthdate']      = $birthdate;
     $_SESSION['sexe']           = $sexe;
-    $_SESSION['cards']          = $param['cards'];
+    $_SESSION['cards']          = isset($param['cards']) ? $param['cards'] : '';
     $_SESSION['phone']          = $tel;
     $_SESSION['question']       = $choix_question;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
-    $_SESSION['birthdateJoint'] = $date2;
+    $_SESSION['birthdateJoint'] = isset($date2) ? $date2 : '';
     $_SESSION['user_id']        = $idindex;
     $_SESSION['pays']           = $pays;
     $_SESSION['trigger']        = $choix_question;
@@ -338,12 +337,12 @@ $dri              = (isset($param['dri'])) ? $param['dri'] : false;
     if ($dri) {
         if($dri == "tchat"){
             if ( time() > strtotime(date('Y-m-d 09:00:00')) 
-                & time() < strtotime(date('Y-m-d 23:59:59'))
-                && !isset($_COOKIE['tchat'] )) 
+                 && time() < strtotime(date('Y-m-d 23:59:59'))
+                 && !isset($_COOKIE['tchat'] )) 
             {
-                $redirect_url = 'http://www.myastro.fr/tchat';
+                $redirect_url = 'tchat';
             } else {
-                $redirect_url = 'http://www.myastro.fr/merci-voyance';
+                $redirect_url = 'merci-voyance';
             }
         } else {
             $redirect_url = $dri;
@@ -351,18 +350,20 @@ $dri              = (isset($param['dri'])) ? $param['dri'] : false;
         
     } else {
         if ( time() > strtotime(date('Y-m-d 09:00:00')) 
-             & time() < strtotime(date('Y-m-d 23:59:59'))
+             && time() < strtotime(date('Y-m-d 23:59:59'))
              && !isset($_COOKIE['tchat'] )) 
         {
             if(in_array($source, $redirect_tchat)) {
-                $redirect_url = 'http://www.myastro.fr/tchat';
+                $redirect_url = 'tchat';
             } else {
-                $redirect_url = 'http://www.myastro.fr/merci-voyance';
+                $redirect_url = 'merci-voyance';
             }   
         } else {
-            $redirect_url = 'http://www.myastro.fr/merci-voyance';
+            $redirect_url = 'merci-voyance';
         }
     }
+    
+    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
     die(json_encode(array('url' => $redirect_url)));
 } else { // Fin si $msg=0

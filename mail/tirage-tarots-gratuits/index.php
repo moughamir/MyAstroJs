@@ -7,15 +7,15 @@
 			img{border:none;}
 		</style>
 	</head>
-	<p style="font-family:arial;text-align:center;">J'ai eu un ressenti exceptionnel en pensant à vous ! <br /><small>si ce mail ne s'affiche pas correctement, <a href="http://www.myastro.fr/mail/tirage-tarots-gratuits/"> consultez le en ligne </a>.</small></p>
+	<p style="font-family:arial;text-align:center;">J'ai eu un ressenti exceptionnel en pensant à vous ! <br /><small>si ce mail ne s'affiche pas correctement, <a href="http://<?= ROOT_URL ?>/mail/tirage-tarots-gratuits/"> consultez le en ligne </a>.</small></p>
 	<body>
 		<table width="700" style="border-collapse: collapse; border-spacing: 0;color: #fff; font-family: arial;" border="0" cellpadding="0" cellspacing="0">
 				<tr>
 					<td rowspan="4">
-						<img src="http://www.myastro.fr/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_01.png" alt="Ma photo" style="display: block;"/>
+						<img src="http://<?= ROOT_URL ?>/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_01.png" alt="Ma photo" style="display: block;"/>
 					</td>
 					<td>
-						<img src="http://www.myastro.fr/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_02.png" alt="top right" style="display: block;"/>
+						<img src="http://<?= ROOT_URL ?>/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_02.png" alt="top right" style="display: block;"/>
 					</td>
 				</tr>
 				<tr>
@@ -40,7 +40,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<img src="http://www.myastro.fr/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_06.png" alt="Fin" style="display: block;"/>
+						<img src="http://<?= ROOT_URL ?>/mail/tirage-tarots-gratuits/mailer-tirage-tarot-gratuit_06.png" alt="Fin" style="display: block;"/>
 					</td>
 				</tr>
 				<tr>

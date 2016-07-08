@@ -51,19 +51,24 @@
     </script>
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=313112278889346&amp;ev=PixelInitialized" /></noscript>
 	<!-- END SCRIPT TRACKING FB-->
-	
-	<?php if(($_GET['categorie'] == 'voyance-gratuite') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour') || ($_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour/') || ($_GET['categorie'] == 'sabonner') || ($_GET['categorie'] == 'sexualite') || ($_GET['categorie'] == 'astrologie/personnalite'))
-	{ 
-	echo '<meta name="robots" content="noindex,follow" />';
-	}
-	?>
+	<?php if(isset($_GET['categorie'])){
+            if(    $_GET['categorie'] == 'voyance-gratuite'
+                || $_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour'
+                || $_GET['categorie'] == 'horoscope-gratuit-bellier-du-jour/'
+                || $_GET['categorie'] == 'sabonner'
+                || $_GET['categorie'] == 'sexualite'
+                || $_GET['categorie'] == 'astrologie/personnalite'
+            ){ 
+                echo '<meta name="robots" content="noindex,follow" />';
+            }
+        } ?>
     <?php if($_SERVER['PHP_SELF'] == '/index.php'){
      echo '<script type="application/ld+json">
             { "@context": "http://schema.org",
             "@type": "Organization",
             "name": "myastro »,
-            "url": "http://www.myastro.fr/",
-            "logo": "http://www.myastro.fr/images/logo-V3.png",
+            "url": "http://'.ROOT_URL.'/",
+            "logo": "http://'.ROOT_URL.'/images/logo-V3.png",
             "sameAs": [ "https://twitter.com/MYASTRO1",
             "https://www.facebook.com/pages/Myastro/437290166297323",
             "https://plus.google.com/+MyastroFr"]

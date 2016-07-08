@@ -151,7 +151,7 @@ session_unset();
 
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                     </div>
                                                                 </article>
                                                             </div>
@@ -167,7 +167,7 @@ session_unset();
 
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
@@ -186,7 +186,7 @@ session_unset();
 
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/horoscope-du-jour" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
@@ -203,7 +203,7 @@ session_unset();
                                                                             <br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope 2016 avec MyAstro qui a déjà eu de grands résultats est chose facile et jusqu'à un certain point gratis. Profitez-en! </h6>                                                                       
                                                                         </div>
 
-                                                                        <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                                                        <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                                                     </div>
 
                                                                 </article>
@@ -239,7 +239,7 @@ session_unset();
             <div class="row-fluid">
                 <div itemscope >
                     <ul class="breadcrumb" itemprop="breadcrumb">
-                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                         <li>Tarot mensuel</span></li>
                     </ul>
                 </div>

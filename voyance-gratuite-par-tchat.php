@@ -493,7 +493,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 			<div class="row-fluid">
 				<div itemscope >
 					<ul class="breadcrumb" itemprop="breadcrumb">
-						<li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+						<li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
 						<li><a href="voyance-gratuite" >Voyance gratuite</a><i class="icon-caret-right icon-fixed-width"></i><li>Voyance gratuite par tchat</li></li></span>
 					</ul>
 				</div>

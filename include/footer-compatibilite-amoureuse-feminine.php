@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-belier" class="btn-theme">Compatibilité amoureuse féminine Bélier</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-taureau" class="btn-theme">Compatibilité amoureuse féminine Taureau</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-gemeaux" class="btn-theme">Compatibilité amoureuse féminine Gémeaux</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-cancer" class="btn-theme">Compatibilité amoureuse féminine Cancer</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-lion" class="btn-theme">Compatibilité amoureuse féminine Lion</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-vierge" class="btn-theme">Compatibilité amoureuse féminine Vierge</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-balance" class="btn-theme">Compatibilité amoureuse féminine Balance</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-scorpion" class="btn-theme">Compatibilité amoureuse féminine Scorpion</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-sagittaire" class="btn-theme">Compatibilité amoureuse féminine Sagittaire</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-capricorne" class="btn-theme">Compatibilité amoureuse féminine Capricorne</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-verseau" class="btn-theme">Compatibilité amoureuse féminine Verseau</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine-poissons" class="btn-theme">Compatibilité amoureuse féminine Poissons</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="btn-theme">Compatibilité amoureuse féminine</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-belier" class="btn-theme">Compatibilité amoureuse féminine Bélier</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-taureau" class="btn-theme">Compatibilité amoureuse féminine Taureau</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-gemeaux" class="btn-theme">Compatibilité amoureuse féminine Gémeaux</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-cancer" class="btn-theme">Compatibilité amoureuse féminine Cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-lion" class="btn-theme">Compatibilité amoureuse féminine Lion</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-vierge" class="btn-theme">Compatibilité amoureuse féminine Vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-balance" class="btn-theme">Compatibilité amoureuse féminine Balance</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-scorpion" class="btn-theme">Compatibilité amoureuse féminine Scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-sagittaire" class="btn-theme">Compatibilité amoureuse féminine Sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-capricorne" class="btn-theme">Compatibilité amoureuse féminine Capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-verseau" class="btn-theme">Compatibilité amoureuse féminine Verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine-poissons" class="btn-theme">Compatibilité amoureuse féminine Poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="btn-theme">Compatibilité amoureuse féminine</a>
     </td>
   </tr>
 </table>

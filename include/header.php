@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <link rel="shortcut icon" href="favicon.ico">
-<link href='http://www.myastro.fr/sstyle.css' rel='stylesheet' type='text/css' />
-<link href='http://www.myastro.fr/tchat/style.css' rel='stylesheet' type='text/css' />
+<link href='/sstyle.css' rel='stylesheet' type='text/css' />
+<link href='/tchat/style.css' rel='stylesheet' type='text/css' />
 <script>
     (function(){
       window._fbds = window._fbds || {};
@@ -50,11 +50,11 @@ nav.main a{
                         <div class="nav-collapse collapse">
                             <!--<a class="brand" href="#">Serpentsoft</a>-->
                             <ul class="nav">
-                                <li><a href="http://www.myastro.fr/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générales</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a></li>
                                 <li class="divider-vertical"></li>
                             </ul>
                             <ul class="nav pull-right">
@@ -83,7 +83,7 @@ nav.main a{
                                                           </dl>
                                                         </dd>
                                                         <dd class="tel"><i class="icon-phone"></i> <span class="value"> +33 (0)4 82 53 71 59</span></dd>
-                                                        <dd class="mail"><i class="icon-envelope"></i> <span class="value"><a href="http://www.myastro.fr/contact"> contact@myastro.fr</a></span></dd>
+                                                        <dd class="mail"><i class="icon-envelope"></i> <span class="value"><a href="http://<?= ROOT_URL ?>/contact"> contact@myastro.fr</a></span></dd>
                                                     </dl>
                                                 </div>
                                                 <div class="span4">
@@ -153,9 +153,9 @@ nav.main a{
                                                 </div>
                                                 <div class="row-fluid">
                                                     <ul class="span7 terms-conditions clearfix">
-                                                        <li><a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générale.</a></li>
-                                                        <li><a href="http://www.myastro.fr/plan-du-site" rel="nofollow">Plan du site</a></li>
-                                                        <li><a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générale.</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/plan-du-site" rel="nofollow">Plan du site</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
                                                     </ul>
                                                     <div class="span5 copyright clearfix">
                                                         <span>&copy; Copyright <?= date('Y') ?> Myastro, Tous droits réservés</span>
@@ -183,13 +183,13 @@ nav.main a{
                         </a>
                     </div>
                     <div class="adv-600 pull-right visible-desktop">
-                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="http://www.myastro.fr/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
+                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
 
-                        <img src="http://www.myastro.fr/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
+                        <img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
                        <?php } ?>
-                        <!--<a href="http://www.myastro.fr/voyance-par-telephone"><img src="http://www.myastro.fr/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
+                        <!--<a href="http://<?= ROOT_URL ?>/voyance-par-telephone"><img src="http://<?= ROOT_URL ?>/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
                         
-                        <a href="http://www.myastro.fr/forfait-saphir"><img src="http://www.myastro.fr/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
+                        <a href="http://<?= ROOT_URL ?>/forfait-saphir"><img src="http://<?= ROOT_URL ?>/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
                     </div>
                 </div>
                  <?php if ($_SERVER['PHP_SELF'] == '/index.php') { ?><h1 style="background:url('../../images/stripes.png') repeat-x scroll center 31px transparent;color:#000">Votre voyance MyAstro : découvrez de quoi sera fait demain</h1> <?php } ?>

@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/horoscope-du-mois-belier" class="btn-theme">Horoscope du mois Bélier</a>
-      <a href="http://www.myastro.fr/horoscope-du-mois-taureau" class="btn-theme">Horoscope du mois Taureau</a>
-      <a href="http://www.myastro.fr/horoscope-du-mois-gemeaux" class="btn-theme">Horoscope du mois Gémeaux</a>
-      <a href="http://www.myastro.fr/horoscope-du-mois-cancer" class="btn-theme">Horoscope du mois Cancer</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-lion" class="btn-theme">Horoscope du mois Lion</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-vierge" class="btn-theme">Horoscope du mois Vierge</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-balance" class="btn-theme">Horoscope du mois Balance</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-scorpion" class="btn-theme">Horoscope du mois Scorpion</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-sagittaire" class="btn-theme">Horoscope du mois Sagittaire</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-capricorne" class="btn-theme">Horoscope du mois Capricorne</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-verseau" class="btn-theme">Horoscope du mois Verseau</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois-poissons" class="btn-theme">Horoscope du mois Poissons</a>
-	  <a href="http://www.myastro.fr/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-belier" class="btn-theme">Horoscope du mois Bélier</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-taureau" class="btn-theme">Horoscope du mois Taureau</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-gemeaux" class="btn-theme">Horoscope du mois Gémeaux</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-cancer" class="btn-theme">Horoscope du mois Cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-lion" class="btn-theme">Horoscope du mois Lion</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-vierge" class="btn-theme">Horoscope du mois Vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-balance" class="btn-theme">Horoscope du mois Balance</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-scorpion" class="btn-theme">Horoscope du mois Scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-sagittaire" class="btn-theme">Horoscope du mois Sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-capricorne" class="btn-theme">Horoscope du mois Capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-verseau" class="btn-theme">Horoscope du mois Verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois-poissons" class="btn-theme">Horoscope du mois Poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
     </td>
   </tr>
 </table>

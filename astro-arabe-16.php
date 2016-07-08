@@ -24,8 +24,8 @@
         <!-- Meta Facebook -->
         <meta property="og:title" content="Découvrez ce que l’avenir vous réserve avec l’astrologie arabe" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.myastro.fr/astro-arabe-16" />
-        <meta property="og:image" content="http://www.myastro.fr/images_landing/astro-arabe-16/fb-ban.jpg" />
+        <meta property="og:url" content="http://<?= ROOT_URL ?>/astro-arabe-16" />
+        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/astro-arabe-16/fb-ban.jpg" />
         <meta property="og:description" content="Entrez dans le monde de l’astrologie arabe et ses 12 signes en forme d’armes." />
         <meta property="og:locale" content="fr_FR" />
         
@@ -72,7 +72,7 @@
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="method" value="signe-astro-arabe" />
-                            <input type="hidden" name="dri" value="http://www.myastro.fr/astro-arabe-16-tel" />
+                            <input type="hidden" name="dri" value="astro-arabe-16-tel" />
                             <input type="hidden" name="redirect_method" value="reload_form" />
                             <!-- ############################################### -->
                             <div class="Fields-Table">
