@@ -63,12 +63,12 @@ $(document).ready(function(){
         
         alert_loading = '\
             <p class="alert alert-warning">\
-                <b><i class="fa fa-refresh fa-spin"><img src="http://www.myastro.fr/images/loader.gif" /></i></b> \
+                <b><i class="fa fa-refresh fa-spin"><img src="/images/loader.gif" /></i></b> \
                 Récupération des informations.\
             </p>';
         alert_done = '\
             <p class="alert alert-success">\
-                <b><i class="fa fa-check"><img src="http://www.myastro.fr/images/loader.gif" /></i> Inscription complétée.</b>\
+                <b><i class="fa fa-check"><img src="/images/loader.gif" /></i> Inscription complétée.</b>\
                 Vous allez être redirigé.\
             </p>'; 
         alert_error = '\
@@ -86,7 +86,7 @@ $(document).ready(function(){
         }
         // requête Ajax
         $.ajax({
-            url : "http://myastro/inc/ajaxHandler.php", 
+            url : "inc/ajaxHandler.php",
             type : 'POST',
             cache : false, 
             dataType : "json",

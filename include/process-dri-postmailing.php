@@ -51,7 +51,7 @@ $email_user  = $email_base;
 
 /* ########################## REQUÊTE DONNÉES USER ########################## */
 $base = $bdd->users;
-if ($id > 2000000) {
+if ($idastro > 2000000) {
     $base = $bdd->users_common;
     $idastro_column = 'external_id';
     $objet = "MINISITES";
@@ -59,24 +59,24 @@ if ($id > 2000000) {
 $qry = 'SELECT * FROM '.$base.' as agu';
 if(!empty($idastro)){ //si on a bien l'idastro
     $qry .= ' WHERE '.$idastro_column.'='.$idastro;
-    $user = $bdd->get_row($bdd->prepare($qry)); 
+    $user = $bdd->get_row($qry); 
 } elseif(!empty($email_base)){ // sinon on recherche grace à l'email
     $qry .= ' WHERE email="'.$email_base.'"';
-    $user = $bdd->get_row($bdd->prepare($qry));
+    $user = $bdd->get_row($qry);
     if(!$user){ // si pas trouvé pour myastro, recherche pour mini sites
         $base = $bdd->users_common;
         $objet = "MINISITES";
         $qry = 'SELECT * FROM '.$base.' as agu WHERE email="'.$email_base.'"';
-        $user = $bdd->get_row($bdd->prepare($qry));
+        $user = $bdd->get_row($qry);
     }    
 }
 
 /* ######################## REQUÊTE DONNÉES TRACKING ######################## */
 
-$tracking = $bdd->get_row($bdd->prepare($tracking_qry)); 
+$tracking = $bdd->get_row($tracking_qry); 
 
 /* ######################## DISTRIBUTION DES DONNÉES ######################## */
-if($user){  
+if($user && $tracking){  
     $email_user = $user->email;
     $url        = $tracking->stf_formurl_kgestion; 
     $source     = $tracking->stf_source_kgestion;

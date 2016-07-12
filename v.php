@@ -52,7 +52,7 @@
                 case 'question_2' :
                     ?>
                     <p>Bonjour <?php echo $prenom; ?>,<br/><br/>
-                        Après avoir pu consulter votre profil astral je me permets donc de vous répondre suite à votre demande d'étude personnalisée sur le site de <a href="http://www.myastro.fr/" >myastro.fr</a><br/><br/>
+                        Après avoir pu consulter votre profil astral je me permets donc de vous répondre suite à votre demande d'étude personnalisée sur le site de <a href="http://<?= ROOT_URL ?>/" >myastro.fr</a><br/><br/>
                         Je vois que vos sentiments pour <?php echo $prenom2; ?> vous préoccupent la majeure partie du temps. Je comprends tout à fait votre désarroi face à une telle situation <?php echo $prenom; ?>. Vous ne savez pas si vous pouvez envisager un avenir avec <?php echo $prenom2; ?> et cela vous perturbe. Rien de plus normal <?php echo $prenom; ?> !!<br/><br/>
                         Je ressens en vous de grandes capacités pour surmonter tous les obstacles qui se présenteront devant vous. Cependant, il est clair que lorsqu'il s'agit de <?php echo $prenom2; ?> toutes vos facultés deviennent obsolètes. Pas de panique <?php echo $prenom; ?>, ce genre de réaction est tout à fait normal lorsqu'on a de tels sentiments et de tels doutes...<br/><br/>
                         Ce qui est sûr, c'est que dans un futur proche vous allez devoir prendre une décision qui sera déterminante pour votre avenir avec <?php echo $prenom2; ?>. Je ne peux malheureusement pas vous donner plus de détails sur la nature de cette décision car à ce stade je ne dispose pas d'assez d'éléments vous concernant <?php echo $prenom; ?>.<br/><br/>
@@ -97,7 +97,7 @@
                 case 'question_11' :
                     ?>
                     <p>Bonjour <?php echo $prenom; ?>,<br/><br/>
-                        Je suis Cécile voyante pure pour <a href="http://www.myastro.fr/" >myastro.fr</a>, c'est donc moi qui me suis chargée de votre demande d'étude personnalisée concernant votre relation avec <?php echo $prenom2; ?>. <br/><br/>
+                        Je suis Cécile voyante pure pour <a href="http://<?= ROOT_URL ?>/" >myastro.fr</a>, c'est donc moi qui me suis chargée de votre demande d'étude personnalisée concernant votre relation avec <?php echo $prenom2; ?>. <br/><br/>
                         Écoutez je comprends que dans une situation pareille votre sensibilité prenne le dessus sur votre personnalité, mais <?php echo $prenom; ?> vous ne pouvez pas rester comme ça... La situation est critique et j'ai  bien peur que le départ de <?php echo $prenom2; ?> vous ai trop affecté pour reprendre le contrôle de la situation.<br/><br/>
                         Sachez cependant que tout dans votre profil astral laisse supposer qu'il y a de fortes chances pour que <?php echo $prenom2; ?> revienne vers vous, mais il semblerait qu'il y ai un problème dans votre comportement qui ne permette pas d'établir une stabilité dans votre relation.<br/><br/>
                         Je veux vraiment vous aider <?php echo $prenom; ?>, je vous perçois comme une personne sincère et qui aujourd'hui à juste besoin d'aide pour avancer. Cette aide je peux vous l'apporter par téléphone dans le cadre d'une consultation approfondie.<br/><br/>
@@ -144,9 +144,9 @@
                     break;
                 default :
                     ?>
-                    <p> Vous avez demandé une analyse de voyance concernant votre avenir sur le site <a href="http://www.myastro.fr/" >myastro.fr</a>, cependant vous n'avez pas précisé quel domaine vous préoccupe.
+                    <p> Vous avez demandé une analyse de voyance concernant votre avenir sur le site <a href="http://<?= ROOT_URL ?>/" >myastro.fr</a>, cependant vous n'avez pas précisé quel domaine vous préoccupe.
                         Je vous invite donc à remplir à nouveau notre formulaire afin que l'on puisse vous apporter une analyse personnalisée. 
-                        Pour cela cliquez sur le lien suivant et remplissez le formulaire sans oublier les cases à cocher : Demande d'analyse <a href="http://www.myastro.fr/voyance-gratuite" >MyAstro</a><br/><br/>
+                        Pour cela cliquez sur le lien suivant et remplissez le formulaire sans oublier les cases à cocher : Demande d'analyse <a href="http://<?= ROOT_URL ?>/voyance-gratuite" >MyAstro</a><br/><br/>
                         Cécile<br/><br/>
                     </p>
                     <?php

@@ -50,10 +50,10 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]2[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_02.jpg" alt="" style="display: block;" border="0" height="34" width="488"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]2[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_02.jpg" alt="" style="display: block;" border="0" height="34" width="488"></a></td> 
                     
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]3[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_03.jpg" alt="" style="display: block;" border="0" height="34" width="78"></a></td>
-                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]4[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_04.jpg" alt="" style="display: block;" border="0" height="34" width="84"></a></td>
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]3[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_03.jpg" alt="" style="display: block;" border="0" height="34" width="78"></a></td>
+                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]4[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_04.jpg" alt="" style="display: block;" border="0" height="34" width="84"></a></td>
                     </tr>
                 </tbody>
               </table>
@@ -76,7 +76,7 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]5[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_06.jpg" alt="" style="display: block;" border="0" height="100" width="650"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]5[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_06.jpg" alt="" style="display: block;" border="0" height="100" width="650"></a></td> 
                     </tr>
                 </tbody>
               </table>
@@ -90,8 +90,8 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]7[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_22.jpg" alt="" style="display: block;" border="0" height="129" width="337"></a></td> 
-                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]8[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_23.jpg" alt="" style="display: block;" border="0" height="129" width="313"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]7[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_22.jpg" alt="" style="display: block;" border="0" height="129" width="337"></a></td> 
+                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]8[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_23.jpg" alt="" style="display: block;" border="0" height="129" width="313"></a></td> 
                     </tr>
                 </tbody>
               </table>
@@ -102,8 +102,8 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="337"><a href="[EMV LINK]9[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_20.jpg" alt="" style="display: block;" border="0" height="103" width="337"></a></td> 
-                                        <td align="left" valign="top" width="337"><a href="[EMV LINK]10[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_21.jpg" alt="" style="display: block;" border="0" height="103" width="313"></a></td> 
+                    <td align="left" valign="top" width="337"><a href="[EMV LINK]9[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_20.jpg" alt="" style="display: block;" border="0" height="103" width="337"></a></td> 
+                                        <td align="left" valign="top" width="337"><a href="[EMV LINK]10[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_21.jpg" alt="" style="display: block;" border="0" height="103" width="313"></a></td> 
                                         <td align="left" valign="top" width="313"></td> 
                     </tr>
                 </tbody>
@@ -115,8 +115,8 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]11[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_24.jpg" alt="" style="display: block;" border="0" height="133" width="337"></a></td> 
-                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]12[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_25.jpg" alt="" style="display: block;" border="0" height="133" width="313"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]11[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_24.jpg" alt="" style="display: block;" border="0" height="133" width="337"></a></td> 
+                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]12[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_25.jpg" alt="" style="display: block;" border="0" height="133" width="313"></a></td> 
                                         <td align="left" valign="top" width="650"> </td> 
                     </tr>
                 </tbody>
@@ -128,8 +128,8 @@ ini_set("display_errors", 1);
 
   <tbody>
  <tr>                   
-                    <td align="left" valign="top" width="650"><a href="[EMV LINK]13[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_26.jpg" alt="" style="display: block;" border="0" height="152" width="337"></a></td> 
-                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]14[EMV /LINK]"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_27.jpg" alt="" style="display: block;" border="0" height="152" width="313"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="[EMV LINK]13[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_26.jpg" alt="" style="display: block;" border="0" height="152" width="337"></a></td> 
+                                        <td align="left" valign="top" width="650"><a href="[EMV LINK]14[EMV /LINK]"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/News-horoscope_27.jpg" alt="" style="display: block;" border="0" height="152" width="313"></a></td> 
                                         <td align="left" valign="top" width="650"> </td> 
                     </tr>
                 </tbody>
@@ -142,7 +142,7 @@ ini_set("display_errors", 1);
 
                     <td><table border="0" cellpadding="0" cellspacing="0" width="650">
                         <tbody>
-                        <tr><td align="right" height="43" valign="top" width="168"><a href="[EMV LINK]15[EMV /LINK]" target="_blank"><img src="http://www.myastro.fr/images/mail/horoscope_jour/SE-DESINSCRIRE.jpg" alt="" border="0" height="39" width="43"></a></td>
+                        <tr><td align="right" height="43" valign="top" width="168"><a href="[EMV LINK]15[EMV /LINK]" target="_blank"><img src="http://<?= ROOT_URL ?>/images/mail/horoscope_jour/SE-DESINSCRIRE.jpg" alt="" border="0" height="39" width="43"></a></td>
                           <td align="left" valign="top" width="482"><p style="font-family:Arial, Helvetica, sans-serif; color:#371200; font-size:10px;"><br>
 
                             Si vous voulez ne plus recevoir des promotions de www.myastro.fr <a style="text-decoration: underline; font-family: Arial,Helvetica,sans-serif; color: rgb(255, 4, 7); font-size: 11px;" href="[EMV LINK]15[EMV /LINK]" target="_blank">cliquez ici</a></p></td>

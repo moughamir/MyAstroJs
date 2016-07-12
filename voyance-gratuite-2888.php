@@ -441,7 +441,7 @@
 		
           
       <!--    <tr >
-		<td ><img src="http://www.myastro.fr/images/news/gratuit1.jpg" alt="" ></td>
+		<td ><img src="http://<?= ROOT_URL ?>/images/news/gratuit1.jpg" alt="" ></td>
         <td></td>
 		</tr>-->
 		

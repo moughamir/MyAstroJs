@@ -133,9 +133,9 @@ $cards_dir = 'tarot/cartes/original-grand/';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tarot-direct-tchat" />
+                                <input type="hidden" name="dri" value="tarot-direct-tchat" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>" />
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />  
                                 <!-- ############################################### -->

@@ -10,7 +10,7 @@ session_start();
 	<meta name="robots" content="noindex,nofollow" />
 	<meta name="viewport" content="width=device-width" />
     
-	<link rel="stylesheet" href="http://www.myastro.fr/css/bootstrap3.min.css">
+	<link rel="stylesheet" href="/css/bootstrap3.min.css">
 	<link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media=all />
         <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="sstyle_landing.css" />
@@ -27,9 +27,9 @@ session_start();
     ?>
 	<div class="top-nav">
             <div class="nav-content"><div class="links">
-                <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-                <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-                <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
+                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
+                <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
             </div></div>
 	</div>
 	<div class="main">

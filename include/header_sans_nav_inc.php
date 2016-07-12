@@ -66,8 +66,8 @@
             { "@context": "http://schema.org",
             "@type": "Organization",
             "name": "myastro »,
-            "url": "http://www.myastro.fr/",
-            "logo": "http://www.myastro.fr/images/logo-V3.png",
+            "url": "http://'.ROOT_URL.'/",
+            "logo": "http://'.ROOT_URL.'/images/logo-V3.png",
             "sameAs": [ "https://twitter.com/MYASTRO1",
             "https://www.facebook.com/pages/Myastro/437290166297323",
             "https://plus.google.com/+MyastroFr"]
@@ -94,18 +94,18 @@
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
-                        <a href="http://www.myastro.fr">
-                            <img  itemprop="logo" src="http://www.myastro.fr/images/logo-V3.png"  alt="Voyance gratuite Myastro.fr" width="240" height="90" />
+                        <a href="http://<?= ROOT_URL ?>">
+                            <img  itemprop="logo" src="/images/logo-V3.png"  alt="Voyance gratuite Myastro.fr" width="240" height="90" />
                         </a>
                     </div>
                     <div class="adv-600 pull-right visible-desktop">
-                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="http://www.myastro.fr/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
+                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
 
-                        <img src="http://www.myastro.fr/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
+                        <img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
                        <?php } ?>
-                        <!--<a href="http://www.myastro.fr/voyance-par-telephone"><img src="http://www.myastro.fr/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
+                        <!--<a href="http://<?= ROOT_URL ?>/voyance-par-telephone"><img src="http://<?= ROOT_URL ?>/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
                         
-                        <a href="http://www.myastro.fr/forfait-saphir"><img src="http://www.myastro.fr/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
+                        <a href="http://<?= ROOT_URL ?>/forfait-saphir"><img src="http://<?= ROOT_URL ?>/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
                     </div>
                 </div>
                  <?php if ($_SERVER['PHP_SELF'] == '/index.php') { ?><h1 style="background:transparent;color:#000">Votre voyance MyAstro : découvrez de quoi sera fait demain</h1> <?php } ?>

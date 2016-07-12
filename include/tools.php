@@ -7,7 +7,6 @@ require_once(ROOT_PATH.'/inc/bdd.php');      // New mysql Class From Wordpress :
 require_once(ROOT_PATH.'/lib/Compteur/Compteur.class.php'); // Counter used for EMV groups
 require_once(ROOT_PATH.'/lib/Tracker/Tracker.class.php'); // Tracking users for campains
 require_once(ROOT_PATH.'/lib/SmartFocus/SmartFocus.class.php'); // Tracking users for campains
-require_once(ROOT_PATH.'/lib/APIKGestion/APIKGestion.class.php');
 //require_once(ROOT_PATH.'/sms/myastro-sms.php'); // sms campains
 
 session_start();
@@ -604,17 +603,17 @@ function getSquareAd($show = true){
     case 'voyance':
       $imgPath = ROOT_PATH . '/images/bannieres/square/voyance/';
       $imgUrl  = ROOT_URL  . '/images/bannieres/square/voyance/';
-      $url = 'http://www.myastro.fr/voyance-gratuite';
+      $url = 'http://'.ROOT_URL.'/voyance-gratuite';
       break;
     case 'tarot':
       $imgPath = ROOT_PATH . '/images/bannieres/square/tarot/';
       $imgUrl  = ROOT_URL  . '/images/bannieres/square/tarot/';
-      $url = 'http://www.myastro.fr/voyance-tarot';
+      $url = 'http://'.ROOT_URL.'/voyance-tarot';
       break;
     default:
       $imgPath = ROOT_PATH . '/images/bannieres/square/voyance/';
       $imgUrl  = ROOT_URL  . '/images/bannieres/square/voyance/';
-      $url = 'http://www.myastro.fr/voyance-gratuite';
+      $url = 'http://'.ROOT_URL.'/voyance-gratuite';
       break;
   }
 
@@ -644,7 +643,7 @@ function getConsultationPerMinutsAd($show = true){
 
 /* Ajout le 20/08/2014 pour que le wigdet voyant de la page /voyance-par-telephone/ renvoi à la page du voyant correspondant*/
 function getVoyantScryscraperVPT($show = true){
-  if($_SERVER['HTTP_REFERER'] != 'http://www.myastro.fr/voyance-par-telephone-2'){
+  if($_SERVER['HTTP_REFERER'] != 'http://'.ROOT_URL.'/voyance-par-telephone-2'){
     $path = ROOT_PATH . '/images/bannieres/voyant-skyscraper/';
     $url  = ROOT_URL  . '/images/bannieres/voyant-skyscraper/';
     $files = array_diff(scandir($path), array('.','..'));
@@ -654,7 +653,7 @@ function getVoyantScryscraperVPT($show = true){
     if($show) { 
 
       if($arrayFile[0] != "voyants"){
-        echo '<a href="http://www.myastro.fr/voyance-par-telephone-'.$arrayFile[0].'"><img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" /></a>';
+        echo '<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-'.$arrayFile[0].'"><img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" /></a>';
       }else{
         echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
       }
@@ -668,9 +667,9 @@ function getVoyantScryscraperVPT($show = true){
 }
 
 function getVoyantScryscraper($show = true){
-  if($_SERVER['HTTP_REFERER'] != 'http://www.myastro.fr/voyance-par-telephone-2'){
-    $path = ROOT_PATH . '/images/bannieres/voyant-skyscraper/';
-    $url  = ROOT_URL  . '/images/bannieres/voyant-skyscraper/';
+  if($_SERVER['HTTP_REFERER'] != 'http://'.ROOT_URL.'/voyance-par-telephone-2'){
+    $path = ROOT_PATH.'/images/bannieres/voyant-skyscraper/';
+    $url  = 'http://'.ROOT_URL.'/images/bannieres/voyant-skyscraper/';
     $files = array_diff(scandir($path), array('.','..'));
     shuffle($files);
 
@@ -701,37 +700,37 @@ function getHoroscopeBlock($type = "jour"){
 
   switch ($type) {
     case 'jour':
-      $baseurl = 'http://www.myastro.fr/horoscope-du-jour';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-du-jour';
       break;
     case 'semaine':
-      $baseurl = 'http://www.myastro.fr/horoscope-de-la-semaine';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-de-la-semaine';
       break;
     case 'mois':
-      $baseurl = 'http://www.myastro.fr/horoscope-du-mois';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-du-mois';
       break;
     case 'amour':
-      $baseurl = 'http://www.myastro.fr/horoscope-de-l-amour';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-de-l-amour';
       break;
     case '2016':
-      $baseurl = 'http://www.myastro.fr/horoscope-2016';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-2016';
       break;
     case 'compatibilite-homme' :
-      $baseurl = 'http://www.myastro.fr/compatibilite-amoureuse-masculine';
+      $baseurl = 'http://'.ROOT_URL.'/compatibilite-amoureuse-masculine';
      break;
     case 'compatibilite-femme' :
-      $baseurl = 'http://www.myastro.fr/compatibilite-amoureuse-feminine';
+      $baseurl = 'http://'.ROOT_URL.'/compatibilite-amoureuse-feminine';
      break;
     case 'portrait-homme' :
-      $baseurl = 'http://www.myastro.fr/portrait-astrologique-masculin';
+      $baseurl = 'http://'.ROOT_URL.'/portrait-astrologique-masculin';
      break;
     case 'portrait-femme' :
-      $baseurl = 'http://www.myastro.fr/portrait-astrologique-feminin';
+      $baseurl = 'http://'.ROOT_URL.'/portrait-astrologique-feminin';
      break;
     case 'votre-portrait' :
-      $baseurl = 'http://www.myastro.fr/votre-personnalite-astrologique';
+      $baseurl = 'http://'.ROOT_URL.'/votre-personnalite-astrologique';
      break;
     default:
-      $baseurl = 'http://www.myastro.fr/horoscope-du-jour';
+      $baseurl = 'http://'.ROOT_URL.'/horoscope-du-jour';
       break;
   }
 
@@ -792,14 +791,14 @@ function getHoroscopeBlock($type = "jour"){
 function getExpertEnLigne(){
   $content = '<ul class="clearfix experts-handler">';
 
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-georges" class="experts experts-georges "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-linda" class="experts experts-linda "></a></li>';
-  $content .= '<li><a href="http://www.myastro.fr/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-georges" class="experts experts-georges "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-linda" class="experts experts-linda "></a></li>';
+  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
 
   $content .= '</ul>';
 

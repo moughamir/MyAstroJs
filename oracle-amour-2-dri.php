@@ -1,14 +1,13 @@
 <?php
 /* 
-    -------------------------------------------
-    --   oracle-amour-2-DRI POST-MAIL = REFLEX CACHE   --
-    -------------------------------------------
+    ---------------------------------------------------
+    --   oracle-amour-2-dri POST-MAIL = AFFIL BASE   --
+    ---------------------------------------------------
 
     Created on : 07 juillet 2016
     Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
- /*include('include/process-dri-postmailing.php');*/
-$prenom ="Prénom"; 
+include('include/process-dri-postmailing.php');
 ?>
 
 <!DOCTYPE html>

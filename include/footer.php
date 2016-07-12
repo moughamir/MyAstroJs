@@ -8,7 +8,7 @@
             <nav class="span6 ">
                <!--   <h4 class="hidden">Liens Copyright</h4> -->
                <ul class="copyright-links">
-                <li><a href="http://www.myastro.fr/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a> - <a href="http://www.myastro.fr/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a> - <a href="http://www.myastro.fr/mentions-legales" rel="nofollow">Mentions légales</a></li>
+                <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a> - <a href="http://<?= ROOT_URL ?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a> - <a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
             </ul>
         </nav>
         <div class="span6">
@@ -20,15 +20,15 @@
 </section>
 
 
-<script type="text/javascript" src="http://www.myastro.fr/framework/jquery.easing.1.3.js"></script>
-<script src="http://www.myastro.fr/js/bootstrap.min.js"></script>
-<script src="http://www.myastro.fr/js/bootstrap3-hover-dropdown.min.js"></script>
-<script src="http://www.myastro.fr/framework/bootstrap/js/bootstrap-tooltip.js"></script>
-<script type="text/javascript" src="http://www.myastro.fr/framework/sliders/flex/js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="http://www.myastro.fr/framework/ticker/twitter/jquery.tweet.js"></script>
-<script type="text/javascript" src="http://www.myastro.fr/framework/jsSlider.js"></script>
-<script type="text/javascript" src="http://www.myastro.fr/js/jquery.eislideshow.js"></script>
-<script type="text/javascript" src="http://www.myastro.fr/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/framework/jquery.easing.1.3.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap3-hover-dropdown.min.js"></script>
+<script src="/framework/bootstrap/js/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="/framework/sliders/flex/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/framework/ticker/twitter/jquery.tweet.js"></script>
+<script type="text/javascript" src="/framework/jsSlider.js"></script>
+<script type="text/javascript" src="/js/jquery.eislideshow.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
 $(function() {
     $('#ei-slider').eislideshow({

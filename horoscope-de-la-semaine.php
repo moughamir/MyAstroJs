@@ -243,7 +243,7 @@
           <!-- Horizontal Categories -->
           <section class="cat-widget h-cat-1">
             <div class="cat-widget-title">
-              <h3><? echo str_replace('-', ' ', $path);?></h3>
+              <h3><?= str_replace('-', ' ', $path);?></h3>
             </div>
 
             <div class="cat-widget-content">
@@ -270,7 +270,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/votre-personnalite-astrologique" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -288,7 +288,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/portrait-astrologique-feminin" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -337,7 +337,7 @@
         <div itemscope >
           <ul class="breadcrumb" itemprop="breadcrumb">
             <li>
-             <span class="h4"> <a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+             <span class="h4"> <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
               <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope de la semaine</li></li></span>
             </ul>
           </div>

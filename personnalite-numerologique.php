@@ -224,7 +224,7 @@
 
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="1" title="1">
-										<a href="http://www.myastro.fr/personnalite-numerologique-1">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-1">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/1.jpg" />
@@ -233,7 +233,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="2" title="2">
-										<a href="http://www.myastro.fr/personnalite-numerologique-2">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-2">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/2.jpg" />
@@ -242,7 +242,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="3" title="3">
-										<a href="http://www.myastro.fr/personnalite-numerologique-3">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-3">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/3.jpg" />
@@ -252,7 +252,7 @@
 
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="4" title="4">
-										<a href="http://www.myastro.fr/personnalite-numerologique-4">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-4">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/4.jpg" />
@@ -261,7 +261,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="5" title="5">
-										<a href="http://www.myastro.fr/personnalite-numerologique-5">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-5">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/5.jpg" />
@@ -270,7 +270,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="6" title="6">
-										<a href="http://www.myastro.fr/personnalite-numerologique-6">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-6">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/6.jpg" />
@@ -279,7 +279,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="7" title="7">
-										<a href="http://www.myastro.fr/personnalite-numerologique-7">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-7">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/7.jpg" />
@@ -288,7 +288,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="8" title="8">
-										<a href="http://www.myastro.fr/personnalite-numerologique-8">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-8">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/8.jpg" />
@@ -297,7 +297,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="9" title="9">
-										<a href="http://www.myastro.fr/personnalite-numerologique-9">
+										<a href="http://<?= ROOT_URL ?>/personnalite-numerologique-9">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/9.jpg" />
@@ -313,7 +313,7 @@
 						<!-- Horizontal Categories -->
 						<section class="cat-widget h-cat-1">
 							<div class="cat-widget-title">
-								<h3><? echo str_replace('-', ' ', $path);?></h3>
+								<h3><?= str_replace('-', ' ', $path);?></h3>
 							</div>
 
 							<div class="cat-widget-content">
@@ -340,7 +340,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
 																		</div>
 																	</article>
 																</div>
@@ -356,7 +356,7 @@
 																				<br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Entre signes, la compatibilité amoureuse n'est pas toujours évidente. Grâce au calcul de compatibilité amoureuse gratuit de Myastro, ayez une vue précise sur vos affinités avec le signe astrologique de votre homme et bénéficiez de conseils si la situation ne se présente pas bien.</h6>                                                                        
 																			</div>
 
-																			<a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -375,7 +375,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-de-la-semaine" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -392,7 +392,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -410,7 +410,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
 																		</div>
 																	</article>
 																</div>
@@ -426,7 +426,7 @@
 																				<br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le tarot quotidien avec Myastro. Rien de plus simple. Nous vous proposons un service gratuit qui vous permettra de répondre à toutes vos questions quotidiennes. Vous pourrez connaître votre avenir (Amour, Argent, Santé…)</h6>                                                                        
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -444,7 +444,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -461,7 +461,7 @@
 																				<br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le tarot mensuel vous permet de bénéficier gratuitement de prédictions sur le mois à venir, qu’attendez-vous pour tirer les cartes? Myastro vous propose un tirage de cartes gratuitement. </h6>                                                                        
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -497,7 +497,7 @@
 				<div class="row-fluid">
 					<div itemscope >
 						<ul class="breadcrumb" itemprop="breadcrumb">
-							<li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+							<li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
 							<li>Personnalité numérologique</h4></li>
 						</ul>
 					</div>

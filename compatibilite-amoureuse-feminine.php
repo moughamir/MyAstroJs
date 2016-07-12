@@ -226,7 +226,7 @@
           <!-- Horizontal Categories -->
           <section class="cat-widget h-cat-1">
             <div class="cat-widget-title">
-              <h3><? echo str_replace('-', ' ', $path);?></h3>
+              <h3><?= str_replace('-', ' ', $path);?></h3>
             </div>
 
             <div class="cat-widget-content">
@@ -254,7 +254,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                   </div>
                                 </article>
                               </div>
@@ -271,7 +271,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -291,7 +291,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-la-semaine" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -309,7 +309,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -328,7 +328,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
                                   </div>
                                 </article>
                               </div>
@@ -345,7 +345,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -364,7 +364,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -382,7 +382,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -416,7 +416,7 @@
       <div class="row-fluid">
         <div itemscope >
           <ul class="breadcrumb" itemprop="breadcrumb">
-            <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+            <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
             <li>Compatibilité amoureuse féminine</h4></li>
           </ul>
         </div>

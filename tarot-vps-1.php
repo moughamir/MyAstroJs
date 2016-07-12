@@ -59,9 +59,9 @@
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="tarot-vps-1" />
                             <input type="hidden" name="method" value="tarot-landing" />
-                            <input type="hidden" name="dri" value="http://www.myastro.fr/dri-vps-tarot" />
+                            <input type="hidden" name="dri" value="dri-vps-tarot" />
                             <input type="hidden" name="support" value="tarot"/>
-                            <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
+                            <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>"/>
                             <input type="hidden" name="affiliation" value="affilvps" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="cguv" value="1" />

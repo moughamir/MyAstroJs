@@ -148,7 +148,7 @@ session_unset();
 
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                         </div>
                                                                     </article>
                                                                 </div>
@@ -165,7 +165,7 @@ session_unset();
                                                                                 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Un homme est entré dans votre vie, mais cette relation est-elle vouée à évoluer vers le parfait amour? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir? Consultez la compatibilité amoureuse gratuite MyAstro!</h6>                                                                       
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                         </div>
 
                                                                     </article>
@@ -197,7 +197,7 @@ session_unset();
             <div class="row-fluid">
                 <div itemscope >
                     <ul class="breadcrumb" itemprop="breadcrumb">
-                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                         <li>Tarot quotidien</span></li>
                     </ul>
                 </div>

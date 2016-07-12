@@ -57,7 +57,7 @@
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="method" value="telnum-save" />
                     <input type="hidden" name="tel_needed" value="1" />
-                    <input type="hidden" name="dri" value="http://www.myastro.fr/ete-16-dri" />
+                    <input type="hidden" name="dri" value="ete-16-dri" />
                     <!-- ############################################### -->
 
                     <li class="FormField da-slide ">

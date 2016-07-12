@@ -283,7 +283,7 @@ if(isset($_POST['valider'])){
 	      	$url .= ($i==1) ? '?'.$key.'='.$value : '&'.$key.'='.$value ;
 	    	$i++;
 	    }*/
-	    header("Location: http://www.myastro.fr/merci-voyance");
+	    header("Location: http://".ROOT_URL."/merci-voyance");
 	} // Fin si pas d'erreur
 } // Fin si $_POST['valider']
 ?>
@@ -311,10 +311,10 @@ if(isset($_POST['valider'])){
                     	<ul class="breadcrumb" itemprop="breadcrumb">
                         	<li>
                         		<h4 class="h4">
-                            	<a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i>
+                            	<a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i>
                             </li> 
                             <li>
-                            	<a href="http://www.myastro.fr/voyance-astrologique-gratuite" class="active">Voyance astrologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i>
+                            	<a href="http://<?= ROOT_URL ?>/voyance-astrologique-gratuite" class="active">Voyance astrologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i>
                             </li>
                             <li>Inscription voyance astrologique gratuite</h4></li>
                         </ul>
@@ -339,7 +339,7 @@ if(isset($_POST['valider'])){
                  		echo "</div>";
                  	}
                 ?>  
- 				<form  id="form" action="inscription-voyance-astrologique-gratuite-<? echo $vt;?>-<? echo $ch;?>#form" method="post" onsubmit="return valider()" >
+ 				<form  id="form" action="inscription-voyance-astrologique-gratuite-<?= $vt;?>-<?= $ch;?>#form" method="post" onsubmit="return valider()" >
                 	<input type="hidden" name="source" value="myastro-astrologie" />
                     <div class="article-content">
                     	<span><br></span>

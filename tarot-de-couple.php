@@ -132,7 +132,7 @@ session_unset();
                                                                                 <h5 class="title">Astrologie gratuite</h5>
                                                                                 <br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le couple a sa propre alchimie, son énergie composante des deux individus. Vous pouvez faire votre astrologie gratuite avec MyAstro pour réaliser la composante idoine des deux individualités qui s'aiment souffrent et partagent leur bonheur.</h6>
                                                                             </div>
-                                                                            <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                         </div>
                                                                     </article>
                                                                 </div>
@@ -144,7 +144,7 @@ session_unset();
                                                                                 <h5 class="title">Compatibilité amoureuse féminine</h5>
                                                                                 <br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">La femme fonctionne généralement sur son côté "yin" l'homme quant à lui utilise le côté "yang". Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine "yin-yang" MyAstro vous y aidera car ce schéma se vérifie même en cas d'homosexualité.</h6>
                                                                             </div>
-                                                                            <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                         </div>
                                                                     </article>
                                                                 </div>
@@ -175,7 +175,7 @@ session_unset();
             <div class="row-fluid">
                 <div itemscope >
                     <ul class="breadcrumb" itemprop="breadcrumb">
-                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                         <li>Tarot de couple</span></li>
                     </ul>
                 </div>

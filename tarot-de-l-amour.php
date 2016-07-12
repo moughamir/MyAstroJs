@@ -150,7 +150,7 @@
                                                                                 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Avec l'astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.</h6>                                                                       
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                         </div>
                                                                     </article>
                                                                 </div>
@@ -167,7 +167,7 @@
                                                                                 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Entre signes, la compatibilité amoureuse n'est pas toujours évidente. Quelles seront vos affinités avecl'homme de vos rêves et votre couple peut-il marcher. Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite?</h6>                                                                      
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                         </div>
 
                                                                     </article>
@@ -187,7 +187,7 @@
                                                                                 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope du jour gratuit vous permet de savoir quotidiennement sur le plan professionnel, sentimental et financier. C'est une information précieuse pour pouvoir aborder votre journée en toute confiance et sans aucun doute.</h6>                                                                       
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/horoscope-du-jour" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                         </div>
 
                                                                     </article>
@@ -205,7 +205,7 @@
                                                                                 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Quelles sont les tendances planétaires qui vous sont réservées pour cette année 2016? Avec l'horoscope 2016 gratuit, ne vous laissez plus surprendre. La fin de cette année n'aura plus aucun secret pour vous et vous pourrez la terminer tranquillement</h6>                                                                       
                                                                             </div>
 
-                                                                            <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                                                            <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                                                         </div>
 
                                                                     </article>
@@ -245,7 +245,7 @@
                 <div itemscope >
                     <div itemscope >
                         <ul class="breadcrumb" itemprop="breadcrumb">
-                            <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                            <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                             <li>Tarot de l'amour</span></li>
                         </ul>
                     </div>

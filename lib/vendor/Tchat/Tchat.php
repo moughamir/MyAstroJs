@@ -135,11 +135,13 @@ Class Tchat{
 		$message = str_replace('[DATE]',ucfirst($data['user']['birthdate']),$message);
 		$message = str_replace('[SPECIALITY]',$this->scenario[0]->speciality,$message);
 		$message = str_replace('[NAME2]',ucfirst($data['user']['firstnameJoint']),$message);
-		$message = str_replace('[TAROT1]',$tarots[substr($data['cartes'][0],0,-4)],$message);
-		$message = str_replace('[TAROT2]',$tarots[substr($data['cartes'][1],0,-4)],$message);
-		$message = str_replace('[TAROT3]',$tarots[substr($data['cartes'][2],0,-4)],$message);
-		$message = str_replace('[TAROT4]',$tarots[substr($data['cartes'][3],0,-4)],$message);
-		$message = str_replace('[TAROT5]',$tarots[substr($data['cartes'][4],0,-4)],$message);
+                if(count($data['cartes']) == 5){
+                    $message = str_replace('[TAROT1]',$tarots[substr($data['cartes'][0],0,-4)],$message);
+                    $message = str_replace('[TAROT2]',$tarots[substr($data['cartes'][1],0,-4)],$message);
+                    $message = str_replace('[TAROT3]',$tarots[substr($data['cartes'][2],0,-4)],$message);
+                    $message = str_replace('[TAROT4]',$tarots[substr($data['cartes'][3],0,-4)],$message);
+                    $message = str_replace('[TAROT5]',$tarots[substr($data['cartes'][4],0,-4)],$message);
+                }
 		$message = str_replace('[TEL]',$this->scenario[0]->tel,$message);
 		$message = str_replace('[CODE]','<b style="color:red;">'.$data['user']['code'].'</b><br /> Faites attention aux majuscules et minuscules !',$message);
 		$message = str_replace('[RAPPEL]',$form_rappel,$message);

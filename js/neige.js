@@ -103,7 +103,7 @@ initImages();
 // Format jj/mm uniquement pour les dates de début et fin d'activation du script
 var dateDebut = "01/12"; // Date de départ
 var dateFin = "31/01"; // Date d'arrêt (incluse)
-var urlImage="http://www.myastro.fr/images_landing/neige.gif"; //url de l'image
+var urlImage="/images_landing/neige.gif"; //url de l'image
 $(document).ready(function(){
 tombeImage(dateDebut,dateFin);
 });

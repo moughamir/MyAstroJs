@@ -260,7 +260,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                   </div>
                                 </article>
                               </div>
@@ -277,7 +277,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                                       <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Les hommes peuvent au gré de leurs besoins vérifier la compatibilité amoureuse. Cela donne un atout sérieux pour vérifier s'il est dans la bonne direction ou non. Ce travail est opéré gratuitement et offert par MyAstro. N'hésitez pas pour une interrogation sur votre compatibilité amoureuse, vous en tirerez des enseignements précieux.</h6>                                                                       
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -297,7 +297,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-la-semaine" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -315,7 +315,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -334,7 +334,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
                                   </div>
                                 </article>
                               </div>
@@ -351,7 +351,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -370,7 +370,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -388,7 +388,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
                                   </div>
 
                                 </article>
@@ -434,7 +434,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
       <div class="row-fluid">
         <div itemscope >
             <ul class="breadcrumb" itemprop="breadcrumb">
-              <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+              <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/astrologie-gratuite" >Astrologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
               <li>Votre personnalité astrologique</h4></li>
             </ul>
           </div>

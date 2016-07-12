@@ -1,10 +1,10 @@
 <?php
 session_start();
 /********************************VARIABLES FORMULAIRES************************************.****/
-$id_astro     = ( isset($_SESSION['user_id']) ) ? base_convert($_SESSION['user_id'], 10,32) : "";
+$id_astro     = isset($_SESSION['user_id']) ? base_convert($_SESSION['user_id'], 10,32) : "";
 $prenom       = $_SESSION['firstname'];
 $tel          = $_SESSION['phone'];
-$gclid        = $_SESSION['gclid'];
+$gclid        = isset($_SESSION['gclid']) ? $_SESSION['gclid'] : '';
 $source       = $_SESSION['source'];
 $email_user   = $_SESSION['email'];
 $affiliation  = $_SESSION['affiliation'];

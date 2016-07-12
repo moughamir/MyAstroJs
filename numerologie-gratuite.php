@@ -18,7 +18,7 @@
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Numérologie gratuite</span></li>
                                     </ul>
                                 </div>
@@ -66,27 +66,27 @@
                                   </ol>
                                   <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="http://www.myastro.fr/horoscope-2016">
+                                        <a href="http://<?= ROOT_URL ?>/horoscope-2016">
                                             <img src="images/bannieres/numerologie/numeroscope-2015.png" alt="numeroscope-2016" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes">
+                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes">
                                             <img src="images/bannieres/numerologie/compatibilite-femme.jpg" alt="compatibilite-femme" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes">
+                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes">
                                             <img src="images/bannieres/numerologie/compatibilite-homme.jpg" alt="compatibilite-homme">
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/personnalite-numerologique">
+                                        <a href="http://<?= ROOT_URL ?>/personnalite-numerologique">
                                             <img src="images/bannieres/numerologie/personalité-numerologique.jpg" alt="personalité-numerologique" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/etapes-de-la-vie">
+                                        <a href="http://<?= ROOT_URL ?>/etapes-de-la-vie">
                                             <img src="images/bannieres/numerologie/etape-de-vie.jpg" alt="etape-de-vie" />
                                         </a>
                                     </div>
@@ -140,7 +140,7 @@
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">L'astrologie gratuite pourrait grâçe a un moyen constant et sur, vous apportez des renseignements capable d'influer votre destinée.Vous pourrez s'avoir se que vous réservent les astres pour votre avenir.</h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -157,7 +157,7 @@
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">La compatibilité amoureuse féminine vous indiquera, grâce à une science qui dépend de l’astrologie, si vous êtes compatible avec celui que vous voulez ou que vous aimez. Les apparences sont parfois trompeuses, et les hommes aussi. Sachez s’il est fait pour vous et si votre histoire d’amour sera la plus belle de votre vie.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -178,7 +178,7 @@
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope mensuel gratuit vous permet de passer le mois sans stupéfaction et difficultées. Ne vous laissez pas guider par le destin et faites plutot appel à de vrais proffesionnels. </h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-du-mois" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-du-mois" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -196,7 +196,7 @@
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope 2014 gratuit vous assurera de bien finir l'année. Devancer les difficultées qui viendrons à vous, prenez les bonnes décisions et faites les choix les plus judicieux grâçe à l'aide formulée par votre horoscope 2014.</h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

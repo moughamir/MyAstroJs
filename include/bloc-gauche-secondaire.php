@@ -8,7 +8,7 @@
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-par-telephone">
+										<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
 											<?php 
 				                                getVoyantScryscraper();
 				                            ?>
@@ -53,7 +53,7 @@
 																				
 																			</div>
 
-																			<a href="http://www.myastro.fr/voyance-par-sms" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/voyance-par-sms" class="more" title=""></a>
 																		</div>
 																	</article>
 																</li>

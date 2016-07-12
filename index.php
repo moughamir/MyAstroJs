@@ -40,8 +40,8 @@ include('lib.php');
 	{ "@context": "http://schema.org",
 	"@type": "Organization",
 	"name": "myastro »,
-        "url": "http://www.myastro.fr/",
-        "logo": "http://www.myastro.fr/images/logo-V3.png",
+        "url": "http://<?= ROOT_URL ?>/",
+        "logo": "http://<?= ROOT_URL ?>/images/logo-V3.png",
         "sameAs": [ "https://twitter.com/MYASTRO1",
         "https://www.facebook.com/pages/Myastro/437290166297323",
         "https://plus.google.com/+MyastroFr"]
@@ -62,22 +62,22 @@ include('lib.php');
 
     				<div class="carousel-inner">
     					<div class="item active">
-    						<a href="http://www.myastro.fr/voyance-gratuite">
+    						<a href="http://<?= ROOT_URL ?>/voyance-gratuite">
     							<img src="images/bannieres/homepage/voyance.jpg" alt="Voyance gratuite" width="604" height="400"  />
     						</a>
     					</div>
     					<div class="item">
-    						<a href="http://www.myastro.fr/voyance-tarot">
+    						<a href="http://<?= ROOT_URL ?>/voyance-tarot">
     							<img src="images/bannieres/homepage/tarot-gratuit.jpg" alt="Voyance tarot"  width="604" height="400" />
     						</a>
     					</div>
     					<div class="item">
-    						<a href="http://www.myastro.fr/voyance-par-chat">
+    						<a href="http://<?= ROOT_URL ?>/voyance-par-chat">
     							<img src="images/bannieres/homepage/voyance-tchat.jpg" alt="Voyance tchat"  width="604" height="400">
     						</a>
     					</div>
     					<div class="item">
-    						<a href="http://www.myastro.fr/voyance-par-telephone#ouvert">
+    						<a href="http://<?= ROOT_URL ?>/voyance-par-telephone#ouvert">
     							<img src="images/bannieres/homepage/voyance-telephone.jpg" alt="Voyance par telephone"  width="604" height="400"/>
     						</a>
     					</div>
@@ -113,62 +113,62 @@ include('lib.php');
     								<!-- Indicators -->
     								<div class="carousel-inner">
     									<div class="item active">
-    										<a href="http://www.myastro.fr/voyance-tarot">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image tirage hebdomadaire" width="604" height="400" />
+    										<a href="http://<?= ROOT_URL ?>/voyance-tarot">
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image tirage hebdomadaire" width="604" height="400" />
     										</a>
     										<div class="carousel-caption">
-    											<p>Vous vous posez des questions sur votre avenir proche? Alors gr&acirc;ce &agrave; MYASTRO proc&eacute;dez sans attendre au <a href="http://www.myastro.fr/voyance-tarot">tirage de tarot gratuit.</a></p>
+    											<p>Vous vous posez des questions sur votre avenir proche? Alors gr&acirc;ce &agrave; MYASTRO proc&eacute;dez sans attendre au <a href="http://<?= ROOT_URL ?>/voyance-tarot">tirage de tarot gratuit.</a></p>
     										</div>
     									</div>
     									<div class="item">
-    										<a href="http://www.myastro.fr/tarot-de-l-amour">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour" width="604" height="400" />
+    										<a href="http://<?= ROOT_URL ?>/tarot-de-l-amour">
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour" width="604" height="400" />
     										</a>
     										<div class="carousel-caption">
-    											<p>Une question sur votre vie sentimentale? Des interrogations sur la fiabilit&eacute; de votre partenaire? Essayez le <a href="http://www.myastro.fr/tarot-de-l-amour">tarot de l'amour gratuit.</a></p>
+    											<p>Une question sur votre vie sentimentale? Des interrogations sur la fiabilit&eacute; de votre partenaire? Essayez le <a href="http://<?= ROOT_URL ?>/tarot-de-l-amour">tarot de l'amour gratuit.</a></p>
     										</div>
     									</div>
     									<div class="item">
-    										<a href="http://www.myastro.fr/tarot-quotidien">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_QUOTIDIEN.png" alt="Image tarot quotidien" width="604" height="400">
+    										<a href="http://<?= ROOT_URL ?>/tarot-quotidien">
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_QUOTIDIEN.png" alt="Image tarot quotidien" width="604" height="400">
     										</a>
     										<div class="carousel-caption">
-    											<p>Que ce soit en amour ou en argent notre Tarot vous oriente sur les choix que vous devrez prendre. Testez notre <a href="http://www.myastro.fr/tarot-quotidien">tarot du quotidien gratuit.</a></p>
+    											<p>Que ce soit en amour ou en argent notre Tarot vous oriente sur les choix que vous devrez prendre. Testez notre <a href="http://<?= ROOT_URL ?>/tarot-quotidien">tarot du quotidien gratuit.</a></p>
     										</div>
     									</div>
     									<div class="item">
-    										<a href="http://www.myastro.fr/tarot-mensuel">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image d'un tirage de tarot"  width="604" height="400"/>
+    										<a href="http://<?= ROOT_URL ?>/tarot-mensuel">
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image d'un tirage de tarot"  width="604" height="400"/>
     										</a>
     										<div class="carousel-caption">
-    											<p>Gr&acirc;ce &agrave; notre tarot votre vie sentimentale s'&ecute;claircit en quelques clics. Faites le test sans attendre et essayez le <a href="http://www.myastro.fr/tarot-mensuel">tarot mensuel gratuit.</a></p>
+    											<p>Gr&acirc;ce &agrave; notre tarot votre vie sentimentale s'&ecute;claircit en quelques clics. Faites le test sans attendre et essayez le <a href="http://<?= ROOT_URL ?>/tarot-mensuel">tarot mensuel gratuit.</a></p>
     										</div>
     									</div>
     									<div class="item">
-    										<a href="http://www.myastro.fr/tarot-de-couple">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_COUPLE.png" alt="Image tarot de couple"  width="604" height="400"/>
+    										<a href="http://<?= ROOT_URL ?>/tarot-de-couple">
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_COUPLE.png" alt="Image tarot de couple"  width="604" height="400"/>
     										</a>
     										<div class="carousel-caption">
-    											<p>Vous voulez savoir de quoi serait fait votre futur amoureux? Faites le test en compagnie de votre partenaire avec le <a href="http://www.myastro.fr/tarot-de-couple">Tarot de couple gratuit.</a></p>
+    											<p>Vous voulez savoir de quoi serait fait votre futur amoureux? Faites le test en compagnie de votre partenaire avec le <a href="http://<?= ROOT_URL ?>/tarot-de-couple">Tarot de couple gratuit.</a></p>
     										</div>
     									</div>
     								</div>
     								<div class="indicators-handler">
     									<ol class="carousel-indicators">
     										<li data-target="#carousel-tarot" data-slide-to="0" class="active">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image d'un tirage de tarot" width="604" height="400"/>
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image d'un tirage de tarot" width="604" height="400"/>
     										</li>
     										<li data-target="#carousel-tarot" data-slide-to="1">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour"  width="604" height="400"/>
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour"  width="604" height="400"/>
     										</li>
     										<li data-target="#carousel-tarot" data-slide-to="2">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_QUOTIDIEN.png" alt="Image tarot quotidien"  width="604" height="400"/>
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_QUOTIDIEN.png" alt="Image tarot quotidien"  width="604" height="400"/>
     										</li>
     										<li data-target="#carousel-tarot" data-slide-to="3">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image tarot mensuel"  width="604" height="400"/>
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image tarot mensuel"  width="604" height="400"/>
     										</li>
     										<li data-target="#carousel-tarot" data-slide-to="4">
-    											<img src="http://www.myastro.fr/images/bannieres/tarot/TAROT_COUPLE.png" alt="Image tarot de couple"  width="604" height="400"/>
+    											<img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_COUPLE.png" alt="Image tarot de couple"  width="604" height="400"/>
     										</li>
     									</ol>
     								</div>
@@ -206,7 +206,7 @@ include('lib.php');
     																	<br>
     																	<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Grâce à la voyance par tchat, communiquez directement en ligne avec un voyant expérimenté qui saura vous apporter les réponses que vous attendez. La voyance par tchat vous permet de faire une consultation complète avec le voyant de votre choix tout en restant tranquillement derrière votre ordinateur.</h6>                                                                      
     																</div>
-    																<a href="http://www.myastro.fr/voyance-par-chat" class="more" ></a>
+    																<a href="http://<?= ROOT_URL ?>/voyance-par-chat" class="more" ></a>
     															</div>
     														</article>
     													</div>
@@ -219,7 +219,7 @@ include('lib.php');
     																	<br>
     																	<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">La voyance par mail de MyAstro est un système qui vous permet d'obtenir des réponses pertinentes et efficaces de manière rapide et complète grâce à une étude personnalisée. Que se soit votre avenir sentimental ou professionnel qui vous préoccupe, nos voyants sont là pour répondre à vos questions.</h6>
     																</div>
-    																<a href="http://www.myastro.fr/voyance-gratuite-mail" class="more" ></a>
+    																<a href="http://<?= ROOT_URL ?>/voyance-gratuite-mail" class="more" ></a>
     															</div>
     														</article>
     													</div>
@@ -246,7 +246,7 @@ include('lib.php');
     																	<br>
     																	<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">L’astrologie est un art divinatoire basé sur la consultation des astres, qui jouent un rôle important sur les événements de votre vie. Nos médiums astrologues vous dévoilent votre astrologie gratuite, ce que les astres vous réservent sentimentalement, professionnellement, du côté de votre famille, financièrement...</h6>
     																</div>
-    																<a href="http://www.myastro.fr/astrologie-gratuite" class="more" ></a>
+    																<a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" ></a>
     															</div>
     														</article>
     													</div>
@@ -261,7 +261,7 @@ include('lib.php');
     																	<br>
     																	<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Grâce au tarot divinatoire, effectuez gratuitement tous les tirages que vous voulez et découvrez les interprétations des cartes que vous avez tiré ! Avec le tarot du couple et le tarot de l’amour, quotidien, hebdomadaire et mensuel, faites confiance aux cartes.</h6>                                                                      
     																</div>
-    																<a href="http://www.myastro.fr/tarot-gratuit" class="more" ></a>
+    																<a href="http://<?= ROOT_URL ?>/tarot-gratuit" class="more" ></a>
     															</div>
     														</article>
     													</div>
@@ -274,7 +274,7 @@ include('lib.php');
     																	<br>
     																	<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vos chiffres et lettres préférés ont un sens dans votre vie avec la numérologie. Votre numéroscope gratuit vous délivre des informations sur votre personnalité et tout ce qu’il va vous arriver dans un futur proche. Vous pouvez agir sur votre destin ! </h6>
     																</div>
-    																<a href="http://www.myastro.fr/numerologie-gratuite" class="more" ></a>
+    																<a href="http://<?= ROOT_URL ?>/numerologie-gratuite" class="more" ></a>
     															</div>
     														</article>
     													</div>
@@ -552,7 +552,7 @@ include('lib.php');
     						<h4>Voyance par téléphone</h4>
     					</div>
     					<div class="widget-content clearfix">
-    						<a href="http://www.myastro.fr/voyance-par-telephone">
+    						<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
     							<?php 
     							getVoyantScryscraper();
     							?>
@@ -565,7 +565,7 @@ include('lib.php');
     					<!-- /zone de texte -->
     					<div class="widget">
     						<div class="text-justify">                                 
-    							<p><span style="color:#000000;">La voyance a longtemps été perçue comme une pratique onéreuse, réservée à une certaine élite capable de s’offrir des consultations avec des voyants professionnels. Mais là n’est pas la tradition des Arts divinatoires qui ont, depuis la nuit des temps, toujours été à disposition de tous. Et c’est parce que la voyance doit redevenir une pratique accessible à tous que Myastro propose un service de <a href="http://www.myastro.fr/voyance-discount">voyance discount</a>, mettant en avant une voyance traditionnelle et professionnelle sans en faire subir les conséquences à vos porte-monnaie. Parce que discount ne signifie pas qualité au rabais, Myastro s’engage à fournir des prestations divinatoires professionnelles en mettant à votre disposition une équipe d’experts en divination diplômés et aguerris aux pratiques divinatoires modernes.<span></p>
+    							<p><span style="color:#000000;">La voyance a longtemps été perçue comme une pratique onéreuse, réservée à une certaine élite capable de s’offrir des consultations avec des voyants professionnels. Mais là n’est pas la tradition des Arts divinatoires qui ont, depuis la nuit des temps, toujours été à disposition de tous. Et c’est parce que la voyance doit redevenir une pratique accessible à tous que Myastro propose un service de <a href="http://<?= ROOT_URL ?>/voyance-discount">voyance discount</a>, mettant en avant une voyance traditionnelle et professionnelle sans en faire subir les conséquences à vos porte-monnaie. Parce que discount ne signifie pas qualité au rabais, Myastro s’engage à fournir des prestations divinatoires professionnelles en mettant à votre disposition une équipe d’experts en divination diplômés et aguerris aux pratiques divinatoires modernes.<span></p>
     						</div>
     					</div>
     				</aside>

@@ -29,7 +29,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 <div class="subbody">
     <div class="top-nav">
         <div class="nav-content">
-            <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+            <a href="charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
         </div>
     </div>
     <div class="main">
@@ -169,7 +169,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="affiliation" value="affil2" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/dri-5" />
+                                <input type="hidden" name="dri" value="dri-5" />
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>
                                     <input type="text" id="name" name="prenom" value="<?php echo $_GET['aff_firstname']; ?>" required>

@@ -17,17 +17,12 @@ $urls_conversion = array(
 );
 
 if ($source == 'reflexcache' && isset($id_transaction)){
-    if ($_SESSION['conversion'] == 2){
+    if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 2){
         if(isset($urls_conversion[$formulaire])){
             $url = $urls_conversion[$formulaire];
-            file_put_contents($log_file, date("[d/m/Y H:i:s]")." - SUCCES - Nouvel email : ".$email.", Formulaire : ".$formulaire.", Pixel de conversion : ".$url."  \r\n", FILE_APPEND);
             file_get_contents($url);
             unset($_SESSION['conversion']);
             unset($_SESSION['reflexcache_id']);
-        } else {
-            file_put_contents($log_file, date("[d/m/Y H:i:s]")." - ERREUR - L'url de conversion pour le formulaire ".$formulaire." est introuvable.\r\n", FILE_APPEND);
         }
-    } else {
-        file_put_contents($log_file, date("[d/m/Y H:i:s]")." - INFO - Le mail ".$email." existe déjà, le pixel de conversion n'a pas été chargé. Formulaire d'origine : ".$formulaire."\r\n", FILE_APPEND);
     }
 }

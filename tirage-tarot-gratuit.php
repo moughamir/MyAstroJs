@@ -44,7 +44,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 	    					<header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Tirage tarot gratuit</span></li>
                                     </ul>
                                 </div>
@@ -193,7 +193,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 																		<!--<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;"></h6>  -->                                                                     
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-de-marseille" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-de-marseille" class="more" title=""></a>
                                                                 </div>
                                                             </article>
 															
@@ -211,7 +211,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 																		<!--<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;"></h6>-->                                                                     
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-oui-ou-non" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-oui-ou-non" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -230,7 +230,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 																		<!--<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;"></h6>-->                                                                     
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-de-l-amour" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-de-l-amour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -247,7 +247,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 																		<!--<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;"></h6>-->                                                                     
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-de-couple" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-de-couple" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

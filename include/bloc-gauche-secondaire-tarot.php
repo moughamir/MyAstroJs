@@ -258,7 +258,7 @@
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-par-telephone">
+										<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
 											<?php 
 				                                getVoyantScryscraper();
 				                            ?>

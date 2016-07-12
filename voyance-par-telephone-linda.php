@@ -63,7 +63,7 @@ if ($msg!=""){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance par téléphone <? echo $prenom;?>: rapide et efficace - Myastro</title>
+    <title>Voyance par téléphone <?= $prenom;?>: rapide et efficace - Myastro</title>
 	<meta name="description" content="Vous avez besoin de pouvoir prévoir les événements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone." />
 
 	<link href="css/tel.css" type="text/css" rel="stylesheet">
@@ -82,14 +82,14 @@ if ($msg!=""){
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://www.myastro.fr/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li>Voyance par téléphone <? echo $prenom;?></h4></li>
+                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="http://<?= ROOT_URL ?>/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li>Voyance par téléphone <?= $prenom;?></h4></li>
                                     </ul>
                                 </div>
 								<div class="cat-widget-title">
 									
-										<h1 itemprop="headline">Voyance par téléphone <? echo $prenom;?></h1>
+										<h1 itemprop="headline">Voyance par téléphone <?= $prenom;?></h1>
 									
 								</div>
                                
@@ -197,7 +197,7 @@ if ($msg!=""){
                                                         
 
                                                         <div class="media-body span9" style="margin-left:15px;margin-top:0px; height: 150px;width:100%;">
-                                                            <div style="text-align:right;margin-right:20px;"> <h3 style="font-weight:bold;font-family:arial black, sans-serif;line-height:1;"><? echo $voyant;?></h3>
+                                                            <div style="text-align:right;margin-right:20px;"> <h3 style="font-weight:bold;font-family:arial black, sans-serif;line-height:1;"><?= $voyant;?></h3>
 
                                                             
                                                                 
@@ -372,21 +372,21 @@ background-color: #D5D3D0;
                                                 </div>
 	</td>
   </tr>
-  <tr><td class="btn-voir-forfait"><div class="bloc-vf"><br><a href="http://www.myastro.fr/forfait-saphir"><h4>VOIR LES FORFAITS</h4></a></div></td></tr>
+  <tr><td class="btn-voir-forfait"><div class="bloc-vf"><br><a href="http://<?= ROOT_URL ?>/forfait-saphir"><h4>VOIR LES FORFAITS</h4></a></div></td></tr>
  </table>       
 
                                 </aside>
                
 
   <div class="cadretelv">
-	<span class="drop-capital"><? echo $text_l;?></span>
-	<p><? echo $text;?></p>
+	<span class="drop-capital"><?= $text_l;?></span>
+	<p><?= $text;?></p>
 	
 </div>                                      
 
     <div class="cat-widget">
                                   <br>  <div class="cat-widget-title">
-                                        <h3>Les Commentaires sur <? echo $prenom;?></h3>
+                                        <h3>Les Commentaires sur <?= $prenom;?></h3>
                                     </div>
 
                                     <div class="cat-widget-content">
@@ -403,12 +403,12 @@ background-color: #D5D3D0;
                                                  
                                                         <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
-                                                                <h5 class="media-heading"><? echo $nom_com_1;?></h5>
+                                                                <h5 class="media-heading"><?= $nom_com_1;?></h5>
                                                             </a>
 
                                                             <div class="media">
                                                                 <div itemprop="commentText">
-                                                                    <p><? echo $commentaire_1;?></p>
+                                                                    <p><?= $commentaire_1;?></p>
                                                                 </div>
                                                                 
                                                             </div>
@@ -421,12 +421,12 @@ background-color: #D5D3D0;
 
                                                  <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
-                                                                <h5 class="media-heading"><? echo $nom_com_2;?></h5>
+                                                                <h5 class="media-heading"><?= $nom_com_2;?></h5>
                                                             </a>
 
                                                             <div class="media">
                                                                 <div itemprop="commentText">
-                                                                    <p><? echo $commentaire_2;?></p>
+                                                                    <p><?= $commentaire_2;?></p>
                                                                 </div>
                                                                 
                                                             </div>
@@ -437,12 +437,12 @@ background-color: #D5D3D0;
 
                                                 <div class="media-body span10">
                                                             <a itemprop="creator" href="#">
-                                                                <h5 class="media-heading"><? echo $nom_com_3;?></h5>
+                                                                <h5 class="media-heading"><?= $nom_com_3;?></h5>
                                                             </a>
 
                                                             <div class="media">
                                                                 <div itemprop="commentText">
-                                                                    <p><? echo $commentaire_3;?></p>
+                                                                    <p><?= $commentaire_3;?></p>
                                                                 </div>
                                                                 
                                                             </div>
@@ -524,7 +524,7 @@ background-color: #D5D3D0;
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-par-telephone">
+										<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
 											<img src="images_voyance/voy_tel_banner_voyants.gif">
 										</a>
 									</div>

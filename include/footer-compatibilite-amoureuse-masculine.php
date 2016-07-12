@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-belier" class="btn-theme">Compatibilité amoureuse masculine Bélier</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-taureau" class="btn-theme">Compatibilité amoureuse masculine Taureau</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-gemeaux" class="btn-theme">Compatibilité amoureuse masculine Gémeaux</a>
-      <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-cancer" class="btn-theme">Compatibilité amoureuse masculine Cancer</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-lion" class="btn-theme">Compatibilité amoureuse masculine Lion</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-vierge" class="btn-theme">Compatibilité amoureuse masculine Vierge</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-balance" class="btn-theme">Compatibilité amoureuse masculine Balance</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-scorpion" class="btn-theme">Compatibilité amoureuse masculine Scorpion</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-sagittaire" class="btn-theme">Compatibilité amoureuse masculine Sagittaire</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-capricorne" class="btn-theme">Compatibilité amoureuse masculine Capricorne</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-verseau" class="btn-theme">Compatibilité amoureuse masculine Verseau</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine-poissons" class="btn-theme">Compatibilité amoureuse masculine Poissons</a>
-	  <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine" class="btn-theme">Compatibilité amoureuse masculine</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-belier" class="btn-theme">Compatibilité amoureuse masculine Bélier</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-taureau" class="btn-theme">Compatibilité amoureuse masculine Taureau</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-gemeaux" class="btn-theme">Compatibilité amoureuse masculine Gémeaux</a>
+      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-cancer" class="btn-theme">Compatibilité amoureuse masculine Cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-lion" class="btn-theme">Compatibilité amoureuse masculine Lion</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-vierge" class="btn-theme">Compatibilité amoureuse masculine Vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-balance" class="btn-theme">Compatibilité amoureuse masculine Balance</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-scorpion" class="btn-theme">Compatibilité amoureuse masculine Scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-sagittaire" class="btn-theme">Compatibilité amoureuse masculine Sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-capricorne" class="btn-theme">Compatibilité amoureuse masculine Capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-verseau" class="btn-theme">Compatibilité amoureuse masculine Verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine-poissons" class="btn-theme">Compatibilité amoureuse masculine Poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine" class="btn-theme">Compatibilité amoureuse masculine</a>
     </td>
   </tr>
 </table>

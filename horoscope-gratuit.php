@@ -60,27 +60,27 @@
 				                  </ol>
 				                  <div class="carousel-inner">
 				                    <div class="item active">
-				                        <a href="http://www.myastro.fr/horoscope-2016">
+				                        <a href="http://<?= ROOT_URL ?>/horoscope-2016">
 				                            <img src="images/bannieres/horoscopes/horoscope-2015.png" alt="horoscope-2016" />
 				                        </a>
 				                    </div>
 				                    <div class="item">
-				                        <a href="http://www.myastro.fr/horoscope-du-jour">
+				                        <a href="http://<?= ROOT_URL ?>/horoscope-du-jour">
 				                            <img src="images/bannieres/horoscopes/horoscope-du-jour.jpg" alt="horoscope-du-jour" />
 				                        </a>
 				                    </div>
 				                    <div class="item">
-				                        <a href="http://www.myastro.fr/horoscope-de-la-semaine">
+				                        <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine">
 				                            <img src="images/bannieres/horoscopes/horoscope-de-la-semaine.jpg" alt="horoscope-de-la-semaine"> :
 				                        </a>
 				                    </div>
 				                    <div class="item">
-				                        <a href="http://www.myastro.fr/horoscope-du-mois">
+				                        <a href="http://<?= ROOT_URL ?>/horoscope-du-mois">
 				                            <img src="images/bannieres/horoscopes/horoscope-du-mois.jpg" alt="horoscope-du-mois" />
 				                        </a>
 				                    </div>
 				                    <div class="item">
-				                        <a href="http://www.myastro.fr/horoscope-de-l-amour">
+				                        <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour">
 				                            <img src="images/bannieres/horoscopes/horoscope-de-l-amour.jpg" alt="horoscope-de-l-amour" />
 				                        </a>
 				                    </div>
@@ -136,7 +136,7 @@
 																					 
 																					</div>
 
-																					<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+																					<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
 																				</div>
 																			</article>
 																		</div>
@@ -153,7 +153,7 @@
 																						
 																					</div>
 
-																					<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+																					<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
 																				</div>
 
 																			</article>
@@ -172,7 +172,7 @@
 				<h6 style="margin-top:20px;line-height:120%;text-align: justify;color:#ffffff;">Avec l’aide de nos experts, découvrez votre portrait astrologique gratuitement et connaissez-vous vous-même sur le bout des doigts. Cela vous permettra de prendre des décisions, autant au quotidien que sur le long terme, qui vous conviennent.</h6>                                                                      
 																					</div>
 
-																					<a href="http://www.myastro.fr/votre-personnalite-astrologique" class="more" title=""></a>
+																					<a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
 																				</div>
 
 																			</article>
@@ -192,7 +192,7 @@
 																						
 																					</div>
 
-																					<a href="http://www.myastro.fr/portrait-astrologique-feminin" class="more" title=""></a>
+																					<a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
 																				</div>
 
 																			</article>
@@ -212,7 +212,7 @@
 																						
 																					</div>
 
-																					<a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+																					<a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
 																				</div>
 																			</article>
 																			
@@ -230,7 +230,7 @@
 																						
 																					</div>
 
-																					<a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+																					<a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
 																				</div>
 
 																			</article>
@@ -289,7 +289,7 @@
 				<div itemscope >
                     <ul class="breadcrumb" itemprop="breadcrumb">
                         <li>
-                           <span class="h4"> <a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                           <span class="h4"> <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                         <li>Horoscope gratuit</li></span>
                     </ul>
                 </div>

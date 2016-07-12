@@ -8,13 +8,11 @@
  * Author     : Laurène Dourdin <2aurene@gmail.com>
  */
 
-session_start();
-
-$root = isset($root) && !empty($root) ? $root : '../';
-$jeu = isset($cards_dir) && !empty($cards_dir) ? $cards_dir : 'tarot/cartes/original/';
-
 // Chargement des librairies
+$root = isset($root) && !empty($root) ? $root : '../';
 include($root.'include/Lib_handler.php');
+
+$jeu = isset($cards_dir) && !empty($cards_dir) ? $cards_dir : 'tarot/cartes/original/';
 
 // Chargement des données
 $draw = $_SESSION['cards'];
@@ -39,7 +37,7 @@ $tracking = array(
     'theme'         => $_SESSION['support'],
     'page'          => $_SESSION['page'],
     'psychic'       => $_SESSION['voyant'],
-    'psychic_group' => $_SESSION['groupe_voyants']
+    'psychic_group' => isset($_SESSION['groupe_voyants']) ? $_SESSION['groupe_voyants'] : ''
 );
 
 /* DONNÉES TEST *

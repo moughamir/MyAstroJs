@@ -31,12 +31,12 @@
             <nav class="span6 ">
                <?php /* <h4 class="hidden">Liens Copyright</h4> */ ?>
                <ul class="copyright-links">
-                 <li><a href="http://www.myastro.fr/plan-du-site" rel="nofollow">Plan du site</a></li>
-                 <li><a href="http://www.myastro.fr/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
+                 <li><a href="http://<?= ROOT_URL ?>/plan-du-site" rel="nofollow">Plan du site</a></li>
+                 <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
 
-                 <li><a href="http://www.myastro.fr/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
+                 <li><a href="http://<?= ROOT_URL ?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
                  <li>
-                    <a href="http://www.myastro.fr/mentions-legales" rel="nofollow">Mentions légales</a>
+                    <a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a>
                 </li>
             </ul>
         </nav>

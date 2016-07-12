@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/horoscope-2016-belier" class="btn-theme">Horoscope 2016 belier</a>
-      <a href="http://www.myastro.fr/horoscope-2016-taureau" class="btn-theme">Horoscope 2016 taureau</a>
-      <a href="http://www.myastro.fr/horoscope-2016-gemeaux" class="btn-theme">Horoscope 2016 gemeaux</a>
-      <a href="http://www.myastro.fr/horoscope-2016-cancer" class="btn-theme">Horoscope 2016 cancer</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-lion" class="btn-theme">Horoscope 2016 lion</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-vierge" class="btn-theme">Horoscope 2016 vierge</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-balance" class="btn-theme">Horoscope 2016 balance</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-scorpion" class="btn-theme">Horoscope 2016 scorpion</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-sagittaire" class="btn-theme">Horoscope 2016 sagittaire</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-capricorne" class="btn-theme">Horoscope 2016 capricorne</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-verseau" class="btn-theme">Horoscope 2016 verseau</a>
-	  <a href="http://www.myastro.fr/horoscope-2016-poissons" class="btn-theme">Horoscope 2016 poissons</a>
-	  <a href="http://www.myastro.fr/horoscope-2016" class="btn-theme">Horoscope 2016</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-2016-belier" class="btn-theme">Horoscope 2016 belier</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-2016-taureau" class="btn-theme">Horoscope 2016 taureau</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-2016-gemeaux" class="btn-theme">Horoscope 2016 gemeaux</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-2016-cancer" class="btn-theme">Horoscope 2016 cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-lion" class="btn-theme">Horoscope 2016 lion</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-vierge" class="btn-theme">Horoscope 2016 vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-balance" class="btn-theme">Horoscope 2016 balance</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-scorpion" class="btn-theme">Horoscope 2016 scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-sagittaire" class="btn-theme">Horoscope 2016 sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-capricorne" class="btn-theme">Horoscope 2016 capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-verseau" class="btn-theme">Horoscope 2016 verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016-poissons" class="btn-theme">Horoscope 2016 poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="btn-theme">Horoscope 2016</a>
     </td>
   </tr>
 </table>

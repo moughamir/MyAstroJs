@@ -3,7 +3,7 @@
                                         <!-- ########## identification formulaire ########## -->
                                         <input type="hidden" name="method" value="telnum-save" />
                                         <input type="hidden" name="dri" value="tchat" />
-                                        <input type="hidden" name="dri2" value="http://www.myastro.fr/voyance-amour-16-dri" />
+                                        <input type="hidden" name="dri" value="voyance-amour-16-dri" />
                                         <!-- ############################################### -->
                                         <div class="FormField">
                                             <textarea name="question" id="message" rows="5" cols="40" placeholder="Écrivez ici votre question avec le plus de détails possible. Pour plus de confidentialité, ne citez aucun nom." class="FormField-Input"></textarea>
@@ -41,4 +41,4 @@
                                         <p class="FormContainer-Slogan">
                                             Un voyant vous appelera dès demain,<br />pour vous donner votre réponse en direct.
                                         </p>
-                                        <button class="FormContainer-Submit" type="submit" name="valider">Accédez au tchat gratuit</button>
+                                        <button class="FormContainer-Submit" type="submit" name="valider">Rappel gratuit</button>

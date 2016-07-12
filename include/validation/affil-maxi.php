@@ -2,6 +2,7 @@
 // FICHIER INCLUS DEPUIS inc/ajaxHandler.php
 
 $bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
+$bdd->show_errors();
 
 /* =========================================== * 
  *         INITIALISATION DES VARIABLES        *
@@ -117,7 +118,7 @@ if($tel_needed && !$tel){ // Téléphone requis mais non remplis
   $conjoint_date_naissance_j = (isset($param['jour_c']))      ? $param['jour_c']     : false;
   $conjoint_date_naissance_m = (isset($param['mois_c']))      ? $param['mois_c']     : false;
   $conjoint_date_naissance_a = (isset($param['annee_c']))     ? $param['annee_c']    : false;
-
+  $date2 = null;
 
   if(in_array($questionCode, $questionConjoint)){
     $needConjoint = true;
@@ -203,38 +204,41 @@ if(empty($msg)){ // Si pas d'erreur
     
     if (!$trouve){ // Nouveau prospect
         $conversion = 2;
+        $bdd_data = array(
+            'id'                      => $id_random,
+            'ip_adress'               => $ip,
+            'history'                 => date('Y-m-d H:i:s'),
+            'nom'                     => ( isset($nom) ) ? $nom : '',
+            'prenom'                  => $prenom,
+            'sexe'                    => $sexe,
+            'dateNaissance'           => $date1,
+            'signeAstrologique'       => $signe,
+            'conjoint'                => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
+            'email'                   => $email,
+            'ville'                   => ( isset($ville) ) ? $ville : '',
+            'questionDate'            => date('Y-m-d'),
+            'question_date'           => date('Y-m-d H:i:s'),
+            'questionSujet'           => $questionSubject,
+            'questionContent'         => $questionCode,
+            'horoscope'               => $horoscope,
+            'signe2'                  => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
+            'partenaires'             => $partenaires,
+            'voyant'                  => $voyant,
+            'voyant1'                 => ( isset($vt) ) ? $vt : '0',
+            'tel'                     => $tel,
+            'pays'                    => $pays,
+            'source'                  => $formurl,
+            'url'                     => explode("?", $_SERVER['HTTP_REFERER'])[0],
+            'gclid'                   => $gclid,
+            'tel_is_valid'            => 1,
+            'blacklisted'             => 0
+        );
+        if(isset($date2)){
+            $bdd_data['date_naissance_conjoint'] = $date2;
+        }
         $bdd->insert(
             $bdd->users,
-            array(
-                'id'                      => $id_random,
-                'ip_adress'               => $ip,
-                'history'                 => date('Y-m-d H:i:s'),
-                'nom'                     => ( isset($nom) ) ? $nom : '',
-                'prenom'                  => $prenom,
-                'sexe'                    => $sexe,
-                'dateNaissance'           => $date1,
-                'signeAstrologique'       => $signe,
-                'conjoint'                => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
-                'email'                   => $email,
-                'ville'                   => ( isset($ville) ) ? $ville : '',
-                'questionDate'            => date('Y-m-d'),
-                'question_date'           => date('Y-m-d H:i:s'),
-                'questionSujet'           => $questionSubject,
-                'questionContent'         => $questionCode,
-                'horoscope'               => $horoscope,
-                'signe2'                  => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
-                'partenaires'             => $partenaires,
-                'date_naissance_conjoint' => ( isset($date2) ) ? $date2 : '',
-                'voyant'                  => $voyant,
-                'voyant1'                 => ( isset($vt) ) ? $vt : '0',
-                'tel'                     => $tel,
-                'pays'                    => $pays,
-                'source'                  => $formurl,
-                'url'                     => explode("?", $_SERVER['HTTP_REFERER'])[0],
-                'gclid'                   => $gclid,
-                'tel_is_valid'            => 1,
-                'blacklisted'             => 0
-            )
+            $bdd_data
         );
 
         $idindex  = $bdd->insert_id;
@@ -246,8 +250,6 @@ if(empty($msg)){ // Si pas d'erreur
             array(
                 'id_user'   => $idindex,
                 'id_form'   => $id_form,
-                'pays'      => $pays,
-                'tel'       => $tel,
                 'date'      => date('Y-m-d'), 
                 'responses' => serialize($user_responses)
             )
@@ -261,27 +263,29 @@ if(empty($msg)){ // Si pas d'erreur
             $conversion = 2;
         }
         // -------------------------------
-        
+        $bdd_data = array(
+            'prenom'              => $prenom,
+            'signe2'              => (isset($signe_conjoint))? $signe_conjoint : '',
+            'signeAstrologique'   => $signe,
+            'conjoint'            => (isset($conjoint_prenom))? $conjoint_prenom : '',
+            'questionDate'        => date('Y-m-d'),
+            'questionDate_before' => $user->questionDate,
+            'question_date'       => date('Y-m-d H:i:s'),
+            'questionContent'     => $questionCode,
+            'dateNaissance'       => $date1,
+            'tel'                     => $tel,
+            'pays'                    => $pays,
+            'source'                  => $formurl,
+            'voyant'            => $voyant,
+            'url'               => explode("?", $_SERVER['HTTP_REFERER'])[0],
+            'gclid'             => $gclid
+        );
+        if(isset($date2)){
+            $bdd_data['date_naissance_conjoint'] = $date2;
+        }
         $bdd->update(
             $bdd->users,
-                array(
-                    'prenom'              => $prenom,
-                    'signe2'              => (isset($signe_conjoint))? $signe_conjoint : '',
-                    'signeAstrologique'   => $signe,
-                    'conjoint'            => (isset($conjoint_prenom))? $conjoint_prenom : '',
-                    'questionDate'        => date('Y-m-d'),
-                    'questionDate_before' => $user->questionDate,
-                    'question_date'       => date('Y-m-d H:i:s'),
-                    'questionContent'     => $questionCode,
-                    'dateNaissance'       => $date1,
-                    'date_naissance_conjoint' => ( isset($date2) ) ? $date2 : '',
-                    'tel'                     => $tel,
-                    'pays'                    => $pays,
-                    'source'                  => $formurl,
-                    'voyant'            => $voyant,
-                    'url'               => explode("?", $_SERVER['HTTP_REFERER'])[0],
-                    'gclid'             => $gclid
-                ),
+                $bdd_data,
                 array(
                   'internal_id'       => $idindex
                 )
@@ -350,7 +354,7 @@ if(empty($msg)){ // Si pas d'erreur
     $_SESSION['voyant']         = $voyant;
     $_SESSION['birthdate']      = $birthdate;
     $_SESSION['sexe']           = $sexe;
-    $_SESSION['cards']          = $param['cards'];
+    $_SESSION['cards']          = isset($param['cards']) ? $param['cards'] : [];
     $_SESSION['phone']          = $tel;
     $_SESSION['question']       = $questionCode;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
@@ -371,14 +375,14 @@ if(empty($msg)){ // Si pas d'erreur
     $redirect_dri5  = array("tarot-affil-2","tarot-affil-4","tarot-affil-6");
     
     if ($dri) {
-        $redirect_url = $dri;
+        $redirect_url = 'http://'.ROOT_URL.'/'.$dri;
     } else {
         if(in_array($formurl, $redirect_dri4)){
-            $redirect_url = 'http://www.myastro.fr/dri-4';
+            $redirect_url = 'http://'.ROOT_URL.'/dri-4';
         } elseif(in_array($formurl, $redirect_dri5)) {
-            $redirect_url = 'http://www.myastro.fr/dri-5';
+            $redirect_url = 'http://'.ROOT_URL.'/dri-5';
         } else {
-            $redirect_url = 'http://www.myastro.fr/merci-voyance';
+            $redirect_url = 'http://'.ROOT_URL.'/merci-voyance';
         }
     }
 

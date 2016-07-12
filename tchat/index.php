@@ -11,7 +11,7 @@
         'name'           => $_SESSION['firstname'],
         'email'          => $_SESSION['email'],
         'phone'          => $_SESSION['phone'],
-        'sexe'           => ($_SESSION['sexe'] == 'homme') ? 'M' : 'F',
+        'sexe'           => $_SESSION['sexe'] == 'homme' ? 'M' : 'F',
         'code'           => base_convert($_SESSION['user_id'], 10,32),
         'firstnameJoint' => $_SESSION['firstnameJoint'],
         'pays'           => $_SESSION['pays'],
@@ -107,16 +107,16 @@
             .output .name{ color:#<?= ($tchat->scenario[0]->seer_sexe == 'M') ? '2277f7': 'c9209f' ; ?>;}
         </style>
         
-        <?php include('header_inc_landing.php'); ?>
+        <?php include('../include/header_inc_landing.php'); ?>
     </head>
     <body class="voyance-telephone-1" style="max-width:100%;">
         <div class="top-nav">
             <div class="nav-content">
                 <div class="logo"></div>
                 <div class="links">
-                    <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
-                    <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
-                    <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
+                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
+                    <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                    <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </div>
             </div>
         </div>
@@ -200,10 +200,10 @@
                     </div>
                 </div>
                 <div class="advert">
-                    <img src="http://www.myastro.fr/images/preloader.gif" class="advert-offline" />
+                    <img src="http://<?= ROOT_URL ?>/images/preloader.gif" class="advert-offline" />
                     <div class="advert-online hidden">
                         <h2>Vous Tchattez avec <?= ucfirst( $tchat->scenario[0]->seer_name ) ?></h2>
-                        <img src="http://www.myastro.fr/images/tchat/new/<?= $tchat->getImageName() ?>.png" />
+                        <img src="http://<?= ROOT_URL ?>/images/tchat/new/<?= $tchat->getImageName() ?>.png" />
                     </div>
                 </div>
                 <div class="screen">

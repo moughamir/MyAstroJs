@@ -22,8 +22,8 @@
 										
 										<li>
 										
-                                           <span class="h4"> <a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li><a href="http://www.myastro.fr/horoscope-2016">Horoscope 2016</a></li></li><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope Taureau 2016</li></span>
+                                           <span class="h4"> <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li><a href="http://<?= ROOT_URL ?>/horoscope-2016">Horoscope 2016</a></li></li><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope Taureau 2016</li></span>
 										
 										
 										
@@ -114,7 +114,7 @@ include('lib.php');
 
                                                 <div class="accordion-group">
                                                     <div class="accordion-heading">
-                                                        <a class="accordion-toggle btn-theme" href="http://www.myastro.fr/horoscope-2016-taureau-bis?tab=collapse1#collapse1">AMOUR
+                                                        <a class="accordion-toggle btn-theme" href="/horoscope-2016-taureau-bis?tab=collapse1#collapse1">AMOUR
 
                                                         <i class="icon-angle-down pull-right"></i>
                                                         </a>
@@ -128,7 +128,7 @@ include('lib.php');
 
                                                 <div class="accordion-group">
                                                     <div class="accordion-heading">
-                                                        <a class="accordion-toggle btn-theme collapsed"  href="http://www.myastro.fr/horoscope-2016-taureau-bis?tab=collapse2#collapse1">TRAVAIL
+                                                        <a class="accordion-toggle btn-theme collapsed"  href="/horoscope-2016-taureau-bis?tab=collapse2#collapse1">TRAVAIL
 
                                                          <i class="icon-angle-down pull-right"></i>
                                                         </a>
@@ -142,7 +142,7 @@ include('lib.php');
 
                                                 <div class="accordion-group">
                                                     <div class="accordion-heading">
-                                                        <a class="accordion-toggle btn-theme collapsed" href="http://www.myastro.fr/horoscope-2016-taureau-bis?tab=collapse3#collapse1">SANTÉ
+                                                        <a class="accordion-toggle btn-theme collapsed" href="/horoscope-2016-taureau-bis?tab=collapse3#collapse1">SANTÉ
                                                          <i class="icon-angle-down pull-right"></i>
                                                         </a>
                                                     </div>
@@ -155,7 +155,7 @@ include('lib.php');
 
 												<div class="accordion-group">
                                                     <div class="accordion-heading">
-                                                        <a class="accordion-toggle btn-theme collapsed" href="http://www.myastro.fr/horoscope-2016-taureau-bis?tab=collapse4#collapse1">ARGENT
+                                                        <a class="accordion-toggle btn-theme collapsed" href="/horoscope-2016-taureau-bis?tab=collapse4#collapse1">ARGENT
                                                          <i class="icon-angle-down pull-right"></i>
                                                         </a>
                                                     </div>
@@ -168,7 +168,7 @@ include('lib.php');
 												
 												 <div class="accordion-group">
                                                     <div class="accordion-heading">
-                                                        <a class="accordion-toggle btn-theme collapsed"  href="http://www.myastro.fr/horoscope-2016-taureau-bis?tab=collapse5#collapse1">MES CONSEILS POUR L'ANNÉE
+                                                        <a class="accordion-toggle btn-theme collapsed"  href="/horoscope-2016-taureau-bis?tab=collapse5#collapse1">MES CONSEILS POUR L'ANNÉE
 
                                                          <i class="icon-angle-down pull-right"></i>
                                                         </a>
@@ -220,7 +220,7 @@ elseif (isset($_SERVER['REDIRECT_URL']))
     $url .= $_SERVER['REDIRECT_URL'];
 else
     trigger_error ('Could not get URL from $_SERVER vars');?>								   
-	<iframe src="//www.facebook.com/plugins/like.php?href=<? echo $url;?>&amp;mode=annuel&amp;signe=taureau&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowtransparency="true"></iframe>
+	<iframe src="//www.facebook.com/plugins/like.php?href=<?= $url;?>&amp;mode=annuel&amp;signe=taureau&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowtransparency="true"></iframe>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-lang="fr">Tweeter</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->

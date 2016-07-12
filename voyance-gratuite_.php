@@ -780,7 +780,7 @@ body {
 
 
 
-<input style="width:20%;" id="awf_field-52387484" class="text" name="indic" type="text" value="<? echo $indic;?>"  />
+<input style="width:20%;" id="awf_field-52387484" class="text" name="indic" type="text" value="<?= $indic;?>"  />
 <input  style="width:72%;" id="awf_field-52387484" class="text" name="tel" type="text" onBlur="javascript:if(this.value=='')this.value='Votre Téléphone'" onfocus="javascript: this.value=''" value="<?php if ($tel == '') echo "Votre Téléphone"; else echo $tel; ?>" size="50">
 
 
