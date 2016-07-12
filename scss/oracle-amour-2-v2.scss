@@ -158,6 +158,7 @@ body {
         z-index: 5;
         margin-right: -50px;
         margin-left: -20px;
+        
         @media screen and (max-width: 730px){
             margin-right: 20px;
         }
@@ -165,10 +166,12 @@ body {
         &.notFlipped {
             background: white;
             position: relative;
+            outline: 1px solid transparent;
         }
         
         &.Flipped {
             z-index: 10;
+            outline: 1px solid transparent;
         }
         
         &-Face {
@@ -182,6 +185,7 @@ body {
             -webkit-transition-duration: 0.5s;
             -webkit-transition-property: transform;
             -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: linear;
             -webkit-backface-visibility: hidden;
             transform-style: preserve-3d;
             transition-duration: 0.5s;
@@ -192,6 +196,7 @@ body {
             &.front {
                 z-index: 5;
                 border: 3px solid grey;
+                outline: 1px solid transparent;
             }
             
             &.back {
@@ -201,6 +206,7 @@ body {
                 border: 3px solid orange;
                 background-repeat: no-repeat;
                 background-size: cover;
+                outline: 1px solid transparent;
             }
         }
         
@@ -243,6 +249,7 @@ body {
         animation-duration: 1s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: linear;
     }
     @keyframes animCards{
         0% { 
@@ -378,6 +385,7 @@ body {
         border: 0px solid #fff;
         background-color: $color2;
         transition: background-color 0.25s ease-in-out;
+        -moz-transition: background-color 0.25s linear;
         position:relative;
         bottom:-5rem;
         
@@ -537,6 +545,7 @@ body {
     animation-name: anim-input;
     animation-duration: 0.25s;
     animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
     animation-iteration-count: 1;
 }
 @keyframes anim-input {
@@ -552,6 +561,7 @@ body {
     animation-name: anim-fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-delay: 1s;  
     animation-fill-mode: forwards;
@@ -580,6 +590,7 @@ body {
     animation-name: anim-fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     
