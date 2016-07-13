@@ -2188,6 +2188,15 @@ body {
   background: #3e96ba url("../images_landing/cycle-lunaire/bg.jpg") no-repeat center top fixed;
   background-size: cover; }
 
+/* ************** MACRO-TYPOS *************** */
+h2,
+button {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* ************** LAYOUT *************** */
 .PageWrapper {
   padding: 0; }
 
@@ -2411,53 +2420,6 @@ input[type="checkbox"], input[type="radio"] {
   font-weight: bold;
   border: 2px solid white;
   padding: 15px; }
-
-/* FENETRE MODALE POUR LA -TEL */
-#modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: 0px solid red; }
-  #modal p.alert {
-    display: table-cell;
-    vertical-align: middle;
-    height: 25rem;
-    width: 40rem;
-    left: 50%;
-    top: 50%;
-    margin: -12.5rem -20rem;
-    padding: 1rem;
-    position: absolute;
-    text-align: center;
-    background: #fff;
-    color: #85eeaa;
-    border: 0px solid red;
-    font-family: "Ubuntu Condensed", sans-serif;
-    /* TITRE DE LA MODALE*/
-    /* BOUTON DE FERMETURE DE LA MODALE*/ }
-    #modal p.alert b {
-      margin-bottom: 1rem;
-      display: inline-block;
-      font-size: 2rem; }
-    #modal p.alert br + i {
-      padding: 0.5rem 0.8rem;
-      background: #ccc;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      bottom: 1rem;
-      left: 22%; }
-      #modal p.alert br + i :after {
-        content: "fermer";
-        text-transform: uppercase;
-        text-align: center;
-        width: 60%;
-        padding: 1rem; }
 
 @media screen and (min-height: 1000px) {
   body {
