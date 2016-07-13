@@ -12,8 +12,9 @@ $prenom = $_SESSION['firstname'];
                                         <span class="ten-min-free"></span>
                                         
                                         <article id="form2-form" class="FormContainer DRI ">
+                                            <div class="FormContainer overlay" id="form-overlay"></div>
                                             <h1 class="DRI-Slogan"><span>Vos 10 premières minutes gratuites !</span></h1>
-                                            <div class="DRI-Form FormContainer-Fields  bloc-rappel-3">
+                                            <div class="DRI-Form FormContainer-Fields">
                                                 <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                                     <p class="DRI-Sent">
                                                         Merci, votre demande a bien été prise en compte.<br/>
