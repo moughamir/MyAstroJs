@@ -44,7 +44,7 @@
                 <div class="ContentBand-Column">
                     <div class="TextContent">
                         <header class="ContentBand-ColumnHeader">
-                            <h1 class="DescText-Title">Que vous réserve le cycle lunaire ?</h1>
+                            <h1 class="DescText-Title"><span>Que vous réserve le cycle lunaire ?</span></h1>
                         </header>
                         <div class="moon-gif"></div>
                     </div>

@@ -77,16 +77,21 @@ body {
 }
     
 .DescText-Title {
-    background-color: transparent;
+    background: transparent url($img_dir+"titre.svg") no-repeat center;
+    background-size: contain;
+    margin-bottom: -8rem;
+    
+    span{display:none}
+    
     //padding-left: 30%;
-    text-align: center;
+    /*text-align: center;
     font-family: $font1;
     font-weight: 500;
     font-size: 3.5rem;
     line-height: 4.8rem;
     //margin-bottom: 4rem;
     text-shadow: 0 0 4px $color1;
-    height: inherit;
+    height: inherit;*/
     
     &-Legend {
         padding-top: 0;
@@ -98,7 +103,7 @@ body {
 }
 
 .moon-gif{
-    background: transparent url($img_dir+"lune-anim.gif") no-repeat center;
+    background: transparent url($img_dir+"lune-anim.gif") no-repeat top center;
     background-size: 85%;
     //width: 52.1rem;
     height: 51.6rem;
@@ -429,9 +434,10 @@ input[type="checkbox"], input[type="radio"] {
         }
     }
     .DescText-Title {
-        line-height: 4.2rem;
+        display:none;
+        /*line-height: 4.2rem;
         margin-bottom: 1rem;
-        margin-top: 3rem;
+        margin-top: 3rem;*/
     }
     .DescText {
         margin-bottom: 2rem;
