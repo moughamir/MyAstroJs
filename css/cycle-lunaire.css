@@ -645,50 +645,25 @@ body > script {
 http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 [class*="flex-container"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-container-h {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flex-container-v {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flex-item-fluid {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .flex-item-first {
-  -webkit-box-ordinal-group: 0;
-  -webkit-order: -1;
-  -ms-flex-order: -1;
   order: -1; }
 
 .flex-item-medium {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0; }
 
 .flex-item-last {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1; }
 
 .flex-item-center {
@@ -699,17 +674,8 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* ---------------------------------- */
 /* grid container */
 [class*="grid-"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
@@ -718,9 +684,6 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* grid childs */
 [class*="grid-"] > * {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: calc(100% * 1 / 4 - 2rem - .01px);
   min-width: 0;
@@ -1024,7 +987,6 @@ input[type="reset"].unstyled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
-  -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
 ul.is-unstyled,
@@ -1485,10 +1447,6 @@ s,m,l,n = small, medium, large, none
     border: 0; }
 
   .flex-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column; }
 
   .w300p,
@@ -1677,16 +1635,10 @@ s,m,l,n = small, medium, large, none
   pre,
   samp {
     word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
     hyphens: auto; } }
 @media (max-width: 640px) {
   .no-wrapping {
     word-wrap: normal;
-    -webkit-hyphens: manual;
-    -moz-hyphens: manual;
-    -ms-hyphens: manual;
     hyphens: manual; } }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1974,7 +1926,6 @@ body {
     padding: 0.8rem 1.4rem;
     background-color: white;
     border: 1px solid;
-    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     opacity: 0;
     z-index: -1; }
@@ -2220,7 +2171,7 @@ body {
 .DescText-Title {
   background-color: transparent;
   text-align: center;
-  font-family: 'Dancing Script', 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 3.5rem;
   line-height: 4.8rem;
@@ -2247,7 +2198,7 @@ body {
   background: rgba(44, 41, 39, 0.6);
   box-shadow: 0 0 6px -1px black; }
   .FormContainer-Header {
-    font-family: 'Ubuntu Condensed';
+    font-family: "Ubuntu Condensed", sans-serif;
     color: white;
     padding-bottom: 3rem;
     background: url("../images_landing/cycle-lunaire/fleche.svg") no-repeat bottom center; }
@@ -2257,38 +2208,47 @@ body {
     border: 0px solid #2c2927;
     background-color: #f05882;
     color: white;
-    font-family: 'Ubuntu Condensed';
+    font-family: "Ubuntu Condensed", sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
-    -webkit-transition: background 0.25s ease-in;
     transition: background 0.25s ease-in; }
     .FormContainer-Submit:active, .FormContainer-Submit:focus, .FormContainer-Submit:hover {
       background-color: #e7154f; }
-  .FormContainer.DRI .DRI-Intro {
-    background-color: #3e96ba;
-    font-family: 'Ubuntu Condensed', sans-serif; }
-    .FormContainer.DRI .DRI-Intro-Title {
-      color: #2c2927;
-      text-transform: uppercase; }
-    .FormContainer.DRI .DRI-Intro-Text {
-      color: white; }
-  .FormContainer.DRI .DRI-Slogan {
-    background-color: #0ae9d1;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    color: #2c2927;
-    text-transform: uppercase; }
-  .FormContainer.DRI .DRI-Form {
-    padding: 2rem;
-    background-color: #3e96ba; }
-    .FormContainer.DRI .DRI-Form .FormField-Input {
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.4rem; }
-  .FormContainer.DRI .DRI-Sent {
-    font-family: 'Ubuntu Condensed', sans-serif; }
-    .FormContainer.DRI .DRI-Sent strong {
-      font-weight: normal;
-      color: #0ae9d1; }
+  .FormContainer.DRI .DRI {
+    box-shadow: 0 0 0px 0px black;
+    background: transparent; }
+    .FormContainer.DRI .DRI-Intro {
+      background-color: #3e96ba;
+      font-family: "Ubuntu Condensed", sans-serif; }
+      .FormContainer.DRI .DRI-Intro-Title {
+        color: #2c2927;
+        text-transform: uppercase; }
+      .FormContainer.DRI .DRI-Intro-Text {
+        color: white; }
+    .FormContainer.DRI .DRI-Slogan {
+      /*background-color: $color3;
+      font-family: $font2;
+      color: $color1;
+      text-transform: uppercase;*/
+      background: transparent url("../images_landing/cycle-lunaire/ten-min-free.png") center no-repeat;
+      width: 182px;
+      height: 111px;
+      display: inline-block;
+      margin: 15px auto; }
+      .FormContainer.DRI .DRI-Slogan span {
+        display: none; }
+    .FormContainer.DRI .DRI-Form {
+      padding: 2rem;
+      background-color: transparent; }
+      .FormContainer.DRI .DRI-Form .FormField-Input {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem; }
+    .FormContainer.DRI .DRI-Sent {
+      font-family: "Ubuntu Condensed", sans-serif; }
+      .FormContainer.DRI .DRI-Sent strong {
+        font-weight: normal;
+        color: #0ae9d1; }
 
 .FormField-Label {
   text-transform: uppercase; }
@@ -2303,7 +2263,6 @@ body {
 
 .FormField-Input {
   border: none;
-  -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in; }
   .FormField-Input:active, .FormField-Input:focus {
     box-shadow: 0 0 6px -1px #2c2927;
@@ -2378,18 +2337,65 @@ input[type="checkbox"], input[type="radio"] {
     border-color: #bce8f1; }
 
 /* ************** PAGE TEL *************** */
+.FormContainer.DRI {
+  background-color: transparent;
+  text-align: center;
+  box-shadow: inherit; }
+
 .FormContainer-Slogan-bloc {
   color: white;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
   border: 2px solid white;
   padding: 15px; }
 
-.ten-min-free {
-  background: transparent url("../images_landing/cycle-lunaire/ten-min-free.png") center no-repeat;
-  width: 182px;
-  height: 11px;
-  display: inline-block;
-  margin: 15px auto; }
+/* FENETRE MODALE POUR LA -TEL */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red; }
+  #modal p.alert {
+    display: table-cell;
+    vertical-align: middle;
+    height: 25rem;
+    width: 40rem;
+    left: 50%;
+    top: 50%;
+    margin: -12.5rem -20rem;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    color: #85eeaa;
+    border: 0px solid red;
+    font-family: "Ubuntu Condensed", sans-serif;
+    /* TITRE DE LA MODALE*/
+    /* BOUTON DE FERMETURE DE LA MODALE*/ }
+    #modal p.alert b {
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 2rem; }
+    #modal p.alert br + i {
+      padding: 0.5rem 0.8rem;
+      background: #ccc;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      left: 22%; }
+      #modal p.alert br + i :after {
+        content: "fermer";
+        text-transform: uppercase;
+        text-align: center;
+        width: 60%;
+        padding: 1rem; }
 
 @media screen and (min-height: 1000px) {
   body {
@@ -2400,18 +2406,8 @@ input[type="checkbox"], input[type="radio"] {
     background-size: auto 75%; } }
 @media screen and (max-width: 730px) {
   .SiteHeader .PageWrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center; }
   .SiteHeader .SiteLogo, .SiteHeader .PageLogo {
     height: 107px;

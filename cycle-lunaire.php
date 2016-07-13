@@ -49,17 +49,17 @@
                         <div class="moon-gif"></div>
                     </div>
                 </div>
-                <div class="ContentBand-Column Form">
+                <div id="form-container" class="ContentBand-Column Form ">
                     <header class="ContentBand-ColumnHeader"><p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p></header>
-                    <article class="FormContainer">
+                    <article class="FormContainer" >
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre étude personnalisée !</h2>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <form id="form-container">
+                            <form>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="cycle-lunaire" />
-                                <input type="hidden" name="method" value="test" />
+                                <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="cycle-lunaire-tel" />

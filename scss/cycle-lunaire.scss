@@ -20,6 +20,9 @@ $color3 : #0ae9d1; // turquoise pour "homme"
 $color4 : #3e96ba; // background
 $color5 : #304d59; // background reassurance
 
+$font1: "Open Sans", sans-serif; //texte courant
+$font2: 'Ubuntu Condensed', sans-serif; //titres
+
 $bg : $color4;
 $woman : $color2;
 $men : $color3;
@@ -35,7 +38,7 @@ html {
 
 body {
     padding: 2rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: $font1;
     font-weight: 400;
     color: white;
     background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
@@ -77,7 +80,7 @@ body {
     background-color: transparent;
     //padding-left: 30%;
     text-align: center;
-    font-family: 'Dancing Script', 'Open Sans', sans-serif;
+    font-family: $font1;
     font-weight: 500;
     font-size: 3.5rem;
     line-height: 4.8rem;
@@ -113,7 +116,7 @@ body {
     
     
     &-Header {
-        font-family: 'Ubuntu Condensed';
+        font-family: $font2;
         color: white;
         padding-bottom: 3rem; 
         background: url($img_dir+"fleche.svg") no-repeat bottom center;
@@ -127,7 +130,7 @@ body {
         background-color: $color2;
         //box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
         color: white;
-        font-family: 'Ubuntu Condensed';
+        font-family: $font2;
         font-size: 2.2rem;
         text-transform: uppercase;
         transition: background 0.25s ease-in;
@@ -141,9 +144,13 @@ body {
     }
     
     &.DRI .DRI {
+        
+        box-shadow: 0 0 0px 0px black;
+        background: transparent;
+        
         &-Intro {
             background-color: $color4;
-            font-family: 'Ubuntu Condensed', sans-serif;
+            font-family: $font2;
             
             &-Title {
                 color: $color1;
@@ -154,14 +161,22 @@ body {
             }
         }
         &-Slogan {
-            background-color: $color3;
-            font-family: 'Ubuntu Condensed', sans-serif;
+            /*background-color: $color3;
+            font-family: $font2;
             color: $color1;
-            text-transform: uppercase;
+            text-transform: uppercase;*/
+            background: transparent url($img_dir+"ten-min-free.png") center no-repeat;
+            width: 182px;
+            height: 111px;
+            display: inline-block;
+            margin: 15px auto;
+            
+            span{display:none}
+            
         }
         &-Form {
             padding: 2rem;
-            background-color: $bg;
+            background-color: transparent;
             
             .FormField-Input {
                 text-align: center;
@@ -170,7 +185,7 @@ body {
             }
         }
         &-Sent {
-            font-family: 'Ubuntu Condensed', sans-serif;
+            font-family: $font2;
             
             strong {
                 font-weight: normal;
@@ -293,19 +308,76 @@ input[type="checkbox"], input[type="radio"] {
 /* ************** PAGE TEL *************** */
 .FormContainer-Slogan{}
 .FormContainer-name{}
+.FormContainer.DRI {
+    background-color: transparent;
+    text-align: center;
+    box-shadow: inherit;
+}
 .FormContainer-Slogan-bloc{
     color:white;
     text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
     border:2px solid white;
     padding:15px;
     
 }
-.ten-min-free{
-    background: transparent url($img_dir+"ten-min-free.png") center no-repeat;
-    width: 182px;
-    height: 11px;
-    display: inline-block;
-    margin: 15px auto;
+
+/* FENETRE MODALE POUR LA -TEL */
+#modal{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+ 
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font2;
+        
+        /* TITRE DE LA MODALE*/
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+        }
+        
+        /* BOUTON DE FERMETURE DE LA MODALE*/
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+            
+            :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+            
+        }
+    }
 }
 
 @media screen and (min-height: 1000px){
