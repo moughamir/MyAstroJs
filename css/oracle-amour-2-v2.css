@@ -2144,7 +2144,8 @@ body {
     .FormContainer.DRI .DRI-Sent {
       padding: 2rem;
       font-family: inherit;
-      font-size: 2rem; }
+      font-size: 1.25rem;
+      color: white; }
 
 .fa-venus {
   color: #f05882; }
