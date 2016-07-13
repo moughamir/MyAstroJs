@@ -2214,6 +2214,12 @@ body {
 .ContentBand-ColumnHeader * {
   text-align: center !important; }
 
+.ContentBand-ColumnHeader p,
+.FormContainer-Slogan,
+.FormContainer-name,
+.FormContainer-name + p {
+  font-weight: bold; }
+
 .Form .ContentBand-ColumnHeader {
   margin-bottom: 1.5rem; }
 

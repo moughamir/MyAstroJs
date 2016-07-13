@@ -66,11 +66,16 @@ body {
     height: 110px;
     display: inline-block;
     width: 100%;
-    
 }
 .ContentBand-ColumnHeader *{
     //background: url($img_dir+"marie.png") bottom left no-repeat;
     text-align: center !important;
+}
+.ContentBand-ColumnHeader p,
+.FormContainer-Slogan,
+.FormContainer-name,
+.FormContainer-name + p {
+    font-weight: bold;    
 }
 .Form .ContentBand-ColumnHeader {
     margin-bottom:1.5rem;
