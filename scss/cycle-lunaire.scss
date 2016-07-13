@@ -65,8 +65,9 @@ body {
     width: 100%;
     
 }
-.TextContent .ContentBand-ColumnHeader {
+.ContentBand-ColumnHeader *{
     //background: url($img_dir+"marie.png") bottom left no-repeat;
+    text-align: center !important;
 }
 .Form .ContentBand-ColumnHeader {
     margin-bottom:1.5rem;
@@ -287,6 +288,24 @@ input[type="checkbox"], input[type="radio"] {
         background-color: #d9edf7;
         border-color: #bce8f1;
     }
+}
+
+/* ************** PAGE TEL *************** */
+.FormContainer-Slogan{}
+.FormContainer-name{}
+.FormContainer-Slogan-bloc{
+    color:white;
+    text-transform: uppercase;
+    border:2px solid white;
+    padding:15px;
+    
+}
+.ten-min-free{
+    background: transparent url($img_dir+"ten-min-free.png") center no-repeat;
+    width: 182px;
+    height: 11px;
+    display: inline-block;
+    margin: 15px auto;
 }
 
 @media screen and (min-height: 1000px){

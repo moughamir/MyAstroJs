@@ -1,13 +1,16 @@
 <?php session_start(); ?>
                                         <p class="FormContainer-Slogan">Recevez votre étude personnelle par téléphone</p>
+                                        <p class="FormContainer-name"><?= $prenom ?></p>
+                                        <p>les cartes de l’Amour et de l’Exaltation sont très positives et présagent d’une évolution dans votre vie sentimentale, favorable à l’amour et à l’épanouissement. Mais attention <?= $prenom ?> ! Votre comportement actuel empêche cette évolution positive : les autres cartes révèlent votre blocage affectif !  Une remise en question est nécessaire. Car, en continuant ainsi, vous risquez de rater toutes les opportunités s’offrant à vous. Mais tout n’est pas figé <?= $prenom ?>, il est encore temps d’agir…</p>
+                                        
+                                        <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
                                         <!-- ########## identification formulaire ########## -->
                                         <input type="hidden" name="method" value="telnum-save" />
-                                        <input type="hidden" name="dri" value="tchat" />
-                                        <input type="hidden" name="dri" value="nouvelle-lune-mai-16-dri" />
+                                        
                                         <!-- ############################################### -->
-                                        <div class="FormField">
-                                            <textarea name="question" id="message" rows="5" cols="40" placeholder="Écrivez ici votre question avec le plus de détails possible. Pour plus de confidentialité, ne citez aucun nom." class="FormField-Input"></textarea>
-                                        </div>
+                                        
+                                        <span class="ten-min-free"></span>
+                                        
                                         <div class="FormField">
                                             <label for="tel" class="FormField-Label">Téléphone</label>
                                             <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
@@ -41,4 +44,4 @@
                                         <p class="FormContainer-Slogan">
                                             Un voyant vous appelera dès demain,<br />pour vous donner votre réponse en direct.
                                         </p>
-                                        <button class="FormContainer-Submit" type="submit" name="valider">Accédez au tchat gratuit</button>
+                                        <button class="FormContainer-Submit" type="submit" name="valider">Me faire rappeler gratuitement</button>
