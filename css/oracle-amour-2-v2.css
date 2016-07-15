@@ -2345,27 +2345,27 @@ body {
     font-family: "Parisienne", cursive; }
 
 /* ANIMATION DRI */
-.TextContent,
-.DRI {
-  /*opacity:0;
+.TextContent {
+  opacity: 0;
+  -webkit-animation-name: anim-fadeIn;
   animation-name: anim-fadeIn;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
   -moz-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  
-  @keyframes anim-fadeIn {
-      0%{opacity:0.25}
-      100% {opacity:1}
-  }*/ }
-
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+@keyframes anim-fadeIn {
+  0% {
+    opacity: 0.25; }
+  100% {
+    opacity: 1; } }
 .TextContent {
   -webkit-animation-delay: 0s;
   animation-delay: 0s; }
-
-.DRI {
-  /*animation-delay: 2s;*/ }
 
 /* FENETRE MODALE POUR LA DRI */
 /*.overlay {

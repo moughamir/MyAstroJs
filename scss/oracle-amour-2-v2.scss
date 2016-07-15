@@ -676,9 +676,8 @@ body {
 }
 
 /* ANIMATION DRI */
-.TextContent,
-.DRI{
-    /*opacity:0;
+.TextContent{
+    opacity:0;
     animation-name: anim-fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-in;
@@ -689,12 +688,10 @@ body {
     @keyframes anim-fadeIn {
         0%{opacity:0.25}
         100% {opacity:1}
-    }*/
+    }
 }
 
 .TextContent{animation-delay: 0s; }
-.DRI{/*animation-delay: 2s;*/ }
-
 
 /* FENETRE MODALE POUR LA DRI */
 /*.overlay {
