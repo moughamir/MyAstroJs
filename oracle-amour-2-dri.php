@@ -46,7 +46,7 @@ include('include/process-dri-postmailing.php');
             <div class="TextContent">
                 <p class="DescText-Title-Legend">Lucas<br/>Expert voyant-tarologue</p>
                 <div class="DescText-Content">
-                    <p class="result-Tarot-text"><span><?= $prenom ?></span> : les cartes de l’Oracle de l’amour sont d’une profondeur et d’une puissance telles, que seule une étude et une interprétation détaillées permettent d’en capter les messages. </p>
+                    <p class="result-Tarot-text"><span><?= ucfirst($prenom) ?></span> : les cartes de l’Oracle de l’amour sont d’une profondeur et d’une puissance telles, que seule une étude et une interprétation détaillées permettent d’en capter les messages. </p>
                     <p>Ces messages qui s’offrent à nous comme une aide précieuse, pour construire la vie sentimentale à laquelle vous pensez actuellement.</p>
                     <p>Laissez-moi vous traduire les messages que les cartes de l’Oracle ont à vous transmettre.</p>
                 </div>
@@ -63,7 +63,7 @@ include('include/process-dri-postmailing.php');
                     <?php } else { ?>
                     <form method="post">
                         <div class="FormField">
-                            <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
+                            <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" value="<?= $tel ?>" class="FormField-Input" required />
                         </div>
                         <div class="FormField">
                             <select name="pays" id="pays" class="FormField-Input" required>

@@ -57,8 +57,8 @@ if(!$codeastro && !$email_base){
 
 /* ######################## PRÉPARATION DONNÉES USER ######################## */
 $idastro = base_convert($codeastro, 32, 10);
-$prenom = isset($prenom) ? $prenom : $_SESSION['firstname'];
-$tel = isset($tel) ? $tel : $_SESSION['phone'];
+$prenom = isset($prenom) ? $prenom : isset($_SESSION['firstname']) ? $_SESSION['firstname'] : '';
+$tel = isset($tel) ? $tel : isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
 $idastro_column = 'internal_id';
 $source = $gclid = $url = "";
 $email_user  = $email_base;
