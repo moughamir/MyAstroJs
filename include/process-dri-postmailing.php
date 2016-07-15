@@ -124,7 +124,6 @@ if($source == "AFFIL SWARMIZ"){
 /* ############################# ENVOI DU MAIL ############################## */
 
 if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION['demanderappel']) && empty($err)){
-    echo 'envoi';
     $destinataire = 'standard.kgcom@gmail.com';
     $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
     $email        = 'contact@myastro.fr';
