@@ -17,7 +17,7 @@ include('include/process-dri-postmailing.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>Tarot Direct - Interprétation en live !</title>
+        <title>My Astro - Oracle Amour 2</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
