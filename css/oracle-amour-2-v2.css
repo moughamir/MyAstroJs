@@ -1891,7 +1891,7 @@ body {
     padding-bottom: 0.15rem;
     background: url("../images_landing/oracle-amour-2/triangle-noir.svg") no-repeat bottom center; }
   .WidgetTarot-Draw, .WidgetTarot-Result {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
   .WidgetTarot-Card {
     display: inline-block;
     position: relative;
@@ -2303,6 +2303,9 @@ body {
 #form2-result-Tarot,
 #form2-form {
   display: none; }
+
+#form2-result-Tarot {
+  margin-bottom: 3rem; }
 
 .anim-fadeIn {
   -webkit-animation-name: anim-fadeIn;

@@ -142,7 +142,7 @@ body {
     }
     
     &-Draw, &-Result {
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
     }
     
     
@@ -633,6 +633,9 @@ body {
 #form2-result-Tarot,
 #form2-form{display:none}
 
+#form2-result-Tarot{
+    margin-bottom: 3rem;
+}
 .anim-fadeIn{
     animation-name: anim-fadeIn;
     animation-duration: 1s;
