@@ -2062,16 +2062,6 @@ body {
   margin: auto;
   text-align: left;
   background-color: rgba(40, 40, 40, 0.6); }
-  .FormContainer.overlay {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    border: none;
-    height: 100%;
-    z-index: 2;
-    color: white; }
   .FormContainer-Header {
     margin: 0;
     margin-bottom: 1.5rem;
@@ -2112,7 +2102,19 @@ body {
       background-color: #ec295f; }
   .FormContainer.DRI {
     background-color: transparent;
-    text-align: center; }
+    text-align: center;
+    /* MODALE FINALE */
+    /*&.overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        color:white;
+    }*/ }
     .FormContainer.DRI .DRI-Intro {
       padding: 2rem;
       background-color: lightgrey; }
@@ -2214,6 +2216,63 @@ body {
     opacity: 1;
     z-index: 1; }
 
+.overlay {
+    /*display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    height: 100%;
+    z-index: 2;
+
+    color:white;*/
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  max-width: inherit;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red;
+  color: black; }
+  .overlay p.alert {
+    display: table-cell;
+    vertical-align: middle;
+    height: 25rem;
+    width: 40rem;
+    left: 50%;
+    top: 50%;
+    margin: -12.5rem -20rem;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    color: #85eeaa;
+    border: 0px solid red;
+    font-family: "Ubuntu Condensed", sans-serif; }
+    .overlay p.alert b {
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 2rem; }
+    .overlay p.alert br + i {
+      padding: 0.5rem 0.8rem;
+      background: #ccc;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      left: 22%; }
+      .overlay p.alert br + i :after {
+        content: "fermer";
+        text-transform: uppercase;
+        text-align: center;
+        width: 60%;
+        padding: 1rem; }
+
 .anim-input {
   -webkit-animation-name: anim-input;
   animation-name: anim-input;
@@ -2308,52 +2367,62 @@ body {
   animation-delay: 2s; }
 
 /* FENETRE MODALE POUR LA DRI */
-#modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: 0px solid red; }
-  #modal p.alert {
-    display: table-cell;
-    vertical-align: middle;
-    height: 25rem;
-    width: 40rem;
-    left: 50%;
-    top: 50%;
-    margin: -12.5rem -20rem;
-    padding: 1rem;
-    position: absolute;
-    text-align: center;
-    background: #fff;
-    color: #85eeaa;
-    border: 0px solid red;
-    font-family: "Ubuntu Condensed", sans-serif;
-    /* TITRE DE LA MODALE*/
-    /* BOUTON DE FERMETURE DE LA MODALE*/ }
-    #modal p.alert b {
-      margin-bottom: 1rem;
-      display: inline-block;
-      font-size: 2rem; }
-    #modal p.alert br + i {
-      padding: 0.5rem 0.8rem;
-      background: #ccc;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      bottom: 1rem;
-      left: 22%; }
-      #modal p.alert br + i :after {
-        content: "fermer";
-        text-transform: uppercase;
-        text-align: center;
-        width: 60%;
-        padding: 1rem; }
+/*.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
 
+    
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font3;
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+            :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
+}*/
 /* -------------- FOOTER ------------- */
 .SiteFooter {
   margin-top: 8rem; }

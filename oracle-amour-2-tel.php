@@ -5,10 +5,11 @@ $prenom = $_SESSION['firstname'];
 ?>
 
     <p id="form2-result-Tarot"><span><?= $prenom ?></span> : les cartes de l’Amour et de l’Exaltation sont très positives et présagent d’une évolution dans votre vie sentimentale, favorable à l’amour et à l’épanouissement. Mais attention <?= $prenom ?> ! Votre comportement actuel empêche cette évolution positive : les autres cartes révèlent votre blocage affectif !  Une remise en question est nécessaire. Car, en continuant ainsi, vous risquez de rater toutes les opportunités s’offrant à vous. Mais tout n’est pas figé <?= $prenom ?>, il est encore temps d’agir…</p>
+    
+    <div class="overlay" id="form-overlay"></div>
 
-    <article id="form2-form" class="FormContainer DRI ">
+    <article id="form2-form" class="FormContainer DRI">
         <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
-        <div class="FormContainer overlay" id="form-overlay"></div>
         <div class="DRI-Form FormContainer-Fields  bloc-rappel-3">
             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                 <p class="DRI-Sent">

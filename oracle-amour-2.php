@@ -23,7 +23,7 @@ $button ="Je veux savoir";
         
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,6 +75,8 @@ $button ="Je veux savoir";
         </section>
             
         <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
+        <div class="overlay" id="form-overlay"></div>
+
         <section class="ContentBand Form Principal PageWrapper600 step2" id="form-container" style="display:none">
             <article class="FormContainer">
                 <div class="FormContainer overlay" id="form-overlay"></div>

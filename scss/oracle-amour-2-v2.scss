@@ -334,18 +334,7 @@ body {
     text-align: left;
     background-color: rgba(40, 40, 40, 0.6 );
     
-    &.overlay {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.85);
-        border: none;
-        height: 100%;
-        z-index: 2;
-        
-        color:white;
-    }
+    
     
     &-Header {
         margin: 0;
@@ -443,6 +432,21 @@ body {
             }
             
         }
+
+        
+        /* MODALE FINALE */
+        /*&.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            color:white;
+        }*/
+        
     }
 }
 
@@ -541,6 +545,78 @@ body {
     }
 }
 
+.overlay {
+    /*display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    height: 100%;
+    z-index: 2;
+
+    color:white;*/
+
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100vw;
+    height:100vh;
+    max-width: inherit;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+    color:black;
+
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font3;
+        
+         
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+               :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
+}
+
 .anim-input{
     animation-name: anim-input;
     animation-duration: 0.25s;
@@ -603,9 +679,10 @@ body {
 .TextContent{animation-delay: 0s; }
 .DRI{animation-delay: 2s; }
 
+
 /* FENETRE MODALE POUR LA DRI */
-#modal{
-    position: fixed;
+/*.overlay {
+    position:absolute;
     top:0;
     left:0;
     z-index:100;
@@ -613,7 +690,8 @@ body {
     height:100%;
     background-color: rgba(0, 0, 0, 0.75);
     border:0px solid red;
- 
+
+    
     p.alert {
         display: table-cell;
         vertical-align: middle;
@@ -629,15 +707,15 @@ body {
         color:#85eeaa;
         border:0px solid red;
         font-family:$font3;
-        
-        /* TITRE DE LA MODALE*/
+
+        // TITRE DE LA MODALE
         b{
             margin-bottom: 1rem;
             display: inline-block;
             font-size:2rem;
         }
-        
-        /* BOUTON DE FERMETURE DE LA MODALE*/
+
+        // BOUTON DE FERMETURE DE LA MODALE
         br + i{
             padding: 0.5rem 0.8rem;
             background: #ccc;
@@ -647,7 +725,7 @@ body {
             position: absolute;
             bottom: 1rem;
             left: 22%;
-            
+
             :after{
                 content:"fermer";
                 text-transform:uppercase;
@@ -655,10 +733,11 @@ body {
                 width: 60%;
                 padding: 1rem;
             }
-            
+
         }
     }
-}
+}*/
+
 
 /* -------------- FOOTER ------------- */
 
