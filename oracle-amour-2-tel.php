@@ -55,7 +55,7 @@
             
         <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
         <section class="ContentBand Form Principal PageWrapper600">
-            <p><span><?= ucfirst($prenom) ?></span>, les cartes de l’Amour et de l’Exaltation sont très positives et présagent d’une évolution dans votre vie sentimentale, favorable à l’amour et à l’épanouissement. Mais attention <?= $prenom ?> ! Votre comportement actuel empêche cette évolution positive : les autres cartes révèlent votre blocage affectif ! Une remise en question est nécessaire. Car, en continuant ainsi, vous risquez de rater toutes les opportunités s’offrant à vous. Mais tout n’est pas figé <?= $prenom ?>, il est encore temps d’agir…</p>
+            <p class="p-result"><span><?= ucfirst($prenom) ?></span>, les cartes de l’Amour et de l’Exaltation sont très positives et présagent d’une évolution dans votre vie sentimentale, favorable à l’amour et à l’épanouissement. Mais attention <?= $prenom ?> ! Votre comportement actuel empêche cette évolution positive : les autres cartes révèlent votre blocage affectif ! Une remise en question est nécessaire. Car, en continuant ainsi, vous risquez de rater toutes les opportunités s’offrant à vous. Mais tout n’est pas figé <?= $prenom ?>, il est encore temps d’agir…</p>
             <article class="FormContainer DRI">
                 <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
                 <div class="DRI-Form FormContainer-Fields  bloc-rappel-3">

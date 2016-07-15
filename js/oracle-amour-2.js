@@ -114,7 +114,7 @@ $(document).ready(function(){
         $('#form2-form').addClass( "anim-fadeIn").delay(1000);*/
         
         $('#form2-result-Tarot').fadeIn( 1000, function() {
-            $('#form2-form').fadeIn(1000);
+            //$('#form2-form').fadeIn(1000);
         });
         
     });
