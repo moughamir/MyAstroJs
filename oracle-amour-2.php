@@ -17,7 +17,7 @@ $button ="Je veux savoir";
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>My Astro - Oracle Amour 2</title>
+        <title>My Astro - Que va vous révéler l’Oracle de l’amour ?</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -59,14 +59,14 @@ $button ="Je veux savoir";
         <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
         <section class="WidgetTarot" id="cards-container">
             <header id="titreTarot" class="WidgetTarotHeader titrage"><h2>Tirez les cartes</h2></header>
-                    <div id="baraja-el" class="WidgetTarot-Draw oracleTarot baraja-container step1">
-                        <?php for($i=1;$i<=22;$i++){ ?>
-                        <div class="WidgetTarot-Card notFlipped baraja-card" data-card="<?= $i ?>">
-                            <div class="WidgetTarot-Card-Face front "></div>
-                            <div class="WidgetTarot-Card-Face back"></div>
-                        </div>
-                        <?php } ?>
+                <div id="baraja-el" class="WidgetTarot-Draw oracleTarot baraja-container step1">
+                    <?php for($i=1;$i<=22;$i++){ ?>
+                    <div class="WidgetTarot-Card notFlipped baraja-card" data-card="<?= $i ?>">
+                        <div class="WidgetTarot-Card-Face front "></div>
+                        <div class="WidgetTarot-Card-Face back"></div>
                     </div>
+                    <?php } ?>
+                </div>
             <div class="WidgetTarot-Result">
                 <?php for($i=1;$i<=5;$i++){ ?>
                 <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
@@ -90,11 +90,9 @@ $button ="Je veux savoir";
                         <input type="hidden" name="support" value="tarot" />
                         <input type="hidden" name="affiliation" value="affilbase" />
                         <input type="hidden" name="dri" value="oracle-amour-2-tel" />
-                        <input type="hidden" name="redirect_method" value="reload_form" />
                         <!-- ########## autres champs pré-remplis ######### -->
                         <input type="hidden" name="cguv" value="1" />
                         <input type="hidden" name="partenaires" value="1" />
-
                         <!-- ############################################### -->
 
                         <div class="FormField radio">
@@ -242,6 +240,7 @@ $button ="Je veux savoir";
         <script src="js/oracle-amour-2.js"></script>     
         <script>/* Configuration du tirage de tarot */
             cardsPath = '<?= $cards_dir; ?>';
+            alwaysDraw = [4, 5, 13, 14, 19];
         </script>
         <script src="js/formValidator.js"></script>
         

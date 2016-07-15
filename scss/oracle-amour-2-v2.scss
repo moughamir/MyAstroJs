@@ -6,19 +6,28 @@
     -----------------------------------------
 
     Created on : 06 juillet 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-    repris par : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
+    Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 @import "knacss444/knacss";
 
 /* --------------- VARIABLES  --------------- */
 $nomCampagne : "oracle-amour-2/";
-$img-dir : "../images_landing/" + $nomCampagne;
+$img_dir : "../images_landing/" + $nomCampagne;
+$bg_img : $img_dir + "bg.jpg";
+$logo_img : $img_dir + "logo-MYASTRO.svg";
+$titre_img : $img_dir + "titre-principal.png";
+$voyant_img : $img_dir + "voyant.png";
+$triangle_img : $img_dir + "triangle-noir.svg";
+$cardback_img : $img_dir + "cardback.png";
+$icostar_img : $img_dir + "ico-star.png";
+$icolock_img : $img_dir + "ico-lock.png";
+$icogift_img : $img_dir + "ico-gift.png";
+$icotrophy_img : $img_dir + "ico-trophy.png";
 $color1 : #dfd4c9;// beige
 $color2 : #f05882;// rose
 $color3 : #2c2927;// gris
 
-// pour le hjeu de tarot
+// pour le jeu de tarot
 $card-place:$color3;
 
 /* ------------------ FONTS ----------------- */
@@ -45,7 +54,7 @@ body {
     font-size: 1.3rem;
     //font-family:$font4;
     color:#000;
-    background: $color1 url($img-dir+"bg.jpg") no-repeat center top fixed;
+    background: $color1 url($bg_img) no-repeat center top fixed;
     background-size: cover;
     padding:1rem;
 }
@@ -74,7 +83,7 @@ body {
 }
 
 .SiteLogo {
-    background: transparent url($img-dir+"logo-MYASTRO.svg") center no-repeat;
+    background: transparent url($logo_img) center no-repeat;
     background-size: contain;
     height: 11rem;
     width: 11rem;
@@ -85,7 +94,7 @@ body {
     display:inline-block;
     //width:40rem;
     min-height:18.5rem;
-    background: url($img-dir+"titre-principal.png") center center no-repeat;
+    background: url($titre_img) center center no-repeat;
     backgound-size:contain;
     span{
         display:none;
@@ -109,7 +118,7 @@ body {
     margin-top: 0;
     background-color: silver;
     &-Legend{
-        background: url($img-dir+"voyant.png") right top no-repeat;
+        background: url($voyant_img) right top no-repeat;
         backgound-size:contain;    
         padding: 5rem 15rem;
         text-align: right;
@@ -138,7 +147,7 @@ body {
     .WidgetTarotHeader{
         margin-bottom: 2rem;
         padding-bottom: 0.15rem;
-        background: url($img-dir+"triangle-noir.svg") no-repeat bottom center;
+        background: url($triangle_img) no-repeat bottom center;
     }
     
     &-Draw, &-Result {
@@ -265,14 +274,17 @@ body {
     
     &-Face.front {
         border: none;
-        background: transparent url($img_dir+"cardback.png") center no-repeat;
+        background: transparent url($cardback_img) center no-repeat;
         background-size: cover;
     }
     &-Face.back {
         border: none;
+        background: transparent;
+        background-size: cover;
     }
     
     &.place {
+        background-size: 100% 100%;
         background-color: $card-place;
         opacity: 1;
         border-radius: 6px;
@@ -313,6 +325,7 @@ body {
     margin: 0;
     margin-bottom: 2rem;
     border: 1px solid;
+    color: white;
 }
 
 .fa img {
@@ -346,7 +359,7 @@ body {
         font-family: $font3;
         color:white;
         padding-bottom: 3rem; 
-        background: url($img-dir+"triangle.svg") no-repeat bottom center;
+        background: url($triangle_img) no-repeat bottom center;
     }
     
     &-Slogan {
@@ -782,19 +795,19 @@ body {
 }
 
 .ReassuranceList-Item-Img.star {
-    background: transparent url($img-dir+"ico-star.png") center no-repeat;
+    background: transparent url($icostar_img) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.lock {
-    background: transparent url($img-dir+"ico-lock.png") center no-repeat;
+    background: transparent url($icolock_img) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.gift {
-    background: transparent url($img-dir+"ico-gift.png") center no-repeat;
+    background: transparent url($icogift_img) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.trophy {
-    background: transparent url($img-dir+"ico-trophy.png") center no-repeat;
+    background: transparent url($icotrophy_img) center no-repeat;
     background-size: contain;
 }
 

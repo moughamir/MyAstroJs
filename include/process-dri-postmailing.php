@@ -8,11 +8,24 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 
-session_start();
 /* ############################# INITIALISATION ############################# */
+include('tools.php');
 require_once('inc/config.php');
 require_once('inc/bdd.php');
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+
+function secure_formdata($n){
+    return htmlentities(strip_tags($n));
+}
+$form = array_map('secure_formdata', $_POST);
+$state = "";
+
+/* ############################# INITIALISATION ############################# */
+$err = array();
+if(isset($form['save_tel'])){
+    $param = $form;
+    include("validation/telnum-save.php");
+}
 
 /* ##################### RÉCUPERATION VARIABLES MAILING ##################### */
 $codeastro = (isset($_GET['id'])) ? htmlentities(strip_tags($_GET['id'])) : false;
@@ -44,14 +57,15 @@ if(!$codeastro && !$email_base){
 
 /* ######################## PRÉPARATION DONNÉES USER ######################## */
 $idastro = base_convert($codeastro, 32, 10);
-$prenom = $tel = "";
+$prenom = isset($prenom) ? $prenom : $_SESSION['firstname'];
+$tel = isset($tel) ? $tel : $_SESSION['phone'];
 $idastro_column = 'internal_id';
 $source = $gclid = $url = "";
 $email_user  = $email_base;
 
 /* ########################## REQUÊTE DONNÉES USER ########################## */
 $base = $bdd->users;
-if ($idastro > 2000000) {
+if($idastro > 2000000){
     $base = $bdd->users_common;
     $idastro_column = 'external_id';
     $objet = "MINISITES";
@@ -108,15 +122,11 @@ if($source == "AFFIL SWARMIZ"){
 }
     
 /* ############################# ENVOI DU MAIL ############################## */
-function secure_formdata($n){
-    return htmlentities(strip_tags($n));
-}
-$form = array_map('secure_formdata', $_POST);
-$state = "";
 
-if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION['demanderappel'])){
+if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION['demanderappel']) && empty($err)){
+    echo 'envoi';
     $destinataire = 'standard.kgcom@gmail.com';
-    $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($form['prenom'])).' - '.uniqid());
+    $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
     $email        = 'contact@myastro.fr';
     
     $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -132,11 +142,11 @@ if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION[
             </tr>
             <tr>
                 <td>Prénom : </td>
-                <td>'.$form['prenom'].'</td>
+                <td>'.$prenom.'</td>
             </tr>
             <tr>
                 <td>Téléphone : </td>
-                <td>'.$form['tel'].'</td>
+                <td>'.$tel.'</td>
             </tr>
             <tr>
                 <td>Pays : </td>
@@ -195,6 +205,8 @@ if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION[
     if(mail($destinataire, $sujet, $message, $headers)){
         $state = 'MAIL_SENT';
         $_SESSION['demanderappel'] = true;  
+    } else {
+        $state = 'MAIL_ERROR';
     }
     
 } elseif(isset($_SESSION['demanderappel'])){

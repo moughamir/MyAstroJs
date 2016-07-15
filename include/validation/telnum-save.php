@@ -68,37 +68,5 @@ if(empty($err)){
     
 // Session ---------------------------------------------------------------------
     $_SESSION['phone'] = $tel;
-
-/* ========================================================================== * 
- *                                 REDIRECTION                                *
- * ========================================================================== */
-      
-    $dri = (isset($param['dri'])) ? $param['dri'] : false;
-    $dri2 = (isset($param['dri2'])) ? $param['dri2'] : 'merci-voyance';
-    
-    if ($dri) {
-        if($dri == "tchat"){
-            if ( time() > strtotime(date('Y-m-d 09:00:00')) 
-                & time() < strtotime(date('Y-m-d 23:59:59'))
-                && !isset($_COOKIE['tchat'] ))
-            {
-                $redirect_url = 'tchat';
-            } else {
-                $redirect_url = $dri2;
-            }
-        } else {
-            $redirect_url = $dri;
-        }
-        
-    } else {
-        $redirect_url = $dri2;
-    }
-    
-    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
-
-    die(json_encode(array('url' => $redirect_url)));
-    
-} else { // Fin si ERREUR
-    die(json_encode($err));
 }
   

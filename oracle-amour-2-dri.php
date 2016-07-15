@@ -43,8 +43,6 @@ include('include/process-dri-postmailing.php');
         </header>
         
         <section class="PageWrapper600">
-            
-            
             <div class="TextContent">
                 <p class="DescText-Title-Legend">Lucas<br/>Expert voyant-tarologue</p>
                 <div class="DescText-Content">
@@ -53,9 +51,7 @@ include('include/process-dri-postmailing.php');
                     <p>Laissez-moi vous traduire les messages que les cartes de l’Oracle ont à vous transmettre.</p>
                 </div>
             </div>
-                    
-
-
+            
             <section class="FormContainer DRI ">
                 <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
                 <div class="DRI-Form FormContainer-Fields">
@@ -66,8 +62,6 @@ include('include/process-dri-postmailing.php');
                         </p>
                     <?php } else { ?>
                     <form method="post">
-                        <input type="hidden" name="method" value="telnum-save" />
-
                         <div class="FormField">
                             <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
                         </div>
@@ -95,7 +89,6 @@ include('include/process-dri-postmailing.php');
                                 <option value="ZZ">Autre</option>
                             </select>
                         </div>
-
                         <!-- SUBMIT -->
                         <input type="text" name="antisp" value="" style="display: none" />
                         <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
@@ -103,7 +96,6 @@ include('include/process-dri-postmailing.php');
                     <?php } ?>
                 </div>
             </section>
-            
         </section>
                 
         <footer class="SiteFooter">
