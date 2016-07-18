@@ -6,6 +6,7 @@
 
     Created on : 25 mai 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
+                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 @import "templates/s-landing-tarot-3";
 
@@ -329,7 +330,7 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: bold;
     
     &-Slogan {
-        
+
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
@@ -391,6 +392,51 @@ input[type="checkbox"], input[type="radio"] {
 }
 .Tchat-Message-Person.M {
     color: $bleu;
+}
+
+/* ---------------------------------- DRI-POSTMAIL --------------------------------- */
+.form-title{
+    color: $bleu;
+    background-color: white;
+    text-align: center;
+    font-family: 'Lobster';
+    padding: 1rem 0;
+    hyphens: none;
+    
+    & + p{
+        text-align: center;
+        display: inline-block;
+        padding: 1rem 0;
+        font-weight: bold;
+        width: 100%;
+        font-size: 1.80rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.DRI{
+    &-Slogan {
+        color:$turquoise;
+        border: 2px solid $turquoise;
+        text-align: center;
+        padding: 1rem;
+        font-size:2rem;
+        width: 80%;
+        margin:3rem auto 0;
+        hyphens: none;
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
+    }
+}
+
+@media all and (max-width: 640px){
+   .DRI{
+        &-Slogan {
+            width: 100%;
+        }
+    }
 }
 
 @media all and (max-width: 510px){
