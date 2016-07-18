@@ -56,7 +56,6 @@
 
                     <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
 
-
                     <span class="ten-min-free"></span>
 
                     <article id="form2-form" class="FormContainer DRI ">
