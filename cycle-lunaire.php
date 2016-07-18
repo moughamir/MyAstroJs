@@ -63,7 +63,6 @@
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="cycle-lunaire-tel" />
-                                <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
