@@ -57,8 +57,8 @@ if(!$codeastro && !$email_base){
 
 /* ######################## PRÉPARATION DONNÉES USER ######################## */
 $idastro = base_convert($codeastro, 32, 10);
-$prenom = isset($prenom) ? $prenom : isset($_SESSION['firstname']) ? $_SESSION['firstname'] : '';
-$tel = isset($tel) ? $tel : isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$prenom = isset($prenom) ? $prenom : $_SESSION['firstname'];
+$tel = isset($tel) ? $tel : $_SESSION['phone'];
 $idastro_column = 'internal_id';
 $source = $gclid = $url = "";
 $email_user  = $email_base;
@@ -124,6 +124,7 @@ if($source == "AFFIL SWARMIZ"){
 /* ############################# ENVOI DU MAIL ############################## */
 
 if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION['demanderappel']) && empty($err)){
+    echo 'envoi';
     $destinataire = 'standard.kgcom@gmail.com';
     $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
     $email        = 'contact@myastro.fr';

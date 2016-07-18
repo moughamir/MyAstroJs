@@ -2345,8 +2345,7 @@ body {
     font-family: "Parisienne", cursive; }
 
 /* ANIMATION DRI */
-.TextContent,
-.DRI {
+.TextContent {
   opacity: 0;
   -webkit-animation-name: anim-fadeIn;
   animation-name: anim-fadeIn;
@@ -2367,10 +2366,6 @@ body {
 .TextContent {
   -webkit-animation-delay: 0s;
   animation-delay: 0s; }
-
-.DRI {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s; }
 
 /* FENETRE MODALE POUR LA DRI */
 /*.overlay {

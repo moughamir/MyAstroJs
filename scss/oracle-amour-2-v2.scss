@@ -676,8 +676,7 @@ body {
 }
 
 /* ANIMATION DRI */
-.TextContent,
-.DRI{
+.TextContent{
     opacity:0;
     animation-name: anim-fadeIn;
     animation-duration: 1s;
@@ -693,8 +692,6 @@ body {
 }
 
 .TextContent{animation-delay: 0s; }
-.DRI{animation-delay: 2s; }
-
 
 /* FENETRE MODALE POUR LA DRI */
 /*.overlay {
