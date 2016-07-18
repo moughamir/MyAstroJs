@@ -2802,10 +2802,10 @@ input[type="checkbox"], input[type="radio"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
-.DRI .FormContainer-Submit.btn-rose {
-  text-transform: uppercase; }
 .DRI-Sent {
   text-align: center; }
+.DRI .FormContainer-Submit.btn-rose {
+  text-transform: uppercase; }
 
 @media all and (max-width: 640px) {
   .DRI-Slogan {

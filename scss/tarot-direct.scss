@@ -426,12 +426,12 @@ input[type="checkbox"], input[type="radio"] {
         hyphens: none;
     }
     
-    .FormContainer-Submit.btn-rose{
-        text-transform: uppercase;
-    }
-    
     &-Sent {
         text-align: center;
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
     }
 }
 
