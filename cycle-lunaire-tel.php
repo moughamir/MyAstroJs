@@ -21,6 +21,7 @@ $prenom = $_SESSION['firstname'];
                                                     </p>
                                                 <?php } else { ?>
                                                 <form method="post">
+                                                    <input type="hidden" name="method" value="telnum-save" />
                                                     <div class="FormField">
                                                         <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
                                                     </div>
