@@ -3,12 +3,7 @@ $prenom = $_SESSION['firstname'];
 ?>
                                         <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
                                         <p class="FormContainer-name"><?= $prenom ?></p>
-<<<<<<< HEAD
                                         <p>Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez. <br/><br/><?= $prenom ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention <?= $prenom ?>, agir ne veut pas dire se précipiter et faire mal les choses. Sous peine de commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…</p>
-=======
-                                        <p>Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez. </p>
-                                        <p><?= $prenom ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention <?= $prenom ?>, agir ne veut pas dire se précipiter et faire mal les choses. Sous peine de commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…</p>
->>>>>>> 2d7713266e927341c60ef1b5c1bc42b1855ed186
                                         
                                         <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
                                         
