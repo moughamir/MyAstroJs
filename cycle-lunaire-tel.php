@@ -9,8 +9,6 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 include('include/process-dri-postmailing.php');
-session_start();
-$prenom = $_SESSION['firstname'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
