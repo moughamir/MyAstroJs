@@ -26,7 +26,7 @@ $cards_dir = 'tarot/cartes/original-grand/';
         
         <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
         
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
+        <link rel="stylesheet" type="text/css" href="css/tarot-direct.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

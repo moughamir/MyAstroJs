@@ -429,6 +429,10 @@ input[type="checkbox"], input[type="radio"] {
     .FormContainer-Submit.btn-rose{
         text-transform: uppercase;
     }
+    
+    &-Sent {
+        text-align: center;
+    }
 }
 
 @media all and (max-width: 640px){
