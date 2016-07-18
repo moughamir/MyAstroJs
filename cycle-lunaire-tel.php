@@ -85,7 +85,7 @@ include('include/process-dri-postmailing.php');
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField">
-                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
+                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>
                                 <div class="FormField">
                                     <select name="pays" id="pays" class="FormField-Input" required>
