@@ -274,9 +274,11 @@ body {
     background-color: $turquoise;
     color: $grey;
     border: none;
+    transition: all 0.5s ease-in;
     
     &:hover{
-        
+        border:2px solid $turquoise; 
+        color: $turquoise; 
     }
 }
 

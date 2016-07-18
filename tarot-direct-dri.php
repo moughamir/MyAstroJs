@@ -124,25 +124,6 @@ $cards_dir = 'tarot/cartes/original-grand/';
                 </div>
             </div>
         </section>
-        <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
-        <div id="scn-tarot">
-            <section class="ContentBand Tarot" id="cards-container">
-                <div class="PageWrapper ContentBand-Table">
-                    <div class="ContentBand-Column">
-                        <article class="WidgetTarot">
-                            <div id="scn-tarot-result">
-                                <div class="WidgetTarot-ResultMsg">Votre tirage </div>
-                                <div class="WidgetTarot-Result">
-                                    <?php for($i=0;$i<5;$i++){ ?>
-                                    <div class="WidgetTarot-Card place" data-number="<?= $i ?>" style="background-image: url('<?= $cards_dir.$draw[$i];?>')"></div>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-        </div>
         
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
