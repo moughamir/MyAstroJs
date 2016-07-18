@@ -1,6 +1,5 @@
 <?php
 include('../include/Lib_handler.php');
-include_once('../include/tools.php');
 
 //
 //  tarot_amour.php
@@ -792,123 +791,73 @@ function get_vue_ensemble_text()
 
 function output_tirage($html_template)
 {
-   global $prenom;
-   global $signe;
-   global $sequence;
-   global $php_fname;
-   global $ID;
-   global $order_tab;
-   global $alt1;
-   global $alt2;
-   global $alt3;
-   global $alt4;
-   global $alt5;
-   global $carte1_img;
-   global $carte2_img;
-   global $carte3_img;
-   global $carte4_img;
-   global $carte5_img;
-   global $sign_tab;
+    global $prenom;
+    global $signe;
+    global $sequence;
+    global $php_fname;
+    global $ID;
+    global $order_tab;
+    global $alt1;
+    global $alt2;
+    global $alt3;
+    global $alt4;
+    global $alt5;
+    global $carte1_img;
+    global $carte2_img;
+    global $carte3_img;
+    global $carte4_img;
+    global $carte5_img;
+    global $sign_tab;
 
-   $sequence++;
-   $f = implode("" , @file($html_template));
+    $sequence++;
+    $f = implode("", @file($html_template));
 
-   $f = str_replace("[()prenom()]",
-                    "$prenom",
-                    $f);
-   $f = str_replace("[()sign_text()]",
-                    $sign_tab[$signe],
-                    $f);
-					
-	$f = str_replace("[()sign_text_m()]",
-                    strtolower($sign_tab[$signe]),
-                    $f);
-   if (isset($order_tab[$sequence]))
-   {
-      $f = str_replace("[()ordre_tirage()]",
-                       $order_tab[$sequence],
-                       $f);
-   }
-   else                                 //  vue ensemble
-   {
-      get_week_interval($date_debut, $date_fin);// $01C
-      $f = str_replace("[()date_debut()]",
-                       $date_debut,
-                       $f);
-		$f = str_replace("[()date_0()]",
-                       dateplus0(),
-                       $f);
-	$f = str_replace("[()date_1()]",
-                       dateplus1(),
-                       $f);
-   $f = str_replace("[()date_2()]",
-                       dateplus2(),
-                       $f);
-   $f = str_replace("[()date_3()]",
-                       dateplus3(),
-                       $f);
-   $f = str_replace("[()date_4()]",
-                       dateplus4(),
-                       $f);
-   $f = str_replace("[()date_5()]",
-                       dateplus5(),
-                       $f);
-   $f = str_replace("[()date_6()]",
-                       dateplus6(),
-                       $f);
-      $f = str_replace("[()date_fin()]",
-                       $date_fin,
-                       $f);
-      $tarot_text = get_vue_ensemble_text();
-      $f = str_replace("[()tarot_text()]",
-                       $tarot_text,
-                       $f);
-   }
-   $f = str_replace("[()today_string()]",
-                    get_todaystring(),
-                    $f);
-   $f = str_replace("[()php_fname()]",
-                    $php_fname,
-                    $f);
-   $f = str_replace("[()param()]",
-                    "$ID-$sequence",
-                    $f);
-   $f = str_replace("[()ID()]",
-                    $ID,
-                    $f);
-   $f = str_replace("[()carte1_img()]",
-                    $carte1_img,
-                    $f);
-   $f = str_replace("[()carte2_img()]",
-                    $carte2_img,
-                    $f);
-   $f = str_replace("[()carte3_img()]",
-                    $carte3_img,
-                    $f);
-   $f = str_replace("[()carte4_img()]",
-                    $carte4_img,
-                    $f);
-   $f = str_replace("[()carte5_img()]",
-                    $carte5_img,
-                    $f);
-   $f = str_replace("[()alt1()]",
-                    $alt1,
-                    $f);
-   $f = str_replace("[()alt2()]",
-                    $alt2,
-                    $f);
-   $f = str_replace("[()alt3()]",
-                    $alt3,
-                    $f);
-   $f = str_replace("[()alt4()]",
-                    $alt4,
-                    $f);
-   $f = str_replace("[()alt5()]",
-                    $alt5,
-                    $f);
-
-   echo $f;
+   
+    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()prenom()]", $prenom, $f);
+    $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
+    $f = str_replace("[()sign_text_m()]", strtolower($sign_tab[$signe]), $f);
+    
+    if(isset($order_tab[$sequence])){
+        $f = str_replace("[()ordre_tirage()]", $order_tab[$sequence],  $f);
+    } else { // vue ensemble
+        $date_debut = $date_fin = '';
+        get_week_interval($date_debut, $date_fin); // $01C
+        
+        $f = str_replace("[()date_debut()]", $date_debut, $f);
+        $f = str_replace("[()date_0()]", dateplus0(), $f);
+	$f = str_replace("[()date_1()]", dateplus1(), $f);
+        $f = str_replace("[()date_2()]", dateplus2(), $f);
+        $f = str_replace("[()date_3()]", dateplus3(), $f);
+        $f = str_replace("[()date_4()]", dateplus4(), $f);
+        $f = str_replace("[()date_5()]", dateplus5(), $f);
+        $f = str_replace("[()date_6()]", dateplus6(), $f);
+        $f = str_replace("[()date_fin()]", $date_fin, $f);
+        
+        $tarot_text = get_vue_ensemble_text();
+        $f = str_replace("[()tarot_text()]", $tarot_text, $f);
+    }
+    
+    $f = str_replace("[()today_string()]", get_todaystring(), $f);
+    $f = str_replace("[()php_fname()]", $php_fname, $f);
+    $f = str_replace("[()param()]", "$ID-$sequence", $f);
+    $f = str_replace("[()ID()]", $ID, $f);
+    $f = str_replace("[()carte1_img()]", $carte1_img, $f);
+    $f = str_replace("[()carte2_img()]", $carte2_img, $f);
+    $f = str_replace("[()carte3_img()]", $carte3_img, $f);
+    $f = str_replace("[()carte4_img()]", $carte4_img, $f);
+    $f = str_replace("[()carte5_img()]", $carte5_img,  $f);
+    $f = str_replace("[()alt1()]", $alt1, $f);
+    $f = str_replace("[()alt2()]", $alt2, $f);
+    $f = str_replace("[()alt3()]", $alt3, $f);
+    $f = str_replace("[()alt4()]", $alt4, $f);
+    $f = str_replace("[()alt5()]", $alt5, $f);
+    
+    
+    echo $f;
 }
+
+
 function dateplus1() {
 
 $dateplusn = date( "w/d/n/Y", time() + 1 * 24 * 60 * 60 );
@@ -993,207 +942,119 @@ $dateplusn = ucfirst($nom_jour_fr[$nom_jour]) .' '.$jour.' '.ucfirst($mois_fr[$m
 return $dateplusn;
 
 }
+
 function output_jour($html_template, $jour)
 {
+    global $prenom;
+    global $signe;
+    global $php_fname;
+    global $ID;
+    global $jour_order_tab;
+    global $alt1;
+    global $alt2;
+    global $alt3;
+    global $alt4;
+    global $alt5;
+    global $carte1_img;
+    global $carte2_img;
+    global $carte3_img;
+    global $carte4_img;
+    global $carte5_img;
+    global $sign_tab;
+    
+    
+    $f = implode("", @file($html_template));
+    
+    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()prenom()]", $prenom, $f);
+    $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
+    $f = str_replace("[()sign_text_m()]", strtolower($sign_tab[$signe]), $f);
+    $f = str_replace("[()jour()]", $jour, $f);
+    $f = str_replace("[()date_0()]", dateplus0(), $f);
+    $f = str_replace("[()date_1()]", dateplus1(), $f);
+    $f = str_replace("[()date_2()]", dateplus2(), $f);
+    $f = str_replace("[()date_3()]", dateplus3(), $f);
+    $f = str_replace("[()date_4()]", dateplus4(), $f);
+    $f = str_replace("[()date_5()]", dateplus5(), $f);
+    $f = str_replace("[()date_6()]", dateplus6(), $f);
+    $f = str_replace("[()date_jour()]", get_datejour($jour), $f);
+    $f = str_replace("[()ordre_jour()]", $jour_order_tab[$jour], $f);
+    $f = str_replace("[()php_fname()]", $php_fname, $f);
+    
+    $jour++;
+    $f = str_replace("[()param()]", "ID=$ID&jour=$jour", $f);
+    
+    if(isset($jour_order_tab[$jour])){
+        $f = str_replace("[()link_title()]", "$jour_order_tab[$jour] jour", $f);
+    } else {
+        $f = str_replace("[()link_title()]", "Suite", $f);
+    }
+    
+    $f = str_replace("[()ID()]", $ID, $f);
+    $f = str_replace("[()carte1_img()]", $carte1_img, $f);
+    $f = str_replace("[()carte2_img()]", $carte2_img, $f);
+    $f = str_replace("[()carte3_img()]", $carte3_img, $f);
+    $f = str_replace("[()carte4_img()]", $carte4_img, $f);
+    $f = str_replace("[()carte5_img()]", $carte5_img, $f);
+    $f = str_replace("[()alt1()]", $alt1, $f);
+    $f = str_replace("[()alt2()]", $alt2, $f);
+    $f = str_replace("[()alt3()]", $alt3, $f);
+    $f = str_replace("[()alt4()]", $alt4, $f);
+    $f = str_replace("[()alt5()]", $alt5, $f);
 
-  
-   global $prenom;
-   global $signe;
-   global $php_fname;
-   global $ID;
-   global $jour_order_tab;
-   global $alt1;
-   global $alt2;
-   global $alt3;
-   global $alt4;
-   global $alt5;
-   global $carte1_img;
-   global $carte2_img;
-   global $carte3_img;
-   global $carte4_img;
-   global $carte5_img;
-   global $sign_tab;
-
-
-   $f = implode("" , @file($html_template));
-
-   
-
-   $f = str_replace("[()prenom()]",
-                    "$prenom",
-                    $f);
-   $f = str_replace("[()sign_text()]",
-                    $sign_tab[$signe],
-                    $f);
-	$f = str_replace("[()sign_text_m()]",
-                    strtolower($sign_tab[$signe]),
-                    $f);
-   $f = str_replace("[()jour()]",
-                    $jour,
-                    $f);
-	$f = str_replace("[()date_0()]",
-                       dateplus0(),
-                       $f);
-	$f = str_replace("[()date_1()]",
-                       dateplus1(),
-                       $f);
-   $f = str_replace("[()date_2()]",
-                       dateplus2(),
-                       $f);
-   $f = str_replace("[()date_3()]",
-                       dateplus3(),
-                       $f);
-   $f = str_replace("[()date_4()]",
-                       dateplus4(),
-                       $f);
-   $f = str_replace("[()date_5()]",
-                       dateplus5(),
-                       $f);
-   $f = str_replace("[()date_6()]",
-                       dateplus6(),
-                       $f);
-  
-   $f = str_replace("[()date_jour()]",
-                    get_datejour($jour),
-                    $f);
-   $f = str_replace("[()ordre_jour()]",
-                    $jour_order_tab[$jour],
-                    $f);
-   $f = str_replace("[()php_fname()]",
-                    $php_fname,
-                    $f);
-   $jour++;
-   $f = str_replace("[()param()]",
-                    "ID=$ID&jour=$jour",
-                    $f);
-   if (isset($jour_order_tab[$jour]))
-   {
-      $f = str_replace("[()link_title()]",
-                       "$jour_order_tab[$jour] jour",
-                       $f);
-   }
-   else
-   {
-      $f = str_replace("[()link_title()]",
-                       "Suite",
-                       $f);
-   }
-   $f = str_replace("[()ID()]",
-                    $ID,
-                    $f);
-   $f = str_replace("[()carte1_img()]",
-                    $carte1_img,
-                    $f);
-   $f = str_replace("[()carte2_img()]",
-                    $carte2_img,
-                    $f);
-   $f = str_replace("[()carte3_img()]",
-                    $carte3_img,
-                    $f);
-   $f = str_replace("[()carte4_img()]",
-                    $carte4_img,
-                    $f);
-   $f = str_replace("[()carte5_img()]",
-                    $carte5_img,
-                    $f);
-   $f = str_replace("[()alt1()]",
-                    $alt1,
-                    $f);
-   $f = str_replace("[()alt2()]",
-                    $alt2,
-                    $f);
-   $f = str_replace("[()alt3()]",
-                    $alt3,
-                    $f);
-   $f = str_replace("[()alt4()]",
-                    $alt4,
-                    $f);
-   $f = str_replace("[()alt5()]",
-                    $alt5,
-                    $f);
-
-   get_tarot_text($jour, $citation_text, $amour_text);// $01C
-   $f = str_replace("[()citation_text()]",
-                    $citation_text,
-                    $f);
-   $f = str_replace("[()amour_text()]",
-                    $amour_text,
-                    $f);
-
-   echo $f;
+    $citation_text = $amour_text = '';
+    get_tarot_text($jour, $citation_text, $amour_text);// $01C
+    $f = str_replace("[()citation_text()]", $citation_text, $f);
+    $f = str_replace("[()amour_text()]", $amour_text, $f);
+    
+    
+    echo $f;
 }
 
 function output_end($html_template)
 {
-   global $prenom;
-   global $signe;
-   global $php_fname;
-   global $ID;
-   global $carte1;
-   global $carte2;
-   global $carte3;
-   global $carte4;
-   global $alt1;
-   global $alt2;
-   global $alt3;
-   global $alt4;
-   global $alt5;
-   global $carte1_img;
-   global $carte2_img;
-   global $carte3_img;
-   global $carte4_img;
-   global $carte5_img;
-   global $sign_tab;
+    global $prenom;
+    global $signe;
+    global $php_fname;
+    global $ID;
+    global $carte1;
+    global $carte2;
+    global $carte3;
+    global $carte4;
+    global $alt1;
+    global $alt2;
+    global $alt3;
+    global $alt4;
+    global $alt5;
+    global $carte1_img;
+    global $carte2_img;
+    global $carte3_img;
+    global $carte4_img;
+    global $carte5_img;
+    global $sign_tab;
+    
+    
+    $f = implode("", @file($html_template));
+    
+    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()prenom()]", $prenom, $f);
+    $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
+    $f = str_replace("[()today_string()]", get_todaystring(), $f);
+    $f = str_replace("[()php_fname()]", $php_fname, $f);
+    $f = str_replace("[()ID()]", $ID, $f);
+    $f = str_replace("[()carte1_img()]", $carte1_img, $f);
+    $f = str_replace("[()carte2_img()]", $carte2_img, $f);
+    $f = str_replace("[()carte3_img()]", $carte3_img, $f);
+    $f = str_replace("[()carte4_img()]", $carte4_img, $f);
+    $f = str_replace("[()carte5_img()]", $carte5_img, $f);
+    $f = str_replace("[()alt1()]", $alt1, $f);
+    $f = str_replace("[()alt2()]", $alt2, $f);
+    $f = str_replace("[()alt3()]", $alt3, $f);
+    $f = str_replace("[()alt4()]", $alt4, $f);
+    $f = str_replace("[()alt5()]", $alt5, $f);
 
-   $f = implode("" , @file($html_template));
-
-   $f = str_replace("[()prenom()]",
-                    "$prenom",
-                    $f);
-   $f = str_replace("[()sign_text()]",
-                    $sign_tab[$signe],
-                    $f);
-   $f = str_replace("[()today_string()]",
-                    get_todaystring(),
-                    $f);
-   $f = str_replace("[()php_fname()]",
-                    $php_fname,
-                    $f);
-   $f = str_replace("[()ID()]",
-                    $ID,
-                    $f);
-   $f = str_replace("[()carte1_img()]",
-                    $carte1_img,
-                    $f);
-   $f = str_replace("[()carte2_img()]",
-                    $carte2_img,
-                    $f);
-   $f = str_replace("[()carte3_img()]",
-                    $carte3_img,
-                    $f);
-   $f = str_replace("[()carte4_img()]",
-                    $carte4_img,
-                    $f);
-   $f = str_replace("[()carte5_img()]",
-                    $carte5_img,
-                    $f);
-   $f = str_replace("[()alt1()]",
-                    $alt1,
-                    $f);
-   $f = str_replace("[()alt2()]",
-                    $alt2,
-                    $f);
-   $f = str_replace("[()alt3()]",
-                    $alt3,
-                    $f);
-   $f = str_replace("[()alt4()]",
-                    $alt4,
-                    $f);
-   $f = str_replace("[()alt5()]",
-                    $alt5,
-                    $f);
-
-   echo $f;
+    
+    echo $f;
 }
 
 function fatal_error($string)
@@ -1363,6 +1224,3 @@ function get_datejour($jour)
    $str = "$dayofweek_tab[$dayofw] $date_str " . $month_tab[date("n", $new_date)] . " " . date("Y", $new_date);
    return $str;
 }
-
-?>
-

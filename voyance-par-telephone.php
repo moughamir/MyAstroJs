@@ -1,5 +1,5 @@
 <?php
-session_start();
+$root = '/';
 require_once(realpath('include/Lib_handler.php'));
 $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
