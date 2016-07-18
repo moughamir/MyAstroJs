@@ -645,25 +645,50 @@ body > script {
 http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 [class*="flex-container"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-container-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flex-container-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flex-item-fluid {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1; }
 
 .flex-item-first {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
   order: -1; }
 
 .flex-item-medium {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
   order: 0; }
 
 .flex-item-last {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
   order: 1; }
 
 .flex-item-center {
@@ -674,8 +699,17 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* ---------------------------------- */
 /* grid container */
 [class*="grid-"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
@@ -684,6 +718,9 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* grid childs */
 [class*="grid-"] > * {
   box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: calc(100% * 1 / 4 - 2rem - .01px);
   min-width: 0;
@@ -987,6 +1024,7 @@ input[type="reset"].unstyled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
 ul.is-unstyled,
@@ -1447,6 +1485,10 @@ s,m,l,n = small, medium, large, none
     border: 0; }
 
   .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .w300p,
@@ -1635,10 +1677,16 @@ s,m,l,n = small, medium, large, none
   pre,
   samp {
     word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto; } }
 @media (max-width: 640px) {
   .no-wrapping {
     word-wrap: normal;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
     hyphens: manual; } }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1950,6 +1998,9 @@ body {
     .ThemeChoice-ListItem-Label {
       display: block;
       padding-left: 5rem;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
       hyphens: none;
       font-size: 1.8rem;
       line-height: 3.5rem; }
@@ -1993,6 +2044,9 @@ body {
   .WidgetTarot-Draw, .WidgetTarot-Result {
     margin-bottom: 3rem; }
   .WidgetTarot-ResultMsg {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
     hyphens: none;
     font-size: 2.1rem;
     margin-bottom: 4rem; }
@@ -2003,6 +2057,7 @@ body {
     height: 240px;
     overflow: hidden;
     cursor: pointer;
+    -webkit-perspective-origin: center bottom;
     perspective-origin: center bottom;
     z-index: 5;
     margin-right: -47px;
@@ -2024,10 +2079,17 @@ body {
       -webkit-transition-property: transform;
       -webkit-transition-timing-function: ease-out;
       -webkit-backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
+      -webkit-transition-duration: 0.5s;
       transition-duration: 0.5s;
+      -webkit-transition-property: -webkit-transform;
+      transition-property: -webkit-transform;
       transition-property: transform;
+      transition-property: transform, -webkit-transform;
+      -webkit-transition-timing-function: ease-out;
       transition-timing-function: ease-out;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden; }
       .WidgetTarot-Card-Face.front {
         z-index: 5;
@@ -2715,6 +2777,9 @@ input[type="checkbox"], input[type="radio"] {
   text-align: center;
   font-family: 'Lobster';
   padding: 1rem 0;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
   hyphens: none; }
   .form-title + p {
     text-align: center;
@@ -2733,11 +2798,15 @@ input[type="checkbox"], input[type="radio"] {
   font-size: 2rem;
   width: 80%;
   margin: 3rem auto 0;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
   hyphens: none; }
+.DRI-Sent {
+  text-align: center; }
 .DRI .FormContainer-Submit.btn-rose {
   text-transform: uppercase; }
-
-.DRI-Sent {
+.DRI-Slogan {
   text-align: center; }
 
 @media all and (max-width: 640px) {
