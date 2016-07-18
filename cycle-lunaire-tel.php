@@ -69,8 +69,16 @@ $prenom = $_SESSION['firstname'];
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                                </p>
+                                </p>                        
                             <?php } else { ?>
+                                <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+                            <p class="alert alert-danger">
+                                <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br>
+                                    <?php foreach($err as $msg){
+                                        echo $msg.'<br>';
+                                    } ?>
+                            </p>
+                                <?php } ?>
                             <form method="post">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="save_tel" value="1" />
