@@ -80,10 +80,12 @@ $prenom = $_SESSION['firstname'];
                             </p>
                                 <?php } ?>
                             <form method="post">
+                                
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="save_tel" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <!-- ############################################### -->
+                                
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
                                 </div>
