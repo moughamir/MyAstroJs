@@ -788,19 +788,20 @@ function getHoroscopeBlock($type = "jour"){
   return $content;
 }
 
-function getExpertEnLigne(){
-  $content = '<ul class="clearfix experts-handler">';
+function getExpertEnLigne()
+{
+    $content = '<ul class="clearfix experts-handler">';
 
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-georges" class="experts experts-georges "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-linda" class="experts experts-linda "></a></li>';
-  $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-georges" class="experts experts-georges "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-linda" class="experts experts-linda "></a></li>';
+    $content .= '<li><a href="http://'.ROOT_URL.'/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
 
-  $content .= '</ul>';
+    $content .= '</ul>';
 
-  echo $content;
+    echo $content;
 }
