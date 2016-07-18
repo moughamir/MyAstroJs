@@ -22,8 +22,6 @@ $prenom = $_SESSION['firstname'];
                                                     </p>
                                                 <?php } else { ?>
                                                 <form method="post">
-                                                    <!-- ############################################### -->
-
                                                     <div class="FormField">
                                                         <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
                                                     </div>
