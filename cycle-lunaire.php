@@ -50,10 +50,10 @@
                     </div>
                 </div>
                 <div id="form-container" class="ContentBand-Column Form ">
-                    <header class="ContentBand-ColumnHeader"><p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p></header>
+                    <header class="ContentBand-ColumnHeader"><p>Chaque changement lunaire est une occasion de prendre un nouveau départ, tirer un trait sur un passé douloureux pour regarder en direction d’un avenir plus radieux. Il ne faut pas passer à côté de ces changements de la lune, les bénéfices sur votre vie sont bien trop précieux.</p></header>
                     <article class="FormContainer" >
                         <div class="FormContainer overlay" id="form-overlay"></div>
-                        <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre étude personnalisée !</h2>
+                        <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour savoir ce que la lune vous réserve !</h2>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
                             <form>
