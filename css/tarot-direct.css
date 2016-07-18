@@ -2809,6 +2809,12 @@ input[type="checkbox"], input[type="radio"] {
 .DRI .FormContainer-Submit.btn-rose {
   text-transform: uppercase; }
 .DRI-Slogan {
+<<<<<<< HEAD
+=======
+  text-align: center; }
+
+.DRI-Sent {
+>>>>>>> 973b7b64e3083a2808dd3a20caf5c7c8962dfbd0
   text-align: center; }
 
 @media all and (max-width: 640px) {
