@@ -1,7 +1,7 @@
 <?php
 /* 
     -------------------------------------------
-    --      cycle-lunaire = AFFIL BASE       --
+    --      cycle-lunaire-tel = AFFIL BASE       --
     -------------------------------------------
 
     Created on : 12 juillet 2016
