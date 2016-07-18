@@ -2688,7 +2688,8 @@ body {
   transition: all 0.5s ease-in; }
   .FormContainer-Submit:hover {
     border: 2px solid #1BEBDA;
-    color: #1BEBDA; }
+    color: #1BEBDA;
+    background-color: transparent; }
 
 .FormField-Label .ico-woman {
   font-size: 1.9rem;
