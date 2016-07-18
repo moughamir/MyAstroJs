@@ -1,8 +1,8 @@
 <?php
 /* 
-    ----------------------------------------
-    --   tarot-direct-a-dri = POST-MAIL   --
-    ----------------------------------------
+    --------------------------------------
+    --   tarot-direct-dri = POST-MAIL   --
+    --------------------------------------
 
     Created on : 18 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>

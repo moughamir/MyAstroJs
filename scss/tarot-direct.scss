@@ -60,6 +60,7 @@ body {
     .ContentBand-ColumnHeader {
         background-color: white;
         box-shadow: 0 0 10px 1px $lightgrey;
+        font-size:2.5rem;
     }
 }
 
@@ -72,7 +73,7 @@ body {
     color: $turquoise;
     
     &-Logo {
-        height: 119px;
+        height: 100px;
         background-color: transparent;
         background-image: url($logo);
         background-position: center;
@@ -91,6 +92,7 @@ body {
         strong {
             text-transform: uppercase;
             color: white;
+            
         }
     }
 }
@@ -103,6 +105,7 @@ body {
         font-family: 'Lobster';
         color: $turquoise;
         font-weight: normal;
+        font-size: 3.5rem;
     }
 }
 
@@ -271,6 +274,10 @@ body {
     background-color: $turquoise;
     color: $grey;
     border: none;
+    
+    &:hover{
+        
+    }
 }
 
 .FormField-Label {  

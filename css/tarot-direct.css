@@ -2533,7 +2533,8 @@ body {
   background-position: center bottom; }
   .ContentBand.Principal .ContentBand-ColumnHeader {
     background-color: white;
-    box-shadow: 0 0 10px 1px #C0C3C8; }
+    box-shadow: 0 0 10px 1px #C0C3C8;
+    font-size: 2.5rem; }
 
 /* --------------------------------- ENTETE --------------------------------- */
 .SiteHeader {
@@ -2542,7 +2543,7 @@ body {
   background-color: #2E4980;
   color: #1BEBDA; }
   .SiteHeader-Logo {
-    height: 119px;
+    height: 100px;
     background-color: transparent;
     background-image: url("../images_landing/tarot-direct/logo.png");
     background-position: center;
@@ -2564,7 +2565,8 @@ body {
   .Title strong {
     font-family: 'Lobster';
     color: #1BEBDA;
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 3.5rem; }
 
 /* ---------------------------- CHOIX DU VOYANT ----------------------------- */
 .PsychicChoice-Psychic-VisualForm {
