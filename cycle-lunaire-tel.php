@@ -8,6 +8,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
+include('include/process-dri-postmailing.php');
 session_start();
 $prenom = $_SESSION['firstname'];
 ?>
