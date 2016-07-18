@@ -2736,6 +2736,8 @@ input[type="checkbox"], input[type="radio"] {
   hyphens: none; }
 .DRI .FormContainer-Submit.btn-rose {
   text-transform: uppercase; }
+.DRI-Slogan {
+  text-align: center; }
 
 .DRI-Sent {
   text-align: center; }

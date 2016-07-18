@@ -426,15 +426,17 @@ input[type="checkbox"], input[type="radio"] {
         hyphens: none;
     }
     
-
+    -Sent {
+        text-align: center;
+    }
     
     .FormContainer-Submit.btn-rose{
         text-transform: uppercase;
     }
-}
-
-.DRI-Sent {
-    text-align: center;
+    
+    &-Slogan {
+        text-align: center;
+    }
 }
 
 @media all and (max-width: 640px){
