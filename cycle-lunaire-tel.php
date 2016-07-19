@@ -147,8 +147,8 @@ include('include/process-dri-postmailing.php');
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### SCRIPTS #### -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="js/formValidator.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <<script src="js/formValidator.js"></script>-->
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
