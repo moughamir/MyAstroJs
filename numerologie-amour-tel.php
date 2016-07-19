@@ -1,7 +1,7 @@
 <?php
 /* 
     ---------------------------------------------------
-    --      numérologie amour-tel = AFFIL BASE       --
+    --      numérologie amour tel = AFFIL BASE       --
     ---------------------------------------------------
 
     Created on : 19 juillet 2016
@@ -24,7 +24,7 @@ include('include/process-dri-postmailing.php');
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
                 
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,33 +33,39 @@ include('include/process-dri-postmailing.php');
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="bg1">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <span class="PageLogo"></span>
+                <span class="PageLogo"><h1><span>Numérologie de l'</span><span>Amour</span></h1></span>
             </div>
         </header>
         <section class="ContentBand">
-            <div class="PageWrapper ">
-                <div class="ContentBand-Column">
-                    <div class="TextContent">
-                        <header class="ContentBand-ColumnHeader">
-                            <h1 class="DescText-Title"><span>Que vous réserve le cycle lunaire ?</span></h1>
-                        </header>
-                        <div class="moon-gif"></div>
-                    </div>
-                </div>
-                <div id="form-container" class="ContentBand-Column Form ">                                       
-                    <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
-                    <p class="FormContainer-name"> <?= $prenom ?></p>
-                    <p>Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez. <br/><br/><?= $prenom ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention <?= $prenom ?>, agir ne veut pas dire se précipiter et faire mal les choses. Sous peine de commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…</p>
-
-                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
+            <div class="PageWrapper">
+                <div id="form-container" class="ContentBand-Column Form txtcenter">
+                    <!-- animation ds polaroïds -->
+                    <div id="photo1" class="polaroid"></div>
+                    <div id="photo2" class="polaroid"></div>  
+                      
+                    <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
+                    
+                    <!-- RESULTAT -->
+                    <section class="wrapper-num-result txtleft">
+                        <h3 class="num-result-title">Résultats</h3>
+                        <div class="num-result grid-1-2">                                 
+                            <p id="num-result-numero" class="num-result-numero"> </p>
+                            <div class="num-result-text-name">
+                                <p><?= $prenom ?></p>
+                                <p id="num-result-text">Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez.</div>
+                        </div>
+                    </section>
+                    <!-- FIN DE RESULTAT --> 
+                    
+                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute<br class="small-hidden"/>et vous rappelle gratutement !</p>
 
                     <span class="ten-min-free"></span>
 
-                    <article id="form2-form" class="FormContainer DRI ">
+                    <article id="form2-form" class="FormContainer DRI">
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h1 class="DRI-Slogan"><span>Vos 10 premières minutes gratuites !</span></h1>
                         <div class="DRI-Form FormContainer-Fields">
@@ -122,29 +128,14 @@ include('include/process-dri-postmailing.php');
                 </div>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        
+        <?php include('include/footer_reassurance.php'); ?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        
+        <!-- #### SCRIPTS #### -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/formValidator.js"></script>
+        <script  type="text/javascript" src="js/numerologie-amour.js"></script>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
@@ -153,7 +144,8 @@ include('include/process-dri-postmailing.php');
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />                        
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

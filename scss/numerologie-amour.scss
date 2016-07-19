@@ -16,14 +16,17 @@
 $img_dir : "../images_landing/numerologie-amour/";
 
 /* Palette */
-$color1 : #2c2927; // pour les blocs foncés
+$color1 : #225b70; // pour les labels alternés 
 $color2 : #f05882; // rose pour les boutons et "femme"
 $color3 : #0ae9d1; // turquoise pour "homme"
-$color4 : #3e96ba; // background
-$color5 : #304d59; // background reassurance
+$color4 : #28b1d3; // bleu clair pictos reassurance
+$color5 : #ffffff; // background blanc reassurance
+$color6 : #f94f43; // orange pour boutons et liens 
 
-$font1: "Open Sans", sans-serif; //texte courant
-$font2: 'Ubuntu Condensed', sans-serif; //titres
+$font1: 'Amatic SC', cursive; //titre-princip1
+$font2: 'Cookie', cursive; //titre-princip1
+$font3: "Open Sans", sans-serif; //texte courant
+$font4: 'Ubuntu Condensed', sans-serif; //titres
 
 $bg : $color4;
 $woman : $color2;
@@ -40,10 +43,17 @@ html {
 
 body {
     padding: 2rem;
-    font-family: $font1;
+    font-family: $font3;
     font-weight: 400;
     color: white;
-    background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
+}
+
+.bg1{
+    background: $bg url($img_dir+"bg1.jpg") no-repeat center top fixed;
+    background-size: cover;
+}
+.bg2{
+    background: $bg url($img_dir+"bg2.jpg") no-repeat center top fixed;
     background-size: cover;
 }
 
@@ -55,6 +65,9 @@ button{
 
 
 /* ************** LAYOUT *************** */
+.FormContainer{
+    max-width: 60rem;   
+}
 .PageWrapper{
     padding:0;
 }
@@ -62,24 +75,43 @@ button{
     margin-top: 0;
 }
 .SiteHeader {
-    margin-bottom: 4rem;
+    .PageWrapper{
+        display: flex;
+        flex-direction: row;
+        //justify-content:space-around; 
+    }
 }
 .SiteLogo {
     background: url($img_dir+"logo-MYASTRO.svg") 2rem no-repeat;
     background-size: contain;
-    height: 107px;
-    width: 100%;
-    position: absolute;
+    height: 110px;
+    width: 15%;
+    //position: absolute;
 }
 .PageLogo {
-    background: url($img_dir+"title.png") center no-repeat;
-    background-size: contain;
-    height: 110px;
-    display: inline-block;
-    width: 100%;
+    width: 70%;
+    //display: inline-block;
+    text-align: center;
+    
+    span{
+        font-family: $font1;
+        font-size: 8rem;
+        text-transform: uppercase;
+        font-weight: normal;
+        text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+    }
+    span+span{
+        font-family: $font2;
+        font-size: 10rem;
+        text-transform: lowercase;
+        text-transform: capitalize;
+        background: url($img_dir+"bg-title.png") 100% 70% no-repeat;  
+        padding-right: 5rem;
+    }
 }
+
+
 .ContentBand-ColumnHeader *{
-    //background: url($img_dir+"marie.png") bottom left no-repeat;
     text-align: center !important;
 }
 .ContentBand-ColumnHeader p,
@@ -89,7 +121,7 @@ button{
     font-weight: bold;    
 }
 .Form .ContentBand-ColumnHeader {
-    margin-bottom:1.5rem;
+    //margin-bottom:1.5rem;
 }
     
 .DescText-Title {
@@ -118,40 +150,28 @@ button{
     }
 }
 
-.moon-gif{
-    background: transparent url($img_dir+"lune-anim.gif") no-repeat top center;
-    background-size: 85%;
-    //width: 52.1rem;
-    height: 51.6rem;
-    max-width: 100%;
-    //height: auto;
-}
-
 .DescText-Content {
     background: transparent;
     text-indent: 5rem;
 }
 .FormContainer {
-    background: rgba(44, 41, 39, 0.6);
-    @include box-shadow;
-    
+    background:transparent;    
     
     &-Header {
         font-family: $font2;
         color: white;
-        padding-bottom: 3rem; 
-        background: url($img_dir+"fleche.svg") no-repeat bottom center;
+        font-size: 4.5rem;
     }
     
     &-Submit {
         padding: 1rem 4rem;
-        margin-bottom:-5rem;
+        //margin-bottom:-5rem;
         border: 0px solid $color1;
         //border-radius: 4rem;
-        background-color: $color2;
+        background-color: $color6;
         //box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
         color: white;
-        font-family: $font2;
+        font-family: $font3;
         font-size: 2.2rem;
         text-transform: uppercase;
         transition: background 0.25s ease-in;
@@ -160,9 +180,11 @@ button{
         &:focus,
         &:hover {
             //box-shadow: inset 4px 4px 1px rgba(0, 0, 0, 0.5), inset -4px -4px 2px rgba(255, 255, 255, 0.5);
-            background-color: darken($color2, 15%);
+            background-color: darken($color6, 20%);
         }
     }
+    
+
     
     &.DRI .DRI {
         
@@ -216,9 +238,16 @@ button{
     }
 }
 
+
+
+
 .FormField-Label {
     text-transform: uppercase;
-    
+
+    label:nth-child(2){
+        color:$color1 !important;
+        border:1px solid red;
+    }
     .ico-woman {
         font-size: 1.9rem;
         font-weight: bold;
@@ -259,7 +288,7 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
-.How-header {
+/*.How-header {
     font-weight: normal;
     font-size: 2.4rem;
     font-family: inherit;
@@ -276,11 +305,65 @@ input[type="checkbox"], input[type="radio"] {
         background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
         background-size: contain;
     }
+}*/
+
+/* ************** ANIMATIONS *************** */
+.polaroid{    
+    width: 30rem;
+    height: 35.5rem; 
+    border:0px solid red;
+}
+#photo1{
+    background: url($img_dir+"photo-couple.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top:10rem;
+    left:-5rem;
+    opacity: 0;
+   
+}
+#photo2{
+    background: url($img_dir+"photo-i-love-u.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 25rem;
+    left: -12rem;
+    opacity: 0;
 }
 
+.anim-photo1{
+    animation-name: anim-photo;
+    animation-duration:0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    animation-delay: 1s;
+}
+.anim-photo2{
+    animation-name: anim-photo;
+    animation-duration:0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    animation-delay: 2s;
+}
+
+@keyframes anim-photo {
+  0% {
+    opacity:0;
+    transform: translate(-200px,0); 
+  }
+  100% {
+    opacity:1;
+    transform: translate(0,0);
+  }
+}
+
+/* ************** FOOTER *************** */
 .ReassuranceList {
     background-color: $color5;
-    color: white;
+    color: $color4;
+    font-family: $font3;
     @include box-shadow;
 }
 
@@ -341,10 +424,37 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: bold;
     border:2px solid white;
     padding:15px;
+    max-width: 60rem;
+    margin: 0 auto;
     
 }
 
+/* ************** RESULTATS NUMEROLOGIE*************** */
 
+.wrapper-num-result{
+    max-width: 60rem;
+    margin: 0 auto;
+        
+    h3{text-align: left}
+    
+    .num-result{
+        //@include uneven-grid(1, 2);
+        .num-result-title{
+        }
+        .num-result-numero{
+            font-size:10rem;  
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .num-result-text-name{
+            margin: 1rem 0 2rem;
+            //font-weight: bold;
+            font-size: 1.4rem;
+            span{text-transform: uppercase}
+        }
+    }
+}
 
 @media screen and (min-height: 1000px){
     body {
@@ -357,6 +467,11 @@ input[type="checkbox"], input[type="radio"] {
         background-size: auto 75%;
     }
 }
+@media screen and (max-width: 900px){
+    .polaroid{
+        display:none;    
+    }
+}
 @media screen and (max-width: 730px){
     
     // mettre le formulaire en avant sur les mobiles
@@ -365,28 +480,19 @@ input[type="checkbox"], input[type="radio"] {
             display:flex;
             flex-direction: column;
             align-items: center;
-            //margin-bottom: 4rem;
         }
         
         .SiteLogo, .PageLogo {
-            height: 107px;
             width: 100%;
             text-align: center;
-            /*display: table-cell;
-            position: static;
-            width: auto;
-            height: auto;*/
         }
         .SiteLogo {
             position: inherit;
             background-position: center;
-/*            
-            width: 107px;
-            background-position: left;*/
         }
     }
     .TextContent {
-        max-width: 500px;
+        max-width: 600px;
         margin: auto;
         
         .ContentBand-ColumnHeader {
@@ -403,9 +509,28 @@ input[type="checkbox"], input[type="radio"] {
     .DescText {
         margin-bottom: 2rem;
     }
+}
+@media screen and (max-width: 640px){
+    .PageLogo {
+        width: 85%;
+        margin-top: 1.5rem;
+        text-align: center;
+        span{
+            line-height:100%;
+            font-size: 6rem; 
+        }
+        span+span{ font-size: 8rem; }
+    }
     
-
-    .moon-gif{display:none}
+    .FormContainer-Header {
+        font-family: inherit;
+        font-size: 2rem;
+    }
+    
+    .num-result{
+        margin-left:0; 
+    }
+    
 }
 @media screen and (max-width: 470px){
     .SiteHeader {
@@ -423,12 +548,15 @@ input[type="checkbox"], input[type="radio"] {
         font-size: 1.7rem;
     }
     
-    .moon-gif{display:none}
 }
 @media screen and (max-width: 400px){
+    .PageLogo {
+        padding-top: 1rem;
+        span{ font-size: 6rem; }
+        span+span{ font-size: 8rem; }
+    }
     .TextContent .ContentBand-ColumnHeader {
         background-position: top left;
         background-size: auto 75%;
     }
-    .moon-gif{display:none}
 }

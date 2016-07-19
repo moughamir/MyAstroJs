@@ -33,7 +33,7 @@ include('include/process-dri-postmailing.php');
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="bg2">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
@@ -50,7 +50,7 @@ include('include/process-dri-postmailing.php');
                         <div class="moon-gif"></div>
                     </div>
                 </div>
-                <div id="form-container" class="ContentBand-Column Form ">                                       
+                <div id="form-container" class="ContentBand-Column Form txtcenter">                                       
                     <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
                     <p class="FormContainer-name"> <?= $prenom ?></p>
                     <p>Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez. <br/><br/><?= $prenom ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention <?= $prenom ?>, agir ne veut pas dire se précipiter et faire mal les choses. Sous peine de commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…</p>
@@ -122,28 +122,7 @@ include('include/process-dri-postmailing.php');
                 </div>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        <?php include('include/footer_reassurance.php'); ?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### REMARKETINGS #### -->
