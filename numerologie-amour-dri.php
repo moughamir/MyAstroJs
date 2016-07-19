@@ -1,10 +1,10 @@
 <?php
 /* 
-    -------------------------------------------
-    --      cycle-lunaire-tel = AFFIL BASE       --
-    -------------------------------------------
+    -----------------------------------------------
+    --      numérologie amour DRI POST-MAIL       --
+    -----------------------------------------------
 
-    Created on : 12 juillet 2016
+    Created on : 19 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
@@ -17,14 +17,14 @@ include('include/process-dri-postmailing.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>MyAstro - Ce que vous révèle le cycle lunaire</title>
+        <title>MyAstro - Numérologie de l'Amour</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
                 
         
-        <link rel="stylesheet" type="text/css" href="css/cycle-lunaire.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
