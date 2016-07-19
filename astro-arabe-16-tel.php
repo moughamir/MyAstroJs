@@ -14,8 +14,9 @@
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="astro-arabe-16" />
                             <input type="hidden" name="method" value="affil-maxi" />
+                            <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="affilbase" />
-                            <input type="hidden" name="dri" value="http://www.myastro.fr/astro-arabe-16-dri" />
+                            <input type="hidden" name="dri" value="astro-arabe-16-dri" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />
                             <input type="hidden" name="jour" value="<?= $_SESSION['jour'];?>" />

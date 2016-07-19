@@ -5,11 +5,11 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/horoscope-2016" class="btn-theme">Horoscope 2016</a>
-      <a href="http://www.myastro.fr/horoscope-du-jour" class="btn-theme">Horoscope du jour</a>
-      <a href="http://www.myastro.fr/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
-      <a href="http://www.myastro.fr/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
-      <a href="http://www.myastro.fr/horoscope-de-l-amour" class="btn-theme">Horoscope de l'amour</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="btn-theme">Horoscope 2016</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="btn-theme">Horoscope du jour</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
+      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="btn-theme">Horoscope de l'amour</a>
     </td>
   </tr>
 </table>

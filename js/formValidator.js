@@ -13,16 +13,17 @@ $(document).ready(function(){
     
     // Gestion affichage du champs du conjoint    
     var toogle_spouse = function(){
-        console.log('toogle');
         var flag = false;
         var questions_amour_p2 = ['question_11', 'question_2', 'question_24' ];
         if($(this).prop("tagName") === 'SELECT'){
-            var question = $(this).find('option:selected').val();
+            var option = $(this).find('option:selected');
+            var question = option.val();
         } else {
-            var question = $(this).val();
+            var option = $(this);
+            var question = option.val();
         }
         for(var i=0 ; i<questions_amour_p2.length ; i++){
-            if( question.indexOf(questions_amour_p2[i]) > -1 || $(this).data('need-spouse') == 1) {
+            if( question.indexOf(questions_amour_p2[i]) > -1 || option.data('need-spouse') == 1) {
                 flag = true;
             }
         }
@@ -50,6 +51,7 @@ $(document).ready(function(){
     $(document).on('submit', 'form', function(e){
         e.preventDefault();
         form = $(this);
+        form_container = $('#form-container');
         form_overlay = $('#form-overlay');
         use_modal = true;
         use_form_alert = true;
@@ -61,12 +63,12 @@ $(document).ready(function(){
         
         alert_loading = '\
             <p class="alert alert-warning">\
-                <b><i class="fa fa-refresh fa-spin"><img src="http://www.myastro.fr/images/loader.gif" /></i></b> \
+                <b><i class="fa fa-refresh fa-spin"><img src="/images/loader.gif" /></i></b> \
                 Récupération des informations.\
             </p>';
         alert_done = '\
             <p class="alert alert-success">\
-                <b><i class="fa fa-check"><img src="http://www.myastro.fr/images/loader.gif" /></i> Inscription complétée.</b>\
+                <b><i class="fa fa-check"><img src="/images/loader.gif" /></i> Inscription complétée.</b>\
                 Vous allez être redirigé.\
             </p>'; 
         alert_error = '\
@@ -84,7 +86,7 @@ $(document).ready(function(){
         }
         // requête Ajax
         $.ajax({
-            url : "http://www.myastro.fr/inc/ajaxHandler.php", 
+            url : "inc/ajaxHandler.php",
             type : 'POST',
             cache : false, 
             dataType : "json",
@@ -118,9 +120,11 @@ $(document).ready(function(){
                         type: 'POST',
                         success: function(data){
                             setTimeout(function(){
-                                form.html(data);
+                                form_container.html(data);
                                 form_overlay.fadeOut();
+                                $(document).trigger('ajax_success');
                             }, 1000);
+                            
                         }
                     });
                 } else if(response.hasOwnProperty('url')){

@@ -17,9 +17,9 @@
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
                                         <li><h4 class="h4">
-                                            <a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://www.myastro.fr/numerologie-gratuite">Numérologie gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://www.myastro.fr/etapes-de-la-vie" >Étapes de la vie</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
+                                            <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="http://<?= ROOT_URL ?>/numerologie-gratuite">Numérologie gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="http://<?= ROOT_URL ?>/etapes-de-la-vie" >Étapes de la vie</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Étapes de la vie chiffre 7</h4></li>
                                     </ul>
                                 </div>
@@ -340,7 +340,7 @@ elseif (isset($_SERVER['REDIRECT_URL']))
     $url .= $_SERVER['REDIRECT_URL'];
 else
     trigger_error ('Could not get URL from $_SERVER vars');?>								   
-	<iframe src="//www.facebook.com/plugins/like.php?href=<? echo $url;?>&amp;mode=annuel&amp;signe=7&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowtransparency="true"></iframe>
+	<iframe src="//www.facebook.com/plugins/like.php?href=<?= $url;?>&amp;mode=annuel&amp;signe=7&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowtransparency="true"></iframe>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-lang="fr">Tweeter</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	<!-- Placez cette balise où vous souhaitez faire apparaître le gadget Bouton +1. -->
@@ -401,7 +401,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -417,7 +417,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -436,7 +436,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -453,7 +453,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -471,7 +471,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -487,7 +487,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
                                                                 </div>
 
                                                             </article>
@@ -505,7 +505,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
                                                                 </div>
 
                                                             </article>
@@ -522,7 +522,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
                                                                 </div>
 
                                                             </article>

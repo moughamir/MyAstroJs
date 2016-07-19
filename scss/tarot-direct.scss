@@ -6,6 +6,7 @@
 
     Created on : 25 mai 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
+                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 @import "templates/s-landing-tarot-3";
 
@@ -59,6 +60,7 @@ body {
     .ContentBand-ColumnHeader {
         background-color: white;
         box-shadow: 0 0 10px 1px $lightgrey;
+        font-size:2.5rem;
     }
 }
 
@@ -71,7 +73,7 @@ body {
     color: $turquoise;
     
     &-Logo {
-        height: 119px;
+        height: 100px;
         background-color: transparent;
         background-image: url($logo);
         background-position: center;
@@ -90,6 +92,7 @@ body {
         strong {
             text-transform: uppercase;
             color: white;
+            
         }
     }
 }
@@ -102,6 +105,7 @@ body {
         font-family: 'Lobster';
         color: $turquoise;
         font-weight: normal;
+        font-size: 3.5rem;
     }
 }
 
@@ -270,6 +274,13 @@ body {
     background-color: $turquoise;
     color: $grey;
     border: none;
+    transition: all 0.5s ease-in;
+    
+    &:hover{
+        border:2px solid $turquoise; 
+        color: $turquoise; 
+        background-color:transparent;
+    }
 }
 
 .FormField-Label {  
@@ -329,7 +340,7 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: bold;
     
     &-Slogan {
-        
+
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
@@ -393,6 +404,56 @@ input[type="checkbox"], input[type="radio"] {
     color: $bleu;
 }
 
+/* ---------------------------------- DRI-POSTMAIL --------------------------------- */
+.form-title{
+    color: $bleu;
+    background-color: white;
+    text-align: center;
+    font-family: 'Lobster';
+    padding: 1rem 0;
+    hyphens: none;
+    
+    & + p{
+        text-align: center;
+        display: inline-block;
+        padding: 1rem 0;
+        font-weight: bold;
+        width: 100%;
+        font-size: 1.80rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.DRI{
+    &-Slogan {
+        color:$turquoise;
+        border: 2px solid $turquoise;
+        text-align: center;
+        padding: 1rem;
+        font-size:2rem;
+        width: 80%;
+        margin:3rem auto 0;
+        hyphens: none;
+    }
+    
+
+    &-Sent {
+        text-align: center;
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
+    }
+}
+
+@media all and (max-width: 640px){
+   .DRI{
+        &-Slogan {
+            width: 100%;
+        }
+    }
+}
+
 @media all and (max-width: 510px){
     .Tchat-Overlay {
         border-radius: 0;
@@ -404,3 +465,4 @@ input[type="checkbox"], input[type="radio"] {
         padding: 0 1rem;
     }
 }
+

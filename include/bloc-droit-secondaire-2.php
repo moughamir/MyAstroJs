@@ -35,7 +35,7 @@ if ($path == 'numerologie-gratuite'){ $horoscope_type = 'du-mois'; $typetext = '
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-sans-cb">
+										<a href="http://<?= ROOT_URL ?>/voyance-sans-cb">
 											<img src="images_voyance/banniere/audiotel.gif" width="271" height="362"/>
 										</a>
 									</div>
@@ -76,7 +76,7 @@ if ($path == 'numerologie-gratuite'){ $horoscope_type = 'du-mois'; $typetext = '
 																				
 																			</div>
 
-																			<a href="http://www.myastro.fr/voyance-par-sms" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/voyance-par-sms" class="more" title=""></a>
 																		</div>
 																	</article>
 																</li>

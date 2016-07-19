@@ -24,7 +24,7 @@ $(document).ready(function(){
 			var picked = shuffled.shift();
 			
 			$('form').append('<input type="hidden" name="cards[]" value="'+picked+'" />');
-			$(this).attr('src','http://www.myastro.fr/tarot/cartes/'+picked);
+			$(this).attr('src','/tarot/cartes/'+picked);
 			$(this).animate({width:"100px"},600);
 				var Itemposition 	= $(this).position();
 				var Relativeposition = $('.relative').position();

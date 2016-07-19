@@ -9,7 +9,7 @@
 */
 $cards_dir = 'tarot/cartes/original-grand/';
 session_start();
-$_SESSION['reflexcache_id'] = $_GET['t1'];
+$_SESSION['reflexcache_id'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -141,8 +141,9 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                                 <input type="hidden" name="source" value="tarot-direct-rc-to" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="tarot" />
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tarot-direct-tchat" />
+                                <input type="hidden" name="dri" value="tarot-direct-tchat" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

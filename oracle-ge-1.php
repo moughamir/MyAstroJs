@@ -29,7 +29,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 <div class="subbody">
     <div class="top-nav">
         <div class="nav-content">
-            <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+            <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
         </div>
     </div>
     <div class="main">
@@ -166,7 +166,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="source" value="myastro-oracle-a4" />
                                 <input type="hidden" name="method" value="tarot-landing" />
                                 <input type="hidden" name="support" value="tarot"/>
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>"/>
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>"/>
                                 <input type="hidden" name="affiliation" value="adwords">
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>

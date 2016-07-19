@@ -11,13 +11,13 @@
                         <div class="nav-collapse collapse">
                             <!--<a class="brand" href="#">Serpentsoft</a>-->
                             <ul class="nav">
-                                <li><a href="http://www.myastro.fr/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générales</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://www.myastro.fr/blog/">Blog</a></li>
+                                <li><a href="http://<?= ROOT_URL ?>/blog/">Blog</a></li>
                                 <li class="divider-vertical"></li>
                             </ul>
                             <ul class="nav pull-right">
@@ -35,7 +35,7 @@
                                                         <hr />
                                                     </div>
                                                     <dl id="hcard-myastro" class="vcard">
-                                                      <dt><a class="url fn" href="http://www.myastro.fr">www.myastro.fr</a></dt>
+                                                      <dt><a class="url fn" href="http://<?= ROOT_URL ?>">www.myastro.fr</a></dt>
                                                         <dd class="org">Organisation : <span class="value">My Astro</span></dd>
                                                         <dd>
                                                           <dl class="adr">
@@ -46,7 +46,7 @@
                                                           </dl>
                                                         </dd>
                                                         <dd class="tel"><i class="icon-phone"></i> <span class="value"> +33 (0)4 82 53 71 59</span></dd>
-                                                        <dd class="mail"><i class="icon-envelope"></i> <span class="value"><a href="http://www.myastro.fr/contact"> contact@myastro.fr</a></span></dd>
+                                                        <dd class="mail"><i class="icon-envelope"></i> <span class="value"><a href="http://<?= ROOT_URL ?>/contact"> contact@myastro.fr</a></span></dd>
                                                     </dl>
                                                 </div>
                                                 <div class="span4">
@@ -116,9 +116,9 @@
                                                 </div>
                                                 <div class="row-fluid">
                                                     <ul class="span7 terms-conditions clearfix">
-                                                        <li><a href="http://www.myastro.fr/conditions-generale" rel="nofollow">Conditions générale.</a></li>
-                                                        <li><a href="http://www.myastro.fr/plan-du-site" rel="nofollow">Plan du site</a></li>
-                                                        <li><a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générale.</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/plan-du-site" rel="nofollow">Plan du site</a></li>
+                                                        <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
                                                     </ul>
                                                     <div class="span5 copyright clearfix">
                                                         <span>&copy; Copyright <?= date('Y') ?> Myastro, Tous droits réservés</span>

@@ -6,12 +6,28 @@
     Created on : 01 avril 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+
+function shuffle(array){
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+    
 $(document).ready(function(){
     
     cardsPath = (typeof cardsPath !== "undefined") ? cardsPath : 'tarot/cartes/original-grand/';
     trt_deckNbCards = (typeof trt_deckNbCards !== "undefined") ? trt_deckNbCards : 12;
     nbCardsToDraw = (typeof nbCardsToDraw !== "undefined") ? nbCardsToDraw : 5;
-    alwaysDraw = (typeof alwaysDraw !== "undefined") ? alwaysDraw : 0;
+    alwaysDraw = typeof alwaysDraw === "object" ? alwaysDraw : typeof alwaysDraw !== "undefined" ? [alwaysDraw] : [];
     trt_forceDrawFirst = (typeof trt_forceDrawFirst !== "undefined") ? trt_forceDrawFirst : true;
     trt_lock = (typeof trt_lock !== "undefined") ? trt_lock : false;
     trt_scrollOnComplete = (typeof trt_scrollOnComplete !== "undefined") ? trt_scrollOnComplete : true;
@@ -19,6 +35,7 @@ $(document).ready(function(){
     
     var cardsCounter = 0;
     var alreadyPicked = [];
+    alwaysDraw = shuffle(alwaysDraw);
     
     // -- animation survol des cartes verso --
     $('#cards-container .notFlipped').hover(
@@ -64,9 +81,12 @@ $(document).ready(function(){
 
             // tirage
             var cardNumber = 0;
-            if(alwaysDraw !== 0 && alreadyPicked.indexOf(alwaysDraw) === -1){
-                if(Math.random() >= (1 - (1/nbCardsToDraw * currCardCounter))){
-                    cardNumber = alwaysDraw;
+            var nbAlwaysDraw = alwaysDraw.length;
+            if(nbAlwaysDraw > 0){
+                if(Math.random() >= (1 - (1/nbCardsToDraw * (currCardCounter + nbAlwaysDraw - 1 )))){
+                    cardNumber = alwaysDraw[0];
+                    alwaysDraw.splice(0, 1);
+                    console.log(alwaysDraw);
                 }
             }
             if(cardNumber === 0){
@@ -81,7 +101,7 @@ $(document).ready(function(){
             card.attr('data-counter', currCardCounter);
             card.removeClass('notFlipped').addClass('Flipped');
             var place = $('#cards-container .place[data-number="' + currCardCounter + '"]');
-            $('#form-container').append('<input type="hidden" name="cards[]" value="'+ cardNumber +'.png" />');
+            $('form').append('<input type="hidden" name="cards[]" value="'+ cardNumber +'.png" />');
 
             // chargement dos de la carte
             card.children('.back').css({'background-image': 'url('+ cardsPath + cardNumber +'.png)'});

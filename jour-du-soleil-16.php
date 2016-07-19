@@ -88,7 +88,7 @@
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/jour-du-soleil-16-tel" />
+                                <input type="hidden" name="dri" value="jour-du-soleil-16-tel" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="theme_id" value="jds16_question" />

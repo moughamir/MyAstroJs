@@ -1,5 +1,4 @@
 <?php
-define('S_PATH_CACHE', '../cache');
 
 $A_SIGNE=array
 (

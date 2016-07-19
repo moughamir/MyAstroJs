@@ -41,11 +41,11 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2013","compatibilite-amoure
                                     data-target="http://www.myastro.fr/" href="http://www.myastro.fr/" >Voyance<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li<? if ($path == 'voyance-gratuite') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-gratuite" >Voyance gratuite</a></li>
-									<li<? if ($path == 'voyance-tarot-gratuit') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-tarot">Tirage tarot gratuit</a></li>
-									<li<? if ($path == 'voyance-numerologique-gratuite') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-numerologique-gratuite" >Analyse numérologique gratuite</a></li>
-                                    <li<? if ($path == 'voyance-par-sms') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-par-sms" >Voyance par SMS</a></li>
-                                    <li<? if ($path == 'voyance-sans-cb') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-sans-cb" >Voyance sans CB</a></li>
+                                    <li<? if ($path == 'voyance-gratuite') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/voyance-gratuite" >Voyance gratuite</a></li>
+									<li<? if ($path == 'voyance-tarot-gratuit') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/voyance-tarot">Tirage tarot gratuit</a></li>
+									<li<? if ($path == 'voyance-numerologique-gratuite') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/voyance-numerologique-gratuite" >Analyse numérologique gratuite</a></li>
+                                    <li<? if ($path == 'voyance-par-sms') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/voyance-par-sms" >Voyance par SMS</a></li>
+                                    <li<? if ($path == 'voyance-sans-cb') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/voyance-sans-cb" >Voyance sans CB</a></li>
                                 </ul>
 
                             </li>
@@ -58,11 +58,11 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2013","compatibilite-amoure
                                     data-target="#" href="http://www.myastro.fr/horoscope-gratuit">Horoscope Gratuit<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li<? if ($path == 'horoscope-2013') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-2013">Horoscope 2013</a></li>
-                                    <li<? if ($path == 'horoscope-du-jour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-du-jour">Horoscope du jour</a></li>
-                                    <li<? if ($path == 'horoscope-de-la-semaine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
-                                    <li<? if ($path == 'horoscope-du-mois') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-du-mois">Horoscope du mois</a></li>
-                                    <li<? if ($path == 'horoscope-de-l-amour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-de-l-amour">Horoscope de l'amour</a></li>
+                                    <li<? if ($path == 'horoscope-2013') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/horoscope-2013">Horoscope 2013</a></li>
+                                    <li<? if ($path == 'horoscope-du-jour') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/horoscope-du-jour">Horoscope du jour</a></li>
+                                    <li<? if ($path == 'horoscope-de-la-semaine') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
+                                    <li<? if ($path == 'horoscope-du-mois') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/horoscope-du-mois">Horoscope du mois</a></li>
+                                    <li<? if ($path == 'horoscope-de-l-amour') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour">Horoscope de l'amour</a></li>
                                     
                                 </ul>
                             </li>
@@ -75,11 +75,11 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2013","compatibilite-amoure
                                     data-target="#" href="http://www.myastro.fr/astrologie-gratuite" >Astrologie Gratuite<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li<? if ($path == 'compatibilite-amoureuse-feminine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
-                                    <li<? if ($path == 'compatibilite-amoureuse-masculine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
-                                    <li<? if ($path == 'portrait-astrologique-feminin') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
-                                    <li<? if ($path == 'portrait-astrologique-masculin') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
-                                    <li<? if ($path == 'votre-personnalite-astrologique') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
+                                    <li<? if ($path == 'compatibilite-amoureuse-feminine') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
+                                    <li<? if ($path == 'compatibilite-amoureuse-masculine') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
+                                    <li<? if ($path == 'portrait-astrologique-feminin') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
+                                    <li<? if ($path == 'portrait-astrologique-masculin') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
+                                    <li<? if ($path == 'votre-personnalite-astrologique') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
                                     
                                 </ul>
 
@@ -93,11 +93,11 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2013","compatibilite-amoure
                                     data-target="tarot-gratuit" href="http://www.myastro.fr/tarot-gratuit" >Tarot Gratuit<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li<? if ($path == 'tarot-de-l-amour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-de-l-amour" >Tarot de l'amour</a></li>
-                                    <li<? if (($path == 'tarot-quotidien') || ($path == 'afficher_tarot_quotidien '))echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-quotidien" >Tarot quotidien</a></li>
-                                    <li<? if ($path == 'tarot-hebdomadaire') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
-                                    <li<? if ($path == 'tarot-mensuel') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-mensuel" >Tarot mensuel</a></li>
-                                    <li<? if ($path == 'tarot-de-couple') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-de-couple" >Tarot de couple</a></li>
+                                    <li<? if ($path == 'tarot-de-l-amour') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/tarot-de-l-amour" >Tarot de l'amour</a></li>
+                                    <li<? if (($path == 'tarot-quotidien') || ($path == 'afficher_tarot_quotidien '))echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/tarot-quotidien" >Tarot quotidien</a></li>
+                                    <li<? if ($path == 'tarot-hebdomadaire') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
+                                    <li<? if ($path == 'tarot-mensuel') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/tarot-mensuel" >Tarot mensuel</a></li>
+                                    <li<? if ($path == 'tarot-de-couple') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/tarot-de-couple" >Tarot de couple</a></li>
                                     
                                 </ul>
                             </li>
@@ -110,11 +110,11 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2013","compatibilite-amoure
                                     data-target="numerologie-gratuite" href="http://www.myastro.fr/numerologie-gratuite" >Numérologie Gratuite<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li<? if ($path == 'numeroscope-2013') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/numeroscope-2013" >Numéroscope 2013</a></li>
-                                    <li<? if ($path == 'compatibilite-amoureuse-pour-les-femmes') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
-                                    <li<? if ($path == 'compatibilite-amoureuse-pour-les-hommes') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
-                                    <li<? if ($path == 'personnalite-numerologique') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/personnalite-numerologique" >Personnalité numérologique</a></li>
-                                    <li<? if ($path == 'etapes-de-la-vie') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/etapes-de-la-vie" >Etapes de la vie</a></li>
+                                    <li<? if ($path == 'numeroscope-2013') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/numeroscope-2013" >Numéroscope 2013</a></li>
+                                    <li<? if ($path == 'compatibilite-amoureuse-pour-les-femmes') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
+                                    <li<? if ($path == 'compatibilite-amoureuse-pour-les-hommes') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
+                                    <li<? if ($path == 'personnalite-numerologique') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/personnalite-numerologique" >Personnalité numérologique</a></li>
+                                    <li<? if ($path == 'etapes-de-la-vie') echo ' class="dropdown active"';?>><a href="http://<?= ROOT_URL ?>/etapes-de-la-vie" >Etapes de la vie</a></li>
 
 								</ul>
 							</li>

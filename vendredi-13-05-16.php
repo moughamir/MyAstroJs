@@ -77,7 +77,7 @@
                                                         <!-- ########## identification formulaire ########## -->
                                                         <input type="hidden" name="source" value="vendredi-13-05-16" />
                                                         <input type="hidden" name="method" value="affil-maxi" />
-                                                        <input type="hidden" name="dri" value="http://www.myastro.fr/vendredi-13-05-16-tel" />
+                                                        <input type="hidden" name="dri" value="vendredi-13-05-16-tel" />
                                                         <input type="hidden" name="support" value="voyance" />
                                                         <input type="hidden" name="affiliation" value="affilbase" />
                                                         <input type="hidden" name="partenaires" value="1" />
@@ -215,7 +215,7 @@
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="vendredi-13-05-16" />
                                 <input type="hidden" name="method" value="affil-maxi" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/vendredi-13-05-16-tel" />
+                                <input type="hidden" name="dri" value="vendredi-13-05-16-tel" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <!-- ########## autres champs pré-remplis ########## -->
@@ -386,9 +386,9 @@
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="vendredi-13-05-16" />
                                 <input type="hidden" name="method" value="affil-mini" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tel-saint-patrick-2016" />
+                                <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>" />
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />

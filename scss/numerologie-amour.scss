@@ -1,0 +1,434 @@
+/* 
+    ----------------------------
+    --     numerologie-amour     --
+    ----------------------------
+
+    Created on : 19 juillet 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
+
+    Description : un layout basé sur une grille d'une seule colonne centrale
+*/
+
+@import "s-landing-voyance-2";
+
+/* Dossier images */
+$img_dir : "../images_landing/numerologie-amour/";
+
+/* Palette */
+$color1 : #2c2927; // pour les blocs foncés
+$color2 : #f05882; // rose pour les boutons et "femme"
+$color3 : #0ae9d1; // turquoise pour "homme"
+$color4 : #3e96ba; // background
+$color5 : #304d59; // background reassurance
+
+$font1: "Open Sans", sans-serif; //texte courant
+$font2: 'Ubuntu Condensed', sans-serif; //titres
+
+$bg : $color4;
+$woman : $color2;
+$men : $color3;
+
+/* Mixins */
+@mixin box-shadow{
+    box-shadow: 0 0 6px -1px black;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 2rem;
+    font-family: $font1;
+    font-weight: 400;
+    color: white;
+    background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
+    background-size: cover;
+}
+
+/* ************** MACRO-TYPOS *************** */
+h2,
+button{
+    hyphens: none;
+}
+
+
+/* ************** LAYOUT *************** */
+.PageWrapper{
+    padding:0;
+}
+.ContentBand {
+    margin-top: 0;
+}
+.SiteHeader {
+    margin-bottom: 4rem;
+}
+.SiteLogo {
+    background: url($img_dir+"logo-MYASTRO.svg") 2rem no-repeat;
+    background-size: contain;
+    height: 107px;
+    width: 100%;
+    position: absolute;
+}
+.PageLogo {
+    background: url($img_dir+"title.png") center no-repeat;
+    background-size: contain;
+    height: 110px;
+    display: inline-block;
+    width: 100%;
+}
+.ContentBand-ColumnHeader *{
+    //background: url($img_dir+"marie.png") bottom left no-repeat;
+    text-align: center !important;
+}
+.ContentBand-ColumnHeader p,
+.FormContainer-Slogan,
+.FormContainer-name,
+.FormContainer-name + p {
+    font-weight: bold;    
+}
+.Form .ContentBand-ColumnHeader {
+    margin-bottom:1.5rem;
+}
+    
+.DescText-Title {
+    background: transparent url($img_dir+"titre.svg") no-repeat center;
+    background-size: contain;
+    margin-bottom: -8rem;
+    
+    span{display:none}
+    
+    //padding-left: 30%;
+    /*text-align: center;
+    font-family: $font1;
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 4.8rem;
+    //margin-bottom: 4rem;
+    text-shadow: 0 0 4px $color1;
+    height: inherit;*/
+    
+    &-Legend {
+        padding-top: 0;
+        background-color: transparent;
+        text-align: right;
+        font-size: 1.9rem;
+        text-shadow: 0 0 4px $color1;
+    }
+}
+
+.moon-gif{
+    background: transparent url($img_dir+"lune-anim.gif") no-repeat top center;
+    background-size: 85%;
+    //width: 52.1rem;
+    height: 51.6rem;
+    max-width: 100%;
+    //height: auto;
+}
+
+.DescText-Content {
+    background: transparent;
+    text-indent: 5rem;
+}
+.FormContainer {
+    background: rgba(44, 41, 39, 0.6);
+    @include box-shadow;
+    
+    
+    &-Header {
+        font-family: $font2;
+        color: white;
+        padding-bottom: 3rem; 
+        background: url($img_dir+"fleche.svg") no-repeat bottom center;
+    }
+    
+    &-Submit {
+        padding: 1rem 4rem;
+        margin-bottom:-5rem;
+        border: 0px solid $color1;
+        //border-radius: 4rem;
+        background-color: $color2;
+        //box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-family: $font2;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        transition: background 0.25s ease-in;
+        
+        &:active,
+        &:focus,
+        &:hover {
+            //box-shadow: inset 4px 4px 1px rgba(0, 0, 0, 0.5), inset -4px -4px 2px rgba(255, 255, 255, 0.5);
+            background-color: darken($color2, 15%);
+        }
+    }
+    
+    &.DRI .DRI {
+        
+        box-shadow: 0 0 0px 0px black;
+        background: transparent;
+        
+        &-Intro {
+            background-color: $color4;
+            font-family: $font2;
+            
+            &-Title {
+                color: $color1;
+                text-transform: uppercase;
+            }
+            &-Text {
+                color: white;
+            }
+        }
+        &-Slogan {
+            /*background-color: $color3;
+            font-family: $font2;
+            color: $color1;
+            text-transform: uppercase;*/
+            background: transparent url($img_dir+"ten-min-free.png") center no-repeat;
+            width: 182px;
+            height: 111px;
+            display: inline-block;
+            margin: 15px auto;
+            
+            span{display:none}
+            
+        }
+        &-Form {
+            padding: 2rem;
+            background-color: transparent;
+            
+            .FormField-Input {
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        &-Sent {
+            font-family: $font2;
+            
+            strong {
+                font-weight: normal;
+                color: $color3;
+            }
+        }
+    }
+}
+
+.FormField-Label {
+    text-transform: uppercase;
+    
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $men;
+    }
+}
+
+.FormField-Input {
+    border: none;
+    transition: all 0.25s ease-in;
+    
+    &:active,
+    &:focus{
+        box-shadow: 0 0 6px -1px $color1;   
+        background-color: #fffdc5;
+    }
+    
+    &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
+        outline-width: 0;
+        box-shadow: 0 0 6px -1px $color1;
+        border-color: $color1;
+    }
+}
+
+.FormField-Info {
+    border: none;
+    color: $color1;
+    box-shadow: 0 0 6px -1px $color1;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.How-header {
+    font-weight: normal;
+    font-size: 2.4rem;
+    font-family: inherit;
+}
+.How-Wizard {
+    border-color: $color1;
+    color: $color1;
+    
+    &Item-Img.form {
+        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
+        background-size: contain;
+    }
+    &Item-Img.phone {
+        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
+        background-size: contain;
+    }
+}
+
+.ReassuranceList {
+    background-color: $color5;
+    color: white;
+    @include box-shadow;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($img_dir+"ico-star.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($img_dir+"ico-lock.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($img_dir+"ico-gift.png") center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($img_dir+"ico-trophy.png") center no-repeat;
+    background-size: contain;
+}
+
+.alert {
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+/* ************** PAGE TEL *************** */
+.FormContainer-Slogan{}
+.FormContainer-name{}
+.FormContainer.DRI {
+    background-color: transparent;
+    text-align: center;
+    box-shadow: inherit;
+}
+.FormContainer-Slogan-bloc{
+    color:white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    border:2px solid white;
+    padding:15px;
+    
+}
+
+
+
+@media screen and (min-height: 1000px){
+    body {
+        padding-top: 3.5rem;
+    }
+}
+@media screen and (max-width: 1000px){
+    .TextContent .ContentBand-ColumnHeader {
+        background-position: top left;
+        background-size: auto 75%;
+    }
+}
+@media screen and (max-width: 730px){
+    
+    // mettre le formulaire en avant sur les mobiles
+    .SiteHeader {
+        .PageWrapper{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            //margin-bottom: 4rem;
+        }
+        
+        .SiteLogo, .PageLogo {
+            height: 107px;
+            width: 100%;
+            text-align: center;
+            /*display: table-cell;
+            position: static;
+            width: auto;
+            height: auto;*/
+        }
+        .SiteLogo {
+            position: inherit;
+            background-position: center;
+/*            
+            width: 107px;
+            background-position: left;*/
+        }
+    }
+    .TextContent {
+        max-width: 500px;
+        margin: auto;
+        
+        .ContentBand-ColumnHeader {
+            background-size: initial;
+            background-position: bottom left;
+        }
+    }
+    .DescText-Title {
+        display:none;
+        /*line-height: 4.2rem;
+        margin-bottom: 1rem;
+        margin-top: 3rem;*/
+    }
+    .DescText {
+        margin-bottom: 2rem;
+    }
+    
+
+    .moon-gif{display:none}
+}
+@media screen and (max-width: 470px){
+    .SiteHeader {
+        margin-bottom: 0;
+        /*.SiteLogo, .PageLogo {
+            display: block;
+            width: 100%;
+            background-position: center;
+        }*/
+        .PageLogo {
+            height: 120px;
+        }
+    }
+    .DescText-Title-Legend {
+        font-size: 1.7rem;
+    }
+    
+    .moon-gif{display:none}
+}
+@media screen and (max-width: 400px){
+    .TextContent .ContentBand-ColumnHeader {
+        background-position: top left;
+        background-size: auto 75%;
+    }
+    .moon-gif{display:none}
+}

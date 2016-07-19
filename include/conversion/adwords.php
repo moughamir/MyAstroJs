@@ -1,5 +1,5 @@
 <!-- fichier conversion adwords -->
-<?php if ($_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'adwords'){ ?>
+<?php if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'adwords'){ ?>
 <!-- Conversion tag Adwords -->
 <!-- Google Code for MY ASTRO QUESTION INSCRIPTION Conversion Page -->
 <script type="text/javascript">

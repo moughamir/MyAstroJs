@@ -62,7 +62,7 @@
               <div class="widget-content clearfix thumbnails">
                 <ul class="posts-in-images clearfix">
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Taureau" title="Taureau">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-taureau">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-taureau">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/taureau.png" />
@@ -71,7 +71,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Capricorne" title="Capricorne">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-capricorne">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-capricorne">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/capricorne.png" />
@@ -80,7 +80,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Gémeaux" title="Gémeaux">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-gemeaux">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-gemeaux">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/gemeaux.png" />
@@ -89,7 +89,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Verseau" title="Verseau">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-verseau">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-verseau">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/verseau.png" />
@@ -98,7 +98,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Bélier" title="Bélier">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-belier">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-belier">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/belier.png" />
@@ -107,7 +107,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Poissons" title="Poissons">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-poissons">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-poissons">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/poissons.png" />
@@ -117,7 +117,7 @@
 
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Scorpion" title="Scorpion">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-scorpion">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-scorpion">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/scorpion.png" />
@@ -126,7 +126,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Balance" title="Balance">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-balance">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-balance">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/balance.png" />
@@ -135,7 +135,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Sagittaire" title="Sagittaire">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-sagittaire">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-sagittaire">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/sagittaire.png" />
@@ -144,7 +144,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Lion" title="Lion">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-lion">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-lion">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/lion.png" />
@@ -153,7 +153,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Cancer" title="Cancer">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-cancer">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-cancer">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/cancer.png" />
@@ -162,7 +162,7 @@
                   </li>
 
                   <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Vierge" title="Vierge">
-                    <a href="http://www.myastro.fr/horoscope-de-l-amour-vierge">
+                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-vierge">
                       <div class="thumb-effect">
                         <div class="mask"></div>
                         <img src="images_voyance/signes/vierge.png" />
@@ -361,7 +361,7 @@
           <!-- Horizontal Categories -->
           <section class="cat-widget h-cat-1">
             <div class="cat-widget-title">
-              <h3><? echo str_replace('-', ' ', $path);?></h3>
+              <h3><?= str_replace('-', ' ', $path);?></h3>
             </div>
 
             <div class="cat-widget-content">
@@ -388,7 +388,7 @@
 
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                   </div>
                                 </article>
                               </div>
@@ -405,7 +405,7 @@
                                       <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">La compatibilité amoureuse pour les hommes vous donnera la possibilité de savoir si votre amie est astrologiquement compatible avec vous. S'il s'avère que vous êtes faits l'un pour l'autre, vous avez de longues années de bonheur devant vous</h6>                                                                       
                                     </div>
 
-                                    <a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                   </div>
 
                                 </article>
@@ -460,7 +460,7 @@
         <div itemscope >
           <ul class="breadcrumb" itemprop="breadcrumb">
             <li>
-             <span class="h4"> <a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+             <span class="h4"> <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
               <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope de l'amour</li></li></span>
             </ul>
           </div>

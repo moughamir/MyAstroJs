@@ -18,7 +18,7 @@ $page_en_cours = $_SERVER['PHP_SELF'];
 				 <!-- New In Pictures -->
 								<aside class="widget w-pictures">
 									<div class="widget-title">
-										<h4><? echo $typetext ; ?></h4>
+										<h4><?= $typetext ; ?></h4>
 									</div>
 
 									<div class="widget-content clearfix thumbnails">
@@ -57,7 +57,7 @@ $page_en_cours = $_SERVER['PHP_SELF'];
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-sans-cb">
+										<a href="http://<?= ROOT_URL ?>/voyance-sans-cb">
 											<img src="images_voyance/banniere/audiotel.jpg" alt="Voyance sans carte bancaire"  width="271" height="362"/>
 										</a>
 									</div>

@@ -66,9 +66,9 @@ $s_contenu = '<tr>
   $s_contenu.= '</tr></tbody></table>';
   
   $s_contenu.= '</td></tr><tr><td height="31" valign="top" width="650"><table border="0" cellpadding="0" cellspacing="0" width="650"><tbody><tr>                   
-                    <td align="left" valign="top" width="650"><a href="http://www.myastro.fr/horoscope-de-la-semaine-'.$lien_amour.'"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_13.jpg" alt="" style="display: block;" border="0" height="31" width="216"></a></td> 
-                    <td align="left" valign="top" width="650"><a href="http://www.myastro.fr/horoscope-de-la-semaine-'.$lien_argent.'"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_14.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
-                                        <td align="left" valign="top" width="650"><a href="http://www.myastro.fr/horoscope-de-la-semaine-'.$lien_travail.'"><img src="http://www.myastro.fr/images/mail/horoscope_jour/News-horoscope_15.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="http://'.ROOT_URL.'/horoscope-de-la-semaine-'.$lien_amour.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_13.jpg" alt="" style="display: block;" border="0" height="31" width="216"></a></td> 
+                    <td align="left" valign="top" width="650"><a href="http://'.ROOT_URL.'/horoscope-de-la-semaine-'.$lien_argent.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_14.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
+                                        <td align="left" valign="top" width="650"><a href="http://'.ROOT_URL.'/horoscope-de-la-semaine-'.$lien_travail.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_15.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
                     </tr>
                 </tbody>
               </table>';

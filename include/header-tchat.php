@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <link rel="shortcut icon" href="favicon.ico">
-<link rel="stylesheet" href="http://www.myastro.fr/sstyle_landing.css" />
-<link href='http://www.myastro.fr/tchat/style.css' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="/sstyle_landing.css" />
+<link href='/tchat/style.css' rel='stylesheet' type='text/css' />
 <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media=all />
 
 <?php if($_SERVER['REQUEST_URI'] == "/tchat/") { ?>
@@ -18,7 +18,7 @@
 <body class="voyance-telephone-1" style="max-width:100%;">
     <div class="top-nav">
         <div class="nav-content">
-            <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+            <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
         </div>
     </div>
    

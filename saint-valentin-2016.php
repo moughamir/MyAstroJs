@@ -206,7 +206,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                     <input type="hidden" name="support" value="voyance"/>
                     <input type="hidden" name="theme_id" value="question_2" />
                     <input type="hidden" name="affiliation" value="affilbase" />
-                    <input type="hidden" name="dri" value="http://www.myastro.fr/dri-4" />
+                    <input type="hidden" name="dri" value="dri-4" />
                     <div class="form-element gender-select">
                         <label for="sexe-F" class="radio-inline">
                             <img src="images_landing/saint-valentin-2016/woman.png" />Femme<!--

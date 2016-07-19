@@ -11,7 +11,7 @@ include("include/tracking-mail.php");
 	        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	        <meta name="viewport" content="width=device-width">
 	        <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script><!-- +++ -->
-	        <link rel="stylesheet" href="http://www.myastro.fr/css/bootstrap3.min.css">
+	        <link rel="stylesheet" href="/css/bootstrap3.min.css">
 	        <link rel="stylesheet" href="sstyle_landing.css" />
 	        <link rel="stylesheet" href="css/dri.css">
 	        <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media=all />
@@ -26,9 +26,9 @@ include("include/tracking-mail.php");
 	<body class="voyance-telephone-1 dri-3 dri-5">
 	    <div class="top-nav">
 	        <div class="nav-content"><div class="links">
-	            <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-				<a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-				<a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+	            <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
+				<a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
+				<a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
 			</div></div>
 	    </div>
 	    <div class="main">

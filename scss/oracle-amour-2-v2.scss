@@ -1,0 +1,1046 @@
+/* 
+    -----------------------------------------
+    --       oracle -amour 2 V             --
+    --      avec jquery.baraja.js          --
+    --       animation des cartes          --
+    -----------------------------------------
+
+    Created on : 06 juillet 2016
+    Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
+*/
+@import "knacss444/knacss";
+
+/* --------------- VARIABLES  --------------- */
+$nomCampagne : "oracle-amour-2/";
+$img_dir : "../images_landing/" + $nomCampagne;
+$bg_img : $img_dir + "bg.jpg";
+$logo_img : $img_dir + "logo-MYASTRO.svg";
+$titre_img : $img_dir + "titre-principal.png";
+$voyant_img : $img_dir + "voyant.png";
+$triangle_img : $img_dir + "triangle-noir.svg";
+$cardback_img : $img_dir + "cardback.png";
+$icostar_img : $img_dir + "ico-star.png";
+$icolock_img : $img_dir + "ico-lock.png";
+$icogift_img : $img_dir + "ico-gift.png";
+$icotrophy_img : $img_dir + "ico-trophy.png";
+$color1 : #dfd4c9;// beige
+$color2 : #f05882;// rose
+$color3 : #2c2927;// gris
+
+// pour le jeu de tarot
+$card-place:$color3;
+
+/* ------------------ FONTS ----------------- */
+$tiny-screen       : 320px;
+$tiny-plus-screen  : 480px;
+$small-screen      : 640px;
+$small-plus-screen : 768px;
+$medium-screen     : 960px;
+$medium-plus-screen: 1024px;
+$large-screen      : 1280px;
+$large-plus-screen : 1440px;
+$extra-large-screen: 1600px;
+$ultra-large-screen: 1920px;
+
+/* ------------------ FONTS ----------------- */
+$font1 : 'Arya', sans-serif;// titrage principal
+$font2 : 'Parisienne', cursive;// titrage principal manuscrit
+$font3 : 'Ubuntu Condensed', sans-serif;// titrage de bloc
+$font4 : 'Open Sans', sans-serif;// texte courant et labels
+
+/* ------------------ LAYOUT ---------------- */
+
+body {
+    font-size: 1.3rem;
+    //font-family:$font4;
+    color:#000;
+    background: $color1 url($bg_img) no-repeat center top fixed;
+    background-size: cover;
+    padding:1rem;
+}
+
+.PageWrapper {
+    display: table;
+    width: 100%;
+    max-width:  $large-screen;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.PageWrapper600 {
+    display: table;
+    width: 100%;
+    max-width: $small-screen ;
+    margin: auto;
+    padding: 0 2rem;
+    text-align:center;
+}
+
+.SiteHeader .PageWrapper{
+    display:flex;
+    flex-direction: row;
+    @include uneven-grid(1, 5);
+}
+
+.SiteLogo {
+    background: transparent url($logo_img) center no-repeat;
+    background-size: contain;
+    height: 11rem;
+    width: 11rem;
+}
+
+.PageLogo {
+
+    display:inline-block;
+    //width:40rem;
+    min-height:18.5rem;
+    background: url($titre_img) center center no-repeat;
+    backgound-size:contain;
+    span{
+        display:none;
+    }
+}
+
+.ContentBand {
+    margin-top: 5.5rem;
+    margin-bottom: 4rem;
+    
+    &-Column {
+        display: table-cell;
+        vertical-align: bottom;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+.DescText-Title {
+    height: 150px;
+    margin-top: 0;
+    background-color: silver;
+    &-Legend{
+        background: url($voyant_img) right top no-repeat;
+        backgound-size:contain;    
+        padding: 5rem 15rem;
+        text-align: right;
+    }
+}
+
+.DescText-Content {
+    padding: 1.2rem 1.8rem;
+    text-align: center;
+}
+
+.titrage{
+    padding-right: 2rem;
+    color:#000;
+    text-align:center;
+    h2{
+        font-family:$font2;   
+    }
+}
+
+/* -------------- STRUCTURE DE BASE DU WIDGET TAROT ------------- */
+.WidgetTarot {
+    text-align: center;
+    position: relative;
+    
+    .WidgetTarotHeader{
+        margin-bottom: 2rem;
+        padding-bottom: 0.15rem;
+        background: url($triangle_img) no-repeat bottom center;
+    }
+    
+    &-Draw, &-Result {
+        margin-bottom: 4rem;
+    }
+    
+    
+    
+    &-Card {
+        display: inline-block;
+        position: relative;
+        width: 75px;
+        height: 145px;
+        overflow: hidden;
+        cursor: pointer;
+        perspective-origin: center bottom;
+        z-index: 5;
+        margin-right: -50px;
+        margin-left: -20px;
+        
+        @media screen and (max-width: 730px){
+            margin-right: 20px;
+        }
+        
+        &.notFlipped {
+            background: white;
+            position: relative;
+            outline: 1px solid transparent;
+        }
+        
+        &.Flipped {
+            z-index: 10;
+            outline: 1px solid transparent;
+        }
+        
+        &-Face {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transition-duration: 0.5s;
+            -webkit-transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: linear;
+            -webkit-backface-visibility: hidden;
+            transform-style: preserve-3d;
+            transition-duration: 0.5s;
+            transition-property: transform;
+            transition-timing-function: ease-out;
+            backface-visibility: hidden;
+            
+            &.front {
+                z-index: 5;
+                border: 3px solid grey;
+                outline: 1px solid transparent;
+            }
+            
+            &.back {
+                z-index: 0;
+                -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+                border: 3px solid orange;
+                background-repeat: no-repeat;
+                background-size: cover;
+                outline: 1px solid transparent;
+            }
+        }
+        
+        
+        &.Flipped &-Face.front {
+            z-index: 10;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+        &.Flipped &-Face.back {
+            z-index: 5;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            background-size: 100% 100%;
+        }
+        
+        &.place {
+            background: silver;
+            margin: 0;
+            margin-right: 10px;
+        }
+        
+        &.place:last-child {
+            margin-right: 0;   
+        }
+    }
+}
+
+/* -------------- WIDGET TAROTS PERSONNALISATION ------------- */
+.WidgetTarot-Card {
+    
+    &.notFlipped {
+        background-color: transparent;
+        
+        
+    }
+    // ANIMATION DU DEBUT
+    .animCards{
+        animation-name: animCards; 
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: linear;
+    }
+    @keyframes animCards{
+        0% { 
+            transform: translate(0px);
+            opacity:0; 
+        }
+
+        100%  { 
+            transform: translate(0px);
+            opacity:1;
+        }
+    }
+    
+    &-Face.front {
+        border: none;
+        background: transparent url($cardback_img) center no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+        background: transparent;
+        background-size: cover;
+    }
+    
+    &.place {
+        background-size: 100% 100%;
+        background-color: $card-place;
+        opacity: 1;
+        border-radius: 6px;
+    }
+}
+
+/* -------------- BARAJO TAROTS ANIMATION ------------- */
+
+
+#baraja-el{
+    margin-bottom:14rem;
+}
+
+.animTitre{
+    animation-name: animTitre; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animTitre{
+    0% { 
+        background-position: 50% 80% ;
+    }
+    50%  { 
+        background-position: 50% 100% ; 
+    }
+    100%  { 
+        background-position: 50% 80% ;
+    }
+}
+
+
+
+/* -------------- FORMULAIRE ------------- */
+.alert {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    border: 1px solid;
+    color: white;
+}
+
+.fa img {
+    display: none;
+}
+
+.Column-Form {
+    text-align: right;
+}
+
+.FormContainer {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    padding: 3rem;
+    padding-top: 1.5rem;
+    margin: auto;
+    text-align: left;
+    background-color: rgba(40, 40, 40, 0.6 );
+    
+    
+    
+    &-Header {
+        margin: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-family: inherit;
+        font-size: 2.8rem;
+        font-weight: inherit;
+        font-family: $font3;
+        color:white;
+        padding-bottom: 3rem; 
+        background: url($triangle_img) no-repeat bottom center;
+    }
+    
+    &-Slogan {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    &-Fields {
+        padding: 0 2rem;
+    }
+    
+    &-Submit {
+        display: block;
+        min-width: 60%;
+        margin: auto;
+        margin-top: 3rem;
+        padding: 1rem 2rem;
+        color: #fff;
+        font-family: $font3;
+        font-size: 2.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor:pointer;
+        white-space: nowrap;
+        border: 0px solid #fff;
+        background-color: $color2;
+        transition: background-color 0.25s ease-in-out;
+        -moz-transition: background-color 0.25s linear;
+        position:relative;
+        bottom:-5rem;
+        
+        &:hover {
+            background-color: darken($color2, 10%);
+        }
+    }
+    
+    &.DRI {
+        background-color: transparent;
+        text-align: center;
+        
+        .DRI {
+            &-Intro {
+                padding: 2rem;
+                background-color: lightgrey;
+                * {
+                    margin: 0;
+                    font-family: inherit;
+                    font-weight: normal;
+                }
+                &-Title {
+                    margin-bottom: 1rem;
+                    padding-bottom: 0.5rem;
+                    border-bottom: 3px dotted;
+                    font-size: 2.2rem;
+                }
+                &-Text {
+                    font-size: 2rem;
+                    color: grey;
+                }
+            }
+            &-Slogan {
+                padding: 1rem 2rem;
+                margin: 0;
+                background-color: $color2;
+                color: white;
+                font-size: 2.75rem;
+                font-family: $font3;
+                font-weight: bold;
+            }
+            &-Form {
+                padding: 2rem;
+                background-color: black;
+                
+                .FormContainer-Submit {
+                    bottom:0;
+                }
+            }
+            &-Sent {
+                padding: 2rem;
+                font-family: inherit;
+                font-size: 1.25rem;
+                color:white;
+            }
+            
+        }
+
+        
+        /* MODALE FINALE */
+        /*&.overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            color:white;
+        }*/
+        
+    }
+}
+
+.fa-venus{color:#f05882}
+.fa-mars{color:#0ae9d1}
+
+.FormField {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+    
+    &-Label {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-family: $font4;
+        font-size: 1.6rem;
+        color:white;
+        text-transform:uppercase;
+        
+    }
+    
+    &-Input {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+        border: 1px solid #ccc;
+        &.radio {
+            display: inline-block;
+        }
+        
+        &:focus,
+        &:active{
+            box-shadow:0px 0px 6px $color2;
+        }
+    }
+    
+    
+    
+    &-TableInputContainer {
+        display: table;
+        width: 100%;
+        margin: auto;
+        
+        &-Cell {
+            display: table-cell;
+            padding-right: 1rem;
+            text-align: center;
+            white-space: nowrap;
+            
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        
+        &.fixed-2-col &-Cell {
+            width: 33.333%;
+        }
+        &.fixed-3-col &-Cell {
+            width: 33.333%;
+        }
+        
+        &.gender {
+            max-width: 300px;
+        }    
+        &.relationship-status {
+            max-width: 400px;
+            
+            
+        }
+    }
+    
+    &.radio &-Label, &.radio &-Input {
+        display: inline-block;
+        width: auto;
+        margin-top: 0;
+        vertical-align: middle;
+        margin: 0 0.2rem;
+    }
+    
+    &-Info {
+        display: block;
+        position: absolute;
+        margin-top: -3.7rem;
+        padding: 0.8rem 1.4rem;
+        background-color: rgb(250, 255, 189);
+        border: 0px solid;
+        transition: all 0.25s;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    &-Input:focus + &-Info {
+        margin-top: -8rem;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.overlay {
+    /*display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    height: 100%;
+    z-index: 2;
+
+    color:white;*/
+
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100vw;
+    height:100vh;
+    max-width: inherit;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+    color:black;
+
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font3;
+        
+         
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+               :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
+}
+
+.anim-input{
+    animation-name: anim-input;
+    animation-duration: 0.25s;
+    animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+@keyframes anim-input {
+    0%{ width:40%; opacity:0.2 }
+    100% { width:100%;  opacity:1}
+}
+
+/* Éléments à cacher de la deuxieme étape "tel" */
+#form2-result-Tarot,
+#form2-form{display:none}
+
+.p-result{
+    margin-bottom: 3rem;
+}
+.anim-fadeIn{
+    animation-name: anim-fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-delay: 1s;  
+    animation-fill-mode: forwards;
+}
+@keyframes anim-fadeIn {
+    0%{opacity:0.25}
+    100% {opacity:1}
+}
+
+
+
+/* -------------- PAGE DRI ------------- */
+.result-Tarot .ContentBand-ColumnHeader{
+    padding-right: 2rem;
+    color:#000;
+    text-align:center;
+    h2{
+        font-family:$font2;   
+    }
+}
+
+/* ANIMATION DRI */
+.TextContent{
+    opacity:0;
+    animation-name: anim-fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -moz-animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+    @keyframes anim-fadeIn {
+        0%{opacity:0.25}
+        100% {opacity:1}
+    }
+}
+
+.TextContent{animation-delay: 0s; }
+
+/* FENETRE MODALE POUR LA DRI */
+/*.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+
+    
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font3;
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+            :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
+}*/
+
+
+/* -------------- FOOTER ------------- */
+
+.SiteFooter{margin-top:8rem}
+
+.ReassuranceList {
+    text-align: center;
+    list-style-type: none;
+    display: table;
+    width: 100%;
+    padding: 1.2rem 0;
+    text-align: center;
+    background-color: black;
+    color:white;
+    
+    &-Item {
+        display: table-cell;
+        border-right: 1px solid;
+        padding: 0 2rem;
+        text-align: left;
+        
+        &-Img {
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 2rem;
+            background-color: white;
+        }
+        
+        &-Txt {
+            display: inline-block;
+        }
+        
+        &:last-child {
+            border-right: 0;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icostar_img) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icolock_img) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($icogift_img) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icotrophy_img) center no-repeat;
+    background-size: contain;
+}
+
+.SiteCopyright {
+    text-align: center;
+}
+
+/* Règles responsive tirage tarot */
+
+@media screen and (max-width: 880px){
+    .WidgetTarot-Card.place {
+        margin-right: 0.8rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .WidgetTarot-Card {
+        width: 75px;
+        height: 145px;
+    }
+    .WidgetTarot-Card[data-card="6"].notFlipped,
+    .WidgetTarot-Card[data-card="7"].notFlipped, 
+    .WidgetTarot-Card[data-card="8"].notFlipped, 
+    .WidgetTarot-Card[data-card="9"].notFlipped, 
+    .WidgetTarot-Card[data-card="10"].notFlipped, 
+    .WidgetTarot-Card[data-card="11"].notFlipped, 
+    .WidgetTarot-Card[data-card="12"].notFlipped,
+    .WidgetTarot-Card[data-card="13"].notFlipped, 
+    .WidgetTarot-Card[data-card="14"].notFlipped, 
+    .WidgetTarot-Card[data-card="15"].notFlipped, 
+    .WidgetTarot-Card[data-card="16"].notFlipped, 
+    .WidgetTarot-Card[data-card="17"].notFlipped, 
+    .WidgetTarot-Card[data-card="18"].notFlipped, 
+    .WidgetTarot-Card[data-card="19"].notFlipped, 
+    .WidgetTarot-Card[data-card="20"].notFlipped, 
+    .WidgetTarot-Card[data-card="21"].notFlipped, 
+    .WidgetTarot-Card[data-card="22"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (max-width: 610px){
+
+    .WidgetTarot {
+        margin: 0;
+        &-Card {
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        &-Result {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 410px){
+    .WidgetTarot-Card {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+}
+@media screen and (max-width: 360px){
+    .WidgetTarot-Card {
+        margin-left: -12px;
+        margin-right: -12px;
+
+    }
+}
+/* Autres règles responsives */
+@media screen and (max-width: 1200px){
+    .ReassuranceList-Item {
+        padding: 0 1rem;
+        &-Img {
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    .How-Wizard {
+        height: auto;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 970px){
+    .WidgetBand {
+        padding-top: 1.5rem;
+    }
+    .ContentBand-Column.WidgetBand-DescText { 
+        width: 100%;
+        padding-right: 0;
+        
+        .ContentBand-ColumnHeader {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 2rem;
+            text-align: left;
+        }
+        
+        .DescText {
+            display: table-cell;
+        }
+    }
+    .ContentBand-Column.FormBand-Form {
+        text-align: center;
+    }
+    .ReassuranceList-Item {
+        font-size: 1.3rem;
+    }
+    .FormContainer-Submit {
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 900px){
+    .ContentBand {
+        margin-top: 3rem;
+    }
+    .How {
+        text-align: center;
+        &-Header {
+            text-align: left;
+        }
+        &-Wizard {
+            margin-bottom: 4rem;
+            &Item {
+                border-left-width: 2.5rem;
+                &::before {
+                    left: -2.6rem;
+                    border-left-width: 2.5rem;
+                }
+            }
+        }
+    }
+    .ReassuranceList {
+        text-align: left;
+        
+        &-Item {
+            display: inline-block;
+            
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
+    .FormContainer-Fields {
+        padding: 0;
+    }
+    .FormContainer-Submit {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 730px){
+    
+    .ContentBand {
+        margin-bottom: 3rem;
+        &-Column {
+            display: table;
+            width: 100%;
+            margin: auto;
+        }
+    }
+    .ContentBand-Column.Column-Form {
+        text-align: center;
+    }
+    .ContentBand-Column {
+        padding: 2rem;
+        padding-top: 0;
+    }
+    
+    #baraja-el{
+        margin-bottom:8rem;
+    }
+
+}
+@media screen and (max-width: 695px){
+    .How {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .SiteHeader .PageWrapper{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    
+    .PageLogo{
+        background-size: contain;
+    }
+}
+@media screen and (max-width: 485px){
+    .PageWrapper,
+    .PageWrapper600{
+        padding: 0;
+    }
+    
+    .How-Header {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .How-Wizard {
+        height: auto;
+        width: 100%;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+    
+    .FormContainer {
+        &-Header {
+            font-size: 2.5rem;
+        }
+        
+        &-Submit {
+            font-size: 1.8rem;
+            //margin-bottom: 2rem;
+        }
+    }
+    .relationship-status .FormField-TableInputContainer-Cell {
+        display: block;
+        margin-left: 20%;
+        text-align: left;
+    }
+}
+

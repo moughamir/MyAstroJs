@@ -1,5 +1,5 @@
 <?php
-session_start();
+$root = '/';
 require_once(realpath('include/Lib_handler.php'));
 $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
@@ -35,15 +35,15 @@ if(isset($_POST['valider']) AND !isset($_SESSION['maildemanderappel'])){
 		$content = '
 		<table style=>
 		<tr>
-		<td><img src="http://www.myastro.fr/images/logo_new.gif" alt="LOGO"/></td>
+		<td><img src="http://<?= ROOT_URL ?>/images/logo_new.gif" alt="LOGO"/></td>
 		<td>Demande de Rappel.</td>
 		</tr>
 		<tr>
-		<td><img src="http://www.myastro.fr/images/user.png"  alt="User : " width="24"/></td>
+		<td><img src="http://<?= ROOT_URL ?>/images/user.png"  alt="User : " width="24"/></td>
 		<td>'.$nom.'</td>
 		</tr>
 		<tr>
-		<td><img src="http://www.myastro.fr/images/phone.png"  alt="Phone : " width="24"/></td>
+		<td><img src="http://<?= ROOT_URL ?>/images/phone.png"  alt="Phone : " width="24"/></td>
 		<td>'.$ch .'</td>
 		</tr>
 		<tr>
@@ -345,7 +345,7 @@ if(isset($_POST['valider']) AND !isset($_SESSION['maildemanderappel'])){
 										?>
 										<div class="voyant voyant-<?= $data['sexe'] ?>">
 											<div class="pic">
-												<img src="http://www.myastro.fr/images/voyants/<?= $safeName?>.png" />
+												<img src="http://<?= ROOT_URL ?>/images/voyants/<?= $safeName?>.png" />
 											</div>
 											<h4 class="seername"><?= ucfirst($name) ?></h4>
 											<div class="ribbon-wrapper">
@@ -359,7 +359,7 @@ if(isset($_POST['valider']) AND !isset($_SESSION['maildemanderappel'])){
 												<div class="ribbon-back-left"></div>
 												<div class="ribbon-back-right"></div>
 											</div>
-											<a href="http://www.myastro.fr/voyance-par-telephone-<?= $safeName?>" class="seeDetails">
+											<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>" class="seeDetails">
 												Voir la fiche
 											</a>
 											<div class="price">
@@ -647,7 +647,7 @@ if(isset($_POST['valider']) AND !isset($_SESSION['maildemanderappel'])){
 			<div class="row-fluid">
 				<div itemscope >
 					<ul class="breadcrumb" itemprop="breadcrumb">
-						<li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+						<li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
 						<li>Voyance par téléphone</span></li>
 					</ul>
 				</div>

@@ -6,9 +6,9 @@
 <div id="fil">
             Vous êtes ici
 			<span>»</span>
-			<a href="http://www.myastro.fr/yyadmin/">Accueil</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/">Accueil</a>
 			<span>»</span>
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php">Liste des nouveaux utilisateurs</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php">Liste des nouveaux utilisateurs</a>
 			 
         </div>  
 	
@@ -93,8 +93,8 @@ ORDER BY `ag_users`.`questionDate`";
 		for($i=1; $i<=$nb_page; $i++)
 		{
 			if ($i == $pagerech)
-			$indexation2 .= '<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$i.'&rech='.$recherche.'"><font style="color:red;" >'.$i.'</font></a> '; else
-			$indexation2 .= '<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$i.'">'.$i.'</a> '; 
+			$indexation2 .= '<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$i.'&rech='.$recherche.'"><font style="color:red;" >'.$i.'</font></a> '; else
+			$indexation2 .= '<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$i.'">'.$i.'</a> '; 
 		}
 		
 		if($result_in_fin > $nb) { $result_in_fin = $nb; }
@@ -104,8 +104,8 @@ ORDER BY `ag_users`.`questionDate`";
 		if($page > 1)
 		{
 			$indexation .= '
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page=1">D&eacute;but</a>
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$page_moins.'">Pr&eacute;c&eacute;dent</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page=1">D&eacute;but</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$page_moins.'">Pr&eacute;c&eacute;dent</a>';
 		}
 			
 		$indexation .= '
@@ -114,17 +114,17 @@ ORDER BY `ag_users`.`questionDate`";
 		if($page < $nb_page) 
 		{ 
 			$indexation .= '			
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$page_plus.'">Suivant</a>
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$nb_page.'">Fin</a>
-			<a href="http://www.myastro.fr/yyadmin/excel_page_new.php?fp='.$page.'">Excel</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$page_plus.'">Suivant</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$nb_page.'">Fin</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/excel_page_new.php?fp='.$page.'">Excel</a>';
 		}			
 		
 		if($page == $nb_page) 
 		{ 
 			$indexation .= '			
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$page_plus.'">Suivant</a>
-			<a href="http://www.myastro.fr/yyadmin/nouveaux.php?page='.$nb_page.'">Fin</a>
-			<a href="http://www.myastro.fr/yyadmin/excel_page_new.php?fp='.$page.'">Excel</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$page_plus.'">Suivant</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php?page='.$nb_page.'">Fin</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/excel_page_new.php?fp='.$page.'">Excel</a>';
 		}	
 		
 		$reqLimit = " LIMIT ".$debut.", ".$limit." ";
@@ -388,7 +388,7 @@ $total=	mysql_num_rows($sqlUserJour) + mysql_num_rows($sqlUserJourcorail) + mysq
 			<?php if ( $tridate == $auj ) {if ( $row["questionDate"] == $auj ) {echo '<tr style="background-color: #CFDBEC">';} else {echo '<tr style="background-color: #CFffcc">';}} else {echo '<tr>';}?>
 			
 			
-				<td style=" color: #999999;"><? echo $i; ?></td>
+				<td style=" color: #999999;"><?= $i; ?></td>
 				<td><?= $row["questionDate"]; ?></td>
 				<td><?= $row["questionSujet"]; ?></td>
 				<td><?= $row["questionContent"]; ?></td>

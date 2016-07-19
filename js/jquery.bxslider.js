@@ -53,7 +53,6 @@
 
 		// CONTROLS
 		controls: true,
-                starterText : 'Lancer le quiz',
 		nextText: 'Next',
 		prevText: 'Prev',
 		nextSelector: null,
@@ -637,18 +636,15 @@
 		 * Appends prev / next controls to the controls element
 		 */
 		var appendControls = function(){
-                        slider.controls.starter = $('<a class="btn" id="slider-start" href="">' + slider.settings.starterText + '</a>');
 
 			slider.controls.next = $('<a class="bx-next" href="">' + slider.settings.nextText + '</a>');
 			slider.controls.prev = $('<a class="bx-prev" href="">' + slider.settings.prevText + '</a>');
 			// bind click actions to the controls
-                        slider.controls.starter.bind('click', clickNextBind);
 			slider.controls.next.bind('click', clickNextBind);
 			slider.controls.prev.bind('click', clickPrevBind);
 			// if nextSlector was supplied, populate it
 			if(slider.settings.nextSelector){
 				$(slider.settings.nextSelector).append(slider.controls.next);
-                                $(slider.settings.nextSelector).append(slider.controls.starter);
 			}
 			// if prevSlector was supplied, populate it
 			if(slider.settings.prevSelector){

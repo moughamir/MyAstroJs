@@ -281,7 +281,7 @@
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://www.myastro.fr/voyance-par-telephone">
+										<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
 											<?php 
 				                                getVoyantScryscraper();
 				                            ?>
@@ -314,17 +314,14 @@
 				   
 					//http://graph.facebook.com/437290166297323
 						$script = "http://api.sharedcount.com/?url=https://www.facebook.com/pages/Myastro/437290166297323";
-						$page = file_get_contents($script);
-						$page = explode(",",$page);
-						$page = str_replace('"total_count":','',$page[4]);
-						
-						echo $page;
-						
-						
-					
-					
-					
-				?></span>
+						$page = @file_get_contents($script);
+                                                if($page){
+                                                    $page = explode(",", $page);
+                                                    $page = str_replace('"total_count":','',$page[4]);
+                                                    echo $page;
+                                                }
+                                                
+                                                ?></span>
 															<span class="fans">Fans</span>
 														</div>
 
@@ -335,7 +332,7 @@
 												<li class="tr-wrp">
 													<div class="btn-count">
 														<div class="social-counter-metro mask">
-															<span>Twetter</span>
+															<span>Twitter</span>
 															<a target="_blank" href="https://twitter.com/MYASTRO1" class="more"></a>
 														</div>
 
@@ -379,22 +376,14 @@ $url='http://query.yahooapis.com/v1/public/yql?q=SELECT%20*%20from%20html%20wher
 				   
 					
 						$script = "http://api.sharedcount.com/?url=http://www.myastro.fr";
-						$page = file_get_contents($script);
-						$page = explode(",",$page);
-						$page = str_replace('"GooglePlusOne":','',$page[9]);
-						
-						echo $page;
-						
-						
-					
-					
-					
-				?>
+						$page = @file_get_contents($script);
+                                                if($page){
+                                                    $page = explode(",",$page);
+                                                    $page = str_replace('"GooglePlusOne":','',$page[9]);
 
-
-
-
-				</span>
+                                                    echo $page;
+                                                }
+                                                ?></span>
 															<span class="fans">Partages</span>
 														</div>
 													</div>

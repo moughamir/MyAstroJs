@@ -570,14 +570,14 @@ class bdd {
 
 		if ( WP_DEBUG && WP_DEBUG_DISPLAY )
 			$this->show_errors();
-
+		
 		$this->init_charset();
 
 		$this->dbuser = $dbuser;
 		$this->dbpassword = $dbpassword;
 		$this->dbname = $dbname;
 		$this->dbhost = $dbhost;
-
+		
 		$this->db_connect();
 	}
 
@@ -1166,7 +1166,6 @@ class bdd {
 	 * @since 3.0.0
 	 */
 	function db_connect() {
-
 		$this->is_mysql = true;
 
 		$new_link = defined( 'MYSQL_NEW_LINK' ) ? MYSQL_NEW_LINK : true;

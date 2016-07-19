@@ -24,7 +24,8 @@
             <i class="fa fa-check"></i> Voyant disponible !
         </div>
         <div id="tchat-alert-cookie" class="alert alert-danger"style="display: none">
-            <b><i class="fa fa-warning"></i> Vous avez déjà effectué une demande par tchat récemment,</b> vous ne pouvez donc pas en refaire une avant quelques jours.<br>
+            <b><i class="fa fa-warning"></i> Vous avez déjà effectué une demande par tchat récemment,</b><br>
+            vous ne pouvez donc pas en refaire une avant quelques jours.<br>
             Merci de votre compréhension.
         </div>
     </div>

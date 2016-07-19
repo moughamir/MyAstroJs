@@ -17,6 +17,7 @@ $objet       = "MYASTRO";
 $support_obj = "MAILING";
 $voyant      = "";
 $rand        = 0;
+$user        = false;
 
 $voyants_affil2    = array("Marc","Aline");
 $voyants_affil1    = array("Jean","Marie");

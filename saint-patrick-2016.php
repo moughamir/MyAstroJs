@@ -17,8 +17,8 @@
         
         <meta property="og:title" content="Mini jeu de la Saint Patrick" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.myastro.fr/saint-patrick-2016" />
-        <meta property="og:image" content="http://www.myastro.fr/images_landing/<?= $page ?>/SaintPatrick-og.jpg" />
+        <meta property="og:url" content="http://<?= ROOT_URL ?>/saint-patrick-2016" />
+        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/<?= $page ?>/SaintPatrick-og.jpg" />
         <meta property="og:description" content="Allez-vous avoir de la chance en 2016 ? Jouez et recevez votre étude personnalisée !" />
         <meta property="og:locale" content="fr_FR" />
     
@@ -85,9 +85,9 @@
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="<?= $page ?>" />
                                 <input type="hidden" name="method" value="affil-maxi" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tel-saint-patrick-2016" />
+                                <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>" />
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />
@@ -251,9 +251,9 @@
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="<?= $page ?>" />
                                 <input type="hidden" name="method" value="affil-mini" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tel-saint-patrick-2016" />
+                                <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="gclid" value="<?php echo $_GET['gclid']; ?>" />
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />

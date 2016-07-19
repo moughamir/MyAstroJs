@@ -1,7 +1,7 @@
 <?php
 	
-	$baseSiteAdmin = 'http://www.myastro.fr/yyadmin/';
-	$base = 'http://www.myastro.fr/';
+	$baseSiteAdmin = '/yyadmin/';
+	$base = '/';
 	
 	$companySite = 'My Astro';
 	$nameSite = 'Steeve';

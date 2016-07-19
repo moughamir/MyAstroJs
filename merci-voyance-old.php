@@ -19,43 +19,43 @@ include('include/header.php');
 		en précisant votre prénom et le code promo : ASTRO10</p>
 		<p>Afin de bien recevoir votre étude, insérez notre adresse e-mail dans votre carnet d'adresse.</p>
 	<div id="voyant">
-		<a href="http://www.myastro.fr/voyance-par-telephone-valerie">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-valerie">
 			<img src="images/merci/valerie.png" alt="Valérie" />
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone-caroline">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-caroline">
 			<img src="images/merci/caroline.png" alt="caroline">
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone-cecile">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-cecile">
 			<img src="images/merci/cecile.png" alt="cecile">
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone-laurent">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-laurent">
 			<img src="images/merci/laurent.png" alt="laurent">
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone-stephane">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-stephane">
 			<img src="images/merci/stephane.png" alt="stephane">
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone-georges">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-georges">
 			<img src="images/merci/george.png" alt="george">
 		</a>
 	</div>
 	<img src="images/merci/grisbas.png" />
 	<div id="encart">
-		<a href="http://www.myastro.fr/horoscope-gratuit">
+		<a href="http://<?= ROOT_URL ?>/horoscope-gratuit">
 			<img src="images/merci/horsgratuit.png" alt="Horocope Gratuit"/>
 		</a>
-		<a href="http://www.myastro.fr/astrologie-gratuite" >
+		<a href="http://<?= ROOT_URL ?>/astrologie-gratuite" >
 			<img src="images/merci/portrait.jpg" alt="Astrologie Gratuite"/>
 		</a>
-		<a href="http://www.myastro.fr/tarot-gratuit">
+		<a href="http://<?= ROOT_URL ?>/tarot-gratuit">
 			<img src="images/merci/tarot.jpg" alt="Tarot Gratuit"/>
 		</a>
-		<a href="http://www.myastro.fr/voyance-par-telephone">
+		<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
 			<img src="images/merci/tel.jpg" alt="Voyance par Téléphone"/>
 		</a>
-		<a href="http://www.myastro.fr/numerologie-gratuite">
+		<a href="http://<?= ROOT_URL ?>/numerologie-gratuite">
 			<img src="images/merci/sms.png" alt="Numérologie Gratuite"/>
 		</a>
-		<a href="http://www.myastro.fr/forum/index">
+		<a href="http://<?= ROOT_URL ?>/forum/index">
 			<img src="images/merci/cb.jpg" alt="forum"/>
 		</a>
 	</div>

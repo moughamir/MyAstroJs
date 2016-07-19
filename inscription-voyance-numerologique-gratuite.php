@@ -297,7 +297,7 @@ if(isset($_POST['valider'])){
 	      	$url .= ($i==1) ? '?'.$key.'='.$value : '&'.$key.'='.$value ;
 	    	$i++;
 	    }*/
-	    header("Location: http://www.myastro.fr/merci-voyance");
+	    header("Location: http://".ROOT_URL."/merci-voyance");
 	} // Fin si pas d'erreur
 } // Fin si $_POST['valider']
 
@@ -323,9 +323,9 @@ if(isset($_POST['valider'])){
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://www.myastro.fr/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="voyance-numerologique-gratuite-chiffres-<? echo $vt;?>-<? echo $chv;?>" class="active">Voyance numérologique gratuite chiffres</a><i class="icon-caret-right icon-fixed-width"></i></li> <li>Inscription voyance numérologique gratuite</h4></li>
+                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="http://<?= ROOT_URL ?>/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="voyance-numerologique-gratuite-chiffres-<?= $vt;?>-<?= $chv;?>" class="active">Voyance numérologique gratuite chiffres</a><i class="icon-caret-right icon-fixed-width"></i></li> <li>Inscription voyance numérologique gratuite</h4></li>
                                     </ul>
                                 </div>
 								<div class="cat-widget-title">
@@ -361,7 +361,7 @@ if(isset($_POST['valider'])){
                      		echo "</div>";
                      	}
                      ?>     
-				<form  id="form" action="inscription-voyance-numerologique-gratuite-<? echo $ch;?>-<? echo $vt;?>-<? echo $chv;?>#form" method="post" onsubmit="return valider()" >
+				<form  id="form" action="inscription-voyance-numerologique-gratuite-<?= $ch;?>-<?= $vt;?>-<?= $chv;?>#form" method="post" onsubmit="return valider()" >
  <aside class="widget w-sponsors">
                     
 				<section class="span270">
@@ -370,7 +370,7 @@ if(isset($_POST['valider'])){
                 </div>
                 <div class="widget-content clearfix">
 						
-					 <img src="images/chiffres/<? echo $ch;?>.jpg" alt="" width="150" >
+					 <img src="images/chiffres/<?= $ch;?>.jpg" alt="" width="150" >
 				  
                  </div>
 				 <div style="text-align:center;"><div style="margin-left:0px;font-size:12px;padding-top:10px;">

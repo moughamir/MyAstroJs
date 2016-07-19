@@ -48,27 +48,27 @@
                                   </ol>
                                   <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-feminine">
+                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine">
                                             <img src="images/bannieres/astrologique/compatibilite_femme.jpg" alt="compatibilité_femme" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/compatibilite-amoureuse-masculine">
+                                        <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine">
                                             <img src="images/bannieres/astrologique/compatibilite_homme.jpg" alt="compatibilite-amoureuse-masculine" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/portrait-astrologique-feminin">
+                                        <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin">
                                             <img src="images/bannieres/astrologique/protrait_femme.jpg" alt="protrait_femme"> :
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/portrait-astrologique-masculin">
+                                        <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin">
                                             <img src="images/bannieres/astrologique/protrait_homme.jpg" alt="protrait_homme" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://www.myastro.fr/votre-personnalite-astrologique">
+                                        <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique">
                                             <img src="images/bannieres/astrologique/personnalite_astro.jpg" alt="personnalite_astro" />
                                         </a>
                                     </div>
@@ -357,7 +357,7 @@
             <div class="row-fluid">
                 <div itemscope >
                     <ul class="breadcrumb" itemprop="breadcrumb">
-                        <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                        <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                         <li>Astrologie gratuite</span></li>
                     </ul>
                 </div>

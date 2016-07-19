@@ -1,5 +1,4 @@
 <?php
-session_start();
 $bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
 
 /*===============================================================* 
@@ -12,7 +11,9 @@ $msg              = array();
 $question         = 'sentimentale';
 $confidentielle   = "1";
 $confidentielle_  = "true";
-$source           = (isset($param['source'])) ? $param['source'] : 'myastro-voyance-gratuite-6';
+$website          = isset($param['site']) ? $param['site'] : 'myastro.fr';
+$affiliation      = isset($param['affiliation']) ? $param['affiliation'] : 'naturel';
+$source           = isset($param['source']) ? $param['source'] : 'myastro-voyance-gratuite-6';
 $partenaires      = (isset($param['partenaires'])) ? 1 : 0;
 $partenaires2     = (isset($param['partenaires'])) ? "true" : "false";
 $horoscope        = (isset($param['horoscope'])   && !empty($param['horoscope']))   ? 'true' : 'false';
@@ -25,7 +26,6 @@ $ip               = $_SERVER['REMOTE_ADDR'];
 $page             = 'true';
 $trouve           = false;
 $id_form          = 6;
-$affiliation      = (isset($param['affiliation'])) ? $param['affiliation'] : false;
 $gclid            = (isset($param['gclid'])) ? $param['gclid'] : false;
   
   /*===============================================================* 
@@ -272,43 +272,42 @@ $gclid            = (isset($param['gclid'])) ? $param['gclid'] : false;
     /*==================================================* 
     *                 URL EMAIL VISION                  *
     *================================================== */
-     //$base_url = 'http://tre.emv3.com/D2UTF8';
-      $params = array(
-                 /* 'emv_tag'               => '10040002651C8CC1',
-                  'emv_ref'               => 'EdX7CqkdLOHf8SA9MOPQNo3WKEx-HK3D-D7Yeto-K7PYKcc',
-                  'EMAIL_FIELD'           => $email,*/
-                  'DATEJOIN'        => $dateJoin,
-                  'DATEMODIF'       => $today,
-                  'SOURCE'          => $source,
-                  'CLIENTURN'       => $choix_question,
-                  'EMVADMIN2'       => $horoscope_,
-                  'EMVADMIN3'       => $partenaires2,
-                  'DATEOFBIRTH'     => $datean1,
-                  'SEED3'           => $signe,
-                  'FIRSTNAME'       => $prenom,
-                  'EMVCELLPHONE'    => intval($tel),
-                  'NUMEROTELEPHONE' => $tel,
-                  'TITLE'           => $sexe,
-                  'CODE'            => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
-                  'IDASTRO'         => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
-                  'FIRSTNAME2'      => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
-                  'SEED2'           => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
-                  'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
-                  'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
-                  'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
-                  'GROUPE_FLAG_30'  => $param['compteur']['flag30']
-        );
+    
+    $params = array(
+        'DATEJOIN'        => $dateJoin,
+        'DATEMODIF'       => $today,
+        'SITE'            => $website,
+        'SOURCE'          => $affiliation,
+        'URL'             => $source,
+        'CLIENTURN'       => $choix_question,
+        'EMVADMIN2'       => $horoscope_,
+        'EMVADMIN3'       => $partenaires2,
+        'DATEOFBIRTH'     => $datean1,
+        'SIGNE'           => $signe,
+        'FIRSTNAME'       => $prenom,
+        'EMVCELLPHONE'    => intval($tel),
+        'NUMEROTELEPHONE' => $tel,
+        'TITLE'           => $sexe,
+        'CODE'            => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
+        'IDASTRO'         => ( isset($idindex) ) ? base_convert($idindex, 10, 32) : '',
+        'FIRSTNAME2'      => ( isset($conjoint_prenom) ) ? $conjoint_prenom : '',
+        'SIGNE_EP2'       => ( isset($signe_conjoint) ) ? $signe_conjoint : '',
+        'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
+        'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
+        'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
+        'GROUPE_FLAG_30'  => $param['compteur']['flag30']
+    );
 
     $_SESSION['support']        = $param['support'];
     $_SESSION['firstname']      = $prenom;
     $_SESSION['email']          = $email;
     $_SESSION['birthdate']      = $birthdate;
     $_SESSION['sexe']           = $sexe;
-    $_SESSION['cards']          = $param['cards'];
+    $_SESSION['cards']          = isset($param['cards']) ? $param['cards'] : '';
     $_SESSION['phone']          = $tel;
     $_SESSION['question']       = $choix_question;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
-    $_SESSION['birthdateJoint'] = $date2;
+    $_SESSION['birthdateJoint'] = isset($date2) ? $date2 : '';
     $_SESSION['user_id']        = $idindex;
     $_SESSION['pays']           = $pays;
     $_SESSION['trigger']        = $choix_question;
@@ -329,22 +328,20 @@ $gclid            = (isset($param['gclid'])) ? $param['gclid'] : false;
     /*==================================================* 
    *                 FIN ENVOI SMS DE CONFIRMATION                  
    *================================================== */
-   
-      if (   time() > strtotime(date('Y-m-d 09:00:00')) 
-          && time() < strtotime(date('Y-m-d 23:59:59'))
-          && !isset($_COOKIE['tchat'] )) 
-      {
-         //$redirect_url = 'http://www.myastro.fr/tchat/';
-        $redirect_url = 'http://www.myastro.fr/merci-voyance';
-      }
-      else{
-         $redirect_url = 'http://www.myastro.fr/merci-voyance';
-      }
 
-      die(json_encode(array('url' => $redirect_url)));
-  } // Fin si $msg=0
-  else{
+    if (    time() > strtotime(date('Y-m-d 09:00:00'))
+         && time() < strtotime(date('Y-m-d 23:59:59'))
+         && !isset($_COOKIE['tchat'] )){
+//        $redirect_url = 'tchat/';
+        $redirect_url = 'merci-voyance';
+    } else {
+        $redirect_url = 'merci-voyance';
+    }
+    
+    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    
+    die(json_encode(array('url' => $redirect_url)));
+} else { // Fin si $msg=0
     die(json_encode($msg));
-  }
-?>
+}
   

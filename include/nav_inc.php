@@ -21,83 +21,81 @@ $tabnumerologie=["numerologie-gratuite","numeroscope-2016","compatibilite-amoure
                 </button>
                 <div id="divNav2" class="nav-collapse collapse clearfix">
                     <ul class="nav" role="menu">
-                        <li class="dropdown <? if ($path == 'index') echo 'active';?>" role="menuitem">
-                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://www.myastro.fr/"><i class="icon-home"></i></a>
+                        <li class="dropdown <?= $path == 'index' ? 'active' : '';?>" role="menuitem">
+                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://<?= ROOT_URL ?>/"><i class="icon-home"></i></a>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown <? if (in_array($path, $tabvoyance)) echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" id="a6" role="button" data-hover="dropdown" data-delay="200" data-target="http://www.myastro.fr/" href="http://www.myastro.fr/voyance-gratuite" >Voyance gratuite<i class="caret"></i></a>
+                        <li class="dropdown <?= in_array($path, $tabvoyance) ? 'active'  : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" id="a6" role="button" data-hover="dropdown" data-delay="200" data-target="http://<?= ROOT_URL ?>/" href="http://<?= ROOT_URL ?>/voyance-gratuite" >Voyance gratuite<i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li <? if ($path == 'voyance-par-sms') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-par-sms" >Voyance par SMS</a></li>
-                                <li <? if ($path == 'voyance-sans-cb') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-sans-cb" >Voyance sans CB</a></li>
-								
-								
-                                <li <? if ($path == 'voyance-tarot') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-tarot" >Voyance Tarot</a></li>
-                                <li <? if ($path == 'voyance-discount') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-discount" >Voyance discount</a></li>
-                                <li <? if ($path == 'voyance-en-ligne-web') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-en-ligne-web" >Voyance en ligne</a></li>
-                                <li <? if ($path == 'voyance-par-chat') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/voyance-par-chat" >Voyance par chat</a></li>
+                                <li <?= $path == 'voyance-par-sms' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-par-sms" >Voyance par SMS</a></li>
+                                <li <?= $path == 'voyance-sans-cb' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-sans-cb" >Voyance sans CB</a></li>	
+                                <li <?= $path == 'voyance-tarot' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-tarot" >Voyance Tarot</a></li>
+                                <li <?= $path == 'voyance-discount' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-discount" >Voyance discount</a></li>
+                                <li <?= $path == 'voyance-en-ligne-web' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-en-ligne-web" >Voyance en ligne</a></li>
+                                <li <?= $path == 'voyance-par-chat' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/voyance-par-chat" >Voyance par chat</a></li>
                             </ul>
 
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown <? if (in_array($path, $tabhoroscope)) echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" id="A1" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://www.myastro.fr/horoscope-gratuit">Horoscope Gratuit<i class="caret"></i></a>
+                        <li class="dropdown <?= in_array($path, $tabhoroscope) ? 'active'  : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" id="A1" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://<?= ROOT_URL ?>/horoscope-gratuit">Horoscope Gratuit<i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li <? if ($path == 'horoscope-2016') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-2016">Horoscope 2016</a></li>
-                                <li <? if ($path == 'horoscope-du-jour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-du-jour">Horoscope du jour</a></li>
-                                <li <? if ($path == 'horoscope-de-la-semaine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
-                                <li <? if ($path == 'horoscope-du-mois') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-du-mois">Horoscope du mois</a></li>
-                                <li <? if ($path == 'horoscope-de-l-amour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/horoscope-de-l-amour">Horoscope de l'amour</a></li>
+                                <li <?= $path == 'horoscope-2016' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/horoscope-2016">Horoscope 2016</a></li>
+                                <li <?= $path == 'horoscope-du-jour' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/horoscope-du-jour">Horoscope du jour</a></li>
+                                <li <?= $path == 'horoscope-de-la-semaine' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
+                                <li <?= $path == 'horoscope-du-mois' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/horoscope-du-mois">Horoscope du mois</a></li>
+                                <li <?= $path == 'horoscope-de-l-amour' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour">Horoscope de l'amour</a></li>
                                 
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown <? if (in_array($path, $tabastrologie)) echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" id="ancPostFormats" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://www.myastro.fr/astrologie-gratuite" >Astrologie Gratuite<i class="caret"></i></a>
+                        <li class="dropdown <?= in_array($path, $tabastrologie) ? 'active'  : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" id="ancPostFormats" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://<?= ROOT_URL ?>/astrologie-gratuite" >Astrologie Gratuite<i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li <? if ($path == 'compatibilite-amoureuse-feminine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
-                                <li <? if ($path == 'compatibilite-amoureuse-masculine') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
-                                <li <? if ($path == 'portrait-astrologique-feminin') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
-                                <li <? if ($path == 'portrait-astrologique-masculin') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
-                                <li <? if ($path == 'votre-personnalite-astrologique') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
+                                <li <?= $path == 'compatibilite-amoureuse-feminine' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
+                                <li <?= $path == 'compatibilite-amoureuse-masculine' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
+                                <li <?= $path == 'portrait-astrologique-feminin' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
+                                <li <?= $path == 'portrait-astrologique-masculin' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
+                                <li <?= $path == 'votre-personnalite-astrologique' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown <? if (in_array($path, $tabtarot)) echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" id="a5" role="button" data-hover="dropdown" data-delay="200" data-target="tarot-gratuit" href="http://www.myastro.fr/tarot-gratuit" >Tarot Gratuit<i class="caret"></i></a>
+                        <li class="dropdown <?= in_array($path, $tabtarot) ? 'active' : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" id="a5" role="button" data-hover="dropdown" data-delay="200" data-target="tarot-gratuit" href="http://<?= ROOT_URL ?>/tarot-gratuit" >Tarot Gratuit<i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li <? if ($path == 'tarot-de-l-amour') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-de-l-amour" >Tarot de l'amour</a></li>
-                                <li <? if (($path == 'tarot-quotidien') || ($path == 'afficher_tarot_quotidien '))echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-quotidien" >Tarot quotidien</a></li>
-                                <li <? if ($path == 'tarot-hebdomadaire') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
-                                <li <? if ($path == 'tarot-mensuel') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-mensuel" >Tarot mensuel</a></li>
-                                <li <? if ($path == 'tarot-de-couple') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/tarot-de-couple" >Tarot de couple</a></li>
+                                <li <?= $path == 'tarot-de-l-amour' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/tarot-de-l-amour" >Tarot de l'amour</a></li>
+                                <li <?= ($path == 'tarot-quotidien' || $path == 'afficher_tarot_quotidien ') ? 'class="dropdown active"'  : '';?>><a href="http://<?= ROOT_URL ?>/tarot-quotidien" >Tarot quotidien</a></li>
+                                <li <?= $path == 'tarot-hebdomadaire' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
+                                <li <?= $path == 'tarot-mensuel' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/tarot-mensuel" >Tarot mensuel</a></li>
+                                <li <?= $path == 'tarot-de-couple' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/tarot-de-couple" >Tarot de couple</a></li>
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
-                        <li class="dropdown <? if (in_array($path, $tabnumerologie)) echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" id="a4" role="button" data-hover="dropdown" data-delay="200" data-target="numerologie-gratuite" href="http://www.myastro.fr/numerologie-gratuite" >Numérologie Gratuite<i class="caret"></i></a>
+                        <li class="dropdown <?= in_array($path, $tabnumerologie) ? 'active'  : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" id="a4" role="button" data-hover="dropdown" data-delay="200" data-target="numerologie-gratuite" href="http://<?= ROOT_URL ?>/numerologie-gratuite" >Numérologie Gratuite<i class="caret"></i></a>
                             <ul class="dropdown-menu">
-                                <li <? if ($path == 'numeroscope-2016') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/numeroscope-2016" >Numéroscope 2016</a></li>
-                                <li <? if ($path == 'compatibilite-amoureuse-pour-les-femmes') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
-                                <li <? if ($path == 'compatibilite-amoureuse-pour-les-hommes') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
-                                <li <? if ($path == 'personnalite-numerologique') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/personnalite-numerologique" >Personnalité numérologique</a></li>
-                                <li <? if ($path == 'etapes-de-la-vie') echo ' class="dropdown active"';?>><a href="http://www.myastro.fr/etapes-de-la-vie" >Etapes de la vie</a></li>
+                                <li <?= $path == 'numeroscope-2016' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/numeroscope-2016" >Numéroscope 2016</a></li>
+                                <li <?= $path == 'compatibilite-amoureuse-pour-les-femmes' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
+                                <li <?= $path == 'compatibilite-amoureuse-pour-les-hommes' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
+                                <li <?= $path == 'personnalite-numerologique' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/personnalite-numerologique" >Personnalité numérologique</a></li>
+                                <li <?= $path == 'etapes-de-la-vie' ? 'class="dropdown active"' : '';?>><a href="http://<?= ROOT_URL ?>/etapes-de-la-vie" >Etapes de la vie</a></li>
 							</ul>
 						</li>
 						<li class="divider-vertical"></li>
-						<li class="dropdown <? if ($path == 'voyance-par-telephone') echo 'active';?>" role="menuitem" >
-							<a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="voyance-par-telephone" href="http://www.myastro.fr/voyance-par-telephone" >Voyance par téléphone</a>
+						<li class="dropdown <?= $path == 'voyance-par-telephone' ? 'active' : '';?>" role="menuitem" >
+							<a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="voyance-par-telephone" href="http://<?= ROOT_URL ?>/voyance-par-telephone" >Voyance par téléphone</a>
 						</li>
 						<li class="divider-vertical"></li>
-                        <li class="dropdown <? if ($path == 'forfaits') echo 'active';?>" role="menuitem" >
-                            <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forfaits" href="http://www.myastro.fr/forfaits" >Forfaits</a>
+                        <li class="dropdown <?= $path == 'forfaits' ? 'active' : '';?>" role="menuitem" >
+                            <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forfaits" href="http://<?= ROOT_URL ?>/forfaits" >Forfaits</a>
                         </li>
                         <li class="divider-vertical"></li>
-                        <!--<li class="dropdown <? if ($path == 'blog') echo 'active';?>" role="menuitem" >
+                        <!--<li class="dropdown <?= $path == 'blog' ? 'active' : '';?>" role="menuitem" >
                             <a style="margin-left:16px;" class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="blog" href="#" >Blog </a>
                         </li>-->
-					<!--	<li class="dropdown <? /*if ($pathf == 'forum/index.php') echo 'active';*/?>" role="menuitem" >
-							<a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forum/index" href="http://www.myastro.fr/forum/index" >Forum</a>
+					<!--	<li class="dropdown <? /*if ($pathf == 'forum/index.php' ? 'active';*/?>" role="menuitem" >
+							<a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forum/index" href="http://<?= ROOT_URL ?>/forum/index" >Forum</a>
 						</li>  -->
                     </ul>
                     <!--<ul class="nav pull-right">

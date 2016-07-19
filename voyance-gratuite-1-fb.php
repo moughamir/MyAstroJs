@@ -33,9 +33,9 @@
     <body class="voyance-gratuite-1">
         <div class="top-nav">
             <div class="nav-content">
-                <a href="http://www.myastro.fr/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-                <a href="http://www.myastro.fr/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
-                <a href="http://www.myastro.fr/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
+                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
             </div>
         </div>
         <div class="main">
@@ -81,8 +81,9 @@
                                 <input type="hidden" name="source" value="voyance-gratuite-fb1" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="voyance" />
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="facebook_adds" />
-                                <input type="hidden" name="dri" value="http://www.myastro.fr/tel-voyance-gratuite-1-fb" />
+                                <input type="hidden" name="dri" value="tel-voyance-gratuite-1-fb" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />

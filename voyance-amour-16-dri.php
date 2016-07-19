@@ -82,7 +82,31 @@ include('include/process-dri-postmailing.php');
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>
                                 <div class="FormField">
-                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>"required />
+                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
+                                </div>
+                                <div class="FormField">
+                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                        <option value="" selected>Votre Pays</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="CH">Suisse</option>
+                                        <option value="FR" selected>France Métropolitaine</option>
+                                        <optgroup label="DOM-TOM">
+                                            <option value="MQ">Martinique</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GF">Guyane</option>
+                                            <option value="RE">La Réunion</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="PM">St Pierre et Miquelon</option>
+                                            <option value="BL">St Barthélémy</option>
+                                            <option value="SM">St Martin</option>
+                                            <option value="WF">Wallis et Futunua</option>
+                                            <option value="PF">Polynésie Française</option>
+                                            <option value="NC">Nouvelle Calédonie</option>
+                                        </optgroup>
+                                        <option value="ZZ">Autre</option>
+                                    </select>
                                 </div>
                                 
                                 <!-- SUBMIT -->
@@ -125,7 +149,6 @@ include('include/process-dri-postmailing.php');
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="js/formValidator.js"></script>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');

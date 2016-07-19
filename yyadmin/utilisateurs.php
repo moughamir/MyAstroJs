@@ -10,9 +10,9 @@
             <div id="fil">
 	            Vous &ecirc;tes ici
 				<span>&raquo;</span>
-				<a href="http://www.myastro.fr/yyadmin/">Accueil</a>
+				<a href="http://<?= ROOT_URL ?>/yyadmin/">Accueil</a>
 				<span>&raquo;</span>
-				<a href="http://www.myastro.fr/yyadmin/utilisateurs.php">Liste des utilisateurs</a>
+				<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php">Liste des utilisateurs</a>
 			</div>
             
   
@@ -47,7 +47,7 @@ ORDER BY `ag_users`.`internal_id`";
 		
 		for($i=1; $i<=$nb_page; $i++)
 		{
-			$indexation2 .= '<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$i.'">'.$i.'</a> ';
+			$indexation2 .= '<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$i.'">'.$i.'</a> ';
 		}
 		
 		if($result_in_fin > $nb) { $result_in_fin = $nb; }
@@ -57,8 +57,8 @@ ORDER BY `ag_users`.`internal_id`";
 		if($page > 1)
 		{
 			$indexation .= '
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page=1">D&eacute;but</a>
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$page_moins.'">Pr&eacute;c&eacute;dent</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page=1">D&eacute;but</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$page_moins.'">Pr&eacute;c&eacute;dent</a>';
 		}
 			
 		$indexation .= '
@@ -67,17 +67,17 @@ ORDER BY `ag_users`.`internal_id`";
 		if($page < $nb_page) 
 		{ 
 			$indexation .= '			
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$page_plus.'">Suivant</a>
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$nb_page.'">Fin</a>
-			<a href="http://www.myastro.fr/yyadmin/excel_page.php?fp='.$page.'">Excel</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$page_plus.'">Suivant</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$nb_page.'">Fin</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/excel_page.php?fp='.$page.'">Excel</a>';
 		}			
 		
 		if($page == $nb_page) 
 		{ 
 			$indexation .= '			
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$page_plus.'">Suivant</a>
-			<a href="http://www.myastro.fr/yyadmin/utilisateurs.php?page='.$nb_page.'">Fin</a>
-			<a href="http://www.myastro.fr/yyadmin/excel_page.php?fp='.$page.'">Excel</a>';
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$page_plus.'">Suivant</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/utilisateurs.php?page='.$nb_page.'">Fin</a>
+			<a href="http://<?= ROOT_URL ?>/yyadmin/excel_page.php?fp='.$page.'">Excel</a>';
 		}	
 		
 		$reqLimit = " LIMIT ".$debut.", ".$limit." ";

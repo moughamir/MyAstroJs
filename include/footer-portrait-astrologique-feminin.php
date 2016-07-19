@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://www.myastro.fr/portrait-astrologique-feminin-belier" class="btn-theme">Portrait astrologique féminin Bélier</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-feminin-taureau" class="btn-theme">Portrait astrologique féminin Taureau</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-feminin-gemeaux" class="btn-theme">Portrait astrologique féminin Gémeaux</a>
-      <a href="http://www.myastro.fr/portrait-astrologique-feminin-cancer" class="btn-theme">Portrait astrologique féminin Cancer</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-lion" class="btn-theme">Portrait astrologique féminin Lion</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-vierge" class="btn-theme">Portrait astrologique féminin Vierge</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-balance" class="btn-theme">Portrait astrologique féminin Balance</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-scorpion" class="btn-theme">Portrait astrologique féminin Scorpion</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-sagittaire" class="btn-theme">Portrait astrologique féminin Sagittaire</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-capricorne" class="btn-theme">Portrait astrologique féminin Capricorne</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-verseau" class="btn-theme">Portrait astrologique féminin Verseau</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin-poissons" class="btn-theme">Portrait astrologique féminin Poissons</a>
-	  <a href="http://www.myastro.fr/portrait-astrologique-feminin" class="btn-theme">Portrait astrologique féminin</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-belier" class="btn-theme">Portrait astrologique féminin Bélier</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-taureau" class="btn-theme">Portrait astrologique féminin Taureau</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-gemeaux" class="btn-theme">Portrait astrologique féminin Gémeaux</a>
+      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-cancer" class="btn-theme">Portrait astrologique féminin Cancer</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-lion" class="btn-theme">Portrait astrologique féminin Lion</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-vierge" class="btn-theme">Portrait astrologique féminin Vierge</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-balance" class="btn-theme">Portrait astrologique féminin Balance</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-scorpion" class="btn-theme">Portrait astrologique féminin Scorpion</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-sagittaire" class="btn-theme">Portrait astrologique féminin Sagittaire</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-capricorne" class="btn-theme">Portrait astrologique féminin Capricorne</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-verseau" class="btn-theme">Portrait astrologique féminin Verseau</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin-poissons" class="btn-theme">Portrait astrologique féminin Poissons</a>
+	  <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="btn-theme">Portrait astrologique féminin</a>
     </td>
   </tr>
 </table>

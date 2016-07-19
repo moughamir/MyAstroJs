@@ -296,8 +296,8 @@
                     <p>La <strong>voyance discount</strong> de Myastro est totalement identique à une consultation de voyance dite classique. Seul un point change : le prix. Alors que certains tarifs pratiqués dans le monde de la voyance atteignent des sommes vertigineuses, notre service de <strong>voyance discount</strong> vous offre la possibilité de poser votre question à un professionnel à prix abordable. De quoi rendre une consultation accessible à toutes les personnes souhaitant savoir de quoi demain sera fait. Nous sommes tous concernés par le destin, la voyance ne doit plus être réservée aux personnes aisées.</p><br>
                 </div><br>
                 <div class="img-discount">
-                    <a href="http://www.myastro.fr/voyance-par-telephone#ouvert"><img src="images/bannieres/voyance-par-tel.jpg" alt="voyance par téléphone"></a>
-                    <a href="http://www.myastro.fr/voyance-tarot"><img src="images/bannieres/tirage-tarot.jpg" alt="tirage tarot gratuit"></a>
+                    <a href="http://<?= ROOT_URL ?>/voyance-par-telephone#ouvert"><img src="images/bannieres/voyance-par-tel.jpg" alt="voyance par téléphone"></a>
+                    <a href="http://<?= ROOT_URL ?>/voyance-tarot"><img src="images/bannieres/tirage-tarot.jpg" alt="tirage tarot gratuit"></a>
                 </div><br>
                 <div class="text-justify">
                     <h2>Confidentialité  et professionnalisme : Profitez des services de la voyance discount</h2>
@@ -332,7 +332,7 @@
     <div class="row-fluid">
         <div itemscope >
             <ul class="breadcrumb" itemprop="breadcrumb">
-                <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                 <li>Voyance discount</span></li>
             </ul>
         </div>

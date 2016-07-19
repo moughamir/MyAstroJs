@@ -119,7 +119,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                                                                     
                                                                 </div>
 
-                                                                <a href="http://www.myastro.fr/tarot-quotidien" class="more" title=""></a>
+                                                                <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" title=""></a>
                                                             </div>
                                                         </article>
                                                     </div>
@@ -136,7 +136,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                                                                     <h6 style="margin-top:20px;line-height:120%;text-align: justify;color:#ffffff;">Ce que vous attendez depuis si longtemps va-t-il enfin se produire cette semaine? Peut-être, le meilleur moyen de le savoir est de faire appel au cartes du tarot hebdomadaire gratuit, qui vous dévoileront toutes les facettes de votre semaine.</h6>                                                                     
                                                                 </div>
 
-                                                                <a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" title=""></a>
+                                                                <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" title=""></a>
                                                             </div>
 
                                                         </article>
@@ -156,7 +156,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                                                                     
                                                                 </div>
 
-                                                                <a href="http://www.myastro.fr/tarot-mensuel" class="more"></a>
+                                                                <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more"></a>
                                                             </div>
 
                                                         </article>
@@ -174,7 +174,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                                                                     <h6 style="margin-top:20px;line-height:120%;text-align: justify;color:#ffffff;">Votre couple est-il stable? Pouvez-vous avoir confiance en votre partenaire? Votre relation est-elle entrain de se dégrader? Les réponses à vos toutes questions sentimentales se trouvent dans les cartes de votre tarot du couple gratuit, découvrez les interprétations divinatoires de votre couple.</h6>                                                                      
                                                                 </div>
 
-                                                                <a href="http://www.myastro.fr/tarot-de-couple" class="more"></a>
+                                                                <a href="http://<?= ROOT_URL ?>/tarot-de-couple" class="more"></a>
                                                             </div>
 
                                                         </article>
@@ -231,7 +231,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
         <div class="row-fluid">
             <div itemscope >
                 <ul class="breadcrumb" itemprop="breadcrumb">
-                    <li><span class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                    <li><span class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
                     <li>Voyance sans cb</span></li>
                 </ul>
             </div>

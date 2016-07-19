@@ -232,7 +232,7 @@
 								<ul class="posts-in-images clearfix">
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="1" title="1">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-1">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-1">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/1.jpg" />
@@ -241,7 +241,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="2" title="2">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-2">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-2">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/2.jpg" />
@@ -250,7 +250,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="3" title="3">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-3">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-3">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/3.jpg" />
@@ -260,7 +260,7 @@
 
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="4" title="4">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-4">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-4">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/4.jpg" />
@@ -269,7 +269,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="5" title="5">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-5">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-5">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/5.jpg" />
@@ -278,7 +278,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="6" title="6">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-6">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-6">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/6.jpg" />
@@ -287,7 +287,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="7" title="7">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-7">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-7">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/7.jpg" />
@@ -296,7 +296,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="8" title="8">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-8">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-8">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/8.jpg" />
@@ -305,7 +305,7 @@
 									</li>
 
 									<li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="9" title="9">
-										<a href="http://www.myastro.fr/compatibilite-amoureuse-pour-les-femmes-9">
+										<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes-9">
 											<div class="thumb-effect">
 												<div class="mask"></div>
 												<img src="images_voyance/chiffres/9.jpg" />
@@ -321,7 +321,7 @@
 						<!-- Horizontal Categories -->
 						<section class="cat-widget h-cat-1">
 							<div class="cat-widget-title">
-								<h3><? echo str_replace('-', ' ', $path);?></h3>
+								<h3><?= str_replace('-', ' ', $path);?></h3>
 							</div>
 
 							<div class="cat-widget-content">
@@ -349,7 +349,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/astrologie-gratuite" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
 																		</div>
 																	</article>
 																</div>
@@ -366,7 +366,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/compatibilite-amoureuse-feminine" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -386,7 +386,7 @@
 																				<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope de la semaine gratuit vous permet d'éviter toutes les surprises, et surtout les obstacles, que la vie vous réserve Faites appel à de réels professionnels et ne vous laissez pas guider par le hasard.</h6>                                                                       
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-de-la-semaine" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -404,7 +404,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-2016" class="more" title=""></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
 																		</div>
 
 																	</article>
@@ -423,7 +423,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-quotidien" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
 																		</div>
 																	</article>
 																</div>
@@ -440,7 +440,7 @@
 																				<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Depuis quelques mois, vous n'arrivez pas à trouver de réponses à vos questions Vous souhaitez savoir ce qui se profile dans votre avenir et ne savez oas dans quelle direction vous tourner. Faites confiance à Myastro et bénéficiez de solutions durables</h6>                                                                       
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-hebdomadaire" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -459,7 +459,7 @@
 
 																			</div>
 
-																			<a href="http://www.myastro.fr/tarot-mensuel" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -477,7 +477,7 @@
 																				<h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le tarot de couple gratuit vous donnera la possibilité de vous postionner afin de savoir si celui que vous convoitez est fait pour vous ou s'il est indispensable d'arrêter des investissements dans cette relation de manière immédiate.</h6>                                                                        
 																			</div>
 
-																			<a href="http://www.myastro.fr/horoscope-de-l-amour" class="more" ></a>
+																			<a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
 																		</div>
 
 																	</article>
@@ -515,7 +515,7 @@
 				<div class="row-fluid">
 					<div itemscope >
 						<ul class="breadcrumb" itemprop="breadcrumb">
-							<li><h4 class="h4"><a href="http://www.myastro.fr/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://www.myastro.fr/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
+							<li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/numerologie-gratuite">Numérologie gratuite</a></li><i class="icon-caret-right icon-fixed-width"></i>
 							<li>Compatibilité amoureuse pour les femmes</h4></li>
 						</ul>
 					</div>
