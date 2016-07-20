@@ -2498,30 +2498,23 @@ input[type="checkbox"], input[type="radio"] {
 
   .FormContainer-Header {
     font-family: inherit;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
 
   .num-result {
     margin-left: 0; } }
 @media screen and (max-width: 470px) {
   .SiteHeader {
-    margin-bottom: 0;
-    /*.SiteLogo, .PageLogo {
-        display: block;
-        width: 100%;
-        background-position: center;
-    }*/ }
-    .SiteHeader .PageLogo {
-      height: 120px; }
+    margin-bottom: 0; }
 
   .DescText-Title-Legend {
     font-size: 1.7rem; } }
 @media screen and (max-width: 400px) {
   .PageLogo {
-    padding-top: 1rem; }
+    padding: 1rem; }
     .PageLogo span {
-      font-size: 6rem; }
+      font-size: 4rem; }
     .PageLogo span + span {
-      font-size: 8rem; }
+      font-size: 6rem; }
 
   .TextContent .ContentBand-ColumnHeader {
     background-position: top left;

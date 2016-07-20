@@ -524,7 +524,7 @@ input[type="checkbox"], input[type="radio"] {
     
     .FormContainer-Header {
         font-family: inherit;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .num-result{
@@ -535,14 +535,7 @@ input[type="checkbox"], input[type="radio"] {
 @media screen and (max-width: 470px){
     .SiteHeader {
         margin-bottom: 0;
-        /*.SiteLogo, .PageLogo {
-            display: block;
-            width: 100%;
-            background-position: center;
-        }*/
-        .PageLogo {
-            height: 120px;
-        }
+        
     }
     .DescText-Title-Legend {
         font-size: 1.7rem;
@@ -551,9 +544,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 @media screen and (max-width: 400px){
     .PageLogo {
-        padding-top: 1rem;
-        span{ font-size: 6rem; }
-        span+span{ font-size: 8rem; }
+        padding: 1rem;
+        span{ font-size: 4rem; }
+        span+span{ font-size: 6rem; }
     }
     .TextContent .ContentBand-ColumnHeader {
         background-position: top left;
