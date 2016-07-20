@@ -294,14 +294,14 @@ input[type="checkbox"], input[type="radio"] {
 
 
 /* ************** MODALE *************** */
-.FormContainer.overlay {
+.overlay {
     display: none;
-    position:fixed;
+    position:fixed !important;
     top:0;
     left:0;
     z-index:100;
     width:100vw;
-    height:100vh;
+    height:100vh !important;
     max-width: none;
     background-color: rgba(0, 0, 0, 0.75);
     border:0px solid red;
