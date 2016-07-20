@@ -8,6 +8,8 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
+session_start();
+$_SESSION['numResult'] = " ";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -62,7 +64,10 @@
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="theme_id" id="theme_id" value="1" />
+                                <?php
+                                /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
+                                $_SESSION['numResult'] = rand(1, 5);
+                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['numResult']  ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">
@@ -142,13 +147,8 @@
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('#photo1').addClass("anim-photo1");
-                $('#photo2').addClass("anim-photo2");
-            });
-        </script>
-        
+        <script  type="text/javascript" src="js/numerologie-amour.js"></script>
+
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');

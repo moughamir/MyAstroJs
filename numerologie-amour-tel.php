@@ -9,6 +9,8 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 include('include/process-dri-postmailing.php');
+$result = $_SESSION['numResult'];
+//$result = 3;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,13 +52,34 @@ include('include/process-dri-postmailing.php');
                     <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
                     
                     <!-- RESULTAT -->
+                    <?php
+                    switch ($result) {
+                        case 1:
+                            $textResult= "scénario 1";
+                            break;
+                        case 2:
+                            $textResult= "scénario 2";
+                            break;
+                        case 3:
+                            $textResult= "scénario 3";
+                            break;
+                        case 4:
+                            $textResult= "scénario 4";
+                            break;
+                        case 5:
+                            $textResult= "scénario 5";
+                            break;    
+                    }
+                    ?>
+
+                    
                     <section class="wrapper-num-result txtleft">
                         <h3 class="num-result-title">Résultats</h3>
                         <div class="num-result grid-1-2">                                 
-                            <p id="num-result-numero" class="num-result-numero"> </p>
+                            <p id="num-result-numero" class="num-result-numero"><?php echo $result ?></p>
                             <div class="num-result-text-name">
                                 <p><?= $prenom ?></p>
-                                <p id="num-result-text">Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez.</div>
+                                <p id="num-result-text"><?php echo $textResult ?></div>
                         </div>
                     </section>
                     <!-- FIN DE RESULTAT --> 
@@ -135,7 +158,6 @@ include('include/process-dri-postmailing.php');
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
-        <script  type="text/javascript" src="js/numerologie-amour.js"></script>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
