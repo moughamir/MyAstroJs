@@ -20,7 +20,7 @@ function secure_formdata($n){
 $form = array_map('secure_formdata', $_POST);
 $state = "";
 
-/* ############################# INITIALISATION ############################# */
+/* ########################### ENREGISTREMENT TEL ########################### */
 $err = array();
 if(isset($form['save_tel'])){
     $param = $form;
@@ -32,7 +32,7 @@ $codeastro = (isset($_GET['id'])) ? htmlentities(strip_tags($_GET['id'])) : fals
 $code_promo = (isset($_GET['camp'])) ? htmlentities(strip_tags($_GET['camp'])) : false;
 $email_base = (isset($_GET['email'])) ? htmlentities(strip_tags($_GET['email'])) : false;
 
-/* ######################### INITIALISATION DONNÉES ######################### */
+/* ################### INITIALISATION DONNÉES DRI MAILING ################### */
 $site        = "My Astro";
 $objet       = "MYASTRO";
 $support_obj = "MAILING";
@@ -42,28 +42,23 @@ $voyants_affil2    = array("Marc", "Aline");
 $voyants_affil1    = array("Jean", "Marie");
 $voyants_affilbase = array("Pierre", "Laura");
 
-/* ############################### DRI LANDING ############################## */
-if(!$codeastro && !$email_base){
+/* ######################### DONNÉES SI DRI LANDING ######################### */
+if((!$codeastro || !$email_base) && !$code_promo){
     $codeastro      = base_convert($_SESSION['user_id'], 10, 32);
     $email_base     = $_SESSION['email'];
     $support_obj    = 'DRI';
     $source_myastro = $_SESSION['source'];
-    $tracking_qry   = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$source_myastro.'"';
-} else {
-    $code_promo_decode = explode('-', $code_promo);
-    $code_campagne = $code_promo_decode[0];
-    $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_codepromo ="'.$code_campagne.'"';
 }
 
 /* ######################## PRÉPARATION DONNÉES USER ######################## */
 $idastro = base_convert($codeastro, 32, 10);
-$prenom = isset($prenom) ? $prenom : $_SESSION['firstname'];
-$tel = isset($tel) ? $tel : $_SESSION['phone'];
+$prenom = isset($prenom) ? $prenom : isset($_SESSION['firstname']) ? $_SESSION['firstname'] : '';
+$tel = isset($tel) ? $tel : isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
 $idastro_column = 'internal_id';
-$source = $gclid = $url = "";
+$source = $gclid = $url = $voyant = "";
 $email_user  = $email_base;
 
-/* ########################## REQUÊTE DONNÉES USER ########################## */
+/* ###################### REQUÊTE DONNÉES USER MAILING ###################### */
 $base = $bdd->users;
 if($idastro > 2000000){
     $base = $bdd->users_common;
@@ -73,7 +68,7 @@ if($idastro > 2000000){
 $qry = 'SELECT * FROM '.$base.' as agu';
 if(!empty($idastro)){ //si on a bien l'idastro
     $qry .= ' WHERE '.$idastro_column.'='.$idastro;
-    $user = $bdd->get_row($qry); 
+    $user = $bdd->get_row($qry);
 } elseif(!empty($email_base)){ // sinon on recherche grace à l'email
     $qry .= ' WHERE email="'.$email_base.'"';
     $user = $bdd->get_row($qry);
@@ -84,28 +79,43 @@ if(!empty($idastro)){ //si on a bien l'idastro
         $user = $bdd->get_row($qry);
     }    
 }
-
-/* ######################## REQUÊTE DONNÉES TRACKING ######################## */
-
-$tracking = $bdd->get_row($tracking_qry); 
-
-/* ######################## DISTRIBUTION DES DONNÉES ######################## */
-if($user && $tracking){  
+if($user){  
     $email_user = $user->email;
-    $url        = $tracking->stf_formurl_kgestion; 
-    $source     = $tracking->stf_source_kgestion;
-
-    if ($base == "ag_users") {
+    $source_myastro = $user->source;
+    if($base == "ag_users"){
         $prenom  = $user->prenom;
-        $tel     = $user->tel;   
-        $gclid   = $user->gclid; 
-        $idastro = base_convert($user->internal_id, 10, 32); 
+        $tel     = $user->tel;
+        $gclid   = $user->gclid; // adwords uniquement sur myastro.fr
+        $voyant  = $user->voyant;
+        $idastro = base_convert($user->internal_id, 10, 32);
     } else {
         $prenom  = $user->firstname;
         $tel     = $user->phone; 
-        $site    = $user->website; 
+        $site    = $user->website;
         $idastro = base_convert($user->external_id, 10, 32);
-    }  
+    }
+}
+
+if(isset($form['tel'])){
+    $tel = $form['tel'];
+}
+
+/* ######################## REQUÊTE DONNÉES TRACKING ######################## */
+$tracking = null;
+if($code_promo){
+    $code_promo_decode = explode('-', $code_promo);
+    $code_campagne = $code_promo_decode[0];
+    $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_codepromo ="'.$code_campagne.'"';
+    $tracking = $bdd->get_row($tracking_qry);
+}
+if(!$tracking && isset($source_myastro)){
+    $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$source_myastro.'"';
+    $tracking = $bdd->get_row($tracking_qry); 
+}
+
+if($tracking){
+    $url    = $tracking->stf_formurl_kgestion; 
+    $source = $tracking->stf_source_kgestion;
 }
 
 /* ######################## ATTRIBUTION D'UN VOYANT ######################### */
@@ -123,9 +133,9 @@ if($source == "AFFIL SWARMIZ"){
     
 /* ############################# ENVOI DU MAIL ############################## */
 
-if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION['demanderappel']) && empty($err)){
-    echo 'envoi';
-    $destinataire = 'standard.kgcom@gmail.com';
+if(isset($form['demande_rappel']) && !empty($tel) && empty($form['antisp']) && !isset($_SESSION['demanderappel']) && empty($err)){
+
+    $destinataire = getenv('MYASTRO_MAIL_DRI') ?: 'standard.kgcom@gmail.com';
     $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
     $email        = 'contact@myastro.fr';
     
@@ -165,7 +175,7 @@ if(isset($form['demande_rappel']) && empty($form['antisp']) && !isset($_SESSION[
                 <td>'.$source.'</td>
             </tr>
             <tr>
-                <td>Page : </td>
+                <td>Url : </td>
                 <td>'.$url.'</td>
             </tr>';
 

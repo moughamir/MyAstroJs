@@ -1,8 +1,8 @@
 <?php
 /* 
-    -------------------------------------------
-    --      cycle-lunaire-tel = AFFIL BASE       --
-    -------------------------------------------
+    -----------------------------------------------------
+    --      cycle-lunaire-dri = DRI POST MAILING       --
+    -----------------------------------------------------
 
     Created on : 12 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
@@ -45,17 +45,17 @@ include('include/process-dri-postmailing.php');
                 <div class="ContentBand-Column">
                     <div class="TextContent">
                         <header class="ContentBand-ColumnHeader">
-                            <h1 class="DescText-Title"><span>Que vous réserve le cycle lunaire ?</span></h1>
+                            <h1 class="DescText-Title"><span>Que vous réserve le cycle lunaire ?</span></h1>
                         </header>
                         <div class="moon-gif"></div>
                     </div>
                 </div>
                 <div id="form-container" class="ContentBand-Column Form ">                                       
-                    <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
-                    <p class="FormContainer-name"> <?= $prenom ?></p>
-                    <p>Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez. <br/><br/><?= $prenom ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention <?= $prenom ?>, agir ne veut pas dire se précipiter et faire mal les choses. Sous peine de commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…</p>
-
-                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
+                    <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
+                    <p class="FormContainer-name">
+                        <?= ucfirst($prenom) ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention, agir ne veut pas dire se précipiter et commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…
+                    </p>
+                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
 
                     <span class="ten-min-free"></span>
 
@@ -78,12 +78,6 @@ include('include/process-dri-postmailing.php');
                             </p>
                                 <?php } ?>
                             <form method="post">
-                                
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
-                                <!-- ############################################### -->
-                                
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>

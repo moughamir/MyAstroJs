@@ -9,9 +9,6 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 include('include/process-dri-postmailing.php');
-$draw = $_SESSION['cards'];
-$voyant = $_SESSION['voyant'];
-$cards_dir = 'tarot/cartes/original-grand/';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -55,11 +52,9 @@ $cards_dir = 'tarot/cartes/original-grand/';
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer">
-                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?> " data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="FormContainer-Fields Fields-Table">
-                            <p class="alert alert-danger" style="display: none"></p>
-
                             <div class="DRI-Form FormContainer-Fields">
                                 <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                     <p class="DRI-Sent">
@@ -108,14 +103,11 @@ $cards_dir = 'tarot/cartes/original-grand/';
                                                 <option value="ZZ">Autre</option>
                                             </select>
                                         </div>
-                                    </div>    
-
+                                    </div>
                                     <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
-
                                     <!-- SUBMIT -->
                                     <input type="text" name="antisp" value="" style="display: none" />
                                     <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
-
                                 </form>
                                 <?php } ?>
                             </div>
