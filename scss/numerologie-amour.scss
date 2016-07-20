@@ -30,7 +30,7 @@ $font4: 'Ubuntu Condensed', sans-serif; //titres
 
 $bg : $color4;
 $woman : $color2;
-$men : $color3;
+$men : $color1;
 
 /* Mixins */
 @mixin box-shadow{
@@ -82,7 +82,7 @@ button{
     }
 }
 .SiteLogo {
-    background: url($img_dir+"logo-MYASTRO.svg") 2rem no-repeat;
+    background: url($img_dir+"logo-MYASTRO.svg") no-repeat;
     background-size: contain;
     height: 110px;
     width: 15%;
@@ -157,6 +157,10 @@ button{
 .FormContainer {
     background:transparent;    
     
+    &-Fields {
+        padding: 2rem;
+    }
+    
     &-Header {
         font-family: $font2;
         color: white;
@@ -184,7 +188,7 @@ button{
         }
     }
     
-
+    
     
     &.DRI .DRI {
         
@@ -239,15 +243,14 @@ button{
 }
 
 
-
+.blueLabel{
+    color:$color1 !important;
+}
 
 .FormField-Label {
     text-transform: uppercase;
 
-    label:nth-child(2){
-        color:$color1 !important;
-        border:1px solid red;
-    }
+
     .ico-woman {
         font-size: 1.9rem;
         font-weight: bold;
@@ -288,24 +291,70 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
-/*.How-header {
-    font-weight: normal;
-    font-size: 2.4rem;
-    font-family: inherit;
+
+
+/* ************** MODALE *************** */
+.FormContainer.overlay {
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100vw;
+    height:100vh;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+    color:black;
+
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#85eeaa;
+        border:0px solid red;
+        font-family:$font3;
+
+
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+            width: 100%;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block; 
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+               :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
 }
-.How-Wizard {
-    border-color: $color1;
-    color: $color1;
-    
-    &Item-Img.form {
-        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
-        background-size: contain;
-    }
-    &Item-Img.phone {
-        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
-        background-size: contain;
-    }
-}*/
 
 /* ************** ANIMATIONS *************** */
 .polaroid{    
@@ -383,6 +432,8 @@ input[type="checkbox"], input[type="radio"] {
     background: transparent url($img_dir+"ico-trophy.png") center no-repeat;
     background-size: contain;
 }
+
+
 
 .alert {
     border-radius: 5px;
@@ -471,6 +522,29 @@ input[type="checkbox"], input[type="radio"] {
     .polaroid{
         display:none;    
     }
+    
+    .PageLogo {    
+        span{
+            line-height: 100%;
+        }
+    }
+    
+    .ReassuranceList {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
+        .ReassuranceList-Item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
 }
 @media screen and (max-width: 730px){
     
@@ -527,6 +601,10 @@ input[type="checkbox"], input[type="radio"] {
         font-size: 1.5rem;
     }
     
+    .ReassuranceList {
+        display: flex;
+        flex-direction: column;
+    }
     .num-result{
         margin-left:0; 
     }
@@ -539,6 +617,17 @@ input[type="checkbox"], input[type="radio"] {
     }
     .DescText-Title-Legend {
         font-size: 1.7rem;
+    }
+    
+    .FormContainer{
+        padding: 0;
+        
+        &-Fields{
+            padding: 1rem 0 0 0;
+        }
+        
+        p{text-align: justify}
+        
     }
     
 }

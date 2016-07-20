@@ -647,25 +647,50 @@ body > script {
 http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 [class*="flex-container"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-container-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flex-container-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flex-item-fluid {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1; }
 
 .flex-item-first {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
   order: -1; }
 
 .flex-item-medium {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
   order: 0; }
 
 .flex-item-last {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
   order: 1; }
 
 .flex-item-center {
@@ -676,8 +701,17 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* ---------------------------------- */
 /* grid container */
 [class*="grid-"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
@@ -686,6 +720,9 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* grid childs */
 [class*="grid-"] > * {
   box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: calc(100% * 1 / 4 - 2rem - .01px);
   min-width: 0;
@@ -989,6 +1026,7 @@ input[type="reset"].unstyled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
 ul.is-unstyled,
@@ -1449,6 +1487,10 @@ s,m,l,n = small, medium, large, none
     border: 0; }
 
   .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .w300p,
@@ -1637,10 +1679,16 @@ s,m,l,n = small, medium, large, none
   pre,
   samp {
     word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto; } }
 @media (max-width: 640px) {
   .no-wrapping {
     word-wrap: normal;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
     hyphens: manual; } }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1928,6 +1976,7 @@ body {
     padding: 0.8rem 1.4rem;
     background-color: white;
     border: 1px solid;
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     opacity: 0;
     z-index: -1; }
@@ -2150,6 +2199,9 @@ body {
 /* ************** MACRO-TYPOS *************** */
 h2,
 button {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
   hyphens: none; }
 
 /* ************** LAYOUT *************** */
@@ -2163,11 +2215,18 @@ button {
   margin-top: 0; }
 
 .SiteHeader .PageWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
 
 .SiteLogo {
-  background: url("../images_landing/numerologie-amour/logo-MYASTRO.svg") 2rem no-repeat;
+  background: url("../images_landing/numerologie-amour/logo-MYASTRO.svg") no-repeat;
   background-size: contain;
   height: 110px;
   width: 15%; }
@@ -2225,6 +2284,8 @@ button {
 
 .FormContainer {
   background: transparent; }
+  .FormContainer-Fields {
+    padding: 2rem; }
   .FormContainer-Header {
     font-family: "Cookie", cursive;
     color: white;
@@ -2237,6 +2298,7 @@ button {
     font-family: "Open Sans", sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
+    -webkit-transition: background 0.25s ease-in;
     transition: background 0.25s ease-in; }
     .FormContainer-Submit:active, .FormContainer-Submit:focus, .FormContainer-Submit:hover {
       background-color: #cf1407; }
@@ -2276,11 +2338,11 @@ button {
         font-weight: normal;
         color: #0ae9d1; }
 
+.blueLabel {
+  color: #225b70 !important; }
+
 .FormField-Label {
   text-transform: uppercase; }
-  .FormField-Label label:nth-child(2) {
-    color: #225b70 !important;
-    border: 1px solid red; }
   .FormField-Label .ico-woman {
     font-size: 1.9rem;
     font-weight: bold;
@@ -2288,10 +2350,11 @@ button {
   .FormField-Label .ico-man {
     font-size: 1.9rem;
     font-weight: bold;
-    color: #0ae9d1; }
+    color: #225b70; }
 
 .FormField-Input {
   border: none;
+  -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in; }
   .FormField-Input:active, .FormField-Input:focus {
     box-shadow: 0 0 6px -1px #225b70;
@@ -2310,24 +2373,55 @@ input[type="checkbox"], input[type="radio"] {
   width: 20px !important;
   height: 20px !important; }
 
-/*.How-header {
-    font-weight: normal;
-    font-size: 2.4rem;
-    font-family: inherit;
-}
-.How-Wizard {
-    border-color: $color1;
-    color: $color1;
-    
-    &Item-Img.form {
-        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
-        background-size: contain;
-    }
-    &Item-Img.phone {
-        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
-        background-size: contain;
-    }
-}*/
+/* ************** MODALE *************** */
+.FormContainer.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red;
+  color: black; }
+  .FormContainer.overlay p.alert {
+    display: table-cell;
+    vertical-align: middle;
+    height: 25rem;
+    width: 40rem;
+    left: 50%;
+    top: 50%;
+    margin: -12.5rem -20rem;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    color: #85eeaa;
+    border: 0px solid red;
+    font-family: "Open Sans", sans-serif; }
+    .FormContainer.overlay p.alert b {
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 2rem;
+      width: 100%; }
+    .FormContainer.overlay p.alert br + i {
+      padding: 0.5rem 0.8rem;
+      background: #ccc;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      left: 22%; }
+      .FormContainer.overlay p.alert br + i :after {
+        content: "fermer";
+        text-transform: uppercase;
+        text-align: center;
+        width: 60%;
+        padding: 1rem; }
+
 /* ************** ANIMATIONS *************** */
 .polaroid {
   width: 30rem;
@@ -2351,27 +2445,51 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0; }
 
 .anim-photo1 {
+  -webkit-animation-name: anim-photo;
   animation-name: anim-photo;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
 .anim-photo2 {
+  -webkit-animation-name: anim-photo;
   animation-name: anim-photo;
+  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s; }
+
+@-webkit-keyframes anim-photo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0);
+    transform: translate(-200px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
 
 @keyframes anim-photo {
   0% {
     opacity: 0;
+    -webkit-transform: translate(-200px, 0);
     transform: translate(-200px, 0); }
   100% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 /* ************** FOOTER *************** */
 .ReassuranceList {
@@ -2457,11 +2575,61 @@ input[type="checkbox"], input[type="radio"] {
     background-size: auto 75%; } }
 @media screen and (max-width: 900px) {
   .polaroid {
-    display: none; } }
+    display: none; }
+
+  .PageLogo span {
+    line-height: 100%; }
+
+  .ReassuranceList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .ReassuranceList .ReassuranceList-Item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-right: none;
+      margin-bottom: 1rem; } }
 @media screen and (max-width: 730px) {
   .SiteHeader .PageWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center; }
   .SiteHeader .SiteLogo, .SiteHeader .PageLogo {
     width: 100%;
@@ -2500,6 +2668,17 @@ input[type="checkbox"], input[type="radio"] {
     font-family: inherit;
     font-size: 1.5rem; }
 
+  .ReassuranceList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
   .num-result {
     margin-left: 0; } }
 @media screen and (max-width: 470px) {
@@ -2507,7 +2686,14 @@ input[type="checkbox"], input[type="radio"] {
     margin-bottom: 0; }
 
   .DescText-Title-Legend {
-    font-size: 1.7rem; } }
+    font-size: 1.7rem; }
+
+  .FormContainer {
+    padding: 0; }
+    .FormContainer-Fields {
+      padding: 1rem 0 0 0; }
+    .FormContainer p {
+      text-align: justify; } }
 @media screen and (max-width: 400px) {
   .PageLogo {
     padding: 1rem; }

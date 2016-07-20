@@ -65,9 +65,20 @@
                                 <input type="hidden" name="theme_id" id="theme_id" value="1" />
                                 <!-- ############################################### -->
                                 
-                                
+                                <div class="FormField radio">
+                                    <div class="FormField-TableInputContainer fixed-2-col gender">
+                                        <div class="FormField-TableInputContainer-Cell">
+                                            <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> Femme</label>
+                                            <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                        </div>
+                                        <div class="FormField-TableInputContainer-Cell">
+                                            <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> Homme</label>
+                                            <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="FormField">
-                                    <label for="name" class="FormField-Label">Prénom</label>
+                                    <label for="name" class="FormField-Label blueLabel">Prénom</label>
                                     <input type="text" id="name" name="prenom" class="FormField-Input" required />
                                 </div>
                                 <div class="FormField">
@@ -109,7 +120,7 @@
                                     </div>
                                 </div>
                                 <div class="FormField sonprenom show">
-                                    <label for="son_prenom" class="FormField-Label">Son prénom</label>
+                                    <label for="son_prenom" class="FormField-Label blueLabel">Son prénom</label>
                                     <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" required />
                                 </div> 
                                 <div class="FormField">
