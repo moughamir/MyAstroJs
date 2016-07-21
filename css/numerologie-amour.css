@@ -2137,8 +2137,14 @@ body {
   padding: 2rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: white;
-  background: #3e96ba url("../images_landing/numerologie-amour/bg.jpg") no-repeat center top fixed;
+  color: white;}
+
+.bg1 {
+  background: #28b1d3 url("../images_landing/numerologie-amour/bg1.jpg") no-repeat center top fixed;
+  background-size: cover; }
+
+.bg2 {
+  background: #28b1d3 url("../images_landing/numerologie-amour/bg2.jpg") no-repeat center top fixed;
   background-size: cover; }
 
 /* ************** MACRO-TYPOS *************** */
@@ -2147,28 +2153,48 @@ button {
   hyphens: none; }
 
 /* ************** LAYOUT *************** */
+.FormContainer {
+  max-width: 60rem; }
+
 .PageWrapper {
   padding: 0; }
 
 .ContentBand {
   margin-top: 0; }
 
-.SiteHeader {
-  margin-bottom: 4rem; }
+.SiteHeader .PageWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 .SiteLogo {
-  background: url("../images_landing/numerologie-amour/logo-MYASTRO.svg") 2rem no-repeat;
-  background-size: contain;
-  height: 107px;
-  width: 100%;
-  position: absolute; }
-
-.PageLogo {
-  background: url("../images_landing/numerologie-amour/title.png") center no-repeat;
+  background: url("../images_landing/numerologie-amour/logo-MYASTRO.svg") no-repeat;
   background-size: contain;
   height: 110px;
-  display: inline-block;
-  width: 100%; }
+  width: 15%; }
+
+.PageLogo {
+  width: 70%;
+  text-align: center; }
+  .PageLogo span {
+    font-family: "Amatic SC", cursive;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45); }
+  .PageLogo span + span {
+    font-family: "Cookie", cursive;
+    font-size: 10rem;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    background: url("../images_landing/numerologie-amour/bg-title.png") 100% 70% no-repeat;
+    padding-right: 5rem; }
 
 .ContentBand-ColumnHeader * {
   text-align: center !important; }
@@ -2178,9 +2204,6 @@ button {
 .FormContainer-name,
 .FormContainer-name + p {
   font-weight: bold; }
-
-.Form .ContentBand-ColumnHeader {
-  margin-bottom: 1.5rem; }
 
 .DescText-Title {
   background: transparent url("../images_landing/numerologie-amour/titre.svg") no-repeat center;
@@ -2201,46 +2224,39 @@ button {
     background-color: transparent;
     text-align: right;
     font-size: 1.9rem;
-    text-shadow: 0 0 4px #2c2927; }
-
-.moon-gif {
-  background: transparent url("../images_landing/numerologie-amour/lune-anim.gif") no-repeat top center;
-  background-size: 85%;
-  height: 51.6rem;
-  max-width: 100%; }
+    text-shadow: 0 0 4px #225b70; }
 
 .DescText-Content {
   background: transparent;
   text-indent: 5rem; }
 
 .FormContainer {
-  background: rgba(44, 41, 39, 0.6);
-  box-shadow: 0 0 6px -1px black; }
+  background: transparent; }
+  .FormContainer-Fields {
+    padding: 2rem; }
   .FormContainer-Header {
-    font-family: "Ubuntu Condensed", sans-serif;
+    font-family: "Cookie", cursive;
     color: white;
-    padding-bottom: 3rem;
-    background: url("../images_landing/numerologie-amour/fleche.svg") no-repeat bottom center; }
+    font-size: 4.5rem; }
   .FormContainer-Submit {
     padding: 1rem 4rem;
-    margin-bottom: -5rem;
-    border: 0px solid #2c2927;
-    background-color: #f05882;
+    border: 0px solid #225b70;
+    background-color: #f94f43;
     color: white;
-    font-family: "Ubuntu Condensed", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
     transition: background 0.25s ease-in; }
     .FormContainer-Submit:active, .FormContainer-Submit:focus, .FormContainer-Submit:hover {
-      background-color: #e7154f; }
+      background-color: #cf1407; }
   .FormContainer.DRI .DRI {
     box-shadow: 0 0 0px 0px black;
     background: transparent; }
     .FormContainer.DRI .DRI-Intro {
-      background-color: #3e96ba;
-      font-family: "Ubuntu Condensed", sans-serif; }
+      background-color: #28b1d3;
+      font-family: "Cookie", cursive; }
       .FormContainer.DRI .DRI-Intro-Title {
-        color: #2c2927;
+        color: #225b70;
         text-transform: uppercase; }
       .FormContainer.DRI .DRI-Intro-Text {
         color: white; }
@@ -2264,10 +2280,13 @@ button {
         font-weight: bold;
         font-size: 1.4rem; }
     .FormContainer.DRI .DRI-Sent {
-      font-family: "Ubuntu Condensed", sans-serif; }
+      font-family: "Cookie", cursive; }
       .FormContainer.DRI .DRI-Sent strong {
         font-weight: normal;
         color: #0ae9d1; }
+
+.blueLabel {
+  color: #225b70 !important; }
 
 .FormField-Label {
   text-transform: uppercase; }
@@ -2278,46 +2297,151 @@ button {
   .FormField-Label .ico-man {
     font-size: 1.9rem;
     font-weight: bold;
-    color: #0ae9d1; }
+    color: #225b70; }
 
 .FormField-Input {
   border: none;
   transition: all 0.25s ease-in; }
   .FormField-Input:active, .FormField-Input:focus {
-    box-shadow: 0 0 6px -1px #2c2927;
+    box-shadow: 0 0 6px -1px #225b70;
     background-color: #fffdc5; }
   .FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
     outline-width: 0;
-    box-shadow: 0 0 6px -1px #2c2927;
-    border-color: #2c2927; }
+    box-shadow: 0 0 6px -1px #225b70;
+    border-color: #225b70; }
 
 .FormField-Info {
   border: none;
-  color: #2c2927;
-  box-shadow: 0 0 6px -1px #2c2927; }
+  color: #225b70;
+  box-shadow: 0 0 6px -1px #225b70; }
 
 input[type="checkbox"], input[type="radio"] {
   width: 20px !important;
   height: 20px !important; }
 
-.How-header {
-  font-weight: normal;
-  font-size: 2.4rem;
-  font-family: inherit; }
+/* ************** MODALE *************** */
+.overlay {
+  display: none;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh !important;
+  max-width: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red;
+  color: black; }
+  .overlay p.alert {
+    display: table-cell;
+    vertical-align: middle;
+    height: 25rem;
+    width: 40rem;
+    left: 50%;
+    top: 50%;
+    margin: -12.5rem -20rem;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    color: #85eeaa;
+    border: 0px solid red;
+    font-family: "Open Sans", sans-serif; }
+    .overlay p.alert b {
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 2rem;
+      width: 100%; }
+    .overlay p.alert br + i {
+      padding: 0.5rem 0.8rem;
+      background: #ccc;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      left: 22%; }
+      .overlay p.alert br + i :after {
+        content: "fermer";
+        text-transform: uppercase;
+        text-align: center;
+        width: 60%;
+        padding: 1rem; }
 
-.How-Wizard {
-  border-color: #2c2927;
-  color: #2c2927; }
-  .How-WizardItem-Img.form {
-    background: transparent url("../images_landing/numerologie-amour/how-ico-form.png") center no-repeat;
-    background-size: contain; }
-  .How-WizardItem-Img.phone {
-    background: transparent url("../images_landing/numerologie-amour/how-ico-phone.png") center no-repeat;
-    background-size: contain; }
+/* ************** ANIMATIONS *************** */
+.polaroid {
+  width: 30rem;
+  height: 35.5rem;
+  border: 0px solid red; }
 
+#photo1 {
+  background: url("../images_landing/numerologie-amour/photo-couple.png") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10rem;
+  left: -5rem;
+  opacity: 0; }
+
+#photo2 {
+  background: url("../images_landing/numerologie-amour/photo-i-love-u.png") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 25rem;
+  left: -12rem;
+  opacity: 0; }
+
+.anim-photo1 {
+  -webkit-animation-name: anim-photo;
+  animation-name: anim-photo;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.anim-photo2 {
+  -webkit-animation-name: anim-photo;
+  animation-name: anim-photo;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+@-webkit-keyframes anim-photo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0);
+    transform: translate(-200px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+@keyframes anim-photo {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-200px, 0);
+    transform: translate(-200px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+/* ************** FOOTER *************** */
 .ReassuranceList {
-  background-color: #304d59;
-  color: white;
+  background-color: #ffffff;
+  color: #28b1d3;
+  font-family: "Open Sans", sans-serif;
   box-shadow: 0 0 6px -1px black; }
 
 .ReassuranceList-Item-Img.star {
@@ -2367,7 +2491,26 @@ input[type="checkbox"], input[type="radio"] {
   text-align: center;
   font-weight: bold;
   border: 2px solid white;
-  padding: 15px; }
+  padding: 15px;
+  max-width: 60rem;
+  margin: 0 auto; }
+
+/* ************** RESULTATS NUMEROLOGIE*************** */
+.wrapper-num-result {
+  max-width: 60rem;
+  margin: 0 auto; }
+  .wrapper-num-result h3 {
+    text-align: left; }
+  .wrapper-num-result .num-result .num-result-numero {
+    font-size: 10rem;
+    margin: 0;
+    text-align: center;
+    font-weight: bold; }
+  .wrapper-num-result .num-result .num-result-text-name {
+    margin: 1rem 0 2rem;
+    font-size: 1.4rem; }
+    .wrapper-num-result .num-result .num-result-text-name span {
+      text-transform: uppercase; }
 
 @media screen and (min-height: 1000px) {
   body {
@@ -2376,28 +2519,63 @@ input[type="checkbox"], input[type="radio"] {
   .TextContent .ContentBand-ColumnHeader {
     background-position: top left;
     background-size: auto 75%; } }
+@media screen and (max-width: 900px) {
+  .polaroid {
+    display: none; }
+
+  .PageLogo span {
+    line-height: 100%; }
+
+  .ReassuranceList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .ReassuranceList .ReassuranceList-Item {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-right: none;
+      margin-bottom: 1rem; } }
 @media screen and (max-width: 730px) {
   .SiteHeader .PageWrapper {
     display: flex;
     flex-direction: column;
     align-items: center; }
   .SiteHeader .SiteLogo, .SiteHeader .PageLogo {
-    height: 107px;
     width: 100%;
-    text-align: center;
-    /*display: table-cell;
-    position: static;
-    width: auto;
-    height: auto;*/ }
+    text-align: center; }
   .SiteHeader .SiteLogo {
     position: inherit;
-    background-position: center;
-    /*            
-                width: 107px;
-                background-position: left;*/ }
+    background-position: center; }
 
   .TextContent {
-    max-width: 500px;
+    max-width: 600px;
     margin: auto; }
     .TextContent .ContentBand-ColumnHeader {
       background-size: initial;
@@ -2410,30 +2588,56 @@ input[type="checkbox"], input[type="radio"] {
     margin-top: 3rem;*/ }
 
   .DescText {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem; } }
+@media screen and (max-width: 640px) {
+  .PageLogo {
+    width: 85%;
+    margin-top: 1.5rem;
+    text-align: center; }
+    .PageLogo span {
+      line-height: 100%;
+      font-size: 6rem; }
+    .PageLogo span + span {
+      font-size: 8rem; }
 
-  .moon-gif {
-    display: none; } }
+  .FormContainer-Header {
+    font-family: inherit;
+    font-size: 1.5rem; }
+
+  .ReassuranceList {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+  .num-result {
+    margin-left: 0; } }
 @media screen and (max-width: 470px) {
   .SiteHeader {
-    margin-bottom: 0;
-    /*.SiteLogo, .PageLogo {
-        display: block;
-        width: 100%;
-        background-position: center;
-    }*/ }
-    .SiteHeader .PageLogo {
-      height: 120px; }
+    margin-bottom: 0; }
 
   .DescText-Title-Legend {
     font-size: 1.7rem; }
 
-  .moon-gif {
-    display: none; } }
+  .FormContainer {
+    padding: 0; }
+    .FormContainer-Fields {
+      padding: 1rem 0 0 0; }
+    .FormContainer p {
+      text-align: justify; } }
 @media screen and (max-width: 400px) {
+  .PageLogo {
+    padding: 1rem; }
+    .PageLogo span {
+      font-size: 4rem; }
+    .PageLogo span + span {
+      font-size: 6rem; }
+
   .TextContent .ContentBand-ColumnHeader {
     background-position: top left;
-    background-size: auto 75%; }
-
-  .moon-gif {
-    display: none; } }
+    background-size: auto 75%; } }

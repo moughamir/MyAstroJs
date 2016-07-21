@@ -69,7 +69,7 @@ $(document).ready(function(){
         alert_done = '\
             <p class="alert alert-success">\
                 <b><i class="fa fa-check"><img src="/images/loader.gif" /></i> Inscription complétée.</b>\
-                Vous allez être redirigé.\
+                <br/>Vous allez être redirigé.\
             </p>'; 
         alert_error = '\
             <p class="alert alert-danger">\
