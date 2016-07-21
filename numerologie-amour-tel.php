@@ -158,7 +158,6 @@ $result = $_SESSION['numResult'];
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="js/formValidator.js"></script>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
