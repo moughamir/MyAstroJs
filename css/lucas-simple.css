@@ -2214,7 +2214,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-voyant {
   background: url("../images_landing/lucas-simple/voyant-lucas.png") top right no-repeat;
-  height: 18rem;
+  position: relative;
+  margin-bottom: -4rem;
+  height: 24rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2226,7 +2228,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  z-index: 10; }
 
 .ContentBand {
   margin-top: 0; }
@@ -2295,7 +2298,8 @@ h1, h2, h3, h4, h5, h6 {
       background-color: #b6dfec;
       color: #18191e; }
       .FormContainer.DRI .DRI-Slogan span {
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-weight: bold; }
     .FormContainer.DRI .DRI-Form {
       padding: 2rem;
       background-color: #fff; }

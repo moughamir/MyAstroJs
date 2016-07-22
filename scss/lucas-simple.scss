@@ -60,10 +60,13 @@ h1,h2,h3,h4,h5,h6{
 
 .main-voyant {
     background: url($img_dir+"voyant-lucas.png") top right no-repeat;
-    height: 18rem;
+    position: relative;
+    margin-bottom:-4rem;
+    height: 24rem;
     display: flex;
     align-items:flex-start;
     justify-content:flex-start;
+    z-index:10;
 }
 
 .ContentBand{
@@ -160,7 +163,7 @@ h1,h2,h3,h4,h5,h6{
         &-Slogan {
             background-color: $color2;
             color: #18191e;
-            span{text-transform: uppercase;}
+            span{text-transform: uppercase; font-weight: bold}
         }
         &-Form {
             padding: 2rem;
