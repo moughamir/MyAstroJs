@@ -2440,7 +2440,7 @@ input[type="checkbox"], input[type="radio"] {
     border-color: #bce8f1; }
 
 .SiteCopyright {
-  color: #0f1528; }
+  color: #fff; }
 
 @media screen and (max-width: 640px) {
   .PageWrapper {
