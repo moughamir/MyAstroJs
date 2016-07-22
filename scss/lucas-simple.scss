@@ -158,8 +158,8 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         &-Slogan {
-            background-color: lighten($color1, 20%);
-            color: #fff;
+            background-color: $color2;
+            color: #18191e;
             span{text-transform: uppercase;}
         }
         &-Form {
