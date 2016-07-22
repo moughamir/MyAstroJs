@@ -23,7 +23,7 @@ include('include/process-dri-postmailing.php');
     
     <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
-    <link rel="stylesheet" type="text/css" href="css/claude-simple.min.css">
+    <link rel="stylesheet" type="text/css" href="css/claude-simple.css">
        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +44,10 @@ include('include/process-dri-postmailing.php');
             <div class="PageWrapper grid-2-tiny-1-small-1-medium-1 flex-mobile">
                 <div class="colG">
                     <div class="TextContent">
-                        <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous rappeler gratuitement<br/>par un voyant professionnel.</h2></header>
+                        <header class="main-voyant">
+                        <h2 class="ContentBand-accroche">Ne restez pas sur vos doutes !</h2>
+                        <h2 class="ContentBand-title">Faites-vous rappeler gratuitement<br/>par un voyant professionnel.</h2>
+                        </header>
                         <article class="DescText">
                             <div class="DescText-Content">
                                 <p><b>Une question</b> sur votre avenir ou sur celui d'un être cher&nbsp;?<br/>L'un de nos voyants reconnus vous recontacte dans les plus brefs délais et vous éclaire sur vos doutes.</p>
@@ -63,26 +66,8 @@ include('include/process-dri-postmailing.php');
                 </div>
                 <div class="colD Form">
                     <article class="FormContainer DRI">
-                        <div class="DRI-list-voyants">
-                            <h2>Nos voyants sont à votre écoute&nbsp;!</h2>
-                            <ul class="grid-4-tiny-2-small-2-medium-4">
-                                <li>
-                                    <div class="voyant-francis" ></div>
-                                    <span>Francis</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-zohra"></div>
-                                    <span>Zohra</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-soufiane"></div>
-                                    <span>Soufiane</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-benedicte"></div>
-                                    <span>Bénédicte</span>
-                                </li>
-                            </ul>
+                        <div class="DRI-accroche">
+                            <h2><span>Voyance par</span><span>téléphone</span></h2>
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
                         <div class="DRI-Form FormContainer-Fields">

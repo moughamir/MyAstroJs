@@ -2179,11 +2179,13 @@ html {
   height: 100%; }
 
 body {
+  border-top: 4rem solid #000;
   padding-top: 2rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: white;
-  background: #0f1528 url("../images_landing/lucas-simple/bg.jpg") no-repeat;
+  background: #ccc url("../images_landing/claude-simple/bg.jpg") no-repeat fixed;
+  background-position: center;
   background-size: cover; }
 
 h2, h3 {
@@ -2203,7 +2205,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px; }
 
 .SiteLogo {
-  background: url("../images_landing/lucas-simple/logo-MYASTRO.svg") center no-repeat;
+  background: url("../images_landing/claude-simple/logo-MYASTRO.svg") center no-repeat;
   background-size: contain;
   width: 10rem;
   height: 10rem;
@@ -2213,28 +2215,22 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0; }
 
 .main-voyant {
-  background: url("../images_landing/lucas-simple/voyant-lucas.png") top right no-repeat;
-  height: 18rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  background: url("../images_landing/claude-simple/voyant-claude.png") top left no-repeat;
+  height: 15rem;
+  text-align: right;
+  padding: 4rem 4rem 0 0; }
 
 .ContentBand {
   margin-top: 0; }
+  .ContentBand-accroche {
+    font-family: "Arial",sans serif;
+    font-weight: inherit;
+    font-size: 2.2rem;
+    margin: 0;
+    padding-top: 1rem; }
   .ContentBand-title {
-    font-size: 2rem;
-    height: 10rem;
-    text-align: left;
-    padding-top: 5rem; }
+    font-size: 1.7rem;
+    margin: 0; }
 
 .DescText {
   background-color: white;
@@ -2257,7 +2253,6 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.9rem;
       text-shadow: 0 0 4px #ccc; }
   .DescText-Content {
-    background: transparent;
     color: #0f1528;
     padding: 2rem 1.8rem 2.6rem 2rem; }
     .DescText-Content p:first-child::first-letter {
@@ -2267,13 +2262,13 @@ h1, h2, h3, h4, h5, h6 {
   max-width: inherit; }
   .FormContainer-Header {
     font-family: 'Ubuntu Condensed';
-    color: #15c0f8;
+    color: #d04de5;
     padding-bottom: 3rem;
-    background: url("../images_landing/lucas-simple/fleche.png") no-repeat bottom center; }
+    background: url("../images_landing/claude-simple/fleche.png") no-repeat bottom center; }
   .FormContainer-Submit {
     margin-bottom: -5rem;
     padding: 1rem 4rem;
-    background-color: #15c0f8;
+    background-color: #d04de5;
     color: #fff;
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -2281,73 +2276,53 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in; }
     .FormContainer-Submit:hover {
-      background-color: #046989; }
-  .FormContainer.DRI .DRI {
-    /* MODULE LISTE VOYANT-E-S */ }
-    .FormContainer.DRI .DRI-Intro {
-      font-family: 'Ubuntu Condensed', sans-serif; }
-      .FormContainer.DRI .DRI-Intro-Title {
-        color: #ccc;
-        text-transform: uppercase; }
-      .FormContainer.DRI .DRI-Intro-Text {
-        color: white; }
-    .FormContainer.DRI .DRI-Slogan {
-      background-color: #b6dfec;
-      color: #18191e; }
-      .FormContainer.DRI .DRI-Slogan span {
-        text-transform: uppercase; }
-    .FormContainer.DRI .DRI-Form {
-      padding: 2rem;
-      background-color: #fff; }
-      .FormContainer.DRI .DRI-Form .FormField-Input {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.4rem;
-        color: #bbb; }
-    .FormContainer.DRI .DRI-Sent {
-      color: #0f1528; }
-      .FormContainer.DRI .DRI-Sent strong {
-        font-weight: normal;
-        color: #15c0f8; }
-    .FormContainer.DRI .DRI-list-voyants {
-      margin-bottom: 2rem; }
-      .FormContainer.DRI .DRI-list-voyants h2 {
-        font-size: 2rem; }
-      .FormContainer.DRI .DRI-list-voyants ul {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-        list-style: none; }
-        .FormContainer.DRI .DRI-list-voyants ul li {
-          margin: 0;
-          padding: 0; }
-          .FormContainer.DRI .DRI-list-voyants ul li div {
-            width: 10rem;
-            height: 10rem; }
-          .FormContainer.DRI .DRI-list-voyants ul li span {
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 1.8rem; }
-      .FormContainer.DRI .DRI-list-voyants .voyant-francis {
-        background: url("../images_landing/lucas-simple/portrait-francis.jpg") no-repeat bottom center; }
-      .FormContainer.DRI .DRI-list-voyants .voyant-zohra {
-        background: url("../images_landing/lucas-simple/portrait-zohra.jpg") no-repeat bottom center; }
-      .FormContainer.DRI .DRI-list-voyants .voyant-soufiane {
-        background: url("../images_landing/lucas-simple/portrait-soufiane.jpg") no-repeat bottom center; }
-      .FormContainer.DRI .DRI-list-voyants .voyant-benedicte {
-        background: url("../images_landing/lucas-simple/portrait-benedicte.jpg") no-repeat bottom center; }
+      background-color: #89179c; }
+  .FormContainer.DRI .DRI-Intro {
+    font-family: 'Ubuntu Condensed', sans-serif; }
+    .FormContainer.DRI .DRI-Intro-Title {
+      color: #ccc;
+      text-transform: uppercase; }
+    .FormContainer.DRI .DRI-Intro-Text {
+      color: white; }
+  .FormContainer.DRI .DRI-Slogan {
+    background-color: #000;
+    color: #fff; }
+    .FormContainer.DRI .DRI-Slogan span {
+      text-transform: uppercase;
+      font-weight: bold; }
+  .FormContainer.DRI .DRI-Form {
+    padding: 2rem; }
+    .FormContainer.DRI .DRI-Form .FormField-Input {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #bbb; }
+  .FormContainer.DRI .DRI-Sent {
+    color: #fff; }
+    .FormContainer.DRI .DRI-Sent strong {
+      font-weight: normal;
+      color: #d04de5; }
+  .FormContainer.DRI .DRI-accroche {
+    color: white;
+    text-transform: uppercase;
+    border-right: 2px solid #d04de5;
+    width: 80%;
+    margin: 0 1rem 3rem 2rem;
+    padding: 1rem; }
+    .FormContainer.DRI .DRI-accroche h2 {
+      margin-right: -4rem; }
+    .FormContainer.DRI .DRI-accroche span {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      font-family: "Arial", sans-serif !important;
+      font-weight: 400; }
+    .FormContainer.DRI .DRI-accroche span + span {
+      text-align: right;
+      border-bottom: 2px solid #fff;
+      font-weight: bold;
+      padding-right: 5rem;
+      padding-bottom: 1rem; }
 
 .FormField-Input {
   border: 1px solid #ccc; }
@@ -2355,7 +2330,7 @@ h1, h2, h3, h4, h5, h6 {
     outline-width: 0;
     border-color: transparent; }
   .FormField-Input:active, .FormField-Input:focus {
-    background-color: #f4fcff; }
+    background-color: white; }
 .FormField-Info {
   border: none;
   color: #ccc;
@@ -2366,7 +2341,7 @@ input[type="checkbox"], input[type="radio"] {
   height: 20px !important; }
 
 .faq {
-  background: #fff url("../images_landing/lucas-simple/bg-faq.jpg") no-repeat;
+  background: #fff url("../images_landing/claude-simple/bg-faq.jpg") no-repeat;
   background-size: cover;
   margin-top: 3rem;
   padding: 2rem 2.5rem;
@@ -2375,7 +2350,7 @@ input[type="checkbox"], input[type="radio"] {
     text-transform: uppercase;
     font-family: inherit;
     font-weight: 400;
-    color: #15c0f8; }
+    color: #d04de5; }
   .faq ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2397,27 +2372,35 @@ input[type="checkbox"], input[type="radio"] {
       list-style: none;
       padding: 0 0 10px 50px; }
     .faq ul .ico-formulaire {
-      background: transparent url("../images_landing/lucas-simple/ico-form.svg") center left no-repeat; }
+      background: transparent url("../images_landing/claude-simple/ico-form.svg") center left no-repeat; }
     .faq ul .ico-standardiste {
-      background: transparent url("../images_landing/lucas-simple/ico-phone.svg") center left no-repeat; }
+      background: transparent url("../images_landing/claude-simple/ico-phone.svg") center left no-repeat; }
+
+/* BLOCS TRANSPARENTS */
+.DescText,
+.DescText-Content,
+.faq,
+.DRI-Form {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #fff !important; }
 
 .ReassuranceList {
-  background-color: #0f1528; }
+  background-color: #000; }
 
 .ReassuranceList-Item-Img.star {
-  background: transparent url("../images_landing/lucas-simple/ico-star.png") center no-repeat;
+  background: transparent url("../images_landing/claude-simple/ico-star.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.lock {
-  background: transparent url("../images_landing/lucas-simple/ico-lock.png") center no-repeat;
+  background: transparent url("../images_landing/claude-simple/ico-lock.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.gift {
-  background: transparent url("../images_landing/lucas-simple/ico-gift.png") center no-repeat;
+  background: transparent url("../images_landing/claude-simple/ico-gift.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.trophy {
-  background: transparent url("../images_landing/lucas-simple/ico-trophy.png") center no-repeat;
+  background: transparent url("../images_landing/claude-simple/ico-trophy.png") center no-repeat;
   background-size: contain; }
 
 .alert {
@@ -2443,6 +2426,9 @@ input[type="checkbox"], input[type="radio"] {
   color: #fff; }
 
 @media screen and (max-width: 640px) {
+  body {
+    border-top: 2rem solid #000; }
+
   .PageWrapper {
     display: inherit;
     padding: 0 2rem;
@@ -2483,36 +2469,6 @@ input[type="checkbox"], input[type="radio"] {
       height: inherit;
       text-align: center;
       margin: 0 auto; }
-
-  .DRI-list-voyants ul {
-    /* display:inherit !important;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     margin: 0; 
-     padding: 0;
-     list-style: none;
-     width: 100%;*/ }
-    .DRI-list-voyants ul li {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      .DRI-list-voyants ul li:nth-child(3), .DRI-list-voyants ul li:nth-child(4) {
-        display: none; }
 
   .DescText-Content {
     padding: 1.5rem; }

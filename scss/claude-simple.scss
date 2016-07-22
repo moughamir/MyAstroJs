@@ -14,10 +14,11 @@
 /* --------------- fonts --------------- */
 $font1: 'Courgette', cursive;
 
+
 /* --------------- variables  --------------- */
-$img_dir : "../images_landing/lucas-simple/";
-$color1: #15c0f8; //bleu submit, titles, accroches
-$color2: #b6dfec; //bleu pale, title 10 1eres minutes
+$img_dir : "../images_landing/claude-simple/";
+$color1: #d04de5; //violet submit, titles, accroches
+$color2: #000; //bleu pale, title 10 1eres minutes
 $color3: #0f1528; //bleu foncé, bg-reassurance
 $color4: #6d6c6a; // gris texte courant
 
@@ -26,11 +27,13 @@ html {
 }
 
 body {
+    border-top: 4rem solid #000;
     padding-top: 2rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: white;
-    background: $color3 url($img_dir+"bg.jpg") no-repeat;
+    background: #ccc url($img_dir+"bg.jpg") no-repeat fixed;
+    background-position: center;
     background-size: cover;
 }
 
@@ -58,11 +61,11 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .main-voyant {
-    background: url($img_dir+"voyant-lucas.png") top right no-repeat;
-    height: 18rem;
-    display: flex;
-    align-items:flex-start;
-    justify-content:flex-start;
+    background: url($img_dir+"voyant-claude.png") top left no-repeat;
+    height: 15rem;
+    text-align: right;
+    padding: 4rem 4rem 0 0;
+
 }
 
 .ContentBand{
@@ -70,16 +73,18 @@ h1,h2,h3,h4,h5,h6{
     &-Column{
     
     }
+    &-accroche{
+        font-family: "Arial",sans serif;
+        font-weight: inherit;
+        font-size: 2.2rem;
+        margin: 0;
+        padding-top: 1rem;
+    }
     &-title{
-        font-size: 2rem;
-        height: 10rem;
-        text-align: left;
-        padding-top: 5rem;
+        font-size: 1.7rem;
+        margin: 0;
     }
     
-}
-
-.TextContent {
 }
 
 .DescText{
@@ -108,7 +113,7 @@ h1,h2,h3,h4,h5,h6{
         }
     }
     &-Content {
-        background: transparent;
+        //background: transparent;
         color: $color3;
         padding: 2rem 1.8rem 2.6rem 2rem;
         
@@ -158,12 +163,12 @@ h1,h2,h3,h4,h5,h6{
         }
         &-Slogan {
             background-color: $color2;
-            color: #18191e;
-            span{text-transform: uppercase;}
+            color: #fff;
+            span{text-transform: uppercase; font-weight: bold}
         }
         &-Form {
             padding: 2rem;
-            background-color: #fff;
+            //background-color: #fff;
             
             .FormField-Input {
                 text-align: center;
@@ -173,52 +178,38 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         &-Sent {
-            color: $color3;
+            color: #fff;
             strong {
                 font-weight: normal;
                 color: $color1;
             }
         }
-        /* MODULE LISTE VOYANT-E-S */
-        &-list-voyants{
-            margin-bottom: 2rem;
+        &-accroche{
+            color: white;
+            text-transform: uppercase;
+            border-right: 2px solid $color1;
+            width: 80%;
             
-            h2{font-size:2rem;}
+            margin:0 1rem 3rem 2rem;
+            padding: 1rem;
             
-            ul{
-                display: flex;
-                flex-direction: row;
-                //align-items: stretch;
-                justify-content: space-between;
-                margin: 0; 
-                padding: 0;
-                list-style: none;
-                
-                li {
-                    margin: 0;
-                    padding: 0;
-                    div{
-                        width: 10rem;
-                        height: 10rem;
-                    }
-                    span{
-                        text-transform: uppercase;
-                        color:#fff;
-                        font-size: 1.8rem;
-                    }
-                }
+            h2 {
+                margin-right: -4rem;
             }
-            .voyant-francis{
-                background: url($img_dir+"portrait-francis.jpg") no-repeat bottom center;
+            
+            span{
+                display: inline-block; 
+                width: 100%;
+                text-align: left;
+                font-family: "Arial", sans-serif !important;
+                font-weight:400;
             }
-            .voyant-zohra{
-                background: url($img_dir+"portrait-zohra.jpg") no-repeat bottom center;
-            }
-            .voyant-soufiane{
-                background: url($img_dir+"portrait-soufiane.jpg") no-repeat bottom center;
-            }
-            .voyant-benedicte{
-                background: url($img_dir+"portrait-benedicte.jpg") no-repeat bottom center;
+            span+span{
+                text-align:right;
+                border-bottom: 2px solid #fff;
+                font-weight:bold;
+                padding-right: 5rem;
+                padding-bottom: 1rem;
             }
         }
         
@@ -291,11 +282,18 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-
+/* BLOCS TRANSPARENTS */
+.DescText,
+.DescText-Content,
+.faq,
+.DRI-Form{
+    background-color: rgba(0, 0, 0, 0.3) !important;   
+    color: #fff !important;
+}
 
 
 .ReassuranceList {
-    background-color: $color3;
+    background-color: #000;
 }
 
 .ReassuranceList-Item-Img.star {
@@ -352,7 +350,7 @@ input[type="checkbox"], input[type="radio"] {
     
 }
 @media screen and (max-width: 640px){
-   
+    body{ border-top: 2rem solid #000;}
     .PageWrapper{
         display:inherit;
         padding: 0 2rem;
@@ -398,32 +396,6 @@ input[type="checkbox"], input[type="radio"] {
         }
     }
     
-    .DRI-list-voyants{
-        //margin-top: 4rem;
-        ul{
-           /* display:inherit !important;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0; 
-            padding: 0;
-            list-style: none;
-            width: 100%;*/
-            
-            li{
-                display:flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                //margin-bottom: 1rem;
-                
-                &:nth-child(3),
-                &:nth-child(4){
-                    display: none;
-                }
-            }
-        }
-    }
     
     
     .DescText-Content{
