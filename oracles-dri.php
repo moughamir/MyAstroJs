@@ -38,7 +38,7 @@ include('include/process-dri-postmailing.php');
         <header class="SiteHeader">
             <div class="SiteHeader-grid-3">
                 <span class="SiteLogo">
-                    <h1>My ASTRO</h1>
+                    <h1>Oracle gratuit</h1>
                 </span>
                 
                 <div class="SiteHeader-img"></div>
@@ -116,10 +116,17 @@ include('include/process-dri-postmailing.php');
         </section>
         
         <section class="oracles">
-           <!-- http://www.oracle-gratuit.fr/ -->
-            <a href="*" target="_blank" title="Choisissez votre oracle">
-                <div class="oracles-img"></div>
-            </a>            
+            <ul class="oracles-grid grid-4-tiny-1-small-2-medium-4">
+                <li><a href="http://www.oracle-gratuit.fr/oracle-de-lamour" target="_blank"><span>Oracle de l'amour</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-des-anges" target="_blank"><span>Oracle des anges</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-chinois" target="_blank"><span>Oracle chinois</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-belline" target="_blank"><span>Oracle de belline</span></a></li>
+                
+                <li><a href="http://www.oracle-gratuit.fr/oracle-de-la-lune" target="_blank"><span>Oracle de la lune</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-ge" target="_blank"><span>Oracle gé</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-des-heures" target="_blank"><span>Oracle des heures</span></a></li>
+                <li><a href="http://www.oracle-gratuit.fr/oracle-de-la-triade" target="_blank"><span>Oracle de le triade</span></a></li>
+            </ul>        
         </section>
         
         <?php include('include/footer_reassurance.php'); ?>
