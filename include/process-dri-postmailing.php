@@ -43,7 +43,7 @@ $voyants_affil1    = array("Jean", "Marie");
 $voyants_affilbase = array("Pierre", "Laura");
 
 /* ######################### DONNÉES SI DRI LANDING ######################### */
-if(!$codeastro && !$email_base && !$code_promo){
+if((!$codeastro || !$email_base) && !$code_promo){
     $codeastro      = base_convert($_SESSION['user_id'], 10, 32);
     $email_base     = $_SESSION['email'];
     $support_obj    = 'DRI';
@@ -55,7 +55,7 @@ $idastro = base_convert($codeastro, 32, 10);
 $prenom = isset($prenom) ? $prenom : isset($_SESSION['firstname']) ? $_SESSION['firstname'] : '';
 $tel = isset($tel) ? $tel : isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
 $idastro_column = 'internal_id';
-$source = $gclid = $url = "";
+$source = $gclid = $url = $voyant = "";
 $email_user  = $email_base;
 
 /* ###################### REQUÊTE DONNÉES USER MAILING ###################### */
@@ -86,6 +86,7 @@ if($user){
         $prenom  = $user->prenom;
         $tel     = $user->tel;
         $gclid   = $user->gclid; // adwords uniquement sur myastro.fr
+        $voyant  = $user->voyant;
         $idastro = base_convert($user->internal_id, 10, 32);
     } else {
         $prenom  = $user->firstname;
@@ -100,13 +101,14 @@ if(isset($form['tel'])){
 }
 
 /* ######################## REQUÊTE DONNÉES TRACKING ######################## */
+$tracking = null;
 if($code_promo){
     $code_promo_decode = explode('-', $code_promo);
     $code_campagne = $code_promo_decode[0];
     $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_codepromo ="'.$code_campagne.'"';
     $tracking = $bdd->get_row($tracking_qry);
 }
-if(!$tracking){
+if(!$tracking && isset($source_myastro)){
     $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$source_myastro.'"';
     $tracking = $bdd->get_row($tracking_qry); 
 }
@@ -173,7 +175,7 @@ if(isset($form['demande_rappel']) && !empty($tel) && empty($form['antisp']) && !
                 <td>'.$source.'</td>
             </tr>
             <tr>
-                <td>Page : </td>
+                <td>Url : </td>
                 <td>'.$url.'</td>
             </tr>';
 

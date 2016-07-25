@@ -8,6 +8,8 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
+session_start();
+$_SESSION['numResult'] = " ";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,48 +34,47 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="bg1">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <span class="PageLogo"></span>
+                <span class="PageLogo"><h1><span>Numérologie de l'</span><span>Amour</span></h1></span>
             </div>
         </header>
         <section class="ContentBand">
             <div class="PageWrapper ">
-                <div class="ContentBand-Column">
-                    <div class="TextContent">
-                        <header class="ContentBand-ColumnHeader">
-                            <h1 class="DescText-Title"><span>Que vous réserve le cycle lunaire ?</span></h1>
-                        </header>
-                        <div class="moon-gif"></div>
-                    </div>
-                </div>
-                <div id="form-container" class="ContentBand-Column Form ">
-                    <header class="ContentBand-ColumnHeader"><p>Chaque changement lunaire est une occasion de prendre un nouveau départ, tirer un trait sur un passé douloureux pour regarder en direction d’un avenir plus radieux. Il ne faut pas passer à côté de ces changements de la lune, les bénéfices sur votre vie sont bien trop précieux.</p></header>
+                <div id="form-container" class="ContentBand-Column Form txtcenter">
+                    <!-- animation ds polaroïds -->
+                    <div id="photo1" class="polaroid"></div>
+                    <div id="photo2" class="polaroid"></div>
+                    
                     <article class="FormContainer" >
                         <div class="FormContainer overlay" id="form-overlay"></div>
-                        <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour savoir ce que la lune vous réserve !</h2>
+                        <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
+                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
                             <form>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="cycle-lunaire" />
+                                <input type="hidden" name="source" value="numerologie-amour" />
                                 <input type="hidden" name="method" value="affil-maxi" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="cycle-lunaire-tel" />
+                                <input type="hidden" name="dri" value="numerologie-amour-tel" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="theme_id" id="theme_id" value="1" />
+                                <?php
+                                /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
+                                $_SESSION['numResult'] = rand(1, 5);
+                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['numResult']  ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">
                                     <div class="FormField-TableInputContainer fixed-2-col gender">
                                         <div class="FormField-TableInputContainer-Cell">
                                             <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> Femme</label>
-                                            <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" checked="checked"/>
+                                            <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
                                             <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> Homme</label>
@@ -82,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="FormField">
-                                    <label for="name" class="FormField-Label">Prénom</label>
+                                    <label for="name" class="FormField-Label blueLabel">Prénom</label>
                                     <input type="text" id="name" name="prenom" class="FormField-Input" required />
                                 </div>
                                 <div class="FormField">
@@ -123,6 +124,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="FormField sonprenom show">
+                                    <label for="son_prenom" class="FormField-Label blueLabel">Son prénom</label>
+                                    <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" required />
+                                </div> 
                                 <div class="FormField">
                                     <label for="email" class="FormField-Label">E-mail</label>
                                     <input id="email" type="email" name="email" class="FormField-Input" required />
@@ -136,33 +141,16 @@
                 </div>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        
+        <?php include('include/footer_reassurance.php'); ?>
+        
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
+        <script  type="text/javascript" src="js/numerologie-amour.js"></script>
+
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
@@ -171,7 +159,8 @@
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

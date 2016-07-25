@@ -8,7 +8,7 @@
 
 // MODULES
 //@import "modules/reassurance";
-@import "modules/_slider";
+//@import "modules/_slider";
 @import "modules/_form";
 
 // ----------------------------------------
@@ -16,6 +16,7 @@
 // your own styles
 // ----------------------------------------
 // ----------------------------------------
+
 
 /* --------------- mixin --------------- */
 @mixin clearfix() {
@@ -81,6 +82,17 @@ font-family: 'Lato', sans-serif;
 
 /* ------------- variables  ------------ */
 $img_dir : "../images_landing/campagne-ete-16/";
+$bg_plage : $img_dir + 'bg-plage.jpg';
+$img_logo : $img_dir + 'logo_MYASTRO.svg';
+$form_valide : $img_dir + 'form-valide.svg';
+$portrait_voyante : $img_dir + 'portrait-voyante.png';
+$bulle_phone : $img_dir + 'bulle-phone.svg';
+$bx_loader : $img_dir + 'bx_loader.gif';
+$controls : $img_dir + 'images/controls.png';
+$img_celib : $img_dir + 'celib.svg';
+$img_couple : $img_dir + 'couple.svg';
+$img_celib_rose : $img_dir + 'celib-rose.svg';
+$img_couple_rose : $img_dir + 'couple-rose.svg';
 
 /* COULEURS */
 $jaune : #fede03;
@@ -88,7 +100,7 @@ $azur : #1a968c;
 $sable : #f7d7ab;
 
 body{
-    background: #fff url($img_dir+'bg-plage.jpg') top center fixed no-repeat;
+    background: #fff url($bg_plage) top center fixed no-repeat;
     background-size:cover;
     border: 0;
     padding-top: 2.2rem;
@@ -145,7 +157,7 @@ a{
 }
 
 .SiteLogo{
-    background: transparent url($img_dir+'logo_MYASTRO.svg') center no-repeat;
+    background: transparent url($img_logo) center no-repeat;
     background-size: contain;
     content: '';
     width: 105px;
@@ -270,7 +282,7 @@ a{
     font-family: 'Lato', sans-serif;
     display:inline-block;
     text-align:center;
-    background: transparent url($img_dir+'form-valide.svg')top left no-repeat;
+    background: transparent url($form_valide) top left no-repeat;
     font-size: 2.25rem;
     
     
@@ -324,7 +336,7 @@ button.FormContainer-Submit {
     
     
     #portrait{
-        background:transparent url($img_dir+'portrait-voyante.png') top left no-repeat !important;
+        background:transparent url($portrait_voyante) top left no-repeat !important;
         padding:6.5rem 0 0 13rem; 
         text-align:left;
         color:#fff;
@@ -359,7 +371,7 @@ h1.DRI-Intro-Title{
 .picto-tel-bulle{
     width:10rem;
     height:10rem;
-    background: transparent url($img_dir+'bulle-phone.svg') 0% 0% no-repeat;
+    background: transparent url($bulle_phone) 0% 0% no-repeat;
     background-size:contain;
     display: inline-block;
     position: absolute;
@@ -419,16 +431,16 @@ h1.DRI-Intro-Title{
 
 .bx-wrapper {
     .bx-loading {
-        background: transparent url($img_dir + 'bx_loader.gif') center center no-repeat;
+        background: transparent url($bx_loader) center center no-repeat;
     }
     .bx-prev {
         left: 10px;
-        background: url($img_dir + 'images/controls.png') no-repeat 0 -32px;
+        background: url($controls) no-repeat 0 -32px;
         display:none;
     }
     .bx-next {
         right: 10px;
-        background: url($img_dir + 'images/controls.png') no-repeat -43px -32px;
+        background: url($controls) no-repeat -43px -32px;
     }
 }
 
@@ -436,10 +448,10 @@ h1.DRI-Intro-Title{
     top:0;
 }    
 .bx-wrapper .bx-controls-auto .bx-start {
-    background: url($img_dir + 'images/controls.png') -86px -11px no-repeat;
+    background: url($controls) -86px -11px no-repeat;
 }
 .bx-wrapper .bx-controls-auto .bx-stop {
-    background: url($img_dir + 'images/controls.png') -86px -44px no-repeat;
+    background: url($controls) -86px -44px no-repeat;
 }    
     
 #slider-nav {
@@ -652,7 +664,7 @@ label,
         opacity: 1;
         padding:1.5rem 2.5rem;
         transition: all 0.2s ease-in;
-        background: transparent url($img_dir + 'celib.svg') center bottom no-repeat;
+        background: transparent url($img_celib) center bottom no-repeat;
         -webkit-background-size: 100% 49%;              
     }
     
@@ -661,17 +673,17 @@ label,
         opacity: 1;
         padding:1.5rem 2.5rem;
         transition: all 0.2s ease-in;
-        background: transparent url($img_dir + 'couple.svg') center center no-repeat;
+        background: transparent url($img_couple) center center no-repeat;
         -webkit-background-size:contain;
     }
     
     input:checked + label[for="sit-celib"]{ 
-        background: transparent url($img_dir + 'celib-rose.svg') center bottom no-repeat;
+        background: transparent url($img_celib_rose) center bottom no-repeat;
         -webkit-background-size: 100% 49%;   
     }
     
     input:checked + label[for="sit-couple"]{ 
-        background: transparent url($img_dir + 'couple-rose.svg') center center no-repeat; 
+        background: transparent url($img_couple_rose) center center no-repeat; 
         -webkit-background-size:contain;     
     }    
     
@@ -973,6 +985,67 @@ input[type="radio"] {
         100% {transform:   translate(39vw, 0)}
     }
 }
+
+.overlay {
+    display: none;
+    position:fixed !important;
+    top:0;
+    left:0;
+    z-index:100;
+    width:100vw;
+    height:100vh !important;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    border:0px solid red;
+    color:black;
+
+    p.alert {
+        display: table-cell;
+        vertical-align: middle;
+        height: 25rem;
+        width: 40rem;
+        left: 50%;
+        top: 50%;
+        margin: -12.5rem -20rem;
+        padding:1rem;
+        position: absolute;
+        text-align: center;
+        background: #fff;
+        color:#1A968C;
+        border:0px solid red;
+        /*font-family:$font3;*/
+
+        // TITRE DE LA MODALE
+        b{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+            width: 100%;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i{
+            padding: 0.5rem 0.8rem;
+            background: #ccc;
+            color:#fff;
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            bottom: 1rem;
+            left: 22%;
+
+            :after{
+                content:"fermer";
+                text-transform:uppercase;
+                text-align: center;
+                width: 60%;
+                padding: 1rem;
+            }
+
+        }
+    }
+}
+
 
 /* MEDIA QUERIES */
 @include media('>large-screen') {
