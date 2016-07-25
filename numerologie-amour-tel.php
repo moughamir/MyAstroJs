@@ -9,7 +9,7 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 include('include/process-dri-postmailing.php');
-$result = $_SESSION['numResult'];
+$result = $_SESSION['question'];
 //$result = 3;
 ?>
 <!DOCTYPE html>
@@ -158,6 +158,8 @@ $result = $_SESSION['numResult'];
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!--<script src="js/formValidator.js"></script>-->
+
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');

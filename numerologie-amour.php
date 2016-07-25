@@ -9,7 +9,7 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 session_start();
-$_SESSION['numResult'] = " ";
+$_SESSION['question'] = " ";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -66,8 +66,8 @@ $_SESSION['numResult'] = " ";
                                 <input type="hidden" name="partenaires" value="1" />
                                 <?php
                                 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
-                                $_SESSION['numResult'] = rand(1, 5);
-                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['numResult']  ?>" />
+                                $_SESSION['question'] = rand(1, 5);
+                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['question']  ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">
