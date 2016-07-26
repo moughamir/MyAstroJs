@@ -28,11 +28,12 @@ $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 
 if(!$website){
-    addFormLog($bdd, $page, 'WARNING', 'Site web manquant');
+    addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
+    $website = 'myastro.fr';
 }
 if(!$source){
-    addFormLog($bdd, $page, 'ERROR', 'Source manquante');
-    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    addFormLog($bdd, $page, 'WARNING', 'Missing Source, setting <naturel> by default');
+    $source = 'naturel';
 }
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
@@ -89,7 +90,7 @@ if (isset($param['question_code'])){
     );
 }
 // Tirage cartes ---------------------------------------------------------------
-$cards_draw = $param['cards'];
+$cards_draw = isset($param['cards']) ? $param['cards'] : [];
 
 /* ========================================================================== * 
  *                        TRAITEMENT DE L'UTILISATEUR                         *
@@ -246,7 +247,7 @@ if(empty($err)){
     }
 
     $kgestion_insert = $kgestion->insertUser($post_data);
-    
+    die(json_encode($kgestion_insert));
     if (!$kgestion_insert->success){
         addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.$kgestion_insert->message);
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
@@ -281,63 +282,65 @@ if(empty($err)){
 
 // Insertion Nouveau prospect --------------------------------------------------
     if (!$trouve){
+        $bdd_data = array(
+            'id'                      => $id_rdm,
+            'kgestion_id'             => $kgestion_id,
+            'ip_adress'               => $ip,
+            'history'                 => $today_datetime_bdd,
+            'prenom'                  => $prenom,
+            'sexe'                    => $sexe,
+            'dateNaissance'           => $dtn_bdd,
+            'signeAstrologique'       => $signe,
+            'conjoint'                => $conjoint_prenom,
+            'email'                   => $email,
+            'questionDate'            => $today_date_bdd,
+            'question_date'           => $today_datetime_bdd,
+            'questionSujet'           => $question['subject'],
+            'questionContent'         => $question['code'],
+            'horoscope'               => $horoscope,
+            'signe2'                  => $conjoint_signe,
+            'partenaires'             => $partenaires,
+            'date_naissance_conjoint' => $conjoint_dtn_bdd,
+            'voyant'                  => $voyant,
+            'tel'                     => $tel,
+            'pays'                    => $pays,
+            'source'                  => $formurl,
+            'url'                     => $page,
+            'gclid'                   => $gclid,
+            'tel_is_valid'            => 1,
+            'blacklisted'             => 0
+        );
+        
         $bdd->insert(
             $bdd->users,
-            array(
-                'id'                      => $id_rdm,
-                'kgestion_id'             => $kgestion_id,
-                'ip_adress'               => $ip,
-                'history'                 => $today_datetime_bdd,
-                'prenom'                  => $prenom,
-                'sexe'                    => $sexe,
-                'dateNaissance'           => $dtn_bdd,
-                'signeAstrologique'       => $signe,
-                'conjoint'                => $conjoint_prenom,
-                'email'                   => $email,
-                'questionDate'            => $today_date_bdd,
-                'question_date'           => $today_datetime_bdd,
-                'questionSujet'           => $question['subject'],
-                'questionContent'         => $question['code'],
-                'horoscope'               => $horoscope,
-                'signe2'                  => $conjoint_signe,
-                'partenaires'             => $partenaires,
-                'date_naissance_conjoint' => $conjoint_dtn_bdd,
-                'voyant'                  => $voyant,
-                'tel'                     => $tel,
-                'pays'                    => $pays,
-                'source'                  => $formurl,
-                'url'                     => $page,
-                'gclid'                   => $gclid,
-                'tel_is_valid'            => 1,
-                'blacklisted'             => 0
-            )
+            $bdd_data
         );
-
         $idindex  = $bdd->insert_id;
 
 // Mise à jour du prospect existant --------------------------------------------
     } else {
+        $bdd_data = array(
+            'kgestion_id'             => $kgestion_id,
+            'prenom'                  => $prenom,
+            'signe2'                  => $conjoint_signe,
+            'signeAstrologique'       => $signe,
+            'conjoint'                => $conjoint_prenom,
+            'questionDate'            => $today_date_bdd,
+            'questionDate_before'     => $user->questionDate,
+            'question_date'           => $today_datetime_bdd,
+            'questionContent'         => $question['code'],
+            'dateNaissance'           => $dtn_bdd,
+            'date_naissance_conjoint' => $conjoint_dtn_bdd,
+            'tel'                     => $tel,
+            'pays'                    => $pays,
+            'source'                  => $formurl,
+            'voyant'                  => $voyant,
+            'url'                     => $page,
+            'gclid'                   => $gclid
+        );
         $bdd->update(
             $bdd->users,
-            array(
-                'kgestion_id'             => $kgestion_id,
-                'prenom'                  => $prenom,
-                'signe2'                  => $conjoint_signe,
-                'signeAstrologique'       => $signe,
-                'conjoint'                => $conjoint_prenom,
-                'questionDate'            => $today_date_bdd,
-                'questionDate_before'     => $user->questionDate,
-                'question_date'           => $today_datetime_bdd,
-                'questionContent'         => $question['code'],
-                'dateNaissance'           => $dtn_bdd,
-                'date_naissance_conjoint' => $conjoint_dtn_bdd,
-                'tel'                     => $tel,
-                'pays'                    => $pays,
-                'source'                  => $formurl,
-                'voyant'                  => $voyant,
-                'url'                     => $page,
-                'gclid'                   => $gclid
-            ),
+            $bdd_data,
             ['internal_id' => $idindex]
         );
     }
@@ -380,12 +383,14 @@ if(empty($err)){
     $params = array(
         'DATEJOIN'        => $dateJoin,
         'DATEMODIF'       => $today_date_smf,
-        'SOURCE'          => $formurl,
+        'SITE'            => $website,
+        'SOURCE'          => $source,
+        'URL'             => $formurl,
         'CLIENTURN'       => $question['code'],
         'EMVADMIN2'       => $horoscope > 0 ? 'true' : 'false',
         'EMVADMIN3'       => $partenaires > 0 ? 'true' : 'false',
         'DATEOFBIRTH'     => $dtn_smf,
-        'SEED3'           => $signe,
+        'SIGNE'           => $signe,
         'FIRSTNAME'       => $prenom,
         'EMVCELLPHONE'    => intval($tel),
         'NUMEROTELEPHONE' => $tel,
@@ -393,7 +398,7 @@ if(empty($err)){
         'CODE'            => base_convert($idindex, 10, 32),
         'IDASTRO'         => base_convert($idindex, 10, 32),
         'FIRSTNAME2'      => $conjoint_prenom,
-        'SEED2'           => $conjoint_signe,
+        'SIGNE_P2'        => $conjoint_signe,
         'VOYANT'          => $voyant,
         'VOYANT_CODE'     => getPsychicCode($voyant),
         'GROUPE_FLAG_5'   => $param['compteur']['flag5'],

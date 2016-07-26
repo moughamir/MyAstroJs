@@ -8,6 +8,13 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+$questions = array(
+    ['code'=>'vam16_question_1', 'subject'=>'sentimental', 'text'=>'Mon célibat va-t-il prendre fin ?'],
+    ['code'=>'vam16_question_2', 'subject'=>'sentimental', 'text'=>'Je ne sais plus où j’en suis sentimentalement, que faire ?', 'conjoint' => true ],
+    ['code'=>'vam16_question_3', 'subject'=>'sentimental', 'text'=>'Ses sentiments pour moi sont-ils sincères ?', 'conjoint' => true ],
+    ['code'=>'vam16_question_4', 'subject'=>'sentimental', 'text'=>'Mon couple va-t-il durer ?', 'conjoint' => true ],
+    ['code'=>'vam16_question_5', 'subject'=>'sentimental', 'text'=>'Dois-je croire à notre histoire ?', 'conjoint' => true ],
+);
 ?>
 <!doctype html>
 <html lang="fr">
@@ -139,20 +146,17 @@
                                 </div>
                                 
                                 <div class="FormField">
-                                    <label class="FormField-Label Label-rose" for="theme_id">Votre question</label>
-                                    <select class="FormField-Input" name="theme_id" id="theme_id" required>
+                                    <label class="FormField-Label Label-rose" for="question_code">Votre question</label>
+                                    <select class="FormField-Input" name="question_code" id="theme_id" required>
                                         <option value="" selected disabled>Thème de la question</option>
-                                        <option value="vam16_question_1">Mon célibat va-t-il prendre fin ?</option>
-                                        <option value="vam16_question_2" data-need-spouse="1">Je ne sais plus où j’en suis sentimentalement, que faire ?</option>
-                                        <option value="vam16_question_3" data-need-spouse="1"> Ses sentiments pour moi sont-ils sincères ?</option>
-                                        <option value="vam16_question_4" data-need-spouse="1">Mon couple va-t-il durer ?</option>
-                                        <option value="vam16_question_5" data-need-spouse="1">Dois-je croire à notre histoire ?</option>
+                                        <?php foreach($questions as $question){ ?>
+                                        <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
+                                        <?php } ?>
                                     </select>
                                     <div class="FormField sonprenom" >
                                         <label class="FormField-Label" for="son_prenom">Son prénom</label>
                                         <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" />
                                     </div>
-                                    
                                 </div>
                                 
                                 <div class="FormField">

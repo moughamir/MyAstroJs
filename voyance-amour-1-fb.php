@@ -9,6 +9,11 @@
 */
     $page = 'voyance-amour-1-fb';
     $button = 'Je valide';
+    $questions = array(
+        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : En couple'],
+        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Séparés'],
+        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Amants'],
+    );
     require_once(realpath('include/tools.php'));
 ?>
 <!DOCTYPE html>
@@ -157,15 +162,15 @@
                                     <label class="FormField-Label">Vous êtes</label>
                                     <div class="FormField-TableInputContainer fixed-3-col relationship-status">
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-couple" value="question_2" class="FormField-Input" required />
+                                            <input type="radio" name="theme_id" id="q-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" required />
                                             <label for="q-couple" class="FormField-Label">En couple</label>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-separes" value="question_11" class="FormField-Input" />
+                                            <input type="radio" name="theme_id" id="q-separes" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" />
                                             <label for="q-separes" class="FormField-Label">Séparés</label>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-amants" value="question_24" class="FormField-Input" />
+                                            <input type="radio" name="theme_id" id="q-amants" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" />
                                             <label for="q-amants" class="FormField-Label">Amants</label>
                                         </div>
                                     </div>

@@ -19,8 +19,8 @@ $questions = array(
         [ 'code' => 'pla16_question_73', 'subject' => 'financier', 'text' => 'Vais-je gagner de l’argent ?' ],
     ),
     'Travail' => array(
-        [ 'code' => 'pla16_question_4', 'subject' => 'professionel', 'text' => 'Quel sera mon avenir professionnel ?' ],
-        [ 'code' => 'pla16_question_3', 'subject' => 'professionel', 'text' => 'Quand vais-je trouver du travail ?' ],
+        [ 'code' => 'pla16_question_4', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?' ],
+        [ 'code' => 'pla16_question_3', 'subject' => 'professionnel', 'text' => 'Quand vais-je trouver du travail ?' ],
     )
 );
 

@@ -9,6 +9,10 @@
 */
 $cards_dir = 'tarot/cartes/cartes-oracle-amour/';
 $button ="Je veux savoir";
+$questions = array(
+    'celibataire' => ['code'=>'oa_question_1', 'subject'=>'sentimental', 'text'=>'Oracle de lʼamour : Célibataire'],
+    'encouple' => ['code'=>'oa_question_2', 'subject'=>'sentimental', 'text'=>'Oraclede lʼamour : En couple'],
+);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,7 +44,7 @@ $button ="Je veux savoir";
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <h1 class="PageLogo"><span>Oracle de l'amour</span></h1>
+                <h1 class="PageLogo"><span>Oracle de l’amour</span></h1>
             </div>
         </header>
         
@@ -156,11 +160,11 @@ $button ="Je veux savoir";
                             <label class="FormField-Label">Votre situation</label>
                             <div class="FormField-TableInputContainer fixed-2-col">
                                 <div class="FormField-TableInputContainer-Cell">
-                                    <input type="radio" name="theme_id" id="sit-celib" value="oa_question_1" class="FormField-Input" />
+                                    <input type="radio" name="code_question" id="sit-celib" value="<?= str_replace('"', "'", json_encode($questions['celibataire']))?>" class="FormField-Input" />
                                     <label for="sit-celib" class="FormField-Label">célibataire</label>
                                 </div>
                                 <div class="FormField-TableInputContainer-Cell">
-                                    <input type="radio" name="theme_id" id="sit-couple" value="oa_question_2" class="FormField-Input" required />
+                                    <input type="radio" name="code_question" id="sit-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" required />
                                     <label for="sit-couple" class="FormField-Label">En couple</label>
                                 </div>
                             </div>    

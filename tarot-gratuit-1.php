@@ -9,6 +9,21 @@
 */
     $page = 'tarot-gratuit-1';
     $button = 'Découvrir mon interprétation';
+    $questions = array(
+        'Amour' => array(
+            [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Vous en avez marre d’être seul(e)' ],
+            [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Est-ce qu’il/elle m’aime ?', 'conjoint' => true ],
+            [ 'code' => 'question_24', 'subject' => 'sentimental', 'text' => 'Vous en aimez un(e) autre', 'conjoint' => true],
+            [ 'code' => 'question_11', 'subject' => 'sentimental', 'text' => 'Il/Elle vous a quitté', 'conjoint' => true],
+        ),
+        'Argent' => array(
+            [ 'code' => 'question_73', 'subject' => 'financier', 'text' => 'Vous attendez un investissement' ],
+        ),
+        'Travail' => array(
+            [ 'code' => 'question_4', 'subject' => 'professionnel', 'text' => 'Vous attendez un changement professionnel' ],
+            [ 'code' => 'question_3', 'subject' => 'professionnel', 'text' => 'Vous cherchez un emploi' ],
+        )
+    );
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -182,22 +197,16 @@
                                     </div>
                                 </div>
                                 <div class="FormField">
-                                    <label class="FormField-Label" for="theme_id">Votre question</label>
-                                    <select class="FormField-Input" name="theme_id" id="theme_id" required>
+                                    <label class="FormField-Label" for="question_code">Votre question</label>
+                                    <select class="FormField-Input" name="question_code" id="theme_id" required>
                                         <option value="" selected disabled>Thème de la question</option>
-                                        <optgroup label="Amour">
-                                            <option value="question_1">Vous en avez marre d’être seul(e)</option>
-                                            <option value="question_2">Est-ce qu'il/elle m'aime ?</option>
-                                            <option value="question_24">Vous en aimez un(e) autre</option>
-                                            <option value="question_11">Il/Elle vous a quitté</option>
+                                        <?php foreach($questions as $optgroup => $options){ ?>
+                                        <optgroup label="<?= $optgroup ?>">
+                                            <?php foreach($options as $question){ ?>
+                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>"><?= $question['text'] ?></option>
+                                            <?php } ?>
                                         </optgroup>
-                                        <optgroup label="Argent">                          
-                                            <option value="question_73">Vous attendez un investissement</option>
-                                        </optgroup>
-                                        <optgroup label="Travail">
-                                            <option value="question_4">Vous attendez un changement professionel</option>
-                                            <option value="question_3">Vous cherchez un emploi</option>
-                                        </optgroup>
+                                        <?php } ?>
                                     </select>
                                 </div>
                                 <div class="FormField sonprenom" style="display: none;">

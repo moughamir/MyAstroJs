@@ -7,6 +7,10 @@
     Created on : 21 juin 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+$questions = array(
+    'celibataire' => ['code'=>'ete16_question_2', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis célibataire'],
+    'encouple' => ['code'=>'ete16_question_24', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis en couple'],
+);
 ?>
 <!doctype html>
 <html lang="fr">
@@ -26,7 +30,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.myastro.fr/ete-16" />
     <meta property="og:image" content="http://www.myastro.fr/images_landing/campagne-ete-16/fb-ete16.jpg" />
-    <meta property="og:description" content=" En couple ou célibataire, l'été est la saison de l'amour. Qu'en sera-t-il pour vous ?" />
+    <meta property="og:description" content=" En couple ou célibataire, l’été est la saison de l'amour. Qu’en sera-t-il pour vous ?" />
     <meta property="og:locale" content="fr_FR" />
 
     <link rel="stylesheet" type="text/css" href="css/ete-16.css">
@@ -172,7 +176,7 @@
                                             <div class="FormField-TableInputContainer relationship-status">
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="theme_id" id="sit-celib" value="ete16_question_2" class="FormField-Input" />
+                                                        <input type="radio" name="question_code" id="sit-celib" value="<?= json_encode($questions['celibataire'])?>" class="FormField-Input" />
                                                         <label for="sit-celib" class="FormField-Label"></label>
                                                     </div>
                                                     <p class="label">célibataire</p>
@@ -180,7 +184,7 @@
                                                 </div>
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="theme_id" id="sit-couple" value="ete16_question_24" class="FormField-Input" required />
+                                                        <input type="radio" name="question_code" id="sit-couple" value="<?= json_encode($questions['encouple'])?>" class="FormField-Input" required />
                                                         <label for="sit-couple" class="FormField-Label"></label>
                                                     </div>
                                                     <p class="label">En couple</p>

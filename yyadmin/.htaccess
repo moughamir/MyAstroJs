@@ -1,7 +1,11 @@
 
 php_flag display_errors on
 
+<<<<<<< HEAD
+ErrorDocument 403 http://www.myastro.fr/yyadmin/erreurs/403.html
+=======
 ErrorDocument 403 /yyadmin/403.html
+>>>>>>> cbe7055bd66d4af5125450ee2c43ecba4d3a78db
 
 # ### PROTECTION ACCES PAR IP ###
 Order Deny,Allow
