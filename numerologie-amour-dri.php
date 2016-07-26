@@ -49,8 +49,8 @@ include('include/process-dri-postmailing.php');
                     <section class="wrapper-num-result txtleft">
                         <div class="num-result">                                 
                             <div class="num-result-text-name">
-                                <p><?= $prenom ?></p>
-                                <p id="num-result-text">Ce changement de cycle lunaire est synonyme de nouveautés pour vous. Pendant quelques jours, la période va être favorable et positive dans tous les domaines de votre quotidien. Avec ce nouveau cycle lunaire qui débute, c’est une opportunité qui se présente à vous de définitivement refermer la porte sur un passé que vous souhaitez oublier pour en ouvrir une nouvelle menant vers l’avenir que vous désirez.</div>
+                                <p><?= ucfirst($prenom) ?></p>
+                                <p id="num-result-text">La numérologie vous offre l’opportunité de déterminer avec exactitude les périodes propices et celles négatives de votre destinée amoureuse. Grâce à elle, obtenez un coup d’avance sur votre destin, pour mieux gérer votre vie, prendre les meilleures décisions et résoudre tous les tracas que vous impose le quotidien. Un allié de poids pour que vos rêves deviennent des réalités.</div>
                         </div>
                     </section>
                     <!-- FIN DE RESULTAT --> 

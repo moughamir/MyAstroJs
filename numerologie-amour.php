@@ -51,7 +51,7 @@ $_SESSION['question'] = " ";
                     <article class="FormContainer" >
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
-                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                        <p>Êtes-vous faits l’un pour l’autre ? Votre histoire a-t-elle un espoir de fonctionner ? Que faire pour que votre couple dure pour toujours ? La numérologie de l’amour vous donne toutes les cartes en main pour construire cette histoire d’amour qui vous tient tant à cœur… Indiquez votre prénom et celui de la personne qui occupe votre esprit à ce moment précis. En recevant immédiatement le chiffre de votre couple, vous saurez ce que les chiffres de votre vie ont à vous révéler…</p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
                             <form>
