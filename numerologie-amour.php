@@ -9,7 +9,8 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 session_start();
-$_SESSION['question'] = " ";
+/* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
+$question = rand(1, 5);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -64,10 +65,7 @@ $_SESSION['question'] = " ";
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <?php
-                                /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
-                                $_SESSION['question'] = rand(1, 5);
-                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['question']  ?>" />
+                                <input type="hidden" name="theme_id" id="theme_id" value="<?= $question ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">

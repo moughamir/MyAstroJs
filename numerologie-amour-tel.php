@@ -11,7 +11,24 @@
 include('include/process-dri-postmailing.php');
 $result = $_SESSION['question'];
 $conjoint = $_SESSION['firstnameJoint'];
-//$result = 3;
+// RESULTAT
+switch ($result) {
+    case 1:
+        $textResult= "Entre vous et ".ucfirst($conjoint).", c’est tout feu tout flamme ! Votre couple est la somme de vos deux personnalités, fortes, indépendantes et capables de se réaliser soi-même. Pour que votre histoire fonctionne, vos deux caractères doivent se compléter et chacun doit fournir des efforts très particuliers. Votre relation avec ".ucfirst($conjoint)." est à prendre avec des pincettes, mais le jeu en vaut vraiment la chandelle.".ucfirst($prenom).", c’est en prenant du recul que vous avancerez efficacement…";
+        break;
+    case 2:
+        $textResult= "A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de ".ucfirst($conjoint).", attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié! ".ucfirst($prenom).", allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.";
+        break;
+    case 3:
+        $textResult= "Votre couple avec ".ucfirst($conjoint)." est marqué par les blocages ! Vous manquez tout deux de souplesse d’esprit et de qualités d’adaptation. Ce qui va vous causer bien des ennuis dès que la première nouveauté ou la première instabilité va pointer le bout de son nez dans votre couple. Vous aimez la stabilité et vous pourriez aisément l’obtenir, à condition de surmonter tous ces blocages. Une chose facile à faire en soi, mais surtout très utile, car vous et ".ucfirst($conjoint)." pourriez être promis à un bel avenir…";
+        break;
+    case 4:
+        $textResult= "Vous et " .ucfirst($conjoint). " ? C’est à quitte ou double ! Vous êtes tous les deux à la recherche de l’accord et de l’union parfaits. Tout est réuni pour que cela fonctionne. Mais c’est aussi cette recherche constante de l’idéal qui crée un certain manque de compréhension entre vous. Pour que votre histoire fonctionne, vous et " . ucfirst($conjoint) . " avez besoin de prendre du recul, à la recherche d’une plus grande ouverture d’esprit. ";
+        break;
+    case 5:
+        $textResult= "Votre altruisme et votre sens du sacrifice se complètent à merveille et encouragent la réussite de votre couple avec ".ucfirst($conjoint).". Mais attention à votre comportement ".ucfirst($prenom).", vous devez trouver le juste milieu pour connaitre cette réussite. Ni trop, ni pas assez… telle est la clé de votre relation avec ".ucfirst($conjoint).". Un moindre effort à accomplir quand on sait tout ce que cette histoire d’amour peut vous apporter.";
+        break;    
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -51,35 +68,13 @@ $conjoint = $_SESSION['firstnameJoint'];
                     <div id="photo2" class="polaroid"></div>  
                       
                     <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
-                    
-                    <!-- RESULTAT -->
-                    <?php
-                    switch ($result) {
-                        case 1:
-                            $textResult= "Entre vous et ".ucfirst($conjoint).", c’est tout feu tout flamme ! Votre couple est la somme de vos deux personnalités, fortes, indépendantes et capables de se réaliser soi-même. Pour que votre histoire fonctionne, vos deux caractères doivent se compléter et chacun doit fournir des efforts très particuliers. Votre relation avec ".ucfirst($conjoint)." est à prendre avec des pincettes, mais le jeu en vaut vraiment la chandelle.".ucfirst($prenom).", c’est en prenant du recul que vous avancerez efficacement…";
-                            break;
-                        case 2:
-                            $textResult= "A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de ".ucfirst($conjoint).", attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié! ".ucfirst($prenom).", allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.";
-                            break;
-                        case 3:
-                            $textResult= "Votre couple avec ".ucfirst($conjoint)." est marqué par les blocages ! Vous manquez tout deux de souplesse d’esprit et de qualités d’adaptation. Ce qui va vous causer bien des ennuis dès que la première nouveauté ou la première instabilité va pointer le bout de son nez dans votre couple. Vous aimez la stabilité et vous pourriez aisément l’obtenir, à condition de surmonter tous ces blocages. Une chose facile à faire en soi, mais surtout très utile, car vous et ".ucfirst($conjoint)." pourriez être promis à un bel avenir…";
-                            break;
-                        case 4:
-                            $textResult= "Vous et " . ucfirst($conjoint) . " ? C’est à quitte ou double ! Vous êtes tous les deux à la recherche de l’accord et de l’union parfaits. Tout est réuni pour que cela fonctionne. Mais c’est aussi cette recherche constante de l’idéal qui crée un certain manque de compréhension entre vous. Pour que votre histoire fonctionne, vous et " . ucfirst($conjoint) . " avez besoin de prendre du recul, à la recherche d’une plus grande ouverture d’esprit. ";
-                            break;
-                        case 5:
-                            $textResult= "Votre altruisme et votre sens du sacrifice se complètent à merveille et encouragent la réussite de votre couple avec ".ucfirst($conjoint).". Mais attention à votre comportement ".ucfirst($prenom).", vous devez trouver le juste milieu pour connaitre cette réussite. Ni trop, ni pas assez… telle est la clé de votre relation avec ".ucfirst($conjoint).". Un moindre effort à accomplir quand on sait tout ce que cette histoire d’amour peut vous apporter.";
-                            break;    
-                    }
-                    ?>
-
-                    
+                                        
                     <section class="wrapper-num-result txtleft">
                         <h3 class="num-result-title">Résultats</h3>
                         <div class="num-result grid-1-2">                                 
                             <p id="num-result-numero" class="num-result-numero"><?php echo $result ?></p>
                             <div class="num-result-text-name">
-                                <p><?= $prenom ?></p>
+                                <p><?= ucfirst($prenom) ?></p>
                                 <p id="num-result-text"><?php echo $textResult ?></div>
                         </div>
                     </section>
@@ -108,12 +103,10 @@ $conjoint = $_SESSION['firstnameJoint'];
                             </p>
                                 <?php } ?>
                             <form method="post">
-                                
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="save_tel" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <!-- ############################################### -->
-                                
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>
