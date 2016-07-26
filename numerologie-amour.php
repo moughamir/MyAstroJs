@@ -9,7 +9,8 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 session_start();
-$_SESSION['numResult'] = " ";
+/* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
+$question = rand(1, 5);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -51,7 +52,7 @@ $_SESSION['numResult'] = " ";
                     <article class="FormContainer" >
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
-                        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. </p>
+                        <p>Êtes-vous faits l’un pour l’autre ? Votre histoire a-t-elle un espoir de fonctionner ? Que faire pour que votre couple dure pour toujours ? La numérologie de l’amour vous donne toutes les cartes en main pour construire cette histoire d’amour qui vous tient tant à cœur… Indiquez votre prénom et celui de la personne qui occupe votre esprit à ce moment précis. En recevant immédiatement le chiffre de votre couple, vous saurez ce que les chiffres de votre vie ont à vous révéler…</p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
                             <form>
@@ -64,10 +65,7 @@ $_SESSION['numResult'] = " ";
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <?php
-                                /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
-                                $_SESSION['numResult'] = rand(1, 5);
-                                ?><input type="hidden" name="theme_id" id="theme_id" value="<?php echo $_SESSION['numResult']  ?>" />
+                                <input type="hidden" name="theme_id" id="theme_id" value="<?= $question ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">
