@@ -1,0 +1,190 @@
+/* 
+    intégration : guillaume deschamps <guillaumedeschamps75@gmail.com>
+    25/07/2016 pour KGCOM
+
+    destiné aux campagnes de type "questionnnaires" :
+    - un contenu centralisé avec des outils de navigation,
+    - s'utilise avec  "js/jquery.bxslider.min.js"
+
+    ATTENTION ! utilisation de knacssV5.0.1
+*/
+
+/* --------------------------------- IMPORTATIONS -------------------------- */
+@import "knacss501/_knacss";
+@import "modules/_mixins";
+@import "modules/_li-socials";
+@import "modules/_slider";
+
+
+/* --------------------------------- VARIABLES ----------------------------- */
+/* ----  fonts  ---- */
+$font1: 'Gochi Hand', cursive;
+$font2: 'Raleway', sans-serif;
+$font3: 'Oswald', sans-serif;
+
+/* ----  couleurs  ---- */
+$color1: #b9cbd7; //bleu foncé, header
+$color2: #eceff1; //bleu gris, background
+$color3: #f05882; //rose meuf
+$color4: #454545; // gris texte courant
+
+/* ----  dossier images  ---- */
+$img_dir : "../images_landing/rentree16/";
+
+/* --------------------------------- LAYOUT --------------------------------- */
+body{
+    /*background: #fff url($img_dir+'bg-plage.jpg') top center fixed no-repeat;
+    background-size:cover;*/
+    border: 0;
+    padding-top: 2.2rem;
+}
+
+a{
+    //@include linx(#fff, #fff, $azur, $azur);
+}
+
+.PageWrapper {
+    //width: 100%;
+    max-width: 120rem;
+    margin: 0rem auto 0;
+    padding: 0;
+}
+
+/* ----  header  ---- */
+
+.headerContainer{
+    display:flex;
+    //flex-direction: row;
+    justify-content: center;    
+}
+
+.SiteLogo{
+    background: transparent url($img_dir+'logo_MYASTRO.svg') center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 105px;
+    height: 105px;
+    display: block;
+    color:red;
+    margin:1rem;
+    span{
+        display: none;
+    }
+}
+
+/* ----  footer  ---- */
+.SiteCopyright{
+    width: 100%;
+    text-align: center;
+    margin: 3.5rem auto 1rem;
+    color:#000;
+}
+
+/* ----------------------------------- SLIDER PERSONNALISE ----------------------------------- */
+
+
+.bx-wrapper{
+    
+    /* ----  pagination  ---- */
+    .bx-pager{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+        bottom: -5rem;
+        
+        .bx-pager-item{
+            a{
+                display: table-cell;
+                vertical-align: middle;
+                text-indent:0;
+                width: 4.5rem;
+                height: 4.5rem;
+                border-radius: 2.25rem;
+                font-size:2.5rem;
+                font-weight: lighter;
+                text-decoration: none;
+                
+                &:hover,
+                &:active{
+                    background-color: bisque;
+                }
+                
+                &.active{
+                    background-color:aqua;
+                }
+                
+                &.active:hover{
+                    background-color:bisque;
+                }
+            }
+        }
+    }
+    /* fin de .bx-pager */
+}
+
+
+/* --------------------------------- FORMULAIRE PERSONNALISE --------------------------------- */
+
+.anim-input{
+    animation-name: animInput;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+    @keyframes animInput {
+        0% {transform: scale(0.2,1); opacity:0}
+        100% {transform: scale(1, 1); opacity:1}
+    }
+}
+
+/* ----------------------------------- ANIMATIONS ---------------------------------- */
+
+
+/* --------------------------------- MEDIA QUERIES --------------------------------- */
+/*
+  --- BREAKPOINTS DE KNACSS V5.0.1 ---
+  tiny-screen       : 320px,
+  tiny-plus-screen  : 480px,
+  small-screen      : 640px,
+  small-plus-screen : 768px,
+  medium-screen     : 960px,
+  medium-plus-screen: 1024px,
+  large-screen      : 1280px,
+  large-plus-screen : 1440px,
+  extra-large-screen: 1600px,
+  ultra-large-screen: 1920px
+*/
+
+@include media('>large-screen') {
+    
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    
+}
+
+@include media('>small-screen', '<medium-screen') {
+
+}
+
+@include media('<=small-screen') {
+    .SiteHeader,
+    .intro-Header,
+    .intro-Content,
+    #numQuestion{
+        text-align: center;
+    }
+    .SiteLogo{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@include media('<=tiny-plus-screen') {  
+
+}
+
