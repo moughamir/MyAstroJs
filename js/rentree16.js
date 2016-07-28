@@ -6,6 +6,7 @@ $(document).ready(function(){
     $("#btn-start").click(function(){
         $("#intro").fadeOut();
         $("#questionnaire").css('opacity','1');
+        $(".PageLogo").addClass('bgHeader');
     });
     
     //définition des paramètres globaux du slider

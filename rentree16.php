@@ -21,7 +21,7 @@
         
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/rentree16.css" />
+        <link rel="stylesheet" type="text/css" href="css/rentree16.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,22 +35,28 @@
         <div class="PageWrapper">
            
             <header class="SiteHeader">
-                <span class="SiteLogo"></span>
-                <h1 class="PageLogo">Titre du questionnaire</h1>
+                <div class="SiteLogo"><span>MyAstro</span></div>
+                <h1 class="PageLogo"><span>C'est la rentrée</span><span>venez tester votre moral</span></h1>
                 <?php include('include/bloc-socials.php'); ?>
             </header>
             
-            <section id="intro">
+            <section id="intro" class="intro">
                <article>
-                    <header class="intro-Header"><h2>Texte d'introduction</h2></header>  
                     <div class="intro-Content">
-                        <p>Texte descriptif</p>
+                        <p>Finis le farniente et la dolce vita, place au travail, à la routine, aux heures passées dans les transports...<br class="tiny-hidden" />
+                        La reprise du travail après les congés d’été est parfois difficile.<br class="tiny-hidden" />
+                        Et s’accompagne souvent d’un petit coup de blues.</p>
+                        <div class="intro-Content-Img">
+                            <div class="intro-Content-Img1"><p>Fini les vacances...</p></div> 
+                            <div class="intro-Content-Img2"><p>... c'est l'heure de la rentrée&nbsp;!</p></div>
+                        </div>
+                        <p>Restez serein et retrouvez vos repères.</p>
                         <a href="#" id="btn-start" class="btn-start">Lancer le TEST</a>
                     </div> 
                </article>
             </section>
             
-            <section id="questionnaire">
+            <section id="questionnaire" class="questionnaire">
                 <form>
 
                     <h3 id="numQuestion">Question X</h3>
@@ -60,28 +66,28 @@
 
 
                         <!-- ------------------------- QUESTION 1 ------------------------- -->
-                        <section id="q1" class="question">
+                        <section class="q1" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name1" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name1" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name1" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
                         <!-- ----------------------- FIN QUESTION 1 ----------------------- -->
 
                         <!-- ------------------------- QUESTION 2  ------------------------ -->
-                        <section id="q2" class="question">
+                        <section class="q2" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name2" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name2" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name2" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
@@ -93,28 +99,28 @@
 
 
                         <!-- ------------------------- QUESTION 3 ------------------------- -->
-                        <section id="q3" class="question">
+                        <section class="q3" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name3" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name3" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name3" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
                         <!-- ----------------------- FIN QUESTION 3 ----------------------- -->
 
                         <!-- ------------------------- QUESTION 4 ------------------------- -->
-                        <section id="q4" class="question">
+                        <section class="q4" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name4" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name4" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name4" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
@@ -127,28 +133,28 @@
 
 
                         <!-- ------------------------- QUESTION 5 ------------------------- -->
-                        <section id="q5" class="question">
+                        <section class="q5" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name5" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name5" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name5" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
                         <!-- ------------------------- QUESTION 5 ------------------------- -->
 
                         <!-- ------------------------- QUESTION 6 ------------------------- -->
-                        <section id="q6" class="question">
+                        <section class="q6" class="question">
                             <header class="question-Header">
                                 <h2>Ici le texte pour la question ?</h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="name1" value="value1" checked><label for="name1">value 1</label></li>
-                                <li><input type="radio" name="name1" value="value2"><label for="name2">value 2</label></li>
-                                <li><input type="radio" name="name1" value="value3"><label for="name3">value 3</label></li>
+                                <li><input type="radio" name="name6" id="idName1" value="value1"><label for="idName1">value 1</label></li>
+                                <li><input type="radio" name="name6" id="idName2" value="value2"><label for="idName2">value 2</label></li>
+                                <li><input type="radio" name="name6" id="idName3" value="value3"><label for="idName3">value 3</label></li>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
@@ -179,5 +185,5 @@
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">

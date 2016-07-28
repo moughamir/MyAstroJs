@@ -52,3 +52,20 @@ div.logo {
     }
   }
 }
+
+@mixin ghost-btn ($couleur1, $couleur2, $border-width) {
+    display: inline-block;
+    color: $couleur1;
+    border: $border-width solid $couleur1;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+    
+    &:hover,
+    &:focus,
+    &:active{
+        color: $couleur2;
+        border: $border-width solid $couleur1;
+        background-color: $couleur1;
+    }
+}
