@@ -190,7 +190,7 @@ if(isset($form['demande_rappel']) && !empty($tel) && empty($form['antisp']) && !
     $message .= '
             <tr>
                 <td>Support : </td>
-                <td>MAILING</td>
+                <td>'.$support_obj.'</td>
             </tr>';
         
     if(!empty($voyant)){
