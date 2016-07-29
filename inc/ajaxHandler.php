@@ -67,8 +67,8 @@ if(isset($_POST) && $_POST['data'] != null){
         case 'signe-astro-arabe' :
             require_once(realpath('../include/validation/signe-astro-arabe.php'));
             break;
-        case 'test' :
-            require_once(realpath('../include/validation/test.php'));
+        case 'general-suscribe' :
+            require_once(realpath('../include/validation/general-suscribe.php'));
             break;
         default :
             die(json_encode('No method transmitted'));

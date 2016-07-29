@@ -10,7 +10,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="sstyle.css" />
-    
+    <style>
+        .modal p.alert {
+            margin: 0;
+            padding : 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        li.dropdown .icon-home {
+            position: relative; top: 5px;
+        }
+    </style>
     <link rel="shortcut icon" href="favicon.ico"> 
 	<script type="text/javascript">
     function date_heure(id){

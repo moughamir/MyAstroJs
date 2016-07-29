@@ -94,7 +94,7 @@
                             <form id="">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="voyance-gratuite-a1" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />

@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="sstyle.css" />
     <link rel="shortcut icon" href="favicon.ico">
-     
+    <style>
+        .modal p.alert {
+            margin: 0;
+            padding : 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        li.dropdown .icon-home {
+            position: relative; top: 5px;
+        }
+    </style>
 	<script type="text/javascript">
     function date_heure(id){
         date = new Date;

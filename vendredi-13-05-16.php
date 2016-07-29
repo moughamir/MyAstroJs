@@ -76,7 +76,7 @@
                                                     <article class="form-content">
                                                         <!-- ########## identification formulaire ########## -->
                                                         <input type="hidden" name="source" value="vendredi-13-05-16" />
-                                                        <input type="hidden" name="method" value="affil-maxi" />
+                                                        <input type="hidden" name="method" value="general-suscribe" />
                                                         <input type="hidden" name="dri" value="vendredi-13-05-16-tel" />
                                                         <input type="hidden" name="support" value="voyance" />
                                                         <input type="hidden" name="affiliation" value="affilbase" />
@@ -214,7 +214,7 @@
                             <article class="form-content">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="vendredi-13-05-16" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="dri" value="vendredi-13-05-16-tel" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
