@@ -63,7 +63,7 @@
                     <li class="FormField da-slide ">
                         <div class="wrapper600 txtcenter">
                             <p class="FormContainer-Slogan">merci vous allez recevoir votre interprétation<br class="small-hidden"/>par email dés demain matin</p>
-                            <p>Envie d’en savoir plus immédiatement ?</p>
+                            <p>Envie d’en savoir plus immédiatement ?</p>
                                 <div class="FormField">
                                     <span class="FormField-Info txtcenter">inscrivez votre numéro de téléphone ci-dessous et nous vous rappelons tout de suite !</span>
                                     <label for="tel" class="FormField-Label hidden">Téléphone</label>
