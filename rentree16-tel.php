@@ -47,7 +47,7 @@ include('include/process-dri-postmailing.php');
                     <div class="FormContainer-Fields">
                         
                         <p class="alert alert-danger" style="display: none"></p>
-                        <?php session_start(); ?>
+                        <?php /*session_start();*/ ?>
 
                         <form id="form-container">
                             <!-- ########## identification formulaire ########## -->
