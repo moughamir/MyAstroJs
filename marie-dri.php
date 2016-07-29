@@ -9,21 +9,19 @@
 */
 include('include/process-dri-postmailing.php');
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-    <title>MyAstro - Marie 2016</title>
-    
-    <meta name="robots" content="noindex,nofollow" />
-    
-    <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-
-    <link rel="stylesheet" type="text/css" href="css/marie-dri.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <title>MyAstro - Marie 2016</title>
+        
+        <meta name="robots" content="noindex,nofollow" />
+        
+        <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <link rel="stylesheet" type="text/css" href="css/marie-dri.min.css">
        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,10 +29,8 @@ include('include/process-dri-postmailing.php');
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-          
-</head>
-
-<body>
+    </head>
+    <body>
         <header class="SiteHeader">
             <span class="SiteLogo"><h1>My ASTRO</h1></span>
             <h2 class="DescText-Title"><span class="ico-pig"></span>Vos 10 premières minutes <span>gratuites</span></h2>
@@ -77,16 +73,10 @@ include('include/process-dri-postmailing.php');
                             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
-                                    <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
                                 </p>
                             <?php } else { ?>
                             <form method="post">
-
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
-                                <!-- ############################################### -->
-
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>
@@ -117,7 +107,6 @@ include('include/process-dri-postmailing.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
@@ -125,12 +114,10 @@ include('include/process-dri-postmailing.php');
                             <?php } ?>
                         </div>
                     </article>
-                    
                     <div class="bloc-avatar">
                         <h2>Il est temps de prendre<br/>votre vie en main !</h2>
                         <p>Marie,<br> Voyante-tarologue professionnelle</p>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -143,6 +130,6 @@ include('include/process-dri-postmailing.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </body>
-<link href='https://fonts.googleapis.com/css?family=Raleway:500|Courgette' rel='stylesheet' type='text/css'>        
-<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500|Courgette' rel='stylesheet' type='text/css'>        
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
 </html>
