@@ -51,6 +51,12 @@ a{
     padding: 0;
 }
 
+.ico-form{
+    background: transparent url($img_dir+'ico-form.svg') center no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 3rem;
+}
 
 /* ----  header  ---- */
 .SiteHeader{
@@ -310,6 +316,7 @@ $nbQuestions: 6;
 }
 
 
+/* ----------------------------------- ANIMATIONS ---------------------------------- */
 .anim-input{
     animation-name: animInput;
     animation-duration: 200ms;
@@ -324,7 +331,6 @@ $nbQuestions: 6;
 
 
 
-/* ----------------------------------- ANIMATIONS ---------------------------------- */
 
 
 /* ----------------------------------- DRI ----------------------------------- */
@@ -351,6 +357,12 @@ $nbQuestions: 6;
             text-transform: uppercase; 
             margin: 1.5rem auto;
         }
+    }
+    
+    &-Slogan2{
+        color: $color2;
+        font-size: 2.5rem;
+        text-decoration:underline;
     }
     
     
@@ -433,7 +445,7 @@ $nbQuestions: 6;
 
 .DRI btn{margin:2rem auto}
 .header-voyant{
-    width:84%;
+    //width:84%;
     height:12rem;
     margin: 0 auto;
     background: transparent url($img_dir+'portrait-voyante.png') top left no-repeat;

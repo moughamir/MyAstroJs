@@ -2128,6 +2128,12 @@ body {
   margin: 0rem auto 0;
   padding: 0; }
 
+.ico-form {
+  background: transparent url("../images_landing/rentree16/ico-form.svg") center no-repeat;
+  background-size: contain;
+  width: 4rem;
+  height: 3rem; }
+
 /* ----  header  ---- */
 .SiteHeader {
   display: -webkit-box;
@@ -2416,6 +2422,7 @@ body {
 .formulaire {
   display: none; }
 
+/* ----------------------------------- ANIMATIONS ---------------------------------- */
 .anim-input {
   -webkit-animation-name: animInput;
   animation-name: animInput;
@@ -2443,7 +2450,6 @@ body {
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 1; } }
-/* ----------------------------------- ANIMATIONS ---------------------------------- */
 /* ----------------------------------- DRI ----------------------------------- */
 .FormContainer {
   max-width: 80rem;
@@ -2462,6 +2468,10 @@ body {
     .FormContainer .FormField-Info {
       text-transform: uppercase;
       margin: 1.5rem auto; }
+  .FormContainer-Slogan2 {
+    color: #f2163a;
+    font-size: 2.5rem;
+    text-decoration: underline; }
   .FormContainer .overlay {
     display: none;
     position: fixed !important;

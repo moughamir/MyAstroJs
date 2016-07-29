@@ -55,9 +55,9 @@ include('include/process-dri-postmailing.php');
                             <input type="hidden" name="tel_needed" value="1" />
                             <input type="hidden" name="dri" value="rentree16-dri" />
                             <!-- ############################################### -->
-
-                            <h2 class="FormContainer-Slogan">merci vous allez recevoir votre interprétation<br class="small-hidden"/> par email dans un instant.</h2>
-                            <p class="btn">Envie d’en savoir plus immédiatement&nbsp;?</p>
+                            <p><?= ucfirst($prenom) ?></p>
+                            <p class="FormContainer-Slogan"><span class="ico-form"></span>Vous allez recevoir votre interprétation complète par email dès demain.</p>
+                            <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement&nbsp;?</p>
                             <p class="FormField-Info">inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden"/> et nous vous rappelons tout de suite !</p>
 
                             <div class="FormField">

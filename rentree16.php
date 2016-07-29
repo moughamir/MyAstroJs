@@ -77,7 +77,6 @@
                     <div class="bxslider">  
 
 
-
                         <!-- ------------------------- QUESTION 1 ------------------------- -->
                         <section class="q1" class="question">
                             <header class="question-Header">
