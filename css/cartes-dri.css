@@ -2327,7 +2327,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.4rem;
       color: #bbb; }
   .FormContainer.DRI .DRI-Sent {
-    color: #454545; }
+    color: #454545;
+    background-color: white;}
     .FormContainer.DRI .DRI-Sent strong {
       font-weight: normal;
       color: #0c5a74; }
