@@ -182,7 +182,7 @@ $questions = array(
                             </div>
                             <form id="">
                                 <input type="hidden" name="source" value="myastro-tarot-a5" />
-                                <input type="hidden" name="method" value="tarot-landing" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="site" value="myastro.fr">
                                 <input type="hidden" name="affiliation" value="adwords">

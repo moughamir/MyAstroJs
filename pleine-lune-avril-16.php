@@ -77,8 +77,8 @@ $questions = array(
                             <form id="form-container">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="source" value="test" />
-                                <input type="hidden" name="method" value="test" />
+                                <input type="hidden" name="source" value="pleine-lune-avril-16" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="pleine-lune-avril-16-tel" />

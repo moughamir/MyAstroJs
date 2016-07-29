@@ -37,7 +37,7 @@ class APIKGestion {
         
         // perform our request
         $result = curl_exec($curl_connection);
-        die($result);
+        
         // catch error
         if(curl_error($curl_connection)){
             $result = curl_error($curl_connection);

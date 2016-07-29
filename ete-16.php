@@ -66,7 +66,7 @@ $questions = array(
                         <form id="form-container">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="ete-16" />
-                            <input type="hidden" name="method" value="affil-maxi" />
+                            <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="affilbase" />
                             <input type="hidden" name="dri" value="ete-16-tel" />

@@ -88,7 +88,7 @@ $questions = array(
                             </div>
                             <form id="">
                                 <input type="hidden" name="source" value="voyance-gratuite-a3" />
-                                <input type="hidden" name="method" value="voyance-landing" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
