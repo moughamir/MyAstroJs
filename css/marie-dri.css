@@ -1,11 +1,10 @@
 @charset "UTF-8";
 /* 
     int├®gration : guillaume deschamps <guillaumedeschamps75@gmail.com>
-    20/07/2016 pour KGCOM
+    25/07/2016 pour KGCOM
 
-    Destin├® ├á une page DRI simple sur deux colonnes :
-    1: bloc voyante + bloc FAQ
-    2: liste voyant-e-s + formulaire "rappel gratuit"
+    Destin├® ├á une page DRI simple sur une colonne :
+    bloc voyants + bloc FAQ + form
 */
 /* 
     ----------------------------------------
@@ -644,25 +643,50 @@ body > script {
 http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 [class*="flex-container"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-container-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flex-container-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flex-item-fluid {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1; }
 
 .flex-item-first {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
   order: -1; }
 
 .flex-item-medium {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
   order: 0; }
 
 .flex-item-last {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
   order: 1; }
 
 .flex-item-center {
@@ -673,8 +697,17 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* ---------------------------------- */
 /* grid container */
 [class*="grid-"] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
@@ -683,6 +716,9 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* grid childs */
 [class*="grid-"] > * {
   box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: calc(100% * 1 / 4 - 2rem - .01px);
   min-width: 0;
@@ -986,6 +1022,7 @@ input[type="reset"].unstyled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
+  -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
 ul.is-unstyled,
@@ -1446,6 +1483,10 @@ s,m,l,n = small, medium, large, none
     border: 0; }
 
   .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .w300p,
@@ -1634,10 +1675,16 @@ s,m,l,n = small, medium, large, none
   pre,
   samp {
     word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto; } }
 @media (max-width: 640px) {
   .no-wrapping {
     word-wrap: normal;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
     hyphens: manual; } }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1925,6 +1972,7 @@ body {
     padding: 0.8rem 1.4rem;
     background-color: white;
     border: 1px solid;
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     opacity: 0;
     z-index: -1; }
@@ -2134,11 +2182,14 @@ body {
   background: #fff; }
 
 h2, h3 {
-  color: #0c5a74;
+  color: #fa8888;
   font-family: "Raleway", sans-serif; }
 
 submit,
 h1, h2, h3, h4, h5, h6 {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
   hyphens: none; }
 
 .SiteHeader {
@@ -2146,7 +2197,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
 
 .SiteLogo {
-  background: url("../images_landing/cartes-dri/logo-MYASTRO.svg") center no-repeat;
+  background: url("../images_landing/marie-dri/logo-MYASTRO.svg") center no-repeat;
   background-size: contain;
   width: 10rem;
   height: 10rem;
@@ -2159,7 +2210,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100rem;
   margin: 0 auto 2rem; }
   .ContentBand .PageWrapper {
-    background: url("../images_landing/cartes-dri/bg.jpg") center no-repeat;
+    background: url("../images_landing/marie-dri/bg.jpg") center no-repeat;
     background-size: cover; }
     .ContentBand .PageWrapper-bg {
       margin: 0 auto;
@@ -2168,7 +2219,7 @@ h1, h2, h3, h4, h5, h6 {
       text-align: center; }
 
 .DescText-Title {
-  background-color: #0c5a74;
+  background-color: #fa8888;
   color: #fff;
   text-align: center;
   font-size: 2.5rem;
@@ -2181,12 +2232,12 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     width: 5rem;
     height: 2.5rem;
-    background: url("../images_landing/cartes-dri/ico-pig.svg") center no-repeat; }
+    background: url("../images_landing/marie-dri/ico-pig.svg") center no-repeat; }
   .DescText-Title span {
     font-weight: bold;
     text-transform: uppercase; }
 .DescText-Subtitle {
-  color: #15c0f8;
+  color: #f91540;
   text-align: center;
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
@@ -2204,8 +2255,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin: 1rem auto; }
   .liste-voyants ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0;
     padding: 0;
@@ -2221,37 +2282,38 @@ h1, h2, h3, h4, h5, h6 {
         color: #fff;
         font-size: 1.8rem; }
   .liste-voyants .voyant-1 {
-    background: url("../images_landing/cartes-dri/voyant-stephane.jpg") center no-repeat; }
+    background: url("../images_landing/marie-dri/voyant-stephane.jpg") center no-repeat; }
   .liste-voyants .voyant-2 {
-    background: url("../images_landing/cartes-dri/voyant-sarah.jpg") center no-repeat; }
+    background: url("../images_landing/marie-dri/voyant-sarah.jpg") center no-repeat; }
   .liste-voyants .voyant-3 {
-    background: url("../images_landing/cartes-dri/voyant-pierre.jpg") center no-repeat; }
+    background: url("../images_landing/marie-dri/voyant-pierre.jpg") center no-repeat; }
   .liste-voyants .voyant-4 {
-    background: url("../images_landing/cartes-dri/voyant-carmela.jpg") center no-repeat; }
+    background: url("../images_landing/marie-dri/voyant-carmela.jpg") center no-repeat; }
 
 .FormContainer {
   max-width: inherit; }
   .FormContainer-Header {
     font-family: 'Ubuntu Condensed';
-    color: #0c5a74;
-    background: url("../images_landing/cartes-dri/fleche.png") no-repeat bottom center; }
+    color: #fa8888;
+    background: url("../images_landing/marie-dri/fleche.png") no-repeat bottom center; }
   .FormContainer-Submit {
     padding: 1rem 4rem;
-    background-color: #15c0f8;
+    background-color: #f91540;
     color: #fff;
     font-size: 2.2rem;
     text-transform: uppercase;
     border: 0px solid red;
+    -webkit-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in; }
     .FormContainer-Submit:hover {
-      background-color: #046989; }
+      background-color: #8b041d; }
   .FormContainer.DRI .DRI-Intro-Title {
     color: #ccc;
     text-transform: uppercase; }
   .FormContainer.DRI .DRI-Intro-Text {
     color: white; }
   .FormContainer.DRI .DRI-Slogan {
-    background-color: #16a2d0;
+    background-color: #feeaea;
     color: #fff; }
     .FormContainer.DRI .DRI-Slogan span {
       text-transform: uppercase; }
@@ -2264,11 +2326,10 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.4rem;
       color: #bbb; }
   .FormContainer.DRI .DRI-Sent {
-    color: #454545;
-    background-color: white;}
+    color: #fff; }
     .FormContainer.DRI .DRI-Sent strong {
       font-weight: normal;
-      color: #0c5a74; }
+      color: #f91540; }
 
 .FormField-Input {
   border: 1px solid #ccc; }
@@ -2276,7 +2337,7 @@ h1, h2, h3, h4, h5, h6 {
     outline-width: 0;
     border-color: transparent; }
   .FormField-Input:active, .FormField-Input:focus {
-    background-color: #2ec7f9; }
+    background-color: #fa2e54; }
 .FormField-Info {
   border: none;
   color: #ccc;
@@ -2290,8 +2351,16 @@ input[type="checkbox"], input[type="radio"] {
   padding: 2rem 2.5rem;
   color: #6d6c6a; }
   .faq ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0;
     padding: 0; }
@@ -2301,30 +2370,54 @@ input[type="checkbox"], input[type="radio"] {
       line-height: 120%;
       list-style: none;
       padding: 0 0 10px 50px;
-      color: #fff; }
+      color: #fff;
+      min-width: 20rem; }
     .faq ul .ico-formulaire {
-      background: transparent url("../images_landing/cartes-dri/ico-form.svg") center left no-repeat; }
+      background: transparent url("../images_landing/marie-dri/ico-form.svg") center left no-repeat; }
     .faq ul .ico-standardiste {
-      background: transparent url("../images_landing/cartes-dri/ico-phone.svg") center left no-repeat; }
+      background: transparent url("../images_landing/marie-dri/ico-phone.svg") center left no-repeat; }
+
+.bloc-avatar {
+  background: transparent url("../images_landing/marie-dri/marie.png") bottom right no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: -12rem;
+  color: #fff;
+  width: 45rem;
+  height: 31.8rem;
+  border: 0px solid red;
+  color: #fff;
+  padding-top: 5rem;
+  padding-right: 8rem; }
+  .bloc-avatar h2 {
+    color: #fff;
+    font-family: "Courgette", sans-serif;
+    font-size: 1.75rem;
+    text-align: center; }
+  .bloc-avatar p {
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    text-align: right; }
 
 .ReassuranceList {
   background-color: #454545;
   color: #fff; }
 
 .ReassuranceList-Item-Img.star {
-  background: transparent url("../images_landing/cartes-dri/ico-star.png") center no-repeat;
+  background: transparent url("../images_landing/marie-dri/ico-star.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.lock {
-  background: transparent url("../images_landing/cartes-dri/ico-lock.png") center no-repeat;
+  background: transparent url("../images_landing/marie-dri/ico-lock.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.gift {
-  background: transparent url("../images_landing/cartes-dri/ico-gift.png") center no-repeat;
+  background: transparent url("../images_landing/marie-dri/ico-gift.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.trophy {
-  background: transparent url("../images_landing/cartes-dri/ico-trophy.png") center no-repeat;
+  background: transparent url("../images_landing/marie-dri/ico-trophy.png") center no-repeat;
   background-size: contain; }
 
 .alert {
@@ -2349,10 +2442,15 @@ input[type="checkbox"], input[type="radio"] {
 .SiteCopyright {
   color: #454545; }
 
+@media screen and (max-width: 900px) {
+  .bloc-avatar {
+    display: none; } }
 @media screen and (max-width: 640px) {
   .PageWrapper {
     display: inherit;
     padding: 0 2rem;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse; }
 
   .SiteLogo:after, .SiteLogo:before {
@@ -2360,7 +2458,14 @@ input[type="checkbox"], input[type="radio"] {
 
   .flex-mobile {
     border: 0px solid red;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse; }
 
   .FormContainer {
@@ -2394,29 +2499,48 @@ input[type="checkbox"], input[type="radio"] {
      list-style: none;
      width: 100%;*/ }
     .liste-voyants ul li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center; }
       .liste-voyants ul li:nth-child(3), .liste-voyants ul li:nth-child(4) {
         display: none; }
 
   .DescText-Content {
     padding: 1.5rem; }
+
   .DescText-Content,
-  .DescText .faq {
+  .faq {
     width: 100%; }
-    .DescText-Content h3,
-    .DescText .faq h3 {
+    .DescText-Content v
+    h3,
+    .faq v
+    h3 {
       font-size: 1.8rem; }
+    .DescText-Content ul,
+    .faq ul {
+      /*flex-direction: column;
+      align-items:flex-start;
+      justify-content: space-between;*/ }
       .DescText-Content ul > *,
-    .DescText .faq ul > * {
+      .faq ul > * {
         width: calc(100% * 1 / 2 - 2rem - .01px); }
       .DescText-Content ul > .flex-item-double,
-    .DescText .faq ul > .flex-item-double {
+      .faq ul > .flex-item-double {
         width: calc(100% * 2 / 2 - 2rem); }
-  .DescText-Subtitle {
-    font-size: 2.5rem; }
 
   .DRI-Form {
     margin-bottom: 4rem; } }

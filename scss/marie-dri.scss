@@ -1,10 +1,9 @@
 /* 
     intégration : guillaume deschamps <guillaumedeschamps75@gmail.com>
-    20/07/2016 pour KGCOM
+    25/07/2016 pour KGCOM
 
-    Destiné à une page DRI simple sur deux colonnes :
-    1: bloc voyante + bloc FAQ
-    2: liste voyant-e-s + formulaire "rappel gratuit"
+    Destiné à une page DRI simple sur une colonne :
+    bloc voyants + bloc FAQ + form
 */
 
 @import "_s-landing-voyance-2";
@@ -12,15 +11,15 @@
 // your own styles
 // -----------------
 /* --------------- fonts --------------- */
+$font1: 'Raleway', sans-serif;
+$font2: 'Courgette', sans-serif;
 
 /* --------------- variables  --------------- */
 
-$img_dir : "../images_landing/cartes-dri/";
+$img_dir : "../images_landing/marie-dri/";
 
-$font1: 'Raleway', sans-serif;
-
-$color1: #0c5a74; //bleu foncé, bg main title
-$color2: #15c0f8; //bleu clair titre 3, submit
+$color1: #fa8888; //rose clair, bg main title
+$color2: #f91540; //rosev titre 3, submit
 $color3: #454545; //gris reassurance
 $color4: #6d6c6a; // gris texte courant
 
@@ -209,11 +208,10 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         &-Sent {
-            color: $color3;
-            background-color: white;
+            color: #fff;
             strong {
                 font-weight: normal;
-                color: $color1;
+                color: $color2;
             }
         }
                 
@@ -266,6 +264,7 @@ input[type="checkbox"], input[type="radio"] {
             list-style: none;
             padding: 0 0 10px 50px; 
             color: #fff;
+            min-width: 20rem;
         }
 
         .ico-formulaire{
@@ -277,7 +276,33 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-
+.bloc-avatar{
+    background:  transparent url($img_dir+"marie.png") bottom right no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: -12rem;
+    color: #fff;
+    width: 45rem;
+    height: 31.8rem;
+    border: 0px solid red;
+    color:#fff;
+    padding-top: 5rem;
+    padding-right: 8rem;
+    
+    h2{
+        color:#fff; 
+        font-family:$font2;    
+        font-size: 1.75rem;
+        text-align:center;
+    }
+    
+    p{
+        position: absolute;
+        left: 3rem;
+        bottom: 0;
+        text-align:right; 
+    }
+}
 
 
 .ReassuranceList {
@@ -335,8 +360,8 @@ input[type="checkbox"], input[type="radio"] {
 @media screen and (max-width: 1000px){
 
 }
-@media screen and (max-width: 730px){
-    
+@media screen and (max-width: 900px){
+    .bloc-avatar{display:none}
 }
 @media screen and (max-width: 640px){
    
@@ -422,16 +447,13 @@ input[type="checkbox"], input[type="radio"] {
     
     .DescText-Content,
     .faq{
-        width: 100%;
+        width: 100%;v
         h3{font-size: 1.8rem}
-            
         ul{
+            /*flex-direction: column;
+            align-items:flex-start;
+            justify-content: space-between;*/
             @include grid(2);
-        }
-    }
-    
-        &-Subtitle {
-            font-size: 2.5rem;
         }
     }
     
