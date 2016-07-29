@@ -7,6 +7,7 @@
     Created on : 26 juillet 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -57,20 +58,8 @@
             </section>
             
             <section id="questionnaire" class="questionnaire">
-                <form>
+                <form method="post" id="q-form">
                     <!-- ########## TODO ########## -->
-                
-
-                    <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="rentree16" />
-                    <input type="hidden" name="method" value="affil-maxi" />
-                    <input type="hidden" name="site" value="myastro.fr" />
-                    <input type="hidden" name="affiliation" value="affilbase" />
-                    <input type="hidden" name="dri" value="rentree16-tel" />
-                    <!-- ########## autres champs pré-remplis ######### -->
-                    <input type="hidden" name="cguv" value="1" />
-                    <input type="hidden" name="partenaires" value="1" />
-                    <!-- ############################################### -->
 
                     <h3 id="numQuestion">Question X</h3>
 
@@ -177,7 +166,7 @@
  
                     </div>
                     <!-- fin de bxslider -->     
-
+                    
                 </form>
             </section> 
             <!-- FIN DU QUESTIONNAIRE -->  
@@ -187,7 +176,7 @@
                 <article class="FormContainer">
                     <div class="FormContainer overlay" id="form-overlay"></div>
                     <p class="alert alert-danger" style="display: none"></p>
-                    <p id="resulQuiz">Guigui</p>
+                    
                     <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre étude personnalisée !</h2>
                     <div class="FormContainer-Fields">
                         <form id="form-container">
@@ -297,6 +286,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
         <script src="js/jquery.bxslider.min.js"></script>
+        
+        <!-- #### QUESTIONNAIRE #### -->
         <script src="js/rentree16.js"></script>
         
         <!-- #### REMARKETINGS #### -->

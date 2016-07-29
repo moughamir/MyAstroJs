@@ -8,6 +8,7 @@
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
 include('include/process-dri-postmailing.php');
+$results = $_POST['resultats'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,6 +57,19 @@ include('include/process-dri-postmailing.php');
                             <input type="hidden" name="dri" value="rentree16-dri" />
                             <!-- ############################################### -->
                             <p><?= ucfirst($prenom) ?></p>
+                            <?php 
+                                switch ($results){
+                                    case 1 :
+                                        echo "Texte correspondant au premier pallier";
+                                        break;
+                                    case 2 :
+                                        echo "Texte correspondant au deuxième pallier";
+                                        break;
+                                    case 3 :
+                                        echo "Texte correspondant au troisième pallier";
+                                        break;
+                                }
+                            ?>
                             <p class="FormContainer-Slogan"><span class="ico-form"></span>Vous allez recevoir votre interprétation complète par email dès demain.</p>
                             <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement&nbsp;?</p>
                             <p class="FormField-Info">inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden"/> et nous vous rappelons tout de suite !</p>

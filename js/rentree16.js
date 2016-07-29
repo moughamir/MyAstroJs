@@ -65,40 +65,47 @@ $(document).ready(function(){
     
     // enregistrer et afficher le résultat
     
-    
+    var result = 0;
+    var pallier = 0;
     function zeResults(){
-        var $result = 0;
         
+        // j'additionne toutes les valeurs des réponses selectionnées
         $('.questionnaire input[type=radio]:checked').each( function () {
-            $result+=parseInt($(this).val(),10);   
-        });
-        
-        //console.log("$result : " + $result);
-        
-        var $resultTxt = "Vous avez un score de : " + $result;
-        
-        $('#resulQuiz').css({"background":"green", "color":"black", "width":"100%"});
-        
-        
-        // si $result est compris entre 1 et 6
-        if($result <= 6){
-            $resultTxt += " premier pallier"
-        } else if( $result <= 12 && $result > 6){
-            $resultTxt += " deuxième pallier"
-        } else if( $result <= 18 && $result > 12){
-            $resultTxt += " troisième pallier"
+            result+=parseInt($(this).val(),10);   
+        });        
+        var resultTxt = "Vous avez un score de : " + result;
+        console.log(resultTxt);
+            
+        // si result est compris entre 1 et 6
+        if(result <= 6){
+            pallier=1;
+            resultTxt += " premier pallier donc " + pallier;
+             
+        } else if( result <= 12 && result > 6){
+            pallier=2;
+            resultTxt += " deuxième pallier donc " + pallier;
+        } else if( result <= 18 && result > 12){
+            pallier=3;
+            resultTxt += " troisième pallier donc " + pallier;
         }
         
-        $('#resulQuiz').text($resultTxt);
-        //console.log("$resultTxt : " + $resultTxt);
+        
+        console.log("Le pallier est : " + pallier);  
 
     };
     
     /* AFFICHER LE FORMULAIRE CLIENT AVEC LE DERNIER BTN RADIO */
     $('input[name="name6"]').change(function(){
+        zeResults();
+        
+        // ajouter un input invisible contenant la valeur "pallier"
+        // qui va déterminer l'affichage du texte sur la -tel avec une variable de session
+        var newInput = "<input type='hidden' name='resultats' value='"+ pallier + "'>";
+        $("#q-form").append(newInput);
+        
+        
         $('.questionnaire').fadeOut( function(){
             $('.formulaire').css("display" ,"block");
-            zeResults();
         });
     });
     
