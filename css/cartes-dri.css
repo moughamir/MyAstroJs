@@ -2264,10 +2264,11 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.4rem;
       color: #bbb; }
   .FormContainer.DRI .DRI-Sent {
-    color: #fff; }
+    color: #454545;
+    background-color: white;}
     .FormContainer.DRI .DRI-Sent strong {
       font-weight: normal;
-      color: #15c0f8; }
+      color: #0c5a74; }
 
 .FormField-Input {
   border: 1px solid #ccc; }
@@ -2402,24 +2403,20 @@ input[type="checkbox"], input[type="radio"] {
 
   .DescText-Content {
     padding: 1.5rem; }
-
   .DescText-Content,
-  .faq {
+  .DescText .faq {
     width: 100%; }
     .DescText-Content h3,
-    .faq h3 {
+    .DescText .faq h3 {
       font-size: 1.8rem; }
-    .DescText-Content ul,
-    .faq ul {
-      /*flex-direction: column;
-      align-items:flex-start;
-      justify-content: space-between;*/ }
       .DescText-Content ul > *,
-      .faq ul > * {
+    .DescText .faq ul > * {
         width: calc(100% * 1 / 2 - 2rem - .01px); }
       .DescText-Content ul > .flex-item-double,
-      .faq ul > .flex-item-double {
+    .DescText .faq ul > .flex-item-double {
         width: calc(100% * 2 / 2 - 2rem); }
+  .DescText-Subtitle {
+    font-size: 2.5rem; }
 
   .DRI-Form {
     margin-bottom: 4rem; } }

@@ -13,8 +13,8 @@ $page = explode("?", $_SERVER['HTTP_REFERER'])[0];
  *                          TRAITEMENT DES DONNÉES                            *
  * ========================================================================== */
 
-$idindex     = $_SESSION['user_id'];
-$email       = $_SESSION['email'];
+$idindex = $_SESSION['user_id'];
+$email = $_SESSION['email'];
 
 // Numéro de téléphone & Pays --------------------------------------------------
 $tel = isset($param['tel']) && !empty($param['tel']) ? $param['tel'] : false;

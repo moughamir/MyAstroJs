@@ -92,13 +92,7 @@ include('include/process-dri-postmailing.php');
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
-                            <form method="post">
-                                
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
-                                <!-- ############################################### -->
-                                
+                            <form method="post">                                
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>

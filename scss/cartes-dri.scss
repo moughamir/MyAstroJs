@@ -209,10 +209,11 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         &-Sent {
-            color: #fff;
+            color: $color3;
+            background-color: white;
             strong {
                 font-weight: normal;
-                color: $color2;
+                color: $color1;
             }
         }
                 
@@ -423,11 +424,14 @@ input[type="checkbox"], input[type="radio"] {
     .faq{
         width: 100%;
         h3{font-size: 1.8rem}
+            
         ul{
-            /*flex-direction: column;
-            align-items:flex-start;
-            justify-content: space-between;*/
             @include grid(2);
+        }
+    }
+    
+        &-Subtitle {
+            font-size: 2.5rem;
         }
     }
     

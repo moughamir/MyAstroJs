@@ -11,30 +11,28 @@ include('include/process-dri-postmailing.php');
 ?>
 <!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-    <title>MyAstro - Lucas 2016</title>
-    
-    <meta name="robots" content="noindex,nofollow" />
-    
-    <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <title>MyAstro - Lucas 2016</title>
 
-    <link rel="stylesheet" type="text/css" href="css/lucas-simple.min.css">
-       
+        <meta name="robots" content="noindex,nofollow" />
+
+        <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+
+        <link rel="stylesheet" type="text/css" href="css/lucas-simple.min.css">
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-          
-</head>
+    </head>
 
-<body>
+    <body>
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
@@ -93,12 +91,6 @@ include('include/process-dri-postmailing.php');
                                 </p>
                             <?php } else { ?>
                             <form method="post">
-                                
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
-                                <!-- ############################################### -->
-                                
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>
@@ -129,7 +121,6 @@ include('include/process-dri-postmailing.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-                                
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
@@ -149,6 +140,6 @@ include('include/process-dri-postmailing.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </body>
-<link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
-<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
 </html>
