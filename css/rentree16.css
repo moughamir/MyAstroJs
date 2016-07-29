@@ -1954,6 +1954,163 @@ div.logo {
   font-size: .85em;
   padding: 10px; }
 
+/* 
+    --------------------------------
+    --      module formulaire     --
+    --------------------------------
+
+    Created on : 26 mai 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+.alert {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  border: 1px solid; }
+  .alert b {
+    font-weight: 600; }
+
+.fa img {
+  display: none; }
+
+.FormContainer {
+  position: relative;
+  padding: 3rem;
+  background-color: grey; }
+  .FormContainer.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    border: none;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    color: white; }
+  .FormContainer-Pop {
+    position: absolute;
+    background-color: silver;
+    z-index: 2; }
+  .FormContainer-Header {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: inherit;
+    font-size: 2.8rem;
+    font-weight: inherit; }
+  .FormContainer-Slogan {
+    font-size: 1.8rem;
+    text-align: center; }
+  .FormContainer-Fields {
+    padding: 0 2rem; }
+  .FormContainer-Submit {
+    display: block;
+    min-width: 60%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 2.2rem;
+    font-weight: bold;
+    white-space: nowrap; }
+
+.FormField {
+  display: block;
+  position: relative;
+  margin-bottom: 2rem; }
+  .FormField-Label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: inherit;
+    font-size: 1.6rem; }
+  .FormField-Input {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid; }
+    .FormField-Input.radio {
+      display: inline-block; }
+  .FormField-Button {
+    padding: 0.8rem 1.2rem; }
+  .FormField-TableInputContainer {
+    display: table;
+    width: 100%;
+    margin: auto; }
+    .FormField-TableInputContainer-Cell {
+      display: table-cell;
+      padding-right: 1rem;
+      text-align: center;
+      white-space: nowrap; }
+      .FormField-TableInputContainer-Cell:last-child {
+        padding-right: 0; }
+    .FormField-TableInputContainer.fixed-2-col .FormField-TableInputContainer-Cell {
+      width: 33.333%; }
+    .FormField-TableInputContainer.fixed-3-col .FormField-TableInputContainer-Cell {
+      width: 33.333%; }
+    .FormField-TableInputContainer.gender {
+      max-width: 300px; }
+    .FormField-TableInputContainer.relationship-status {
+      max-width: 400px; }
+  .FormField.radio .FormField-Label, .FormField.radio .FormField-Input {
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    vertical-align: middle;
+    margin: 0 0.2rem; }
+  .FormField-Info {
+    font-size: 1.6rem; }
+  .FormField.withAside {
+    display: table;
+    width: 100%;
+    margin-bottom: 0; }
+    .FormField.withAside > * {
+      display: table-cell;
+      position: relative; }
+    .FormField.withAside > *:first-child {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important; }
+    .FormField.withAside > *:last-child {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important; }
+    .FormField.withAside .FormField-Input {
+      float: left;
+      width: 100%; }
+    .FormField.withAside .aside {
+      width: 1%;
+      padding: 0.8rem 1.2rem;
+      vertical-align: middle;
+      line-height: 1;
+      white-space: nowrap;
+      border: 1px solid;
+      border-left: 0 !important; }
+      .FormField.withAside .aside.btn {
+        padding: 0; }
+      .FormField.withAside .aside .FormField-Button {
+        background-color: transparent;
+        border: none;
+        color: inherit; }
+
+.Fields-Table-Row {
+  display: table;
+  width: 100%;
+  margin-bottom: 1rem; }
+  .Fields-Table-Row > .FormField-Label {
+    display: table-cell;
+    width: 30%;
+    padding-right: 1rem;
+    text-align: right; }
+  .Fields-Table-Row.Free > .FormField-Label {
+    width: auto;
+    text-align: left; }
+  .Fields-Table-Row > .FormField {
+    display: table-cell;
+    width: auto; }
+  .Fields-Table-Row .FormField-Info {
+    display: inline-block;
+    padding-left: 30%; }
+
 /* --------------------------------- VARIABLES ----------------------------- */
 /* ----  fonts  ---- */
 /* ----  couleurs  ---- */
@@ -2010,7 +2167,7 @@ body {
       color: #454545; }
 
 .bgHeader {
-  background: #e3e0d8 url("../images_landing/rentree16/bg-header-q.jpg") center no-repeat;
+  background: transparent url("../images_landing/rentree16/bg-header-q.jpg") center no-repeat;
   height: 12rem; }
 
 /* ----  intro  ---- */
@@ -2053,29 +2210,74 @@ body {
     justify-content: space-around;
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
-    align-content: center; }
+    align-content: center;
+    text-decoration: none;
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in; }
+    .intro-Content-Img1:hover, .intro-Content-Img2:hover {
+      background-size: 110%; }
     .intro-Content-Img1 p, .intro-Content-Img2 p {
       display: inline-block;
       vertical-align: middle;
       color: #fff; }
   .intro-Content-Img1 {
-    background: #747874 url("../images_landing/rentree16/intro-1.jpg") center no-repeat; }
+    background: #000 url("../images_landing/rentree16/intro-1.jpg") center no-repeat; }
   .intro-Content-Img2 {
-    background: #747874 url("../images_landing/rentree16/intro-2.jpg") center no-repeat; }
+    background: #000 url("../images_landing/rentree16/intro-2.jpg") center no-repeat; }
 
 .btn-start {
   display: inline-block;
   color: #f2163a;
+  background: transparent;
   border: 2px solid #f2163a;
   text-align: center;
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
+  cursor: pointer;
   font-family: "Fjalla One", sans-serif;
   font-size: 3.6rem;
   padding: 2rem 5rem;
-  box-sizing: padding-box; }
+  box-sizing: padding-box;
+  margin-bottom: 2rem; }
   .btn-start:hover, .btn-start:focus, .btn-start:active {
+    color: white;
+    border: 2px solid #f2163a;
+    background-color: #f2163a; }
+
+.btn-send {
+  display: inline-block;
+  color: #f2163a;
+  background: transparent;
+  border: 2px solid #f2163a;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3.6rem;
+  box-sizing: padding-box; }
+  .btn-send:hover, .btn-send:focus, .btn-send:active {
+    color: white;
+    border: 2px solid #f2163a;
+    background-color: #f2163a; }
+
+.btn {
+  display: inline-block;
+  color: #f2163a;
+  background: transparent;
+  border: 2px solid #f2163a;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3.5rem;
+  padding: 2rem;
+  box-sizing: padding-box; }
+  .btn:hover, .btn:focus, .btn:active {
     color: white;
     border: 2px solid #f2163a;
     background-color: #f2163a; }
@@ -2087,6 +2289,7 @@ body {
   margin: 3.5rem auto 1rem;
   color: #000; }
 
+/* ----------------------------------- QUESTIONNAIRE ----------------------------------- */
 .questionnaire {
   /*max-width:60rem;
   margin: 0 auto;*/ }
@@ -2142,6 +2345,15 @@ body {
     max-width: 60rem;
     margin: 0 auto;
     box-shadow: 0 0 0 #ccc; }
+  .bx-wrapper .bg-bx-pager {
+    display: inline-block;
+    width: 100%;
+    content: " ";
+    height: 0.5rem;
+    background: #dddddd;
+    position: absolute;
+    margin-top: 2.2rem;
+    z-index: -1; }
   .bx-wrapper .bx-pager {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2158,14 +2370,6 @@ body {
     justify-content: space-between;
     bottom: -5rem;
     margin: 1rem auto; }
-    .bx-wrapper .bx-pager::after {
-      background: #dddddd;
-      display: inline-block;
-      width: 100%;
-      height: 3rem;
-      border: 0.5rem solid #dddddd;
-      position: absolute;
-      top: 0; }
     .bx-wrapper .bx-pager .bx-pager-item a {
       display: table-cell;
       vertical-align: middle;
@@ -2209,6 +2413,9 @@ body {
   background-position: 100% 0% !important; }
 
 /* --------------------------------- FORMULAIRE PERSONNALISE --------------------------------- */
+.formulaire {
+  display: none; }
+
 .anim-input {
   -webkit-animation-name: animInput;
   animation-name: animInput;
@@ -2237,6 +2444,115 @@ body {
     transform: scale(1, 1);
     opacity: 1; } }
 /* ----------------------------------- ANIMATIONS ---------------------------------- */
+/* ----------------------------------- DRI ----------------------------------- */
+.FormContainer {
+  max-width: 80rem;
+  width: 100%;
+  margin: 0 auto;
+  background: transparent;
+  text-align: center;
+  /* --------------------------------- MODALE --------------------------------- */ }
+  .FormContainer h2 {
+    text-transform: uppercase; }
+  .FormContainer input, .FormContainer select {
+    border: 2px solid #3fb3ae; }
+  .FormContainer .FormField {
+    max-width: 40rem;
+    margin: 2rem auto; }
+    .FormContainer .FormField-Info {
+      text-transform: uppercase;
+      margin: 1.5rem auto; }
+  .FormContainer .overlay {
+    display: none;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh !important;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 0px solid red;
+    color: black; }
+    .FormContainer .overlay p.alert {
+      display: table-cell;
+      vertical-align: middle;
+      height: 25rem;
+      width: 40rem;
+      left: 50%;
+      top: 50%;
+      margin: -12.5rem -20rem;
+      padding: 1rem;
+      position: absolute;
+      text-align: center;
+      background: #fff;
+      color: #85eeaa;
+      border: 0px solid red; }
+      .FormContainer .overlay p.alert b {
+        margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 2rem;
+        width: 100%; }
+      .FormContainer .overlay p.alert br + i {
+        padding: 0.5rem 0.8rem;
+        background: #ccc;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        bottom: 1rem;
+        left: 22%; }
+        .FormContainer .overlay p.alert br + i :after {
+          content: "fermer";
+          text-transform: uppercase;
+          text-align: center;
+          width: 60%;
+          padding: 1rem; }
+
+.picto-tel-bulle {
+  width: 5rem;
+  height: 5rem;
+  background: transparent url("../images_landing/rentree16/bulle-phone.svg") 0% 0% no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  top: -1rem;
+  left: 41rem; }
+
+#tel {
+  text-align: center; }
+
+.DRI btn {
+  margin: 2rem auto; }
+
+.header-voyant {
+  width: 84%;
+  height: 12rem;
+  margin: 0 auto;
+  background: transparent url("../images_landing/rentree16/portrait-voyante.png") top left no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .header-voyant p {
+    text-align: left;
+    line-height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8.8rem 0 0 12rem; }
+    .header-voyant p span {
+      font-family: "Cookie", cursive;
+      font-size: 3rem; }
+
 /* --------------------------------- MEDIA QUERIES --------------------------------- */
 /*
   --- BREAKPOINTS DE KNACSS V5.0.1 ---
@@ -2313,11 +2629,7 @@ body {
     align-content: center; }
   .intro-Content-Img1, .intro-Content-Img2 {
     width: 100%;
-    height: 10rem;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;*/ }
+    height: 10rem; }
     .intro-Content-Img1 p, .intro-Content-Img2 p {
       font-size: 2rem; }
 
@@ -2327,7 +2639,10 @@ body {
     margin: 1rem auto !important; }
 
   .question-Img {
-    display: none; } }
+    display: none; }
+
+  .btn {
+    font-size: 2rem; } }
 @media (max-width: 480px) {
   .SiteHeader .SiteLogo {
     width: 6.5rem;
@@ -2345,7 +2660,7 @@ body {
     width: 50% !important;
     padding: 0.5rem 0.5rem; }
 
-  .btn-start {
+  .btn-start, .btn {
     width: 80%;
     margin: 0 auto;
     padding: 1rem; }
@@ -2354,4 +2669,13 @@ body {
     width: 100%;
     padding: 0rem 8rem; }
   .question-Header h2 {
-    font-size: 1.25rem; } }
+    font-size: 1.25rem; }
+
+  .FormContainer {
+    padding: 0; }
+    .FormContainer h2 {
+      font-size: 1.5rem; }
+    .FormContainer-Slogan {
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: inherit; } }

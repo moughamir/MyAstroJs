@@ -14,11 +14,13 @@
 @import "modules/_mixins";
 @import "modules/_li-socials";
 @import "modules/_slider";
+@import "modules/_form";
 
 
 /* --------------------------------- VARIABLES ----------------------------- */
 /* ----  fonts  ---- */
 $font1: 'Fjalla One', sans-serif;
+$font2: 'Cookie', cursive;
 
 /* ----  couleurs  ---- */
 $color1: #3fb3ae; //turquoise, questionTitle, submit
@@ -84,7 +86,7 @@ a{
 }
 
 .bgHeader{
-    background:#e3e0d8 url( $img_dir  + "bg-header-q.jpg") center no-repeat;
+    background:transparent url( $img_dir  + "bg-header-q.jpg") center no-repeat;
     height: 12rem;
 }
 
@@ -112,6 +114,12 @@ a{
             flex-direction: column;
             justify-content: space-around;
             align-content: center;
+            text-decoration: none;
+            transition: all 0.25s ease-in;
+            
+            &:hover{
+                background-size: 110%;
+            }
             
             p{
                 display:inline-block; 
@@ -121,20 +129,36 @@ a{
         }
 
         &-Img1{
-            background: #747874 url($img_dir + 'intro-1.jpg') center  no-repeat;    
+            background: #000 url($img_dir + 'intro-1.jpg') center  no-repeat;    
         }
 
         &-Img2{
-            background: #747874 url($img_dir + 'intro-2.jpg') center no-repeat;    
+            background: #000 url($img_dir + 'intro-2.jpg') center no-repeat;    
         }  
     }    
 }
+
 
 .btn-start{
     @include ghost-btn($color2, white, 2px);
     font-family: $font1;
     font-size: 3.6rem;
     padding: 2rem 5rem; 
+    box-sizing: padding-box;
+    margin-bottom: 2rem;
+}
+.btn-send{
+    @include ghost-btn($color2, white, 2px);
+    font-family: $font1;
+    font-size: 3.6rem;
+    //padding: 2rem; 
+    box-sizing: padding-box;
+}
+.btn{
+    @include ghost-btn($color2, white, 2px);
+    font-family: $font1;
+    font-size: 3.5rem;
+    padding: 2rem; 
     box-sizing: padding-box;
 }
 
@@ -146,7 +170,7 @@ a{
     color:#000;
 }
 
-
+/* ----------------------------------- QUESTIONNAIRE ----------------------------------- */
 .questionnaire{
     /*max-width:60rem;
     margin: 0 auto;*/
@@ -160,6 +184,8 @@ a{
         text-transform: uppercase;
         margin-left: 20%;
     }
+    
+    //label{display: none}
 }
 
 .question{
@@ -204,6 +230,16 @@ $nbQuestions: 6;
     }
     
     /* ----  pagination  ---- */
+    .bg-bx-pager{
+        display: inline-block;
+        width: 100%;
+        content:" ";
+        height: 0.5rem;
+        background: $color3;
+        position: absolute;
+        margin-top: 2.2rem;
+        z-index:-1;
+    }
     .bx-pager{
         display: flex;
         flex-direction: row;
@@ -211,15 +247,7 @@ $nbQuestions: 6;
         bottom: -5rem;
         margin: 1rem auto;
         
-        &::after{
-            background: $color3;
-            display: inline-block;
-            width: 100%;
-            height: 3rem;
-            border: 0.5rem solid $color3;
-            position: absolute;
-            top: 0;
-        }
+       
         
         .bx-pager-item{
             a{
@@ -276,6 +304,11 @@ $nbQuestions: 6;
 }
 
 /* --------------------------------- FORMULAIRE PERSONNALISE --------------------------------- */
+// cacher le formulaire au début
+.formulaire{
+   display:none;
+}
+
 
 .anim-input{
     animation-name: animInput;
@@ -289,8 +322,136 @@ $nbQuestions: 6;
     }
 }
 
+
+
 /* ----------------------------------- ANIMATIONS ---------------------------------- */
 
+
+/* ----------------------------------- DRI ----------------------------------- */
+.FormContainer {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    text-align: center;
+    
+    
+    h2{
+        text-transform: uppercase;
+    }
+    
+    input, select{
+        border:2px solid $color1;
+    }
+    
+    .FormField{
+        max-width:40rem; 
+        margin: 2rem auto;
+        &-Info{
+            text-transform: uppercase; 
+            margin: 1.5rem auto;
+        }
+    }
+    
+    
+    /* --------------------------------- MODALE --------------------------------- */
+    .overlay {
+        display: none;
+        position:fixed !important;
+        top:0;
+        left:0;
+        z-index:100;
+        width:100vw;
+        height:100vh !important;
+        max-width: none;
+        background-color: rgba(0, 0, 0, 0.75);
+        border:0px solid red;
+        color:black;
+
+        p.alert {
+            display: table-cell;
+            vertical-align: middle;
+            height: 25rem;
+            width: 40rem;
+            left: 50%;
+            top: 50%;
+            margin: -12.5rem -20rem;
+            padding:1rem;
+            position: absolute;
+            text-align: center;
+            background: #fff;
+            color:#85eeaa;
+            border:0px solid red;
+
+
+
+            // TITRE DE LA MODALE
+            b{
+                margin-bottom: 1rem;
+                display: inline-block;
+                font-size:2rem;
+                width: 100%;
+            }
+
+            // BOUTON DE FERMETURE DE LA MODALE
+            br + i{
+                padding: 0.5rem 0.8rem;
+                background: #ccc;
+                color:#fff;
+                cursor: pointer;
+                display: inline-block; 
+                position: absolute;
+                bottom: 1rem;
+                left: 22%;
+
+                   :after{
+                    content:"fermer";
+                    text-transform:uppercase;
+                    text-align: center;
+                    width: 60%;
+                    padding: 1rem;
+                }
+
+            }
+        }
+    }
+
+}
+
+.picto-tel-bulle{
+    width:5rem;
+    height:5rem;
+    background: transparent url($img_dir+'bulle-phone.svg') 0% 0% no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: 41rem;
+}
+#tel{text-align: center}
+
+
+.DRI btn{margin:2rem auto}
+.header-voyant{
+    width:84%;
+    height:12rem;
+    margin: 0 auto;
+    background: transparent url($img_dir+'portrait-voyante.png') top left no-repeat;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    p{
+        text-align: left;
+        line-height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        padding:8.8rem 0 0 12rem;
+        span{
+            font-family: $font2;
+            font-size:3rem; 
+        }
+    }
+}
 
 /* --------------------------------- MEDIA QUERIES --------------------------------- */
 /*
@@ -375,10 +536,6 @@ and (orientation : landscape) {
             &-Img2{
                 width:100%;
                 height:10rem;
-                /*display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-content: center;*/
                 p{font-size: 2rem;}
             }
         }    
@@ -399,6 +556,9 @@ and (orientation : landscape) {
         }
     }
     
+    .btn{
+        font-size: 2rem;
+    }
 }
 
 @include media('<=tiny-plus-screen') {  
@@ -422,7 +582,7 @@ and (orientation : landscape) {
         width: 50% !important;
         padding: 0.5rem 0.5rem;
     }
-    .btn-start{
+    .btn-start, .btn{
         width: 80%;
         margin: 0 auto;
         padding: 1rem;
@@ -436,5 +596,17 @@ and (orientation : landscape) {
             font-size: 1.25rem;
         }
     }
+    .FormContainer{
+        padding: 0;
+        
+        h2{
+            font-size: 1.5rem;
+        }
+        
+        &-Slogan{
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: inherit;
+        }
+    }
 }
-
