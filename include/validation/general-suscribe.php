@@ -250,7 +250,7 @@ if(empty($err)){
 
     $kgestion_insert = $kgestion->insertUser($post_data);
     if (!$kgestion_insert->success){
-        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.$kgestion_insert->message);
+        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     } else {
         $kgestion_id = $kgestion_insert->id;
@@ -468,7 +468,7 @@ if(empty($err)){
     
     $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
-    die(json_encode(array('url' => $redirect_url)));
+    die(json_encode(array($redirect_method => $redirect_url)));
        
 /* ========================================================================== *
  *                                RETOUR ERREUR                               *
