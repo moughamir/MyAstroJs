@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
     
     // ETAPE3 - TIRAGE
-    $(document).on('change, click', 'input[name="theme_id"]', function(e){
+    $(document).on('change, click', 'input[name="question_code"]', function(e){
         setTimeout(function(){
             theme.hide();
             tarot_band.addClass('Principal');

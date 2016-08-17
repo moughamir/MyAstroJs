@@ -8,6 +8,22 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 $cards_dir = 'tarot/cartes/original-grand/';
+$questions = array (
+        'Amour' => array(
+            'celibat'  => [ 'code' => 'td_question_1', 'subject' => 'sentimental', 'text' => 'Je suis célibataire' ],
+            'couple'   => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple', 'conjoint' => true ],
+            'infidele' => [ 'code' => 'td_question_24', 'subject' => 'sentimental', 'text' => 'Je suis en couple mais jʼai une autre personne en tête', 'conjoint' => true],
+            'amant'    => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple avec une personne mariée', 'conjoint' => true],
+            'separe'   => [ 'code' => 'td_question_11', 'subject' => 'sentimental', 'text' => 'Je suis séparé(e) de mon/ma conjoint(e)', 'conjoint' => true],
+        ),
+        'Argent' => array(
+            'argent'   => [ 'code' => 'td_question_73', 'subject' => 'financier', 'text' => 'Je veux savoir si ma situation financière va sʼaméliorer' ],
+        ),
+        'Travail' => array(
+            'travail'  => [ 'code' => 'td_question_4', 'subject' => 'professionnel', 'text' => 'Je veux savoir si ma situation professionnelle va sʼaméliorer' ],
+        )
+);
+
 session_start();
 $_SESSION['reflexcache_id'] = $_GET['t1'];
 ?>
@@ -89,41 +105,15 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>Thème</strong> -</header>
                 <div class="PageWrapper">
                     <article class="ThemeChoice-List">
-                        <input type="radio" name="theme_id" value="td_question_1" id="theme_celibataire" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_celibataire" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Amour"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je suis célibataire</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_2" id="theme_couple" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_couple" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Amour"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je suis en couple</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_24" id="theme_infidele" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_infidele" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Amour"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je suis en couple mais jʼai une autre personne en tête</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_2" id="theme_amant" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_amant" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Amour"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je suis en couple avec une personne mariée</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_11" id="theme_separe" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_separe" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Amour"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je suis séparé(e) de mon/ma conjoint(e)</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_73" id="theme_argent" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_argent" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Argent"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je veux savoir si ma situation financière va sʼaméliorer</span>
-                        </label>
-                        <input type="radio" name="theme_id" value="td_question_3" id="theme_travail" class="ThemeChoice-ListItem-Input theme_id" required />
-                        <label for="theme_travail" class="ThemeChoice-ListItem">
-                            <span class="ThemeChoice-ListItem-Icon Travail"></span>
-                            <span class="ThemeChoice-ListItem-Label">Je veux savoir si ma situation professionnelle va sʼaméliorer</span>
-                        </label>
+                        <?php foreach($questions as $optgroup => $options){ ?>
+                            <?php foreach($options as $theme => $question){ ?>
+                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
+                            <label for="theme_<?= $theme ?>" class="ThemeChoice-ListItem">
+                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup ?>"></span>
+                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'] ?></span>
+                            </label>
+                            <?php } ?>
+                        <?php } ?>
                     </article>
                 </div>
             </section>
@@ -139,7 +129,7 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="tarot-direct-rc-tfd" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
@@ -310,7 +300,7 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
             trt_scrollOnComplete = false;
             trt_minSize = 600;
         </script>
-        <script src="js/tarot-wizard.js"></script>
+        <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
         
         <!-- #### REMARKETINGS #### -->
