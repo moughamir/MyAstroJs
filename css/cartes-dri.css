@@ -1,14 +1,11 @@
 @charset "UTF-8";
 /* 
-    ----------------------------
-    --     numerologie-amour     --
-    ----------------------------
+    int├®gration : guillaume deschamps <guillaumedeschamps75@gmail.com>
+    20/07/2016 pour KGCOM
 
-    Created on : 19 juillet 2016
-    Author     : Laur├¿ne Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-
-    Description : un layout bas├® sur une grille d'une seule colonne centrale
+    Destin├® ├á une page DRI simple sur deux colonnes :
+    1: bloc voyante + bloc FAQ
+    2: liste voyant-e-s + formulaire "rappel gratuit"
 */
 /* 
     ----------------------------------------
@@ -647,50 +644,25 @@ body > script {
 http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 */
 [class*="flex-container"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .flex-container-h {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row; }
 
 .flex-container-v {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column; }
 
 .flex-item-fluid {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1; }
 
 .flex-item-first {
-  -webkit-box-ordinal-group: 0;
-  -webkit-order: -1;
-  -ms-flex-order: -1;
   order: -1; }
 
 .flex-item-medium {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0; }
 
 .flex-item-last {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1; }
 
 .flex-item-center {
@@ -701,17 +673,8 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* ---------------------------------- */
 /* grid container */
 [class*="grid-"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-left: -2rem;
   /* inline-block fallback for IE9 generation */
@@ -720,9 +683,6 @@ http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html
 /* grid childs */
 [class*="grid-"] > * {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: calc(100% * 1 / 4 - 2rem - .01px);
   min-width: 0;
@@ -1026,7 +986,6 @@ input[type="reset"].unstyled {
   opacity: 0.5;
   pointer-events: none;
   cursor: not-allowed;
-  -webkit-filter: grayscale(1);
   filter: grayscale(1); }
 
 ul.is-unstyled,
@@ -1487,10 +1446,6 @@ s,m,l,n = small, medium, large, none
     border: 0; }
 
   .flex-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column; }
 
   .w300p,
@@ -1679,16 +1634,10 @@ s,m,l,n = small, medium, large, none
   pre,
   samp {
     word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
     hyphens: auto; } }
 @media (max-width: 640px) {
   .no-wrapping {
     word-wrap: normal;
-    -webkit-hyphens: manual;
-    -moz-hyphens: manual;
-    -ms-hyphens: manual;
     hyphens: manual; } }
 /* Google Gmap3 bug fix on images */
 .gm-style img {
@@ -1976,7 +1925,6 @@ body {
     padding: 0.8rem 1.4rem;
     background-color: white;
     border: 1px solid;
-    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     opacity: 0;
     z-index: -1; }
@@ -2176,312 +2124,207 @@ body {
 
   .FormContainer-Header {
     font-size: 2.3rem; } }
-/* Dossier images */
-/* Palette */
-/* Mixins */
+/* --------------- fonts --------------- */
+/* --------------- variables  --------------- */
 html {
   height: 100%; }
 
 body {
-  padding: 2rem;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  color: white; }
+  font-family: "Arial", sans-serif;
+  background: #fff; }
 
-.bg1 {
-  background: #28b1d3 url("../images_landing/numerologie-amour/bg1.jpg") no-repeat center top fixed;
-  background-size: cover; }
+h2, h3 {
+  color: #0c5a74;
+  font-family: "Raleway", sans-serif; }
 
-.bg2 {
-  background: #28b1d3 url("../images_landing/numerologie-amour/bg2.jpg") no-repeat center top fixed;
-  background-size: cover; }
-
-/* ************** MACRO-TYPOS *************** */
-h2,
-button {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
+submit,
+h1, h2, h3, h4, h5, h6 {
   hyphens: none; }
 
-/* ************** LAYOUT *************** */
-.FormContainer {
-  max-width: 60rem; }
-
-.PageWrapper {
-  padding: 0; }
-
-.ContentBand {
-  margin-top: 0; }
-
-.SiteHeader .PageWrapper {
-  display: flex;
-  flex-direction: row; }
+.SiteHeader {
+  display: inline-block;
+  width: 100%; }
 
 .SiteLogo {
-  background: url("../images_landing/numerologie-amour/logo-MYASTRO.svg") no-repeat;
+  background: url("../images_landing/cartes-dri/logo-MYASTRO.svg") center no-repeat;
   background-size: contain;
-  height: 110px;
-  width: 15%; }
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
+  display: block; }
+  .SiteLogo h1 {
+    opacity: 0; }
 
-.PageLogo {
-  width: 70%;
-  text-align: center; }
-  .PageLogo span {
-    font-family: "Amatic SC", cursive;
-    font-size: 8rem;
-    text-transform: uppercase;
-    font-weight: normal;
-    text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45); }
-  .PageLogo span + span {
-    font-family: "Cookie", cursive;
-    font-size: 10rem;
-    text-transform: lowercase;
-    text-transform: capitalize;
-    background: url("../images_landing/numerologie-amour/bg-title.png") 100% 70% no-repeat;
-    padding-right: 5rem; }
-
-.ContentBand-ColumnHeader * {
-  text-align: center !important; }
-
-.ContentBand-ColumnHeader p,
-.FormContainer-Slogan,
-.FormContainer-name,
-.FormContainer-name + p {
-  font-weight: bold; }
+.ContentBand {
+  max-width: 100rem;
+  margin: 0 auto 2rem; }
+  .ContentBand .PageWrapper {
+    background: url("../images_landing/cartes-dri/bg.jpg") center no-repeat;
+    background-size: cover; }
+    .ContentBand .PageWrapper-bg {
+      margin: 0 auto;
+      padding: 3rem auto;
+      max-width: 52rem;
+      text-align: center; }
 
 .DescText-Title {
-  background: transparent url("../images_landing/numerologie-amour/titre.svg") no-repeat center;
-  background-size: contain;
-  margin-bottom: -8rem;
-  /*text-align: center;
-  font-family: $font1;
-  font-weight: 500;
-  font-size: 3.5rem;
-  line-height: 4.8rem;
-  //margin-bottom: 4rem;
-  text-shadow: 0 0 4px $color1;
-  height: inherit;*/ }
+  background-color: #0c5a74;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Arial", sans-serif;
+  font-weight: lighter;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0.5rem; }
+  .DescText-Title .ico-pig {
+    display: inline-block;
+    width: 5rem;
+    height: 2.5rem;
+    background: url("../images_landing/cartes-dri/ico-pig.svg") center no-repeat; }
   .DescText-Title span {
-    display: none; }
-  .DescText-Title-Legend {
-    padding-top: 0;
-    background-color: transparent;
-    text-align: right;
-    font-size: 1.9rem;
-    text-shadow: 0 0 4px #225b70; }
+    font-weight: bold;
+    text-transform: uppercase; }
+.DescText-Subtitle {
+  color: #15c0f8;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  margin: 0 auto;
+  padding: 1rem 0; }
 
-.DescText-Content {
-  background: transparent;
-  text-indent: 5rem; }
+/* MODULE LISTE VOYANT-E-S */
+.liste-voyants {
+  margin: 0 auto; }
+  .liste-voyants h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    margin: 1rem auto; }
+  .liste-voyants ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .liste-voyants ul li {
+      margin: 0;
+      padding: 0; }
+      .liste-voyants ul li div {
+        width: 10rem;
+        height: 10rem; }
+      .liste-voyants ul li span {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 1.8rem; }
+  .liste-voyants .voyant-1 {
+    background: url("../images_landing/cartes-dri/voyant-stephane.jpg") center no-repeat; }
+  .liste-voyants .voyant-2 {
+    background: url("../images_landing/cartes-dri/voyant-sarah.jpg") center no-repeat; }
+  .liste-voyants .voyant-3 {
+    background: url("../images_landing/cartes-dri/voyant-pierre.jpg") center no-repeat; }
+  .liste-voyants .voyant-4 {
+    background: url("../images_landing/cartes-dri/voyant-carmela.jpg") center no-repeat; }
 
 .FormContainer {
-  background: transparent; }
-  .FormContainer-Fields {
-    padding: 2rem; }
+  max-width: inherit; }
   .FormContainer-Header {
-    font-family: "Cookie", cursive;
-    color: white;
-    font-size: 4.5rem; }
+    font-family: 'Ubuntu Condensed';
+    color: #0c5a74;
+    background: url("../images_landing/cartes-dri/fleche.png") no-repeat bottom center; }
   .FormContainer-Submit {
     padding: 1rem 4rem;
-    border: 0px solid #225b70;
-    background-color: #f94f43;
-    color: white;
-    font-family: "Open Sans", sans-serif;
+    background-color: #15c0f8;
+    color: #fff;
     font-size: 2.2rem;
     text-transform: uppercase;
-    -webkit-transition: background 0.25s ease-in;
-    transition: background 0.25s ease-in; }
-    .FormContainer-Submit:active, .FormContainer-Submit:focus, .FormContainer-Submit:hover {
-      background-color: #cf1407; }
-  .FormContainer.DRI .DRI {
-    box-shadow: 0 0 0px 0px black;
-    background: transparent; }
-    .FormContainer.DRI .DRI-Intro {
-      background-color: #28b1d3;
-      font-family: "Cookie", cursive; }
-      .FormContainer.DRI .DRI-Intro-Title {
-        color: #225b70;
-        text-transform: uppercase; }
-      .FormContainer.DRI .DRI-Intro-Text {
-        color: white; }
-    .FormContainer.DRI .DRI-Slogan {
-      /*background-color: $color3;
-      font-family: $font2;
-      color: $color1;
-      text-transform: uppercase;*/
-      background: transparent url("../images_landing/numerologie-amour/ten-min-free.png") center no-repeat;
-      width: 182px;
-      height: 111px;
-      display: inline-block;
-      margin: 15px auto; }
-      .FormContainer.DRI .DRI-Slogan span {
-        display: none; }
-    .FormContainer.DRI .DRI-Form {
-      padding: 2rem;
-      background-color: transparent; }
-      .FormContainer.DRI .DRI-Form .FormField-Input {
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.4rem; }
-    .FormContainer.DRI .DRI-Sent {
-      font-family: "Cookie", cursive;
-      font-size: 3rem; }
-      .FormContainer.DRI .DRI-Sent strong {
-        font-weight: normal;
-        color: #225b70; }
-
-.blueLabel {
-  color: #225b70 !important; }
-
-.FormField-Label {
-  text-transform: uppercase; }
-  .FormField-Label .ico-woman {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #f05882; }
-  .FormField-Label .ico-man {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #225b70; }
+    border: 0px solid red;
+    transition: all 0.25s ease-in; }
+    .FormContainer-Submit:hover {
+      background-color: #046989; }
+  .FormContainer.DRI .DRI-Intro-Title {
+    color: #ccc;
+    text-transform: uppercase; }
+  .FormContainer.DRI .DRI-Intro-Text {
+    color: white; }
+  .FormContainer.DRI .DRI-Slogan {
+    background-color: #16a2d0;
+    color: #fff; }
+    .FormContainer.DRI .DRI-Slogan span {
+      text-transform: uppercase; }
+  .FormContainer.DRI .DRI-Form {
+    padding: 2rem;
+    background-color: transparent; }
+    .FormContainer.DRI .DRI-Form .FormField-Input {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #bbb; }
+  .FormContainer.DRI .DRI-Sent {
+    color: #454545;
+    background-color: white;}
+    .FormContainer.DRI .DRI-Sent strong {
+      font-weight: normal;
+      color: #0c5a74; }
 
 .FormField-Input {
-  border: none;
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in; }
-  .FormField-Input:active, .FormField-Input:focus {
-    box-shadow: 0 0 6px -1px #225b70;
-    background-color: #fffdc5; }
+  border: 1px solid #ccc; }
   .FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
     outline-width: 0;
-    box-shadow: 0 0 6px -1px #225b70;
-    border-color: #225b70; }
-
+    border-color: transparent; }
+  .FormField-Input:active, .FormField-Input:focus {
+    background-color: #2ec7f9; }
 .FormField-Info {
   border: none;
-  color: #225b70;
-  box-shadow: 0 0 6px -1px #225b70; }
+  color: #ccc;
+  box-shadow: 0 0 6px -1px #ccc; }
 
 input[type="checkbox"], input[type="radio"] {
   width: 20px !important;
   height: 20px !important; }
 
-/* ************** MODALE *************** */
-.overlay {
-  display: none;
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh !important;
-  max-width: none;
-  background-color: rgba(0, 0, 0, 0.75);
-  border: 0px solid red;
-  color: black; }
-  .overlay p.alert {
-    display: table-cell;
-    vertical-align: middle;
-    height: 25rem;
-    width: 40rem;
-    left: 50%;
-    top: 50%;
-    margin: -12.5rem -20rem;
-    padding: 1rem;
-    position: absolute;
-    text-align: center;
-    background: #fff;
-    color: #85eeaa;
-    border: 0px solid red;
-    font-family: "Open Sans", sans-serif; }
-    .overlay p.alert b {
-      margin-bottom: 1rem;
-      display: inline-block;
-      font-size: 2rem;
-      width: 100%; }
-    .overlay p.alert br + i {
-      padding: 0.5rem 0.8rem;
-      background: #ccc;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      bottom: 1rem;
-      left: 22%; }
-      .overlay p.alert br + i :after {
-        content: "fermer";
-        text-transform: uppercase;
-        text-align: center;
-        width: 60%;
-        padding: 1rem; }
+.faq {
+  padding: 2rem 2.5rem;
+  color: #6d6c6a; }
+  .faq ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0; }
+    .faq ul li {
+      font-style: italic;
+      font-size: 1.6rem;
+      line-height: 120%;
+      list-style: none;
+      padding: 0 0 10px 50px;
+      color: #fff; }
+    .faq ul .ico-formulaire {
+      background: transparent url("../images_landing/cartes-dri/ico-form.svg") center left no-repeat; }
+    .faq ul .ico-standardiste {
+      background: transparent url("../images_landing/cartes-dri/ico-phone.svg") center left no-repeat; }
 
-/* ************** ANIMATIONS *************** */
-.polaroid {
-  width: 30rem;
-  height: 35.5rem;
-  border: 0px solid red; }
-
-#photo1 {
-  background: url("../images_landing/numerologie-amour/photo-couple.png") center no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 10rem;
-  left: -5rem;
-  opacity: 0; }
-
-#photo2 {
-  background: url("../images_landing/numerologie-amour/photo-i-love-u.png") center no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: 25rem;
-  left: -12rem;
-  opacity: 0; }
-
-.anim-photo1 {
-  animation-name: anim-photo;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 1s; }
-
-.anim-photo2 {
-  animation-name: anim-photo;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 2s; }
-
-@keyframes anim-photo {
-  0% {
-    opacity: 0;
-    transform: translate(-200px, 0); }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0); } }
-/* ************** FOOTER *************** */
 .ReassuranceList {
-  background-color: #ffffff;
-  color: #28b1d3;
-  font-family: "Open Sans", sans-serif;
-  box-shadow: 0 0 6px -1px black; }
+  background-color: #454545;
+  color: #fff; }
 
 .ReassuranceList-Item-Img.star {
-  background: transparent url("../images_landing/numerologie-amour/ico-star.png") center no-repeat;
+  background: transparent url("../images_landing/cartes-dri/ico-star.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.lock {
-  background: transparent url("../images_landing/numerologie-amour/ico-lock.png") center no-repeat;
+  background: transparent url("../images_landing/cartes-dri/ico-lock.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.gift {
-  background: transparent url("../images_landing/numerologie-amour/ico-gift.png") center no-repeat;
+  background: transparent url("../images_landing/cartes-dri/ico-gift.png") center no-repeat;
   background-size: contain; }
 
 .ReassuranceList-Item-Img.trophy {
-  background: transparent url("../images_landing/numerologie-amour/ico-trophy.png") center no-repeat;
+  background: transparent url("../images_landing/cartes-dri/ico-trophy.png") center no-repeat;
   background-size: contain; }
 
 .alert {
@@ -2503,145 +2346,77 @@ input[type="checkbox"], input[type="radio"] {
     background-color: #d9edf7;
     border-color: #bce8f1; }
 
-/* ************** PAGE TEL *************** */
-.FormContainer.DRI {
-  background-color: transparent;
-  text-align: center;
-  box-shadow: inherit; }
+.SiteCopyright {
+  color: #454545; }
 
-.FormContainer-Slogan-bloc {
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  border: 2px solid white;
-  padding: 15px;
-  max-width: 60rem;
-  margin: 0 auto; }
+@media screen and (max-width: 640px) {
+  .PageWrapper {
+    display: inherit;
+    padding: 0 2rem;
+    flex-wrap: wrap-reverse; }
 
-/* ************** RESULTATS NUMEROLOGIE*************** */
-.wrapper-num-result {
-  max-width: 60rem;
-  margin: 0 auto; }
-  .wrapper-num-result h3 {
-    text-align: left; }
-  .wrapper-num-result .num-result .num-result-numero {
-    font-size: 10rem;
-    margin: 0;
-    text-align: center;
-    font-weight: bold; }
-  .wrapper-num-result .num-result .num-result-text-name {
-    margin: 1rem 0 2rem;
-    font-size: 1.4rem; }
-    .wrapper-num-result .num-result .num-result-text-name span {
-      text-transform: uppercase; }
-
-@media screen and (min-height: 1000px) {
-  body {
-    padding-top: 3.5rem; } }
-@media screen and (max-width: 1000px) {
-  .TextContent .ContentBand-ColumnHeader {
-    background-position: top left;
-    background-size: auto 75%; } }
-@media screen and (max-width: 900px) {
-  .polaroid {
+  .SiteLogo:after, .SiteLogo:before {
     display: none; }
 
-  .PageLogo span {
-    line-height: 100%; }
-
-  .ReassuranceList {
+  .flex-mobile {
+    border: 0px solid red;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: center; }
-    .ReassuranceList .ReassuranceList-Item {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      border-right: none;
-      margin-bottom: 1rem; } }
-@media screen and (max-width: 730px) {
-  .SiteHeader .PageWrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
-  .SiteHeader .SiteLogo, .SiteHeader .PageLogo {
-    width: 100%;
-    text-align: center; }
-  .SiteHeader .SiteLogo {
-    position: inherit;
-    background-position: center; }
-
-  .TextContent {
-    max-width: 600px;
-    margin: auto; }
-    .TextContent .ContentBand-ColumnHeader {
-      background-size: initial;
-      background-position: bottom left; }
-
-  .DescText-Title {
-    display: none;
-    /*line-height: 4.2rem;
-    margin-bottom: 1rem;
-    margin-top: 3rem;*/ }
-
-  .DescText {
-    margin-bottom: 2rem; } }
-@media screen and (max-width: 640px) {
-  .PageLogo {
-    width: 85%;
-    margin-top: 1.5rem;
-    text-align: center; }
-    .PageLogo span {
-      line-height: 100%;
-      font-size: 6rem; }
-    .PageLogo span + span {
-      font-size: 8rem; }
-
-  .FormContainer-Header {
-    font-family: inherit;
-    font-size: 1.5rem; }
-
-  .ReassuranceList {
-    display: flex;
-    flex-direction: column; }
-
-  .num-result {
-    margin-left: 0; } }
-@media screen and (max-width: 470px) {
-  .SiteHeader {
-    margin-bottom: 0; }
-
-  .DescText-Title-Legend {
-    font-size: 1.7rem; }
+    flex-direction: column-reverse; }
 
   .FormContainer {
     padding: 0; }
-    .FormContainer-Fields {
-      padding: 1rem 0 0 0; }
-    .FormContainer p {
-      text-align: justify; } }
-@media screen and (max-width: 400px) {
-  .PageLogo {
-    padding: 1rem; }
-    .PageLogo span {
-      font-size: 4rem; }
-    .PageLogo span + span {
-      font-size: 6rem; }
 
-  .TextContent .ContentBand-ColumnHeader {
-    background-position: top left;
-    background-size: auto 75%; } }
+  .colG,
+  .colD {
+    margin: 0;
+    width: 100%; }
+
+  .main-voyant {
+    background-image: none;
+    height: inherit;
+    text-align: center;
+    margin: 1rem 0 2rem; }
+    .main-voyant h2 {
+      font-size: 2rem;
+      height: inherit;
+      text-align: center;
+      margin: 0 auto; }
+
+  .liste-voyants h2 {
+    padding: 2rem 0; }
+  .liste-voyants ul {
+    /* display:inherit !important;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin: 0; 
+     padding: 0;
+     list-style: none;
+     width: 100%;*/ }
+    .liste-voyants ul li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .liste-voyants ul li:nth-child(3), .liste-voyants ul li:nth-child(4) {
+        display: none; }
+
+  .DescText-Content {
+    padding: 1.5rem; }
+  .DescText-Content,
+  .DescText .faq {
+    width: 100%; }
+    .DescText-Content h3,
+    .DescText .faq h3 {
+      font-size: 1.8rem; }
+      .DescText-Content ul > *,
+    .DescText .faq ul > * {
+        width: calc(100% * 1 / 2 - 2rem - .01px); }
+      .DescText-Content ul > .flex-item-double,
+    .DescText .faq ul > .flex-item-double {
+        width: calc(100% * 2 / 2 - 2rem); }
+  .DescText-Subtitle {
+    font-size: 2.5rem; }
+
+  .DRI-Form {
+    margin-bottom: 4rem; } }

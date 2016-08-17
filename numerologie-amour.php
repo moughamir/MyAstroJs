@@ -9,8 +9,7 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 session_start();
-/* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */ 
-$question = rand(1, 5);
+$question = 'NA_chiffre'.rand(1, 5);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +18,7 @@ $question = rand(1, 5);
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>MyAstro - Numérologie de l'Amour</title>
+        <title>MyAstro - Numérologie de l’Amour</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -39,7 +38,7 @@ $question = rand(1, 5);
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <span class="PageLogo"><h1><span>Numérologie de l'</span><span>Amour</span></h1></span>
+                <span class="PageLogo"><h1><span>Numérologie de l’</span><span>Amour</span></h1></span>
             </div>
         </header>
         <section class="ContentBand">
