@@ -11,7 +11,7 @@ $cards_dir = 'tarot/cartes/cartes-oracle-amour/';
 $button ="Je veux savoir";
 $questions = array(
     'celibataire' => ['code'=>'oa_question_1', 'subject'=>'sentimental', 'text'=>'Oracle de lʼamour : Célibataire'],
-    'encouple' => ['code'=>'oa_question_2', 'subject'=>'sentimental', 'text'=>'Oraclede lʼamour : En couple'],
+    'encouple' => ['code'=>'oa_question_2', 'subject'=>'sentimental', 'text'=>'Oracle de lʼamour : En couple', 'conjoint' => true],
 );
 ?>
 <!DOCTYPE html>
@@ -160,17 +160,17 @@ $questions = array(
                             <label class="FormField-Label">Votre situation</label>
                             <div class="FormField-TableInputContainer fixed-2-col">
                                 <div class="FormField-TableInputContainer-Cell">
-                                    <input type="radio" name="code_question" id="sit-celib" value="<?= str_replace('"', "'", json_encode($questions['celibataire']))?>" class="FormField-Input" />
-                                    <label for="sit-celib" class="FormField-Label">célibataire</label>
+                                    <input type="radio" name="question_code" id="sit-celib" value="<?= str_replace('"', "'", json_encode($questions['celibataire']))?>" class="FormField-Input theme_id" />
+                                    <label for="sit-celib" class="FormField-Label">Célibataire</label>
                                 </div>
                                 <div class="FormField-TableInputContainer-Cell">
-                                    <input type="radio" name="code_question" id="sit-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" required />
+                                    <input type="radio" name="question_code" id="sit-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input theme_id" required data-need-spouse="1" />
                                     <label for="sit-couple" class="FormField-Label">En couple</label>
                                 </div>
-                            </div>    
-                        </div><!-- -->
+                            </div>
+                        </div>
                         
-                        <div class="FormField son_prenom">
+                        <div class="FormField sonprenom">
                             <label for="son_prenom" class="FormField-Label">Son prénom</label>
                             <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint">
                         </div>

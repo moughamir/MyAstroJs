@@ -10,9 +10,9 @@
     $page = 'tarot-amour-1';
     $button = 'Découvrir mon interprétation';
     $questions = array(
-        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple'],
-        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés'],
-        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants'],
+        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
+        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
+        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
     );
     require_once(realpath('include/tools.php'));
 ?>

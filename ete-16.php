@@ -9,7 +9,7 @@
 */
 $questions = array(
     'celibataire' => ['code'=>'ete16_question_2', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis célibataire'],
-    'encouple' => ['code'=>'ete16_question_24', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis en couple'],
+    'encouple' => ['code'=>'ete16_question_24', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis en couple', 'conjoint' => true],
 );
 ?>
 <!doctype html>
@@ -176,21 +176,20 @@ $questions = array(
                                             <div class="FormField-TableInputContainer relationship-status">
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="question_code" id="sit-celib" value="<?= json_encode($questions['celibataire'])?>" class="FormField-Input" />
+                                                        <input type="radio" name="question_code" id="sit-celib" value="<?= json_encode($questions['celibataire'])?>" class="FormField-Input theme_id" />
                                                         <label for="sit-celib" class="FormField-Label"></label>
                                                     </div>
-                                                    <p class="label">célibataire</p>
+                                                    <p class="label">Célibataire</p>
                                                     <span>&nbsp;</span>
                                                 </div>
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="question_code" id="sit-couple" value="<?= json_encode($questions['encouple'])?>" class="FormField-Input" required />
+                                                        <input type="radio" name="question_code" id="sit-couple" value="<?= json_encode($questions['encouple'])?>" class="FormField-Input theme_id" required data-need-spouse="1" />
                                                         <label for="sit-couple" class="FormField-Label"></label>
                                                     </div>
                                                     <p class="label">En couple</p>
                                                     <span class="txtcenter" class="sonprenom">
                                                         <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint">
-                                                        
                                                     </span>
                                                 </div>
                                                 

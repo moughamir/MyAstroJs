@@ -6,6 +6,7 @@
  * ========================================================================== */
 
 $bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
+$kgestion = new APIKGestion;
 $err = array();
 $page = explode("?", $_SERVER['HTTP_REFERER'])[0];
 
@@ -14,6 +15,7 @@ $page = explode("?", $_SERVER['HTTP_REFERER'])[0];
  * ========================================================================== */
 
 $idindex     = $_SESSION['user_id'];
+$kgestion_id = $_SESSION['kgestion_id'];
 $email       = $_SESSION['email'];
 
 // Numéro de téléphone & Pays --------------------------------------------------
@@ -65,6 +67,14 @@ if(empty($err)){
     );
 // Smartfocus ------------------------------------------------------------------
     $smartFocus->updateMember($email, intval($tel));
+    
+// KGestion --------------------------------------------------------------------
+    if($kgestion_id){
+        $kgestion_update = $kgestion->updateUser($kgestion_id, ['phone'=>$tel]);
+        if (!$kgestion_update->success){
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
+        }
+    }
     
 // Session ---------------------------------------------------------------------
     $_SESSION['phone'] = $tel;

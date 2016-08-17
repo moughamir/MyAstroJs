@@ -203,7 +203,7 @@
                                         <?php foreach($questions as $optgroup => $options){ ?>
                                         <optgroup label="<?= $optgroup ?>">
                                             <?php foreach($options as $question){ ?>
-                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>"><?= $question['text'] ?></option>
+                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
                                             <?php } ?>
                                         </optgroup>
                                         <?php } ?>

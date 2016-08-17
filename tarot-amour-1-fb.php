@@ -10,9 +10,9 @@
     $page = 'tarot-amour-1-fb';
     $button = 'Découvrir mon interprétation';
     $questions = array(
-        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple'],
-        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés'],
-        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants'],
+        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
+        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
+        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
     );
     require_once(realpath('include/tools.php'));
 ?>
@@ -189,15 +189,15 @@
                                     <label class="FormField-Label">Vous êtes</label>
                                     <div class="FormField-TableInputContainer fixed-3-col relationship-status">
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input" required />
+                                            <input type="radio" name="question_code" id="q-couple" value="<?= str_replace('"', "'", json_encode($questions['encouple']))?>" class="FormField-Input theme_id" required data-need-spouse="1" />
                                             <label for="q-couple" class="FormField-Label">En couple</label>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-separes" value="<?= str_replace('"', "'", json_encode($questions['separes']))?>" class="FormField-Input" />
+                                            <input type="radio" name="question_code" id="q-separes" value="<?= str_replace('"', "'", json_encode($questions['separes']))?>" class="FormField-Input theme_id" data-need-spouse="1" />
                                             <label for="q-separes" class="FormField-Label">Séparés</label>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
-                                            <input type="radio" name="theme_id" id="q-amants" value="<?= str_replace('"', "'", json_encode($questions['amants']))?>" class="FormField-Input" />
+                                            <input type="radio" name="question_code" id="q-amants" value="<?= str_replace('"', "'", json_encode($questions['amants']))?>" class="FormField-Input theme_id" data-need-spouse="1" />
                                             <label for="q-amants" class="FormField-Label">Amants</label>
                                         </div>
                                     </div>

@@ -29,9 +29,11 @@ $(document).ready(function(){
         }
         $('.sonprenom').each(function(){
             if(flag){
-                $(this).show();
+                $(this).slideDown();
+                $(this).prop('required', true);
             } else {
-                $(this).hide();
+                $(this).slideUp();
+                $(this).prop('required', false);
             }
         });
     };
