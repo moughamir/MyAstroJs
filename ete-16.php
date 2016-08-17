@@ -7,6 +7,10 @@
     Created on : 21 juin 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+$questions = array(
+    'celibataire' => ['code'=>'ete16_question_2', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis célibataire'],
+    'encouple' => ['code'=>'ete16_question_24', 'subject'=>'sentimental', 'text'=>'Vos amours pour l’été : je suis en couple', 'conjoint' => true],
+);
 ?>
 <!doctype html>
 <html lang="fr">
@@ -26,7 +30,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.myastro.fr/ete-16" />
     <meta property="og:image" content="http://www.myastro.fr/images_landing/campagne-ete-16/fb-ete16.jpg" />
-    <meta property="og:description" content=" En couple ou célibataire, l'été est la saison de l'amour. Qu'en sera-t-il pour vous ?" />
+    <meta property="og:description" content=" En couple ou célibataire, l’été est la saison de l'amour. Qu’en sera-t-il pour vous ?" />
     <meta property="og:locale" content="fr_FR" />
 
     <link rel="stylesheet" type="text/css" href="css/ete-16.css">
@@ -62,7 +66,7 @@
                         <form id="form-container">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="ete-16" />
-                            <input type="hidden" name="method" value="affil-maxi" />
+                            <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="affilbase" />
                             <input type="hidden" name="dri" value="ete-16-tel" />
@@ -172,21 +176,20 @@
                                             <div class="FormField-TableInputContainer relationship-status">
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="theme_id" id="sit-celib" value="ete16_question_2" class="FormField-Input" />
+                                                        <input type="radio" name="question_code" id="sit-celib" value="<?= json_encode($questions['celibataire'])?>" class="FormField-Input theme_id" />
                                                         <label for="sit-celib" class="FormField-Label"></label>
                                                     </div>
-                                                    <p class="label">célibataire</p>
+                                                    <p class="label">Célibataire</p>
                                                     <span>&nbsp;</span>
                                                 </div>
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <div>
-                                                        <input type="radio" name="theme_id" id="sit-couple" value="ete16_question_24" class="FormField-Input" required />
+                                                        <input type="radio" name="question_code" id="sit-couple" value="<?= json_encode($questions['encouple'])?>" class="FormField-Input theme_id" required data-need-spouse="1" />
                                                         <label for="sit-couple" class="FormField-Label"></label>
                                                     </div>
                                                     <p class="label">En couple</p>
                                                     <span class="txtcenter" class="sonprenom">
                                                         <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint">
-                                                        
                                                     </span>
                                                 </div>
                                                 

@@ -19,8 +19,8 @@ $questions = array(
         [ 'code' => 'pla16_question_73', 'subject' => 'financier', 'text' => 'Vais-je gagner de l’argent ?' ],
     ),
     'Travail' => array(
-        [ 'code' => 'pla16_question_4', 'subject' => 'professionel', 'text' => 'Quel sera mon avenir professionnel ?' ],
-        [ 'code' => 'pla16_question_3', 'subject' => 'professionel', 'text' => 'Quand vais-je trouver du travail ?' ],
+        [ 'code' => 'pla16_question_4', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?' ],
+        [ 'code' => 'pla16_question_3', 'subject' => 'professionnel', 'text' => 'Quand vais-je trouver du travail ?' ],
     )
 );
 
@@ -77,8 +77,8 @@ $questions = array(
                             <form id="form-container">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="source" value="test" />
-                                <input type="hidden" name="method" value="test" />
+                                <input type="hidden" name="source" value="pleine-lune-avril-16" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="pleine-lune-avril-16-tel" />
@@ -149,7 +149,7 @@ $questions = array(
                                         <?php foreach($questions as $optgroup => $options){ ?>
                                         <optgroup label="<?= $optgroup ?>">
                                             <?php foreach($options as $question){ ?>
-                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>"><?= $question['text'] ?></option>
+                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
                                             <?php } ?>
                                         </optgroup>
                                         <?php } ?>

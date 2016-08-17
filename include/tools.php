@@ -7,6 +7,7 @@ require_once(ROOT_PATH.'/inc/bdd.php');      // New mysql Class From Wordpress :
 require_once(ROOT_PATH.'/lib/Compteur/Compteur.class.php'); // Counter used for EMV groups
 require_once(ROOT_PATH.'/lib/Tracker/Tracker.class.php'); // Tracking users for campains
 require_once(ROOT_PATH.'/lib/SmartFocus/SmartFocus.class.php'); // Tracking users for campains
+require_once(ROOT_PATH.'/lib/APIKGestion/APIKGestion.class.php'); // API KGESTION
 //require_once(ROOT_PATH.'/sms/myastro-sms.php'); // sms campains
 
 session_start();
