@@ -124,11 +124,11 @@
                 </div>
                 <div class="ContentBand-Column FormBand-Form">
                     <div class="FormContainer overlay" id="form-overlay"></div>
-                    <article class="FormContainer" id="form-container">
+                    <article class="FormContainer">
                         <h2 class="FormContainer-Header">Mes informations</h2>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <form>
+                            <form id="form-container">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="myastro-tarot-a2" />
                                 <input type="hidden" name="method" value="general-suscribe" />
@@ -203,7 +203,7 @@
                                         <?php foreach($questions as $optgroup => $options){ ?>
                                         <optgroup label="<?= $optgroup ?>">
                                             <?php foreach($options as $question){ ?>
-                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>"><?= $question['text'] ?></option>
+                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
                                             <?php } ?>
                                         </optgroup>
                                         <?php } ?>

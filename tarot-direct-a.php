@@ -96,7 +96,7 @@ $questions = array (
                     <article class="ThemeChoice-List">
                         <?php foreach($questions as $optgroup => $options){ ?>
                             <?php foreach($options as $theme => $question){ ?>
-                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required />
+                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
                             <label for="theme_<?= $theme ?>" class="ThemeChoice-ListItem">
                                 <span class="ThemeChoice-ListItem-Icon <?= $optgroup ?>"></span>
                                 <span class="ThemeChoice-ListItem-Label"><?= $question['text'] ?></span>

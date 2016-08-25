@@ -7,4 +7,6 @@ yyadmin/cdj/*
 yyadmin/cdjj/*
 yyadmin/media/*
 .htaccess
-/.brackets.json
+.brackets.json
+yyadmin/.htaccess
+/yyadmin/.htaccess

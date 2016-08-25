@@ -181,7 +181,7 @@ $questions = array(
                             </div>
                             <form id="">
                                 <input type="hidden" name="source" value="myastro-cartomancie-a" />
-                                <input type="hidden" name="method" value="tarot-landing" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords">
@@ -350,7 +350,7 @@ $questions = array(
                                             <?php foreach($questions as $optgroup => $options){ ?>
                                             <optgroup label="<?= $optgroup ?>">
                                                 <?php foreach($options as $question){ ?>
-                                                <option value="<?= str_replace('"', "'", json_encode($question)) ?>"><?= $question['text'] ?></option>
+                                                <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
                                                 <?php } ?>
                                             </optgroup>
                                             <?php } ?>

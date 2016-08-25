@@ -52,7 +52,7 @@ if(!$cguv){
     $err['cguv'] = 'Veuillez accepter les conditions générales';
 }
 // Question posée --------------------------------------------------------------
-if (isset($param['question_code'])){ 
+if (isset($param['question_code'])){
     // Nouveau champs de question avec texte de la question (value json)
     if(!empty($param['question_code'])){
         $question = json_decode(str_replace("'", '"', $param['question_code']), true);
@@ -61,7 +61,7 @@ if (isset($param['question_code'])){
     } else {
         $err['question_code'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
     }
-} else { 
+} else {
     // Anciens champs de question
     $question['code']    = isset($param['theme_id']) && !empty($param['theme_id']) ? $param['theme_id'] : false;
     $question['subject'] = 'sentimental';
@@ -76,7 +76,7 @@ if (isset($param['question_code'])){
     
     // Tableau comprenant les questions qui nécessitent les infos du conjoint.
     $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour'); 
-    $qestion['conjoint'] = in_array($question['code'], $questionConjoint);
+    $question['conjoint'] = in_array($question['code'], $questionConjoint);
     
     if(!$question['code']){
         $err['theme_id'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
@@ -105,9 +105,9 @@ $sexe = str_replace('femme', 'F', $sexe);
 $prenom = isset($param['prenom']) ? $param['prenom'] : false;
 $test_prenom = trim($prenom, ' ');
 if(empty($test_prenom)){
-//    $err['prenom'] = 'Merci dʼindiquer votre prénom';
+    $err['prenom'] = 'Merci dʼindiquer votre prénom';
 } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-//    $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
+    $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
 }
 unset($test_prenom);
 
@@ -168,7 +168,7 @@ if($tel_needed && !$tel) { // Téléphone requis mais non remplis
 
 $conjoint_prenom  = $conjoint_dtn_bdd = $conjoint_dtn_smf = $conjoint_dtn_ses = $conjoint_signe = '';
 
-if ($question['conjoint']){
+if($question['conjoint']){
 // Prénom ----------------------------------------------------------------------
     $conjoint_prenom  = isset($param['conjoint']) ? $param['conjoint'] : '';
     $test_prenom = trim($conjoint_prenom, ' ');
@@ -250,12 +250,11 @@ if(empty($err)){
 
     $kgestion_insert = $kgestion->insertUser($post_data);
     if (!$kgestion_insert->success){
-        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.$kgestion_insert->message);
+        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     } else {
         $kgestion_id = $kgestion_insert->id;
     }
-//    $kgestion_id = 1;
 }
 
 /* ========================================================================== *
@@ -369,8 +368,7 @@ if(empty($err)){
     if(!$trouve){
         $kgestion_update = $kgestion->updateUser($kgestion_id, ['myastroId'=>$idindex]);
         if (!$kgestion_update->success){
-            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.$kgestion_update->message);
-            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
     }
     
@@ -468,7 +466,7 @@ if(empty($err)){
     
     $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
-    die(json_encode(array('url' => $redirect_url)));
+    die(json_encode(array($redirect_method => $redirect_url)));
        
 /* ========================================================================== *
  *                                RETOUR ERREUR                               *

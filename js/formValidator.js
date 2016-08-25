@@ -29,9 +29,11 @@ $(document).ready(function(){
         }
         $('.sonprenom').each(function(){
             if(flag){
-                $(this).show();
+                $(this).slideDown();
+                $(this).prop('required', true);
             } else {
-                $(this).hide();
+                $(this).slideUp();
+                $(this).prop('required', false);
             }
         });
     };
@@ -69,7 +71,7 @@ $(document).ready(function(){
         alert_done = '\
             <p class="alert alert-success">\
                 <b><i class="fa fa-check"><img src="/images/success-spinner.gif" /></i> Inscription complétée.</b>\
-                <br/>Vous allez être redirigé.\
+                Vous allez être redirigé.\
             </p>'; 
         alert_error = '\
             <p class="alert alert-danger">\

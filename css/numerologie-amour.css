@@ -2215,14 +2215,7 @@ button {
   margin-top: 0; }
 
 .SiteHeader .PageWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row; }
 
 .SiteLogo {
@@ -2446,51 +2439,27 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0; }
 
 .anim-photo1 {
-  -webkit-animation-name: anim-photo;
   animation-name: anim-photo;
-  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
 .anim-photo2 {
-  -webkit-animation-name: anim-photo;
   animation-name: anim-photo;
-  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 2s;
   animation-delay: 2s; }
-
-@-webkit-keyframes anim-photo {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-200px, 0);
-    transform: translate(-200px, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
 
 @keyframes anim-photo {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-200px, 0);
     transform: translate(-200px, 0); }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
 /* ************** FOOTER *************** */
 .ReassuranceList {
@@ -2582,38 +2551,15 @@ input[type="checkbox"], input[type="radio"] {
     line-height: 100%; }
 
   .ReassuranceList {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center; }
     .ReassuranceList .ReassuranceList-Item {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       text-align: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
       align-items: center;
       border-right: none;
       margin-bottom: 1rem; } }
@@ -2670,14 +2616,7 @@ input[type="checkbox"], input[type="radio"] {
     font-size: 1.5rem; }
 
   .ReassuranceList {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column; }
 
   .num-result {
