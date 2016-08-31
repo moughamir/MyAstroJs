@@ -417,7 +417,7 @@ if(empty($err)){
  * ========================================================================== */
 
     $_SESSION['conversion']     = $conversion;
-    $_SESSION['support']        = $param['support'];
+    $_SESSION['support']        = isset($param['support']) ? $param['support'] : '';
     $_SESSION['firstname']      = $prenom;
     $_SESSION['email']          = $email;
     $_SESSION['voyant']         = $voyant;

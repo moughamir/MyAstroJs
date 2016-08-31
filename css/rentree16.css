@@ -2316,7 +2316,7 @@ body {
   margin: 0 auto 4rem;
   padding: 0;
   list-style: none;
-  width: 28rem;
+  width: 40rem;
   height: 4rem; }
   .question-Content label {
     padding-left: 1rem; }
@@ -2496,7 +2496,7 @@ body {
       position: absolute;
       text-align: center;
       background: #fff;
-      color: #85eeaa;
+      color: #3FB3AE;
       border: 0px solid red; }
       .FormContainer .overlay p.alert b {
         margin-bottom: 1rem;

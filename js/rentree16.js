@@ -55,74 +55,35 @@ $(document).ready(function(){
         actualiser();
     })
     
-
     
-    
-    // GESTION DES RESULTATS
-    // 3 palliers 1-6, 7-12, 13-18
-    // chacunes des questions possèdent 3 réponses
-    // la valeur des réponses varie de 1 à 3
-    
-    // enregistrer et afficher le résultat
-    
-    var result = 0;
-    var pallier = 0;
+    console.log(quizz_result);
+    var result = null;
     function zeResults(){
-        
-        // j'additionne toutes les valeurs des réponses selectionnées
+        var score = 0;        
+        // calcul du score
         $('.questionnaire input[type=radio]:checked').each( function () {
-            result+=parseInt($(this).val(),10);   
-        });        
-        var resultTxt = "Vous avez un score de : " + result;
-        console.log(resultTxt);
-            
-        // si result est compris entre 1 et 6
-        if(result <= 6){
-            pallier=1;
-            resultTxt += " premier pallier donc " + pallier;
-             
-        } else if( result <= 12 && result > 6){
-            pallier=2;
-            resultTxt += " deuxième pallier donc " + pallier;
-        } else if( result <= 18 && result > 12){
-            pallier=3;
-            resultTxt += " troisième pallier donc " + pallier;
-        }
-        
-        
-        console.log("Le pallier est : " + pallier);  
-
+            score += parseInt($(this).val(), 10);   
+        });
+        console.log(score);
+        // récupération du résultat selon le score.
+        var indice = Math.floor(score / quizz_nb);
+        console.log(indice);
+        result = quizz_result[indice];
     };
     
     /* AFFICHER LE FORMULAIRE CLIENT AVEC LE DERNIER BTN RADIO */
-    $('input[name="name6"]').change(function(){
+    $('input[name="q6"]').change(function(){
         zeResults();
         
         // ajouter un input invisible contenant la valeur "pallier"
-        // qui va déterminer l'affichage du texte sur la -tel avec une variable de session
-        var newInput = "<input type='hidden' name='resultats' value='"+ pallier + "'>";
-        $("#q-form").append(newInput);
+        var result_value = JSON.stringify(result).replace(/"/g, "'");
+        console.log(result_value);
+        var newInput = '<input type="hidden" name="question_code" value="'+ result_value +'" />';
+        $("#form-container").append(newInput);
         
         
         $('.questionnaire').fadeOut( function(){
             $('.formulaire').css("display" ,"block");
         });
     });
-    
-    //AFFICHER LE CHAMP PRENOM DU CONJOINT SI EN COUPLE
-    $('input[name=theme_id]').change(function() {
-        if (this.value == 'R16_question_2') {
-            //console.log("celib");
-            $('.sonprenom').hide();
-            $('.sonprenom #son_prenom').removeClass('anim-input');
-            $('.sonprenom #son_prenom').prop('required',false);
-        }
-        else if (this.value == 'R16_question_24') {
-            //console.log("en couple");
-            $('.sonprenom').show();
-            $('.sonprenom #son_prenom').addClass('anim-input');
-            $('.sonprenom #son_prenom').prop('required',true);
-        }
-    }); 
-    
 });

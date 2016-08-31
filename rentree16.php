@@ -1,13 +1,69 @@
 <?php
 /* 
-    -------------------------------------------
-    --   RENTRÉE 2016   --
-    -------------------------------------------
+    ----------------------------------
+    --   RENTRÉE 2016 - AFFIL BASE  --
+    ----------------------------------
 
     Created on : 26 juillet 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
-session_start();
+
+$quizz = array(
+    [
+        'txt' => 'S’il fallait utiliser un mot pour décrire vos vacances :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'Enfin… Parce qu’il vous tardait de reprendre'],
+            [ 'value'=> 2, 'txt' => 'Quoi… Parce que vous ne les avez pas vues passer'],
+            [ 'value'=> 1, 'txt' => 'Oh noooon… Parce qu’il ne faut pas vous parler de rentrée']
+        ]
+    ],
+    [
+        'txt' => 'Depuis votre retour de vacances, vous êtes plutôt :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'A fond la forme !'],
+            [ 'value'=> 2, 'txt' => 'Peau caramel, bronzage au top'],
+            [ 'value'=> 1, 'txt' => 'Petite fatigue']
+        ]
+    ],
+    [
+        'txt' => 'Votre état d’esprit à l’approche de cette rentrée :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'Envie de tout déchirer !'],
+            [ 'value'=> 2, 'txt' => 'Quoi ? C’est déjà fini les vacances ?'],
+            [ 'value'=> 1, 'txt' => 'Direction toute sur les prochaines vacances']
+        ]
+    ],
+    [
+        'txt' => 'Vos priorités pour la rentrée :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'Argent, argent, argent !'],
+            [ 'value'=> 2, 'txt' => 'Le bonheur ! Quoi de mieux que d’être heureux ?'],
+            [ 'value'=> 1, 'txt' => 'La santé bien sûr, il n’y a que ça qui compte vraiment']
+        ]
+    ],
+    [
+        'txt' => 'Vos bonnes résolutions pour la rentrée :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'Je m’impose en renversant tout sur mon passage !'],
+            [ 'value'=> 2, 'txt' => 'Être plus cool et plus zen'],
+            [ 'value'=> 1, 'txt' => 'Me calmer, il y a déjà bien trop de stress']
+        ]
+    ],
+    [
+        'txt' => 'Et sur le plan sentimental :',
+        'rep' => [
+            [ 'value'=> 3, 'txt' => 'C’est le grand Amour, donc pourvu que ça dure !'],
+            [ 'value'=> 2, 'txt' => 'Hum… Arf… Comment dire…'],
+            [ 'value'=> 1, 'txt' => 'Je cherche encore et toujours']
+        ]
+    ],
+);
+
+$questions = array(
+    1 => [ 'code' => 'R16_NEGATIF', 'subject' => 'evenement', 'text' => 'Rentrée 2016 - Moral négatif' ],
+    2 => [ 'code' => 'R16_NEUTRE', 'subject' => 'evenement', 'text' => 'Rentrée 2016 - Moral neutre' ],
+    3 => [ 'code' => 'R16_POSITIF', 'subject' => 'evenement', 'text' => 'Rentrée 2016 - Moral positif' ]
+);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,7 +72,7 @@ session_start();
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>My Astro - C'est la rentrée ! venez tester votre moral</title>
+        <title>My Astro - C’est la rentrée ! Venez tester votre moral</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -37,7 +93,7 @@ session_start();
            
             <header class="SiteHeader">
                 <div class="SiteLogo"><span>MyAstro</span></div>
-                <h1 class="PageLogo"><span>C'est la rentrée</span><span>venez tester votre moral</span></h1>
+                <h1 class="PageLogo"><span>C’est la rentrée</span><span>Venez tester votre moral</span></h1>
                 <?php include('include/bloc-socials.php'); ?>
             </header>
             
@@ -64,109 +120,28 @@ session_start();
                     <h3 id="numQuestion">Question X</h3>
 
                     <div class="bxslider">  
-
-
-                        <!-- ------------------------- QUESTION 1 ------------------------- -->
-                        <section class="q1" class="question">
+                        <?php 
+                            foreach($quizz as $id_q => $question){
+                                $id_q++;
+                        ?>
+                        <!-- ------------------------- QUESTION <?= $id_q ?> ------------------------- -->
+                        <section class="q<?= $id_q ?>" class="question">
                             <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
+                                <h2><?= $question['txt'] ?></h2>
                             </header>
                             <ul class="question-Content">
-                                <li><input type="radio" name="name1" id="idName1-1" value="1"><label for="idName1-1">value 1</label></li>
-                                <li><input type="radio" name="name1" id="idName1-2" value="2"><label for="idName1-2">value 2</label></li>
-                                <li><input type="radio" name="name1" id="idName1-3" value="3"><label for="idName1-3">value 3</label></li>
+                                <?php 
+                                    shuffle($question['rep']);
+                                    foreach ($question['rep'] as $id_r => $rep){
+                                ?>
+                                <li><input type="radio" name="q<?= $id_q ?>" id="q<?= $id_q ?>_r<?= $id_r ?>" value="<?= $rep['value'] ?>"><label for="q<?= $id_q ?>_r<?= $id_r ?>"><?= $rep['txt'] ?></label></li>
+                                <?php } ?>
                             </ul>
                             <div class="question-Img"></div>
                         </section>
-                        <!-- ----------------------- FIN QUESTION 1 ----------------------- -->
-
-                        <!-- ------------------------- QUESTION 2  ------------------------ -->
-                        <section class="q2" class="question">
-                            <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
-                            </header>
-                            <ul class="question-Content">
-                                <li><input type="radio" name="name2" id="idName2-1" value="1"><label for="idName2-1">value 1</label></li>
-                                <li><input type="radio" name="name2" id="idName2-2" value="2"><label for="idName2-2">value 2</label></li>
-                                <li><input type="radio" name="name2" id="idName2-3" value="3"><label for="idName2-3">value 3</label></li>
-                            </ul>
-                            <div class="question-Img"></div>
-                        </section>
-                        <!-- ----------------------- FIN QUESTION 2 ----------------------- -->
-
-
-
-
-
-
-                        <!-- ------------------------- QUESTION 3 ------------------------- -->
-                        <section class="q3" class="question">
-                            <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
-                            </header>
-                            <ul class="question-Content">
-                                <li><input type="radio" name="name3" id="idName3-1" value="1"><label for="idName3-1">value 1</label></li>
-                                <li><input type="radio" name="name3" id="idName3-2" value="2"><label for="idName3-2">value 2</label></li>
-                                <li><input type="radio" name="name3" id="idName3-3" value="3"><label for="idName3-3">value 3</label></li>
-                            </ul>
-                            <div class="question-Img"></div>
-                        </section>
-                        <!-- ----------------------- FIN QUESTION 3 ----------------------- -->
-
-                        <!-- ------------------------- QUESTION 4 ------------------------- -->
-                        <section class="q4" class="question">
-                            <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
-                            </header>
-                            <ul class="question-Content">
-                                <li><input type="radio" name="name4" id="idName4-1" value="1"><label for="idName4-1">value 1</label></li>
-                                <li><input type="radio" name="name4" id="idName4-2" value="2"><label for="idName4-2">value 2</label></li>
-                                <li><input type="radio" name="name4" id="idName4-3" value="3"><label for="idName4-3">value 3</label></li>
-                            </ul>
-                            <div class="question-Img"></div>
-                        </section>
-                        <!-- ----------------------- FIN QUESTION 4 ----------------------- -->
-
-
-
-
-
-
-
-                        <!-- ------------------------- QUESTION 5 ------------------------- -->
-                        <section class="q5" class="question">
-                            <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
-                            </header>
-                            <ul class="question-Content">
-                                <li><input type="radio" name="name5" id="idName5-1" value="1"><label for="idName5-1">value 1</label></li>
-                                <li><input type="radio" name="name5" id="idName5-2" value="2"><label for="idName5-2">value 2</label></li>
-                                <li><input type="radio" name="name5" id="idName5-3" value="3"><label for="idName5-3">value 3</label></li>
-                            </ul>
-                            <div class="question-Img"></div>
-                        </section>
-                        <!-- ------------------------- QUESTION 5 ------------------------- -->
-
-                        <!-- ------------------------- QUESTION 6 ------------------------- -->
-                        <section class="q6" class="question">
-                            <header class="question-Header">
-                                <h2>Ici le texte pour la question ?</h2>
-                            </header>
-                            <ul class="question-Content">
-                                <li><input type="radio" name="name6" id="idName6-1" value="1"><label for="idName6-1">value 1</label></li>
-                                <li><input type="radio" name="name6" id="idName6-2" value="2"><label for="idName6-2">value 2</label></li>
-                                <li><input type="radio" name="name6" id="idName6-3" value="3"><label for="idName6-3">value 3</label></li>
-                            </ul>
-                            <div class="question-Img"></div>
-                        </section>
-                        <!-- ------------------------- QUESTION 6 ------------------------- -->
-
-                        
-
- 
-                    </div>
-                    <!-- fin de bxslider -->     
-                    
+                        <!-- ----------------------- FIN QUESTION <?= $id_q ?> ----------------------- -->
+                        <?php } ?>
+                    </div><!-- fin de bxslider -->
                 </form>
             </section> 
             <!-- FIN DU QUESTIONNAIRE -->  
@@ -182,9 +157,10 @@ session_start();
                         <form id="form-container">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="rentree16" />
-                            <input type="hidden" name="method" value="affil-maxi" />
+                            <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="affilbase" />
+                            <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="dri" value="rentree16-tel" />
                             <!-- ########## autres champs pré-remplis ######### -->
                             <input type="hidden" name="cguv" value="1" />
@@ -194,7 +170,7 @@ session_start();
                                 <div class="FormField-TableInputContainer fixed-2-col gender">
                                     <div class="FormField-TableInputContainer-Cell">
                                         <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> Femme</label>
-                                        <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                        <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" required />
                                     </div>
                                     <div class="FormField-TableInputContainer-Cell">
                                         <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> Homme</label>
@@ -244,28 +220,6 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="FormField-TableInputContainer  fixed-2-col relationship-status">
-                                <div class="FormField-TableInputContainer-Cell">
-                                    <div>
-                                        <input type="radio" name="theme_id" id="sit-celib" value="R16_question_2" class="FormField-Input" />
-                                        <label for="sit-celib" class="FormField-Label">célibataire</label>
-                                    </div>
-                                </div>
-                                <div class="FormField-TableInputContainer-Cell">
-                                    <div>
-                                        <input type="radio" name="theme_id" id="sit-couple" value="R16_question_24" class="FormField-Input" required />
-                                        <label for="sit-couple" class="FormField-Label">En couple</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- -->
-                            
-                            <div class="FormField sonprenom">
-                                <label for="email" class="FormField-Label">Son prénom</label>
-                                <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint">
-                            </div>
-                            
                             <div class="FormField">
                                 <label for="email" class="FormField-Label">E-mail</label>
                                 <input id="email" type="email" name="email" class="FormField-Input" required />
@@ -279,7 +233,6 @@ session_start();
             <!-- FIN FORMULAIRE CLIENT --> 
 
             <footer><p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p></footer>
-            
         </div>    
         
         <!-- #### SCRIPTS #### -->
@@ -288,6 +241,10 @@ session_start();
         <script src="js/jquery.bxslider.min.js"></script>
         
         <!-- #### QUESTIONNAIRE #### -->
+        <script>/* configuration du quizz */
+            var quizz_nb = 6;
+            var quizz_result = <?= json_encode($questions) ?>;
+        </script>
         <script src="js/rentree16.js"></script>
         
         <!-- #### REMARKETINGS #### -->
@@ -297,5 +254,5 @@ session_start();
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
