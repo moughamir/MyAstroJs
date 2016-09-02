@@ -322,13 +322,18 @@ if(empty($err)){
     } else {
         $bdd_data = array(
             'kgestion_id'             => $kgestion_id,
+            'ip_adress'               => $ip,
             'prenom'                  => $prenom,
+            'sexe'                    => $sexe,
+            'dateNaissance'           => $dtn_bdd,
             'signe2'                  => $conjoint_signe,
+            'signeAstrologique'       => $signe,
             'signeAstrologique'       => $signe,
             'conjoint'                => $conjoint_prenom,
             'questionDate'            => $today_date_bdd,
             'questionDate_before'     => $user->questionDate,
             'question_date'           => $today_datetime_bdd,
+            'questionSujet'           => $question['subject'],
             'questionContent'         => $question['code'],
             'dateNaissance'           => $dtn_bdd,
             'date_naissance_conjoint' => $conjoint_dtn_bdd,
