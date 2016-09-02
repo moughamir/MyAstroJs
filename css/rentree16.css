@@ -1765,6 +1765,7 @@ div.logo {
   justify-content: space-around;
   list-style: none;
   margin: 0;
+  margin-bottom: 2rem;
   padding: 0; }
   .module_social li {
     margin: 0 0.5rem; }
@@ -1816,9 +1817,11 @@ div.logo {
 /** THEME
 ===================================*/
 .bx-wrapper .bx-viewport {
+  box-sizing: border-box;
   box-shadow: 0 0 5px #ccc;
   border: 5px solid #fff;
   left: -5px;
+  
   background: #fff;
   /*fix other elements on the page moving (on Chrome)*/
   -webkit-transform: translatez(0);
@@ -2298,15 +2301,16 @@ body {
 /* ----------------------------------- QUESTIONNAIRE ----------------------------------- */
 .questionnaire {
   /*max-width:60rem;
-  margin: 0 auto;*/ }
-  .questionnaire #numQuestion {
-    display: inline-block;
-    width: auto;
-    color: #fff;
-    background-color: #3fb3ae;
-    padding: 1rem 1.5rem;
-    text-transform: uppercase;
-    margin-left: 20%; }
+  margin: 0 auto;*/ 
+  padding: 0 1rem;}
+.questionnaire #numQuestion {
+  display: inline-block;
+  width: auto;
+  color: #fff;
+  background-color: #3fb3ae;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  margin-left: 20%; }
 
 .question-Header {
   text-align: center;
@@ -2316,8 +2320,7 @@ body {
   margin: 0 auto 4rem;
   padding: 0;
   list-style: none;
-  width: 40rem;
-  height: 4rem; }
+  width: 40rem; }
   .question-Content label {
     padding-left: 1rem; }
 .question-Img {
@@ -2421,6 +2424,8 @@ body {
 /* --------------------------------- FORMULAIRE PERSONNALISE --------------------------------- */
 .formulaire {
   display: none; }
+.FormContainer-Submit {
+  margin-top: 0; }
 
 /* ----------------------------------- ANIMATIONS ---------------------------------- */
 .anim-input {
@@ -2451,73 +2456,89 @@ body {
     transform: scale(1, 1);
     opacity: 1; } }
 /* ----------------------------------- DRI ----------------------------------- */
+.Result-Name {
+  margin-top: 0px;
+  font-family: "Fjalla One",sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold; }
+.DRI-Sent {
+  font-size: 2.4rem;
+  font-family: "Fjalla One";
+}
+.DRI-Sent strong {
+  color: #f2163a;
+}
 .FormContainer {
   max-width: 80rem;
   width: 100%;
   margin: 0 auto;
   background: transparent;
+  text-align: center; }
+/* --------------------------------- MODALE --------------------------------- */
+.FormContainer h2 {
+  text-transform: uppercase; }
+.FormContainer input, .FormContainer select {
+  border: 2px solid #3fb3ae; }
+.FormContainer .FormField {
+  max-width: 40rem;
+  margin: 2rem auto; }
+.FormContainer .FormField-Info {
+  display: inline-block;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  margin: 1.5rem auto; }
+.FormContainer-Slogan {
+    color: #3fb3ae; }
+.FormContainer-Slogan2 {
+  color: #f2163a;
+  font-size: 2.5rem;
+  text-decoration: underline; }
+.FormContainer .overlay {
+  display: none;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh !important;
+  max-width: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red;
+  color: black; }
+.FormContainer .overlay p.alert {
+  display: table-cell;
+  vertical-align: middle;
+  height: 25rem;
+  width: 40rem;
+  left: 50%;
+  top: 50%;
+  margin: -12.5rem -20rem;
+  padding: 1rem;
+  position: absolute;
   text-align: center;
-  /* --------------------------------- MODALE --------------------------------- */ }
-  .FormContainer h2 {
-    text-transform: uppercase; }
-  .FormContainer input, .FormContainer select {
-    border: 2px solid #3fb3ae; }
-  .FormContainer .FormField {
-    max-width: 40rem;
-    margin: 2rem auto; }
-    .FormContainer .FormField-Info {
-      text-transform: uppercase;
-      margin: 1.5rem auto; }
-  .FormContainer-Slogan2 {
-    color: #f2163a;
-    font-size: 2.5rem;
-    text-decoration: underline; }
-  .FormContainer .overlay {
-    display: none;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh !important;
-    max-width: none;
-    background-color: rgba(0, 0, 0, 0.75);
-    border: 0px solid red;
-    color: black; }
-    .FormContainer .overlay p.alert {
-      display: table-cell;
-      vertical-align: middle;
-      height: 25rem;
-      width: 40rem;
-      left: 50%;
-      top: 50%;
-      margin: -12.5rem -20rem;
-      padding: 1rem;
-      position: absolute;
-      text-align: center;
-      background: #fff;
-      color: #3FB3AE;
-      border: 0px solid red; }
-      .FormContainer .overlay p.alert b {
-        margin-bottom: 1rem;
-        display: inline-block;
-        font-size: 2rem;
-        width: 100%; }
-      .FormContainer .overlay p.alert br + i {
-        padding: 0.5rem 0.8rem;
-        background: #ccc;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        position: absolute;
-        bottom: 1rem;
-        left: 22%; }
-        .FormContainer .overlay p.alert br + i :after {
-          content: "fermer";
-          text-transform: uppercase;
-          text-align: center;
-          width: 60%;
-          padding: 1rem; }
+  background: #fff;
+  color: #3FB3AE;
+  border: 0px solid red; }
+.FormContainer .overlay p.alert b {
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 2rem;
+  width: 100%; }
+.FormContainer .overlay p.alert br + i {
+  padding: 0.5rem 0.8rem;
+  background: #ccc;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  bottom: 1rem;
+  left: 22%; }
+.FormContainer .overlay p.alert br + i :after {
+  content: "fermer";
+  text-transform: uppercase;
+  text-align: center;
+  width: 60%;
+  padding: 1rem; }
 
 .picto-tel-bulle {
   width: 5rem;
@@ -2677,7 +2698,7 @@ body {
 
   .question-Content {
     width: 100%;
-    padding: 0rem 8rem; }
+    padding: 0rem 2.5rem; }
   .question-Header h2 {
     font-size: 1.25rem; }
 
@@ -2688,4 +2709,8 @@ body {
     .FormContainer-Slogan {
       font-size: 1.5rem;
       text-align: center;
-      font-weight: inherit; } }
+      font-weight: inherit; }
+    
+  .bx-controls-direction {
+    display:none; }
+}

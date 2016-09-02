@@ -8,6 +8,7 @@ $(document).ready(function(){
     slider = $('.bxslider').bxSlider({
         hideControlOnEnd:true,
         infiniteLoop: false,
+        adaptiveHeight: true,
         slideMargin: 10
     });
 
@@ -55,19 +56,24 @@ $(document).ready(function(){
         actualiser();
     })
     
-    
-    console.log(quizz_result);
     var result = null;
     function zeResults(){
-        var score = 0;        
-        // calcul du score
+        var score = 0;
+        // Calcul du pallier
+        var scoreMin = 0; // min value par défaut à 0
+        var scoreMax = quizz_rep_max_value * quizz_nb_q;
+        var scoreIntervalle = scoreMax - scoreMin;
+        var pallier = scoreIntervalle / quizz_nb_r;
+        // Calcul du score
         $('.questionnaire input[type=radio]:checked').each( function () {
             score += parseInt($(this).val(), 10);   
         });
-        console.log(score);
         // récupération du résultat selon le score.
-        var indice = Math.floor(score / quizz_nb);
-        console.log(indice);
+        var indice = 0;
+        do {
+            score = score - pallier;
+            indice = indice + 1;
+        } while(score > 0);
         result = quizz_result[indice];
     };
     
@@ -77,10 +83,8 @@ $(document).ready(function(){
         
         // ajouter un input invisible contenant la valeur "pallier"
         var result_value = JSON.stringify(result).replace(/"/g, "'");
-        console.log(result_value);
         var newInput = '<input type="hidden" name="question_code" value="'+ result_value +'" />';
         $("#form-container").append(newInput);
-        
         
         $('.questionnaire').fadeOut( function(){
             $('.formulaire').css("display" ,"block");

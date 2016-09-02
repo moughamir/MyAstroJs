@@ -80,6 +80,14 @@ $questions = array(
         
         <link rel="stylesheet" type="text/css" href="css/rentree16.min.css" />
         
+        <!-- Meta Facebook -->
+        <meta property="og:title" content="Faites le test pour savoir ce que Septembre vous réserve" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://<?= ROOT_URL ?>/rentree16" />
+        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/rentree16/fb-ban.jpg" />
+        <meta property="og:description" content=" Adieu Août, Septembre fait son apparition avec son lot de nouveautés, de défis et d’opportunités" />
+        <meta property="og:locale" content="fr_FR" />
+        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -165,16 +173,17 @@ $questions = array(
                             <!-- ########## autres champs pré-remplis ######### -->
                             <input type="hidden" name="cguv" value="1" />
                             <input type="hidden" name="partenaires" value="1" />
+                            <input type="hidden" name="voyant" value="Aline" />
                             <!-- ############################################### -->
                             <div class="FormField radio">
                                 <div class="FormField-TableInputContainer fixed-2-col gender">
                                     <div class="FormField-TableInputContainer-Cell">
                                         <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> Femme</label>
-                                        <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" required />
+                                        <input type="radio" name="sexe" value="F" id="sexe-f" class="FormField-Input" required />
                                     </div>
                                     <div class="FormField-TableInputContainer-Cell">
                                         <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> Homme</label>
-                                        <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
+                                        <input type="radio" name="sexe" value="M" id="sexe-h" class="FormField-Input" />
                                     </div>
                                 </div>
                             </div>
@@ -223,9 +232,9 @@ $questions = array(
                             <div class="FormField">
                                 <label for="email" class="FormField-Label">E-mail</label>
                                 <input id="email" type="email" name="email" class="FormField-Input" required />
-                                <span class="FormField-Info" style="margin-top: -10rem;">Une étude personnalisée vous sera envoyée à cette adresse</span>
+                                <span class="FormField-Info">Une étude personnalisée vous sera envoyée à cette adresse</span>
                             </div>
-                            <button class="FormContainer-Submit btn-send" type="submit" name="valider">Je veux savoir</button>
+                            <button class="FormContainer-Submit btn-send" type="submit" name="valider">Voir le résultat</button>
                         </form>
                     </div>
                 </article>    
@@ -242,7 +251,9 @@ $questions = array(
         
         <!-- #### QUESTIONNAIRE #### -->
         <script>/* configuration du quizz */
-            var quizz_nb = 6;
+            var quizz_rep_max_value = 3;
+            var quizz_nb_r = 3;
+            var quizz_nb_q = 6;
             var quizz_result = <?= json_encode($questions) ?>;
         </script>
         <script src="js/rentree16.js"></script>
