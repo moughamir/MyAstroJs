@@ -16,7 +16,7 @@ include('include/process-dri-postmailing.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>My Astro - C'est la rentrée ! venez tester votre moral</title>
+        <title>My Astro - C’est la rentrée ! Venez tester votre moral</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -34,10 +34,9 @@ include('include/process-dri-postmailing.php');
     </head>
     <body>
         <div class="PageWrapper DRI">
-           
             <header class="SiteHeader">
                 <div class="SiteLogo"><span>MyAstro</span></div>
-                <h1 class="PageLogo bgHeader"><span>C'est la rentrée</span><span>venez tester votre moral</span></h1>
+                <h1 class="PageLogo bgHeader"><span>C’est la rentrée</span><span>Venez tester votre moral</span></h1>
                 <?php include('include/bloc-socials.php'); ?>
             </header>
             
@@ -48,10 +47,9 @@ include('include/process-dri-postmailing.php');
                         <header class="header-voyant">
                             <p><span>Aline,</span><br/>voyante et tarologue professionnelle.</p>
                         </header>
-                        <p class="txtleft"><?= ucfirst($prenom) ?>, Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
-                        <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement&nbsp;?</p>
-                        <p class="FormField-Info">inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden"/> nous vous rappelons dans les brefs délais !</p>
-                        
+                        <p class="txtleft"><?= ucfirst($prenom) ?>, Il ne faut pas voir Septembre seulement comme la fin de l’été. Une page se tourne certes, mais une nouvelle se présente à vous. Une nouvelle page qui vous réserve son lot de nouveaux défis à surmonter, de nouvelles opportunités à relever, de nouvelles perspectives à explorer, de nouvelles difficultés à surmonter. Il ne tient qu’à vous de bien entamer cette dernière ligne droite de l’année 2016.</p>
+                        <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement ?</p>
+                        <p class="FormField-Info">Inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden"/> nous vous rappelons dans les brefs délais !</p>
                         <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
@@ -67,12 +65,6 @@ include('include/process-dri-postmailing.php');
                             </p>
                                 <?php } ?>
                             <form method="post">
-                                
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
-                                <!-- ############################################### -->
-                                
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>
@@ -100,13 +92,11 @@ include('include/process-dri-postmailing.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-
                                 <!-- SUBMIT -->
-                                <input type="text" name="antisp" value="" style="display: none" />
-                                <button class="FormContainer-Submit btn" type="submit" name="demande_rappel" >Me faire rappeler gratuitement</button>
+                                <input type="text" name="antisp" value="" style="display: none" /><br />
+                                <button class="FormContainer-Submit btn" type="submit" name="demande_rappel">Me faire rappeler gratuitement</button>
                             </form>
-                            <?php } ?>   
-                        
+                            <?php } ?>
                     </div>
                 </article>  
             </section>
