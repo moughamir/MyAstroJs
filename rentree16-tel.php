@@ -115,8 +115,6 @@ switch ($result) {
                                 </select>
                             </div>
 
-                            <p class="FormContainer-Slogan">Un voyant vous appelera dès demain, pour vous donner votre réponse en direct.</p>
-
                             <!-- SUBMIT -->
                             <input type="text" name="antisp" value="" style="display: none" /><br />
                             <button class="FormContainer-Submit btn-send" type="submit" name="demande_rappel">Envoyer</button>

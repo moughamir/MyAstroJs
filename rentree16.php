@@ -7,6 +7,7 @@
     Created on : 26 juillet 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+require_once('/inc/config.php');
 
 $quizz = array(
     [
