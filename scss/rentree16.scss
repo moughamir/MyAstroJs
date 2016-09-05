@@ -1,0 +1,659 @@
+/* 
+    intégration : guillaume deschamps <guillaumedeschamps75@gmail.com>
+    25/07/2016 pour KGCOM
+
+    destiné aux campagnes de type "questionnnaires" :
+    - un contenu centralisé avec des outils de navigation,
+    - s'utilise avec  "js/jquery.bxslider.min.js"
+
+    ATTENTION ! utilisation de knacssV5.0.1
+*/
+
+/* --------------------------------- IMPORTATIONS -------------------------- */
+@import "knacss501/_knacss";
+@import "modules/_mixins";
+@import "modules/_li-socials";
+@import "modules/_slider";
+@import "modules/_form";
+
+
+/* --------------------------------- VARIABLES ----------------------------- */
+/* ----  fonts  ---- */
+$font1: 'Fjalla One', sans-serif;
+$font2: 'Cookie', cursive;
+
+/* ----  couleurs  ---- */
+$color1: #3fb3ae; //turquoise, questionTitle, submit
+$color2: #f2163a; //magenta, btn start
+$color3: #dddddd; //gris 
+$color4: #454545; //noir, texte courant 
+
+/* ----  dossier images  ---- */
+$img_dir: "../images_landing/rentree16/";
+$ico_form: $img_dir+'ico-form.svg';
+$logo: $img_dir+'logo_MYASTRO.svg';
+$header: $img_dir+"bg-header-q.jpg";
+$intro1: $img_dir+'intro-1.jpg';
+$intro2: $img_dir+'intro-2.jpg';
+$fleche: $img_dir+'fleche.svg';
+$bulle_phone: $img_dir+'bulle-phone.svg';
+$voyante: $img_dir+'portrait-voyante.png';
+
+/* --------------------------------- LAYOUT --------------------------------- */
+body{
+    /*background: #fff url($img_dir+'bg-plage.jpg') top center fixed no-repeat;
+    background-size:cover;*/
+    border: 0;
+    padding-top: 2.2rem;
+    color: $color4;
+}
+
+a{
+    //@include linx(#fff, #fff, $azur, $azur);
+}
+
+.PageWrapper {
+    //width: 100%;
+    max-width: 120rem;
+    margin: 0rem auto 0;
+    padding: 0;
+}
+
+.ico-form{
+    background: transparent url($ico_form) center no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 3rem;
+}
+
+/* ----  header  ---- */
+.SiteHeader{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    
+    .SiteLogo{
+        background: transparent url($logo) center no-repeat;
+        background-size: contain;
+        width: 10.5rem;
+        height: 10.5rem;
+        display: block;
+        margin:1rem;
+        span{
+            display: none;
+        }
+    }
+    
+    h1{
+        font-family: $font1;
+        span{
+            display: inline-block;
+            width:100%;   
+            text-align: center;
+            color: $color1;
+        }
+        
+        span + span{color:#454545}
+    }
+    
+}
+
+.bgHeader{
+    background:transparent url($header) center no-repeat;
+    height: 12rem;
+}
+
+/* ----  intro  ---- */
+.intro{
+    text-align: center;   
+       
+    &-Content{
+
+        &-Img{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            font-size: 2.5rem;
+            margin-top:2.5rem; 
+        }
+        &-Img + p{margin: 2rem auto}
+
+        &-Img1,
+        &-Img2{
+            width:48.7rem;
+            height:32.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            text-decoration: none;
+            transition: all 0.25s ease-in;
+            
+            &:hover{
+                background-size: 110%;
+            }
+            
+            p{
+                display:inline-block; 
+                vertical-align: middle; 
+                color: #fff;
+            }
+        }
+
+        &-Img1{
+            background: #000 url($intro1) center  no-repeat;    
+        }
+
+        &-Img2{
+            background: #000 url($intro2) center no-repeat;    
+        }  
+    }    
+}
+
+
+.btn-start{
+    @include ghost-btn($color2, white, 2px);
+    font-family: $font1;
+    font-size: 3.6rem;
+    padding: 2rem 5rem; 
+    box-sizing: padding-box;
+    margin-bottom: 2rem;
+}
+.btn-send{
+    @include ghost-btn($color2, white, 2px);
+    font-family: $font1;
+    font-size: 3.6rem;
+    //padding: 2rem; 
+    box-sizing: padding-box;
+}
+.btn{
+    @include ghost-btn($color2, white, 2px);
+    font-family: $font1;
+    font-size: 3.5rem;
+    padding: 2rem; 
+    box-sizing: padding-box;
+}
+
+/* ----  footer  ---- */
+.SiteCopyright{
+    width: 100%;
+    text-align: center;
+    margin: 3.5rem auto 1rem;
+    color:#000;
+}
+
+/* ----------------------------------- QUESTIONNAIRE ----------------------------------- */
+.questionnaire{
+    /*max-width:60rem;
+    margin: 0 auto;*/
+    padding: 0 1rem;
+    
+    #numQuestion{
+        display: inline-block;
+        width: auto;
+        color: #fff;
+        background-color: $color1;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        margin-left: 20%;
+    }
+    
+    //label{display: none}
+}
+
+.question{
+    &-Header{
+        text-align: center;    
+        font-weight: normal;
+        text-transform: uppercase;
+    }    
+    &-Content{
+        margin: 0 auto 4rem;
+        padding: 0;
+        list-style: none;
+        width:40rem;
+        
+        label{padding-left: 1rem;}
+    }
+    &-Img{
+        width:  28.4rem;
+        height:  15.6rem;
+        margin: 2.5rem auto;
+    }
+}
+
+$nbQuestions: 6;
+
+@for $i from 1 through $nbQuestions {
+    .q#{$i}{
+        .question-Img{
+            background: url($img_dir + 'quest'+ $i +'.jpg') center no-repeat;  
+        }
+    }
+}
+
+/* ----------------------------------- SLIDER PERSONNALISE ----------------------------------- */
+.bx-wrapper{
+    
+    .bx-viewport{
+        box-sizing: border-box;
+        max-width:60rem;
+        margin: 0 auto;
+        box-shadow: 0 0 0 #ccc;
+    }
+    
+    /* ----  pagination  ---- */
+    .bg-bx-pager{
+        display: inline-block;
+        width: 100%;
+        content:" ";
+        height: 0.5rem;
+        background: $color3;
+        position: absolute;
+        margin-top: 2.2rem;
+        z-index:-1;
+    }
+    .bx-pager{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        bottom: -5rem;
+        margin: 1rem auto;
+        
+       
+        
+        .bx-pager-item{
+            a{
+                display: table-cell;
+                vertical-align: middle;
+                text-indent:0;
+                width: 4.5rem;
+                height: 4.5rem;
+                border-radius: 2.25rem;
+                font-size:2.5rem;
+                font-weight: lighter;
+                text-decoration: none;
+                background-color: $color3;
+                transition: all 0.2s ease-in;
+                
+                &:hover,
+                &:active,
+                &.active{
+                    background-color: $color1;
+                    color: white;
+                }
+                
+                &.active:hover{
+                    background-color: darken($color1,10%);
+                }
+            }
+        }
+    }
+    /* fin de .bx-pager */
+}
+.bx-controls{
+    display: inline-block;
+    margin-top:1rem; 
+}
+
+.bx-prev,
+.bx-next{
+    background: transparent url($fleche) no-repeat !important;  
+    width: 5rem !important; 
+    height: 5rem !important; 
+    border: 1px solid white;
+    border-radius: 2.5rem;
+    transition: all 0.3s linear; 
+    
+    &:hover{
+        border: 1px solid $color3;
+    }
+}
+.bx-prev{
+    background-position: 0% 0% !important;
+}
+.bx-next{
+    background-position: 100% 0% !important;
+}
+
+/* --------------------------------- FORMULAIRE PERSONNALISE --------------------------------- */
+// cacher le formulaire au début
+.formulaire{
+   display:none;
+}
+.FormContainer-Submit {
+    margin-top: 0;
+}
+
+
+/* ----------------------------------- ANIMATIONS ---------------------------------- */
+.anim-input{
+    animation-name: animInput;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+    @keyframes animInput {
+        0% {transform: scale(0.2,1); opacity:0}
+        100% {transform: scale(1, 1); opacity:1}
+    }
+}
+
+
+
+
+
+/* ----------------------------------- DRI ----------------------------------- */
+.DRI-Sent {
+    font-size: 2.4rem;
+    font-family: "Fjalla One";
+    strong {
+        color: $color2;
+    }
+}
+.DRI btn{ margin:2rem auto;}
+.Result {
+    &-Name {
+        margin-top: 0px;
+        font-family: "Fjalla One",sans-serif;
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+}
+.FormContainer {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+    background: transparent;
+    text-align: center;
+    
+    
+    h2{
+        text-transform: uppercase;
+    }
+    
+    input, select {
+        border:2px solid $color1;
+    }
+    
+    .FormField{
+        max-width:40rem; 
+        margin: 2rem auto;
+        &-Info{
+            display: inline-block;
+            margin-top: 2rem;
+            text-transform: uppercase; 
+            margin: 1.5rem auto;
+        }
+    }
+    
+    &-Slogan {
+        color: $color1;
+    }
+    
+    &-Slogan2{
+        color: $color2;
+        font-size: 2.5rem;
+        text-decoration:underline;
+    }
+    
+    
+    /* --------------------------------- MODALE --------------------------------- */
+    .overlay {
+        display: none;
+        position:fixed !important;
+        top:0;
+        left:0;
+        z-index:100;
+        width:100vw;
+        height:100vh !important;
+        max-width: none;
+        background-color: rgba(0, 0, 0, 0.75);
+        border:0px solid red;
+        color:black;
+
+        p.alert {
+            display: table-cell;
+            vertical-align: middle;
+            height: 25rem;
+            width: 40rem;
+            left: 50%;
+            top: 50%;
+            margin: -12.5rem -20rem;
+            padding:1rem;
+            position: absolute;
+            text-align: center;
+            background: #fff;
+            color:#3FB3AE;
+            border:0px solid red;
+
+
+
+            // TITRE DE LA MODALE
+            b{
+                margin-bottom: 1rem;
+                display: inline-block;
+                font-size:2rem;
+                width: 100%;
+            }
+
+            // BOUTON DE FERMETURE DE LA MODALE
+            br + i{
+                padding: 0.5rem 0.8rem;
+                background: #ccc;
+                color:#fff;
+                cursor: pointer;
+                display: inline-block; 
+                position: absolute;
+                bottom: 1rem;
+                left: 22%;
+
+                   :after{
+                    content:"fermer";
+                    text-transform:uppercase;
+                    text-align: center;
+                    width: 60%;
+                    padding: 1rem;
+                }
+
+            }
+        }
+    }
+
+}
+
+.picto-tel-bulle{
+    width:5rem;
+    height:5rem;
+    background: transparent url($bulle_phone) 0% 0% no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left: 41rem;
+}
+#tel{text-align: center}
+
+.header-voyant{
+    //width:84%;
+    height:12rem;
+    margin: 0 auto;
+    background: transparent url($voyante) top left no-repeat;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    p{
+        text-align: left;
+        line-height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        padding:8.8rem 0 0 12rem;
+        span{
+            font-family: $font2;
+            font-size:3rem; 
+        }
+    }
+}
+
+/* --------------------------------- MEDIA QUERIES --------------------------------- */
+/*
+  --- BREAKPOINTS DE KNACSS V5.0.1 ---
+  tiny-screen       : 320px,
+  tiny-plus-screen  : 480px,
+  small-screen      : 640px,
+  small-plus-screen : 768px,
+  medium-screen     : 960px,
+  medium-plus-screen: 1024px,
+  large-screen      : 1280px,
+  large-plus-screen : 1440px,
+  extra-large-screen: 1600px,
+  ultra-large-screen: 1920px
+*/
+
+@include media('>large-screen') {
+    
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    
+}
+
+@include media('>small-screen', '<medium-screen') {
+    
+}
+
+@include media('>small-screen') {
+    .bx-prev{
+        top:50%;
+        left: 16% !important;
+    }
+    .bx-next{
+        top:50%;
+        left: 75% !important;
+    }
+}
+
+@include media('<=small-screen') {
+    
+    .SiteHeader{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .SiteHeader,
+    .intro-Header,
+    .intro-Content,
+    #numQuestion{
+        text-align: center;
+    }
+    .SiteLogo{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .bgHeader{
+        height: inherit;
+    }
+    
+   
+    /* ----  intro  ---- */
+    .intro{
+         
+        &-Content{
+            
+            p{margin-top: 1rem}
+            
+            &-Img{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-content: center;
+            }
+            &-Img1,
+            &-Img2{
+                width:100%;
+                height:10rem;
+                p{font-size: 2rem;}
+            }
+        }    
+    }
+    
+    #numQuestion{
+        display: block !important;
+        width: 80% !important;
+        margin: 1rem auto !important;
+    }
+    
+    .question{
+        &-Content{
+            //width:100%;
+        }
+        &-Img{
+            display: none;
+        }
+    }
+    
+    .btn{
+        font-size: 2rem;
+    }
+}
+
+@include media('<=tiny-plus-screen') {  
+    
+    .SiteHeader{
+        .SiteLogo{
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+    }
+    
+    .intro-Content{
+        padding: 0 1rem;    
+    }
+    .intro-Content-Img1,
+    .intro-Content-Img2{
+        display: none;
+    }
+    #numQuestion{
+        font-size: 1.25rem;    
+        width: 50% !important;
+        padding: 0.5rem 0.5rem;
+    }
+    .btn-start, .btn{
+        width: 80%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .question{
+        &-Content{
+            width:100%;
+            padding: 0rem 2.5rem; 
+        }
+        &-Header h2{
+            font-size: 1.25rem;
+        }
+    }
+    .FormContainer{
+        padding: 0;
+        
+        h2{
+            font-size: 1.5rem;
+        }
+        
+        &-Slogan{
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: inherit;
+        }
+    }
+    .bx-controls-direction {
+        display:none;
+    }
+}
