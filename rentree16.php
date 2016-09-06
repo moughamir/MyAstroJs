@@ -9,6 +9,16 @@
 */
 require_once('inc/config.php');
 
+if(isset($_GET['f'])){
+    if($_GET['f'] == 'tchat'){
+        $url = 'rentree16-tchat';
+        $dri = 'rentree16-tchat-tel';
+    }
+}
+
+$url = isset($url) ? $url : 'rentree16';
+$dri = isset($dri) ? $dri : 'rentree16-tel';
+
 $quizz = array(
     [
         'txt' => 'S’il fallait utiliser un mot pour décrire vos vacances :',
@@ -165,12 +175,12 @@ $questions = array(
                     <div class="FormContainer-Fields">
                         <form id="form-container">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="source" value="rentree16" />
+                            <input type="hidden" name="source" value="<?= $url ?>" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="affilbase" />
                             <input type="hidden" name="site" value="myastro.fr" />
-                            <input type="hidden" name="dri" value="rentree16-tel" />
+                            <input type="hidden" name="dri" value="<?= $dri ?>" />
                             <!-- ########## autres champs pré-remplis ######### -->
                             <input type="hidden" name="cguv" value="1" />
                             <input type="hidden" name="partenaires" value="1" />
