@@ -23,49 +23,49 @@ $quizz = array(
     [
         'txt' => 'S’il fallait utiliser un mot pour décrire vos vacances :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'Enfin… Parce qu’il vous tardait de reprendre'],
-            [ 'value'=> 2, 'txt' => 'Quoi… Parce que vous ne les avez pas vues passer'],
-            [ 'value'=> 1, 'txt' => 'Oh noooon… Parce qu’il ne faut pas vous parler de rentrée']
+            [ 'value'=> 2, 'txt' => 'Enfin… Parce qu’il vous tardait de reprendre'],
+            [ 'value'=> 1, 'txt' => 'Quoi… Parce que vous ne les avez pas vues passer'],
+            [ 'value'=> 0, 'txt' => 'Oh noooon… Parce qu’il ne faut pas vous parler de rentrée']
         ]
     ],
     [
         'txt' => 'Depuis votre retour de vacances, vous êtes plutôt :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'A fond la forme !'],
-            [ 'value'=> 2, 'txt' => 'Peau caramel, bronzage au top'],
-            [ 'value'=> 1, 'txt' => 'Petite fatigue']
+            [ 'value'=> 2, 'txt' => 'A fond la forme !'],
+            [ 'value'=> 1, 'txt' => 'Peau caramel, bronzage au top'],
+            [ 'value'=> 0, 'txt' => 'Petite fatigue']
         ]
     ],
     [
         'txt' => 'Votre état d’esprit à l’approche de cette rentrée :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'Envie de tout déchirer !'],
-            [ 'value'=> 2, 'txt' => 'Quoi ? C’est déjà fini les vacances ?'],
-            [ 'value'=> 1, 'txt' => 'Direction toute sur les prochaines vacances']
+            [ 'value'=> 2, 'txt' => 'Envie de tout déchirer !'],
+            [ 'value'=> 1, 'txt' => 'Quoi ? C’est déjà fini les vacances ?'],
+            [ 'value'=> 0, 'txt' => 'Direction toute sur les prochaines vacances']
         ]
     ],
     [
         'txt' => 'Vos priorités pour la rentrée :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'Argent, argent, argent !'],
-            [ 'value'=> 2, 'txt' => 'Le bonheur ! Quoi de mieux que d’être heureux ?'],
-            [ 'value'=> 1, 'txt' => 'La santé bien sûr, il n’y a que ça qui compte vraiment']
+            [ 'value'=> 2, 'txt' => 'Argent, argent, argent !'],
+            [ 'value'=> 1, 'txt' => 'Le bonheur ! Quoi de mieux que d’être heureux ?'],
+            [ 'value'=> 0, 'txt' => 'La santé bien sûr, il n’y a que ça qui compte vraiment']
         ]
     ],
     [
         'txt' => 'Vos bonnes résolutions pour la rentrée :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'Je m’impose en renversant tout sur mon passage !'],
-            [ 'value'=> 2, 'txt' => 'Être plus cool et plus zen'],
-            [ 'value'=> 1, 'txt' => 'Me calmer, il y a déjà bien trop de stress']
+            [ 'value'=> 2, 'txt' => 'Je m’impose en renversant tout sur mon passage !'],
+            [ 'value'=> 1, 'txt' => 'Être plus cool et plus zen'],
+            [ 'value'=> 0, 'txt' => 'Me calmer, il y a déjà bien trop de stress']
         ]
     ],
     [
         'txt' => 'Et sur le plan sentimental :',
         'rep' => [
-            [ 'value'=> 3, 'txt' => 'C’est le grand Amour, donc pourvu que ça dure !'],
-            [ 'value'=> 2, 'txt' => 'Hum… Arf… Comment dire…'],
-            [ 'value'=> 1, 'txt' => 'Je cherche encore et toujours']
+            [ 'value'=> 2, 'txt' => 'C’est le grand Amour, donc pourvu que ça dure !'],
+            [ 'value'=> 1, 'txt' => 'Hum… Arf… Comment dire…'],
+            [ 'value'=> 0, 'txt' => 'Je cherche encore et toujours']
         ]
     ],
 );
