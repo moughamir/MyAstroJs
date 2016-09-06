@@ -12,7 +12,7 @@ require_once('inc/config.php');
 if(isset($_GET['f'])){
     if($_GET['f'] == 'tchat'){
         $url = 'rentree16-tchat';
-        $dri = 'rentree16-tchat-tel';
+        $dri = 'rentree16-tel-tchat';
     }
 }
 
