@@ -10,6 +10,7 @@ $kgestion = new APIKGestion;
 $err = array();
 $conversion = 0;
 $trouve = false;
+$reinscription = false;
 $today_date_bdd = date('Y-m-d');
 $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
@@ -202,13 +203,16 @@ if($question['conjoint']){
  * ========================================================================== */
 
 $idindex = false;
-$req = 'SELECT internal_id, questionDate, history FROM '.$bdd->users.' WHERE email="%s"';
+$req = 'SELECT internal_id, questionDate, history, source, kgestion_id FROM '.$bdd->users.' WHERE email="%s"';
 $user = $bdd->get_row($bdd->prepare($req, $email));
 unset($req);
 
 if($user){
     $trouve = true;
     $idindex = $user->internal_id;
+    if($user->questionDate == $today_date_bdd AND $user->source == $formurl){
+        $reinscription = true;
+    }
 }
 
 /* ========================================================================== *
@@ -216,8 +220,6 @@ if($user){
  * ========================================================================== */
 
 if(empty($err)){
-    
-    $kgestion_id = false;
     $post_data = array(
         'email'             => $email,
         'firstName'         => $prenom,
@@ -244,16 +246,24 @@ if(empty($err)){
         'myastroGclid'      => $gclid
     );
     
-    if($idindex){
-        $post_data['myastroId'] = $idindex;
-    }
-
-    $kgestion_insert = $kgestion->insertUser($post_data);
-    if (!$kgestion_insert->success){
-        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
-        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    if($reinscription){
+        $kgestion_id = $user->kgestion_id;
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
+        if (!$kgestion_update->success){
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' on reinscription > '.json_encode($kgestion_update));
+        }
     } else {
-        $kgestion_id = $kgestion_insert->id;
+        $kgestion_id = false;
+        if($idindex){
+            $post_data['myastroId'] = $idindex;
+        }
+        $kgestion_insert = $kgestion->insertUser($post_data);
+        if (!$kgestion_insert->success){
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        } else {
+            $kgestion_id = $kgestion_insert->id;
+        }
     }
 }
 
