@@ -10,6 +10,7 @@ $kgestion = new APIKGestion;
 $err = array();
 $conversion = 0;
 $trouve = false;
+$reinscription = false;
 $today_date_bdd = date('Y-m-d');
 $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
@@ -202,13 +203,16 @@ if($question['conjoint']){
  * ========================================================================== */
 
 $idindex = false;
-$req = 'SELECT internal_id, questionDate, history FROM '.$bdd->users.' WHERE email="%s"';
+$req = 'SELECT internal_id, questionDate, history, source, kgestion_id FROM '.$bdd->users.' WHERE email="%s"';
 $user = $bdd->get_row($bdd->prepare($req, $email));
 unset($req);
 
 if($user){
     $trouve = true;
     $idindex = $user->internal_id;
+    if($user->questionDate == $today_date_bdd AND $user->source == $formurl){
+        $reinscription = true;
+    }
 }
 
 /* ========================================================================== *
@@ -216,8 +220,6 @@ if($user){
  * ========================================================================== */
 
 if(empty($err)){
-    
-    $kgestion_id = false;
     $post_data = array(
         'email'             => $email,
         'firstName'         => $prenom,
@@ -244,16 +246,24 @@ if(empty($err)){
         'myastroGclid'      => $gclid
     );
     
+    if($reinscription){
+        $kgestion_id = $user->kgestion_id;
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
+        if (!$kgestion_update->success){
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' on reinscription > '.json_encode($kgestion_update));
+        }
+    } else {
+        $kgestion_id = false;
     if($idindex){
         $post_data['myastroId'] = $idindex;
     }
-
     $kgestion_insert = $kgestion->insertUser($post_data);
     if (!$kgestion_insert->success){
         addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     } else {
         $kgestion_id = $kgestion_insert->id;
+    }
     }
 }
 
@@ -322,13 +332,18 @@ if(empty($err)){
     } else {
         $bdd_data = array(
             'kgestion_id'             => $kgestion_id,
+            'ip_adress'               => $ip,
             'prenom'                  => $prenom,
+            'sexe'                    => $sexe,
+            'dateNaissance'           => $dtn_bdd,
             'signe2'                  => $conjoint_signe,
+            'signeAstrologique'       => $signe,
             'signeAstrologique'       => $signe,
             'conjoint'                => $conjoint_prenom,
             'questionDate'            => $today_date_bdd,
             'questionDate_before'     => $user->questionDate,
             'question_date'           => $today_datetime_bdd,
+            'questionSujet'           => $question['subject'],
             'questionContent'         => $question['code'],
             'dateNaissance'           => $dtn_bdd,
             'date_naissance_conjoint' => $conjoint_dtn_bdd,
@@ -417,7 +432,7 @@ if(empty($err)){
  * ========================================================================== */
 
     $_SESSION['conversion']     = $conversion;
-    $_SESSION['support']        = $param['support'];
+    $_SESSION['support']        = isset($param['support']) ? $param['support'] : '';
     $_SESSION['firstname']      = $prenom;
     $_SESSION['email']          = $email;
     $_SESSION['voyant']         = $voyant;

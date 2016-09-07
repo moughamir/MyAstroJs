@@ -26,6 +26,8 @@ $questions = array (
 
 session_start();
 $_SESSION['reflexcache_id'] = $_GET['t1'];
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -156,7 +158,7 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -208,7 +210,7 @@ $_SESSION['reflexcache_id'] = $_GET['t1'];
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
