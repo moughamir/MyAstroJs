@@ -1,5 +1,6 @@
 <?php
     $source = 'astrologie-gratuite';
+    $question = 'AMOUR-CONJOINT';
     $form_submit_text = 'Accèdez au tchat';
 ?>
 <!DOCTYPE html>
@@ -74,7 +75,7 @@
                                 </div>
                                 <div id="form-w" class="widget-content clearfix" style="background-image:url('images/voyance-par-tchat.jpg');">
                                     <div class="visible-part form-part form-part-one">
-                                        <div class="alert alert-danger"></div>
+                                        <div class="alert alert-danger" style="display: none;"></div>
                                         <?php include('include/forms/question_cachee.php');?>
                                     </div>
                                 </div>

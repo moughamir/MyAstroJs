@@ -8,14 +8,14 @@
     $question = isset($question) ? $question : $question_default;
     $form_submit_text = isset($form_submit_text) ? $form_submit_text : 'Poser votre question';
 ?>
-<form>
+<form class="ajax">
     <input type="hidden" name="source" value="<?= $source ?>" />
-    <input type="hidden" name="method" value="form-widget" />
+    <input type="hidden" name="method" value="<?= $method ?>" />
     <input type="hidden" name="support" value="<?= $support ?>" />
-    <input type="hidden" name="theme_id" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
     <div class="form-w-one">
         <input type="text" placeholder="Mon Prénom" id="name" name="prenom" required />
-        <input type="text" placeholder="Son Prénom" name="conjoint" id="lover_name" required />
+        <input type="text" placeholder="Son Prénom" name="conjoint" id="lover_name" />
     </div>
     <div class="form-w-two">
         <div>
@@ -89,14 +89,14 @@
     </div>
     <div class="cguv">
         <label class="checkbox">
-            <input type="checkbox" name="cguv" required checked>J'accepte les conditions générales
+            <input type="checkbox" name="cguv" required checked />Jʼaccepte les conditions générales
         </label>
         <label class="checkbox">
-            <input type="checkbox" name="partenaires"  checked>Recevoir les offres des partenaires
+            <input type="checkbox" name="partenaires" checked />Recevoir les offres des partenaires
         </label>
     </div> 
     <div>
-    <input class="btn_button btn-full-one" type="submit" name="valider" value="<?= $form_submit_text ?>" />
+        <input class="btn_button btn-full-one" type="submit" name="valider" value="<?= $form_submit_text ?>" />
     </div>
 </form>
 

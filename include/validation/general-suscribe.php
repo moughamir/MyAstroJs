@@ -57,7 +57,18 @@ if (isset($param['question_code'])){
     // Nouveau champs de question avec texte de la question (value json)
     if(!empty($param['question_code'])){
         $question = json_decode(str_replace("'", '"', $param['question_code']), true);
-        $question['conjoint'] = isset($question['conjoint']) ? $question['conjoint'] : false;
+        if($question == 'AMOUR-CONJOINT'){
+            // En fonction de si le conjoint est rempli, soit amour, soit avour avec P2
+            $questions = array(
+                'question_1' => [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - célibataire', 'conjoint' => false ],
+                'question_2' => [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - en couple', 'conjoint' => true ],
+            );
+            $code = (isset($param['conjoint']) && !empty($param['conjoint'])) ? 'question_2' : 'question_1';
+            $question = $questions[$code];
+        } else {
+            
+            $question['conjoint'] = isset($question['conjoint']) ? $question['conjoint'] : false;
+        }
         $question['content'] = isset($param['question_content']) ? $param['question'] : isset($param['question']) ? $param['question'] : null;
     } else {
         $err['question_code'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';

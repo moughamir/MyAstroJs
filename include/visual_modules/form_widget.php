@@ -1,4 +1,5 @@
 <?php
+/*
     if(preg_match('%^(/horoscope-2015)([-a-z]?)+(.php)$%', $url)){
          $source = "horoscope-2015";
     }else if(preg_match('%^(/horoscope-du-mois)([-a-z]?)+(.php)$%', $url)){
@@ -10,6 +11,9 @@
     }else if(preg_match('%^(/horoscope-de-l-amour)([-a-z]?)+(.php)$%', $url)){
          $source = "horoscope-amour";
     }
+ * 
+ */
+    
     $form_data = array(
         '/numerologie-gratuite.php' => ['title'=>'Numérologie gratuite', 'source'=>'numerologie-gratuite', 'support'=>'voyance'],
         '/portrait-astrologique-feminin.php' => ['title'=>'Voyance gratuite', 'source'=>'portrait-astrologique-f', 'support'=>'voyance'],
@@ -20,14 +24,12 @@
         '/tarot-oui-ou-non.php' => ['title'=>'2 - Posez votre question', 'source'=>'tarot-oui-non', 'support'=>'voyance'],
         '/tarot-persan.php' => ['title'=>'2 - Posez votre question', 'source'=>'tarot-persan', 'support'=>'voyance'],
         '/tirage-tarot-gratuit.php' => ['title'=>'2 - Posez votre question', 'source'=>'tirage-tarot-gratuit', 'support'=>'voyance'],
-        '/voyance-par-sms.php' => ['title'=>'Voyance gratuite', 'source'=>'tirage-tarot-gratuit', 'support'=>'voyance-par-sms'],
+        '/voyance-par-sms.php' => ['title'=>'Voyance gratuite', 'source'=>'voyance-par-sms', 'support'=>'voyance'],
     );
     
     $page = $_SERVER['PHP_SELF'];
     $flag = in_array($page, array_keys($form_data));
-    $titre = $flag ? $form_data[$page]['title'] : 'Voyance gratuite';
-    $source = $flag ? $form_data[$page]['source'] : 'horoscope-gratuit';
-    $support = $flag ? $form_data[$page]['support'] : 'voyance';
+    $titre = isset($fw_titre) ? $fw_titre : 'Voyance gratuite';
     
     $questions = array(
         'Amour' => array(
@@ -52,7 +54,7 @@
     <div id="form-w" class="widget-content clearfix" style="background-image:none;">
         <div class="visible-part form-part">
             <div class="alert alert-danger" style="display: none;"></div>
-            <?php include('../forms/voyance-general.php');?>
+            <?php include('include/forms/voyance-general.php');?>
         </div>
 </aside>
 

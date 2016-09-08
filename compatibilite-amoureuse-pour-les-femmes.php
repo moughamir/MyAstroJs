@@ -1,5 +1,10 @@
 <?php
     $source = 'compatibilite-amoureuse-pf';
+    $ipg_title = 'Numérologie gratuite';
+    $ipg_pubs = ['astrologie-gratuite', 'compatibilite-amoureuse-feminine', 
+                 'horoscope-de-la-semaine', 'horoscope-annee',
+                 'tarot-quotidien', 'tarot-hebdomadaire',
+                 'tarot-mensuel', 'tarot-de-couple' ];
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
@@ -20,7 +25,7 @@
         }
     </style>
     
-<?php include('include/header_inc.php'); ?>
+    <?php include('include/header_inc.php'); ?>
     
     <div class="container-fluid" itemscope >
         <!-- Main Content -->
@@ -56,9 +61,18 @@
                                     </select>
                                     <select style="width: 20%;" name="date_naissance_m">
                                         <option selected="selected" value="Mois">Mois</option>
-                                        <?php for($i=1;$i<=12;$i++){ ?>
-                                        <option value="<?= $i ?>"><?= $i ?></option>
-                                        <?php } ?>
+                                        <option value="1">Janvier</option>
+                                        <option value="2">Février</option>
+                                        <option value="3">Mars</option>
+                                        <option value="4">Avril</option>
+                                        <option value="5">Mai</option>
+                                        <option value="6">Juin</option>
+                                        <option value="7">Juillet</option>
+                                        <option value="8">Août</option>
+                                        <option value="9">Septembre</option>
+                                        <option value="10">Octobre</option>
+                                        <option value="11">Novembre</option>
+                                        <option value="12">Décembre</option>
                                     </select>
                                     <select style="width: 30%;" name="date_naissance_a">
                                         <option selected="selected" value="Année">Année</option>
@@ -155,133 +169,11 @@
                         </aside>
                         <!-- Horizontal Categories -->
                         <section class="cat-widget h-cat-1">
-                            <div class="cat-widget-title">
-                                <h3><?= str_replace('-', ' ', $path);?></h3>
-                            </div>
-                            <div class="cat-widget-content">
-                                <div class="row-fluid cat-horiz">
-                                    <div class="cat-horiz-divider"></div>
-                                    <div class="related-posts clearfix">
-                                        <div class="row-fluid modern-items-list">
-                                            <div id="h_cat_slider1" class="flexslider">
-                                                <ul class="slides">
-                                                    <li>
-                                                        <ul class="items left clearfix">
-                                                            <li class="row-fluid">
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/astrologie-gratuite.jpg" class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">Astrologie gratuite</h5><br>
-                                                                                <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">L'astrologie gratuite serait pour vous un moyen fiable et durable pour vous procurer des informations susceptibles d'influencer votre avenir. Sachez ce que vous réservent les astres pour votre futur et prenez votre vie en main.</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                                <div class="span6"><article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/compatibilite-amoureuse-feminine.jpg"  class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">Compatibilité amoureuse féminine</h5><br>
-                                                                                <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Est-ce que l'avenir avec l'homme que vous convoitez est possible et couronné de succès ou est- un échec prévu d'avance? Grâce à Myastro, bénéficiez de toutes les informations dont vous avez besoin pour savoir si l'investissement émotionnel est nécessaire pour cette relation</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li class="row-fluid">
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/horoscope-de-la-semaine.jpg"  class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">Découvrez votre horoscope de la semaine</h5><br>
-                                                                                    <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope de la semaine gratuit vous permet d'éviter toutes les surprises, et surtout les obstacles, que la vie vous réserve Faites appel à de réels professionnels et ne vous laissez pas guider par le hasard.</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="more" title=""></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/horoscope-2015.png" class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">Votre horoscope 2016</h5><br>
-                                                                                    <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope 2014 gratuit vous permettra de terminer l'année en beauté. Anticipez les obstacles, prenez les bonnes décisions et faites les bons choix grâce aux recommandations fournies par votre horoscope 2013</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/horoscope-2016" class="more" title=""></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li class="row-fluid">
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/tarot-quotidien.jpg" class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">TAROT QUOTIDIEN</h5><br>
-                                                                                <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Aucune journée ne se ressemble et c'est la raison pour laquelle Myastro vous propose une lecture de votre horoscope quotidien gratuitement rapide et efficace. Afin pour vous fournir toutes les réponses dont vous avez besoin problèmes dont vous avez besoin de manière instantannée.</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/tarot-hebdomadaire.jpg"  class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">TAROT HEBDOMADAIRE</h5><br>
-                                                                                <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Depuis quelques mois, vous n'arrivez pas à trouver de réponses à vos questions Vous souhaitez savoir ce qui se profile dans votre avenir et ne savez oas dans quelle direction vous tourner. Faites confiance à Myastro et bénéficiez de solutions durables</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                            <li class="row-fluid">
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/tarot-mensuel.jpg"  class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">TAROT MENSUEL</h5><br>
-                                                                                    <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Les mois n'ont rien à voir les uns avec les autres. S'il vous est indispensable de savoir comment se prépare le votre, n'hésitez pas à faire appel à Myastro pour obtenir toutes les réponses à vos questions et appréhender votre mois dans les meilleures conditions.</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                                <div class="span6">
-                                                                    <article class="fold-item span12">
-                                                                        <div class="clearfix">
-                                                                            <img src="images_voyance/banniere/tarot-couple.jpg" class="post-img" />
-                                                                            <div class="description visible-part">
-                                                                                <h5 class="title">TAROT COUPLE</h5><br>
-                                                                                <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Le tarot de couple gratuit vous donnera la possibilité de vous postionner afin de savoir si celui que vous convoitez est fait pour vous ou s'il est indispensable d'arrêter des investissements dans cette relation de manière immédiate.</h6>
-                                                                            </div>
-                                                                            <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
-                                                                        </div>
-                                                                    </article>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php include('include/content-internal-pub-grid.php'); ?>
                         </section>
-                        <!-- Left sidebar -->
-                        <?php include('include/bloc-gauche-secondaire-2.php');?>
                     </div>
+                    <!-- Left sidebar -->
+                    <?php include('include/bloc-gauche-secondaire-2.php');?>
                 </div>
             </div>
         </div>
@@ -289,5 +181,5 @@
 
 <?php include('include/footer_inc_compatibilite_amoureuse_femmes.php'); ?>
 
-<script src="js/formValidator-w.js"></script>
+<script src="js/formValidator.js"></script>
 <script src="js/infoBulle.js"></script>

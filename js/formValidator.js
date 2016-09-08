@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
     
     // Soumission du formulaire
-    $(document).on('submit', 'form', function(e){
+    $(document).on('submit', 'form.ajax', function(e){
         e.preventDefault();
         form = $(this);
         form_container = $('#form-container');
@@ -159,7 +159,7 @@ $(document).ready(function(){
                         form_alert.show();
                         form_alert.removeClass('hidden');
                     } else {
-                        $(alert_form_errors).append('<br><i>Cliquez pour fermer ce message</i>');
+                        $(alert_form_errors).append('<br><i data-dismiss="modal" style="cursor:pointer">Cliquez pour fermer ce message</i>');
                     }
                     if (!use_modal){
                         form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);

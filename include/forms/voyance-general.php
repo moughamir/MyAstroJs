@@ -21,9 +21,9 @@
     
     $questions = isset($questions) ? $questions : $questions_default;
 ?>
-<form>
+<form class="ajax">
     <input type="hidden" name="source" value="<?= $source ?>" />
-    <input type="hidden" name="method" value="form-widget" />
+    <input type="hidden" name="method" value="<?= $method ?>" />
     <input type="hidden" name="support" value="<?= $support ?>" />
     <div class="form-w-one">
         <input type="text" placeholder="Mon Prénom" id="name" name="prenom" required />
@@ -75,7 +75,7 @@
                 <option value="CA">Canada</option>
                 <option value="LU">Luxembourg</option>
                 <option value="CH">Suisse</option>
-                <option value="FR">France Métropolitaine</option>
+                <option value="FR" selected>France Métropolitaine</option>
                 <optgroup label="DOM-TOM">
                     <option value="MQ">Martinique</option>
                     <option value="GP">Guadeloupe</option>
@@ -106,7 +106,7 @@
             </select>
         </div>
         <div class="form-w-one sonprenom" style="display: none;">
-            <input type="text" placeholder="Son Prénom" name="conjoint" id="son_prenom">
+            <input type="text" placeholder="Son Prénom" name="conjoint" id="son_prenom" />
         </div>
         <div>
             <input id="email" type="email" name="email" placeholder="Mon email" required>
@@ -117,10 +117,10 @@
     </div>
     <div class="cguv">
         <label class="checkbox">
-            <input type="checkbox" name="cguv" required checked>J'accepte les conditions générales
+            <input type="checkbox" name="cguv" required checked />Jʼaccepte les conditions générales
         </label>
         <label class="checkbox">
-            <input type="checkbox" name="partenaires"  checked>Recevoir les offres des partenaires
+            <input type="checkbox" name="partenaires" checked />Recevoir les offres des partenaires
         </label>
     </div> 
     <div>
