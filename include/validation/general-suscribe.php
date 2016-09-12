@@ -456,8 +456,8 @@ if(empty($err)){
  *                                 REDIRECTION                                *
  * ========================================================================== */
 
-    $dri  = isset($param['dri']) ? $param['dri'] : false;
-    $dri2 = isset($param['dri2']) ? $param['dri2'] : 'merci-voyance';
+    $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
+    $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
     
     $redirect_url    = false;
     $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] : 'url';
@@ -479,7 +479,11 @@ if(empty($err)){
         $redirect_url = $dri2;
     }
     
-    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    if(!preg_match('#^http.*#', $redirect_url)){
+        $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    }
+    
+    $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
 
     die(json_encode(array($redirect_method => $redirect_url)));
        
