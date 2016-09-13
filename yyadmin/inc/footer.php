@@ -6,27 +6,27 @@
         
         <div id="loading" style="display: none">
             <div class="well">
-                <img src="images/loader.png" alt="Chargement en cours..." />
+                <img src="images/loader.gif" alt="Chargement en cours..." />
             </div>
         </div>
         
         <!-- INCLUDE JAVASCRIPTS -->
-        <script type="text/javascript" src="<?= ROOT_URL ?>/js/tinymce/tinymce.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/bootstrap-switch.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/jquery.datetimepicker.js"></script>
-        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/excanvas.js"></script><![endif]-->
-        <script language="javascript" type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/jquery.jqplot.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/plugins/jqplot.pieRenderer.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/plugins/jqplot.donutRenderer.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/plugins/jqplot.barRenderer.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/plugins/jqplot.pointLabels.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/chosen.jquery.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/bootstrap-dataTables.js"></script>
+        <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+        <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/excanvas.js"></script><![endif]-->
+        <script language="javascript" type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jqplot.pieRenderer.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jqplot.donutRenderer.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jqplot.barRenderer.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jqplot.pointLabels.min.js"></script>
+        <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-dataTables.js"></script>
         
-        <script type="text/javascript" src="<?= ROOT_URL ?>/yyadmin/js/admin.js"></script>
+        <script type="text/javascript" src="js/admin.js"></script>
         <script type="text/javascript">
         $(document).ready(function(){
             $('input.datepicker').datetimepicker({

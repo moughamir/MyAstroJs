@@ -106,9 +106,9 @@ $sexe = str_replace('femme', 'F', $sexe);
 $prenom = isset($param['prenom']) ? $param['prenom'] : false;
 $test_prenom = trim($prenom, ' ');
 if(empty($test_prenom)){
-//    $err['prenom'] = 'Merci dʼindiquer votre prénom';
+    $err['prenom'] = 'Merci dʼindiquer votre prénom';
 } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-//    $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
+    $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
 }
 unset($test_prenom);
 
@@ -144,7 +144,9 @@ if($tel_needed && !$tel) { // Téléphone requis mais non remplis
 } elseif($tel) { // Téléphone remplis
     if ($pays){
         // Vérification du format
-        if(!preg_match("#(0{5,}|1{5,}|2{5,}|3{5,}|4{5,}|5{5,}|6{5,}|7{5,}|8{5,}|9{5,}|1234{1,}|(01){5,}|(02){5,}|(03){5,}|(04){5,}|(05){5,}|(06){5,}|(07){5,}|(08){5,}|(09){5,})#", $tel)){
+        $test_baseformat = preg_match("#^[0-9]{5,}$#", $tel);
+        $test_motif = preg_match("#(0{5,}|1{5,}|2{5,}|3{5,}|4{5,}|5{5,}|6{5,}|7{5,}|8{5,}|9{5,}|1234{1,}|(01){5,}|(02){5,}|(03){5,}|(04){5,}|(05){5,}|(06){5,}|(07){5,}|(08){5,}|(09){5,})#", $tel);
+        if($test_baseformat && !$test_motif){
             // Si et seulement si on a pas de motifs qui se répètent, alors on check le format / pays.
             $phoneCheck = checkPhoneNumber($tel, $pays);
             if($phoneCheck['error'] != NULL && $phoneCheck['error'] != 'NULL'){
@@ -258,7 +260,7 @@ if(empty($err)){
             $post_data['myastroId'] = $idindex;
         }
         $kgestion_insert = $kgestion->insertUser($post_data);
-        if (!$kgestion_insert->success){
+        if(!$kgestion_insert->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
