@@ -2683,9 +2683,8 @@ body {
 .FormContainer-Submit {
   background-color: #1BEBDA;
   color: #454545;
-  border: none;
-  -webkit-transition: all 0.5s ease-in;
   border: 2px solid #1BEBDA;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in; }
   .FormContainer-Submit:hover {
     color: #1BEBDA;

@@ -273,9 +273,8 @@ body {
 .FormContainer-Submit {
     background-color: $turquoise;
     color: $grey;
-    border: none;
+    border:2px solid $turquoise;
     transition: all 0.5s ease-in;
-    border:2px solid $turquoise; 
     
     &:hover{
         color: $turquoise; 

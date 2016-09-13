@@ -10,19 +10,19 @@
 
         <base href="<?php echo $baseSiteAdmin; ?>" />
 
-        <link rel="stylesheet" href="<?php echo $baseSiteAdmin; ?>css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $baseSiteAdmin; ?>css/bootstrap-switch.min.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $baseSiteAdmin; ?>css/bootstrap-dataTable.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo $baseSiteAdmin; ?>css/jquery.datetimepicker.css" type="text/css" />
-        <link rel="stylesheet" href="<?= ROOT_URL ?>/css/datepicker.css" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="<?= ROOT_URL ?>/yyadmin/css/jquery.jqplot.min.css" />
-        <link rel="stylesheet" type="text/css" href="<?= ROOT_URL ?>/yyadmin/css/chosen.min.css" />
-        <link rel="stylesheet" type="text/css" href="<?= ROOT_URL ?>/yyadmin/css/ace-switch.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap-switch.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap-dataTable.css" type="text/css" />
+        <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" />
+        <link rel="stylesheet" href="../css/datepicker.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.jqplot.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/chosen.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/ace-switch.css" />
         <!--<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />-->
-        <link rel="stylesheet" href="<?php echo $baseSiteAdmin; ?>css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
 
         <!-- JAVASCRIPTS -->
-        <script type="text/javascript" src="<?= ROOT_URL ?>/js/jquery-1.11.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.js"></script>
     </head>
     
     <body>
