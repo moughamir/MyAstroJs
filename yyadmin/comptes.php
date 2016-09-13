@@ -77,7 +77,7 @@ if($added == true){
 }
 ?>
 <a href="#" id="toggle-form-user"><i class="glyphicon glyphicon-user"></i>Créer un compte</a>
-<div class="form-user <?= (isset($_POST['submit']) && !$added ) ? '' : 'hidden' ?>">
+<div class="form-user">
 	<?php
 		if(!empty($error)){
 			echo '<div class="alert alert-danger">';
