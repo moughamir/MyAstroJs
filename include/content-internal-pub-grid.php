@@ -25,6 +25,36 @@
             'img'   => 'compatibilite-amoureuse-feminine.jpg',
             'desc'  => 'Le calcul de la compatibilité amoureuse gratuit est une information précieuse afin de savoir si vous et votre ami êtes faits l’un pour l’autre. La lecture de la position des astres de vos deux horoscopes donne des indications sur la viabilité et la bonne santé de votre couple.'
         ],
+        'compatibilite-amoureuse-pour-les-femmes-horoscope' => [
+            'titre' => 'La compatibilité amoureuse avec votre partenaire',
+            'url'   => 'compatibilite-amoureuse-pour-les-femmes',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'Découvrez votre compatibilité amoureuse et vos affinités avec votre partenaire grâce à l’horoscope gratuit MyAstro, vos signes astrologiques sont-ils compatibles ou opposés ? Les planètes ne mentent jamais et vous apportent des réponses précises.'
+        ],
+        'compatibilite-amoureuse-pour-les-femmes-horoscope-jour' => [
+            'titre' => 'La compatibilité amoureuse avec votre partenaire',
+            'url'   => 'compatibilite-amoureuse-pour-les-femmes',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'L’horoscope gratuit de votre journée ou à plus long terme. Par exemple : vérifier l’affinité et la concordance de caracatères avec votre partenaire. C’est une chose essentielle lorsque vous décidez de cheminer avec celui ou celle qui sera intime. L’harmonie sera-t-elle au RDV ? Ne prenez pas de risques.'
+        ],
+        'compatibilite-amoureuse-pour-les-femmes-capricorne' => [
+            'titre' => 'La compatibilité amoureuse avec votre partenaire',
+            'url'   => 'compatibilite-amoureuse-pour-les-femmes',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'La compatibilité amoureuse permet à la personne Capricorne en couple de mesurer ses affinités avec son partenaire en fonction de leurs signes astrologiques et à la personne Capricorne célibataire de savoir avec quels signes elle a le plus de chances.'
+        ],
+        'compatibilite-amoureuse-pour-les-femmes-gemeaux' => [
+            'titre' => 'La compatibilité amoureuse avec votre partenaire',
+            'url'   => 'compatibilite-amoureuse-pour-les-femmes',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'Le Gémeaux s’attache très facilement et parfois à des personnes avec lesquelles aucune relation solide et durable n’est envisageable… Vos signes astrologiques sont-ils vraiment compatibles ? La réponse avec la compatibilité amoureuse MyAstro.'
+        ],
+        'compatibilite-amoureuse-pour-les-femmes-belier' => [
+            'titre' => 'La compatibilité amoureuse avec votre partenaire',
+            'url'   => 'compatibilite-amoureuse-pour-les-femmes',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'Le Bélier ne supporte pas d’être célibataire, cette tendance à se jeter dans les bras des mauvaises personnes ne lui rend pas service. Avec la compatibilité amoureuse, assurez-vous de savoir si cette fois vos signes astrologiques sont vraiment compatibles.'
+        ],
         'compatibilite-amoureuse-pour-les-hommes' => [
             'titre' => 'Compatibilité amoureuse hommes',
             'url'   => 'compatibilite-amoureuse-pour-les-hommes',
@@ -37,23 +67,125 @@
             'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
             'desc'  => 'La compatibilité amoureuse pour les hommes vous donnera la possibilité de savoir si votre amie est astrologiquement compatible avec vous. S’il s’avère que vous êtes faits l’un pour l’autre, vous avez de longues années de bonheur devant vous.'
         ],
+        'compatibilite-amoureuse-pour-les-hommes-horoscope' => [
+            'titre' => 'Compatibilité amoureuse hommes',
+            'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+            'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+            'desc'  => 'Votre compagne et vous êtes-vous faits l’un pour l’autre ? Le seul moyen fiable de le savoir est de découvrir si vous êtes compatibles à partir de vos signes astrologiques et donc de vos personnalités : faites confiance à l’horoscope gratuit de comptabilité amoureuse MyAstro pour votre couple.'
+        ],
+        'compatibilite-amoureuse-pour-les-hommes-horoscope-jour' => [
+            'titre' => 'Compatibilité amoureuse hommes',
+            'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+            'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+            'desc'  => 'Elle est belle, charmante, charmeuse et vous êtes comme envoûté. Vérifiez gratuitement la compatibilité amoureuse de votre muse. Au plus vous réagirez tôt, au moins vous souffrirez.'
+        ],
+        'compatibilite-amoureuse-pour-les-hommes-capricorne' => [
+            'titre' => 'Compatibilité amoureuse hommes',
+            'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+            'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+            'desc'  => 'En tant que Capricorne, vous appréciez les relations sérieuses et vous demandez si votre couple peut durer. La compatibilité amoureuse pour les hommes va vous aider à identifier les failles et les forces de votre relation, vous ferez ensuite le bon choix !'
+        ],
+        'compatibilite-amoureuse-pour-les-hommes-gemeaux' => [
+            'titre' => 'Compatibilité amoureuse hommes',
+            'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+            'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+            'desc'  => 'Certes, l’homme Gémeaux est compliqué en amour, mais aujourd’hui vous pouvez vous assurer de votre compatibilité avec votre bien-aimée sur MyAstro : êtes-vous vraiment faits l’un pour l’autre sur le long terme? Les astres vous le diront immédiatement !'
+        ],
+        'compatibilite-amoureuse-pour-les-hommes-belier' => [
+            'titre' => 'Compatibilité amoureuse hommes',
+            'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+            'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+            'desc'  => 'Fonceur et ambitieux, l’homme Bélier souffre de ses perpétuelles erreurs en amour. Si vos histoires ne marchent jamais, votre signe astrologique est peut-être responsable. La compatibilité pour les hommes MyAstro vous éclaire sur la compatibilité de votre signe !'
+        ],
         'votre-personnalite-astrologique' => [
             'titre' => 'Découvrez votre personnalité astrologique',
             'url'   => 'votre-personnalite-astrologique',
             'img'   => 'votre-personnalite-astrologique.jpg',
-            'desc'  => ''
+            'desc'  => 'Avec l’aide de nos experts, découvrez votre portrait astrologique gratuitement et connaissez-vous vous-même sur le bout des doigts. Cela vous permettra de prendre des décisions, autant au quotidien que sur le long terme, qui vous conviennent.'
+        ],
+        'votre-personnalite-astrologique-horoscope' => [
+            'titre' => 'Découvrez votre personnalité astrologique',
+            'url'   => 'votre-personnalite-astrologique',
+            'img'   => 'votre-personnalite-astrologique.jpg',
+            'desc'  => 'De nos jours la personnalité a une part importante dans la vie de tous les jours, prenez le temps chaque semaine d’analyser votre personnalité astrologique personnalisée. Celle-ci fluctue tout le temps et cela influe sur notre comportement.'
+        ],
+        'votre-personnalite-astrologique-capricorne' => [
+            'titre' => 'Découvrez votre personnalité astrologique',
+            'url'   => 'votre-personnalite-astrologique',
+            'img'   => 'votre-personnalite-astrologique.jpg',
+            'desc'  => 'Toutes les facettes de votre personnalité sont liées à votre signe astrologique Capricorne, redécouvrez-vous à travers l’astrologie personnalité MyAstro, une parfaite connaissance de votre nature vous valorisera sur le plan relationnel, professionnel etc.'
+        ],
+        'votre-personnalite-astrologique-gemeaux' => [
+            'titre' => 'Découvrez votre personnalité astrologique',
+            'url'   => 'votre-personnalite-astrologique',
+            'img'   => 'votre-personnalite-astrologique.jpg',
+            'desc'  => 'Comme le montre l’astrologie personnalité MyAstro, la nature du Gémeaux est grandement influencée par son signe du zodiaque : vous saurez tout sur vos atouts, votre caractère, vos aspirations, faites confiance aux astres pour vous connaître !'
+        ],
+        'votre-personnalite-astrologique-belier' => [
+            'titre' => 'Découvrez votre personnalité astrologique',
+            'url'   => 'votre-personnalite-astrologique',
+            'img'   => 'votre-personnalite-astrologique.jpg',
+            'desc'  => 'Vous êtes du signe Bélier, découvrez votre astrologique personnalité réalisé par les experts MyAstro : votre nature, vos forces, vos faiblesses, vos besoins… Vous aurez enfin un regard objectif sur vous-même, une opportunité dont tout le monde rêverait.'
         ],
         'portrait-astrologique-feminin' => [
             'titre' => 'Votre profil astrologique féminin',
             'url'   => 'portrait-astrologique-feminin',
             'img'   => 'portrait-astrologique-feminin.jpg',
-            'desc'  => ''
+            'desc'  => 'Connaître votre portrait astrologique féminin vous permettra d’avoir une vision de votre vie totalement différente de celle que vous connaissiez jusqu’à aujourd’hui. Grâce à cela, vous pourrez confortablement travailler sur votre développement personnel et vivre pleinement une vie que vous maîtrisez.'
+        ],
+        'portrait-astrologique-feminin-capricorne' => [
+            'titre' => 'Votre profil astrologique féminin',
+            'url'   => 'portrait-astrologique-feminin',
+            'img'   => 'portrait-astrologique-feminin.jpg',
+            'desc'  => 'Votre signe astrologique Capricorne en dit long sur vous-même, vos atouts, vos attitudes, votre caractère, l’image que vous renvoyez… Découvrez votre portrait astrologique féminin en 8 étapes sur MyAstro et laissez-vous surprendre par l’astrologie.'
+        ],
+        'portrait-astrologique-feminin-gemeaux' => [
+            'titre' => 'Votre profil astrologique féminin',
+            'url'   => 'portrait-astrologique-feminin',
+            'img'   => 'portrait-astrologique-feminin.jpg',
+            'desc'  => 'Vous n’arrivez parfois pas à comprendre vos réactions, votre comportement, vos craintes qui vous empêchent d’avancer dans la vie ? Avec le portrait astrologique Gémeaux féminin MyAstro, vous aurez toutes les explications à votre nature complexe.'
+        ],
+        'portrait-astrologique-feminin-belier' => [
+            'titre' => 'Votre profil astrologique féminin',
+            'url'   => 'portrait-astrologique-feminin',
+            'img'   => 'portrait-astrologique-feminin.jpg',
+            'desc'  => 'Qui pourrait mieux vous connaître que vous-même ? Les astres. Les experts voyance MyAstro ont concocté votre portrait astrologique féminin Bélier, vous dévoilent les secrets de votre personnalité et vous permettent d’avoir confiance en vous durablement.'
+        ],
+        'portrait-astrologique-feminin-horoscope' => [
+            'titre' => 'Votre profil astrologique féminin',
+            'url'   => 'portrait-astrologique-feminin',
+            'img'   => 'portrait-astrologique-feminin.jpg',
+            'desc'  => 'Miroir, oh mon beau miroir suis-je la plus belle ? Oui il est important pour nous les femmes de faire chaque semaine son portrait astrologique. MyAstro vous y aide gratuitement car il estime que c’est important. Socrate nous invite à nous connaitre nous même pour connaitre les Dieux et l’univers.'
         ],
         'tarot-quotidien' => [
             'titre' => 'TAROT QUOTIDIEN',
             'url'   => 'tarot-quotidien',
             'img'   => 'tarot-quotidien.jpg',
-            'desc'  => 'Aucune journée ne se ressemble et cʼest la raison pour laquelle Myastro vous propose une lecture de votre horoscope quotidien gratuitement rapide et efficace. Afin pour vous fournir toutes les réponses dont vous avez besoin de manière instantannée.'
+            'desc'  => 'Aucune journée ne se ressemble et cʼest la raison pour laquelle Myastro vous propose une lecture de votre horoscope quotidien gratuitement rapide et efficace. Afin de vous fournir toutes les réponses dont vous avez besoin de manière instantannée.'
+        ],
+        'tarot-quotidien-horoscope' => [
+            'titre' => 'TAROT QUOTIDIEN',
+            'url'   => 'tarot-quotidien',
+            'img'   => 'tarot-quotidien.jpg',
+            'desc'  => 'Le tarot journalier vous permettra, grâce à un tirage de cartes et leur interprétation, de pouvoir anticiper au quotidien les évènements qui vous attendent dans la journée. Vivez-la donc avec sérénité tout en faisant confiance à une expertise qui existe depuis plusieurs siècles : le Tarot.'
+        ],
+        'tarot-quotidien-capricorne' => [
+            'titre' => 'TAROT QUOTIDIEN',
+            'url'   => 'tarot-quotidien',
+            'img'   => 'tarot-quotidien.jpg',
+            'desc'  => 'Ne commencez pas la journée sans avoir tiré les cartes de votre Tarot quotidien MyAstro, en deux clics vous obtenez les prédictions du jour : amour, argent, travail, santé… Mettez du positif dans votre vie de Capricorne grâce aux conseils du tarot !'
+        ],
+        'tarot-quotidien-gemeaux' => [
+            'titre' => 'TAROT QUOTIDIEN',
+            'url'   => 'tarot-quotidien',
+            'img'   => 'tarot-quotidien.jpg',
+            'desc'  => 'Les cartes du Tarot quotidien MyAstro ont le pouvoir de prédire les événements qui vont rythmer votre journée en bien ou en mal : une grande nouvelle, une décision, une trahison, un accident… Le moyen idéal pour appréhender chaque jour paisiblement !'
+        ],
+        'tarot-quotidien-belier' => [
+            'titre' => 'TAROT QUOTIDIEN',
+            'url'   => 'tarot-quotidien',
+            'img'   => 'tarot-quotidien.jpg',
+            'desc'  => 'Le tarot quotidien MyAstro doit être un rituel matinal pour être efficace, il vous garantit une journée positive et agréable en vous indiquant les pièges à éviter : vous pourrez saisir les chances qui s’offrent à vous telles que des promotions, des opportunités etc !'
         ],
         'tarot-hebdomadaire' => [
             'titre' => 'TAROT HEBDOMADAIRE',
@@ -61,17 +193,71 @@
             'img'   => 'tarot-hebdomadaire.jpg',
             'desc'  => 'Depuis quelques mois, vous nʼarrivez pas à trouver de réponses à vos questions. Vous souhaitez savoir ce qui se profile dans votre avenir et ne savez pas dans quelle direction vous tourner. Faites confiance à Myastro et bénéficiez de solutions durables.'
         ],
+        'tarot-hebdomadaire-horoscope' => [
+            'titre' => 'TAROT HEBDOMADAIRE',
+            'url'   => 'tarot-hebdomadaire',
+            'img'   => 'tarot-hebdomadaire.jpg',
+            'desc'  => 'Le Tarot de la semaine est une technique ancienne qui permet, au travers des cartes d’un jeu, de pouvoir prédire les situations qui se présenteront à vous dans votre futur proche. Nous mettons à votre disposition de réels experts en taromancie qui sauront vous conseiller.'
+        ],
+        'tarot-hebdomadaire-capricorne' => [
+            'titre' => 'TAROT HEBDOMADAIRE',
+            'url'   => 'tarot-hebdomadaire',
+            'img'   => 'tarot-hebdomadaire.jpg',
+            'desc'  => 'Le tarot est une discipline des arts divinatoires très ancienne, pratiquée à partir de cartes significatives, elle vous apporte des indications personnelles, de précieux conseils et vous aide à éviter les difficultés de la semaine grâce au Tarot hebdomadaire myAstro.'
+        ],
+        'tarot-hebdomadaire-gemeaux' => [
+            'titre' => 'TAROT HEBDOMADAIRE',
+            'url'   => 'tarot-hebdomadaire',
+            'img'   => 'tarot-hebdomadaire.jpg',
+            'desc'  => 'Connaître son futur proche est le rêve absolu du Gémeaux, c’est possible avec le Tarot hebdomadaire MyAstro, un jeu de cartes issus des arts divinatoires fiables et précis qui vous accompagnera chaque semaine vers les bons choix.'
+        ],
         'tarot-mensuel' => [
             'titre' => 'TAROT MENSUEL',
             'url'   => 'tarot-mensuel',
             'img'   => 'tarot-mensuel.jpg',
             'desc'  => 'Les mois nʼont rien à voir les uns avec les autres. Sʼil vous est indispensable de savoir comment se prépare le votre, nʼhésitez pas à faire appel à Myastro pour obtenir toutes les réponses à vos questions et appréhender votre mois dans les meilleures conditions.'
         ],
+        'tarot-mensuel-capricorne' => [
+            'titre' => 'TAROT MENSUEL',
+            'url'   => 'tarot-mensuel',
+            'img'   => 'tarot-mensuel.jpg',
+            'desc'  => 'Chaque nouveau mois qui commence est une nouvelle aventure, avec ses hauts et ses bas, au déplaisir du Capricorne qui n’aime pas ce genre de surprise. Heureusement, grâce au Tarot mensuel MyAstro et aux interprétations de votre tirage, vous saurez tout !'
+        ],
+        'tarot-mensuel-gemeaux' => [
+            'titre' => 'TAROT MENSUEL',
+            'url'   => 'tarot-mensuel',
+            'img'   => 'tarot-mensuel.jpg',
+            'desc'  => 'Les combinaisons des cartes tirées par une personne Gémeaux ont des significations spécifiques que vous devez connaître, tirez les cartes du Tarot mensuel MyAstro et découvrez les interprétations de votre tirage, vous commencerez le mois serein.'
+        ],
+        'tarot-mensuel-belier' => [
+            'titre' => 'TAROT MENSUEL',
+            'url'   => 'tarot-mensuel',
+            'img'   => 'tarot-mensuel.jpg',
+            'desc'  => 'Le tarot est une manière fiable de faire le point sur une situation et d’obtenir des réponses à une question précise. Le pouvoir des cartes du tarot mensuel MyAstro est votre meilleur allié pour avancer l’esprit tranquille chaque mois de l’année.'
+        ],
         'tarot-de-couple' => [
             'titre' => 'TAROT DE COUPLE',
             'url'   => 'tarot-de-couple',
             'img'   => 'tarot-couple.jpg',
             'desc'  => 'Le tarot de couple gratuit vous donnera la possibilité de vous postionner afin de savoir si celui que vous convoitez est fait pour vous ou sʼil est indispensable dʼarrêter des investissements dans cette relation de manière immédiate.'
+        ],
+        'tarot-de-couple-capricorne' => [
+            'titre' => 'TAROT DE COUPLE',
+            'url'   => 'tarot-de-couple',
+            'img'   => 'tarot-couple.jpg',
+            'desc'  => 'Les 12 signes astrologiques du zodiaque sont très différents et ne sont pas toujours compatibles, avez-vous vérifié que votre signe Capricorne soit en accord avec celui de votre partenaire ? Découvrez l’avenir de votre couple avec le Tarot du couple MyAstro.'
+        ],
+        'tarot-de-couple-gemeaux' => [
+            'titre' => 'TAROT DE COUPLE',
+            'url'   => 'tarot-de-couple',
+            'img'   => 'tarot-couple.jpg',
+            'desc'  => 'Les arts divinatoires font leurs preuves en amour depuis des siècles, la tarologie est surtout consultée pour des problèmes sentimentaux d’où est né le tarot du couple. En couple, tirez les cartes du Tarot du couple MyAstro, la vérité sur votre relation s’y trouve.'
+        ],
+        'tarot-de-couple-belier' => [
+            'titre' => 'TAROT DE COUPLE',
+            'url'   => 'tarot-de-couple',
+            'img'   => 'tarot-couple.jpg',
+            'desc'  => 'Lorsque le couple du Bélier bat de l’aile, il est prêt à tout pour sauver cette relation s’il estime qu’elle en vaut la chandelle, et une aide est parfois la bienvenue. Le tarot du couple MyAstro est la clef de la porte des vérités sur votre couple, faites lui confiance.'
         ],
         'horoscope-de-la-semaine' => [
             'titre' => 'HOROSCOPE DE LA SEMAINE',
@@ -115,6 +301,7 @@
             'img'   => 'compatibilite-amoureuse-pour-les-femmes.jpg',
             'desc'  => 'Vos chiffres et lettres préférés ont un sens dans votre vie avec la numérologie. Votre numéroscope gratuit vous délivre des informations sur votre personnalité et tout ce qu’il va vous arriver dans un futur proche. Vous pouvez agir sur votre destin !'
         ],
+        
     );
     $ipg_pubs = isset($ipg_pubs) ? $ipg_pubs : array();
 ?>

@@ -322,3 +322,9 @@ aside.w-pictures .thumbnails center {display: none;}
 		padding-top: 150px;
 	}
 }
+
+.widget-title img.signe {
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 18px;
+}

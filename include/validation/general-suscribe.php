@@ -66,7 +66,6 @@ if (isset($param['question_code'])){
             $code = (isset($param['conjoint']) && !empty($param['conjoint'])) ? 'question_2' : 'question_1';
             $question = $questions[$code];
         } else {
-            
             $question['conjoint'] = isset($question['conjoint']) ? $question['conjoint'] : false;
         }
         $question['content'] = isset($param['question_content']) ? $param['question'] : isset($param['question']) ? $param['question'] : null;
@@ -267,16 +266,16 @@ if(empty($err)){
         }
     } else {
         $kgestion_id = false;
-    if($idindex){
-        $post_data['myastroId'] = $idindex;
-    }
-    $kgestion_insert = $kgestion->insertUser($post_data);
-    if (!$kgestion_insert->success){
-        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
-        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
-    } else {
-        $kgestion_id = $kgestion_insert->id;
-    }
+        if($idindex){
+            $post_data['myastroId'] = $idindex;
+        }
+        $kgestion_insert = $kgestion->insertUser($post_data);
+        if(!$kgestion_insert->success){
+            addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        } else {
+            $kgestion_id = $kgestion_insert->id;
+        }
     }
 }
 
@@ -464,7 +463,7 @@ if(empty($err)){
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
     $_SESSION['page']           = $page;
-      
+     
 /* ========================================================================== *
  *                                 REDIRECTION                                *
  * ========================================================================== */
