@@ -68,7 +68,7 @@ if (isset($param['question_code'])){
         } else {
             $question['conjoint'] = isset($question['conjoint']) ? $question['conjoint'] : false;
         }
-        $question['content'] = isset($param['question_content']) ? $param['question'] : isset($param['question']) ? $param['question'] : null;
+        $question['content'] = isset($param['question_content']) ? $param['question_content'] : null;
     } else {
         $err['question_code'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
     }

@@ -94,7 +94,7 @@ a{
 .widget-t .form-part{
     background-color: #e42683;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .widget-t .cnt-right{
@@ -124,7 +124,7 @@ a{
 
 .widget-t #form-w-t{
     margin-top: 18px;
-    width:370px;
+    width: 390px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -236,11 +236,14 @@ margin-top: 5px;
 
 .tarot-left .first-title{
 	width: 230px;
-  margin-left: 223px;
+    margin-left: 223px;
+    margin-bottom: 60px;
 }
 .tarot-left .second-title{
 	width: 180px;
-   margin-left: 238px;
+    margin-top: 10px;
+    margin-left: 238px;
+    margin-bottom: 50px;
 }
 
 .widget-t .text-justify{

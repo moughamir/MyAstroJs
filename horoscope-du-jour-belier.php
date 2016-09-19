@@ -27,7 +27,7 @@
 <html lang="fr">
     <head>
         <title>Horoscope du jour Bélier : Comment appréhender votre journée ? - Myastro</title>
-	<meta name="description" content="Signe Bélier :Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
+	<meta name="description" content="Signe Bélier : Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>
         <link rel="stylesheet" href="css/infobulle.css" />
