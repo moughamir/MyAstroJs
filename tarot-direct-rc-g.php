@@ -127,11 +127,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="tarot-direct-tchat" />
+                                <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="partenaires" value="1" />  
+                                <input type="hidden" name="partenaires" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>

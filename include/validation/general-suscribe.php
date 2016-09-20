@@ -453,7 +453,15 @@ if(empty($err)){
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
     $_SESSION['page']           = $page;
-      
+
+/* ========================================================================== *
+ *                           CONVERSION INSTANTANÉE                           *
+ * ========================================================================== */
+
+    if(isset($param['convertir'])){
+        include('../include/conversion/reflexcache.php');
+    }
+    
 /* ========================================================================== *
  *                                 REDIRECTION                                *
  * ========================================================================== */
@@ -471,6 +479,13 @@ if(empty($err)){
                 && !isset($_COOKIE['tchat'] ))
             {
                 $redirect_url = 'tchat';
+            }
+        } elseif($dri == "tarot-en-direct/offre-gratuite"){
+            if(!isset($_COOKIE['offre_tchat_gratuit'])){
+                $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
+                setcookie('offre_tchat_gratuit', '1', time() + 6*24*3600, null, null, false, true);
+            } else {
+                $redirect_url = 'tarot-direct-dri-tog';
             }
         } else {
             $redirect_url = $dri;
