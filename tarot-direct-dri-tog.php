@@ -1,12 +1,11 @@
 <?php
 /* 
-    --------------------------------------
-    --   tarot-direct-dri = POST-MAIL   --
-    --------------------------------------
+    -----------------------------------------
+    --   tarot-direct-dri = POST-LANDING   --
+    -----------------------------------------
 
     Created on : 18 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 include('include/process-dri-postmailing.php');
 ?>
@@ -58,13 +57,21 @@ include('include/process-dri-postmailing.php');
                             <div class="DRI-Form FormContainer-Fields">
                                 <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                     <p class="DRI-Sent">
-                                        Merci, votre demande a bien été prise en compte.<br/>
+                                        Merci, votre demande de rappel a bien été prise en compte.<br/>
                                         <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                     </p>
                                 <?php } else { ?>
-                                <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
-                                <p>Nos voyants répondent à vos questions</p>
-                                <form method="post" class="DRI-FormContainer">
+                                <h2 class="DRI-Form-Title">
+                                    Vous avez déjà bénéficié de l’offre :<br>
+                                    <strong>« 5 minutes de tchat gratuit »</strong>
+                                </h2>
+                                <p>
+                                    Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>
+                                    En attendant, vous pouvez consulter un voyant immédiatement par téléphone.
+                                </p>
+                                <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
+                                <p><strong>Nos voyants répondent à vos questions</strong></p>
+                                <form class="DRI-FormContainer" method="post">
                                     <div class="Fields-Table-Row">   
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
