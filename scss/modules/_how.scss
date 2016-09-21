@@ -72,3 +72,64 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    .How-Wizard {
+        height: auto;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px){
+    .How {
+        text-align: center;
+        &-Header {
+            text-align: left;
+        }
+        &-Wizard {
+            margin-bottom: 4rem;
+            &Item {
+                border-left-width: 2.5rem;
+                &::before {
+                    left: -2.6rem;
+                    border-left-width: 2.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 695px){
+    .How {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 485px){
+    .How-Header {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .How-Wizard {
+        height: auto;
+        width: 100%;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

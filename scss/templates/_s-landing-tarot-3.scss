@@ -126,11 +126,7 @@ body {
 
 /* ------------------------------ TIRAGE TAROT ------------------------------ */
 
-$card-width: 135px;
-$card-height: 240px;
-$overlap: -47px;
-
-@import "../modules/tarot-draw";
+@import "../modules/full-tarot-draw";
 
 
 /* ------------------------------- POP VOYANT ------------------------------- */
