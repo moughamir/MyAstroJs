@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/* 
+    -----------------------------------------
+    --      structure landing tarot 2      --
+    --         formulaire à droite         --
+    -----------------------------------------
+
+    Created on : 21 septembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "../knacss501/knacss";
+
+/* ------------------------------- STRUCTURE -------------------------------- */
+
+body {
+    padding-top: 2rem;
+    font-size: 1.3rem;
+}
+
+.PageWrapper {
+    display: table;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.ContentBand {
+    margin-top: 5.5rem;
+    margin-bottom: 4rem;
+    
+    
+    &-Column {
+        display: table-cell;
+        vertical-align: bottom;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+.ContentBand-Column.Column-Tarot {
+    padding-right: 2rem;
+}
+
+.Column-Form {
+    text-align: right;
+}
+
+@media screen and (max-width: 970px){
+    .WidgetBand {
+        padding-top: 1.5rem;
+    }
+    .ContentBand-Column.WidgetBand-DescText { 
+        width: 100%;
+        padding-right: 0;
+        
+        .ContentBand-ColumnHeader {
+            display: table-cell;
+            vertical-align: top;
+            padding-right: 2rem;
+            text-align: left;
+        }
+        
+        .DescText {
+            display: table-cell;
+        }
+    }
+    .ContentBand-Column.FormBand-Form {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 900px){
+    .ContentBand {
+        margin-top: 3rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .ContentBand {
+        margin-bottom: 3rem;
+        &-Column {
+            display: table;
+            width: 100%;
+            margin: auto;
+        }
+    }
+    .ContentBand-Column.Column-Form {
+        text-align: center;
+    }
+    .ContentBand-Column.Column-Tarot {
+        padding: 2rem;
+        padding-top: 0;
+    }
+}
+@media screen and (max-width: 485px){
+    .PageWrapper {
+        padding: 0;
+    }
+}
+
+/* --------------------------------- HEADER --------------------------------- */
+
+.SiteLogo {
+    display: table-cell;
+    height: 100px;
+    width: 100px;
+    background: grey;
+}
+.PageLogo {
+    display: table-cell;
+    min-height: 80px;
+}
+
+@media screen and (max-width: 600px){
+    .SiteHeader {
+        .SiteLogo, .PageLogo {
+            display: block;
+            width: 90%;
+            margin: auto;
+        }
+    }
+}
+
+/* ---------------------------- CONTENU TEXTUEL ----------------------------- */
+
+.DescText-Title {
+    height: 150px;
+    margin-top: 0;
+    background-color: silver;
+}
+
+.DescText-Content {
+    background: silver;
+    padding: 1.2rem 1.8rem;
+    text-align: left;
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+@import "../modules/column-tarot-draw";
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+@import "../modules/form";
+
+.FormContainer {
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 1.5rem;
+    margin: auto;
+    text-align: left;
+}
+
+@media screen and (max-width: 970px){
+    .FormContainer-Submit {
+        white-space: normal;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .FormContainer-Fields {
+        padding: 0;
+    }
+    .FormContainer-Submit {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 485px){
+    .FormContainer {
+        &-Header {
+            font-size: 2.5rem;
+        }
+        
+        &-Submit {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+    .relationship-status .FormField-TableInputContainer-Cell {
+        display: block;
+        margin-left: 20%;
+        text-align: left;
+    }
+}
+
+/* --------------------------- COMMENT ÇA MARCHE ? -------------------------- */
+
+@import "../modules/how";
+
+.How {
+    display: inline-block;
+    text-align: left;
+}
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+@import "../modules/reassurance";
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteCopyright {
+    text-align: center;
+}
+
+/* ---------------------------------- DRI ----------------------------------- */
+
+.FormContainer.DRI {
+    background-color: transparent;
+    text-align: center;
+}
+
+.DRI {
+    &-Intro {
+        padding: 2rem;
+        background-color: lightgrey;
+        * {
+            margin: 0;
+            font-family: inherit;
+            font-weight: normal;
+        }
+        &-Title {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px dotted;
+            font-size: 2.2rem;
+        }
+        &-Text {
+            font-size: 2rem;
+            color: grey;
+        }
+    }
+    &-Slogan {
+        padding: 1rem 2rem;
+        margin: 0;
+        background-color: grey;
+        color: white;
+        font-size: 2.2rem;
+        font-family: inherit;
+        font-weight: normal;
+    }
+    &-Form {
+        padding: 2rem;
+        background-color: silver;
+    }
+    &-Sent {
+        padding: 2rem;
+        font-family: inherit;
+        font-size: 2rem;
+    }
+}

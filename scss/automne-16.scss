@@ -1,0 +1,360 @@
+/* 
+    ----------------------
+    --    automne-16    --
+    ----------------------
+
+    Created on : 21 septembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "templates/s-landing-tarot-2";
+
+/* Dossier images */
+$img_dir : "../images_landing/automne-16/";
+$background : $img_dir + "bg.jpg";
+$logo : $img_dir + "logo-myastro.png";
+$header : $img_dir + "title.png";
+$psychic : $img_dir + "aline.png";
+$cardback : $img_dir + "cardback.png";
+$formtitle_arrow : $img_dir + "fleche.png";
+$icon_star : $img_dir + "ico-star.png";
+$icon_gift : $img_dir + "ico-gift.png";
+$icon_lock : $img_dir + "ico-lock.png";
+$icon_trophy : $img_dir + "ico-trophy.png";
+$icon_how_form : $img_dir + "how-ico-form.png";
+$icon_how_phone : $img_dir + "how-ico-phone.png";
+
+/* Palette */
+$bg : #FFFCF3;
+$grey : #454545;
+$brown : #543D13;
+$orange : #ED3E09;
+$light-orange : #F17B46;
+$btn-orange : #F64E09;
+$btn-darkorange : #F43B07;
+$card-place : linear-gradient(to bottom, rgba(216, 215, 212, 0.6) 0%, rgba(78, 77, 75, 0.6) 100%);
+$bg-grey-transparent : rgba(81, 71, 70, 0.25);
+$bg-grey : #514746;
+$woman : #F9324D;
+$men : #2BCEDD;
+
+/* ------------------------------- STRUCTURE -------------------------------- */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: $grey;
+    background: url($background) no-repeat center top fixed;
+    background-size: cover;
+}
+
+.ContentBand-Column {
+    vertical-align: middle;
+}
+
+/* --------------------------------- HEADER --------------------------------- */
+
+.SiteLogo {
+    background: url($logo) center no-repeat;
+    background-size: contain;
+    height: 107px;
+    width: 107px;
+}
+
+.PageLogo {
+    display: table-cell;
+    background: url($header) center bottom no-repeat;
+}
+
+@media screen and (max-width: 600px){
+    .SiteHeader .PageLogo {
+        background-size: contain;
+    }
+}
+
+/* ---------------------------- CONTENU TEXTUEL ----------------------------- */
+
+.DescText-Title {
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    color: $orange;
+    
+    &-Legend {
+        text-align: right;
+        font-size: 1.9rem;
+        background: url($psychic) right no-repeat;
+        min-height: 107px;
+        padding-right: 111px;
+    }
+}
+
+.DescText-Content {
+    background: transparent;
+    text-indent: 5rem;
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+.WidgetTarot-Card {
+    overflow: visible;
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        border: none;
+        background-color: transparent;
+        background-image: url($cardback);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+    }
+    /* Animation carte la roue de fortune */
+    &.Flipped[data-result="10"] {
+        -webkit-box-shadow: 0px 0px 12px 4px $orange;
+        box-shadow: 0px 0px 12px 4px $orange;
+    }
+    
+    &.place {
+        background: -webkit-$card-place;
+        background: $card-place;
+        opacity: 0.6;
+        border-radius: 6px;
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.FormContainer {
+    max-width: 450px;
+    padding: 2rem;
+    border: none;
+    background-color: $bg-grey-transparent;
+    
+    &-Header {
+        font-family: 'Ubuntu Condensed';
+        color: $brown;
+        padding-bottom: 3rem; 
+        background: url($formtitle_arrow) no-repeat bottom center;
+    }
+
+    &-Submit {
+        padding: 1rem 4rem;
+        border: none;
+        border-radius: 4rem;
+        background-color: $btn-orange;
+        background: -webkit-linear-gradient(to bottom, $btn-orange 0%, $btn-darkorange 100%);
+        background: linear-gradient(to bottom, $btn-orange 0%, $btn-darkorange 100%);
+        box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.8), inset -2px -2px 2px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-family: 'Ubuntu Condensed';
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        &:hover {
+            box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+    
+.alert {
+    text-align: center;
+    border-radius: 5px;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+.FormField-Label {
+    text-transform: uppercase;
+    
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $men;
+    }
+}
+
+.FormField-Input {
+    border: none;
+    
+    &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
+        outline-width: 0;
+        box-shadow: 0 0 6px -1px $orange;
+        border-color: transparent;
+    }
+}
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+.FormField-InfoPop {
+    color: $brown;
+    border: none;
+    box-shadow: 0 0 6px -1px $brown;
+}
+
+/* ----------------------------- FORMULAIRE DRI ----------------------------- */
+
+.FormContainer.DRI .DRI {
+    &-Intro {
+        background-color: $bg-grey-transparent;
+        font-family: 'Ubuntu Condensed', sans-serif;
+
+        &-Title {
+            color: $orange;
+            text-transform: uppercase;
+        }
+        &-Text {
+            color: $brown;
+        }
+    }
+    &-Slogan {
+        background-color: $light-orange;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        color: white;
+        text-transform: uppercase;
+    }
+    &-Form {
+        padding: 2rem;
+        background-color: $bg-grey;
+        color: white;
+
+        .FormField-Input {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: $grey;
+        }
+    }
+    &-Sent {
+        font-family: 'Ubuntu Condensed', sans-serif;
+
+        strong {
+            font-weight: normal;
+            color: $light-orange;
+        }
+    }
+}
+    
+/* --------------------------- COMMENT ÇA MARCHE ? -------------------------- */
+
+.How-Header {
+    margin-top: 2rem !important;
+    font-weight: normal;
+    font-size: 2.4rem;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+.How-Wizard {
+    border: 0;
+    color: $grey;
+    
+    &Item-Img.form {
+        background: transparent url($icon_how_form) center no-repeat;
+        background-size: contain;
+    }
+    &Item-Img.phone {
+        background: transparent url($icon_how_phone) center no-repeat;
+        background-size: contain;
+    }
+}
+
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.ReassuranceList {
+    background: $bg-grey;
+    color: white;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icon_star) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icon_lock) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($icon_gift) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icon_trophy) center no-repeat;
+    background-size: contain;
+}
+/*
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    .DescText-Title {
+        font-size: 2rem;
+        &-Legend {
+            font-size: 1.7rem;
+        }
+    }
+}
+@media screen and (max-width: 810px) and (min-width: 730px){
+    .DescText-Title {
+        font-size: 1.8rem;
+        &-Legend {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .ContentBand {
+        margin-top: 1rem;
+    }
+    .SiteHeader {
+        margin-bottom: 0;
+        .SiteLogo, .PageLogo {
+            display: block;
+            width: 90%;
+            margin: auto;
+            background-position: center;
+        }
+        .PageLogo {
+            height: 120px;
+        }
+    }
+}
+@media screen and (max-width: 430px){
+    body {
+        background: $bg;
+    }
+    .DescText-Title {
+        font-size: 1.8rem;
+        &-Legend {
+            font-size: 1.5rem;
+        }
+    }
+}
+*/

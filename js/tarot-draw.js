@@ -36,6 +36,7 @@ $(document).ready(function(){
     var cardsCounter = 0;
     var alreadyPicked = [];
     alwaysDraw = shuffle(alwaysDraw);
+    var alwaysDraw_event = false;
     
     // -- animation survol des cartes verso --
     $('#cards-container .notFlipped').hover(
@@ -84,9 +85,9 @@ $(document).ready(function(){
             var nbAlwaysDraw = alwaysDraw.length;
             if(nbAlwaysDraw > 0){
                 if(Math.random() >= (1 - (1/nbCardsToDraw * (currCardCounter + nbAlwaysDraw - 1 )))){
+                    alwaysDraw_event = true;
                     cardNumber = alwaysDraw[0];
                     alwaysDraw.splice(0, 1);
-                    console.log(alwaysDraw);
                 }
             }
             if(cardNumber === 0){
@@ -110,6 +111,11 @@ $(document).ready(function(){
             setTimeout(function(){
                 // indique le résultat quand la carte est retournée
                 card.attr('data-result', cardNumber);
+                // evenement alwaysDraw                    
+                if(alwaysDraw_event){
+                    $(document).trigger('trt_alwaysDraw');
+                    alwaysDraw_event = false;
+                }
                 if ($(window).width() > trt_minSize) { // si version grand format
                     // fixe la position en absolute
                     var position = card.position();

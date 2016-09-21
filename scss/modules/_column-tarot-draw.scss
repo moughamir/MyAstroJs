@@ -1,0 +1,66 @@
+/* 
+    --------------------------------------------------
+    --      module tirage tarot sur une colonne     --
+    --------------------------------------------------
+
+    Created on : 21 septembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+$card-width: 55px;
+$card-height: 105px;
+$overlap: -20px;
+
+@import "tarot-draw";
+
+/* Règles responsive */
+@media screen and (min-width: 970px) and (max-width: 1200px) {
+    .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (min-width: 970px) and (max-width: 1050px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped {
+        display: none;
+    }
+}
+@media screen and (max-width: 880px){
+    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped, .WidgetTarot-Card[data-card="11"].notFlipped, .WidgetTarot-Card[data-card="12"].notFlipped {
+        display: none;
+    }
+    .WidgetTarot-Card.place {
+        margin-right: 0.8rem;
+    }
+}
+@media screen and (max-width: 730px){
+    .WidgetTarot-Card {
+        width: 70px;
+        height: 134px;
+    }
+}
+@media screen and (max-width: 610px){
+    .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="13"].notFlipped, .WidgetTarot-Card[data-card="14"].notFlipped, .WidgetTarot-Card[data-card="15"].notFlipped, .WidgetTarot-Card[data-card="16"].notFlipped, .WidgetTarot-Card[data-card="17"].notFlipped, .WidgetTarot-Card[data-card="18"].notFlipped, .WidgetTarot-Card[data-card="19"].notFlipped, .WidgetTarot-Card[data-card="20"].notFlipped, .WidgetTarot-Card[data-card="21"].notFlipped, .WidgetTarot-Card[data-card="22"].notFlipped {
+        display: none;
+    }
+    
+    .WidgetTarot {
+        &-Card {
+            margin: 0;
+        }
+        &-Result {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 410px){
+    .WidgetTarot-Card {
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+}
+@media screen and (max-width: 360px){
+    .WidgetTarot-Card {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
