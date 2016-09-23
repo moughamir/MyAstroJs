@@ -104,7 +104,6 @@
         <!-- END SCRIPT HEATMAPS UPMYBIZ -->
 </head>
 <body>
-    <?php if($_SERVER['REQUEST_URI'] != "/voyance-gratuite") { ?>
         <nav class="top-menu-2">
             <div class="row-fluid">
                 <div class="navbar navbar-inverse">
@@ -241,7 +240,6 @@
                 </div>
             </div>
         </nav>
-    <?php } ?>
 
     <header>
         <div class="navbar navbar-banner">
