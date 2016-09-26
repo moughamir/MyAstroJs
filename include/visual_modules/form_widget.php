@@ -29,7 +29,7 @@
     
     $page = $_SERVER['PHP_SELF'];
     $flag = in_array($page, array_keys($form_data));
-    $titre = isset($fw_titre) ? $fw_titre : 'Voyance gratuite';
+    $titre = isset($fw_title) ? $fw_title : 'Voyance gratuite';
     
     $questions = array(
         'Amour' => array(

@@ -1,8 +1,9 @@
 $(document).ready(function(){
     var cards = new Array("1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png");
     var shuffled = shuffle(cards);
-    var alreadyPicked = 0 ;
+    var alreadyPicked = 0;
     var w = $(window).width();
+    var c_positionModifier = (typeof positionModifier == "number") ? positionModifier : 0;
 
     if(w > 480){
         $('.paquet img')
@@ -17,7 +18,7 @@ $(document).ready(function(){
             });
     } else {
         $('.paquet img')
-            .mouseenter(function(){ // on descend la carte
+            .mouseenter(function(){ // On descend la carte
                 if(!$(this).data('hasBeenClicked')){
                     $(this).animate({top: "+=5px"}, 150);
                 }
@@ -27,7 +28,7 @@ $(document).ready(function(){
                 }
             });
     }
-
+    
     $('.paquet img').on('click',function(){
         var w = $(window).width();
         if(!$(this).data('hasBeenClicked') && alreadyPicked < 5){
@@ -48,11 +49,11 @@ $(document).ready(function(){
 
             if(w >= 480){
                 if(w > 979){
-                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 135)}, 800);
+                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 135 + c_positionModifier)}, 800);
                 } else if(w >= 800 ){
-                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 136)}, 800);	
+                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 136 + c_positionModifier)}, 800);	
                 } else {
-                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 53)}, 800);
+                    $(this).animate({top: '323', left: (Finalposition.left - Relativeposition.left - 53 + c_positionModifier)}, 800);
                 }
             } else {
                 $(this).animate({width: "70px", height: "125", top: '0', left: Itemposition.left}, 800);

@@ -19,6 +19,24 @@
             'img'   => 'astrologie-gratuite.jpg',
             'desc'  => 'L’astrologie gratuite est aujourd’hui un moyen très simple de connaître vos prédictions qu’elles soient amoureuses, d’ordre financières… Pourquoi attendre ? Utiliser notre service gratuitement.'
         ],
+        'astrologie-gratuite-tarot' => [
+            'titre' => 'Astrologie gratuite',
+            'url'   => 'astrologie-gratuite',
+            'img'   => 'astrologie-gratuite.jpg',
+            'desc'  => 'Avec l’astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.'
+        ],
+        'astrologie-gratuite-couple' => [
+            'titre' => 'Astrologie gratuite',
+            'url'   => 'astrologie-gratuite',
+            'img'   => 'astrologie-gratuite.jpg',
+            'desc'  => 'Le couple a sa propre alchimie, son énergie composante des deux individus. Vous pouvez faire votre astrologie gratuite avec MyAstro pour réaliser la composante idoine des deux individualités qui s’aiment souffrent et partagent leur bonheur.'
+        ],
+        'astrologie-gratuite-tarot-quotidien' => [
+            'titre' => 'Astrologie gratuite',
+            'url'   => 'astrologie-gratuite',
+            'img'   => 'astrologie-gratuite.jpg',
+            'desc'  => 'Anticipez l’avenir proche avec l’astrologie gratuite MyAstro et découvrez ce que les planètes et le système solaire ont prévu pour vous : argent, rencontre, rupture, conflit, mariage, projets… Prenez connaissance de votre destin et avancez l’esprit tranquille.'
+        ],
         'compatibilite-amoureuse-feminine' => [
             'titre' => 'Compatibilité amoureuse féminine',
             'url'   => 'compatibilite-amoureuse-feminine',
@@ -36,6 +54,24 @@
             'url'   => 'compatibilite-amoureuse-feminine',
             'img'   => 'compatibilite-amoureuse-feminine.jpg',
             'desc'  => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Grâce au calcul de compatibilité amoureuse gratuit de Myastro, ayez une vue précise sur vos affinités avec le signe astrologique de votre homme et bénéficiez de conseils si la situation ne se présente pas bien.'
+        ],
+        'compatibilite-amoureuse-feminine-tarot' => [
+            'titre' => 'Compatibilité amoureuse féminine',
+            'url'   => 'compatibilite-amoureuse-feminine',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Quelles seront vos affinités avec l’homme de vos rêves et votre couple peut-il marcher. Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite ?'
+        ],
+        'compatibilite-amoureuse-feminine-couple' => [
+            'titre' => 'Compatibilité amoureuse féminine',
+            'url'   => 'compatibilite-amoureuse-feminine',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'La femme fonctionne généralement sur son côté "yin", l’homme quant à lui utilise le côté "yang". Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine "yin-yang" MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.'
+        ],
+        'compatibilite-amoureuse-feminine-tarot-quotidien' => [
+            'titre' => 'Compatibilité amoureuse féminine',
+            'url'   => 'compatibilite-amoureuse-feminine',
+            'img'   => 'compatibilite-amoureuse-feminine.jpg',
+            'desc'  => 'Un homme est entré dans votre vie, mais cette relation peut-elle évoluer vers le parfait amour ? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir ?'
         ],
         'compatibilite-amoureuse-pour-les-femmes' => [
             'titre' => 'La compatibilité amoureuse avec votre partenaire',
@@ -355,6 +391,18 @@
             'img'   => 'tarot-couple.jpg',
             'desc'  => 'Les tarots peuvent être tirés pour une personne mais aussi pour une association d’individus. C’est bien de cela que l’on parle pour un couple. Chacun amène sa pierre à l’atmosphère générale du couple. Le tarot de couple peut cependant être demandé par l’un des individus le composant, ça reste « fair ». Cela lui donne un avantage car il captera des flashs du futur.'
         ],
+        'horoscope-du-jour' => [
+            'titre' => 'Découvrez votre horoscope du jour',
+            'url'   => 'horoscope-du-jour',
+            'img'   => 'horoscope-de-la-semaine.jpg',
+            'desc'  => 'Votre horoscope du jour gratuit vous permet de savoir quotidiennement sur le plan professionnel, sentimental et financier. C’est une information précieuse pour pouvoir aborder votre journée en toute confiance et sans aucun doute.'
+        ],
+        'horoscope-du-jour-tarot' => [
+            'titre' => 'Découvrez votre horoscope du jour',
+            'url'   => 'horoscope-du-jour',
+            'img'   => 'horoscope-de-la-semaine.jpg',
+            'desc'  => 'L’horoscope du jour vous évite les faux pas, c’est un guide qui signale les tendances et les embûches potentielles. Exigez votre horoscope du jour MyAstro vous y engage.'
+        ],
         'horoscope-de-la-semaine' => [
             'titre' => 'HOROSCOPE DE LA SEMAINE',
             'url'   => 'horoscope-de-la-semaine',
@@ -409,6 +457,18 @@
             'img'   => 'horoscope-2015.png',
             'desc'  => 'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel 2016. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.'
         ],
+        'horoscope-annee-tarot' => [
+            'titre' => 'Votre horoscope 2016',
+            'url'   => 'horoscope-2016',
+            'img'   => 'horoscope-2015.png',
+            'desc'  => 'Quelles sont les tendances planétaires qui vous sont réservées pour cette année 2016 ? Avec l’horoscope 2016 gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.'
+        ],
+        'horoscope-annee-tarot-mensuel' => [
+            'titre' => 'Votre horoscope 2016',
+            'url'   => 'horoscope-2016',
+            'img'   => 'horoscope-2015.png',
+            'desc'  => 'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope 2016 avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !'
+        ],
         'voyance-par-chat' => [
             'titre' => 'Voyance gratuite par tchat',
             'url'   => 'voyance-par-chat',
@@ -439,7 +499,48 @@
             'img'   => 'compatibilite-amoureuse-pour-les-femmes.jpg',
             'desc'  => 'Vos chiffres et lettres préférés ont un sens dans votre vie avec la numérologie. Votre numéroscope gratuit vous délivre des informations sur votre personnalité et tout ce qu’il va vous arriver dans un futur proche. Vous pouvez agir sur votre destin !'
         ],
-        
+        'tarot-de-marseille' => [
+            'titre' => 'Tarot de Marseille',
+            'url'   => 'tarot-de-marseille',
+            'img'   => 'tarot-de-marseille.png',
+            'desc'  => ''
+        ],
+        'tarot-oui-ou-non' => [
+            'titre' => 'Tarot Oui ou Non',
+            'url'   => 'tarot-oui-ou-non',
+            'img'   => 'tarot-oui-non.png',
+            'desc'  => ''
+        ],
+        'tarot-de-l-amour' => [
+            'titre' => 'Tarot de l’Amour',
+            'url'   => 'tarot-de-l-amour',
+            'img'   => 'tarot-amour.png',
+            'desc'  => ''
+        ],
+        'tirage-tarot-gratuit' => [
+            'titre' => 'Tirage tarot gratuit',
+            'url'   => 'tirage-tarot-gratuit',
+            'img'   => 'tirage-tarot-gratuit.png',
+            'desc'  => ''
+        ],
+        'tarot-gratuit' => [
+            'titre' => 'Tarot gratuit',
+            'url'   => 'tarot-gratuit',
+            'img'   => 'tarot.png',
+            'desc'  => ''
+        ],
+        'tarot-persan' => [
+            'titre' => 'Tarot Persan',
+            'url'   => 'tarot-persan',
+            'img'   => 'tarot-persan.png',
+            'desc'  => ''
+        ],
+        'tarot-de-couple' => [
+            'titre' => 'Tarot de couple',
+            'url'   => 'tarot-de-couple',
+            'img'   => 'tarot-couple.png',
+            'desc'  => ''
+        ],
     );
     $ipg_pubs = isset($ipg_pubs) ? $ipg_pubs : array();
 ?>

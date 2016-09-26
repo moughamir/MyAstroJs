@@ -28,6 +28,8 @@
     <input type="hidden" name="source" value="<?= $source ?>" />
     <input type="hidden" name="method" value="<?= $method ?>" />
     <input type="hidden" name="support" value="<?= $support ?>" />
+    <input type="hidden" name="site" value="myastro.fr" />
+    <input type="hidden" name="affiliation" value="naturel" />
     <div class="vt2">
         <label class="label-left">Ma question :</label>
         <select class="cnt-right cnt-qt" name="question_code" id="theme_id" required>

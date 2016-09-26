@@ -12,6 +12,8 @@
     <input type="hidden" name="source" value="<?= $source ?>" />
     <input type="hidden" name="method" value="<?= $method ?>" />
     <input type="hidden" name="support" value="<?= $support ?>" />
+    <input type="hidden" name="site" value="myastro.fr" />
+    <input type="hidden" name="affiliation" value="naturel" />
     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
     <div class="form-w-one">
         <input type="text" placeholder="Mon Prénom" id="name" name="prenom" required />
