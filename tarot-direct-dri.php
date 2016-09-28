@@ -62,9 +62,9 @@ include('include/process-dri-postmailing.php');
                                         <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                     </p>
                                 <?php } else { ?>
-                                <form method="post">
-                                    <h2 class="form-title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
-                                    <p>Nos voyants répondent à vos questions</p>
+                                <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
+                                <p>Nos voyants répondent à vos questions</p>
+                                <form method="post" class="DRI-FormContainer">
                                     <div class="Fields-Table-Row">   
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">

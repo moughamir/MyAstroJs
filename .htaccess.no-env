@@ -237,12 +237,10 @@ Header set Cache-Control "max-age=600, private, must-revalidate"
 Header unset ETag  
 FileETag none 
 
-#ErrorDocument 404 http://www.myastro.fr/404.php
-#ErrorDocument 403 http://www.myastro.fr/403.php
-#ErrorDocument 401 http://www.myastro.fr/401.php
-#ErrorDocument 500 http://www.myastro.fr/500.php
-ErrorDocument 404 http://%{ENV:MYASTRO_ROOT_URL}/404
-
+ErrorDocument 404 /404.php
+ErrorDocument 403 /403.php
+ErrorDocument 401 /401.php
+ErrorDocument 500 /500.php
 
 RewriteCond %{QUERY_STRING} categorie=voyance-par-telephone
 RewriteRule index.php http://www.myastro.fr/voyance-par-telephone? [R=301]

@@ -273,11 +273,10 @@ body {
 .FormContainer-Submit {
     background-color: $turquoise;
     color: $grey;
-    border: none;
+    border:2px solid $turquoise;
     transition: all 0.5s ease-in;
     
     &:hover{
-        border:2px solid $turquoise; 
         color: $turquoise; 
         background-color:transparent;
     }
@@ -405,40 +404,56 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* ---------------------------------- DRI-POSTMAIL --------------------------------- */
-.form-title{
-    color: $bleu;
-    background-color: white;
-    text-align: center;
-    font-family: 'Lobster';
-    padding: 1rem 0;
-    hyphens: none;
-    
-    & + p{
-        text-align: center;
-        display: inline-block;
-        padding: 1rem 0;
-        font-weight: bold;
-        width: 100%;
-        font-size: 1.80rem;
-        margin-bottom: 2rem;
-    }
-}
-
-.DRI{
+.DRI {
     &-Slogan {
-        color:$turquoise;
+        width: 80%;
+        margin: 3rem auto 0;
+        padding: 1rem;
         border: 2px solid $turquoise;
         text-align: center;
-        padding: 1rem;
-        font-size:2rem;
-        width: 80%;
-        margin:3rem auto 0;
+        font-size: 2rem;
+        color: $turquoise;
         hyphens: none;
     }
     
-
     &-Sent {
         text-align: center;
+    }
+    
+    &-Form {
+        & p {
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        &-Title {
+            padding: 1rem 0;
+            background-color: white;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            color: $bleu;
+            hyphens: none;
+
+            & strong {
+                font-weight: normal;
+                color: $turquoise;
+            }
+        }
+
+        &-Subtitle {
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            font-size: 2.8rem;
+            color: $rose;
+        }
+        
+        &Container {
+            margin-top: 2rem;
+        }
     }
     
     .FormContainer-Submit.btn-rose{

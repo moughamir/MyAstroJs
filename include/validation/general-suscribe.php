@@ -463,13 +463,21 @@ if(empty($err)){
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
     $_SESSION['page']           = $page;
-     
+
+/* ========================================================================== *
+ *                           CONVERSION INSTANTANÉE                           *
+ * ========================================================================== */
+
+    if(isset($param['convertir'])){
+        include('../include/conversion/reflexcache.php');
+    }
+    
 /* ========================================================================== *
  *                                 REDIRECTION                                *
  * ========================================================================== */
 
-    $dri  = isset($param['dri']) ? $param['dri'] : false;
-    $dri2 = isset($param['dri2']) ? $param['dri2'] : 'merci-voyance';
+    $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
+    $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
     
     $redirect_url    = false;
     $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] : 'url';
@@ -482,6 +490,13 @@ if(empty($err)){
             {
                 $redirect_url = 'tchat';
             }
+        } elseif($dri == "tarot-en-direct/offre-gratuite"){
+            if(!isset($_COOKIE['offre_tchat_gratuit'])){
+                $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
+                setcookie('offre_tchat_gratuit', '1', time() + 6*24*3600, null, null, false, true);
+            } else {
+                $redirect_url = 'tarot-direct-dri-tog';
+            }
         } else {
             $redirect_url = $dri;
         }
@@ -491,7 +506,11 @@ if(empty($err)){
         $redirect_url = $dri2;
     }
     
-    $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    if(!preg_match('#^http.*#', $redirect_url)){
+        $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    }
+    
+    $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
 
     die(json_encode(array($redirect_method => $redirect_url)));
        

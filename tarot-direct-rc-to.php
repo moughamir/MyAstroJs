@@ -7,6 +7,7 @@
     Created on : 25 mai 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+$dri = "https://voyance-en-direct.tv/tarot-en-direct/saisie-cb?email=[EMAIL]";
 $cards_dir = 'tarot/cartes/original-grand/';
 $questions = array (
         'Amour' => array(
@@ -135,11 +136,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="tarot-direct-tchat" />
+                                <input type="hidden" name="dri" value="<?= urlencode($dri) ?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="partenaires" value="1" />  
+                                <input type="hidden" name="partenaires" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
