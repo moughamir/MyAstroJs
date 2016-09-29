@@ -630,41 +630,40 @@ function getSquareAd($show = true)
 }
 
 function getConsultationPerMinutsAd($show = true){
-  $path = ROOT_PATH . '/images/bannieres/consult10/';
-  $url  = ROOT_URL  . '/images/bannieres/consult10/';
-  $files = array_diff(scandir($path), array('.','..'));
-  shuffle($files);
+    $path = ROOT_PATH . '/images/bannieres/consult10/';
+    $url  = '/images/bannieres/consult10/';
+    $files = array_diff(scandir($path), array('.','..'));
+    shuffle($files);
 
-  if($show) {
-    echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
-  } else {
-    return $files[0];
-  }
+    if($show){
+        echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
+    } else {
+        return $files[0];
+    }
 }
 
 /* Ajout le 20/08/2014 pour que le wigdet voyant de la page /voyance-par-telephone/ renvoi à la page du voyant correspondant*/
 function getVoyantScryscraperVPT($show = true){
-  if($_SERVER['HTTP_REFERER'] != 'http://'.ROOT_URL.'/voyance-par-telephone-2'){
-    $path = ROOT_PATH . '/images/bannieres/voyant-skyscraper/';
-    $url  = ROOT_URL  . '/images/bannieres/voyant-skyscraper/';
-    $files = array_diff(scandir($path), array('.','..'));
-    shuffle($files);
-    $arrayFile = explode("-", $files[0]);
+    $referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+    if($referer != 'http://'.ROOT_URL.'/voyance-par-telephone-2'){
+        $path = ROOT_PATH . '/images/bannieres/voyant-skyscraper/';
+        $url  = '/images/bannieres/voyant-skyscraper/';
+        $files = array_diff(scandir($path), array('.', '..'));
+        shuffle($files);
+        $arrayFile = explode("-", $files[0]);
 
-    if($show) { 
-
-      if($arrayFile[0] != "voyants"){
-        echo '<a href="http://<?= ROOT_URL ?>/voyance-par-telephone-'.$arrayFile[0].'"><img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" /></a>';
-      }else{
-        echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
-      }
-         
+        if($show){
+            if($arrayFile[0] != "voyants"){
+                echo '<a href="http://'.ROOT_URL.'/voyance-par-telephone-'.$arrayFile[0].'"><img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" /></a>';
+            } else {
+                echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
+            }
+        } else {
+            return $files[0];
+        }
     } else {
-      return $files[0];
+        getVoyantScryscraperVTE2();
     }
-  } else {
-    getVoyantScryscraperVTE2();
-  }
 }
 
 function getVoyantScryscraper($show = true)
