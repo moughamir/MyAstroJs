@@ -84,7 +84,7 @@
                             <article class="form-content">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="<?= $page ?>" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />

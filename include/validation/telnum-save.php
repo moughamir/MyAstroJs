@@ -28,7 +28,9 @@ if($tel_needed && !$tel) { // Téléphone requis mais non remplis
 } elseif($tel) { // Téléphone remplis
     if ($pays){
         // Vérification du format
-        if(!preg_match("#(0{5,}|1{5,}|2{5,}|3{5,}|4{5,}|5{5,}|6{5,}|7{5,}|8{5,}|9{5,}|1234{1,}|(01){5,}|(02){5,}|(03){5,}|(04){5,}|(05){5,}|(06){5,}|(07){5,}|(08){5,}|(09){5,})#", $tel)){
+        $test_baseformat = preg_match("#^[0-9]{5,}$#", $tel);
+        $test_motif = preg_match("#(0{5,}|1{5,}|2{5,}|3{5,}|4{5,}|5{5,}|6{5,}|7{5,}|8{5,}|9{5,}|1234{1,}|(01){5,}|(02){5,}|(03){5,}|(04){5,}|(05){5,}|(06){5,}|(07){5,}|(08){5,}|(09){5,})#", $tel);
+        if($test_baseformat && !$test_motif){
             // Si et seulement si on a pas de motifs qui se répètent, alors on check le format / pays.
             $phoneCheck = checkPhoneNumber($tel, $pays);
             if($phoneCheck['error'] != NULL && $phoneCheck['error'] != 'NULL'){
@@ -48,7 +50,7 @@ if($tel_needed && !$tel) { // Téléphone requis mais non remplis
 }
 
 // Détail de la question -------------------------------------------------------
-$question['content'] = isset($param['question_content']) ? $param['question'] : isset($param['question']) ? $param['question'] : null;
+$question['content'] = isset($param['question_content']) ? $param['question_content'] : isset($param['question']) ? $param['question'] : null;
 
 
 /* ========================================================================== * 
@@ -70,7 +72,12 @@ if(empty($err)){
     
 // KGestion --------------------------------------------------------------------
     if($kgestion_id){
-        $kgestion_update = $kgestion->updateUser($kgestion_id, ['phone'=>$tel]);
+        $update_data = [
+            'phone' => $tel,
+            'country' => $pays,
+            'questionContent' => $question['content']
+        ];
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $update_data);
         if (!$kgestion_update->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }

@@ -50,7 +50,7 @@ $(document).ready(function(){
     });
     
     // Soumission du formulaire
-    $(document).on('submit', 'form', function(e){
+    $(document).on('submit', 'form.ajax', function(e){
         e.preventDefault();
         form = $(this);
         form_container = $('#form-container');
@@ -65,12 +65,12 @@ $(document).ready(function(){
         
         alert_loading = '\
             <p class="alert alert-warning">\
-                <b><i class="fa fa-refresh fa-spin"><img src="/images/loader.gif" /></i></b>\
+                <b><i class="fa fa-refresh fa-spin"><img src="/images/warning-spinner.gif" /></i></b> \
                 Récupération des informations.\
             </p>';
         alert_done = '\
             <p class="alert alert-success">\
-                <b><i class="fa fa-check"><img src="/images/loader.gif" /></i> Inscription complétée.</b>\
+                <b><i class="fa fa-check"><img src="/images/success-spinner.gif" /></i> Inscription complétée.</b>\
                 Vous allez être redirigé.\
             </p>'; 
         alert_error = '\
@@ -83,8 +83,11 @@ $(document).ready(function(){
             form_overlay.html(alert_loading);
             form_overlay.fadeIn();
         } else if ($('.modal').length < 1){
-            $('body').append('<div id="modal" class="modal" style="padding:40px;">'+ alert_loading +'</div>');
-            $('.modal').modal('show');
+            $('body').append('<div id="modal" class="modal"></div>');
+        }
+        if (use_modal){
+            $('#modal').html(alert_loading);
+            $('#modal').modal('show');
         }
         // requête Ajax
         $.ajax({
@@ -99,7 +102,7 @@ $(document).ready(function(){
             success : function(response){
                 // On reset le tout
                 if (use_modal){
-                    $('.modal').modal('hide');
+                    $('#modal').modal('hide');
                 }
                 if (use_form_alert){
                     form_alert.html('');
@@ -135,7 +138,7 @@ $(document).ready(function(){
                         form_overlay.html(alert_done);
                     } else {
                         $('#modal').html(alert_done);
-                        $('.modal').modal('show');
+                        $('#modal').modal('show');
                     }
                     setTimeout(function(){ 
                         document.location.replace(response.url);
@@ -156,7 +159,7 @@ $(document).ready(function(){
                         form_alert.show();
                         form_alert.removeClass('hidden');
                     } else {
-                        $(alert_form_errors).append('<br><i>Cliquez pour fermer ce message</i>');
+                        $(alert_form_errors).append('<br><i data-dismiss="modal" style="cursor:pointer">Cliquez pour fermer ce message</i>');
                     }
                     if (!use_modal){
                         form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);
@@ -167,7 +170,7 @@ $(document).ready(function(){
                         }
                     } else {
                         $('#modal').html(alert_form_errors ? alert_form_errors : alert_error);
-                        $('.modal').modal('show');
+                        $('#modal').modal('show');
                     }
                 };
             },
@@ -179,7 +182,7 @@ $(document).ready(function(){
                     }, 3000);
                 } else {
                     $('#modal').html(alert_error);
-                    $('.modal').modal('show');
+                    $('#modal').modal('show');
                 }
             }
         });

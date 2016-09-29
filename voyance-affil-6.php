@@ -73,7 +73,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                             </div>
                             <form id="">
                                 <input type="hidden" name="source" value="voyance-affil-6" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="dri-4" />

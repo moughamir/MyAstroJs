@@ -10,7 +10,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="sstyle.css" />
-    
+    <style>
+        .modal p.alert {
+            margin: 0;
+            padding : 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        li.dropdown .icon-home {
+            position: relative; top: 5px;
+        }
+    </style>
     <link rel="shortcut icon" href="favicon.ico"> 
 	<script type="text/javascript">
     function date_heure(id){
@@ -94,7 +104,6 @@
         <!-- END SCRIPT HEATMAPS UPMYBIZ -->
 </head>
 <body>
-    <?php if($_SERVER['REQUEST_URI'] != "/voyance-gratuite") { ?>
         <nav class="top-menu-2">
             <div class="row-fluid">
                 <div class="navbar navbar-inverse">
@@ -223,7 +232,6 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -231,7 +239,6 @@
                 </div>
             </div>
         </nav>
-    <?php } ?>
 
     <header>
         <div class="navbar navbar-banner">

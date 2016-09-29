@@ -1,43 +1,33 @@
- <section class="modern-footer">
-   <?php /* <h2 class="hidden">Footer</h2> */ ?>
-
-   <div class="container-fluid">
-    
-    <?php include('include/footer_reseaux_sociaux.php'); ?>
-
-    <div class="tags-cloud">
-        <div class="f-widget-title">
-            <h4 style="font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
-            font-weight: 600;text-align:center;color: #fff;font-size: 17px !important;
-            line-height: 27px;text-align:center;">Les Tags</h4>
-        </div>
-        <div class="f-widget-content" style="text-align:center;">
-          <br>
-          <?php include('footer-tarot.php'); ?>
-      </div> 
-  </div>
-
-</div>
-
-<!-- Copy Right Reserved Section & Social Icons -->
-<div class="footer-border-serpentsoft"></div>
-
-<footer class="f-copyright">
+<section class="modern-footer">
     <div class="container-fluid">
-        <div class="row-fluid">
-            <nav class="span6 ">
-               <!-- <h4 class="hidden">Liens Copyright-->
-               <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a> - <a href="http://<?= ROOT_URL ?>/politique-de-confidentialite"  rel="nofollow">Politique de confidentialité</a> - <a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
-        </ul>
-    </nav>
-
-    <div class="span6">
-        <p class="pull-right"><?php include('include/footer_copyright.php'); ?></p>
+        <?php include('include/footer_reseaux_sociaux.php'); ?>
+        <div class="tags-cloud">
+            <div class="f-widget-title">
+                <h4 style="font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
+                font-weight: 600;text-align:center;color: #fff;font-size: 17px !important;
+                line-height: 27px;text-align:center;">Les Tags</h4>
+            </div>
+            <div class="f-widget-content" style="text-align:center;">
+                <br>
+                <?php include('footer-tarot.php'); ?>
+            </div> 
+        </div>
     </div>
-</div>
-</div>
-</footer>
-
+    <!-- Copy Right Reserved Section & Social Icons -->
+    <div class="footer-border-serpentsoft"></div>
+    <footer class="f-copyright">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <nav class="span6 ">
+                   <!-- <h4 class="hidden">Liens Copyright-->
+                   <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a> - <a href="http://<?= ROOT_URL ?>/politique-de-confidentialite"  rel="nofollow">Politique de confidentialité</a> - <a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
+                </nav>
+                <div class="span6">
+                    <p class="pull-right"><?php include('include/footer_copyright.php'); ?></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </section>
 
 

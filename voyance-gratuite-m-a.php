@@ -79,7 +79,7 @@
                             <form id="">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="voyance-gratuite-m-a" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="adwords" />
                                 <input type="hidden" name="dri" value="tel-voyance-gratuite-m-a" />

@@ -9,7 +9,9 @@
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
 session_start();
-$question = 'NA_chiffre'.rand(1, 5);
+/* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
+$chiffre = rand(1, 5);
+$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour (été 2016) - Chiffre '.$chiffre];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -57,14 +59,14 @@ $question = 'NA_chiffre'.rand(1, 5);
                             <form>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="numerologie-amour" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="numerologie-amour-tel" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="theme_id" id="theme_id" value="<?= $question ?>" />
+                                <input type="hidden" name="theme_id" id="theme_id" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">
