@@ -80,7 +80,7 @@ $questions = array(
                             <div class="DescText-Content">
                                 <p>À l’image de son incidence sur le cycle lunaire, auquel elle donne un nouveau départ, la nouvelle lune a des conséquences et des influences similaires sur la vie de chacun d’entre nous. Cet astre, à la fois si proche de nous et si mystérieux, contribue à donner une nouvelle impulsion aux différents domaines composant notre quotidien.</p>
                                 <p>Amour, travail, argent, vie sociale : cette période de la nouvelle lune est le moment idéal pour vous, pour passer à l’action, agir, vous lancer dans de nouveaux projets, relever tous les défis, prendre des décisions, et repartir du bon pied en laissant derrière vous un passé dont vous ne voulez plus.</p>
-                                <p>À l’occasion de cette nouvelle lune du 29 septembre, les astres sont avec vous et vous accompagnent pour vous aider à prendre un nouveau départ. Il serait dommage de ne pas profiter de cette opportunité…</p>
+                                <p>À l’occasion de cette nouvelle lune du 30 septembre, les astres sont avec vous et vous accompagnent pour vous aider à prendre un nouveau départ. Il serait dommage de ne pas profiter de cette opportunité…</p>
                             </div>
                         </article>
                     </div>
