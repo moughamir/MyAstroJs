@@ -14,6 +14,12 @@
         'vierge' => 'Vierge'
     );
     $cs_url = isset($cs_url) ? $cs_url : 'horoscope';
+    
+    function getSignCode($nom){
+        $nom = strtolower($nom); // en minuscules
+        $nom = preg_replace('#[éèê]#u', 'e', $nom); // accents du e
+        return $nom;
+    }
 ?>
 <aside class="widget w-pictures">
     <div class="widget-title">
@@ -26,7 +32,7 @@
                 <a href="http://<?= ROOT_URL.'/'.$cs_url.'-'.$code ?>">
                     <div class="thumb-effect">
                         <div class="mask"></div>
-                        <img src="images_voyance/signes/<?= $nom ?>.png" />
+                        <img src="images_voyance/signes/<?= getSignCode($nom) ?>.png" />
                     </div>
                 </a>
             </li>
