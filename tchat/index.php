@@ -96,7 +96,7 @@
             <link rel=stylesheet href="themes/tarot-gratuit-16/style.css" type="text/css" media=all />
         <?php } elseif (in_array($user['source'], ['pleine-lune-avril-16'])){ ?>
             <link rel=stylesheet href="themes/pleine-lune-2016/style.css" type="text/css" media=all />
-        <?php } elseif (in_array($user['source'], ['nouvelle-lune-mai-16'])){ ?>
+        <?php } elseif (in_array($user['source'], ['nouvelle-lune-mai-16', 'nouvelle-lune-septembre-16'])){ ?>
             <link rel=stylesheet href="themes/nouvelle-lune-2016/style.css" type="text/css" media=all />
         <?php } elseif (in_array($user['source'], ['vendredi-13-05-16'])){ ?>
             <link rel=stylesheet href="themes/vendredi-13-05-16/style.css" type="text/css" media=all />

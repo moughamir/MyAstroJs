@@ -7,6 +7,22 @@
     Created on : 25 avril 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+
+$questions = array(
+    'Amour' => array(
+        [ 'code' => 'nlm16_question_1', 'subject' => 'sentimental', 'text' => 'Quand vais-je rencontrer l’amour ?' ],
+        [ 'code' => 'nlm16_question_2', 'subject' => 'sentimental', 'text' => 'Quels sont ses sentiments pour moi ?', 'conjoint' => true ],
+        [ 'code' => 'nlm16_question_24', 'subject' => 'sentimental', 'text' => 'Mes sentiments sont confus, que dois-je faire ?', 'conjoint' => true],
+        [ 'code' => 'nlm16_question_11', 'subject' => 'sentimental', 'text' => 'Ai-je encore un avenir avec lui/elle ?', 'conjoint' => true],
+    ),
+    'Argent' => array(
+        [ 'code' => 'nlm16_question_73', 'subject' => 'financier', 'text' => 'Vais-je gagner de l’argent ?' ],
+    ),
+    'Travail' => array(
+        [ 'code' => 'nlm16_question_4', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?' ],
+        [ 'code' => 'nlm16_question_3', 'subject' => 'professionnel', 'text' => 'Quand vais-je trouver du travail ?' ],
+    )
+);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -63,7 +79,7 @@
                         <article class="DescText">
                             <div class="DescText-Content">
                                 <p>À l’image de son incidence sur le cycle lunaire, auquel elle donne un nouveau départ, la nouvelle lune a des conséquences et des influences similaires sur la vie de chacun d’entre nous. Cet astre, à la fois si proche de nous et si mystérieux, contribue à donner une nouvelle impulsion aux différents domaines composant notre quotidien.</p>
-                                <p>Amour, travail, argent, vie sociale : cette période de la nouvelle lune est le moment idéal pour vous, pour passer à l’action, agir, vous lancer dans de nouveaux projets, relever tous les défis, prendre des décisions, et repartir du bon pied en laissant derrière vous un passé dont vous ne voulez plus.</p>
+                                <p>Amour, travail, argent, vie sociale : cette période de la nouvelle lune est le moment idéal pour vous, pour passer à l’action, agir, vous lancer dans de nouveaux projets, relever tous les défis, prendre des décisions, et repartir du bon pied en laissant derrière vous un passé dont vous ne voulez plus.</p>
                                 <p>À l’occasion de cette nouvelle lune du 6 mai, les astres sont avec vous et vous accompagnent pour vous aider à prendre un nouveau départ. Il serait dommage de ne pas profiter de cette opportunité…</p>
                             </div>
                         </article>
@@ -77,11 +93,12 @@
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container">
                                 <!-- ########## identification formulaire ########## -->
+                                <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="source" value="nouvelle-lune-mai-16" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="nouvelle-lune-mai-16-tel" />
+                                <input type="hidden" name="dri" value="nouvelle-lune-16-tel" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
@@ -143,21 +160,15 @@
                                 </div>
                                 <div class="FormField">
                                     <label class="FormField-Label" for="theme_id">Votre question</label>
-                                    <select class="FormField-Input" name="theme_id" id="theme_id" required>
+                                    <select class="FormField-Input" name="question_code" id="theme_id" required>
                                         <option value="" selected disabled>Thème de la question</option>
-                                        <optgroup label="Amour">
-                                            <option value="nlm16_question_1">Quand vais-je rencontrer l’amour ?</option>
-                                            <option value="nlm16_question_2">Quels sont ses sentiments pour moi ?</option>
-                                            <option value="nlm16_question_24">Mes sentiments sont confus, que dois-je faire ?</option>
-                                            <option value="nlm16_question_11">Ai-je encore un avenir avec lui/elle ?</option>
+                                        <?php foreach($questions as $optgroup => $options){ ?>
+                                        <optgroup label="<?= $optgroup ?>">
+                                            <?php foreach($options as $question){ ?>
+                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
+                                            <?php } ?>
                                         </optgroup>
-                                        <optgroup label="Argent">                          
-                                            <option value="nlm16_question_73">Vais-je gagner de l’argent ?</option>
-                                        </optgroup>
-                                        <optgroup label="Travail">
-                                            <option value="nlm16_question_4">Quel sera mon avenir professionnel ?</option>
-                                            <option value="nlm16_question_3">Quand vais-je trouver du travail ?</option>
-                                        </optgroup>
+                                        <?php } ?>
                                     </select>
                                 </div>
                                 <div class="FormField sonprenom" style="display: none;">

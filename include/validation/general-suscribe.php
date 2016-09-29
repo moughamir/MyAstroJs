@@ -247,7 +247,7 @@ if(empty($err)){
         'questionSubject'   => $question['subject'],
         'questionCode'      => $question['code'],
         'questionText'      => $question['text'],
-        'questionContent'   => '',
+        'questionContent'   => $question['content'],
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,

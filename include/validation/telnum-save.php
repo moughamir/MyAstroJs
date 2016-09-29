@@ -50,7 +50,7 @@ if($tel_needed && !$tel) { // Téléphone requis mais non remplis
 }
 
 // Détail de la question -------------------------------------------------------
-$question['content'] = isset($param['question_content']) ? $param['question'] : isset($param['question']) ? $param['question'] : null;
+$question['content'] = isset($param['question_content']) ? $param['question_content'] : isset($param['question']) ? $param['question'] : null;
 
 
 /* ========================================================================== * 
@@ -72,7 +72,12 @@ if(empty($err)){
     
 // KGestion --------------------------------------------------------------------
     if($kgestion_id){
-        $kgestion_update = $kgestion->updateUser($kgestion_id, ['phone'=>$tel]);
+        $update_data = [
+            'phone' => $tel,
+            'country' => $pays,
+            'questionContent' => $question['content']
+        ];
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $update_data);
         if (!$kgestion_update->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
