@@ -58,7 +58,7 @@
                     <form id="form1" action="" method="post">
                         <!-- ########## identification formulaire ########## -->
                         <input type="hidden" name="source" value="<?= $page ?>" />
-                        <input type="hidden" name="method" value="affil-maxi" />
+                        <input type="hidden" name="method" value="general-suscribe" />
                         <input type="hidden" name="dri" value="printemps-16-tel" />
                         <input type="hidden" name="support" value="voyance"/>
                         <input type="hidden" name="affiliation" value="affilbase" />

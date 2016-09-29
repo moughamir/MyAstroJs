@@ -70,7 +70,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                             </div>
                             <form id="">
                                 <input type="hidden" name="source" value="voyance-instagram" />
-                                <input type="hidden" name="method" value="affil-maxi" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance"/>
                                 <input type="hidden" name="affiliation" value="instagram-com">
                                 <div class="form-w-one li-form">

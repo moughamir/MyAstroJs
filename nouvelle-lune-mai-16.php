@@ -78,7 +78,7 @@
                             <form id="form-container">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="nouvelle-lune-mai-16" />
-                                <input type="hidden" name="method" value="test" />
+                                <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
                                 <input type="hidden" name="dri" value="nouvelle-lune-mai-16-tel" />
