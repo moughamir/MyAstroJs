@@ -230,11 +230,13 @@
     & > .FormField {
         display: table-cell;
         width: auto;
+        vertical-align: middle;
     }
     
     .FormField-Info {
         display: inline-block;
         padding-left: 30%;
+        margin-top: -1rem;
     }
     
 }

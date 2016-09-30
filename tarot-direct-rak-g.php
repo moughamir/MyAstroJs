@@ -1,10 +1,10 @@
 <?php
 /* 
-    ----------------------------------------
-    --   tarot-direct-rc-g = AFFIL BASE   --
-    ----------------------------------------
+    ----------------------------------------------------
+    --   tarot-direct-rak-g = AFFIL BASE EXTERNE RAK  --
+    ----------------------------------------------------
 
-    Created on : 13 septembre 2016
+    Created on : 30 septembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 $cards_dir = 'tarot/cartes/original-grand/';
@@ -121,14 +121,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-ab-g" />
+                                <input type="hidden" name="source" value="tarot-direct-rak-g" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="external_base" />
                                 <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />  
                                 <!-- ############################################### -->
@@ -207,42 +206,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                                 <div class="Fields-Table-Row">
                                     <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
-                                </div>
-                                <div class="Fields-Table-Row">
-                                    <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
-                                    <div class="FormField">
-                                        <input id="tel" type="tel" name="tel" class="FormField-Input" required />
-                                    </div>
-                                </div>
-                                <div class="Fields-Table-Row">
-                                    <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
-                                </div>
-                                <div class="Fields-Table-Row">
-                                    <label for="pays" class="FormField-Label">Votre pays</label>
-                                    <div class="FormField">
-                                        <select name="pays" id="pays" class="FormField-Input" required>
-                                            <option value="" selected>Votre Pays</option>
-                                            <option value="BE">Belgique</option>
-                                            <option value="CA">Canada</option>
-                                            <option value="LU">Luxembourg</option>
-                                            <option value="CH">Suisse</option>
-                                            <option value="FR" selected>France Métropolitaine</option>
-                                            <optgroup label="DOM-TOM">
-                                                <option value="MQ">Martinique</option>
-                                                <option value="GP">Guadeloupe</option>
-                                                <option value="GF">Guyane</option>
-                                                <option value="RE">La Réunion</option>
-                                                <option value="YT">Mayotte</option>
-                                                <option value="PM">St Pierre et Miquelon</option>
-                                                <option value="BL">St Barthélémy</option>
-                                                <option value="SM">St Martin</option>
-                                                <option value="WF">Wallis et Futunua</option>
-                                                <option value="PF">Polynésie Française</option>
-                                                <option value="NC">Nouvelle Calédonie</option>
-                                            </optgroup>
-                                            <option value="ZZ">Autre</option>
-                                        </select>
-                                    </div>
                                 </div>
                             </div>
                             <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
