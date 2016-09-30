@@ -87,7 +87,7 @@ $questions = array(
                         <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre étude personnalisée !</h2>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <form id="form-container">
+                            <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="automne-16" />
                                 <input type="hidden" name="method" value="general-suscribe" />
