@@ -176,13 +176,21 @@ body {
     margin: auto;
     margin-bottom: 3rem;
     
+    &-Fields {
+        padding: 0 18%;
+    }
+    
     &.overlay {
         width: 100%;
     }
 }
 
+.Fields-Table-Row {
+    margin-bottom: 1.8rem;
+}
+
 .Fields-Table-Row > .FormField-Label:after {
-    content: " :";
+    content: " :";
 }
 
 @media all and (max-width: 680px){
