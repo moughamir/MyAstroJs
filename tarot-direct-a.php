@@ -9,20 +9,22 @@
 */
 $cards_dir = 'tarot/cartes/original-grand/';
 $questions = array (
-        'Amour' => array(
-            'celibat'  => [ 'code' => 'td_question_1', 'subject' => 'sentimental', 'text' => 'Je suis célibataire' ],
-            'couple'   => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple', 'conjoint' => true ],
-            'infidele' => [ 'code' => 'td_question_24', 'subject' => 'sentimental', 'text' => 'Je suis en couple mais jʼai une autre personne en tête', 'conjoint' => true],
-            'amant'    => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple avec une personne mariée', 'conjoint' => true],
-            'separe'   => [ 'code' => 'td_question_11', 'subject' => 'sentimental', 'text' => 'Je suis séparé(e) de mon/ma conjoint(e)', 'conjoint' => true],
-        ),
-        'Argent' => array(
-            'argent'   => [ 'code' => 'td_question_73', 'subject' => 'financier', 'text' => 'Je veux savoir si ma situation financière va sʼaméliorer' ],
-        ),
-        'Travail' => array(
-            'travail'  => [ 'code' => 'td_question_4', 'subject' => 'professionnel', 'text' => 'Je veux savoir si ma situation professionnelle va sʼaméliorer' ],
-        )
+    'Amour' => array(
+        'celibat'  => [ 'code' => 'td_question_1', 'subject' => 'sentimental', 'text' => 'Je suis célibataire' ],
+        'couple'   => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple', 'conjoint' => true ],
+        'infidele' => [ 'code' => 'td_question_24', 'subject' => 'sentimental', 'text' => 'Je suis en couple mais jʼai une autre personne en tête', 'conjoint' => true],
+        'amant'    => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple avec une personne mariée', 'conjoint' => true],
+        'separe'   => [ 'code' => 'td_question_11', 'subject' => 'sentimental', 'text' => 'Je suis séparé(e) de mon/ma conjoint(e)', 'conjoint' => true],
+    ),
+    'Argent' => array(
+        'argent'   => [ 'code' => 'td_question_73', 'subject' => 'financier', 'text' => 'Je veux savoir si ma situation financière va sʼaméliorer' ],
+    ),
+    'Travail' => array(
+        'travail'  => [ 'code' => 'td_question_4', 'subject' => 'professionnel', 'text' => 'Je veux savoir si ma situation professionnelle va sʼaméliorer' ],
+    )
 );
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -60,7 +62,7 @@ $questions = array (
                 </div>
             </div>
         </header>
-        <form id="form-container">
+        <form id="form-container" class="ajax">
             <!-- -------------------------------------- CHOIX DU VOYANT -------------------------------------- -->
             <section class="ContentBand TwoCols PsychicChoice Principal" id="scn-psychic">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyante</strong> -</header>
@@ -122,8 +124,9 @@ $questions = array (
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="tarot-direct-tchat" />
+                                <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ########## -->
+                                <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />  
@@ -146,7 +149,7 @@ $questions = array (
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -198,7 +201,7 @@ $questions = array (
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -297,7 +300,6 @@ $questions = array (
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
-        
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
