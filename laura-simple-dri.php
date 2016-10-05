@@ -1,8 +1,8 @@
 <?php
 /* 
-    ------------------------------------------------------------
+    --------------------------------------------------------
     --      DRI POST-MAIL = LAURA-SIMPLE = AFFIL BASE     --
-    ------------------------------------------------------------
+    --------------------------------------------------------
     Created on : 20 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumedeschamps75@gmail.com>
@@ -23,7 +23,7 @@ include('include/process-dri-postmailing.php');
     
     <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
-    <link rel="stylesheet" type="text/css" href="css/laura-simple.css">
+    <link rel="stylesheet" type="text/css" href="css/laura-simple.min.css">
        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

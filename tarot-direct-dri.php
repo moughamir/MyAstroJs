@@ -54,17 +54,19 @@ include('include/process-dri-postmailing.php');
                     <article class="FormContainer">
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
-                        <div class="FormContainer-Fields Fields-Table">
+                        <div class="Fields-Table">
+                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <div class="DRI-Form FormContainer-Fields">
-                                <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-                                    <p class="DRI-Sent">
-                                        Merci, votre demande a bien été prise en compte.<br/>
-                                        <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                                    </p>
-                                <?php } else { ?>
-                                <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
-                                <p>Nos voyants répondent à vos questions</p>
-                                <form method="post" class="DRI-FormContainer">
+                                <p class="DRI-Sent">
+                                    Merci, votre demande a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                                </p>
+                            </div>
+                            <?php } else { ?>
+                            <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
+                            <form method="post" class="DRI-FormContainer">
+                                <div class="DRI-Form FormContainer-Fields">
+                                    <p>Nos voyants répondent à vos questions</p>
                                     <div class="Fields-Table-Row">   
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
@@ -104,13 +106,13 @@ include('include/process-dri-postmailing.php');
                                             </select>
                                         </div>
                                     </div>
-                                    <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
-                                    <!-- SUBMIT -->
-                                    <input type="text" name="antisp" value="" style="display: none" />
-                                    <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
-                                </form>
-                                <?php } ?>
-                            </div>
+                                </div>
+                                <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
+                                <!-- SUBMIT -->
+                                <input type="text" name="antisp" value="" style="display: none" />
+                                <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
+                            </form>
+                            <?php } ?>
                         </div>
                     </article>
                 </div>
