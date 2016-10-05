@@ -50,28 +50,30 @@ include('include/process-dri-postmailing.php');
             <header class="ContentBand-ColumnHeader Title">- Pour poursuivre remplissez le <strong>formulaire</strong> ci-dessous -</header>
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
-                    <article class="FormContainer">
+                    <article class="FormContainer DRI-Form">
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
-                        <div class="FormContainer-Fields Fields-Table">
-                            <div class="DRI-Form FormContainer-Fields">
-                                <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <div class="Fields-Table">
+                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                                <div class="DRI-Form FormContainer-Fields">
                                     <p class="DRI-Sent">
                                         Merci, votre demande de rappel a bien été prise en compte.<br/>
                                         <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                     </p>
-                                <?php } else { ?>
-                                <h2 class="DRI-Form-Title">
-                                    Vous avez déjà bénéficié de l’offre :<br>
-                                    <strong>« 5 minutes de tchat gratuit »</strong>
-                                </h2>
-                                <p>
-                                    Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>
-                                    En attendant, vous pouvez consulter un voyant immédiatement par téléphone.
-                                </p>
-                                <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
-                                <p><strong>Nos voyants répondent à vos questions</strong></p>
-                                <form class="DRI-FormContainer" method="post">
+                                </div>
+                            <?php } else { ?>
+                            <h2 class="DRI-Form-Title">
+                                Vous avez déjà bénéficié de l’offre :<br>
+                                <strong>« 5 minutes de tchat gratuit »</strong>
+                            </h2>
+                            <p>
+                                Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>
+                                En attendant, vous pouvez consulter un voyant immédiatement par téléphone.
+                            </p>
+                            <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
+                            <p><strong>Nos voyants répondent à vos questions</strong></p>
+                            <form class="DRI-FormContainer" method="post">
+                                <div class="FormContainer-Fields">
                                     <div class="Fields-Table-Row">   
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
@@ -111,13 +113,13 @@ include('include/process-dri-postmailing.php');
                                             </select>
                                         </div>
                                     </div>
-                                    <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
-                                    <!-- SUBMIT -->
-                                    <input type="text" name="antisp" value="" style="display: none" />
-                                    <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
-                                </form>
-                                <?php } ?>
-                            </div>
+                                </div>
+                                <h1 class="DRI-Slogan">Vos 10 premières minutes <span style="text-transform:uppercase">gratuites</span> !</h1>
+                                <!-- SUBMIT -->
+                                <input type="text" name="antisp" value="" style="display: none" />
+                                <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
+                            </form>
+                            <?php } ?>
                         </div>
                     </article>
                 </div>
