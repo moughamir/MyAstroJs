@@ -63,7 +63,7 @@ include('include/process-dri-postmailing.php');
                                 </p>
                             </div>
                             <?php } else { ?>
-                            <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
+                            <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
                             <form method="post" class="DRI-FormContainer">
                                 <div class="DRI-Form FormContainer-Fields">
                                     <p>Nos voyants répondent à vos questions</p>
