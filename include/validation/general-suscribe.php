@@ -435,6 +435,7 @@ if(empty($err)){
         'TITLE'           => $sexe,
         'CODE'            => base_convert($idindex, 10, 32),
         'IDASTRO'         => base_convert($idindex, 10, 32),
+        'IDKGESTION'      => $kgestion_id,
         'FIRSTNAME2'      => $conjoint_prenom,
         'SIGNE_P2'        => $conjoint_signe,
         'VOYANT'          => $voyant,
