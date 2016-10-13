@@ -25,6 +25,7 @@ $page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
 $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
+$formurl_kgs = '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 
@@ -39,6 +40,14 @@ if(!$source){
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
     $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+} else {
+    // Recherche de l'url kgestion
+    $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl.'"';
+    $formurl_kgs = $bdd->get_var($tracking_qry);
+    if(!isset($formurl_kgs)){
+        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    }
 }
 
 /* ========================================================================== *
@@ -254,7 +263,7 @@ if(empty($err)){
         'myastroPsychic'    => $voyant,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
-        'myastroUrl'        => $formurl,
+        'myastroUrl'        => $formurl_kgs,
         'myastroGclid'      => $gclid
     );
     
@@ -521,4 +530,3 @@ if(empty($err)){
 } else {
     die(json_encode($err));
 }
-  
