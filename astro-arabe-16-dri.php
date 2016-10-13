@@ -7,7 +7,7 @@
     Created on : 16 juin 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
-include('include/process-dri-postmailing.php');
+include('include/process-dri.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">

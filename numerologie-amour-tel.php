@@ -8,7 +8,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
-include('include/process-dri-postmailing.php');
+include('include/process-dri.php');
 $result = $_SESSION['question'];
 $conjoint = $_SESSION['firstnameJoint'];
 // RESULTAT

@@ -7,7 +7,7 @@
     Created on : 15 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
-    include('include/process-dri-postmailing.php');
+    include('include/process-dri.php');
     $draw = $_SESSION['cards'];
     $cards_dir = 'tarot/cartes/cartes-oracle-amour/';
 ?>
