@@ -7,7 +7,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
-include('include/process-dri-postmailing.php');
+include('include/process-dri.php');
 ?>
 <!doctype html>
 <html lang="fr">

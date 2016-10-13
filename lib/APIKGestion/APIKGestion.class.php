@@ -64,4 +64,11 @@ class APIKGestion {
         
         return $this->request($url, $data, $this::PATCH);
     }
+    
+    public function registerDRI($id, $data)
+    {
+        $url = $this::BASE_URL.'client/api/client/dri/'.$id;
+        
+        return $this->request($url, $data, $this::PATCH);
+    }
 }
