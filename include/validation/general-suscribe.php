@@ -25,6 +25,7 @@ $page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
 $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
+$formurl_kgs = '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 
@@ -39,6 +40,14 @@ if(!$source){
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
     $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+} else {
+    // Recherche de l'url kgestion
+    $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl.'"';
+    $formurl_kgs = $bdd->get_var($tracking_qry);
+    if(!isset($formurl_kgs)){
+        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    }
 }
 
 /* ========================================================================== *
@@ -113,15 +122,7 @@ $sexe = str_replace('homme', 'M', $sexe);
 $sexe = str_replace('femme', 'F', $sexe);
 
 // Prénom ----------------------------------------------------------------------
-$prenom = isset($param['prenom']) ? $param['prenom'] : false;
-$test_prenom = trim($prenom, ' ');
-if(empty($test_prenom)){
-    $err['prenom'] = 'Merci dʼindiquer votre prénom';
-} elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-    $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
-}
-unset($test_prenom);
-
+$prenom = form_firstname($err, $param);
 // Date de naissance & Signe Astrologique --------------------------------------
 $dtn_j = isset($param['jour'])  && !empty($param['jour'])  ? $param['jour']  : false;
 $dtn_m = isset($param['mois'])  && !empty($param['mois'])  ? $param['mois']  : false;
@@ -145,35 +146,7 @@ if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\
 }
 
 // Numéro de téléphone & Pays --------------------------------------------------
-$tel = isset($param['tel']) && !empty($param['tel']) ? $param['tel'] : false;
-$tel_needed = isset($param['tel_needed']) ? $param['tel_needed'] : false; 
-$pays = isset($param['pays']) && !empty($param['pays']) ? $param['pays'] : false;
-
-if($tel_needed && !$tel) { // Téléphone requis mais non remplis
-    $err['tel'] = 'Merci dʼindiquer votre numéro de téléphone.';
-} elseif($tel) { // Téléphone remplis
-    if ($pays){
-        // Vérification du format
-        $test_baseformat = preg_match("#^[0-9]{5,}$#", $tel);
-        $test_motif = preg_match("#(0{5,}|1{5,}|2{5,}|3{5,}|4{5,}|5{5,}|6{5,}|7{5,}|8{5,}|9{5,}|1234{1,}|(01){5,}|(02){5,}|(03){5,}|(04){5,}|(05){5,}|(06){5,}|(07){5,}|(08){5,}|(09){5,})#", $tel);
-        if($test_baseformat && !$test_motif){
-            // Si et seulement si on a pas de motifs qui se répètent, alors on check le format / pays.
-            $phoneCheck = checkPhoneNumber($tel, $pays);
-            if($phoneCheck['error'] != NULL && $phoneCheck['error'] != 'NULL'){
-                $msg['tel'] = $phoneCheck['error'];
-            } else {
-                $tel  = $phoneCheck["phone"];
-                $pays = $phoneCheck["pays"];
-                // Ajout de l'indicatif pays au tel pour les num fr et dom pour les campagnes sms
-                $tel = format_number_FR_DOM($tel, $pays);
-            }
-        } else {
-            $err['tel'] = 'Le numéro de téléphone est incorrect.';
-        }
-    } else {
-        $err['pays'] = 'Merci dʼindiquer votre pays de résidence.';
-    }
-}
+list($tel, $pays) = form_phone($err, $param);
 
 /* ========================================================================== *
  *                           TRAITEMENT DU CONJOINT                           *
@@ -254,7 +227,7 @@ if(empty($err)){
         'myastroPsychic'    => $voyant,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
-        'myastroUrl'        => $formurl,
+        'myastroUrl'        => $formurl_kgs,
         'myastroGclid'      => $gclid
     );
     
@@ -426,6 +399,7 @@ if(empty($err)){
         'TITLE'           => $sexe,
         'CODE'            => base_convert($idindex, 10, 32),
         'IDASTRO'         => base_convert($idindex, 10, 32),
+        'IDKGESTION'      => $kgestion_id,
         'FIRSTNAME2'      => $conjoint_prenom,
         'SIGNE_P2'        => $conjoint_signe,
         'VOYANT'          => $voyant,
@@ -521,4 +495,3 @@ if(empty($err)){
 } else {
     die(json_encode($err));
 }
-  

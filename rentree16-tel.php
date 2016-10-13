@@ -7,7 +7,7 @@
     Created on : 28 juillet 2016
     Author     : Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
-include('include/process-dri-postmailing.php');
+include('include/process-dri.php');
 $result = $_SESSION['question'];
 switch ($result) {
     case 'R16_POSITIF':

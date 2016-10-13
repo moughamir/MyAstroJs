@@ -7,7 +7,7 @@
     Created on : 07 juillet 2016
     Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
-include('include/process-dri-postmailing.php');
+include('include/process-dri.php');
 ?>
 
 <!DOCTYPE html>
