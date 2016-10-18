@@ -61,7 +61,7 @@
 
                 <article class="FormContainer Wheel-Core">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
-                    <form id="form-container">
+                    <form id="form-container" class="ajax">
                         <header class="Wheel-Core-Title FormSign-Title">
                             <span class="FormSign-Title-c1">Quel est votre signe<br>astrologique</span>
                             <span class="FormSign-Title-c2">Arabe</span>

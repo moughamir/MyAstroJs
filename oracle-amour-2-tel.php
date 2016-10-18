@@ -24,7 +24,7 @@
         
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.css" />
+        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -77,6 +77,7 @@
                         <!-- ########## identification formulaire ########## -->
                         <input type="hidden" name="save_tel" value="1" />
                         <input type="hidden" name="tel_needed" value="1" />
+                        <input type="hidden" name="prenom" value="<?= $prenom ?>" />
                         <!-- ############################################### -->
                         <div class="FormField">
                             <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />

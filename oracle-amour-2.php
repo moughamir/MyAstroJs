@@ -27,7 +27,7 @@ $questions = array(
         
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.css" />
+        <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,7 +87,7 @@ $questions = array(
                 <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre interprétation&nbsp;:</h2>
                 <div class="FormContainer-Fields">
                     <p class="alert alert-danger" style="display: none"></p>
-                    <form id="form1">
+                    <form id="form1" class="ajax">
                         <!-- ########## identification formulaire ########## -->
                         <input type="hidden" name="source" value="oracle-amour-2" />
                         <input type="hidden" name="method" value="general-suscribe" />
