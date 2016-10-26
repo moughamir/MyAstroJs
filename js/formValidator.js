@@ -117,6 +117,9 @@ $(document).ready(function(){
                    console.log('RETURNED : ' + response);
                 }
                 
+                if(response.hasOwnProperty('conversion')){
+                    $('body').append(response.conversion);
+                }
                 if(response.hasOwnProperty('reload_form')){
                     $(document).trigger('form_completed_reload');
                     // Remplacement du formulaire
@@ -132,7 +135,8 @@ $(document).ready(function(){
                             
                         }
                     });
-                } else if(response.hasOwnProperty('url')){
+                }
+                if(response.hasOwnProperty('url')){
                     // Redirection   
                     if (!use_modal){
                         form_overlay.html(alert_done);
@@ -143,15 +147,17 @@ $(document).ready(function(){
                     setTimeout(function(){ 
                         document.location.replace(response.url);
                     }, 3000);
-                } else {
+                }
+                if(response.hasOwnProperty('error')){
                     // Affichage des erreurs
                     var alert_form_errors = $(alert_error);
-                    for (var key in response) {
+                    var err = response.error;
+                    for(var key in err){
                         $('input[name="'+key+'"], select[name="'+key+'"]').addClass('has-error');
                         if(use_form_alert){
-                            form_alert.append(response[key]);
+                            form_alert.append(err[key]);
                         } else {
-                            $(alert_form_errors).append('<br>'+response[key]);
+                            $(alert_form_errors).append('<br>'+err[key]);
                         }
                     }
                     if(use_form_alert){

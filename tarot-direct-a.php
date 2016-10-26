@@ -129,7 +129,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="partenaires" value="1" />  
+                                <input type="hidden" name="partenaires" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
@@ -158,7 +159,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <div class="FormField-TableInputContainer">
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select  class="FormField-Input" name="jour" required>
-                                                    <option selected="selected" value="">Jour</option>
+                                                    <option value="" selected disabled>Jour</option>
                                                     <?php for($i=1;$i<=31;$i++){ ?>
                                                     <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
                                                     <?php } ?>
@@ -166,7 +167,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select class="FormField-Input" name="mois" required>
-                                                    <option value="" selected="selected">Mois</option>
+                                                    <option value="" selected disabled>Mois</option>
                                                     <option value="01">Janv.</option>
                                                     <option value="02">Fev.</option>
                                                     <option value="03">Mars</option>
@@ -183,7 +184,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select class="FormField-Input" name="annee" required>
-                                                    <option selected="selected" value="">Année</option>
+                                                    <option value="" selected disabled>Année</option>
                                                     <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
                                                     <option value="<?= $i ?>"><?= $i ?></option>
                                                     <?php } ?>
@@ -295,6 +296,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
+        
+        <!-- #### TRACKINGS #### -->
+        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script><!-- script pour conversion adwords en ajax -->
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
