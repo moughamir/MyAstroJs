@@ -9,6 +9,7 @@ $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
 $err = array();
 $conversion = 0;
+$retour = array();
 $trouve = false;
 $reinscription = false;
 $today_date_bdd = date('Y-m-d');
@@ -443,7 +444,14 @@ if(empty($err)){
  * ========================================================================== */
 
     if(isset($param['convertir'])){
-        include('../include/conversion/reflexcache.php');
+        if($source == 'reflexcache'){
+            include('../include/conversion/reflexcache.php');
+        }
+        if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'adwords'){
+            $conversion_code = file_get_contents('../include/conversion/adwords_async.php');
+            $retour['conversion'] = $conversion_code;
+            unset($_SESSION['conversion']);
+        }
     }
     
 /* ========================================================================== *
@@ -485,13 +493,15 @@ if(empty($err)){
     }
     
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
+    
+    $retour[$redirect_method] = $redirect_url;
 
-    die(json_encode(array($redirect_method => $redirect_url)));
+    die(json_encode($retour));
        
 /* ========================================================================== *
  *                                RETOUR ERREUR                               *
  * ========================================================================== */
     
 } else {
-    die(json_encode($err));
+    die(json_encode(array('error'=>$err)));
 }

@@ -51,7 +51,6 @@ if(((!$codeastro && !$idkgestion) || !$email_base) && !$code_promo){
 }
 
 /* ######################## PRÉPARATION DONNÉES USER ######################## */
-
 $user = null;
 $prenom = isset($prenom) ? $prenom : isset($_SESSION['firstname']) ? $_SESSION['firstname'] : '';
 $tel = isset($tel) ? $tel : isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
