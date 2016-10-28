@@ -11,6 +11,7 @@
 
 /* Dossier images */
 $img_dir: "../images_landing/offre-exceptionnelle-dri/";
+$backgr: $img_dir + "bckgr.jpg";
 $logo: $img_dir + "logo-MYASTRO.svg";
 $ico_gift: $img_dir + "ico-gift.png";
 $ico_lock: $img_dir + "ico-lock.png";
@@ -25,9 +26,17 @@ $turquoise: #41E3C6;
 $gris: #555353;
 $rouge: #F40F40;
 
+html {
+    position: relative;
+    height: 100%;
+}
+
 body {
+    height: 100%;
     font-family: Arial, sans-serif;
     color: black;
+    background-image: url($backgr);
+    background-size: cover;
 }
 
 /* --------------------------------- ENTETE --------------------------------- */
