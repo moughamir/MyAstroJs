@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* 
+    -------------------------------------
+    --      structure landing dri      --
+    -------------------------------------
+
+    Created on : 28 ocotbre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+@import "../knacss444/knacss";
+
+body {
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.PageWrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.ContentWrapper {
+    width: 100%;
+    max-width: 660px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.PageLogo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: grey;
+}
+.SiteHeader {
+    background-color: darkgrey;
+    color: white;
+    font-size: 1.8rem;
+    &-Nav {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        padding: 1rem 0;
+        white-space: nowrap;
+    }
+}
+
+@media all and (max-width: 540px){
+    .SiteHeader {
+        font-size: 1.6rem;
+        &-Nav {
+            padding: 0.8rem 0;
+        }
+    }
+}
+@media all and (max-width: 420px){
+    .SiteHeader-Nav{
+        font-size: 1.3rem;
+    }
+}
+
+/* --------------------------------- SLIDER --------------------------------- */
+
+.Slider {
+    margin-bottom: 2rem;
+}
+
+@media all and (max-width: 540px){
+    .Slider {
+        margin-bottom: 0;
+    }
+}
+
+/* --------------------------- COMMENT CA MARCHE ---------------------------- */
+
+@import "../modules/how";
+
+.How {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+.How-HorizontalItem-Img {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 1.75rem 0;
+}
+
+@media all and (max-width: 540px){
+    .How {
+        margin-bottom: 0;
+    }
+    .How-HorizontalItem {
+        padding-left: 35%;
+    }
+    .How-HorizontalItem-Img {
+        margin-left: -6rem;
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+@import "../modules/form";
+
+.FormContainer {
+    margin-bottom: 7rem;
+    padding: 4rem 8rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.FormContainer-Submit {
+    position: absolute;
+    left: 50%;
+    min-width: 50%;
+    margin-top: 2rem;
+    margin-left: -25%;
+}
+
+@media all and (max-width: 540px){
+    .FormContainer {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding: 4rem 2rem;
+    }
+    .FormContainer-Submit {
+        width: 260px;
+        margin-top: 1rem;
+        margin-left: -130px;
+    }
+}
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+@import "../modules/reassurance";
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteFooter {
+    margin-bottom: 1rem;
+}
+.SiteCopyright {
+    text-align: center;
+    margin-bottom: 2rem;
+}
