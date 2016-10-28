@@ -73,6 +73,33 @@
     }
 }
 
+.How-Horizontal {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    text-align: left;
+    
+    &Item {
+        height: 8rem;
+        &-Img {
+            display: inline-block;
+            width: 5rem;
+            height: 5rem;
+            margin: 1.5rem 0;
+            float: left;
+            background-color: grey;
+        }
+        &-Txt {
+            display: inline-block;
+            line-height: 2rem;
+            margin: 2rem 1rem;
+            height: 4rem;
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) and (min-width: 730px){
     .How-Wizard {
         height: auto;
@@ -111,6 +138,17 @@
     .How {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+@media all and (max-width: 540px){
+    .How-Horizontal {
+        flex-direction: column;
+        &Item {
+            padding-left: 40%;
+            &-Img {
+                margin-left: -6.5rem;
+            }
+        }
     }
 }
 @media screen and (max-width: 485px){
