@@ -9,6 +9,8 @@ $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
 $err = array();
 $conversion = 0;
+$redirect_url    = false;
+$redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] : 'url';
 $retour = array();
 $trouve = false;
 $reinscription = false;
@@ -438,21 +440,6 @@ if(empty($err)){
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
     $_SESSION['page']           = $page;
-
-/* ========================================================================== *
- *                           CONVERSION INSTANTANÉE                           *
- * ========================================================================== */
-
-    if(isset($param['convertir'])){
-        if($source == 'reflexcache'){
-            include('../include/conversion/reflexcache.php');
-        }
-        if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'adwords'){
-            $conversion_code = file_get_contents('../include/conversion/adwords_async.php');
-            $retour['conversion'] = $conversion_code;
-            unset($_SESSION['conversion']);
-        }
-    }
     
 /* ========================================================================== *
  *                                 REDIRECTION                                *
@@ -460,9 +447,6 @@ if(empty($err)){
 
     $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
     $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
-    
-    $redirect_url    = false;
-    $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] : 'url';
     
     if ($dri){
         if($dri == "tchat"){
@@ -495,13 +479,26 @@ if(empty($err)){
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
     
     $retour[$redirect_method] = $redirect_url;
+    
+/* ========================================================================== *
+ *                           CONVERSION INSTANTANÉE                           *
+ * ========================================================================== */
 
-    die(json_encode($retour));
+    if(isset($param['convertir'])){
+        if($source == 'reflexcache'){
+            include('../include/conversion/reflexcache.php');
+        } else {
+            $retour = array();
+            $retour['url'] = 'http://'.ROOT_URL.'/conversion';
+            $_SESSION['redirection'] = $redirect_url;
+        }
+    }
        
 /* ========================================================================== *
- *                                RETOUR ERREUR                               *
+ *                                   RETOUR                                   *
  * ========================================================================== */
     
+    die(json_encode($retour));
 } else {
     die(json_encode(array('error'=>$err)));
 }
