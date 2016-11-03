@@ -35,9 +35,9 @@
                 $trigger = 'question_73';
                 break;
         }
-    } elseif($user['source']=='printemps-16') {
+    } elseif($user['source']=='printemps-16'){
         $trigger = 'question_2';
-    } elseif($user['source']=='pleine-lune-avril-16') {
+    } elseif($user['source']=='pleine-lune-avril-16'){
         $trigger = substr($_SESSION['trigger'], 6 );
     } else {
         $trigger = $_SESSION['trigger'];
@@ -64,6 +64,21 @@
     } else {
         $page_title = 'Tchat gratuit - MyAstro';
     }
+    /** -------------- envoi mail confirmation d'inscription --------------- **
+    $mail = $_SESSION['email'];
+    if ($mail) {
+        $content  = file_get_contents("../mail/merci-voyance.html");
+        $name     = utf8_decode($user['name']);
+        $to       = $mail;
+        $subject  = 'Confirmation de votre demande d\'étude';
+        $message  = str_replace(array('IDASTRO', 'NOMCLE'), array($user['code'], $name), $content);
+        $headers  = "From: \"My Astro\"<contact@myastro.fr>\n";
+        $headers .= "Reply-To: contact@myastro.fr\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+        mail($to, $subject, $message, $headers);
+    }
+    /** -------------------------------------------------------------------- **/
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -120,23 +135,6 @@
                 </div>
             </div>
         </div>
-
-<?php
-    $mail = $_SESSION['email'];
-    if ($mail) {
-        $content  = file_get_contents("../mail/merci-voyance.html");
-        $name     = utf8_decode($user['name']);
-        $to       = $mail;
-        $subject  = 'Confirmation de votre demande d\'étude';
-        $message  = str_replace(array('IDASTRO', 'NOMCLE'), array($user['code'], $name), $content);
-        $headers  = "From: \"My Astro\"<contact@myastro.fr>\n";
-        $headers .= "Reply-To: contact@myastro.fr\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-        mail($to, $subject, $message, $headers);
-    }
-?>
-
     <div class="container-fluid">
         <div class="row main">
             <div class="right-part logo-right"></div>
