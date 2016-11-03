@@ -80,21 +80,23 @@ $page_title = 'Tarot gratuit amour: apprenez-en plus sur votre futur avec Myastr
 	var seerName = <?= json_encode(ucfirst($tchat->scenario[0]->seer_name)) ?>
 </script>
 
-<?php $mail = $_SESSION['email'];
-	if ($mail) {
-		$content = file_get_contents("../mail/merci-voyance.html");
-			$name = utf8_decode($user['name']);
-			$to      =  $mail;
-		    $subject = 'Confirmation de votre demande d\'étude';
-		    $message = str_replace(array('IDASTRO','NOMCLE'), array($user['code'],$name),$content);
-		    $headers = "From: \"My Astro\"<contact@myastro.fr>\n";
-			$headers .= "Reply-To: contact@myastro.fr\n";
-			$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+<?php 
+    /** -------------- envoi mail confirmation d'inscription --------------- **
+    $mail = $_SESSION['email'];
+    if($mail){
+        $content  = file_get_contents("../mail/merci-voyance.html");
+        $name     = utf8_decode($user['name']);
+        $to       = $mail;
+        $subject  = 'Confirmation de votre demande d\'étude';
+        $message  = str_replace(array('IDASTRO','NOMCLE'), array($user['code'],$name),$content);
+        $headers  = "From: \"My Astro\"<contact@myastro.fr>\n";
+        $headers .= "Reply-To: contact@myastro.fr\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-		    mail($to, $subject, $message, $headers);
-	}
-
-	 ?>
+        mail($to, $subject, $message, $headers);
+    }
+    /** -------------------------------------------------------------------- **/
+?>
 <script type="text/javascript" src="script.js"></script>
 
 <!--	<div class="container-fluid">

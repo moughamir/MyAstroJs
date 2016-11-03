@@ -1,9 +1,9 @@
 <?php 
-/* --- CONVERSION REFLEX CACHE --- */
+/* --- CONVERSION REFLEXCASH --- */
 
 $source         = $_SESSION['affiliation'];
 $formulaire     = $_SESSION['source'];
-$id_transaction = $_SESSION['reflexcache_id'];
+$id_transaction = $_SESSION['reflexcash_transactionid'];
 $email          = $_SESSION['email'];
 $log_file       = 'logs-perso/conversion-'.$source.'.txt';
 
@@ -17,13 +17,13 @@ $urls_conversion = array(
     'tarot-direct-rc-tfsu' => 'http://b2.a4trk.com/aff_lsr?offer_id=4525&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb'
 );
 
-if ($source == 'reflexcache' && isset($id_transaction)){
-    if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 2){
+if($source == 'reflexcache' && isset($id_transaction)){
+    if(isset($_SESSION['conversion']) && $_SESSION['conversion'] == 2){
         if(isset($urls_conversion[$formulaire])){
             $url = $urls_conversion[$formulaire];
             file_get_contents($url);
             unset($_SESSION['conversion']);
-            unset($_SESSION['reflexcache_id']);
+            unset($_SESSION['reflexcash_transactionid']);
         }
     }
 }

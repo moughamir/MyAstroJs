@@ -1,4 +1,4 @@
-/* 
+/*
     ----------------------------------------------------
     --     Scénario de formulaire tarot en direct     --
     ----------------------------------------------------
@@ -7,7 +7,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 $(document).ready(function(){
-    
+
     var psychic = $('#scn-psychic');
     var theme = $('#scn-theme');
     var form = $('#scn-form');
@@ -15,25 +15,25 @@ $(document).ready(function(){
     var tarot_title = $('#scn-tarot .Title');
     var tarot_draw = $('#scn-tarot-draw');
     var tarot_result = $('#scn-tarot-result');
-    
+
     // ETAPE1 - CHOIX DU VOYANT
     theme.hide();
     form.hide();
     tarot_result.hide();
     trt_lock = true;
-    
+
     // ETAPE2 - CHOIX DE LA QUESTION
     $(document).on('change, click', 'input[name="voyant"]', function(e){
         setTimeout(function(){
-            psychic.hide();
+            psychic.hide("slow");
             theme.show();
         }, 600);
     });
-    
+
     // ETAPE3 - TIRAGE
     $(document).on('change, click', 'input[name="question_code"]', function(e){
         setTimeout(function(){
-            theme.hide();
+            theme.hide("slow");
             tarot_band.addClass('Principal');
             if($(window).width() > trt_minSize){
                 tarot_result.show();
@@ -41,7 +41,7 @@ $(document).ready(function(){
             trt_lock = false;
         }, 600);
     });
-    
+
     // ETAPE4 - FORMULAIRE
     $(document).on('trt_completed_event', function(e){
         setTimeout(function(){
@@ -49,10 +49,10 @@ $(document).ready(function(){
             tarot_draw.hide();
             tarot_band.removeClass('Principal');
             tarot_result.show();
-            form.show();
+            form.show("slow");
         }, 600);
     });
-    
+
     $('.getFormValue').each(function(){
         var target = $(this);
         var form = $(this).data('ref-form');

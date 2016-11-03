@@ -297,9 +297,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
         
-        <!-- #### TRACKINGS #### -->
-        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script><!-- script pour conversion adwords en ajax -->
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
