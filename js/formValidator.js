@@ -138,15 +138,18 @@ $(document).ready(function(){
                 }
                 if(response.hasOwnProperty('url')){
                     // Redirection   
-                    if (!use_modal){
-                        form_overlay.html(alert_done);
-                    } else {
-                        $('#modal').html(alert_done);
-                        $('#modal').modal('show');
+                    var redirect_delay = response.hasOwnProperty('redirect_delay') ? response.redirect_delay : 3000;
+                    if(redirect_delay > 0){
+                        if (!use_modal){
+                            form_overlay.html(alert_done);
+                        } else {
+                            $('#modal').html(alert_done);
+                            $('#modal').modal('show');
+                        }
                     }
                     setTimeout(function(){ 
                         document.location.replace(response.url);
-                    }, 3000);
+                    }, redirect_delay);
                 }
                 if(response.hasOwnProperty('error')){
                     // Affichage des erreurs

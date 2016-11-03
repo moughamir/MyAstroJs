@@ -490,6 +490,7 @@ if(empty($err)){
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
+            $retour['redirect_delay'] = 0;
             $_SESSION['redirection'] = $redirect_url;
         }
     }
