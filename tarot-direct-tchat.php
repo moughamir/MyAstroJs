@@ -119,8 +119,7 @@ include('tchat-gratuit/init.php');
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
               include('include/conversion/facebook.php');
-              include('include/conversion/reflexcache.php'); ?>
-        
+              include('include/conversion/reflexcash.php'); ?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

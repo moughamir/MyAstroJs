@@ -31,6 +31,9 @@ $formurl = isset($param['source']) ? $param['source'] : false;
 $formurl_kgs = '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
+// ---- TRACKING REFLEX
+$rc_affiliateid = isset($_SESSION['reflexcash_affiliateid']) ? $_SESSION['reflexcash_affiliateid'] : '';
+$rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_source'] : '';
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
@@ -231,7 +234,9 @@ if(empty($err)){
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
         'myastroUrl'        => $formurl_kgs,
-        'myastroGclid'      => $gclid
+        'myastroGclid'      => $gclid,
+        'reflexAffilateId' => $rc_affiliateid,
+        'reflexSource'     => $rc_source
     );
     
     if($reinscription){
@@ -486,7 +491,7 @@ if(empty($err)){
 
     if(isset($param['convertir'])){
         if($source == 'reflexcache'){
-            include('../include/conversion/reflexcache.php');
+            include('../include/conversion/reflexcash.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
