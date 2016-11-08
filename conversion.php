@@ -16,6 +16,8 @@
                 background-color: #DEF0D8;
                 color: #448A44;
                 text-align: center;
+                font-family: "Segoe UI", Arial, sans-serif;
+                font-size: 16px;
             }
             img {
                 position: relative;

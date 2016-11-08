@@ -3,7 +3,7 @@ class SmartFocus
 {
     protected $login    = 'kg_api';
     protected $password = '#1oc7q2MoK8v95mKfI6TmEATZj3mz3MM1';
-    protected $apiKey   = 'CdX7CrpN6m6OgUk3e-0ZmrSxVyULYt62ygjsATuVqXDhxg';
+    protected $apiKey   = 'CdX7CrpN6m6OgUk3e-0ZmrSxVyULYt62ygjsNllUhXDgCg';
     protected $wsdl     = 'https://emvapi.emv3.com/apimember/services/MemberService?wsdl';
     protected $token;
     protected $jobId;
@@ -76,7 +76,7 @@ class SmartFocus
             $this->addTask($email);
             return $this->jobId;
         } catch (SoapFault $e){
-            $this->error($e);
+            $this->error($e, $email);
             return false;
         }
     }
@@ -90,7 +90,7 @@ class SmartFocus
             
             return $this->jobId;
         } catch (SoapFault $e) {
-            $this->error($e);
+            $this->error($e, $email);
             return false; 
         }
     }
@@ -114,7 +114,8 @@ class SmartFocus
             array(
                 'email' => $email,
                 'date'  => date('Y-m-d H:i:s'),
-                'text' => $e
+                'text' => $e,
+                'detail' => json_encode($e->detail)
             )
         );
         return;
@@ -170,7 +171,7 @@ class SmartFocus
                 'NUMEROTELEPHONE' => $user->tel,
                 'TITLE'           => $user->sexe,
                 'CODE'            => base_convert($user->internal_id, 10, 32),
-                'FIRSTNAME2'      => ( isset($user->conjoint) ) ? $user->conjoint : '',
+                'FIRSTNAME2'      => isset($user->conjoint) ? $user->conjoint : '',
                 'GROUPE_FLAG_5'   => $this->compteur['flag5'],
                 'GROUPE_FLAG_7'   => $this->compteur['flag7'],
                 'GROUPE_FLAG_15'  => $this->compteur['flag15'],
@@ -187,7 +188,7 @@ class SmartFocus
                 $this->addTask($email);
                 return true;
             } catch (SoapFault $e){
-                $this->error($e);
+                $this->error($e, $email);
             }
         } else {
             // Pas de user. On ne fait rien, on a supprimé la tâche. L'inscription s'est mal passé.

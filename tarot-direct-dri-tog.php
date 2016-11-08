@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     -----------------------------------------
     --   tarot-direct-dri = POST-LANDING   --
     -----------------------------------------
@@ -8,6 +8,8 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 include('include/process-dri.php');
+$cards_dir = 'tarot/cartes/original-grand/';
+$draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,15 +17,15 @@ include('include/process-dri.php');
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -45,7 +47,7 @@ include('include/process-dri.php');
                 </div>
             </div>
         </header>
-        <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
+<!-- ------------------------------ FORMULAIRE ----------------------------- -->
         <section class="ContentBand Form Principal" id="scn-form">
             <header class="ContentBand-ColumnHeader Title">- Pour poursuivre remplissez le <strong>formulaire</strong> ci-dessous -</header>
             <div class="PageWrapper ContentBand-Table">
@@ -74,18 +76,18 @@ include('include/process-dri.php');
                             <p><strong>Nos voyants répondent à vos questions</strong></p>
                             <form class="DRI-FormContainer" method="post">
                                 <div class="FormContainer-Fields">
-                                    <div class="Fields-Table-Row">   
+                                    <div class="Fields-Table-Row">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
                                             <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                         </div>
-                                    </div>  
-                                    <div class="Fields-Table-Row"> 
+                                    </div>
+                                    <div class="Fields-Table-Row">
                                         <label for="tel" class="FormField-Label">Mon numéro de téléphone</label>
                                         <div class="FormField">
                                             <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
                                         </div>
-                                    </div>    
+                                    </div>
                                     <div class="Fields-Table-Row">
                                         <label for="pays" class="FormField-Label">Mon pays</label>
                                         <div class="FormField">
@@ -125,14 +127,35 @@ include('include/process-dri.php');
                 </div>
             </div>
         </section>
-        
+        <?php if($draw){ ?>
+<!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
+        <section class="ContentBand Tarot">
+            <div class="PageWrapper ContentBand-Table">
+                <div class="ContentBand-Column">
+                    <article class="WidgetTarot">
+                        <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <?= $voyant;?></div>
+                        <div class="WidgetTarot-Result">
+                            <?php for($i=0;$i<5;$i++){ ?>
+                            <div class="WidgetTarot-Card place" data-number="<?= $i ?>" style="background-image: url('<?= $cards_dir.$draw[$i];?>')"></div>
+                            <?php } ?>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <?php } ?>
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
-        
+
+        <!-- #### CONVERSION #### -->
+        <?php include('include/conversion/adwords.php');
+              include('include/conversion/facebook.php'); ?>
+
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
