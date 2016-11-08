@@ -99,15 +99,15 @@ if (isset($param['question_code'])){
     if($question['code'] == 'question_73'){
         $question['subject'] = 'financier';
     }
-    
+
     // Tableau comprenant les questions qui nécessitent les infos du conjoint.
-    $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour'); 
+    $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour');
     $question['conjoint'] = in_array($question['code'], $questionConjoint);
-    
+
     if(!$question['code']){
         $err['theme_id'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
     }
-    
+
     $mind = isset($param['mind']) && !empty($param['mind']) ? $param['mind'] : false;
     $user_responses = array(
         'choix'     => $question['code'],
@@ -139,7 +139,7 @@ if($dtn_j && $dtn_m && $dtn_a){
     $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
     $dtn_smf = $dtn_m."/".$dtn_j."/".$dtn_a; // FORMAT SMARTFOCUS
     $dtn_ses = $dtn_j."/".$dtn_m."/".$dtn_a; // FORMAT SESSION
-    
+
     $signe = get_signe_astro($dtn_j, $dtn_m);
 } else {
     $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
@@ -170,13 +170,13 @@ if($question['conjoint']){
         $err['conjoint'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom de lʼêtre aimé.';
     }
     unset($test_prenom);
-    
+
 // Date de naissance & Signe Astrologique --------------------------------------
     if(isset($param['jour_c']) && isset($param['mois_c']) && $param['annee_c']){
         $conjoint_dtn_j = !empty($param['jour_c'])  ? $param['jour_c']  : false;
         $conjoint_dtn_m = !empty($param['mois_c'])  ? $param['mois_c']  : false;
         $conjoint_dtn_a = !empty($param['annee_c']) ? $param['annee_c'] : false;
-    
+
         if($conjoint_dtn_j && $conjoint_dtn_m && $conjoint_dtn_a){
             $conjoint_dtn_bdd = $conjoint_dtn_a."-".$conjoint_dtn_m."-".$conjoint_dtn_j; // FORMAT BDD
             $conjoint_dtn_smf = $conjoint_dtn_m."/".$conjoint_dtn_j."/".$conjoint_dtn_a; // FORMAT SMART FOCUS
@@ -238,7 +238,7 @@ if(empty($err)){
         'reflexAffilateId' => $rc_affiliateid,
         'reflexSource'     => $rc_source
     );
-    
+
     if($reinscription){
         $kgestion_id = $user->kgestion_id;
         $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
@@ -265,7 +265,7 @@ if(empty($err)){
  * ========================================================================== */
 
 if(empty($err)){
-    
+
     $conversion = 1;
 
     if (!$trouve){ // Nouveau prospect
@@ -314,7 +314,7 @@ if(empty($err)){
             'tel_is_valid'            => 1,
             'blacklisted'             => 0
         );
-        
+
         $bdd->insert(
             $bdd->users,
             $bdd_data
@@ -353,7 +353,7 @@ if(empty($err)){
             ['internal_id' => $idindex]
         );
     }
-              
+
 // Insertion du détail de la question ------------------------------------------
     if(isset($user_responses)){
         $bdd->insert(
@@ -363,23 +363,23 @@ if(empty($err)){
                 'id_form'   => 6,
                 'pays'      => $pays,
                 'tel'       => $tel,
-                'date'      => $today_date_bdd, 
+                'date'      => $today_date_bdd,
                 'responses' => serialize($user_responses)
             )
         );
     }
-        
+
 /* ========================================================================== *
  *                      MISE A JOUR IDASTRO SUR KGESTION                      *
  * ========================================================================== */
-    
+
     if(!$trouve){
         $kgestion_update = $kgestion->updateUser($kgestion_id, ['myastroId'=>$idindex]);
         if (!$kgestion_update->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
     }
-    
+
 /* ========================================================================== *
  *                                 SMARTFOCUS                                 *
  * ========================================================================== */
@@ -389,7 +389,7 @@ if(empty($err)){
     } else {
         $dateJoin = substr($user->history, 0, 10);
     }
-    
+
     $params = array(
         'DATEJOIN'        => $dateJoin,
         'DATEMODIF'       => $today_date_smf,
@@ -417,10 +417,10 @@ if(empty($err)){
         'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
         'GROUPE_FLAG_30'  => $param['compteur']['flag30']
     );
-    
+
     $smartFocus->insert($email, $params);
     $compteur->process();
-   
+
 /* ========================================================================== *
  *                              MISE EN SESSION                               *
  * ========================================================================== */
@@ -445,25 +445,29 @@ if(empty($err)){
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
     $_SESSION['page']           = $page;
-    
+
 /* ========================================================================== *
  *                                 REDIRECTION                                *
  * ========================================================================== */
 
     $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
     $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
-    
+
     if ($dri){
         if($dri == "tchat"){
-            if ( time() > strtotime(date('Y-m-d 09:00:00')) 
+            if ( time() > strtotime(date('Y-m-d 09:00:00'))
                 & time() < strtotime(date('Y-m-d 23:59:59'))
                 && !isset($_COOKIE['tchat'] ))
             {
                 $redirect_url = 'tchat';
             }
-        } elseif($dri == "tarot-en-direct/offre-gratuite"){
+        } elseif(in_array($dri, ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"])){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
-                $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
+                if($dri == "tarot-en-direct/offre-gratuite"){
+                    $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
+                } else {
+                    $redirect_url = $dri;
+                }
                 setcookie('offre_tchat_gratuit', '1', time() + 6*24*3600, null, null, false, true);
             } else {
                 $redirect_url = 'tarot-direct-dri-tog';
@@ -472,19 +476,21 @@ if(empty($err)){
             $redirect_url = $dri;
         }
     }
-    
+    if(in_array($dri, [])){
+    }
+
     if(!$redirect_url){
         $redirect_url = $dri2;
     }
-    
+
     if(!preg_match('#^http.*#', $redirect_url)){
         $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
     }
-    
+
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
-    
+
     $retour[$redirect_method] = $redirect_url;
-    
+
 /* ========================================================================== *
  *                           CONVERSION INSTANTANÉE                           *
  * ========================================================================== */
@@ -499,11 +505,11 @@ if(empty($err)){
             $_SESSION['redirection'] = $redirect_url;
         }
     }
-       
+
 /* ========================================================================== *
  *                                   RETOUR                                   *
  * ========================================================================== */
-    
+
     die(json_encode($retour));
 } else {
     die(json_encode(array('error'=>$err)));

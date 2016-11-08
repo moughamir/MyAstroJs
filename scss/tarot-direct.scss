@@ -31,6 +31,8 @@ $icon_amour_turquoise : $img_dir + "coeur_turquoise.png";
 $icon_argent_turquoise : $img_dir + "argent_turquoise.png";
 $icon_travail_turquoise : $img_dir + "travail_turquoise.png";
 $icon_tel: $img_dir + "tel.png";
+$offre_tchat : $img_dir + "offre-tchat.png";
+$offre_immediate : $img_dir + "offre-immediate.png";
 
 /* Palette */
 $grey: #454545;
@@ -106,6 +108,22 @@ body {
         color: $turquoise;
         font-weight: normal;
         font-size: 3.5rem;
+    }
+}
+@media all and (max-width: 580px){
+    .Title {
+        font-size: 2.8rem;
+        strong {
+            font-size: 4.4rem;
+        }
+    }
+}
+@media all and (max-width: 420px){
+    .Title {
+        font-size: 2.2rem;
+        strong {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -403,7 +421,7 @@ input[type="checkbox"], input[type="radio"] {
     color: $bleu;
 }
 
-/* ---------------------------------- DRI-POSTMAIL --------------------------------- */
+/* ------------------------------ DRI-POSTMAIL ------------------------------ */
 .DRI {
     &-Slogan {
         width: 80%;
@@ -481,3 +499,54 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
+/* ------------------------------- PAGE MERCI ------------------------------- */
+.Merci-Form {
+    background-color: $bleu;
+    background-image: url($offre_immediate);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+    text-align: center;
+    
+    .Merci-Title {
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        text-shadow: 0px 0px 10px black;
+        strong {
+            color: $turquoise;
+        }
+    }
+    
+    .Merci-Text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $rose;
+    }
+    
+    .FormContainer-Submit {
+        display: inline-block;
+        color: $bleu;
+        text-decoration: none;
+        border-color: white;
+        box-shadow: 0px 0px 10px white;
+        
+        &:hover {
+            border-color: $turquoise;
+            color: $turquoise;
+            box-shadow: none;
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .Merci-Form {
+        background-image: none;
+    }
+}
+@media all and (max-width: 400px){
+    .Merci-Title {
+        font-size: 2.1rem;
+    }
+    .Merci-Text {
+        font-size: 1.7rem;
+    }
+}
