@@ -476,8 +476,6 @@ if(empty($err)){
             $redirect_url = $dri;
         }
     }
-    if(in_array($dri, [])){
-    }
 
     if(!$redirect_url){
         $redirect_url = $dri2;
