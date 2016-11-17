@@ -8,7 +8,4 @@ yyadmin/cdjj/*
 yyadmin/media/*
 .htaccess
 .brackets.json
-.idea/copyright/
-.idea/modules.xml
-.idea/myastro.iml
-.idea/workspace.xml
+.idea/*
