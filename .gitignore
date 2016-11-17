@@ -9,3 +9,4 @@ yyadmin/media/*
 .htaccess
 .brackets.json
 .idea/*
+*.css.map
