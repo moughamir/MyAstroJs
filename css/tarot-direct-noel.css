@@ -1980,7 +1980,8 @@ body {
 */
 .ThemeChoice-List {
   width: 60%;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
   .ThemeChoice-ListItem {
     display: block;
     margin: 0;
@@ -2679,10 +2680,31 @@ body {
 
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 .ThemeChoice-ListItem {
-  border-radius: 3rem;
-  border-color: #C0C3C8;
+  border-color: #C0C3C8 !important;
   color: #496891;
-  font-weight: bold; }
+  font-weight: bold;
+  border: 1px solid;
+  border-left: none;
+  border-right: none;
+  position: relative; }
+  .ThemeChoice-ListItem:before {
+    content: "";
+    display: inline-block;
+    height: 53px;
+    width: 24px;
+    position: absolute;
+    top: -1px;
+    background: url("../images_landing/tarot-direct-noel/corner-left.png") no-repeat;
+    left: -24px; }
+  .ThemeChoice-ListItem:after {
+    content: "";
+    display: inline-block;
+    height: 53px;
+    width: 24px;
+    position: absolute;
+    top: -1px;
+    background: url("../images_landing/tarot-direct-noel/corner-right.png") no-repeat;
+    right: -24px; }
   .ThemeChoice-ListItem-Icon {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -2745,7 +2767,7 @@ body {
 
 /* ------------------------------- FORMULAIRE ------------------------------- */
 .FormContainer {
-  background-color: #616161;
+  background-color: #d5dce4;
   color: white; }
 
 .FormField-Label {
@@ -2758,23 +2780,15 @@ body {
     box-shadow: 0 0 8px 1px #a94442 inset; }
 
 .FormContainer-Submit {
-  background-color: #496891;
-  color: #454545;
-  border: 2px solid #496891;
+  background-color: #9e7406;
+  color: #FFFFFF;
+  border: 2px solid #9e7406;
   -webkit-transition: all 0.5s ease-in;
           transition: all 0.5s ease-in; }
   .FormContainer-Submit:hover {
     color: #496891;
+    border: 2px solid #496891;
     background-color: transparent; }
-
-.FormField-Label .ico-woman {
-  font-size: 1.9rem;
-  font-weight: bold;
-  color: #F57F9B; }
-.FormField-Label .ico-man {
-  font-size: 1.9rem;
-  font-weight: bold;
-  color: #2E4980; }
 
 .FormField-Info:before {
   content: "\f0da";

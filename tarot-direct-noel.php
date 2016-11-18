@@ -39,7 +39,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
+        <link rel="icon" type="image/png" href="images_landing/tarot-direct-noel/favicon.png" />
         
         <link rel="stylesheet" type="text/css" href="css/tarot-direct-noel.css" />
         
@@ -126,23 +126,27 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
+                                <input type="hidden" name="dri" value="tarot-direct-noel/tarot-direct-noel-dri" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />  
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
-                                    <label class="FormField-Label">Vous êtes</label>
+                                    <label class="FormField-Label">Votre civilité</label>
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> une femme</label>
-                                                <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="mme" id="sexe-f" class="FormField-Input" />
+                                                <label for="sexe-f" class="FormField-Label ">Mme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
-                                                <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="melle" id="sexe-f" class="FormField-Input" />
+                                                <label for="sexe-h" class="FormField-Label">Melle</label>
+                                            </div>
+                                            <div class="FormField-TableInputContainer-Cell">
+                                                <input type="radio" name="sexe" value="mr" id="sexe-h" class="FormField-Input" />
+                                                <label for="sexe-h" class="FormField-Label">Mr</label>
                                             </div>
                                         </div>
                                     </div>
@@ -150,7 +154,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" placeholder="Mon Prénom" value="<?= $prenom ?>" required/>
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -202,7 +206,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="mon@email.com" value="<?= $email ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -246,6 +250,66 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                             </div>
                             <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------------------------------- Verification DE LA CB -------------------------------------- -->
+            <section class="ContentBandForm Principal" id="scn-cb">
+
+                <header class="ContentBand-ColumnHeader Title">- Pour poursuivre remplissez le <strong>formulaire</strong> ci-dessous -</header>
+                <div class="PageWrapper ContentBand-Table">
+                    <div class="ContentBand-Column">
+                        <article class="FormContainer">
+                            <div class="Pop Pop-Voyant getFormValue" data-ref-form="voyant" data-method="class">
+                                <span class="Pop-Voyant-Photo"></span>
+                            </div>
+                            <div class="FormContainer overlay" id="form-overlay"></div>
+                            <div class="FormContainer-Fields Fields-Table ">
+                                <p class="alert alert-danger" style="display: none;"></p>
+                                <!-- TODO: Add some directives-->
+                                <div class="CardContainer">
+                                <div class="Fields-Table-Row">
+                                    <label for="card-number" class="FormField-Label">Numéro de la carte</label>
+                                    <div class="FormField">
+                                        <input type="text" class="FormField-Input" id="card-number" name="card-number" required placeholder="0000 0000 0000 0000">
+                                    </div>
+                                </div>
+                                <div class="Fields-Table-Row">
+                                    <label for="" class="FormField-Label">Date de validité</label>
+                                    <div class="FormField">
+                                        <div class="FormField-TableInputContainer">
+                                            <div class="FormField-TableInputContainer-Cell">
+                                                <select class="FormField-Input" name="mois" required>
+                                                    <option value="" selected="selected">Mois</option>
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                            <div class="FormField-TableInputContainer-Cell">
+                                                <select class="FormField-Input" name="annee" required>
+                                                    <option selected="selected" value="">Année</option>
+                                                    <?php for($i=date('Y')+20;$i>=2010;$i--){ ?>
+                                                        <option value="<?= $i ?>"><?= $i ?></option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
                         </article>
                     </div>
                 </div>
@@ -296,7 +360,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+        <script src="js/card-js/card-js.jquery.js"></script>
+        <script src="js/card-js/card-js.js"></script>
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

@@ -41,6 +41,7 @@ $main: #9e7406;
 $secondary: #496891;
 $elm-hover: #359ef8;
 $slogan2: #FFFFFF;
+$form: #d5dce4;
 $rose: #F57F9B;
 $lightgrey: #C0C3C8;
 $bg-bleu: #EAEEF4;
@@ -184,11 +185,34 @@ body {
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 
 .ThemeChoice-ListItem {
-  border-radius: 3rem;
-  border-color: $lightgrey;
+  //border-radius: 3rem;
+  border-color: $lightgrey !important;
   color: $secondary;
   font-weight: bold;
-
+  border: 1px solid;
+  border-left: none;
+  border-right: none;
+  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 53px;
+    width: 24px;
+    position: absolute;
+    top: -1px;
+    background: url($img_dir + "corner-left.png") no-repeat;
+    left: -24px;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 53px;
+    width: 24px;
+    position: absolute;
+    top: -1px;
+    background: url($img_dir + "corner-right.png") no-repeat;
+    right: -24px;
+  }
   &-Icon {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -284,7 +308,7 @@ body {
 /* ------------------------------- FORMULAIRE ------------------------------- */
 
 .FormContainer {
-  background-color: $bg-grey;
+  background-color: $form;
   color: white;
 }
 
@@ -301,27 +325,15 @@ body {
 }
 
 .FormContainer-Submit {
-  background-color: $secondary;
-  color: $grey;
-  border: 2px solid $secondary;
+  background-color: $main;
+  color: #FFFFFF;
+  border: 2px solid $main;
   transition: all 0.5s ease-in;
 
   &:hover {
     color: $secondary;
+    border: 2px solid $secondary;
     background-color: transparent;
-  }
-}
-
-.FormField-Label {
-  .ico-woman {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: $woman;
-  }
-  .ico-man {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: $men;
   }
 }
 
