@@ -1,5 +1,5 @@
 # Configuration
-SetEnv  MYASTRO_ROOT_URL  "http://www.myastro.dev"
+SetEnv  MYASTRO_ROOT_URL  "https://myastro-omnizya.c9users.io"
 SetEnv  MYASTRO_DB_LOGIN  root
 SetEnv  MYASTRO_DB_PASS   ""
 SetEnv  MYASTRO_DB_NAME   myastro
@@ -34,7 +34,7 @@ RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 
 #
 #RewriteCond %{HTTP_HOST} ^myastro.dev$
-#RewriteRule ^(.*) http://www.myastro.dev/$0 [QSA,L,R=301]
+#RewriteRule ^(.*) https://myastro-omnizya.c9users.io/$0 [QSA,L,R=301]
 #RewriteRule ^voyance-tarot-gratuit$ /voyance-tarot [R=301]
 #RewriteRule ^numeroscope-2015$ /numeroscope-2016 [R=301]
 #RewriteRule ^numeroscope-2015-1$ /numeroscope-2016-1 [R=301]
@@ -59,81 +59,81 @@ RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 #RewriteRule ^horoscope-2015-vierge$ /horoscope-2016-vierge [R=301]
 #RewriteRule ^horoscope-2015-sagittaire$ /horoscope-2016-sagittaire [R=301]
 #RewriteRule ^horoscope-2015-poissons$ /horoscope-2016-poissons [R=301]
-#RewriteRule ^index.php http://www.myastro.dev [R=301]
+#RewriteRule ^index.php https://myastro-omnizya.c9users.io [R=301]
 ##Ajout 10/08/2015
-#Redirect permanent /partenaires http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-4-HENRI-11 http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-2-CLAUDE-12 http://www.myastro.dev
-#Redirect permanent /www.legifrance.fr http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-3-HENRI-11 http://www.myastro.dev
-#Redirect permanent /voyance-par-telephone-katy http://www.myastro.dev
-#Redirect permanent /astrologie-gratuite-occidentale-astro.php http://www.myastro.dev
-#Redirect permanent /photos/ http://www.myastro.dev
-#Redirect permanent /images/banniere_gauche_voyance/old/_notes/ http://www.myastro.dev
-#Redirect permanent /_vti_log/ http://www.myastro.dev
-#Redirect permanent /compatibilite-amoureuse-pour-les-hommes/compatibilite-amoureuse-pour-les-hommes.php http://www.myastro.dev
-#Redirect permanent /images/index/_notes/ http://www.myastro.dev
-#Redirect permanent /images/fond_rubriques_voyance/_notes/ http://www.myastro.dev
-#Redirect permanent /_left.php http://www.myastro.dev
-#Redirect permanent /membres-accueil.php http://www.myastro.dev
-#Redirect permanent /voyance-telephone http://www.myastro.dev
-#Redirect permanent /images/petit_format/ http://www.myastro.dev
-#Redirect permanent /images/forum_voyance/_notes/ http://www.myastro.dev
-#Redirect permanent /images/numerologie/_notes/ http://www.myastro.dev
-#Redirect permanent /rony_voyance-par-telephone.php http://www.myastro.dev
-#Redirect permanent /conditions_generales.php http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-2-HENRI-11 http://www.myastro.dev
-#Redirect permanent /analyse-numerologique-gratuite-%20VALERIE-06 http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-8-HENRI-11 http://www.myastro.dev
-#Redirect permanent /a http://www.myastro.dev
-#Redirect permanent /rony_astrologie-gratuite-cartomancie-astro.php http://www.myastro.dev
-#Redirect permanent /inscription-voyance-tarot-gratuit-CECILE-05 http://www.myastro.dev
-#Redirect permanent /voyance-par-telephone) http://www.myastro.dev
-#Redirect permanent /_vti_cnf/ http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-9-HENRI-11 http://www.myastro.dev
-#Redirect permanent /inscription-numerologie-gratuite-9-CLAUDE-12 http://www.myastro.dev
-#Redirect permanent /inscription-voyance-gratuite-GEORGES-09 http://www.myastro.dev
-#Redirect permanent /_ext/ http://www.myastro.dev
-#Redirect permanent /www.cnil.fr http://www.myastro.dev
-#Redirect permanent /membres-inscription.php http://www.myastro.dev
-#Redirect permanent /inscription-voyance-tarot-gratuit-VIKTOR-10 http://www.myastro.dev
-#Redirect permanent /voyance-gratuite/ http://www.myastro.dev
-#Redirect permanent /horoscope-de-l http://www.myastro.dev
-#Redirect permanent /compatibilite-amoureuse-pour-les-femmes/compatibilite-amoureuse-pour-les-femmes.php http://www.myastro.dev
-#Redirect permanent /votre-personnalite-astrologique/votre-personnalite-astrologique http://www.myastro.dev
-#Redirect permanent /navigation/images/ http://www.myastro.dev
-#Redirect permanent /etapes http://www.myastro.dev
-#Redirect permanent /rony_faq-voyance.php http://www.myastro.dev
-#Redirect permanent /images/banners/ http://www.myastro.dev
-#Redirect permanent /forfait-voyance.html http://www.myastro.dev
-#Redirect permanent /images/_notes/ http://www.myastro.dev
-#Redirect permanent /images/news/ http://www.myastro.dev
-#Redirect permanent /horoscope-de http://www.myastro.dev
-#Redirect permanent /personnalite-numerologique/personnalite-numerologique.php http://www.myastro.dev
-#Redirect permanent /etapes-de-la-vie/etapes-de-la-vie.php http://www.myastro.dev
-#Redirect permanent /portrait-astrologique http://www.myastro.dev
-#Redirect permanent /astrologie http://www.myastro.dev
-#Redirect permanent /numerologie http://www.myastro.dev
-#Redirect permanent "/analyse-numerologique-gratuite- VALERIE-06" http://www.myastro.dev
+#Redirect permanent /partenaires https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-4-HENRI-11 https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-2-CLAUDE-12 https://myastro-omnizya.c9users.io
+#Redirect permanent /www.legifrance.fr https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-3-HENRI-11 https://myastro-omnizya.c9users.io
+#Redirect permanent /voyance-par-telephone-katy https://myastro-omnizya.c9users.io
+#Redirect permanent /astrologie-gratuite-occidentale-astro.php https://myastro-omnizya.c9users.io
+#Redirect permanent /photos/ https://myastro-omnizya.c9users.io
+#Redirect permanent /images/banniere_gauche_voyance/old/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /_vti_log/ https://myastro-omnizya.c9users.io
+#Redirect permanent /compatibilite-amoureuse-pour-les-hommes/compatibilite-amoureuse-pour-les-hommes.php https://myastro-omnizya.c9users.io
+#Redirect permanent /images/index/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /images/fond_rubriques_voyance/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /_left.php https://myastro-omnizya.c9users.io
+#Redirect permanent /membres-accueil.php https://myastro-omnizya.c9users.io
+#Redirect permanent /voyance-telephone https://myastro-omnizya.c9users.io
+#Redirect permanent /images/petit_format/ https://myastro-omnizya.c9users.io
+#Redirect permanent /images/forum_voyance/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /images/numerologie/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /rony_voyance-par-telephone.php https://myastro-omnizya.c9users.io
+#Redirect permanent /conditions_generales.php https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-2-HENRI-11 https://myastro-omnizya.c9users.io
+#Redirect permanent /analyse-numerologique-gratuite-%20VALERIE-06 https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-8-HENRI-11 https://myastro-omnizya.c9users.io
+#Redirect permanent /a https://myastro-omnizya.c9users.io
+#Redirect permanent /rony_astrologie-gratuite-cartomancie-astro.php https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-voyance-tarot-gratuit-CECILE-05 https://myastro-omnizya.c9users.io
+#Redirect permanent /voyance-par-telephone) https://myastro-omnizya.c9users.io
+#Redirect permanent /_vti_cnf/ https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-9-HENRI-11 https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-numerologie-gratuite-9-CLAUDE-12 https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-voyance-gratuite-GEORGES-09 https://myastro-omnizya.c9users.io
+#Redirect permanent /_ext/ https://myastro-omnizya.c9users.io
+#Redirect permanent /www.cnil.fr https://myastro-omnizya.c9users.io
+#Redirect permanent /membres-inscription.php https://myastro-omnizya.c9users.io
+#Redirect permanent /inscription-voyance-tarot-gratuit-VIKTOR-10 https://myastro-omnizya.c9users.io
+#Redirect permanent /voyance-gratuite/ https://myastro-omnizya.c9users.io
+#Redirect permanent /horoscope-de-l https://myastro-omnizya.c9users.io
+#Redirect permanent /compatibilite-amoureuse-pour-les-femmes/compatibilite-amoureuse-pour-les-femmes.php https://myastro-omnizya.c9users.io
+#Redirect permanent /votre-personnalite-astrologique/votre-personnalite-astrologique https://myastro-omnizya.c9users.io
+#Redirect permanent /navigation/images/ https://myastro-omnizya.c9users.io
+#Redirect permanent /etapes https://myastro-omnizya.c9users.io
+#Redirect permanent /rony_faq-voyance.php https://myastro-omnizya.c9users.io
+#Redirect permanent /images/banners/ https://myastro-omnizya.c9users.io
+#Redirect permanent /forfait-voyance.html https://myastro-omnizya.c9users.io
+#Redirect permanent /images/_notes/ https://myastro-omnizya.c9users.io
+#Redirect permanent /images/news/ https://myastro-omnizya.c9users.io
+#Redirect permanent /horoscope-de https://myastro-omnizya.c9users.io
+#Redirect permanent /personnalite-numerologique/personnalite-numerologique.php https://myastro-omnizya.c9users.io
+#Redirect permanent /etapes-de-la-vie/etapes-de-la-vie.php https://myastro-omnizya.c9users.io
+#Redirect permanent /portrait-astrologique https://myastro-omnizya.c9users.io
+#Redirect permanent /astrologie https://myastro-omnizya.c9users.io
+#Redirect permanent /numerologie https://myastro-omnizya.c9users.io
+#Redirect permanent "/analyse-numerologique-gratuite- VALERIE-06" https://myastro-omnizya.c9users.io
 #
 #RewriteCond %{REQUEST_URI} /signezodiac.php$
 #RewriteCond %{QUERY_STRING} ^signe=verseau$ [OR]
 #RewriteCond %{QUERY_STRING} ^signe=capricorne$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /numerologie_gratuite.php$
 #RewriteCond %{QUERY_STRING} ^ch=4$ [OR]
 #RewriteCond %{QUERY_STRING} ^ch=5$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /voyant_voyante_gratuit.php$
 #RewriteCond %{QUERY_STRING} ^vt=LAURENT&ch=1$ [OR]
 #RewriteCond %{QUERY_STRING} ^vt=GREGORY&ch=3$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /rony_signe-du-zodiaque.php$
 #RewriteCond %{QUERY_STRING} ^signe=lion$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /rony_forum-voyance-2.php$
 #RewriteCond %{QUERY_STRING} ^salon=15&forum=Horoscope$ [OR]
@@ -141,17 +141,17 @@ RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 #RewriteCond %{QUERY_STRING} ^salon=22&forum=Horoscope$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=11&forum=Voyance$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=12&forum=Voyance$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /rony_commentaires.php$
 #RewriteCond %{QUERY_STRING} ^salon=&forum=&sujet=19$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=14&forum=Horoscope&sujet=34$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=32&forum=Numerologie&sujet=3
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /rony_forum-voyance.php$
 #RewriteCond %{QUERY_STRING} ^forum=Numerologie$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #RewriteCond %{REQUEST_URI} /rony_nouveau-sujet.php$
 #RewriteCond %{QUERY_STRING} ^salon=10&forum=Voyance$ [OR]
@@ -160,7 +160,7 @@ RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 #RewriteCond %{QUERY_STRING} ^salon=18&forum=Horoscope$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=23&forum=Horoscope$ [OR]
 #RewriteCond %{QUERY_STRING} ^salon=25&forum=Horoscope$
-#RewriteRule ^.*$ http://www.myastro.dev? [L,R=301]
+#RewriteRule ^.*$ https://myastro-omnizya.c9users.io? [L,R=301]
 #
 #
 #
@@ -243,274 +243,274 @@ ErrorDocument 401 /401.php
 ErrorDocument 500 /500.php
 
 RewriteCond %{QUERY_STRING} categorie=voyance-par-telephone
-RewriteRule index.php http://www.myastro.dev/voyance-par-telephone? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/voyance-par-telephone? [R=301]
 RewriteCond %{QUERY_STRING} categorie=voyance-gratuite
-RewriteRule index.php http://www.myastro.dev/voyance-gratuite? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/voyance-gratuite? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit&mode=quotidien
-RewriteRule index.php http://www.myastro.dev/tarot-quotidien? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-quotidien? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit&mode=mensuel
-RewriteRule index.php http://www.myastro.dev/tarot-mensuel? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-mensuel? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit&mode=hebdomadaire
-RewriteRule index.php http://www.myastro.dev/tarot-hebdomadaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-hebdomadaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit&mode=couple
-RewriteRule index.php http://www.myastro.dev/tarot-de-couple? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-de-couple? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit&mode=amour
-RewriteRule index.php http://www.myastro.dev/tarot-de-l-amour? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-de-l-amour? [R=301]
 RewriteCond %{QUERY_STRING} categorie=tarot-gratuit
-RewriteRule index.php http://www.myastro.dev/tarot-gratuit? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/tarot-gratuit? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=9
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-9? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-9? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=8
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-8? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-8? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=7
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-7? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-7? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=6
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-6? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-6? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=5
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-5? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-5? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=4
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-4? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-4? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=3
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-3? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-3? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=2
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-2? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-2? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite&numero=1
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique-1? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique-1? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=personnalite
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=9
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-9? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-9? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=8
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-8? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-8? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=7
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-7? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-7? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=6
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-6? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-6? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=5
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-5? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-5? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=4
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-4? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-4? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=3
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-3? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-3? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=2
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-2? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-2? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie&numero=1
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie-1? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie-1? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=etapes-de-la-vie
-RewriteRule index.php http://www.myastro.dev/etapes-de-la-vie? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/etapes-de-la-vie? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=9
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-9? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-9? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=8
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-8? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-8? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=7
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-7? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-7? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=6
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-6? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-6? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=5
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-5? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-5? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=4
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-4? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-4? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=3
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-3? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-3? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=2
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-2? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-2? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme&numero=1
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes-1? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes-1? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-homme
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-hommes? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-hommes? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=9
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-9? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-9? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=8
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-8? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-8? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=7
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-7? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-7? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=6
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-6? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-6? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=5
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-5? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-5? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=4
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-4? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-4? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=3
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-3? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-3? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=2
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-2? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-2? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme&numero=1
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes-1? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes-1? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=compatibilite-femme
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-pour-les-femmes? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-pour-les-femmes? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=9
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-9? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-9? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=8
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-8? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-8? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=7
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-7? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-7? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=6
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-6? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-6? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=5
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-5? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-5? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=4
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-4? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-4? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=3
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-3? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-3? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=2
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-2? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-2? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel&numero=1
-RewriteRule index.php http://www.myastro.dev/numeroscope-2013-1? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numeroscope-2013-1? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite&mode=annuel
-RewriteRule index.php http://www.myastro.dev/numerologie-gratuite? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numerologie-gratuite? [R=301]
 RewriteCond %{QUERY_STRING} categorie=numerologie-gratuite
-RewriteRule index.php http://www.myastro.dev/numerologie-gratuite? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/numerologie-gratuite? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=vierge
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-vierge? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-vierge? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=verseau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-verseau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-verseau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=taureau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-taureau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-taureau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=scorpion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-scorpion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-scorpion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=sagittaire
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-sagittaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-sagittaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=poissons
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-poissons? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-poissons? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=lion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-lion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-lion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=gemeaux
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-gemeaux? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-gemeaux? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=capricorne
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-capricorne? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-capricorne? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=cancer
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-cancer? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-cancer? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=belier
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-belier? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-belier? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien&signe=balance
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-balance? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-balance? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=quotidien
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=vierge
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-vierge? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-vierge? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=verseau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-verseau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-verseau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=taureau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-taureau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-taureau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=scorpion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-scorpion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-scorpion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=sagittaire
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-sagittaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-sagittaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=poissons
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-poissons? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-poissons? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=lion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-lion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-lion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=gemeaux
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-gemeaux? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-gemeaux? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=capricorne
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-capricorne? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-capricorne? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=cancer
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-cancer? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-cancer? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=belier
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-belier? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-belier? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel&signe=balance
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois-balance? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois-balance? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=mensuel
-RewriteRule index.php http://www.myastro.dev/horoscope-du-mois? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-mois? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=vierge
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-vierge? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-vierge? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=verseau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-verseau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-verseau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=taureau
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-taureau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-taureau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=scorpion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-scorpion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-scorpion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=sagittaire
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-sagittaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-sagittaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=poissons
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-poissons? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-poissons? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=lion
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-lion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-lion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=gemeaux
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-gemeaux? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-gemeaux? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=capricorne
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-capricorne? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-capricorne? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=cancer
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-cancer? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-cancer? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=belier
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-belier? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-belier? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire&signe=balance
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour-balance? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour-balance? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=hebdomadaire
-RewriteRule index.php http://www.myastro.dev/horoscope-du-jour? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-du-jour? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=vierge
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-vierge? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-vierge? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=verseau
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-verseau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-verseau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=taureau
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-taureau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-taureau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=scorpion
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-scorpion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-scorpion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=sagittaire
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-sagittaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-sagittaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=poissons
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-poissons? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-poissons? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=lion
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-lion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-lion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=gemeaux
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-gemeaux? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-gemeaux? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=capricorne
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-capricorne? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-capricorne? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=cancer
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-cancer? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-cancer? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=belier
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-belier? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-belier? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel&signe=balance
-RewriteRule index.php http://www.myastro.dev/horoscope-2013-balance? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013-balance? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=annuel
-RewriteRule index.php http://www.myastro.dev/horoscope-2013? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-2013? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=vierge
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-vierge? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-vierge? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=verseau
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-verseau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-verseau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=taureau
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-taureau? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-taureau? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=scorpion
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-scorpion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-scorpion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=sagittaire
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-sagittaire? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-sagittaire? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=poissons
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-poissons? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-poissons? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=lion
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-lion? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-lion? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=gemeaux
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-gemeaux? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-gemeaux? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=capricorne
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-capricorne? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-capricorne? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=cancer
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-cancer? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-cancer? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=belier
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-belier? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-belier? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour&signe=balance
-RewriteRule index.php http://www.myastro.dev/horoscope-de-l-amour-balance? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-de-l-amour-balance? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit&mode=amour
-RewriteRule index.php http://www.myastro.dev/horoscope-gratuit? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-gratuit? [R=301]
 RewriteCond %{QUERY_STRING} categorie=horoscope-gratuit
-RewriteRule index.php http://www.myastro.dev/horoscope-gratuit? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/horoscope-gratuit? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite&mode=portrait-masculin
-RewriteRule index.php http://www.myastro.dev/portrait-astrologique-masculin? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/portrait-astrologique-masculin? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite&mode=portrait-feminin
-RewriteRule index.php http://www.myastro.dev/portrait-astrologique-feminin? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/portrait-astrologique-feminin? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite&mode=personnalite
-RewriteRule index.php http://www.myastro.dev/personnalite-numerologique? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/personnalite-numerologique? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite&mode=compatibilite-homme
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-masculine? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-masculine? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite&mode=compatibilite-femme
-RewriteRule index.php http://www.myastro.dev/compatibilite-amoureuse-feminine? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/compatibilite-amoureuse-feminine? [R=301]
 RewriteCond %{QUERY_STRING} categorie=astrologie-gratuite
-RewriteRule index.php http://www.myastro.dev/astrologie-gratuite? [R=301]
+RewriteRule index.php https://myastro-omnizya.c9users.io/astrologie-gratuite? [R=301]
 RewriteCond %{QUERY_STRING} categorie=accueil
-RewriteRule index.php http://www.myastro.dev/? [R=301]
-RedirectPermanent /voyance-par-mail.html http://www.myastro.dev/voyance-gratuite
-RedirectPermanent /voyance-par-sms.html http://www.myastro.dev/voyance-par-sms
-RedirectPermanent /voyance-par-telephone.html http://www.myastro.dev/voyance-par-telephone
-RedirectPermanent /voyance-sans-carte-bancaire.html http://www.myastro.dev/voyance-sans-cb
-RedirectPermanent /deontologie.html http://www.myastro.dev/deontologie
+RewriteRule index.php https://myastro-omnizya.c9users.io/? [R=301]
+RedirectPermanent /voyance-par-mail.html https://myastro-omnizya.c9users.io/voyance-gratuite
+RedirectPermanent /voyance-par-sms.html https://myastro-omnizya.c9users.io/voyance-par-sms
+RedirectPermanent /voyance-par-telephone.html https://myastro-omnizya.c9users.io/voyance-par-telephone
+RedirectPermanent /voyance-sans-carte-bancaire.html https://myastro-omnizya.c9users.io/voyance-sans-cb
+RedirectPermanent /deontologie.html https://myastro-omnizya.c9users.io/deontologie
 
 # MOD_DEFLATE COMPRESSION
 SetOutputFilter DEFLATE
