@@ -101,6 +101,10 @@ body {
     overflow: hidden;
     position: relative;
 }
+.main-content{
+    position: relative;
+    margin-bottom: 3em;
+}
 
 .main-header {
     display: flex;
@@ -176,7 +180,7 @@ body {
 
 .form-container {
     top: 50%;
-    position: absolute;
+    position: relative;
     transform: translate(-50%, -50%);
     left: 50%;
     color: #ffffff;
@@ -254,7 +258,7 @@ body {
     bottom: 15px;
     justify-content: space-between;
     color: #858585;
-    position: absolute;
+    position: relative;
     z-index: -1;
 }
 
@@ -325,7 +329,7 @@ body {
         overflow: initial;
         position: relative;
         box-shadow: none;
-        top: 59px;
+        margin-top: 59px;
     }
 
     .ribbon {
@@ -371,12 +375,12 @@ body {
     }
 
     .voyant-info {
-        position: absolute;
+        position: relative;
         display: block;
-        bottom: -170px;
         left: 50%;
         transform: translate(-50%);
         width: 100%;
+        margin-top:5em;
     }
 
     .voyant-info::before {
