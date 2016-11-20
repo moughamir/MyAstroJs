@@ -336,7 +336,6 @@ body {
         left: 0;
         position: initial;
         padding: 15px 0;
-        transition: all 600ms ease-in-out;
     }
 
     .ribbon-wrapper {
