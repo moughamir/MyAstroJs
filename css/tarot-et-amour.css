@@ -1,0 +1,489 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.page-w {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.pos-a {
+    position: absolute;
+}
+
+.pos-f {
+    position: fixed;
+}
+
+.Content-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em 0;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    background: url("../images_landing/tarot-et-amour/eventail.png") no-repeat center;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background: no-repeat center url("../images_landing/tarot-et-amour/background.png") fixed;
+    background-size: cover;
+}
+
+.main {
+    height: 489px;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 25px;
+    box-shadow: 0 0 10px -2px #000;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.main-content{
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.main-header {
+    display: flex;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px -2px #2F2F2F;
+    margin-bottom: 15px;
+}
+
+.main-header .title {
+    color: #f70952;
+    text-align: center;
+    line-height: 1.2;
+    font-family: "Raleway", sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.main-header .title:after {
+    content: "";
+    background: url("../images_landing/tarot-et-amour/eventail.png") center 50% no-repeat;
+    width: 84px;
+    height: 62px;
+    position: absolute;
+    margin: auto 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ribbon {
+    display: block;
+    font: bold 15px Sans-Serif;
+    color: #fff;
+    text-align: center;
+    transform: rotate(-20deg);
+    position: relative;
+    padding: 7px 0;
+    left: -20px;
+    top: 20px;
+    width: 300px;
+    background-color: #f70952;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.ribbon-wrapper {
+    width: 271px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+}
+
+.ribbon::before {
+    left: 0;
+}
+
+.ribbon::after {
+    right: 0;
+}
+
+.form {
+    background: #f70952;
+    width: 486px;
+    height: 277px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container .slogan {
+    font-family: "Dancing Script", cursive;
+    color: #f70952;
+    text-align: right;
+    font-size: 40px;
+}
+
+.form-container .offer {
+    color: #f70952;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 32px;
+}
+
+.form-container .offer .highlight {
+    color: #fff;
+    filter: drop-shadow(-1px 1px 0 #f70952) drop-shadow(1px 1px 0 #f70952) drop-shadow(-1px -1px 0 #f70952) drop-shadow(1px -1px 0 #f70952);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.form-header {
+    width: 580px;
+}
+
+.input-container {
+    text-align: center;
+    margin-top: 26px;
+}
+
+.input-container .small {
+    margin-bottom: 20px;
+}
+
+.form-inputs {
+    display: block;
+    border: none;
+    height: 36px;
+    width: 320px;
+    margin: 10px auto;
+    border-radius: 2px;
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.mod-btn {
+    height: 50px;
+    background: #ffffff linear-gradient(0deg, #a0a3a3 0%, white 100%);
+    color: #f70952;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    line-height: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.mod-btn:hover {
+    background: linear-gradient(180deg, #a0a3a3 0%, white 100%);
+}
+
+.landing-footer {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 15px;
+    justify-content: space-between;
+    color: #858585;
+    position: relative;
+    z-index: -1;
+}
+
+.landing-footer .footer-c {
+    bottom: 15px;
+    z-index: -1;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    width: 100%;
+}
+
+.landing-footer .footer-link {
+    text-decoration: none;
+    cursor: help;
+    color: #858585;
+}
+
+.landing-footer .footer-link:hover {
+    color: #f70952;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-device-width: 960px) {
+    body {
+        background: #fbc6df !important;
+    }
+
+    .page-w {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo {
+        width: 324px;
+    }
+
+    .landing-header-logo {
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .landing-header-logo:before {
+        content: '';
+        display: block;
+        background: url("../images_landing/tarot-et-amour/bfly-2.png") no-repeat;
+        width: 62px;
+        height: 62px;
+        position: absolute;
+        right: 70px;
+        transform: translate(-526px, -6px);
+    }
+
+    .landing-header-logo:after {
+        content: '';
+        display: block;
+        background: url("../images_landing/tarot-et-amour/bfly-1.png") no-repeat;
+        width: 96px;
+        height: 96px;
+        position: absolute;
+        top: 70px;
+        transform: translate(0px, -4px);
+    }
+
+    .main {
+        background: none;
+        overflow: initial;
+        position: relative;
+        box-shadow: none;
+        margin-top: 59px;
+    }
+
+    .ribbon {
+        width: 100%;
+        height: initial;
+        font-size: 2rem;
+        transform: rotate(0deg);
+        left: 0;
+        position: initial;
+        padding: 15px 0;
+    }
+
+    .ribbon-wrapper {
+        width: 100%;
+        overflow: hidden;
+        top: -80px;
+        left: 0;
+        box-shadow: 0 2px 4px 1px #000000;
+        margin-bottom: 20px;
+        position: absolute;
+        height: initial;
+    }
+
+    .slogan {
+        text-align: center !important;
+        font-size: 2.8rem;
+        line-height: 1.4 !important;
+    }
+
+    .offer {
+        color: #f70952;
+        text-align: center;
+        line-height: 1.2 !important;
+        font-size: 3.18rem !important;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .offer .highlight {
+        font-size: 4rem;
+        letter-spacing: 3px;
+    }
+
+    .voyant-info {
+        position: relative;
+        display: block;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        margin-top:5em;
+    }
+
+    .voyant-info::before {
+        content: "a tout de suite!";
+        color: #f70952;
+        font-family: "Raleway", sans-serif;
+        text-transform: capitalize;
+        text-align: center;
+        width: 100%;
+        display: block;
+        position: absolute;
+        font-size: 1.4em;
+    }
+
+    .voyant-container {
+        background: url("../images_landing/tarot-et-amour/hexagone.png") no-repeat;
+        width: 165px;
+        height: 145px;
+        position: relative;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .voyant-container:after {
+        content: "Christelle";
+        color: #f70952;
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        position: absolute;
+        bottom: -50px;
+        text-align: center;
+        width: 165px;
+    }
+
+    .voyant-photo {
+        background: url("../images_landing/tarot-et-amour/christelle.png") no-repeat center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .form-container, .form {
+        width: 100%;
+    }
+
+    .landing-header-logo {
+        height: 126px;
+    }
+
+    .landing-header-logo::before {
+        content: '';
+        display: block;
+        background: url("../images_landing/tarot-et-amour/bfly-2.png") no-repeat;
+        width: 62px;
+        height: 62px;
+        position: absolute;
+        right: 70px;
+        transform: translate(-158px, -17px);
+        transition: all 750ms ease;
+    }
+
+    .logo {
+        width: calc(368px / 1.8);
+        height: calc(190px / 1.8);
+        transition: all 750ms ease;
+    }
+
+    .landing-header-logo::after {
+        content: '';
+        display: block;
+        background: url("../images_landing/tarot-et-amour/bfly-1.png") no-repeat;
+        width: calc(96px / 1.8);
+        height: calc(96px / 1.8);
+        position: absolute;
+        top: 70px;
+        transform: translate(-22px, 2px);
+        background-size: contain;
+        transition: all 750ms ease;
+    }
+
+    .form-header {
+        width: 100%;
+    }
+
+    .slogan {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .offer {
+        text-align: center;
+        line-height: 2.5;
+        font-size: 2.05rem !important;
+    }
+
+    .highlight {
+        letter-spacing: 2px !important;
+        font-size: 3.3rem !important;
+    }
+}
+
+
