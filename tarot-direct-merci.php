@@ -7,11 +7,19 @@
     Created on : 08 novembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+require_once('inc/config.php');
+require_once('inc/bdd.php');
+$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+
 session_start();
 $cards_dir = 'tarot/cartes/original-grand/';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 $voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : '';
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
+
+if(isset($_SESSION['user_id'])){
+    $bdd->update($bdd->users, ['dri_page' => 'tarot-direct-merci'], ['internal_id' => $_SESSION['user_id']]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
