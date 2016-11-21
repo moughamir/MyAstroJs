@@ -58,10 +58,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <img src="images_landing/tarot-direct/offre-tchat.png" alt="5 minutes gratuites" />
                         <h2 class="Merci-Title">Toutes vos réponses en <strong>un simple clic</strong> !</h2>
-                        <p class="Merci-Text">
-                            Pour profiter immédiatement des 5 minutes de Tchat GRATUITES</br>
-                            Cliquez sur le bouton ci-dessous :
-                        </p>
+                        <p class="Merci-Text">Cliquez ici pour profiter immédiatement des 5 minutes de Tchat GRATUITES</p>
                         <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormContainer-Submit">Je lance le TCHAT</a>
                     </article>
                 </div>

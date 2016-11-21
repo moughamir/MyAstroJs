@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------------
     --   tarot-direct-rc-g = REFLEX CACHE   --
     ------------------------------------------
@@ -37,15 +37,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -124,7 +124,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-rc-to" />
+                                <input type="hidden" name="source" value="tarot-direct-rc-g" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
@@ -285,9 +285,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </div>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -300,7 +300,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

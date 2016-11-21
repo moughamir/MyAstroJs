@@ -230,13 +230,12 @@ if(empty($err)){
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,
-        'myastroPsychic'    => $voyant,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
         'myastroUrl'        => $formurl_kgs,
         'myastroGclid'      => $gclid,
-        'reflexAffilateId' => $rc_affiliateid,
-        'reflexSource'     => $rc_source
+        'reflexAffilateId'  => $rc_affiliateid,
+        'reflexSource'      => $rc_source
     );
 
     if($reinscription){
@@ -265,9 +264,7 @@ if(empty($err)){
  * ========================================================================== */
 
 if(empty($err)){
-
     $conversion = 1;
-
     if (!$trouve){ // Nouveau prospect
         $conversion = 2;
     } else { // Existe déjà
@@ -312,7 +309,9 @@ if(empty($err)){
             'url'                     => $page,
             'gclid'                   => $gclid,
             'tel_is_valid'            => 1,
-            'blacklisted'             => 0
+            'blacklisted'             => 0,
+            'reflex_affiliate_id'     => $rc_affiliateid,
+            'reflex_source'           => $rc_source
         );
 
         $bdd->insert(
@@ -345,7 +344,13 @@ if(empty($err)){
             'source'                  => $formurl,
             'voyant'                  => $voyant,
             'url'                     => $page,
-            'gclid'                   => $gclid
+            'gclid'                   => $gclid,
+            'smart_focus_insert'      => 0,
+            'conversion'              => 0,
+            'dri_page'                => '',
+            'conversion_page'         => '',
+            'reflex_affiliate_id'     => $rc_affiliateid,
+            'reflex_source'           => $rc_source
         );
         $bdd->update(
             $bdd->users,
@@ -418,7 +423,8 @@ if(empty($err)){
         'GROUPE_FLAG_30'  => $param['compteur']['flag30']
     );
 
-    $smartFocus->insert($email, $params);
+    $sf_insert = $smartFocus->insert($email, $params);
+    $bdd->update($bdd->users, ['smart_focus_insert' => $sf_insert], ['internal_id' => $idindex]);
     $compteur->process();
 
 /* ========================================================================== *
