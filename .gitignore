@@ -8,4 +8,4 @@ yyadmin/cdjj/*
 yyadmin/media/*
 .htaccess
 .brackets.json
-.idea/*
+.idea
