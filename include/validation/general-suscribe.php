@@ -14,6 +14,10 @@ $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] 
 $retour = array();
 $trouve = false;
 $reinscription = false;
+$tchatabo_dri =  ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"];
+$dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
+$dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
+
 $today_date_bdd = date('Y-m-d');
 $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
@@ -238,6 +242,10 @@ if(empty($err)){
         'reflexSource'      => $rc_source
     );
 
+    if(!in_array($dri, $tchatabo_dri)){
+        $post_data['myastroPsychic'] = $voyant;
+    }
+
     if($reinscription){
         $kgestion_id = $user->kgestion_id;
         $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
@@ -456,9 +464,6 @@ if(empty($err)){
  *                                 REDIRECTION                                *
  * ========================================================================== */
 
-    $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
-    $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
-
     if ($dri){
         if($dri == "tchat"){
             if ( time() > strtotime(date('Y-m-d 09:00:00'))
@@ -467,7 +472,7 @@ if(empty($err)){
             {
                 $redirect_url = 'tchat';
             }
-        } elseif(in_array($dri, ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"])){
+        } elseif(in_array($dri, $tchatabo_dri)){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
                 if($dri == "tarot-en-direct/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';

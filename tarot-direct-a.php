@@ -124,7 +124,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="https://voyance-en-direct.tv/tarot-en-direct/saisie-cb?email=[EMAIL]" />
+                                <input type="hidden" name="dri" value="tarot-direct-merci" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
