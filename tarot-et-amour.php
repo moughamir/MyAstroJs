@@ -27,7 +27,7 @@ include 'include/functions/copyright.php';
 
 
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:400,500,600|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/tarot-et-amour.css">
 </head>
 <body>
@@ -40,6 +40,7 @@ include 'include/functions/copyright.php';
         <div class="Content-brand">
             <div class="landing-header-logo">
                 <img src="images_landing/tarot-et-amour/logo.png" alt="Tarot Direct" class="logo"/>
+                <img src="images_landing/tarot-et-amour/logo-m.png" alt="Tarot Direct" class="logo-m"/>
             </div>
         </div>
     </div>
@@ -61,7 +62,9 @@ switch (isset($state)) {
 
                 </header>
                 <header class="form-header">
-                    <h2 class="slogan">Amour, travail, argent</h2>
+                <div class="slogan-container">
+                    <h2 class="slogan">Amour, travail, argent</h2><img src="images_landing/tarot-et-amour/eventail.png" alt="" class="eventail">
+                </div>
                     <h1 class="offer">5 minutes de TCHAT <span class="highlight">Gratuites</span></h1>
                 </header>
                 <form class="form ajax">
