@@ -1,3 +1,4 @@
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -70,18 +71,18 @@ table {
 }
 
 .Content-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 1.5em 0;
     position: relative;
 }
-
-/* .logo::after {
-    content: '';
-    background: url("../images_landing/tarot-et-amour/eventail.png") no-repeat center;
-    background-size: cover;
-} */
 
 .hidden {
     display: none;
@@ -110,10 +111,16 @@ body {
 }
 
 .main-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 72px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: white;
     box-shadow: 0 0 10px -2px #2F2F2F;
     margin-bottom: 15px;
@@ -136,7 +143,8 @@ body {
     position: absolute;
     margin: auto 15px;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .ribbon {
@@ -144,7 +152,8 @@ body {
     font: bold 15px Sans-Serif;
     color: #fff;
     text-align: center;
-    transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
     position: relative;
     padding: 7px 0;
     left: -20px;
@@ -173,24 +182,40 @@ body {
     background: #f70952;
     width: 486px;
     height: 277px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 18px;
 }
 
 .form-container {
     top: 50%;
     position: relative;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     left: 50%;
     color: #ffffff;
     font-family: "Raleway", sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .form-container .slogan {
@@ -212,7 +237,8 @@ body {
 
 .form-container .offer .highlight {
     color: #fff;
-    filter: drop-shadow(-1px 1px 0 #f70952) drop-shadow(1px 1px 0 #f70952) drop-shadow(-1px -1px 0 #f70952) drop-shadow(1px -1px 0 #f70952);
+    -webkit-filter: drop-shadow(-1px 1px 0 #f70952) drop-shadow(1px 1px 0 #f70952) drop-shadow(-1px -1px 0 #f70952) drop-shadow(1px -1px 0 #f70952);
+            filter: drop-shadow(-1px 1px 0 #f70952) drop-shadow(1px 1px 0 #f70952) drop-shadow(-1px -1px 0 #f70952) drop-shadow(1px -1px 0 #f70952);
     text-transform: uppercase;
     font-size: 44px;
 }
@@ -244,6 +270,7 @@ body {
 
 .mod-btn {
     height: 50px;
+    background: #ffffff -webkit-linear-gradient(bottom, #a0a3a3 0%, white 100%);
     background: #ffffff linear-gradient(0deg, #a0a3a3 0%, white 100%);
     color: #f70952;
     font-family: "Raleway", sans-serif;
@@ -254,6 +281,7 @@ body {
 }
 
 .mod-btn:hover {
+    background: -webkit-linear-gradient(top, #a0a3a3 0%, white 100%);
     background: linear-gradient(180deg, #a0a3a3 0%, white 100%);
 }
 
@@ -289,7 +317,9 @@ body {
 .eventail-md {
     position: absolute;
     top: 50%;
-    transform: translate(37%, -50%);
+    -webkit-transform: translate(100%, -50%);
+    transform: translate(100%, -50%);
+    left: 60%;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 580px) and (max-device-width: 960px) {
@@ -316,9 +346,14 @@ body {
     }
     .landing-header-logo {
         height: 180px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
     }
 
     .main {
@@ -333,7 +368,8 @@ body {
         width: 100%;
         height: initial;
         font-size: 2rem;
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
         left: 0;
         position: initial;
         padding: 15px 0;
@@ -361,9 +397,15 @@ body {
         text-align: center;
         line-height: 1.2 !important;
         font-size: 51px !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .offer .highlight {
@@ -375,7 +417,8 @@ body {
         position: relative;
         display: block;
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
         width: 100%;
         margin-top:5em;
     }
@@ -399,7 +442,8 @@ body {
         position: relative;
         top: 40px;
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
     }
 
     .voyant-container:after {
@@ -421,11 +465,18 @@ body {
         position: absolute;
     }
     .slogan-container {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    width: 100%;
-	    justify-content: center;
-	    align-content: center;
-	    align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
     .eventail {
 	    display: inline-block;
@@ -474,9 +525,14 @@ body {
     }
     .landing-header-logo {
         height: 180px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
     }
 
     .main {
@@ -491,7 +547,8 @@ body {
         width: 100%;
         height: initial;
         font-size: 2rem;
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
         left: 0;
         position: initial;
         padding: 15px 0;
@@ -519,9 +576,15 @@ body {
         text-align: center;
         line-height: 1.2 !important;
         font-size: 51px !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .offer .highlight {
@@ -533,7 +596,8 @@ body {
         position: relative;
         display: block;
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
         width: 100%;
         margin-top:5em;
     }
@@ -557,7 +621,8 @@ body {
         position: relative;
         top: 40px;
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
     }
 
     .voyant-container:after {
@@ -579,11 +644,18 @@ body {
         position: absolute;
     }
     .slogan-container {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
 	    width: 100%;
-	    justify-content: center;
-	    align-content: center;
-	    align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	}
     .form-container, .form {
         width: 100%;
@@ -641,9 +713,15 @@ and (max-device-width : 568px) {
 		height: auto;
 	}
 	.Content-brand {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    justify-content: center;
-	    align-items: center;
+	    -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	            justify-content: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    margin: 1.5em 0 0 0;
 	    position: relative;
 	}
@@ -673,7 +751,8 @@ and (max-device-width : 568px) {
 	    width: 100%;
 	    height: initial;
 	    font-size: 1.3rem;
-	    transform: rotate(0deg);
+	    -webkit-transform: rotate(0deg);
+	            transform: rotate(0deg);
 	    left: 0;
 	    position: initial;
 	    padding: 5px 0;
@@ -690,7 +769,8 @@ and (max-device-width : 568px) {
 	    position: relative;
 	    display: block;
 	    left: 50%;
-	    transform: translate(-50%);
+	    -webkit-transform: translate(-50%);
+	            transform: translate(-50%);
 	    width: 100%;
 	    margin-top: 2.05em;
 	}
@@ -701,5 +781,3 @@ and (max-device-width : 568px) {
 		display: none;
 	}
 }
-
-
