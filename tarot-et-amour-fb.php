@@ -5,13 +5,15 @@
  * Date: 11/11/2016
  * Time: 17:43
  */
-include 'include/functions/copyright.php';
+$question = ['code'=>'question_1', 'subject'=>'amour', 'text'=>'Tarot et amour - Offre Tchat gratuit sans tirage'];
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <html class="no-js" lang="fr_FR">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Le Tarot et L'Amour | My Astro</title>
+    <title>Le Tarot et LʼAmour | My Astro</title>
     <meta name="description" content="Le Tarot et l'amour, 5 minutes de Tchat gratuites.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,7 +26,6 @@ include 'include/functions/copyright.php';
     <meta name="apple-mobile-web-app-title" content="Tarot et Amour">
     <meta name="application-name" content="Tarot et Amour">
     <meta name="theme-color" content="#fbc6df">
-
 
     <!-- Place favicon.ico in the root directory -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:400,500,600|PT+Sans" rel="stylesheet">
@@ -48,41 +49,39 @@ include 'include/functions/copyright.php';
         </div>
     </div>
 </header>
-<?php
-switch (isset($state)) {
-    case 'MAIL_SENT':
-    case 'MAIL_ALREADY_SENT':
-        echo "<p class='DRI-Sent'>Merci, votre demande a bien été prise en compte<br /><strong>Un voyant vous recontactera dans quelques instants</strong>.</p>";
-        break;
-}
-?>
 <section class="main-content">
     <div class="page-w pos-r">
         <div class="main">
+            <div class="form-container overlay" id="form-overlay" style="display:none"></div>
             <div class="ribbon-wrapper"><span class="ribbon">Offre découverte</span></div>
             <article class="form-container">
-                <header class="form-header-md" style="display: none;">
-
-                </header>
+                <header class="form-header-md"></header>
                 <header class="form-header">
-                <div class="slogan-container">
-                    <h2 class="slogan">Amour, travail, argent</h2><img src="images_landing/tarot-et-amour/eventail.png" alt="" class="eventail">
-                </div>
+                    <div class="slogan-container">
+                        <h2 class="slogan">Amour, travail, argent</h2>
+                        <img src="images_landing/tarot-et-amour/eventail.png" alt="" class="eventail" />
+                    </div>
                     <h1 class="offer">5 minutes de TCHAT <span class="highlight">Gratuites</span></h1>
                 </header>
                 <form class="form ajax">
-                    <input type="hidden" name="method" value="tarot-et-amour" />
-                    <input type="hidden" name="dri" value="tarot-et-amour" />
+                    <!-- ########## identification formulaire ########## -->
+                    <input type="hidden" name="source" value="tarot-et-amour-fb" />
+                    <input type="hidden" name="method" value="general-suscribe" />
+                    <input type="hidden" name="support" value="tarot" />
+                    <input type="hidden" name="site" value="myastro.fr" />
+                    <input type="hidden" name="affiliation" value="facebook_adds" />
+                    <input type="hidden" name="dri" value="tarot-direct-merci" />
+                    <!-- ########## autres champs pré-remplis ########## -->
+                    <input type="hidden" name="cguv" value="1" />
+                    <input type="hidden" name="partenaires" value="1" />
+                    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+                    <input type="hidden" name="optional_birthdate" value="1" />
+                    <!-- ############################################### -->
                     <div class="input-container">
                         <p class="small">Remplissez le formulaire</p>
-                        <label for="prenom"></label>
-                        <input class="form-inputs mod-input" type="text" name="prenom" id="prenom"
-                               placeholder="Votre prénom" required>
-                        <label for="email"></label>
-                        <input class="form-inputs mod-input" type="email" name="email" id="email" title="email"
-                               placeholder="Votre email" required>
-                        <input class="form-inputs mod-btn" type="submit" value="Tchat immédiat" name="valider">
-
+                        <input class="form-inputs mod-input" type="text" name="prenom" id="prenom" placeholder="Votre prénom"  value="<?= $prenom ?>" required />
+                        <input class="form-inputs mod-input" type="email" name="email" id="email" title="email" placeholder="Votre email" value="<?= $email ?>" required />
+                        <input class="form-inputs mod-btn" type="submit" value="Tchat immédiat" name="valider" />
                     </div>
                 </form>
             </article>
@@ -96,9 +95,7 @@ switch (isset($state)) {
 <footer class="landing-footer">
     <div class="footer-c">
         <div class="page-w">
-            <?php
-            echo ("Copyright &copy " . copyright() . " | " . "<a class=\"footer-link\" href=\"http://myastro.fr/\">MyAstro</a>");
-            ?>
+            Copyright &copy <?= date('Y');?> | <a class="footer-link" href="http://myastro.fr/">MyAstro</a>
         </div>
     </div>
 </footer>
@@ -122,3 +119,4 @@ include('include/remarketing/facebook.php');
 ?>
 </body>
 </html>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

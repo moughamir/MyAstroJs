@@ -100,6 +100,8 @@ if (isset($param['question_code'])){
         $question['subject'] = 'financier';
     }
 
+    $question['text'] = '';
+
     // Tableau comprenant les questions qui nécessitent les infos du conjoint.
     $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour');
     $question['conjoint'] = in_array($question['code'], $questionConjoint);
@@ -130,25 +132,29 @@ $sexe = str_replace('femme', 'F', $sexe);
 // Prénom ----------------------------------------------------------------------
 $prenom = form_firstname($err, $param);
 // Date de naissance & Signe Astrologique --------------------------------------
+$dtn_bdd = $dtn_smf = $dtn_ses = '';
+$need_birthdate = isset($param['optional_birthdate']) ? false : true;
 $dtn_j = isset($param['jour'])  && !empty($param['jour'])  ? $param['jour']  : false;
 $dtn_m = isset($param['mois'])  && !empty($param['mois'])  ? $param['mois']  : false;
 $dtn_a = isset($param['annee']) && !empty($param['annee']) ? $param['annee'] : false;
 $signe = '';
 
-if($dtn_j && $dtn_m && $dtn_a){
-    $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
-    $dtn_smf = $dtn_m."/".$dtn_j."/".$dtn_a; // FORMAT SMARTFOCUS
-    $dtn_ses = $dtn_j."/".$dtn_m."/".$dtn_a; // FORMAT SESSION
+if($need_birthdate){
+    if($dtn_j && $dtn_m && $dtn_a){
+        $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
+        $dtn_smf = $dtn_m."/".$dtn_j."/".$dtn_a; // FORMAT SMARTFOCUS
+        $dtn_ses = $dtn_j."/".$dtn_m."/".$dtn_a; // FORMAT SESSION
 
-    $signe = get_signe_astro($dtn_j, $dtn_m);
-} else {
-    $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
+        $signe = get_signe_astro($dtn_j, $dtn_m);
+    } else {
+        $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
+    }
 }
 
 // Adresse mail ----------------------------------------------------------------
 $email = isset($param['email']) ? trim($param['email']) : false;
 if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,4}$", $email)){
-    $err['email'] = 'Cette adresse email nʼest pas valide.';
+    $err['email'] = 'Cette adresse email nʼest pas valide.';
 }
 
 // Numéro de téléphone & Pays --------------------------------------------------
@@ -235,8 +241,8 @@ if(empty($err)){
         'myastroSource'     => $source,
         'myastroUrl'        => $formurl_kgs,
         'myastroGclid'      => $gclid,
-        'reflexAffilateId' => $rc_affiliateid,
-        'reflexSource'     => $rc_source
+        'reflexAffilateId'  => $rc_affiliateid,
+        'reflexSource'      => $rc_source
     );
 
     if($reinscription){
