@@ -77,11 +77,11 @@ table {
     position: relative;
 }
 
-.logo::after {
+/* .logo::after {
     content: '';
     background: url("../images_landing/tarot-et-amour/eventail.png") no-repeat center;
     background-size: cover;
-}
+} */
 
 .hidden {
     display: none;
@@ -286,6 +286,11 @@ body {
 .eventail{
 	display: none;
 }
+.eventail-md {
+    position: absolute;
+    top: 50%;
+    transform: translate(37%, -50%);
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 580px) and (max-device-width: 960px) {
     body {
@@ -439,6 +444,9 @@ body {
 	    background: #fff;
 	    padding: 11px;
 	    width: 100%;
+	}
+	.eventail-md{
+		display: none;
 	}
 }
 
@@ -621,71 +629,77 @@ body {
 	    padding: 11px;
 	    width: 100%;
 	}
+	.eventail-md{
+		display: none;
+	}
 }
-@media only screen 
+@media only screen  
 and (min-device-width : 320px) 
 and (max-device-width : 568px) { 
-/* Iphone 5 */
-.landing-header-logo{
-	height: auto;
-}
-.Content-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5em 0 0 0;
-    position: relative;
-}
-.main-content{
-	height: 130vh;
+	/* Iphone 5 */
+	.landing-header-logo{
+		height: auto;
+	}
+	.Content-brand {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: 1.5em 0 0 0;
+	    position: relative;
+	}
+	.main-content{
+		height: 130vh;
 
-}
-.main{
-	height: 400px;
-	background: none;
-    overflow: initial;
-    position: relative;
-    box-shadow: none;
-    margin-top: 55px;
-}
-.ribbon-wrapper {
-    width: 100%;
-    overflow: hidden;
-    top: -52px;
-    left: 0;
-    box-shadow: 0 3px 8px -2px #000000;
-    margin-bottom: none;
-    position: absolute;
-    height: initial;
-}
-.ribbon {
-    width: 100%;
-    height: initial;
-    font-size: 1.3rem;
-    transform: rotate(0deg);
-    left: 0;
-    position: initial;
-    padding: 5px 0;
-}
-.slogan {
-    font-size: 1.6em !important;
-    font-weight: 500 !important;
-}
-.offre{
-	font-size: 30px !important;
-	line-height: auto;
-}
-.voyant-info {
-    position: relative;
-    display: block;
-    left: 50%;
-    transform: translate(-50%);
-    width: 100%;
-    margin-top: 2.05em;
-}
-.form-inputs {
-    width: 295px;
-}
+	}
+	.main{
+		height: 400px;
+		background: none;
+	    overflow: initial;
+	    position: relative;
+	    box-shadow: none;
+	    margin-top: 55px;
+	}
+	.ribbon-wrapper {
+	    width: 100%;
+	    overflow: hidden;
+	    top: -52px;
+	    left: 0;
+	    box-shadow: 0 3px 8px -2px #000000;
+	    margin-bottom: none;
+	    position: absolute;
+	    height: initial;
+	}
+	.ribbon {
+	    width: 100%;
+	    height: initial;
+	    font-size: 1.3rem;
+	    transform: rotate(0deg);
+	    left: 0;
+	    position: initial;
+	    padding: 5px 0;
+	}
+	.slogan {
+	    font-size: 1.6em !important;
+	    font-weight: 500 !important;
+	}
+	.offre{
+		font-size: 30px !important;
+		line-height: auto;
+	}
+	.voyant-info {
+	    position: relative;
+	    display: block;
+	    left: 50%;
+	    transform: translate(-50%);
+	    width: 100%;
+	    margin-top: 2.05em;
+	}
+	.form-inputs {
+	    width: 295px;
+	}
+	.eventail-md{
+		display: none;
+	}
 }
 
 

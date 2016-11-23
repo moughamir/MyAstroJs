@@ -39,7 +39,10 @@ include 'include/functions/copyright.php';
     <div class="page-w">
         <div class="Content-brand">
             <div class="landing-header-logo">
-                <img src="images_landing/tarot-et-amour/logo.png" alt="Tarot Direct" class="logo"/>
+                <div class="logo-container">
+                    <img src="images_landing/tarot-et-amour/logo.png" alt="Tarot Direct" class="logo"/>
+                    <img src="images_landing/tarot-et-amour/eventail.png" class="eventail-md">
+                </div>
                 <img src="images_landing/tarot-et-amour/logo-m.png" alt="Tarot Direct" class="logo-m"/>
             </div>
         </div>
