@@ -1,17 +1,18 @@
 <?php
 
-/* 
+/*
  * ---\ IP PROTECTION /---
- * 
+ *
  * Inclure ce fichier au début des pages
  * dont l'on souhaite limiter l'accès aux
  * adresses IP connues
- * 
+ *
  */
 
 $IPs = array(
-	'90.80.230.107', // Bureaux 14/12/2015
+    '90.80.230.107', // Bureaux 14/12/2015
     '88.174.39.74', // Nicolas
+    '196.12.218.204', // Maroc
     '127.0.0.1',
     '::1'
 );
