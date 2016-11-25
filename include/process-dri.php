@@ -129,7 +129,7 @@ if($already_sent){
             'firstName' => $prenom,
             'phone'     => $tel,
             'country'   => $pays,
-            'myastroPromoCode' => $code_promo,
+            'myastroPromoCode' => !$code_promo ? '' : $code_promo,
             'myastroSupport' => $support_kgs
         );
         $kgestion_dri = $kgestion->registerDRI($idkgestion, $DRIdata);
