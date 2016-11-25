@@ -146,7 +146,7 @@
                                     <option value="question_sp_argent">Chance et argent en 2016 ?</option>
 	                        </select>
                                 <!-- Email -->
-                                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?= $_GET['email'] ?>" required />
+                                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?php isset($_GET['email']) ?>" required />
                                 <!-- Pays -->
                                 <div class="pays">
                                     <label for="pays">Votre pays</label>
@@ -312,7 +312,7 @@
                                     <option value="question_sp_argent">Chance et argent en 2016 ?</option>
 	                        </select>
                                 <!-- Email -->
-                                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?= $_GET['email'] ?>" required />
+                                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?php isset($_GET['email']) ?>" required />
                                 <!-- Pays -->
                                 <div class="pays">
                                     <label for="pays">Votre pays</label>

@@ -10,7 +10,7 @@
                   'tarot-gratuit', 'numerologie-gratuite' ];
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
     <head>
 	<title>Votre voyance personnalisée et fiable | Myastro</title>
 	<meta name="description" content="Myastro vous permet de consulter un horoscope fiable de manière gratuite. Anticipez votre journée, votre mois ou votre année grâce à ce service." />

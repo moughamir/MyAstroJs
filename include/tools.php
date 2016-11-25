@@ -31,9 +31,9 @@ function form_firstname(&$err, $param = array()){
     $prenom = isset($param['prenom']) ? $param['prenom'] : '';
     $test_prenom = trim($prenom, ' ');
     if(empty($test_prenom)){
-        $err['prenom'] = 'Merci dʼindiquer votre prénom';
+        $err['prenom'] = 'Merci dʼindiquer votre prénom';
     } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-        $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
+        $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
     }
     return $prenom;
 }

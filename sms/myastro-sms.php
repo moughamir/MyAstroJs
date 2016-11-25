@@ -1,6 +1,6 @@
 <?php
 
-require_once('/var/www/myastro/www/sms/sms.inc.php');
+require_once('sms.inc.php');
 
 define('USER_LOGIN', 'contact.kgcom@gmail.com');
 define('API_KEY', 'i3XeUE4qUqsYTHOKudfDQAic7k8b7FG0');
