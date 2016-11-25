@@ -1,7 +1,7 @@
 <?php
-/* 
+/*
     ----------------------------------------
-    --   tarot-direct-rc-g = AFFIL BASE   --
+    --   tarot-direct-ab-g = AFFIL BASE   --
     ----------------------------------------
 
     Created on : 13 septembre 2016
@@ -34,15 +34,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -126,11 +126,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
+                                <input type="hidden" name="dri" value="tarot-direct-merci" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="partenaires" value="1" />  
+                                <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
@@ -281,9 +281,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </div>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -296,7 +296,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

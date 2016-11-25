@@ -112,7 +112,7 @@ body {
 }
 @media all and (max-width: 580px){
     .Title {
-        font-size: 2.8rem;
+        font-size: 2.8rem !important;
         strong {
             font-size: 4.4rem;
         }
@@ -120,9 +120,9 @@ body {
 }
 @media all and (max-width: 420px){
     .Title {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
         strong {
-            font-size: 3rem;
+            font-size: 2.6rem;
         }
     }
 }
@@ -520,6 +520,7 @@ input[type="checkbox"], input[type="radio"] {
         font-size: 2rem;
         font-weight: bold;
         color: $rose;
+        hyphens: none;
     }
     
     .FormContainer-Submit {
@@ -544,7 +545,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 @media all and (max-width: 400px){
     .Merci-Title {
-        font-size: 2.1rem;
+        display: none;
     }
     .Merci-Text {
         font-size: 1.7rem;

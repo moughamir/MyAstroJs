@@ -7,11 +7,19 @@
     Created on : 08 novembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+require_once('inc/config.php');
+require_once('inc/bdd.php');
+$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+
 session_start();
 $cards_dir = 'tarot/cartes/original-grand/';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
-$voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : '';
+$voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : false;
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
+
+if(isset($_SESSION['user_id'])){
+    $bdd->update($bdd->users, ['dri_page' => 'tarot-direct-merci'], ['internal_id' => $_SESSION['user_id']]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -55,13 +63,12 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer Merci-Form">
+                        <?php if($voyant){ ?>
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <?php } ?>
                         <img src="images_landing/tarot-direct/offre-tchat.png" alt="5 minutes gratuites" />
                         <h2 class="Merci-Title">Toutes vos réponses en <strong>un simple clic</strong> !</h2>
-                        <p class="Merci-Text">
-                            Pour profiter immédiatement des 5 minutes de Tchat GRATUITES</br>
-                            Cliquez sur le bouton ci-dessous :
-                        </p>
+                        <p class="Merci-Text">Cliquez ici pour profiter immédiatement des 5 minutes de Tchat GRATUITES</p>
                         <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormContainer-Submit">Je lance le TCHAT</a>
                     </article>
                 </div>

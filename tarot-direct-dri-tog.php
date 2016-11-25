@@ -10,6 +10,10 @@
 include('include/process-dri.php');
 $cards_dir = 'tarot/cartes/original-grand/';
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
+
+if(isset($_SESSION['user_id'])){
+    $bdd->update($bdd->users, ['dri_page' => 'tarot-direct-dri-tog'], ['internal_id' => $_SESSION['user_id']]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
