@@ -11,6 +11,9 @@
 .How {
     padding: 0 3rem;
     text-align: center;
+    &-Header {
+        font-family: inherit;
+    }
 }
 
 .How-Wizard {

@@ -95,7 +95,6 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
               include('include/conversion/facebook.php'); ?>
-
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

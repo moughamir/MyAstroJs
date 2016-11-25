@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* 
+    -------------------------------------
+    --     structure merci voyance     --
+    -------------------------------------
+
+    Created on : 23 novembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+/* --------------------------- STRUCTURE GÉNÉRALE --------------------------- */
+
+@import "../knacss444/knacss";
+
+.PageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.ContentBand {
+    &-FlexContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    &.WithDecoration {
+        background-color: lightgray;
+    }
+    &.WithDecoration &-FlexContainer {
+        align-items: center;
+    }
+}
+
+
+/* ----------------------------- BANDEAU ENTETE ----------------------------- */
+
+.SiteHeader {
+    text-align: right;
+    font-size: 1.2rem;
+    background-color: grey;
+    padding: 0.5rem 0;
+    
+    &-Nav a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+/* -------------------------- INSCRIPTION VALIDEE --------------------------- */
+
+.SiteLogo {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: grey;
+}
+
+.TextContent {
+    max-width: 320px;
+    margin-right: 2rem;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.DescText {
+    margin-top: 3rem;
+    padding: 2.8rem;
+    background-color: white;
+}
+
+/* --------------------------- BLOC PROMOTIONNEL ---------------------------- */
+
+.PromoContent {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    
+    &-Window {
+        margin-top: 4.8rem;
+        padding: 2.8rem 4.8rem;
+        background-color: white;
+    }
+    
+    &-Slogan {
+        margin-bottom: 1rem;
+        font-family: inherit;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+    
+    &-Title {
+        margin: 0;
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px dotted;
+        font-family: inherit;
+    }
+    
+    &-PsychicList {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    &-Ribbon {
+        margin: 0;
+        padding: 1rem;
+        background-color: grey;
+        font-family: inherit;
+        font-size: 2.5rem;
+    }
+}
+
+.PsychicList-Item-Img {
+    display: block;
+}
+
+/* --------------------------- COMMENT CA MARCHE ---------------------------- */
+
+@import "../modules/how";
+
+.How {
+    min-width: 320px;
+    margin-right: 2rem;
+    padding: 3rem 0;
+    text-align: left;
+    &-Wizard {
+        position: absolute;
+        padding-left: 2rem;
+        padding-right: 3rem;
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.FormContainer {
+    width: 100%;
+    max-width: 720px;
+    margin-bottom: 7rem;
+    padding: 4rem 9rem;
+    padding-bottom: 3rem;
+    background-color: lightgrey;
+    text-align: center;
+    &-Title {
+        margin-bottom: 1rem;
+    }
+    &-Slogan {
+        margin-bottom: 3rem;
+    }
+}
+.FormField-Button {
+    display: inline-block;
+    float: left;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.2rem 6rem;
+    background-color: grey;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.SiteFooter {
+    background-color: grey;
+}
+
+@import "../modules/reassurance";
+
+.ReassuranceList-Item-Flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteCopyright {
+    text-align: center;
+}
+
+/*
+@media screen and (min-width: 900px) and (max-width: 1200px){
+    .How-Wizard {
+        height: auto;
+        width: 100%;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 695px){
+    .How-Wizard {
+        height: auto;
+        &Item {
+            display: block;
+            border: none;
+            > * {
+                position: static;
+            }
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px){
+    .ReassuranceList-Item {
+        padding: 0 1rem;
+        font-size: 1.3rem;
+        &-Img {
+            margin: 0 1rem;
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    .ContentBand .ContentBand-Column {
+        display: table;
+        width: 100%;
+        margin: auto;
+    }
+    .How {
+        text-align: center;
+        &-Header {
+            text-align: left;
+        }
+        &-Wizard {
+            margin-bottom: 4rem;
+            &Item {
+                border-left-width: 2.5rem;
+                &::before {
+                    left: -2.6rem;
+                    border-left-width: 2.5rem;
+                }
+            }
+        }
+    }
+    .ContentBand-Column.Form {
+        text-align: center;
+    }
+    .FormContainer.overlay {
+        max-width: none;
+    }
+    .ReassuranceList {
+        text-align: left;
+        &-Item {
+            display: inline-block;
+            border-right: none;
+            margin-bottom: 1rem;
+        }
+    }
+}
+@media screen and (max-width: 695px){
+    .ContentBand {
+        padding-top: 2rem;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        .PageWrapper {
+            padding: 0;
+        }
+    }
+    .TextContent {
+        margin: auto;
+        padding: 0 2rem;
+    }
+    .How {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .ContentBand-Column.Form {
+        padding: 0;
+    }
+    .FormContainer-Pop {
+        top: -12rem;
+        left: initial;
+        right: -1rem;
+    }
+    .FormContainer-Fields {
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 470px){
+    .ContentBand-ColumnHeader {
+        margin-bottom: 0;
+    }
+    .SiteHeader {
+        font-size: 1rem;
+    }
+    .DescText-Title, .How-Header {
+        font-size: 2rem;
+    }
+    .FormContainer {
+        padding: 1.5rem;
+        &-Header {
+            font-size: 2.7rem;
+        }
+        &-Slogan {
+            font-size: 1.6rem;
+        }
+    }
+    .relationship-status .FormField-TableInputContainer-Cell {
+        display: block;
+        margin-left: 20%;
+        text-align: left;
+        width: auto !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .FormContainer-Pop {
+        top: -9rem;
+        left: initial;
+        right: -1rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        width: 11rem;
+        height: 11rem;
+        padding: 2.5rem 2rem;
+    }
+}
+*/
