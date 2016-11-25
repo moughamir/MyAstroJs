@@ -1,4 +1,4 @@
-tarot<?php
+<?php
 include("include/tracking-mail.php");
 ?>
 	<!DOCTYPE html>
