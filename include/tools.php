@@ -252,6 +252,7 @@ function get_signe_astro_arabe($day, $month)
 
     return $signe;
 }
+
 /*
 * function checkPhoneNumber
 *	Vérifie la véracité d'un numéro de téléphone en fonction du pays d'entrée
@@ -262,155 +263,150 @@ function get_signe_astro_arabe($day, $month)
 *
 *	return array
 */
-function checkPhoneNumber($tel, $pays = ''){
-	$formated_phone = '';
-  $msg = NULL;
-	$tel = preg_replace("#[^\d]#", "", $tel);
-	switch ($pays) {
-		case "FR":
-    case "MQ":
-    case "GP":
-    case "GF":
-    case "RE":
-    case "YT":
-    case "PM":
-    case "BL":
-    case "SM":
-    case "WF":
-    case "PF":
-    case "NC":
+function checkPhoneNumber($tel, $pays = '')
+{
+    $formated_phone = '';
+    $msg = NULL;
+    // supression de tous les caractères non numériques
+    $tel = preg_replace("#[^\d]#", "", $tel);
+    // ####### SWITCH PAYS #####################################################
+    switch ($pays) {
+        case "FR": // France
+        case "MQ": // Martinique
+        case "GP": // Guadeloupe
+        case "GF": // Guyane Française
+        case "RE": // Réunion
+        case "YT": // Mayotte
+        case "PM": // St Pierre et Miquelon
+        case "BL": // Saint Barthelemy
+        case "SM": // Saint Marin
+        case "WF": // Wallis et Futuna
+        case "PF": // Polynésie Française
+        case "NC": // Nouvelle Calédonnie
+            // ----- Numéro Français -------------------------------------------
+            // on exclue les 08
+            if(!preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)?0?[12345679]{1}[0-9]{8}$#', $tel)){
+                $msg .= 'Numéro de téléphone (FR) incorrect<br />';
+            } else {
+                if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)0{1}[12345679]{1}[0-9]{8}$#', $tel)){
+                    $msg = 'Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays. <small><i>ex : 336xxxxxxxxx </i></small>';
+                }
+            }
+            // Enlève l'indicatif
+            $formated_phone = preg_replace("#^(330|5900|5940|2620|5960|2690|6870|6890|5900|5080|6810)(\d{8})$#", "0$2", $tel);
+            // Sans 0 ou indicatif avec 9 chiffres, rajouter un 0 au début
+            $formated_phone = preg_replace("#^()(\d{9})$#","0$2",$tel);
+            $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#", "0$2", $formated_phone);
+            break;
+            // -----------------------------------------------------------------
+        case "CH" : // Suisse
+            // ----- Numéro Suisse ---------------------------------------------
+            if(!preg_match('#(^0{1}[0-9]{9}$)#', $tel)){ // ex : 0794872254
+                if(preg_match('#^(0041|41){1}0{1}[0-9]{9}$#',$tel)){ // ex 410794872254
+                    $msg = '(ERR 1) : Numéro de téléphone (CH) incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 4179xxxxxxx</i></small>';
+                } else {
+                    if(preg_match('#^(0041|41){1}[0-9]{9}$#',$tel)){ // 41794872254
+                        unset($msg);
+                    } else {
+                        $msg = '(ERR 2) : Numéro de téléphone (CH) incorrect<br />';
+                    }
+                }
+            }
+            $formated_phone = preg_replace("#^(0041){1}(\d+)#", "41$2", $tel);
+            $formated_phone = preg_replace("#^(0){1}(\d+)#", "41$2", $formated_phone);
+            break;
+            // -----------------------------------------------------------------
+        case "CA" : // Canada
+            // ----- Numéro Canadien -------------------------------------------
+            if(!preg_match('#(^1?[0-9]{10}$)#', $tel)){
+                $msg = 'Numéro de téléphone (CA) incorrect<br />';
+            }
+            if(strlen($tel) == 10){
+                $formated_phone = "1".$tel;
+            } else {
+                $formated_phone = $tel;
+            }
+            break;
+            // -----------------------------------------------------------------
+        case "BE": // Belgique
+            // ----- Numéro Belge ----------------------------------------------
+            switch(strlen($tel)){
+                case 9 : // 0ZZCCCCCC
+                    if(preg_match("#^0{1}(\d{8})$#",$tel)){
+                        $formated_phone = "32".substr($tel,1);
+                    } else {
+                        $msg = '(ERR 9) Numéro de téléphone (BE) incorrect<br />';
+                    }
+                    break;
+                case 10 :
+                    if(preg_match("#^(32){1}(\d{8})$#",$tel)){ // OK : 32 75 84 67 59
+                        $formated_phone = $tel;
+                    } elseif(preg_match("#^(047|048|049){1}[0-9]{7}$#",$tel)){ // OK GSM : 0475 45 78 98
+                        $formated_phone = "32".substr($tel,1);
+                    } else {
+                        $msg = "(ERR 10) : Numéro de téléphone (BE) incorrect.";
+                    }
+                    break;
+                case 11 :
+                    if(preg_match("#^(320){1}(\d{8})$#",$tel)){
+                        $msg = "(ERR 11) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 3248xxxxxxx</i></small> ";
+                    } elseif(preg_match("#^(32){1}(47|48|49){1}(\d){7}#",$tel)){
+                        $formated_phone = $tel;
+                    } else {
+                        $msg = "(ERR 11) : Numéro de téléphone (BE) incorrect.";
+                    }
+                    break;
+                case 12 :
+                    if(preg_match("#^(32){1}(047|048|049){1}\d{7}$#",$tel)){
+                        $msg = "(ERR 12) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 3248xxxxxxx</i></small> ";
+                    } else {
+                        $msg = "(ERR 12) : Numéro de téléphone (BE) incorrect.";
+                    }
+                    break;
+                case 13 :
+                case 14 :
+                    if(preg_match("#^(00320){1}#",$tel)){
+                        $msg = "(ERR 1314) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 003248xxxxxxx</i></small> ";
+                    }
+                    break;
+                default :
+                    $msg = "(ERR D) : Numéro de téléphone (BE) incorrect.";
+                    break;
+            }
+            break;
+            // -----------------------------------------------------------------
+        case "LU" : // Luxembourg
+            // ----- Numéro Luxembourgeois -------------------------------------
+            if(!preg_match('#(^\d{5,6}$)|(^\d{8}$)|(^6\d{6}$)#', $tel)){
+                $msg = 'Numéro de téléphone (LUX) incorrect (Merci de ne pas donner l\'indicatif.)<br />';
+            }
+            $formated_phone = "352".$tel;
+            break;
+            // -----------------------------------------------------------------
+        default :
+            // On regarde quand même s'il peut s'agir d'un numéro français
+            if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)?0?[12345679]{1}[0-9]{8}$#', $tel)){
+                $pays = 'FR';
+                if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)0{1}[12345679]{1}[0-9]{8}$#', $tel)){
+                    $msg = 'Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays. <small><i>ex : 336xxxxxxxxx </i></small>';
+                } else {
+                    // Pas d'indicatif pour les num français
+                    $formated_phone = preg_replace("#^(330|5900|5940|2620|5960|2690|6870|6890|5900|5080|6810)(\d{8})$#","0$2",$tel);
+                    $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#","0$2",$formated_phone);
+                }
+            } else {
+            // Sinon on traite pas, on save tel quel ( puisqu'on a enlevé les non-digits plus haut )
+                $formated_phone = $tel;
+            }
+            break;
+    }
+    // ####### FIN SWITCH PAYS #################################################
 
-			//------ Numéro Français ( on exclue les 08 )
-   			if(!preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)?0?[12345679]{1}[0-9]{8}$#', $tel)){
-   				$msg .= 'Numéro de téléphone (FR) incorrect<br />';
-   			}
-   			else{
-   				if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)0{1}[12345679]{1}[0-9]{8}$#', $tel)){
-   					$msg = 'Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays. <small><i>ex : 336xxxxxxxxx </i></small>';
-   				}
-   			}
-   			$formated_phone = preg_replace("#^(330|5900|5940|2620|5960|2690|6870|6890|5900|5080|6810)(\d{8})$#","0$2",$tel);  // Pas d'indicatif pour les num français
-   			$formated_phone = preg_replace("#^()(\d{9})$#","0$2",$tel);  // sans 0 ou indicatif avec 9 chiffres, rajouter un 0 au début
-        $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#","0$2",$formated_phone);
-    	break;
-    	case "CH" :
-   			//------ Numéro Suisse
-    		if(!preg_match('#(^0{1}[0-9]{9}$)#', $tel)){ // ex : 0794872254
-    			if(preg_match('#^(0041|41){1}0{1}[0-9]{9}$#',$tel)){ // ex 410794872254
-    				$msg = '(ERR 1) : Numéro de téléphone (CH) incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 4179xxxxxxx</i></small>';
-    			}
-    			else{
-    				if(preg_match('#^(0041|41){1}[0-9]{9}$#',$tel)){ // 41794872254
-    					unset($msg);
-    				}
-    				else{
-    					$msg = '(ERR 2) : Numéro de téléphone (CH) incorrect<br />';
-    				}
-   				}
-   			}
-
-   			$formated_phone = preg_replace("#^(0041){1}(\d+)#", "41$2", $tel);
-   			$formated_phone = preg_replace("#^(0){1}(\d+)#", "41$2", $formated_phone);
-
-    	break;
-    	case "CA" :
-   			//------ Numéro Canadien
-    		if(!preg_match('#(^1?[0-9]{10}$)#', $tel)){
-   				$msg = 'Numéro de téléphone (CA) incorrect<br />';
-   			}
-   			if(strlen($tel) == 10){
-   				$formated_phone = "1".$tel;
-   			}
-   			else{
-   				$formated_phone = $tel;
-   			}
-    	break;
-    	case "BE":
-   			//------ Numéro Belge
-    		switch(strlen($tel)){
-    			case 9 :
-	    			// 0ZZCCCCCC
-	    			if(preg_match("#^0{1}(\d{8})$#",$tel)){
-	    				$formated_phone = "32".substr($tel,1);
-	    			}
-	    			else{
-	    				$msg = '(ERR 9) Numéro de téléphone (BE) incorrect<br />';
-	    			}
-    			break;
-    			case 10 :
-    				if(preg_match("#^(32){1}(\d{8})$#",$tel)){
-    					// OK : 32 75 84 67 59
-    					$formated_phone = $tel;
-    				}
-    				elseif(preg_match("#^(047|048|049){1}[0-9]{7}$#",$tel)){
-    					// OK GSM : 0475 45 78 98
-    					$formated_phone = "32".substr($tel,1);
-    				}
-    				else{
-    					$msg = "(ERR 10) : Numéro de téléphone (BE) incorrect.";
-    				}
-    			break;
-    			case 11 :
-    				if(preg_match("#^(320){1}(\d{8})$#",$tel)){
-    					$msg = "(ERR 11) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 3248xxxxxxx</i></small> ";
-    				}
-    				elseif(preg_match("#^(32){1}(47|48|49){1}(\d){7}#",$tel)){
-    					$formated_phone = $tel;
-    				}
-    				else{
-    					$msg = "(ERR 11) : Numéro de téléphone (BE) incorrect.";
-    				}
-    			break;
-    			case 12 :
-    				if(preg_match("#^(32){1}(047|048|049){1}\d{7}$#",$tel)){
-    					$msg = "(ERR 12) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 3248xxxxxxx</i></small> ";
-    				}
-    				else{
-    					$msg = "(ERR 12) : Numéro de téléphone (BE) incorrect.";
-    				}
-    			break;
-    			case 13 :
-    			case 14 :
-    				if(preg_match("#^(00320){1}#",$tel)){
-    					$msg = "(ERR 1314) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 003248xxxxxxx</i></small> ";
-    				}
-    			break;
-    			default :
-    				$msg = "(ERR D) : Numéro de téléphone (BE) incorrect.";
-    			break;
-    		}
-    	break;
-    	case "LU" :
-   			//------ Numéro Luxembourgeois
-    		if(!preg_match('#(^\d{5,6}$)|(^\d{8}$)|(^6\d{6}$)#', $tel)){
-   				$msg = 'Numéro de téléphone (LUX) incorrect (Merci de ne pas donner l\'indicatif.)<br />';
-   			}
-   			$formated_phone = "352".$tel;
-    	break;
-    	default :
-        // On regarde quand même s'il peut s'agir d'un numéro français
-        if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)?0?[12345679]{1}[0-9]{8}$#', $tel)){
-          $pays = 'FR';
-          if(preg_match('#^(33|590|594|262|596|269|687|689|590|508|681)0{1}[12345679]{1}[0-9]{8}$#', $tel)){
-            $msg = 'Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays. <small><i>ex : 336xxxxxxxxx </i></small>';
-          }
-          else{
-            $formated_phone = preg_replace("#^(330|5900|5940|2620|5960|2690|6870|6890|5900|5080|6810)(\d{8})$#","0$2",$tel);  // Pas d'indicatif pour les num français
-            $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#","0$2",$formated_phone);
-          }
-        }
-        else{
-    		  // Sinon on traite pas, on save tel quel ( puisqu'on a enlevé les non-digits plus haut )
-    		  $formated_phone = $tel;
-        }
-    	break;
-	} // End switch
-
-	return array(
-			"error" => $msg,
-			"phone"	=> $formated_phone,
-			"pays"  => $pays
-			);
+    return array(
+        "error" => $msg,
+        "phone"	=> $formated_phone,
+        "pays"  => $pays
+    );
 }
 
 /* On ajouter les indicatifs pays aux numéros FR te DOM-TOM */

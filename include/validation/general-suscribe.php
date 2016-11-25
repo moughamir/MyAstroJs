@@ -14,6 +14,10 @@ $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] 
 $retour = array();
 $trouve = false;
 $reinscription = false;
+$tchatabo_dri =  ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"];
+$dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
+$dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
+
 $today_date_bdd = date('Y-m-d');
 $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
@@ -236,7 +240,6 @@ if(empty($err)){
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,
-        'myastroPsychic'    => $voyant,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
         'myastroUrl'        => $formurl_kgs,
@@ -244,6 +247,10 @@ if(empty($err)){
         'reflexAffilateId'  => $rc_affiliateid,
         'reflexSource'      => $rc_source
     );
+
+    if(!in_array($dri, $tchatabo_dri)){
+        $post_data['myastroPsychic'] = $voyant;
+    }
 
     if($reinscription){
         $kgestion_id = $user->kgestion_id;
@@ -271,9 +278,7 @@ if(empty($err)){
  * ========================================================================== */
 
 if(empty($err)){
-
     $conversion = 1;
-
     if (!$trouve){ // Nouveau prospect
         $conversion = 2;
     } else { // Existe déjà
@@ -318,7 +323,9 @@ if(empty($err)){
             'url'                     => $page,
             'gclid'                   => $gclid,
             'tel_is_valid'            => 1,
-            'blacklisted'             => 0
+            'blacklisted'             => 0,
+            'reflex_affiliate_id'     => $rc_affiliateid,
+            'reflex_source'           => $rc_source
         );
 
         $bdd->insert(
@@ -351,7 +358,13 @@ if(empty($err)){
             'source'                  => $formurl,
             'voyant'                  => $voyant,
             'url'                     => $page,
-            'gclid'                   => $gclid
+            'gclid'                   => $gclid,
+            'smart_focus_insert'      => 0,
+            'conversion'              => 0,
+            'dri_page'                => '',
+            'conversion_page'         => '',
+            'reflex_affiliate_id'     => $rc_affiliateid,
+            'reflex_source'           => $rc_source
         );
         $bdd->update(
             $bdd->users,
@@ -424,7 +437,8 @@ if(empty($err)){
         'GROUPE_FLAG_30'  => $param['compteur']['flag30']
     );
 
-    $smartFocus->insert($email, $params);
+    $sf_insert = $smartFocus->insert($email, $params);
+    $bdd->update($bdd->users, ['smart_focus_insert' => $sf_insert], ['internal_id' => $idindex]);
     $compteur->process();
 
 /* ========================================================================== *
@@ -456,9 +470,6 @@ if(empty($err)){
  *                                 REDIRECTION                                *
  * ========================================================================== */
 
-    $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
-    $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
-
     if ($dri){
         if($dri == "tchat"){
             if ( time() > strtotime(date('Y-m-d 09:00:00'))
@@ -467,7 +478,7 @@ if(empty($err)){
             {
                 $redirect_url = 'tchat';
             }
-        } elseif(in_array($dri, ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"])){
+        } elseif(in_array($dri, $tchatabo_dri)){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
                 if($dri == "tarot-en-direct/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
