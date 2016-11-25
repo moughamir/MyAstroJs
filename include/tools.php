@@ -22,7 +22,7 @@ if((!isset($_SESSION['tracker']) || empty($_SESSION['tracker']))){
 /**
  * function form_firstname
  * Validation du prénom
- * 
+ *
  * @param array $err
  * @param array $param
  * @return string
@@ -31,9 +31,9 @@ function form_firstname(&$err, $param = array()){
     $prenom = isset($param['prenom']) ? $param['prenom'] : '';
     $test_prenom = trim($prenom, ' ');
     if(empty($test_prenom)){
-        $err['prenom'] = 'Merci dʼindiquer votre prénom';
+        $err['prenom'] = 'Merci dʼindiquer votre prénom';
     } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-        $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
+        $err['prenom'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.';
     }
     return $prenom;
 }
@@ -41,14 +41,14 @@ function form_firstname(&$err, $param = array()){
 /**
  * function form_phone
  * Validation du numéro de téléphone
- * 
+ *
  * @param array $err
  * @param array $param
  * @return string
  */
 function form_phone(&$err, $param = array()){
     $tel = isset($param['tel']) && !empty($param['tel']) ? $param['tel'] : false;
-    $tel_needed = isset($param['tel_needed']) ? $param['tel_needed'] : false; 
+    $tel_needed = isset($param['tel_needed']) ? $param['tel_needed'] : false;
     $pays = isset($param['pays']) && !empty($param['pays']) ? $param['pays'] : false;
 
     if($tel_needed && !$tel) { // Téléphone requis mais non remplis
@@ -76,14 +76,14 @@ function form_phone(&$err, $param = array()){
             $err['pays'] = 'Merci dʼindiquer votre pays de résidence.';
         }
     }
-    
+
     return [$tel, $pays];
 }
 
 /*
 * function removeHTML
 * Manipule la chaîne pour la renvoyer sans HTML.
-* 
+*
 * param string : texttovalid
 *
 * return string
@@ -98,7 +98,7 @@ function removeHTML($texttovalid){
 
 /**
  * function convertIdAstro
- * Convertis l'idastro dans sa version "code promo raccourci" * 
+ * Convertis l'idastro dans sa version "code promo raccourci" *
  */
 function convertIdAstro($idastro, $toCode = true)
 {
@@ -122,12 +122,12 @@ function getCardNames($jeu, $tirage)
     } else {
         require $description_jeu;
     }
-    
+
     for($i=0; $i<count($tirage); $i++){
         $carte = $tirage[$i];
         $tirage[$i] = isset($correspondance[$carte])? $correspondance[$carte] : $carte;
     }
-    
+
     return $tirage;
 }
 
@@ -140,7 +140,7 @@ function getPsychicCode($nom)
     $nom = strtolower($nom); // en minuscules
     $nom = preg_replace('#[ -]#u', '', $nom); // espaces et tirets
     $nom = preg_replace('#[éèê]#u', 'e', $nom); // accents du e
-    
+
     return $nom;
 }
 
@@ -148,7 +148,7 @@ function getPsychicCode($nom)
 /*
 * function decoder
 * Décode en le chaine en utf8 et remplace les retours chariots
-* 
+*
 * param string : texte
 *
 * return string
@@ -163,11 +163,11 @@ function decoder($texte){
 /*
 * function uuid
 * Génère un identifiant unique. Utilité ?
-* 
+*
 * return string
 */
 function uuid() {
-  
+
    // The field names refer to RFC 4122 section 4.1.2
    return sprintf('%04x%04x-%04x-%03x4-%04x-%04x%04x%04x',
        mt_rand(0, 65535), mt_rand(0, 65535), // 32 bits for "time_low"
@@ -177,8 +177,8 @@ function uuid() {
            // 8 bits, the last two of which (positions 6 and 7) are 01, for "clk_seq_hi_res"
            // (hence, the 2nd hex digit after the 3rd hyphen can only be 1, 5, 9 or d)
            // 8 bits for "clk_seq_low"
-       mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535) // 48 bits for "node" 
-   ); 
+       mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535) // 48 bits for "node"
+   );
 }
 
 /**
@@ -199,11 +199,11 @@ function addFormLog($bdd, $page, $alert, $msg )
 
 /*
 * function get_signe_astro
-* Renvoie le signe astro en fonction du jour + mois de naissance 
+* Renvoie le signe astro en fonction du jour + mois de naissance
 *
 * @param string : day
-* @param string : month 
-* 
+* @param string : month
+*
 * return string
 */
 function get_signe_astro($day, $month)
@@ -220,23 +220,23 @@ function get_signe_astro($day, $month)
     else if(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)) { $signe = "scorpion";}
     else if(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)) { $signe = "sagittaire";}
     else if(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)) { $signe = "capricorne";}
-    
+
     return $signe;
 }
 
 /*
 * function get_signe_astro_arabe
-* Renvoie le signe astro arabe en fonction du jour + mois de naissance 
+* Renvoie le signe astro arabe en fonction du jour + mois de naissance
 *
 * @param string : day
-* @param string : month 
-* 
+* @param string : month
+*
 * return string
 */
 function get_signe_astro_arabe($day, $month)
 {
     $signe = [];
-    
+
         if(($month ==  1 && $day >= 21) || ($month ==  2 && $day <= 18)) { $signe = ['nom'=>'la fronde', 'code'=>'fronde']; }
     elseif(($month ==  2 && $day >= 19) || ($month ==  3 && $day <= 20)) { $signe = ['nom'=>'la hache', 'code'=>'hache']; }
     elseif(($month ==  3 && $day >= 21) || ($month ==  4 && $day <= 20)) { $signe = ['nom'=>'le poignard', 'code'=>'poignard']; }
@@ -249,17 +249,17 @@ function get_signe_astro_arabe($day, $month)
     elseif(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)) { $signe = ['nom'=>'le poignard arabe', 'code'=>'poignardarabe']; }
     elseif(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)) { $signe = ['nom'=>'lʼarc', 'code'=>'arc']; }
     elseif(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)) { $signe = ['nom'=>'la lance', 'code'=>'lance']; }
-    
+
     return $signe;
 }
 /*
 * function checkPhoneNumber
-*	Vérifie la véracité d'un numéro de téléphone en fonction du pays d'entrée	
+*	Vérifie la véracité d'un numéro de téléphone en fonction du pays d'entrée
 *   Doc : http://fr.wikipedia.org/wiki/Num%C3%A9ro_de_t%C3%A9l%C3%A9phone
 *
 *	@param string : tel
-*	@param string : pays ( default = '') 
-*	
+*	@param string : pays ( default = '')
+*
 *	return array
 */
 function checkPhoneNumber($tel, $pays = ''){
@@ -300,7 +300,7 @@ function checkPhoneNumber($tel, $pays = ''){
     				$msg = '(ERR 1) : Numéro de téléphone (CH) incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 4179xxxxxxx</i></small>';
     			}
     			else{
-    				if(preg_match('#^(0041|41){1}[0-9]{9}$#',$tel)){ // 41794872254 
+    				if(preg_match('#^(0041|41){1}[0-9]{9}$#',$tel)){ // 41794872254
     					unset($msg);
     				}
     				else{
@@ -308,7 +308,7 @@ function checkPhoneNumber($tel, $pays = ''){
     				}
    				}
    			}
-   			
+
    			$formated_phone = preg_replace("#^(0041){1}(\d+)#", "41$2", $tel);
    			$formated_phone = preg_replace("#^(0){1}(\d+)#", "41$2", $formated_phone);
 
@@ -350,7 +350,7 @@ function checkPhoneNumber($tel, $pays = ''){
     					$msg = "(ERR 10) : Numéro de téléphone (BE) incorrect.";
     				}
     			break;
-    			case 11 : 
+    			case 11 :
     				if(preg_match("#^(320){1}(\d{8})$#",$tel)){
     					$msg = "(ERR 11) : Numéro de téléphone incorrect. Veuillez enlever le 1er zéro du numéro si vous donnez un indicatif pays.<small><i> ex : 3248xxxxxxx</i></small> ";
     				}
@@ -396,7 +396,7 @@ function checkPhoneNumber($tel, $pays = ''){
           }
           else{
             $formated_phone = preg_replace("#^(330|5900|5940|2620|5960|2690|6870|6890|5900|5080|6810)(\d{8})$#","0$2",$tel);  // Pas d'indicatif pour les num français
-            $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#","0$2",$formated_phone); 
+            $formated_phone = preg_replace("#^(33|590|594|262|596|269|687|689|590|508|681)(\d{8,9})$#","0$2",$formated_phone);
           }
         }
         else{
@@ -405,7 +405,7 @@ function checkPhoneNumber($tel, $pays = ''){
         }
     	break;
 	} // End switch
-	
+
 	return array(
 			"error" => $msg,
 			"phone"	=> $formated_phone,
@@ -446,7 +446,7 @@ function format_number_FR_DOM($tel, $pays){
       }else if($pays=="NC"){
         $tel = preg_replace("#^(0){1}(\d{8,9})#","687$2",$tel);
       }
-      
+
       return $tel;
 }
 /*
@@ -455,9 +455,9 @@ function format_number_FR_DOM($tel, $pays){
 * @todo : Rajouter la possibilité d'utiliser différent opérateur ( autre que AND )
 *
 * @param array  : selector
-* @param array  : condition 
-* @param string : limit 
-* 
+* @param array  : condition
+* @param string : limit
+*
 * return array / boolean
 */
 function getuser_by($selector=array(), $condition = array(),$limit=''){
@@ -500,7 +500,7 @@ function getuser_by($selector=array(), $condition = array(),$limit=''){
 * Renvoie le mois français d'une date au format YYYY/MM/JJ
 *
 * @param string  : date
-* 
+*
 * return string
 */
 function return_date($date, $mode ='html')
@@ -547,7 +547,7 @@ function return_date($date, $mode ='html')
     }
     $date = $jour.' '.$mois;
     return $date;
-  } 
+  }
 
 function return_mois_textuel($mois, $mode = "html"){
   switch($mois){
@@ -678,10 +678,10 @@ function getSquareAd($show = true)
             $url = 'http://'.ROOT_URL.'/voyance-gratuite';
             break;
     }
-    
+
     $files = array_diff(scandir($imgPath), array('.','..'));
     shuffle($files);
-    
+
     if($show){
         echo '<a href="'.$url.'"><img src="'.$imgUrl.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" /></a>';
     } else {

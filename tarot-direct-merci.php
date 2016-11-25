@@ -10,7 +10,7 @@
 session_start();
 $cards_dir = 'tarot/cartes/original-grand/';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
-$voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : '';
+$voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : false;
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,9 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer Merci-Form">
+                        <?php if($voyant){ ?>
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <?php } ?>
                         <img src="images_landing/tarot-direct/offre-tchat.png" alt="5 minutes gratuites" />
                         <h2 class="Merci-Title">Toutes vos réponses en <strong>un simple clic</strong> !</h2>
                         <p class="Merci-Text">
