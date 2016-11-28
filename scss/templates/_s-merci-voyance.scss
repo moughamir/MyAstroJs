@@ -33,6 +33,19 @@
     }
 }
 
+@media all and (max-width: 940px){
+    .ContentBand-FlexContainer {
+        flex-direction: column;
+    }
+    .ContentBand.WithDecoration .ContentBand-FlexItem {
+        width: 100%;
+        max-width: 720px;
+        margin-right: 0;
+    }
+}
+@media all and (max-width: 510px){
+    .PageWrapper { padding: 0;}
+}
 
 /* ----------------------------- BANDEAU ENTETE ----------------------------- */
 
@@ -47,6 +60,12 @@
         text-decoration: none;
     }
 }
+@media all and (max-width: 510px){
+    .SiteHeader-Nav { padding-right: 1rem;}
+}
+@media all and (max-width: 390px){
+    .SiteHeader-Nav { font-size: 0.9rem;}
+}
 
 /* -------------------------- INSCRIPTION VALIDEE --------------------------- */
 
@@ -58,16 +77,29 @@
 }
 
 .TextContent {
-    max-width: 320px;
     margin-right: 2rem;
     padding: 3rem 0;
     text-align: center;
+}
+
+.TextContent-Window {
+    width: 320px;
 }
 
 .DescText {
     margin-top: 3rem;
     padding: 2.8rem;
     background-color: white;
+}
+
+@media all and (max-width: 940px){
+    .TextContent { 
+        position: relative;
+        padding-bottom: 0;
+    }
+}
+@media all and (max-width: 560px){
+    .TextContent-Window { margin: auto;}
 }
 
 /* --------------------------- BLOC PROMOTIONNEL ---------------------------- */
@@ -88,6 +120,7 @@
         font-family: inherit;
         font-size: 2.5rem;
         font-weight: normal;
+        hyphens: none;
     }
     
     &-Title {
@@ -96,6 +129,7 @@
         padding-bottom: 1.5rem;
         border-bottom: 2px dotted;
         font-family: inherit;
+        hyphens: none;
     }
     
     &-PsychicList {
@@ -112,11 +146,20 @@
         background-color: grey;
         font-family: inherit;
         font-size: 2.5rem;
+        hyphens: none;
     }
 }
-
 .PsychicList-Item-Img {
     display: block;
+}
+.PromoContent-PsychicList.PsychicList-Line2 {
+    display: none;
+}
+
+@media all and (max-width: 520px){
+    .PromoContent-PsychicList { justify-content: space-around;}
+    .PromoContent-PsychicList.PsychicList-Line2 { display: flex; margin-top: 10px;}
+    .PsychicList-Item.PsychicList-Line2 { display: none;}
 }
 
 /* --------------------------- COMMENT CA MARCHE ---------------------------- */
@@ -134,12 +177,21 @@
         padding-right: 3rem;
     }
 }
+@media all and (max-width: 1180px){
+    @include column-how-wizard();
+    .How { text-align: center;}
+    .How-Wizard { position: static;}
+}
+@media all and (max-width: 940px){
+    .How { display: none;}
+}
 
 /* ------------------------------- FORMULAIRE ------------------------------- */
 
 .FormContainer {
     width: 100%;
     max-width: 720px;
+    margin: auto;
     margin-bottom: 7rem;
     padding: 4rem 9rem;
     padding-bottom: 3rem;
@@ -147,9 +199,11 @@
     text-align: center;
     &-Title {
         margin-bottom: 1rem;
+        hyphens: none;
     }
     &-Slogan {
         margin-bottom: 3rem;
+        hyphens: none;
     }
 }
 .FormField-Button {
@@ -164,6 +218,11 @@
     font-weight: bold;
     color: white;
     text-decoration: none;
+}
+
+@media all and (max-width: 640px){
+    .FormContainer { padding: 2rem 4.8rem; padding-bottom: 3rem;}
+    .FormContainer-Slogan { margin-bottom: 2rem;}
 }
 
 /* ------------------------------- REASSURANCE ------------------------------ */

@@ -37,20 +37,22 @@ $img_path = 'images_landing/merci-voyance-tchat/';
         <section class="ContentBand WithDecoration">
             <div class="PageWrapper ContentBand-FlexContainer">
                 <div class="ContentBand-FlexItem TextContent">
-                    <header class="ContentBand-ColumnHeader">
-                        <span class="SiteLogo"></span>
-                    </header>
-                    <article class="DescText">
-                        <h3 class="DescText-Title">Votre demande a bien été prise en compte</h3>
-                        <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.11.11</p>
-                    </article>
+                    <div class="TextContent-Window">
+                        <header class="ContentBand-ColumnHeader">
+                            <span class="SiteLogo"></span>
+                        </header>
+                        <article class="DescText">
+                            <h3 class="DescText-Title">Votre demande a bien été prise en compte</h3>
+                            <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.11.11</p>
+                        </article>
+                    </div>
+                    <img src="<?= $img_path ?>voyante.png" alt="" class="WithDecoration-Img" />
                 </div>
-                <img src="<?= $img_path ?>voyante.png" alt="" class="WithDecoration-Img" />
                 <div class="ContentBand-FlexItem PromoContent">
                     <article class="PromoContent-Window">
                         <h2 class="PromoContent-Slogan">Toutes vos réponses en un simple CLIC</h2>
                         <h1 class="PromoContent-Title">5 minutes de tchat gratuites</h1>
-                        <ul class="PromoContent-PsychicList">
+                        <ul class="PromoContent-PsychicList" id="psychic_list">
                             <li class="PsychicList-Item">
                                 <img src="<?= $img_path ?>charly.jpg" alt="Charly" class="PsychicList-Item-Img" />
                                 Charly
@@ -59,6 +61,16 @@ $img_path = 'images_landing/merci-voyance-tchat/';
                                 <img src="<?= $img_path ?>christelle.jpg" alt="Charly" class="PsychicList-Item-Img" />
                                 Christelle
                             </li>
+                            <li class="PsychicList-Item PsychicList-Line2">
+                                <img src="<?= $img_path ?>daniel.jpg" alt="Charly" class="PsychicList-Item-Img" />
+                                Daniel
+                            </li>
+                            <li class="PsychicList-Item PsychicList-Line2">
+                                <img src="<?= $img_path ?>sonia.jpg" alt="Charly" class="PsychicList-Item-Img" />
+                                Sonia
+                            </li>
+                        </ul>
+                        <ul class="PromoContent-PsychicList PsychicList-Line2">
                             <li class="PsychicList-Item">
                                 <img src="<?= $img_path ?>daniel.jpg" alt="Charly" class="PsychicList-Item-Img" />
                                 Daniel

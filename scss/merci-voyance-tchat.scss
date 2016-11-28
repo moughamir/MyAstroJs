@@ -48,7 +48,19 @@ body {
     bottom: 0;
     right: 700px;
 }
-
+@media all and (max-width: 1230px){
+    .WithDecoration-Img { display: none;}
+}
+@media all and (max-width: 940px){
+    .WithDecoration-Img {
+        display: block;
+        right: 0;
+        bottom: -4.8rem;
+    }
+}
+@media all and (max-width: 560px){
+    .WithDecoration-Img { display: none;}
+}
 /* ----------------------------- BANDEAU ENTETE ----------------------------- */
 
 .SiteHeader {
@@ -104,6 +116,21 @@ body {
     line-height: 2.4rem;
 }
 
+@media all and (max-width: 610px){
+    .PromoContent-Title {
+        font-size: 3.2rem;
+    }
+    .PromoContent-Slogan {
+        font-size: 2rem;
+    }
+}
+@media all and (max-width: 510px){
+    .PromoContent-Window { border-radius: 0;}
+}
+@media all and (max-width: 470px){
+    
+}
+
 /* --------------------------- COMMENT CA MARCHE ---------------------------- */
 
 .How-Header {
@@ -148,6 +175,15 @@ body {
         background-color: $darkred;
         color: $lightgrey;
     }
+}
+
+@media all and (max-width: 740px){
+    .FormContainer-Slogan {
+        font-size: 1.8rem;
+    }
+}
+@media all and (max-width: 510px){
+    .FormContainer { border-radius: 0;}
 }
 
 /* ------------------------------- REASSURANCE ------------------------------ */

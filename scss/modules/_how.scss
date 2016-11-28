@@ -103,7 +103,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 730px){
+@mixin column-how-wizard(){
     .How-Wizard {
         height: auto;
         &Item {
@@ -117,6 +117,10 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    @include column-how-wizard();
 }
 
 @media screen and (max-width: 900px){
