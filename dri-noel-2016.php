@@ -82,6 +82,49 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </article>
                 <button class="btn cta-read">Voir mon intérprétation</button>
             </section>
+            <section class="signUp hidden">
+                <header class="section-header">
+                    <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
+                </header>
+                <ul class="result-cards-mini">
+
+                </ul>
+                <article class="Form-Container">
+                    <from class="Primary-Form">
+                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>"
+                               placehodler="Mon prénom" required/>
+                        <input type="email" id="email" name="email" class="FormField-Input" value="<?= $prenom ?>"
+                               placeholder="Mon email" required/>
+                        <div class="Fields-Table-Row">
+                            <label for="pays" class="FormField-Label">Votre pays</label>
+                            <div class="FormField">
+                                <select name="pays" id="pays" class="FormField-Input" required>
+                                    <option value="" selected>Votre Pays</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="CH">Suisse</option>
+                                    <option value="FR" selected>France Métropolitaine</option>
+                                    <optgroup label="DOM-TOM">
+                                        <option value="MQ">Martinique</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GF">Guyane</option>
+                                        <option value="RE">La Réunion</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="PM">St Pierre et Miquelon</option>
+                                        <option value="BL">St Barthélémy</option>
+                                        <option value="SM">St Martin</option>
+                                        <option value="WF">Wallis et Futunua</option>
+                                        <option value="PF">Polynésie Française</option>
+                                        <option value="NC">Nouvelle Calédonie</option>
+                                    </optgroup>
+                                    <option value="ZZ">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                    </from>
+                </article>
+            </section>
         </div>
     </article>
     <footer class="Site-Footer">

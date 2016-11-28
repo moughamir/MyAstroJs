@@ -2,19 +2,21 @@
 var cta = $(".cta"),
     ctaDraw = $(".cta-draw"),
     spread = $(".cta-spread"),
-    read = $(".cta-read");
-
+    read = $(".cta-read"),
 // sections
-var snowBall = $(".snow-ball"),
+    snowBall = $(".snow-ball"),
     explication = $(".explication"),
     drawCards = $(".drawCards"),
     result = $(".result"),
-    cardHolder = $(".result-cards");
+    cardHolder = $(".result-cards"),
+    miniCardHolder = $(".result-cards-mini"),
+    signUp = $(".signUp"),
+    form = $(".Primary-Form"),
 // Loops Counter
-var cardSpread = 0,
-    cardsCounter = 0;
+    cardSpread = 0,
+    cardsCounter = 0,
 // Trof
-var card = $(".card"),
+    card = $(".card"),
     picked = [],
     cardsPath = 'tarot/cartes/original-grand/';
 /*
@@ -26,14 +28,6 @@ $(function () {
     /*
      * TODO: Add animation, when user click on cta, animate .snow-ball then hide it. Then show another section
      * */
-    function hidden(elm) {
-        elm.addClass("hidden");
-        console.info(" hidden")
-    }
-
-    function addClasso(el, classo) {
-        el.addClass(classo);
-    }
 
     cta.click(function () {
         snowBall.addClass("scaleUp").delay(500).queue(function () {
@@ -45,6 +39,16 @@ $(function () {
         explication.removeClass("scaleEnter").addClass("moveToLeft").delay(500).queue(function () {
             $(this).hide().dequeue();
             drawCards.removeClass("hidden").addClass("moveFromRight")
+        });
+    });
+    // Step missing? don't worry check Card Spread section
+    read.click(function () {
+        result.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
+            $(this).hide().dequeue();
+            console.info("done");
+            signUp.removeClass("hidden").addClass("moveFromRight");
+            pickedCards(miniCardHolder);
+            populateForm()
         });
     });
 // Card Spread
@@ -91,11 +95,20 @@ $(function () {
 
     });
     // Function for displaying picked cards
-    function pickedCards() {
+    function pickedCards(section) {
         $.each(picked, function (index, value) {
             console.log(index + ": " + value);
-            cardHolder.append('<li class="card-idle card-' + index + '"><img class="picked-card" src="' + cardsPath + value + '.png" alt=""></li>')
+            section.append('<li class="card-idle card-' + index + '"><img class="picked-card" src="' + cardsPath + value + '.png" alt=""></li>')
+
         });
+    }
+    function populateForm() {
+        $.each(picked, function (index, value) {
+            console.log(index + ": " + value);
+            form.append('<input type="checkbox" name="card[]" value="'+value+'" hidden>')
+
+        });
+
     }
 
     card.on('flip:done', function () {
@@ -123,7 +136,7 @@ $(function () {
                     drawCards.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
                         $(this).hide().dequeue();
                         result.removeClass("hidden").addClass("moveFromRight");
-                        pickedCards()
+                        pickedCards(cardHolder)
                     });
                 }, 1500)
             }
@@ -132,6 +145,7 @@ $(function () {
         }
 
     });
+    // trigger for cards: using FlipJs plugin
     card.flip({
         axis: 'x',
         trigger: 'click'
