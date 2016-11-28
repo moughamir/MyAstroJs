@@ -76,10 +76,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
                 </header>
                 <article class="Cards-Container">
-                    <ul class="result-cards">
+                    <ul class="cards result-cards">
                         <!-- Picked Card gonna be here-->
                     </ul>
                 </article>
+                <button class="btn cta-read">Voir mon intérprétation</button>
             </section>
         </div>
     </article>

@@ -1,14 +1,15 @@
 // btn
 var cta = $(".cta"),
     ctaDraw = $(".cta-draw"),
-    spread = $(".cta-spread");
+    spread = $(".cta-spread"),
+    read = $(".cta-read");
 
 // sections
 var snowBall = $(".snow-ball"),
     explication = $(".explication"),
     drawCards = $(".drawCards"),
     result = $(".result"),
-    cardHolder= $(".result-cards");
+    cardHolder = $(".result-cards");
 // Loops Counter
 var cardSpread = 0,
     cardsCounter = 0;
@@ -17,9 +18,9 @@ var card = $(".card"),
     picked = [],
     cardsPath = 'tarot/cartes/original-grand/';
 /*
-* TODO: Clean up the code for production; remove console()
-*
-* */
+ * TODO: Clean up the code for production; remove console()
+ *
+ * */
 // Init
 $(function () {
     /*
@@ -48,12 +49,12 @@ $(function () {
     });
 // Card Spread
     /*
-    * Module: Card Drawer
-    * Author: Mohamed Moughamir <moughamir@gmail.com>
-    * License: MIT License | Copyright (c) 2016 KgCom
-    * Version: 0.1a
-    * Inspired from the work of Laurène
-    * */
+     * Module: Card Drawer
+     * Author: Mohamed Moughamir <moughamir@gmail.com>
+     * License: MIT License | Copyright (c) 2016 KgCom
+     * Version: 0.1a
+     * Inspired from the work of Laurène
+     * */
 
     $('.stack').click(function () {
         $(".card").each(function (e) {
@@ -81,6 +82,9 @@ $(function () {
                         spread.addClass("scaleDown");
                     }, 600)
                 }
+                if (cardSpread == 20) {
+                    $(".section-title").text("Choisissez 5 cartes.").css("text-transform", "capitalize")
+                }
             }, e * 250);
 
         });
@@ -88,11 +92,12 @@ $(function () {
     });
     // Function for displaying picked cards
     function pickedCards() {
-        $.each(picked, function( index, value ) {
-            console.log( index + ": " + value );
-            cardHolder.append('<li class="card card-idle card-'+index+'"><img src="'+ cardsPath + value +'.png" alt=""></li>')
+        $.each(picked, function (index, value) {
+            console.log(index + ": " + value);
+            cardHolder.append('<li class="card-idle card-' + index + '"><img class="picked-card" src="' + cardsPath + value + '.png" alt=""></li>')
         });
     }
+
     card.on('flip:done', function () {
         $(this).addClass("picked");
         // get Card Value
@@ -102,17 +107,30 @@ $(function () {
 
         console.log(cardValue);
         cardsCounter++;
-        if (cardsCounter == 5) {
-            card.addClass("card-idle");
-            console.info("Go to the other step now.");
-            setTimeout(function () {
-                drawCards.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
-                    $(this).hide().dequeue();
-                    result.removeClass("hidden").addClass("moveFromRight");
-                    pickedCards()
-                });
-            }, 1500)
+        if (cardsCounter != 0) {
+            if (cardsCounter == 1) {
+                $(".section-title").text("Choisissez 4 autres cartes.").css("text-transform", "capitalize")
+            } else if (cardsCounter == 2) {
+                $(".section-title").text("Choisissez 3 autres cartes.").css("text-transform", "capitalize")
+            } else if (cardsCounter == 3) {
+                $(".section-title").text("Choisissez 2 autres cartes.").css("text-transform", "capitalize")
+            } else if (cardsCounter == 4) {
+                $(".section-title").text("Choisissez une autre cartes.").css("text-transform", "capitalize")
+            } else if (cardsCounter == 5) {
+                card.addClass("card-idle");
+                console.info("Go to the other step now.");
+                setTimeout(function () {
+                    drawCards.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
+                        $(this).hide().dequeue();
+                        result.removeClass("hidden").addClass("moveFromRight");
+                        pickedCards()
+                    });
+                }, 1500)
+            }
+        } else {
+            $(".section-title").text("Choisissez 5 cartes.").css("text-transform", "capitalize")
         }
+
     });
     card.flip({
         axis: 'x',

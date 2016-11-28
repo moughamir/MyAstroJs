@@ -121,7 +121,16 @@ Hide it
     top: 50%;
     left: 59px;
 }
-
+.cta-read{
+    width: 238px;
+    margin: 0 auto;
+    position: absolute;
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    border-radius: 5px;
+}
 .shake:hover {
     animation-play-state: paused;
 }
@@ -531,11 +540,50 @@ Hide it
     bottom: 0 !important;
     pointer-events: none;
 }
+.picked-card {
+    height: 100%;
+}
+
 .onTable:hover {
     box-shadow: 0 0 6px #000;
     bottom: 170px;
     transition: all 300ms linear;
 
+}
+.result .Cards-Container {
+    height: 316px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-cards {
+    width: 560px;
+    display: flex;
+    align-items: center;
+}
+.result-cards-mini {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    justify-content: space-around;
+}
+.result-cards > li {
+    width: 100%;
+    height: 184px;
+}
+.result-cards-mini > li{
+    height: 91px;
+    width: 50px;
+}
+.result-cards-mini>.picked-card {
+    width: 50px;
+    height: 91px;
 }
 
 /**/
