@@ -30,6 +30,40 @@ section.container {
     align-items: center;
 }
 
+.Site-Footer {
+    position: relative;
+    align-self: center;
+    margin-top: 4em;
+    text-align: center;
+    font-size: 15px;
+}
+
+.subfooter {
+    height: 44px;
+    background: rgba(27, 27, 27, 0.73);
+    width: 940px;
+}
+
+.section-header {
+    position: relative;
+    z-index: 9;
+    width: 692px;
+    display: flex;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+.section-title {
+    align-self: flex-end;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
 .page-banner:before {
     content: "";
     background: url(../images_landing/dri-noel-2016/gift-l.png) no-repeat center center;
@@ -50,8 +84,8 @@ section.container {
 }
 
 .da-container {
-    width: 522px;
-    height: 380px;
+    width: 722px;
+    height: 480px;
     background: rgba(27, 27, 27, 0.73);
     display: block;
     overflow: hidden;
@@ -319,10 +353,12 @@ Hide it
     display: flex;
     flex-direction: column;
 }
-.drawCards{
+
+.drawCards {
     width: 100%;
     height: 100%;
 }
+
 .cta-draw {
     align-self: center;
 }
@@ -335,84 +371,169 @@ Hide it
 }
 
 .cards {
-    height: 390px;
+    height: 378px;
     position: relative;
     list-style-type: none;
     padding-left: 0;
-    background: red;
 }
+
 .cta-spread {
     position: absolute;
     top: 72%;
     left: 50%;
     transform: translate(-50%);
 }
-.section-header {
-    position: absolute;
-    z-index: 9;
+.card-idle{
+    pointer-events: none;
 }
 .card {
     transition: all 1s cubic-bezier(0.68, -.55, .265, 1.55);
-    perspective: 10px;
-    -ms-transform: perspective(10px);
-    -moz-transform: perspective(10px);
-    -ms-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-
     float: left;
-    width: 86px;
-    height: 136px;
-    box-shadow: 0 0 2px #000;
-    background-color: #eee;
-
-    position: absolute;
+    width: calc(135px / 1.5);
+    height: calc(261px / 1.5);
+    position: absolute !important;
     right: 50%;
     transform: translateX(50%);
-    bottom: 0;
     margin: 0 auto;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    bottom: 15px;
+
 }
+
+.card-back {
+    background: #eee url("../images_landing/dri-noel-2016/CardBack.png") center center no-repeat;
+    background-size: cover;
+    width: calc(135px / 1.5);
+    height: calc(261px / 1.5);
+    border-radius: 10px;
+}
+
+.card-face {
+    width: calc(135px / 1.5);
+    height: calc(261px / 1.5);
+    background-size: cover;
+}
+
+.back > img {
+    width: 100%;
+    height: 100%;
+}
+
 .card:nth-child(5n) {
     margin-right: 0;
 }
 
 .ani0 {
-    right: 440px;
-    bottom: 150px;
+    right: 650px;
+    bottom: 195px;
 }
 
 .ani1 {
-    right: 370px;
-    bottom: 150px;
+    right: 620px;
+    bottom: 195px;
 }
 
 .ani2 {
-    right: 310px;
-    bottom: 150px;
+    right: 590px;
+    bottom: 195px;
 }
 
 .ani3 {
-    right: 250px;
-    bottom: 150px;
+    right: 560px;
+    bottom: 195px;
 }
 
 .ani4 {
-    right: 190px;
-    bottom: 150px;
+    right: 530px;
+    bottom: 195px;
 }
 
 .ani5 {
-    right: 130px;
-    bottom: 150px;
+    right: 500px;
+    bottom: 195px;
 }
 
 .ani6 {
-    right: 70px;
-    bottom: 150px;
+    right: 470px;
+    bottom: 195px;
 }
 
-.card:hover {
+.ani7 {
+    right: 440px;
+    bottom: 195px;
+}
+
+.ani8 {
+    right: 410px;
+    bottom: 195px;
+}
+
+.ani9 {
+    right: 380px;
+    bottom: 195px;
+}
+
+.ani10 {
+    right: 350px;
+    bottom: 195px;
+}
+
+.ani11 {
+    right: 320px;
+    bottom: 195px;
+}
+
+.ani12 {
+    right: 290px;
+    bottom: 195px;
+}
+
+.ani13 {
+    right: 260px;
+    bottom: 195px;
+}
+
+.ani14 {
+    right: 230px;
+    bottom: 195px;
+}
+
+.ani15 {
+    right: 200px;
+    bottom: 195px;
+}
+
+.ani16 {
+    right: 170px;
+    bottom: 195px;
+}
+
+.ani17 {
+    right: 140px;
+    bottom: 195px;
+}
+
+.ani18 {
+    right: 110px;
+    bottom: 195px;
+}
+
+.ani19 {
+    right: 80px;
+    bottom: 195px;
+}
+.picked{
+    z-index: 99;
+    bottom: 0;
+}
+.picked:hover{
+    bottom: 0 !important;
+    pointer-events: none;
+}
+.onTable:hover {
     box-shadow: 0 0 6px #000;
-    bottom: 135px;
+    bottom: 170px;
     transition: all 300ms linear;
 
 }
@@ -421,18 +542,23 @@ Hide it
 .footer-menu {
     clear: both;
     list-style: outside none none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
 }
 
 .footer-menu li {
-    height: 31px;
     border-right: 1px solid !important;
-    display: inline-block;
-    padding-left: 89px;
-    padding-right: 20px;
-    font-size: 15px;
-    line-height: 16px;
+    display: inline-flex;
+    font-size: 12px;
+    justify-content: space-around;
+    width: 216px;
+    align-items: center;
+}
+
+.footer-menu li:last-of-type {
+    border: none !important;
 }
 
 /*Animations*/
@@ -488,5 +614,18 @@ Hide it
     from {
         opacity: 0.3;
         transform: translateX(100%);
+    }
+}
+
+.scaleDown {
+    animation: scaleDown .7s ease both;
+}
+
+@keyframes scaleDown {
+    from {
+        transform: translate(-50%) scale(1.2);
+    }
+    to {
+        transform: translate(-50%) scale(0);
     }
 }
