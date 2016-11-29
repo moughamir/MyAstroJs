@@ -1,5 +1,19 @@
 <!-- fichier conversion facebook -->
-<?php if (isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1 and $_SESSION['affiliation'] == 'facebook_adds'){ ?>
+<?php 
+if(!isset($bdd)){
+    require_once('inc/config.php');
+    require_once('inc/bdd.php');
+    $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+}
+if(isset($_SESSION['user_id'])){
+    $page = explode("?", $_SERVER['REQUEST_URI'])[0];
+    $bdd->update($bdd->users, ['conversion_page' => $page], ['internal_id' => $_SESSION['user_id']]);
+}
+if(isset($_SESSION['conversion']) && $_SESSION['conversion'] >= 1 and $_SESSION['affiliation'] == 'facebook_adds'){ 
+    if(isset($_SESSION['user_id'])){
+        $bdd->update($bdd->users, ['conversion' => 1], ['internal_id' => $_SESSION['user_id']]);
+    }
+?>
 <!-- Conversion Facebook Pixel Code -->
 <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
