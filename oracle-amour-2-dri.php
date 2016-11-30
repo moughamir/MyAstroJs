@@ -9,7 +9,6 @@
 */
 include('include/process-dri.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -63,6 +62,7 @@ include('include/process-dri.php');
                     <?php } else { ?>
                     <form method="post">
                         <div class="FormField">
+                            <input type="hidden" name="prenom" value="<?= $prenom ?>" />
                             <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" value="<?= $tel ?>" class="FormField-Input" required />
                         </div>
                         <div class="FormField">
