@@ -9,6 +9,7 @@
 */
 session_start();
 $img_path = 'images_landing/merci-voyance-tchat/';
+$email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,7 +44,7 @@ $img_path = 'images_landing/merci-voyance-tchat/';
                         </header>
                         <article class="DescText">
                             <h3 class="DescText-Title">Votre demande a bien été prise en compte</h3>
-                            <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.11.11</p>
+                            <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.20.14</p>
                         </article>
                     </div>
                     <img src="<?= $img_path ?>voyante.png" alt="" class="WithDecoration-Img" />
@@ -52,6 +53,7 @@ $img_path = 'images_landing/merci-voyance-tchat/';
                     <article class="PromoContent-Window">
                         <h2 class="PromoContent-Slogan">Toutes vos réponses en un simple CLIC</h2>
                         <h1 class="PromoContent-Title">5 minutes de tchat gratuites</h1>
+                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormField-Button">Je lance le TCHAT</a>
                         <ul class="PromoContent-PsychicList" id="psychic_list">
                             <li class="PsychicList-Item">
                                 <img src="<?= $img_path ?>charly.jpg" alt="Charly" class="PsychicList-Item-Img" />
@@ -104,7 +106,7 @@ $img_path = 'images_landing/merci-voyance-tchat/';
                     <article class="FormContainer">
                         <h4 class="FormContainer-Title">Amour, Travail, Argent…</h4>
                         <p class="FormContainer-Slogan">Pour profiter immédiatement des 5 minutes de tchat gratuites, cliquez sur le bouton ci-dessous :</p>
-                        <a href="" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormField-Button">Je lance le TCHAT</a>
                     </article>
                 </div>
             </div>

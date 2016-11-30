@@ -22,7 +22,9 @@
 
 .ContentBand {
     &-FlexContainer {
+        display: -webkit-box;
         display: flex;
+        -webkit-box-pack: justify;
         justify-content: space-between;
     }
     &.WithDecoration {
@@ -99,7 +101,9 @@
     }
 }
 @media all and (max-width: 560px){
-    .TextContent-Window { margin: auto;}
+    .SiteLogo { width: 90px; height: 90px;}
+    .TextContent-Window { width: auto;}
+    .DescText { display: none;}
 }
 
 /* --------------------------- BLOC PROMOTIONNEL ---------------------------- */
@@ -133,7 +137,9 @@
     }
     
     &-PsychicList {
+        display: -webkit-box;
         display: flex;
+        -webkit-box-pack: justify;
         justify-content: space-between;
         list-style-type: none;
         margin: 0;
@@ -148,6 +154,10 @@
         font-size: 2.5rem;
         hyphens: none;
     }
+    
+    .FormField-Button {
+        display: none;
+    }
 }
 .PsychicList-Item-Img {
     display: block;
@@ -156,10 +166,17 @@
     display: none;
 }
 
+@media all and (max-width: 560px){
+    .PromoContent-Window {
+        margin-top: 2.8rem;
+        padding: 2.8rem;
+    }
+}
 @media all and (max-width: 520px){
     .PromoContent-PsychicList { justify-content: space-around;}
-    .PromoContent-PsychicList.PsychicList-Line2 { display: flex; margin-top: 10px;}
+    .PromoContent-PsychicList.PsychicList-Line2 { display: -webkit-box; display: flex; margin-top: 10px;}
     .PsychicList-Item.PsychicList-Line2 { display: none;}
+    .PromoContent .FormField-Button { display: block;}
 }
 
 /* --------------------------- COMMENT CA MARCHE ---------------------------- */
@@ -211,6 +228,7 @@
     float: left;
     position: relative;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     padding: 1.2rem 6rem;
     background-color: grey;
@@ -220,11 +238,26 @@
     text-decoration: none;
 }
 
+.PromoContent .FormField-Button {
+    position: static;
+    float: none;
+    -webkit-transform: none;
+    transform: none;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
 @media all and (max-width: 640px){
     .FormContainer { padding: 2rem 4.8rem; padding-bottom: 3rem;}
     .FormContainer-Slogan { margin-bottom: 2rem;}
 }
 
+@media all and (max-width: 380px){
+    .FormContainer { padding-right: 2rem; padding-left: 2rem;}
+    .FormField-Button { padding: 1.2rem 3rem;}
+}
+    
 /* ------------------------------- REASSURANCE ------------------------------ */
 
 .SiteFooter {
@@ -234,7 +267,9 @@
 @import "../modules/reassurance";
 
 .ReassuranceList-Item-Flex {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
     justify-content: space-around;
 }

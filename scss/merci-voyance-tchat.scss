@@ -83,6 +83,10 @@ body {
     color: $green
 }
 
+@media all and (max-width: 560px){
+    .SiteLogo { width: 97px; height: 97px;}
+}
+
 /* --------------------------- BLOC PROMOTIONNEL ---------------------------- */
 
 .PromoContent-Window {
