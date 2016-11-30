@@ -294,8 +294,8 @@ if(empty($err)){
 /* ========================================================================== *
  *                           ENREGISTREMENT MYASTRO                           *
  * ========================================================================== */
-
 // Insertion Nouveau prospect --------------------------------------------------
+    $result = true;
     if (!$trouve){
         $bdd_data = array(
             'id'                      => $id_rdm,
@@ -327,8 +327,7 @@ if(empty($err)){
             'reflex_affiliate_id'     => $rc_affiliateid,
             'reflex_source'           => $rc_source
         );
-
-        $bdd->insert(
+        $result = $bdd->insert(
             $bdd->users,
             $bdd_data
         );
@@ -366,11 +365,16 @@ if(empty($err)){
             'reflex_affiliate_id'     => $rc_affiliateid,
             'reflex_source'           => $rc_source
         );
-        $bdd->update(
+        $result = $bdd->update(
             $bdd->users,
             $bdd_data,
             ['internal_id' => $idindex]
         );
+    }
+    
+    if(!$result){
+        addFormLog($bdd, $page, 'ERROR', '[BDD MYASTRO] Erreur > '.$bdd->last_error);
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     }
 
 // Insertion du détail de la question ------------------------------------------
@@ -401,7 +405,7 @@ if(empty($err)){
 
 /* ========================================================================== *
  *                                 SMARTFOCUS                                 *
- * ========================================================================== */
+ * ========================================================================== *
 
     if(!$trouve){
         $dateJoin = $today_date_smf;
