@@ -8,6 +8,7 @@ body {
     background-size: cover;
     font-family: Arial, Serif;
     color: #ffffff;
+    overflow: hidden;
 }
 
 .container {
@@ -62,7 +63,37 @@ body {
     left: 0;
     text-align: center;
 }
-
+.section3-title {
+    font-family: "Satisfy", cursive;
+    color: #ef1649;
+    font-size: 2rem;
+    text-shadow: 1px 0 0 #fff, -2px 1px 0 #fff, -1px -1px 0 #fff, 1px 1px 0 #fff;
+    top: 6px;
+    text-align: center;
+    margin-top: 12px;
+}
+.subtitle {
+    width: 100%;
+    text-align: center;
+}
+.section-subtitle {
+    font-family: "Satisfy", cursive;
+    font-size: 24px;
+    text-align: center;
+}
+.cta-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    position: absolute;
+    bottom: -20px;
+    right: 178px;
+}
+.bold {
+    font-family: "Oswald", sans-serif;
+}
+.Cap {
+    text-transform: uppercase;
+}
 .page-banner:before {
     content: "";
     background: url(../images_landing/dri-noel-2016/gift-l.png) no-repeat center center;
@@ -99,16 +130,14 @@ body {
 Hide it
 */
 .btn {
-    font-family: Arial, serif;
     font-size: 20px;
-    z-index: 10;
+    z-index: 3;
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
     background-color: rgb(239, 22, 73);
-
     width: 180px;
     height: 42px;
-
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
     color: #FFFFFF;
 }
@@ -299,7 +328,7 @@ Hide it
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    z-index: 2;
+    z-index:2;
     position: relative !important;
     align-self: center;
     margin: 0 auto;
@@ -535,7 +564,7 @@ Hide it
 }
 
 .picked {
-    z-index: 99;
+    z-index: 9;
     bottom: 0;
 }
 
@@ -577,7 +606,7 @@ Hide it
     right: 0px;
     display: flex;
     align-items: center;
-    z-index: 999;
+    z-index: 8;
     justify-content: space-around;
     list-style: none;
 }
@@ -596,7 +625,190 @@ Hide it
     width: 50px;
     height: 91px;
 }
+.steps {
+    list-style-type: decimal;
+    margin-left: 149px;
+    font-family: Oswald, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    height: 67px;
+}
+.step {
+    padding-left: 6px;
+    line-height: 42px;
+}
+.step:nth-of-type(1):before{
+    content: '';
+    background: url(../images_landing/dri-noel-2016/form.png) no-repeat center;
+    width: 26px;
+    height: 34px;
+    display: inline-block;
+    position: absolute;
+    left: 210px;
+}
+.step:nth-of-type(2):before{
+    content: '';
+    background: url(../images_landing/dri-noel-2016/allo.png) no-repeat center;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    left: 206px;
+}
+.FormContainer-Submit {
+    display: block;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 10px;
+    border-radius: 3px;
+}
 
+.FormContainer {
+    position: relative;
+    padding: 3rem;
+}
+.alert {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    border: 1px solid;
+}
+.alert > b {
+    font-weight: 600;
+}
+.overlay {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: none;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.modal-container {
+    text-align: center;
+}
+.modal {
+    position: absolute;
+    z-index: 11;
+    background: #fff;
+    color: black;
+    width: 400px;
+    height: 192px;
+    padding: 10px 56px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title {
+    font-size: 20px;
+    font-family: "Lobster", cursive;
+    font-weight: 300;
+    color: #ef1649;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+.modal-title:before {
+    content: "";
+    background: url("../images_landing/dri-noel-2016/done.png") no-repeat center center;
+    width: 33px;
+    height: 27px;
+    display: inline-block;
+}
+.modal-message {
+    color: #454545;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+}
+
+.modal-btn {
+    color: #ef1649;
+    background: transparent;
+    border: 2px solid #ef1649;
+    border-radius: 0;
+    font-size: 25px;
+    position: absolute;
+    bottom: 35px;
+    margin: 0 auto;
+    right: 50%;
+    transform: translate(50%);
+}
+.modal-btn:hover {
+    background: #ef1649;
+    color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #ef1649;
+}
+.FormContainer-Fields {
+    padding: 0 5rem;
+}
+
+.FormField {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+
+
+.FormField-Input {
+    display: block;
+    width: 320px;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 1px 2px #000;
+}
+
+.FormField-Info {
+    font-size: 1rem;
+    display: none;
+}
+
+
+.FormField-Input[name="pays"] {
+    width: 200px;
+    color: #999999;
+    font-weight: 600;
+}
+
+.Fields-Table-Row {
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.Fields-Table-Row:last-of-type {
+    margin: 0 auto;
+    float: right;
+}
+.FormField-Label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.FormField-Label[for="name"], .FormField-Label[for="email"] {
+    display: none;
+}
+
+.FormField-Label[for="pays"] {
+    margin-right: 25px;
+}
 /**/
 .footer-menu {
     clear: both;
@@ -687,4 +899,10 @@ Hide it
     to {
         transform: translate(-50%) scale(0);
     }
+}
+.moveFromTop {
+    animation: moveFromTop .7s ease both;
+}
+@keyframes moveFromTop {
+    from { opacity: 0.3; transform: translateY(-100%); }
 }

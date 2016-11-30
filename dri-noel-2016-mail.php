@@ -15,10 +15,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="css/dri-noel-2016.css">
     <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/cards.png">
-    <title>Tarot Noel 2016 - DRI | MyAstro</title>
+    <title>Tarot Noel 2016 - DRI par email | MyAstro</title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 <!-- Post Form Modal-->
@@ -38,68 +38,19 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     </header>
     <article class="Site-MainContent">
         <div class="da-container">
-            <section class="snow-ball">
-                <button class="btn cta shake">Je Commence</button>
-
-                <canvas id="snow" class="snow"></canvas>
-            </section>
-            <section class="explication hidden">
-                <aside class="left">
-                    <img src="images_landing/dri-noel-2016/aside.png" alt="Tarot de noel">
-                </aside>
-                <article class="right">
-                    <p class="explication-text" role="contentinfo" itemprop="description">Noel… La fête, des cadeaux, la
-                        convivialité…<br/> Noel, c’est surtout le mois de Décembre, le dernier mois
-                        de 2016, le mois qui clôture votre année !<br/> Plus que quelques jours, quelques heures, une
-                        ultime
-                        occasion qui s’offre à vous pour donner à 2016 la saveur que vous souhaitez. <br/> Que vont vous
-                        réserver les derniers instants de 2016 ? Que va-t- il se passer pour vous en cette fin d’année ?
-                        Comment bien débuter 2017 ? Que faire pour que cette nouvelle année soit meilleure que la
-                        précédente?<br/> Profitez du TAROT DE NOël pour avoir toutes vos réponses, tirez les cartes
-                        ci-dessous</p>
-                    <button class="btn cta-draw">Je tire les cartes</button>
-                </article>
-            </section>
-            <section class="drawCards hidden">
+            <section class="signUp">
+                <h2 class="section3-title">les <span class="bold">10 premières</span> minutes <span class="bold Cap">gratuites</span></h2>
                 <header class="section-header">
                     <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
-                    <h2 class="section-title">Mélangez les cartes</h2>
-                </header>
-                <article class="Cards-Container">
-                    <ul class="cards">
-                        <?php
-                        $deck = range(1, 20);
-                        shuffle($deck);
-                        foreach ($deck as $card) {
-                            echo('<li class="card card-idle" data-card=' . $card . '>');
-                            echo('<div class="card-back front"></div>');
-                            echo('<div class="card-face back"><img src="' . $cards_dir . $card . $ext . '" alt=""></div>');
-                            echo('</li>');
-                        }
-                        ?>
+                    <div class="subtitle">
+                        <ol class="steps">
+                            <li class="step">Je remplie le formulaire</li>
+                            <li class="step">Je suis rappelé (e) <span class="Cap">Gratuitement</span></li>
+                        </ol>
+                    </div>
 
-                    </ul>
-                </article>
-                <button class="btn cta-spread">Mélanger</button>
-            </section>
-            <section class="result hidden">
-                <header class="section-header">
-                    <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
                 </header>
-                <article class="Cards-Container">
-                    <ul class="cards result-cards">
-                        <!-- Picked Card gonna be here-->
-                    </ul>
-                </article>
-                <button class="btn cta-read">Voir mon intérprétation</button>
-            </section>
-            <section class="signUp hidden">
-                <header class="section-header">
-                    <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
-                </header>
-                <ul class="result-cards-mini">
 
-                </ul>
                 <article class="FormContainer">
                     <form action="inc/process.php" method="post" class="Primary-Form ajax" id="form-container">
 
@@ -122,21 +73,16 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <!-- ############################################### -->
                             <div class="hidden cardsPicked"></div>
                             <div class="Fields-Table-Row">
-                                <label for="name" class="FormField-Label">Votre prénom</label>
                                 <div class="FormField input-name">
                                     <input type="text" id="name" name="prenom" class="FormField-Input"
                                            value="<?php $prenom ?>" placeholder="Mon prénom" required/>
                                 </div>
                             </div>
                             <div class="Fields-Table-Row">
-                                <label for="email" class="FormField-Label">Votre email</label>
                                 <div class="FormField input-email">
-                                    <input id="email" type="email" name="email" class="FormField-Input"
-                                           value="<?php $email ?>" placeholder="Mon email" required/>
+                                    <input id="tel" type="tel" name="tel" class="FormField-Input"
+                                           value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required/>
                                 </div>
-                            </div>
-                            <div class="Fields-Table-Row">
-                                <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
                             </div>
                             <div class="Fields-Table-Row">
                                 <label for="pays" class="FormField-Label">Votre pays</label>
@@ -166,7 +112,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                             </div>
                         </div>
-                        <button class="btn FormContainer-Submit" type="submit" name="valider">Rappel Immédiat</button>
+                        <button class="btn cta-call FormContainer-Submit" type="submit" name="valider">Rappel immédiat</button>
                     </form>
                 </article>
             </section>
@@ -197,7 +143,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ajaxify/6.5.6/ajaxify.min.js"></script>
 <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-<script src="js/snow-ball.js"></script>
 <script src="js/dri-noel-2016.js"></script>
 <!--<script src="js/formValidator.js"></script>-->
 <!--

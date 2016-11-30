@@ -3,6 +3,8 @@ var cta = $(".cta"),
     ctaDraw = $(".cta-draw"),
     spread = $(".cta-spread"),
     read = $(".cta-read"),
+    ctaCall = $(".cta-call"),
+    modalBtn = $(".modal-btn"),
 // sections
     snowBall = $(".snow-ball"),
     explication = $(".explication"),
@@ -12,13 +14,21 @@ var cta = $(".cta"),
     miniCardHolder = $(".result-cards-mini"),
     signUp = $(".signUp"),
     form = $(".Primary-Form"),
+    cardPicked = $(".cardsPicked"),
 // Loops Counter
     cardSpread = 0,
     cardsCounter = 0,
 // Trof
     card = $(".card"),
     picked = [],
-    cardsPath = 'tarot/cartes/original-grand/';
+    cardsPath = 'tarot/cartes/original-grand/',
+//Modal
+    modal = $(".modal"),
+    overlay = $(".overlay"),
+// Form Fields
+    inputName = $(".input-name"),
+    inputEmail = $(".input-email"),
+    inputCountry = $(".input-country");
 /*
  * TODO: Clean up the code for production; remove console()
  *
@@ -102,11 +112,19 @@ $(function () {
 
         });
     }
+
     function populateForm() {
         $.each(picked, function (index, value) {
             console.log(index + ": " + value);
-            form.append('<input type="checkbox" name="card[]" value="'+value+'" hidden>')
-
+            cardPicked.append('<input type="checkbox" name="card[' + index + ']" value="' + value + '" hidden>');
+            // Result of $_POST (PHP):
+            // array(
+            //     'card' => array(
+            //         '0' => ''
+            //         '1' => ''
+            //         'n' => ''
+            //     )
+            // )
         });
 
     }
@@ -151,5 +169,63 @@ $(function () {
         trigger: 'click'
     });
 
+// Form
+    var userName = $('input[name="prenom"]').val(),
+        userEmail = $('input[name="email"]').val(),
+        userCountry = $('select[name="pays"]').val(),
+        pickedCardOne = $('input[name="card[0]"]').val(),
+        pickedCardTwo = $('input[name="card[1]"]').val(),
+        pickedCardThr = $('input[name="card[2]"]').val(),
+        pickedCardFur = $('input[name="card[3]"]').val(),
+        pickedCardFiv = $('input[name="card[4]"]').val(),
+        pickedCardsF = {
+            "0": pickedCardOne,
+            "1": pickedCardTwo,
+            "2": pickedCardThr,
+            "3": pickedCardFur,
+            "4": pickedCardFiv
+        };
 
+    form.submit(function (event) {
+        var dataString = 'name=' + userName
+            + '&email=' + userEmail
+            + '&pays=' + userCountry
+            + '&cards=' + pickedCardsF;
+
+        /*var formData = {
+         'name': $('input[name="prenom"]').val(),
+         'email': $('input[name="email"]').val(),
+         'country': $('select[name="pays"]').val(),
+         'card': $('input[name="card[]"]').val()
+         };*/
+        // process the form
+        $.ajax({
+            type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+            url: '../inc/process.php', // the url where we want to POST
+            data: dataString, // our data object
+            //dataType: 'json', // what type of data do we expect back from the server
+            // encode: true
+            success: success()
+        });
+        // using the done promise callback
+        function success() {
+            console.info("Success");
+            window.location = '/dri-noel-2016-tel'
+        }
+
+        // stop the form from submitting the normal way and refreshing the page
+        event.preventDefault();
+    });
+    // TODO: Submit the form and reveal a modal
+    ctaCall.click(
+        function () {
+            overlay.css("display", "block");
+            modal.removeClass("hidden").addClass("moveFromTop");
+
+        }
+    );
+    modalBtn.click(function () {
+        modal.fadeOut();
+        overlay.fadeOut()
+    })
 });
