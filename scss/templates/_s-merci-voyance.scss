@@ -22,9 +22,9 @@
 
 .ContentBand {
     &-FlexContainer {
-        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
-        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
     }
     &.WithDecoration {
@@ -137,9 +137,9 @@
     }
     
     &-PsychicList {
-        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
-        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
         list-style-type: none;
         margin: 0;
@@ -173,8 +173,8 @@
     }
 }
 @media all and (max-width: 520px){
-    .PromoContent-PsychicList { justify-content: space-around;}
-    .PromoContent-PsychicList.PsychicList-Line2 { display: -webkit-box; display: flex; margin-top: 10px;}
+    .PromoContent-PsychicList { -webkit-justify-content: space-around; justify-content: space-around;}
+    .PromoContent-PsychicList.PsychicList-Line2 { display: -webkit-flex; display: flex; margin-top: 1rem;}
     .PsychicList-Item.PsychicList-Line2 { display: none;}
     .PromoContent .FormField-Button { display: block;}
 }
@@ -267,9 +267,9 @@
 @import "../modules/reassurance";
 
 .ReassuranceList-Item-Flex {
-    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
+    -webkit-align-items: center;
     align-items: center;
     justify-content: space-around;
 }
