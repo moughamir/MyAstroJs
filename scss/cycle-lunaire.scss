@@ -27,6 +27,19 @@ $bg : $color4;
 $woman : $color2;
 $men : $color3;
 
+/* Images */
+$img_bg : $img_dir + "bg2.jpg";
+$logo : $img_dir + "logo-MYASTRO.svg";
+$page_title : $img_dir + "title.png";
+$moon_title : $img_dir + "titre.svg";
+$moon : $img_dir + "lune-anim.gif";
+$arrow : $img_dir + "fleche.svg";
+$promo : $img_dir + "ten-min-free.png";
+$ico_star : $img_dir + "ico-star.png";
+$ico_lock : $img_dir + "ico-lock.png";
+$ico_gift : $img_dir + "ico-gift.png";
+$ico_trophy : $img_dir + "ico-trophy.png";
+
 /* Mixins */
 @mixin box-shadow{
     box-shadow: 0 0 6px -1px black;
@@ -41,7 +54,7 @@ body {
     font-family: $font1;
     font-weight: 400;
     color: white;
-    background: $bg url($img_dir+"bg.jpg") no-repeat center top fixed;
+    background: $bg url($img_bg) no-repeat center top fixed;
     background-size: cover;
 }
 
@@ -63,21 +76,20 @@ button{
     margin-bottom: 4rem;
 }
 .SiteLogo {
-    background: url($img_dir+"logo-MYASTRO.svg") 2rem no-repeat;
+    background: url($logo) 2rem no-repeat;
     background-size: contain;
     height: 107px;
     width: 100%;
     position: absolute;
 }
 .PageLogo {
-    background: url($img_dir+"title.png") center no-repeat;
+    background: url($page_title) center no-repeat;
     background-size: contain;
     height: 110px;
     display: inline-block;
     width: 100%;
 }
-.ContentBand-ColumnHeader *{
-    //background: url($img_dir+"marie.png") bottom left no-repeat;
+.ContentBand-ColumnHeader * {
     text-align: center !important;
 }
 .ContentBand-ColumnHeader p,
@@ -91,21 +103,11 @@ button{
 }
     
 .DescText-Title {
-    background: transparent url($img_dir+"titre.svg") no-repeat center;
+    background: transparent url($moon_title) no-repeat center;
     background-size: contain;
     margin-bottom: -8rem;
     
-    span{display:none}
-    
-    //padding-left: 30%;
-    /*text-align: center;
-    font-family: $font1;
-    font-weight: 500;
-    font-size: 3.5rem;
-    line-height: 4.8rem;
-    //margin-bottom: 4rem;
-    text-shadow: 0 0 4px $color1;
-    height: inherit;*/
+    span { display:none}
     
     &-Legend {
         padding-top: 0;
@@ -117,37 +119,29 @@ button{
 }
 
 .moon-gif{
-    background: transparent url($img_dir+"lune-anim.gif") no-repeat top center;
+    background: transparent url($moon) no-repeat top center;
     background-size: 85%;
-    //width: 52.1rem;
     height: 51.6rem;
     max-width: 100%;
-    //height: auto;
 }
 
 .DescText-Content {
     background: transparent;
     text-indent: 5rem;
 }
-.FormContainer {
-    background: rgba(44, 41, 39, 0.6);
-    @include box-shadow;
-    
-    
+.FormContainer {    
     &-Header {
         font-family: $font2;
         color: white;
         padding-bottom: 3rem; 
-        background: url($img_dir+"fleche.svg") no-repeat bottom center;
+        background: url($arrow) no-repeat bottom center;
     }
     
     &-Submit {
         padding: 1rem 4rem;
         margin-bottom:-5rem;
         border: 0px solid $color1;
-        //border-radius: 4rem;
         background-color: $color2;
-        //box-shadow: inset 4px 4px 1px rgba(255, 255, 255, 0.5), inset -4px -4px 2px rgba(0, 0, 0, 0.5);
         color: white;
         font-family: $font2;
         font-size: 2.2rem;
@@ -157,16 +151,11 @@ button{
         &:active,
         &:focus,
         &:hover {
-            //box-shadow: inset 4px 4px 1px rgba(0, 0, 0, 0.5), inset -4px -4px 2px rgba(255, 255, 255, 0.5);
             background-color: darken($color2, 15%);
         }
     }
     
-    &.DRI .DRI {
-        
-        box-shadow: 0 0 0px 0px black;
-        background: transparent;
-        
+    &.DRI .DRI {        
         &-Intro {
             background-color: $color4;
             font-family: $font2;
@@ -180,11 +169,7 @@ button{
             }
         }
         &-Slogan {
-            /*background-color: $color3;
-            font-family: $font2;
-            color: $color1;
-            text-transform: uppercase;*/
-            background: transparent url($img_dir+"ten-min-free.png") center no-repeat;
+            background: transparent url($promo) center no-repeat;
             width: 182px;
             height: 111px;
             display: inline-block;
@@ -252,30 +237,6 @@ button{
     box-shadow: 0 0 6px -1px $color1;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    width: 20px !important;
-    height: 20px !important;
-}
-
-.How-header {
-    font-weight: normal;
-    font-size: 2.4rem;
-    font-family: inherit;
-}
-.How-Wizard {
-    border-color: $color1;
-    color: $color1;
-    
-    &Item-Img.form {
-        background: transparent url($img_dir+"how-ico-form.png") center no-repeat;
-        background-size: contain;
-    }
-    &Item-Img.phone {
-        background: transparent url($img_dir+"how-ico-phone.png") center no-repeat;
-        background-size: contain;
-    }
-}
-
 .ReassuranceList {
     background-color: $color5;
     color: white;
@@ -283,19 +244,19 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .ReassuranceList-Item-Img.star {
-    background: transparent url($img_dir+"ico-star.png") center no-repeat;
+    background: transparent url($ico_star) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.lock {
-    background: transparent url($img_dir+"ico-lock.png") center no-repeat;
+    background: transparent url($ico_lock) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.gift {
-    background: transparent url($img_dir+"ico-gift.png") center no-repeat;
+    background: transparent url($ico_gift) center no-repeat;
     background-size: contain;
 }
 .ReassuranceList-Item-Img.trophy {
-    background: transparent url($img_dir+"ico-trophy.png") center no-repeat;
+    background: transparent url($ico_trophy) center no-repeat;
     background-size: contain;
 }
 
@@ -324,26 +285,6 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ************** PAGE TEL *************** */
-.FormContainer-Slogan{}
-.FormContainer-name{}
-.FormContainer.DRI {
-    background-color: transparent;
-    text-align: center;
-    box-shadow: inherit;
-}
-.FormContainer-Slogan-bloc{
-    color:white;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    border:2px solid white;
-    padding:15px;
-    
-}
-
-
-
 @media screen and (min-height: 1000px){
     body {
         padding-top: 3.5rem;
@@ -356,31 +297,22 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 @media screen and (max-width: 730px){
-    
     // mettre le formulaire en avant sur les mobiles
     .SiteHeader {
         .PageWrapper{
             display:flex;
             flex-direction: column;
             align-items: center;
-            //margin-bottom: 4rem;
         }
         
         .SiteLogo, .PageLogo {
             height: 107px;
             width: 100%;
             text-align: center;
-            /*display: table-cell;
-            position: static;
-            width: auto;
-            height: auto;*/
         }
         .SiteLogo {
             position: inherit;
             background-position: center;
-/*            
-            width: 107px;
-            background-position: left;*/
         }
     }
     .TextContent {
@@ -394,9 +326,6 @@ input[type="checkbox"], input[type="radio"] {
     }
     .DescText-Title {
         display:none;
-        /*line-height: 4.2rem;
-        margin-bottom: 1rem;
-        margin-top: 3rem;*/
     }
     .DescText {
         margin-bottom: 2rem;
@@ -408,11 +337,6 @@ input[type="checkbox"], input[type="radio"] {
 @media screen and (max-width: 470px){
     .SiteHeader {
         margin-bottom: 0;
-        /*.SiteLogo, .PageLogo {
-            display: block;
-            width: 100%;
-            background-position: center;
-        }*/
         .PageLogo {
             height: 120px;
         }
