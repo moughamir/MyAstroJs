@@ -6,7 +6,8 @@ nbproject/*
 yyadmin/cdj/*
 yyadmin/cdjj/*
 yyadmin/media/*
-.htaccess
-.brackets.json
 yyadmin/.htaccess
 /yyadmin/.htaccess
+.htaccess
+.brackets.json
+.idea
