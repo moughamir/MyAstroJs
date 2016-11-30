@@ -68,7 +68,7 @@ if(empty($err)){
         [ 'internal_id' => $idindex ]
     );
 // Smartfocus ------------------------------------------------------------------
-    $smartFocus->updateMember($email, intval($tel));
+//    $smartFocus->updateMember($email, intval($tel));
     
 // KGestion --------------------------------------------------------------------
     if($kgestion_id){
