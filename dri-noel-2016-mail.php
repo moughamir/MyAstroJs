@@ -41,7 +41,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             <section class="signUp">
                 <h2 class="section3-title">les <span class="bold">10 premières</span> minutes <span class="bold Cap">gratuites</span></h2>
                 <header class="section-header">
-                    <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
+                    <img class="img-mail" src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
                     <div class="subtitle">
                         <ol class="steps">
                             <li class="step">Je remplie le formulaire</li>
