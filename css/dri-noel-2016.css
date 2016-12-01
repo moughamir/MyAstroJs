@@ -367,7 +367,8 @@ body {
     background: url(../images_landing/dri-noel-2016/gift-l.png) no-repeat center center;
     display: inline-block;
     width: 67px;
-    height: 74px
+    height: 74px;
+    margin-bottom: 46px;
 }
 
 .page-banner:after {
@@ -376,8 +377,7 @@ body {
     display: inline-block;
     width: 48px;
     height: 52px;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px)
+	margin-bottom: 24px;
 }
 
 .da-container {
