@@ -17,7 +17,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/dri-noel-2016.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/cards.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/favicon.png">
     <title>Tarot Noel 2016 - DRI | MyAstro</title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -55,7 +55,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         occasion qui s’offre à vous pour donner à 2016 la saveur que vous souhaitez. <br/> Que vont vous
                         réserver les derniers instants de 2016 ? Que va-t- il se passer pour vous en cette fin d’année ?
                         Comment bien débuter 2017 ? Que faire pour que cette nouvelle année soit meilleure que la
-                        précédente?<br/> Profitez du TAROT DE NOël pour avoir toutes vos réponses, tirez les cartes
+                        précédente?<br/> Profitez du <span class="Cap">Tarot de Noël</span> pour avoir toutes vos réponses, tirez les cartes
                         ci-dessous</p>
                     <button class="btn cta-draw">Je tire les cartes</button>
                 </article>
@@ -79,6 +79,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         ?>
 
                     </ul>
+                    <article class="Cards-Container">
+                        <ul class="cards result-cards">
+                            <!-- Picked Card gonna be here-->
+                        </ul>
+                    </article>
                 </article>
                 <button class="btn cta-spread">Mélanger</button>
             </section>
@@ -91,7 +96,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         <!-- Picked Card gonna be here-->
                     </ul>
                 </article>
-                <button class="btn cta-read">Voir mon intérprétation</button>
+                <button class="btn cta-read">Voir mon interprétation</button>
             </section>
             <section class="signUp hidden">
                 <header class="section-header">
@@ -138,35 +143,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="Fields-Table-Row">
                                 <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
                             </div>
-                            <div class="Fields-Table-Row">
-                                <label for="pays" class="FormField-Label">Votre pays</label>
-                                <div class="FormField">
-                                    <select name="pays" id="pays" class="FormField-Input input-country" required>
-                                        <option value="" selected>Votre Pays</option>
-                                        <option value="BE">Belgique</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="LU">Luxembourg</option>
-                                        <option value="CH">Suisse</option>
-                                        <option value="FR" selected>France Métropolitaine</option>
-                                        <optgroup label="DOM-TOM">
-                                            <option value="MQ">Martinique</option>
-                                            <option value="GP">Guadeloupe</option>
-                                            <option value="GF">Guyane</option>
-                                            <option value="RE">La Réunion</option>
-                                            <option value="YT">Mayotte</option>
-                                            <option value="PM">St Pierre et Miquelon</option>
-                                            <option value="BL">St Barthélémy</option>
-                                            <option value="SM">St Martin</option>
-                                            <option value="WF">Wallis et Futunua</option>
-                                            <option value="PF">Polynésie Française</option>
-                                            <option value="NC">Nouvelle Calédonie</option>
-                                        </optgroup>
-                                        <option value="ZZ">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
+
                         </div>
-                        <button class="btn FormContainer-Submit" type="submit" name="valider">Rappel Immédiat</button>
+                        <button class="btn FormContainer-Submit" type="submit" name="valider">Recevoir mon intérprétation</button>
                     </form>
                 </article>
             </section>

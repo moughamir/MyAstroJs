@@ -17,7 +17,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="css/dri-noel-2016.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/cards.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/favicon.png">
     <title>Tarot Noel 2016 - DRI par téléphone| MyAstro</title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -39,6 +39,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <article class="Site-MainContent">
         <div class="da-container">
             <section class="signUp">
+                <p class="info">Vos cartes ont été transmis à note équipe.<br/>
+                    Vous recevrez votre interprétation sous 24h dans votre boite mail.
+                </p>
                 <h2 class="section3-title">les <span class="bold">10 premières</span> minutes <span class="bold Cap">gratuites</span></h2>
                 <header class="section-header">
                     <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">

@@ -55,7 +55,6 @@ $(function () {
     read.click(function () {
         result.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
             $(this).hide().dequeue();
-            console.info("done");
             signUp.removeClass("hidden").addClass("moveFromRight");
             pickedCards(miniCardHolder);
             populateForm()
@@ -86,11 +85,11 @@ $(function () {
         card.each(function (e) {
 
             setTimeout(function () {
+
                 card.eq(e).attr("class", "card onTable ani" + e);
                 card.removeClass("card-idle");
-                console.info("Draw Animation Done");
                 cardSpread++;
-                console.log(cardSpread);
+
                 if (cardSpread == 7) {
                     setTimeout(function () {
                         spread.addClass("scaleDown");
@@ -107,15 +106,12 @@ $(function () {
     // Function for displaying picked cards
     function pickedCards(section) {
         $.each(picked, function (index, value) {
-            console.log(index + ": " + value);
             section.append('<li class="card-idle card-' + index + '"><img class="picked-card" src="' + cardsPath + value + '.png" alt=""></li>')
-
         });
     }
 
     function populateForm() {
         $.each(picked, function (index, value) {
-            console.log(index + ": " + value);
             cardPicked.append('<input type="checkbox" name="card[' + index + ']" value="' + value + '" hidden>');
             // Result of $_POST (PHP):
             // array(
@@ -128,7 +124,7 @@ $(function () {
         });
 
     }
-
+    var cardIndex = 0;
     card.on('flip:done', function () {
         $(this).addClass("picked");
         // get Card Value
@@ -136,21 +132,26 @@ $(function () {
         // Populate [Picked] with cards value
         picked.push(cardValue);
 
-        console.log(cardValue);
+
+        $(this).addClass("card-"+cardIndex);
         cardsCounter++;
+
         if (cardsCounter != 0) {
             if (cardsCounter == 1) {
-                $(".section-title").text("Choisissez 4 autres cartes.").css("text-transform", "capitalize")
+                $(".section-title").text("Choisissez 4 autres cartes.").css("text-transform", "capitalize");
+                cardIndex++;
             } else if (cardsCounter == 2) {
-                $(".section-title").text("Choisissez 3 autres cartes.").css("text-transform", "capitalize")
+                $(".section-title").text("Choisissez 3 autres cartes.").css("text-transform", "capitalize");
+                cardIndex++;
             } else if (cardsCounter == 3) {
-                $(".section-title").text("Choisissez 2 autres cartes.").css("text-transform", "capitalize")
+                $(".section-title").text("Choisissez 2 autres cartes.").css("text-transform", "capitalize");
+                cardIndex++;
             } else if (cardsCounter == 4) {
-                $(".section-title").text("Choisissez une autre cartes.").css("text-transform", "capitalize")
+                $(".section-title").text("Choisissez une autre cartes.").css("text-transform", "capitalize");
+                cardIndex++;
             } else if (cardsCounter == 5) {
-                card.addClass("card-idle");
-                console.info("Go to the other step now.");
                 setTimeout(function () {
+                    card.addClass("card-idle");
                     drawCards.removeClass("moveFromRight").addClass("moveToLeft").delay(500).queue(function () {
                         $(this).hide().dequeue();
                         result.removeClass("hidden").addClass("moveFromRight");
