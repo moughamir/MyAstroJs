@@ -16,20 +16,22 @@ $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "cardback.png";
 $place_carte : $img_dir + "cardplace.png";
 $bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone_bleu : $img_dir + "hexagone_bleu.png";
-$hexagone_rose : $img_dir + "hexagone_rose.png";
-$hexagone_turquoise : $img_dir + "hexagone_turquoise.png";
+$hexagone : $img_dir + "hexagone_bleu.png";
+$hexagone_hover : $img_dir + "hexagone_rose.png";
+$hexagone_active : $img_dir + "hexagone_turquoise.png";
 $christelle : $img_dir + "christelle.png";
 $sonia : $img_dir + "sonia.png";
-$icon_amour_bleu : $img_dir + "coeur_bleu.png";
-$icon_argent_bleu : $img_dir + "argent_bleu.png";
-$icon_travail_bleu : $img_dir + "travail_bleu.png";
-$icon_amour_rose : $img_dir + "coeur_rose.png";
-$icon_argent_rose : $img_dir + "argent_rose.png";
-$icon_travail_rose : $img_dir + "travail_rose.png";
-$icon_amour_turquoise : $img_dir + "coeur_turquoise.png";
-$icon_argent_turquoise : $img_dir + "argent_turquoise.png";
-$icon_travail_turquoise : $img_dir + "travail_turquoise.png";
+$listitem_leftcorner : $img_dir + "corner-left.png";
+$listitem_rightcorner : $img_dir + "corner-right.png";
+$icon_amour : $img_dir + "coeur_bleu.png";
+$icon_argent : $img_dir + "argent_bleu.png";
+$icon_travail : $img_dir + "travail_bleu.png";
+$icon_amour_hover : $img_dir + "coeur_rose.png";
+$icon_argent_hover : $img_dir + "argent_rose.png";
+$icon_travail_hover : $img_dir + "travail_rose.png";
+$icon_amour_active : $img_dir + "coeur_turquoise.png";
+$icon_argent_active : $img_dir + "argent_turquoise.png";
+$icon_travail_active : $img_dir + "travail_turquoise.png";
 $icon_tel: $img_dir + "tel.png";
 $offre_tchat : $img_dir + "offre-tchat.png";
 $offre_immediate : $img_dir + "offre-immediate.png";
@@ -43,7 +45,7 @@ $lightgrey: #C0C3C8;
 $bg-bleu: #EAEEF4;
 $bg-grey: #616161;
 $woman: $rose;
-$men: $bleu;
+$man: $bleu;
 $tchat-bg: #E8E8E8;
 
 body {
@@ -52,10 +54,7 @@ body {
 }
 
 .ContentBand.Principal {
-    padding-bottom: 127px;
-    margin-bottom: -117px;
     background-color: $bg-bleu;
-    background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center bottom;
     
@@ -64,6 +63,17 @@ body {
         box-shadow: 0 0 10px 1px $lightgrey;
         font-size:2.5rem;
     }
+}
+.ContentBand.Arrowed {
+    background-color: transparent;
+    background-image: url($bg-fleche);
+    background-repeat: no-repeat;
+    background-position: center top;
+    .ContentBand-ColumnHeader { padding-top: 5rem;}
+}
+.ContentBand.Principal.Arrowed {
+    background-position: center 5rem;
+    .ContentBand-ColumnHeader { padding-top: 1rem;}
 }
 
 /* --------------------------------- ENTETE --------------------------------- */
@@ -112,18 +122,14 @@ body {
 }
 @media all and (max-width: 580px){
     .Title {
-        font-size: 2.8rem !important;
-        strong {
-            font-size: 4.4rem;
-        }
+        font-size: 2.4rem !important;
+        strong { font-size: 3.8rem;}
     }
 }
 @media all and (max-width: 420px){
     .Title {
-        font-size: 2.2rem !important;
-        strong {
-            font-size: 2.6rem;
-        }
+        font-size: 2rem !important;
+        strong { font-size: 2.6rem;}
     }
 }
 
@@ -139,26 +145,27 @@ body {
         width: 237px;
         height: 205px;
         background-color: transparent;
-        background-image: url($hexagone_bleu);
-    }
-    &-VisualForm:hover {
-        color: $rose;
-        .PsychicChoice-Psychic-Picture {
-            background-color: transparent;
-            background-image: url($hexagone_rose);
-        }
+        background-image: url($hexagone);
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
-            background-image: url($hexagone_turquoise);
+            background-image: url($hexagone_active);
             &:after {
                 content: "\f00c";
                 font-family: 'FontAwesome';
                 background-color: transparent;
                 color: $turquoise;
             }
+        }
+    }
+    &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
+        color: $rose;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_hover);
+            &:after { color: $rose;}
         }
     }
 }
@@ -174,10 +181,31 @@ body {
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 
 .ThemeChoice-ListItem {
-    border-radius: 3rem;
+    position: relative;
+    border-left: none;
+    border-right: none;
     border-color: $lightgrey;
     color: $bleu;
     font-weight: bold;
+    
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        height: 100%;
+        width: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    &:before {
+        left: -2.4rem;
+        background-image: url($listitem_leftcorner);
+    }
+    &:after {
+        right: -2.4rem;
+        background-image: url($listitem_rightcorner);
+    }
     
     &-Icon {
         background-color: transparent;
@@ -185,45 +213,27 @@ body {
         background-position: center;
         background-size: contain;
         
-        &.Amour {
-            background-image: url($icon_amour_bleu);
-        }
-        &.Argent {
-            background-image: url($icon_argent_bleu);
-        }
-        &.Travail {
-            background-image: url($icon_travail_bleu);
-        }
+        &.Amour { background-image: url($icon_amour);}
+        &.Argent { background-image: url($icon_argent);}
+        &.Travail { background-image: url($icon_travail);}
     }
     
     &:hover, &:active, &:focus {
         color: $rose;
     }
-    &:hover &-Icon {
+    &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
         background-color: transparent;
-        &.Amour {
-            background-image: url($icon_amour_rose);
-        }
-        &.Argent {
-            background-image: url($icon_argent_rose);
-        }
-        &.Travail {
-            background-image: url($icon_travail_rose);
-        }
+        &.Amour { background-image: url($icon_amour_hover);}
+        &.Argent { background-image: url($icon_argent_hover);}
+        &.Travail { background-image: url($icon_travail_hover);}
     }
     &-Input:checked + & {
         color: $turquoise;
         .ThemeChoice-ListItem-Icon {
             background-color: transparent;
-            &.Amour {
-                background-image: url($icon_amour_turquoise);
-            }
-            &.Argent {
-                background-image: url($icon_argent_turquoise);
-            }
-            &.Travail {
-                background-image: url($icon_travail_turquoise);
-            }
+            &.Amour { background-image: url($icon_amour_active);}
+            &.Argent { background-image: url($icon_argent_active);}
+            &.Travail { background-image: url($icon_travail_active);}
         }
     }
 }
@@ -262,7 +272,7 @@ body {
 
 .Pop.Pop-Voyant {
     background-color: transparent;
-    background-image: url($hexagone_turquoise);
+    background-image: url($hexagone_active);
     &.Christelle .Pop-Voyant-Photo{
         background-image: url($christelle);
     }
@@ -300,7 +310,7 @@ body {
     }
 }
 
-.FormField-Label {  
+.FormField-Label {
     .ico-woman {
         font-size: 1.9rem;
         font-weight: bold;
@@ -309,7 +319,7 @@ body {
     .ico-man {
         font-size: 1.9rem;
         font-weight: bold;
-        color: $men;
+        color: $man;
     }
 }
 
@@ -538,7 +548,7 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-@media all and (max-width: 1024px){
+@media all and (max-width: 102.4rem){
     .Merci-Form {
         background-image: none;
     }

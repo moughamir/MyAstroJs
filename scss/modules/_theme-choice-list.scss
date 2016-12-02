@@ -9,9 +9,12 @@
 */
 
 .ThemeChoice-List {
-    width: 60%;
+    width: 62%;
     margin: auto;
     position: relative;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    
     &Item {
         display: block;
         margin: 0;
@@ -35,6 +38,10 @@
             hyphens: none;
             font-size: 1.8rem;
             line-height: 3.5rem;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
         }
         
         &:hover, &:active, &:focus {

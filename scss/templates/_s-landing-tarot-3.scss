@@ -113,17 +113,9 @@ body {
 
 @import "../modules/psychic-choice";
 
-.PsychicChoice {
-  margin-bottom: 3rem;
-}
-
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 
 @import "../modules/theme-choice-list";
-
-.ThemeChoice {
-  margin-bottom: 3rem;
-}
 
 /* ------------------------------ TIRAGE TAROT ------------------------------ */
 
@@ -331,8 +323,6 @@ body {
 /* --------------------------------- FOOTER --------------------------------- */
 
 .SiteCopyright {
-  text-align: center;
-  margin-bottom: 2rem;
-  position: absolute;
-  width: 100%;
+    width: 100%;
+    text-align: center;
 }
