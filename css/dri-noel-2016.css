@@ -299,7 +299,6 @@ body {
 .section-header {
     position: relative;
     z-index: 9;
-    width: 692px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -377,12 +376,12 @@ body {
     display: inline-block;
     width: 48px;
     height: 52px;
-	margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .da-container {
     width: 722px;
-    height: 480px;
+    height: 535px;
     background: rgba(27, 27, 27, 0.73);
     display: block;
     overflow: hidden;
@@ -402,7 +401,7 @@ body {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
     background-color: rgb(239, 22, 73);
-    padding: 0 10px;
+    padding: 5px 14px;
     font-family: "Open Sans", sans-serif;
     cursor: pointer;
     color: #FFF;
@@ -416,8 +415,10 @@ body {
 
 .cta {
     position: absolute;
-    top: 50%;
-    left: 59px
+    top: 90px;
+    left: 74px;
+    height: 39px;
+    border-radius: 12px;
 }
 
 .cta-read {
@@ -428,7 +429,6 @@ body {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    bottom: 15px;
     border-radius: 5px
 }
 
@@ -882,10 +882,12 @@ body {
     background: url(../images_landing/dri-noel-2016/noel.png) no-repeat center center;
     content: "";
     width: 290px;
-    height: 290px;
+    height: 250px;
     display: block;
     position: absolute;
-    left: 10px
+    left: 10px;
+    background-size: contain;
+    top: 21px;
 }
 
 .snow {
@@ -937,10 +939,19 @@ body {
     width: 100%;
     height: 100%
 }
+.result  {
+    width: 100%;
+    height: 100%;
+}
+.signUp {
+    width: 100%;
+    height: 100%;
+}
+
 
 .cta-draw {
     -ms-flex-item-align: center;
-    align-self: center
+    align-self: center;
 }
 
 .cta-draw:hover {
@@ -1125,6 +1136,46 @@ body {
 
 .picked-card {
     height: 100%
+}
+
+.card-0:not(.card-idle) {
+    right: 600px;
+    position: relative;
+    bottom: 5px;
+    z-index: 100;
+    transition: 800ms ease;
+}
+
+.card-1:not(.card-idle) {
+    right: 500px;
+    position: relative;
+    bottom: 5px;
+    z-index: 101;
+    transition: 800ms ease;
+}
+
+.card-2:not(.card-idle) {
+    right: 400px;
+    position: relative;
+    bottom: 5px;
+    z-index: 102;
+    transition: 800ms ease;
+}
+
+.card-3:not(.card-idle) {
+    right: 300px;
+    position: relative;
+    bottom: 5px;
+    z-index: 103;
+    transition: 800ms ease;
+}
+
+.card-4:not(.card-idle) {
+    right: 200px;
+    position: relative;
+    bottom: 5px;
+    z-index: 104;
+    transition: 800ms ease;
 }
 
 .onTable:hover {
@@ -1402,7 +1453,10 @@ body {
 .FormField-Label[for="pays"] {
     margin-right: 25px
 }
-
+.info {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
 .footer-menu {
     clear: both;
     list-style: outside none none;

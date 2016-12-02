@@ -17,7 +17,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="css/dri-noel-2016.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/cards.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/favicon.png">
     <title>Tarot Noel 2016 - DRI par email | MyAstro</title>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
