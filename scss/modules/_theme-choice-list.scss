@@ -9,34 +9,34 @@
 */
 
 .ThemeChoice-List {
+    position: relative;
     width: 62%;
     margin: auto;
-    position: relative;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     
     &Item {
-        display: block;
+        display: table;
+        width: 100%;
         margin: 0;
         margin-bottom: 8px;
         padding: 0.8rem 1.5rem;
         border: 1px solid;
         
         &-Icon {
-            display: block;
-            height: 3.5rem;
+            display: table-cell;
             width: 3.5rem;
-            float: left;
             background-color: darkgrey;
         }
         &-Input {
             display: none;
         }
         &-Label {
-            display: block;
-            padding-left: 5rem;
+            display: table-cell;
+            padding-left: 2rem;
             hyphens: none;
             font-size: 1.8rem;
+            vertical-align: middle;
             line-height: 3.5rem;
         }
         
@@ -65,19 +65,23 @@
         width: 80%;
         
         &Item-Label {
-            padding-left: 4rem;
+            padding-left: 1rem;
             font-size: 1.6rem;
             line-height: 3rem;
         }
-        &Item-Icon {
-            height: 3rem;
-            width: 3rem;
-        }
+        &Item-Icon { width: 3rem;}
     }
 }
 
 @media all and (max-width: 460px){
     .ThemeChoice-List {
         width: 100%;
+        &Item {
+            width: 100%;
+            padding: 0.8rem 0rem;
+            &-Label {
+                font-size: 1.4rem;
+            }
+        }
     }
 }
