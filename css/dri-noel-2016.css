@@ -939,15 +939,16 @@ body {
     width: 100%;
     height: 100%
 }
-.result  {
-    width: 100%;
-    height: 100%;
-}
-.signUp {
+
+.result {
     width: 100%;
     height: 100%;
 }
 
+.signUp {
+    width: 100%;
+    height: 100%;
+}
 
 .cta-draw {
     -ms-flex-item-align: center;
@@ -1453,10 +1454,12 @@ body {
 .FormField-Label[for="pays"] {
     margin-right: 25px
 }
+
 .info {
     text-align: center;
     font-family: "Open Sans", sans-serif;
 }
+
 .footer-menu {
     clear: both;
     list-style: outside none none;
@@ -1657,5 +1660,144 @@ body {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%)
+    }
+}
+
+/*
+stroke="#000" stroke-width="1.5" stroke-miterlimit="10"
+*/
+.logo-svg {
+    width: 107px;
+    height: 107px;
+}
+
+.logo-svg > path {
+    stroke: #fff;
+    stroke-width: 1.5;
+    stroke-miterlimit: 10;
+    fill: #fff;
+}
+
+/*
+Cuteness on Standard Devices
+*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        overflow: auto;
+    }
+
+    .logo-svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-svg > path {
+        stroke: #ef1649;
+        stroke-width: 1.5;
+        stroke-miterlimit: 10;
+        fill: #ef1649;
+    }
+
+    .page-banner > img {
+        width: 300px;
+    }
+
+    .page-banner:before {
+        display: none;
+    }
+
+    .page-banner:after {
+        display: none;
+    }
+
+    .Site-MainContent {
+        width: 100%;
+    }
+
+    .da-container {
+        width: auto;
+        height: 400px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .txt-block {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .txt-0 {
+        display: block;
+        font-size: 20px;
+    }
+
+    .right {
+        width: 310px;
+    }
+
+    .explication-text {
+        text-align-last: center;
+        font-size: .78rem;
+    }
+
+    .result-cards-mini {
+        display: none;
+    }
+
+    .Fields-Table-Row {
+        width: 100%;
+    }
+
+    .FormField {
+        display: block;
+    }
+
+    .FormField-Input {
+        width: 270px;
+    }
+
+    .FormContainer {
+        position: relative;
+        padding: 48px 0;
+        padding: 3rem 0;
+    }
+
+    .btn.FormContainer-Submit {
+        min-width: 297px;
+        width: 297px;
+        font-size: 0.95rem;
+        padding-left: 20px;
+    }
+
+    .modal {
+        width: 208px;
+        height: 221px;
+    }
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+    .modal {
+        width: 400px;
     }
 }

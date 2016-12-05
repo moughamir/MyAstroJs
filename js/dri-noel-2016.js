@@ -124,6 +124,7 @@ $(function () {
         });
 
     }
+
     var cardIndex = 0;
     card.on('flip:done', function () {
         $(this).addClass("picked");
@@ -133,7 +134,7 @@ $(function () {
         picked.push(cardValue);
 
 
-        $(this).addClass("card-"+cardIndex);
+        $(this).addClass("card-" + cardIndex);
         cardsCounter++;
 
         if (cardsCounter != 0) {
@@ -229,4 +230,16 @@ $(function () {
         modal.fadeOut();
         overlay.fadeOut()
     })
+
+    // Responsive view with jQ
+    // When window change
+    $(window).resize(function () {
+        if ($(window).width() <= 320) {
+            console.log("Yes")
+        }
+    });
+    // In case the user use the phone
+    if ($(window).width() <= 320) {
+        console.log("Yes")
+    }
 });
