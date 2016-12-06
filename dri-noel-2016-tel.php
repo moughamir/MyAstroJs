@@ -39,7 +39,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <article class="Site-MainContent">
         <div class="da-container">
             <section class="signUp">
-                <p class="info">Vos cartes ont été transmis à note équipe.<br/>
+                <p class="info">Vos cartes ont été transmises à notre équipe.<br/>
                     Vous recevrez votre interprétation sous 24h dans votre boite mail.
                 </p>
                 <h2 class="section3-title">les <span class="bold">10 premières</span> minutes <span class="bold Cap">gratuites</span></h2>
