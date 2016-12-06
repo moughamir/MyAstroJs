@@ -12,12 +12,13 @@ include('include/process-dri.php');
 $result = $_SESSION['question'];
 $conjoint = $_SESSION['firstnameJoint'];
 // RESULTAT
-switch ($result) {
+$n = str_replace('NA_chiffre', '', $result);
+switch ($n) {
     case 1:
         $textResult= "Entre vous et ".ucfirst($conjoint).", c’est tout feu tout flamme ! Votre couple est la somme de vos deux personnalités, fortes, indépendantes et capables de se réaliser soi-même. Pour que votre histoire fonctionne, vos deux caractères doivent se compléter et chacun doit fournir des efforts très particuliers. Votre relation avec ".ucfirst($conjoint)." est à prendre avec des pincettes, mais le jeu en vaut vraiment la chandelle.".ucfirst($prenom).", c’est en prenant du recul que vous avancerez efficacement…";
         break;
     case 2:
-        $textResult= "A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de ".ucfirst($conjoint).", attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié! ".ucfirst($prenom).", allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.";
+        $textResult= "A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de ".ucfirst($conjoint).", attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié ! ".ucfirst($prenom).", allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.";
         break;
     case 3:
         $textResult= "Votre couple avec ".ucfirst($conjoint)." est marqué par les blocages ! Vous manquez tout deux de souplesse d’esprit et de qualités d’adaptation. Ce qui va vous causer bien des ennuis dès que la première nouveauté ou la première instabilité va pointer le bout de son nez dans votre couple. Vous aimez la stabilité et vous pourriez aisément l’obtenir, à condition de surmonter tous ces blocages. Une chose facile à faire en soi, mais surtout très utile, car vous et ".ucfirst($conjoint)." pourriez être promis à un bel avenir…";
@@ -37,7 +38,7 @@ switch ($result) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>MyAstro - Numérologie de l'Amour</title>
+        <title>MyAstro - Numérologie de l’Amour</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -57,7 +58,7 @@ switch ($result) {
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <span class="PageLogo"><h1><span>Numérologie de l'</span><span>Amour</span></h1></span>
+                <span class="PageLogo"><h1><span>Numérologie de l’</span><span>Amour</span></h1></span>
             </div>
         </header>
         <section class="ContentBand">
@@ -67,20 +68,21 @@ switch ($result) {
                     <div id="photo1" class="polaroid"></div>
                     <div id="photo2" class="polaroid"></div>  
                       
-                    <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
+                    <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse :</h2>
                                         
                     <section class="wrapper-num-result txtleft">
                         <h3 class="num-result-title">Résultats</h3>
                         <div class="num-result grid-1-2">                                 
-                            <p id="num-result-numero" class="num-result-numero"><?php echo $result ?></p>
+                            <p id="num-result-numero" class="num-result-numero"><?= $n ?></p>
                             <div class="num-result-text-name">
                                 <p><?= ucfirst($prenom) ?></p>
-                                <p id="num-result-text"><?php echo $textResult ?></div>
+                                <p id="num-result-text"><?= $textResult ?></p>
+                            </div>
                         </div>
                     </section>
                     <!-- FIN DE RESULTAT --> 
                     
-                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute<br class="small-hidden"/>et vous rappelle gratutement !</p>
+                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus notre équipe de voyants est à votre écoute<br class="small-hidden"/>et vous rappelle gratutement !</p>
 
                     <span class="ten-min-free"></span>
 
@@ -104,6 +106,7 @@ switch ($result) {
                                 <?php } ?>
                             <form method="post">
                                 <!-- ########## identification formulaire ########## -->
+                                <input type="hidden" name="prenom" value="<?= $prenom ?>" />
                                 <input type="hidden" name="save_tel" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <!-- ############################################### -->

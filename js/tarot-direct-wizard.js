@@ -11,8 +11,6 @@ $(document).ready(function(){
     var psychic = $('#scn-psychic');
     var theme = $('#scn-theme');
     var form = $('#scn-form');
-    var tarot_band = $('#scn-tarot .ContentBand');
-    var tarot_title = $('#scn-tarot .Title');
     var tarot_draw = $('#scn-tarot-draw');
     var tarot_result = $('#scn-tarot-result');
 
@@ -34,8 +32,9 @@ $(document).ready(function(){
     $(document).on('change, click', 'input[name="question_code"]', function(e){
         setTimeout(function(){
             theme.hide("slow");
-            tarot_band.addClass('Principal');
+            tarot_draw.addClass('Principal');
             if($(window).width() > trt_minSize){
+                tarot_draw.removeClass('Arrowed');
                 tarot_result.show();
             }
             trt_lock = false;
@@ -45,9 +44,7 @@ $(document).ready(function(){
     // ETAPE4 - FORMULAIRE
     $(document).on('trt_completed_event', function(e){
         setTimeout(function(){
-            tarot_title.hide();
             tarot_draw.hide();
-            tarot_band.removeClass('Principal');
             tarot_result.show();
             form.show("slow");
         }, 600);
