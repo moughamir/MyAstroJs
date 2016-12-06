@@ -9,19 +9,19 @@
         <meta name="description" content="My Astro : Voyance gratuite par chat - Obtenez des réponses immédiates à toutes vos questions. Voyance gratuite par chat." />
         <meta name="robots" content="noindex,nofollow" />
         <meta name="viewport" content="width=device-width" />
-        
+
         <link rel="stylesheet" href="sstyle_landing.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media="all" />
     </head>
     <body class="voyance-telephone-1">
         <div class="top-nav">
             <div class="nav-content"><div class="links">
-                <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-                <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
+                <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
             </div></div>
         </div>
-        
+
         <div class="main">
             <div class="left-part">
                 <div class="logo" style="text-align: center;margin-bottom: 20px;max-width: 320px;">
@@ -30,7 +30,7 @@
                 <div class="content">
                     <div class="txt-content txt-merci-voyance" style="padding: 8px 16px;">
                     <h4 style="margin: 12px 0;">votre demande a bien été prise en compte</h4>
-                    <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.09.04.07</p>
+                    <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.11.11</p>
                     <p>En attendant, si vous souhaitez consulter un<br/> voyant immédiatement par téléphone,<br/> <a href="#form-merci-voyance"><span>faites vous rappeler gratuitement</span></a> en<br/> remplissant le formulaire.</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
             <div class="bloc-middle-bg"></div>
         </div>
         <div class="clear"></div>
-        
+
         <div class="subfooter">
             <ul>
                 <li class="first">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></li>
@@ -136,11 +136,11 @@
         </div>
 
         <!--script src="js/required.js"></script-->
-        
+
         <!-- CONVERSION -->
         <?php include('include/conversion/adwords.php');
               include('include/conversion/facebook.php'); ?>
-        
+
         <!-- REMARKETING -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php'); ?>

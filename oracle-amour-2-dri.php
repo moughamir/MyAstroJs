@@ -9,7 +9,6 @@
 */
 include('include/process-dri.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>

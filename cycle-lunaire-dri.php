@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     -----------------------------------------------------
     --      cycle-lunaire-dri = DRI POST MAILING       --
     -----------------------------------------------------
@@ -16,16 +16,16 @@ include('include/process-dri.php');
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>MyAstro - Ce que vous révèle le cycle lunaire</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-                
-        
-        <link rel="stylesheet" type="text/css" href="css/cycle-lunaire.min.css" />
-        
+
+
+        <link rel="stylesheet" type="text/css" href="css/cycle-lunaire.css" />
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -50,7 +50,7 @@ include('include/process-dri.php');
                         <div class="moon-gif"></div>
                     </div>
                 </div>
-                <div id="form-container" class="ContentBand-Column Form ">                                       
+                <div id="form-container" class="ContentBand-Column Form ">
                     <p class="FormContainer-Slogan">Un nouveau cycle lunaire pour un nouveau départ dans votre vie</p>
                     <p class="FormContainer-name">
                         <?= ucfirst($prenom) ?>, la lune et ses influences positives sont avec vous, vous avez toutes les cartes en main pour agir. Alors passez à l’action ! Mais attention, agir ne veut pas dire se précipiter et commettre des erreurs irrémédiables… Les choix que vous allez faire ces prochains jours seront cruciaux…
@@ -58,7 +58,6 @@ include('include/process-dri.php');
                     <p class="FormContainer-Slogan-bloc">Pour en savoir plus notre équipe de voyants est à votre écoute et vous rappelle gratutement !</p>
 
                     <span class="ten-min-free"></span>
-
                     <article id="form2-form" class="FormContainer DRI ">
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h1 class="DRI-Slogan"><span>Vos 10 premières minutes gratuites !</span></h1>
@@ -67,7 +66,7 @@ include('include/process-dri.php');
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                                </p>                        
+                                </p>
                             <?php } else { ?>
                                 <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
                             <p class="alert alert-danger">
@@ -105,7 +104,6 @@ include('include/process-dri.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >me faire rappeler gratuitement</button>
@@ -139,7 +137,7 @@ include('include/process-dri.php');
             </div>
         </footer>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
@@ -150,4 +148,4 @@ include('include/process-dri.php');
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />                        
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

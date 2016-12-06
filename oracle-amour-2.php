@@ -92,13 +92,13 @@ $questions = array(
                         <input type="hidden" name="source" value="oracle-amour-2" />
                         <input type="hidden" name="method" value="general-suscribe" />
                         <input type="hidden" name="support" value="tarot" />
+                        <input type="hidden" name="site" value="myastro.fr" />
                         <input type="hidden" name="affiliation" value="affilbase" />
                         <input type="hidden" name="dri" value="oracle-amour-2-tel" />
                         <!-- ########## autres champs pré-remplis ######### -->
                         <input type="hidden" name="cguv" value="1" />
                         <input type="hidden" name="partenaires" value="1" />
                         <!-- ############################################### -->
-
                         <div class="FormField radio">
                             <div class="FormField-TableInputContainer fixed-2-col gender">
                                 <div class="FormField-TableInputContainer-Cell">
@@ -218,16 +218,13 @@ $questions = array(
         <script src="js/jquery.baraja.js"></script>
         <script>
             $(function() {
-                
                 //largeur de l'écran
                 var screenWidth = $( window ).width();
-                
                 // l'animation "poker" du jeu de carte ne fonctionne
                 // que pour les écrans supérieurs à 680px
                 if(screenWidth > 730){
                     var $el = $( '#baraja-el' ),
                     baraja = $el.baraja();
-
                     baraja.fan( {
                         speed : 500,
                         easing : 'ease-in-out',
