@@ -11,7 +11,7 @@
 session_start();
 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
 $chiffre = rand(1, 5);
-$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour (été 2016) - Chiffre '.$chiffre];
+$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour (été 2016) - Chiffre '.$chiffre, 'conjoint'=>true];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,7 +56,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                         <p>Êtes-vous faits l’un pour l’autre ? Votre histoire a-t-elle un espoir de fonctionner ? Que faire pour que votre couple dure pour toujours ? La numérologie de l’amour vous donne toutes les cartes en main pour construire cette histoire d’amour qui vous tient tant à cœur… Indiquez votre prénom et celui de la personne qui occupe votre esprit à ce moment précis. En recevant immédiatement le chiffre de votre couple, vous saurez ce que les chiffres de votre vie ont à vous révéler…</p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <form>
+                            <form class="ajax">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="numerologie-amour" />
                                 <input type="hidden" name="method" value="general-suscribe" />
@@ -66,7 +66,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="theme_id" id="theme_id" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+                                <input type="hidden" name="question_code" id="theme_id" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <!-- ############################################### -->
                                 
                                 <div class="FormField radio">

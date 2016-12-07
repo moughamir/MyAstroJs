@@ -17,12 +17,11 @@ include('include/process-dri.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>MyAstro - Numérologie de l'Amour</title>
+        <title>MyAstro - Numérologie de l’Amour</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-                
         
         <link rel="stylesheet" type="text/css" href="css/numerologie-amour.min.css" />
         
@@ -37,28 +36,24 @@ include('include/process-dri.php');
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
-                <span class="PageLogo"><h1><span>Numérologie de l'</span><span>Amour</span></h1></span>
+                <span class="PageLogo"><h1><span>Numérologie de l’</span><span>Amour</span></h1></span>
             </div>
         </header>
         <section class="ContentBand">
             <div class="PageWrapper">
                 <div id="form-container" class="ContentBand-Column Form txtcenter">
-                    
-                    
                     <!-- RESULTAT -->
                     <section class="wrapper-num-result txtleft">
                         <div class="num-result">                                 
                             <div class="num-result-text-name">
                                 <p><?= ucfirst($prenom) ?></p>
-                                <p id="num-result-text">La numérologie vous offre l’opportunité de déterminer avec exactitude les périodes propices et celles négatives de votre destinée amoureuse. Grâce à elle, obtenez un coup d’avance sur votre destin, pour mieux gérer votre vie, prendre les meilleures décisions et résoudre tous les tracas que vous impose le quotidien. Un allié de poids pour que vos rêves deviennent des réalités.</div>
+                                <p id="num-result-text">La numérologie vous offre l’opportunité de déterminer avec exactitude les périodes propices et celles négatives de votre destinée amoureuse. Grâce à elle, obtenez un coup d’avance sur votre destin, pour mieux gérer votre vie, prendre les meilleures décisions et résoudre tous les tracas que vous impose le quotidien. Un allié de poids pour que vos rêves deviennent des réalités.</p>
+                            </div>
                         </div>
                     </section>
-                    <!-- FIN DE RESULTAT --> 
-                    
-                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus  notre équipe de voyants est à votre écoute<br class="small-hidden"/>et vous rappelle gratutement !</p>
-
+                    <!-- FIN DE RESULTAT -->
+                    <p class="FormContainer-Slogan-bloc">Pour en savoir plus notre équipe de voyants est à votre écoute<br class="small-hidden"/>et vous rappelle gratutement !</p>
                     <span class="ten-min-free"></span>
-
                     <article id="form2-form" class="FormContainer DRI">
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h1 class="DRI-Slogan"><span>Vos 10 premières minutes gratuites !</span></h1>
@@ -79,6 +74,7 @@ include('include/process-dri.php');
                                 <?php } ?>
                             <form method="post">
                                 <div class="FormField">
+                                    <input type="hidden" name="prenom" value="<?= $prenom ?>" />
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>
                                 <div class="FormField">
@@ -105,7 +101,6 @@ include('include/process-dri.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >me faire rappeler gratuitement</button>
