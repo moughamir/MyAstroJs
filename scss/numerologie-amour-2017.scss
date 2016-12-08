@@ -185,10 +185,7 @@ h2, button { hyphens: none;}
         &-Sent {
             font-family: $font2;
             font-size: 3rem;
-            strong {
-                font-weight: normal;
-                color: $color1;
-            }
+            strong { font-weight: normal;}
         }
     }
 }
