@@ -1,0 +1,96 @@
+/* 
+    --------------------------
+    --    noel-2016    --
+    --------------------------
+
+    Created on : 08 décembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+@import "knacss444/knacss";
+
+.PageWrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 5rem;
+}
+.PageHeader {
+    margin-bottom: 2rem;
+}
+.PageLogo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.PageTitle {
+    height: 130px;
+    background-color: lightgrey;
+}
+.Container {
+    max-width: 520px;
+    margin: auto;
+    padding: 3rem;
+    background-color: lightgrey;
+}
+
+.Home {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 150px;
+    background-color: grey;
+    z-index: 2;
+    &-SnowLayout {
+        position: absolute;
+        height: 290px;
+        width: 290px;
+        top: 7px;
+        left: 9px;
+        border-radius: 150px;
+        z-index: 1;
+        overflow: hidden;
+    }
+    &-Button {
+        position: relative;
+        top: 85px;
+    }
+}
+
+.Text {
+    padding-left: 180px;
+    &-Title, &-Subtitle {
+        text-align: center;
+    }
+}
+
+.Button {
+    display: block;
+    margin: auto;
+}
+
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+$card-width: 68;
+$card-height: 130;
+$overlap: -20;
+@import "modules/tarot-draw";
+
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.SiteFooter {
+    margin-bottom: 2rem;
+}
+
+@import "modules/reassurance";
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteCopyright {
+    text-align: center;
+}

@@ -38,7 +38,7 @@ $(document).ready(function(){
     alwaysDraw = shuffle(alwaysDraw);
     var alwaysDraw_event = false;
     
-    // -- animation survol des cartes verso --
+    /* -- animation survol des cartes verso --
     $('#cards-container .notFlipped').hover(
         function(e) {
             if (cardsCounter <= nbCardsToDraw - 1 && !trt_lock) {
@@ -65,6 +65,15 @@ $(document).ready(function(){
             }
         }
     );
+    */
+    
+    $(document).on('click', '#cards-shuffle', function(e){
+        if($('#cards-container').hasClass('toShuffle')){
+            $('#cards-container').removeClass('toShuffle');
+        } else {
+            $('#cards-container').addClass('toShuffle');
+        }
+    });
     
     // -- sélection de carte --
     $(document).on('click', '#cards-container .notFlipped', function(e){

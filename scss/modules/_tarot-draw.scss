@@ -12,6 +12,7 @@
     position: relative;
     
     &-Draw, &-Result {
+        min-height: $card-height+px;
         margin-bottom: 3rem;
     }
     
@@ -23,15 +24,18 @@
     
     &-Card {
         display: inline-block;
+        top: 0;
+        left: auto;
         position: relative;
-        width: $card-width;
-        height: $card-height;
+        width: $card-width+px;
+        height: $card-height+px;
         overflow: hidden;
         cursor: pointer;
         perspective-origin: center bottom;
         z-index: 5;
-        margin-right: $overlap;
-        margin-left: $overlap;
+        margin-right: $overlap+px;
+        margin-left: $overlap+px;
+        transition: top 1s cubic-bezier(0.68, -.55, .265, 1.55), position 1s cubic-bezier(0.68, -.55, .265, 1.55);
         
         &.notFlipped {
             background: white;
@@ -97,6 +101,20 @@
         &.place:last-child {
             margin-right: 0;   
         }
+    } 
+    
+    &.toShuffle &-Draw {
+        min-height: $card-height+px;
+        .WidgetTarot-Card {
+            position: absolute;
+            top: ($card-height + 30)+px;
+            left: 50%;
+            margin: 0;
+            transform: translateX(-50%);
+        }
+    }
+    &.toShuffle &-Card.place {
+        background-color: transparent;
     }
 }
 

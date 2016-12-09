@@ -987,7 +987,7 @@ body {
 
 .card {
     -webkit-transition: all 1s cubic-bezier(0.68, -.55, .265, 1.55);
-    transition: all 1s cubic-bezier(0.68, -.55, .265, 1.55);
+    transition: bottom 1s cubic-bezier(0.68, -.55, .265, 1.55), right 1s cubic-bezier(0.68, -.55, .265, 1.55);
     float: left;
     width: calc(135px / 1.5);
     height: calc(261px / 1.5);
