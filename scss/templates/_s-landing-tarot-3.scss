@@ -1,12 +1,15 @@
 @charset "UTF-8";
 /* 
-    -----------------------------------------
-    --      structure landing tarot 3      --
-    -----------------------------------------
+        -----------------------------------------
+        --            structure landing tarot 3            --
+        -----------------------------------------
 
-    Created on : 25 mai 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
+        Created on : 25 mai 2016
+        Author         : Laurène Dourdin <2aurene@gmail.com>
 */
+
+/* --------------------------- STRUCTURE GÉNÉRALE --------------------------- */
+
 @import "../knacss444/knacss";
 
 body {
@@ -28,7 +31,7 @@ body {
     &-Column {
         display: table-cell;
         vertical-align: middle;
-        
+
         &Header {
             text-align: center;
             font-size: 3.5rem;
@@ -39,7 +42,7 @@ body {
             }
         }
     }
-    
+
     &.TwoCols &-Column {
         width: 50%;
     }
@@ -48,7 +51,7 @@ body {
     }
 }
 
-@media all and (max-width: 580px){
+@media all and (max-width: 580px) {
     .ContentBand-ColumnHeader {
         font-size: 2.8rem;
         strong {
@@ -56,7 +59,8 @@ body {
         }
     }
 }
-@media all and (max-width: 420px){
+
+@media all and (max-width: 420px) {
     .ContentBand-ColumnHeader {
         font-size: 2.2rem;
         strong {
@@ -71,7 +75,7 @@ body {
     background-color: darkgrey;
     color: white;
     font-size: 2.4rem;
-    
+
     &-Logo {
         display: block;
         height: 120px;
@@ -89,7 +93,7 @@ body {
     }
 }
 
-@media all and (max-width: 960px){
+@media all and (max-width: 960px) {
     .SiteHeader-Slogan1 {
         display: none;
     }
@@ -97,7 +101,8 @@ body {
         margin: initial;
     }
 }
-@media all and (max-width: 680px){
+
+@media all and (max-width: 680px) {
     .SiteHeader-Slogan2 {
         display: none;
     }
@@ -111,23 +116,13 @@ body {
 
 @import "../modules/psychic-choice";
 
-.PsychicChoice {
-    margin-bottom: 3rem;
-}
-
-
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 
 @import "../modules/theme-choice-list";
 
-.ThemeChoice {
-    margin-bottom: 3rem;
-}
-
 /* ------------------------------ TIRAGE TAROT ------------------------------ */
 
 @import "../modules/full-tarot-draw";
-
 
 /* ------------------------------- POP VOYANT ------------------------------- */
 
@@ -141,7 +136,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    
+
     .Pop-Voyant-Photo {
         display: block;
         width: 100%;
@@ -152,14 +147,15 @@ body {
     }
 }
 
-@media all and (max-width: 680px){    
+@media all and (max-width: 680px) {
     .Pop.Pop-Voyant {
         width: 120px;
         height: 105px;
         left: -30px;
     }
 }
-@media all and (max-width: 480px){
+
+@media all and (max-width: 480px) {
     .Pop.Pop-Voyant {
         left: 50%;
         top: -70px;
@@ -175,11 +171,11 @@ body {
     width: 85%;
     margin: auto;
     margin-bottom: 3rem;
-    
+
     &-Fields {
         padding: 0 18%;
     }
-    
+
     &.overlay {
         width: 100%;
     }
@@ -193,7 +189,7 @@ body {
     content: " :";
 }
 
-@media all and (max-width: 680px){
+@media all and (max-width: 680px) {
     .Fields-Table-Row > .FormField-Label {
         display: block;
         width: 100%;
@@ -202,7 +198,7 @@ body {
     .Fields-Table-Row.gender > .FormField-Label {
         text-align: center;
     }
-    
+
     .Fields-Table-Row > .FormField {
         display: block;
         margin-bottom: 0;
@@ -212,7 +208,7 @@ body {
     }
 }
 
-@media all and (max-width: 480px){
+@media all and (max-width: 480px) {
     .Form .PageWrapper {
         padding: 0;
     }
@@ -222,24 +218,41 @@ body {
     .FormContainer {
         width: 100%;
         margin-top: 40px;
+        .alert {
+            margin-bottom: 0;
+            margin-top: 2rem !important;
+        }
+        &.overlay {
+            top: -40px;
+        }
+    }
+    .Fields-Table-Row {
+        margin-bottom: 0;
+        .FormField-Info {
+            margin-top: 0;
+        }
     }
 }
-
+@media all and (max-width: 440px) {
+    .FormContainer {
+        padding: 3rem 1.5rem;
+    }
+}
 /* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
 
 .DRI-Promo {
     text-align: center;
     font-size: 1.4rem;
-    
+
     &-DescText {
         padding: 0 10rem;
     }
-    
+
     &-Slogan {
         margin-top: 3rem;
         margin-bottom: 3rem;
         font-size: 2.4rem;
-        
+
         &-TelIcon {
             display: inline-block;
             position: absolute;
@@ -253,7 +266,7 @@ body {
     }
 }
 
-@media all and (max-width: 740px){
+@media all and (max-width: 740px) {
     .DRI-Promo {
         &-DescText {
             display: none;
@@ -269,7 +282,8 @@ body {
         }
     }
 }
-@media all and (max-width: 680px){
+
+@media all and (max-width: 680px) {
     .DRI-Promo {
         &-Slogan {
             font-size: 2.2rem;
@@ -285,7 +299,8 @@ body {
         }
     }
 }
-@media all and (max-width: 510px){
+
+@media all and (max-width: 510px) {
     .DRI-Promo {
         .Pop.Pop-Voyant {
             width: 120px;
@@ -313,7 +328,8 @@ body {
         font-weight: bold;
     }
 }
-@media all and (max-width: 510px){
+
+@media all and (max-width: 510px) {
     .Tchat-Gratuit {
         &-Title {
             text-align: center;
@@ -327,6 +343,6 @@ body {
 /* --------------------------------- FOOTER --------------------------------- */
 
 .SiteCopyright {
+    width: 100%;
     text-align: center;
-    margin-bottom: 2rem;
 }

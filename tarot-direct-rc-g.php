@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------------
     --   tarot-direct-rc-g = REFLEX CACHE   --
     ------------------------------------------
@@ -7,23 +7,19 @@
     Created on : 13 septembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+// Paramètres design
 $cards_dir = 'tarot/cartes/original-grand/';
-$questions = array (
-        'Amour' => array(
-            'celibat'  => [ 'code' => 'td_question_1', 'subject' => 'sentimental', 'text' => 'Je suis célibataire' ],
-            'couple'   => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple', 'conjoint' => true ],
-            'infidele' => [ 'code' => 'td_question_24', 'subject' => 'sentimental', 'text' => 'Je suis en couple mais jʼai une autre personne en tête', 'conjoint' => true],
-            'amant'    => [ 'code' => 'td_question_2', 'subject' => 'sentimental', 'text' => 'Je suis en couple avec une personne mariée', 'conjoint' => true],
-            'separe'   => [ 'code' => 'td_question_11', 'subject' => 'sentimental', 'text' => 'Je suis séparé(e) de mon/ma conjoint(e)', 'conjoint' => true],
-        ),
-        'Argent' => array(
-            'argent'   => [ 'code' => 'td_question_73', 'subject' => 'financier', 'text' => 'Je veux savoir si ma situation financière va sʼaméliorer' ],
-        ),
-        'Travail' => array(
-            'travail'  => [ 'code' => 'td_question_4', 'subject' => 'professionnel', 'text' => 'Je veux savoir si ma situation professionnelle va sʼaméliorer' ],
-        )
-);
-
+$pict_path = 'images_landing/tarot-direct/';
+$css = 'css/tarot-direct.css';
+// Design Noël
+$j = date('j');
+$m = date('n');
+if($m == 12 || ($m == 1 && $j <= 5)){
+    $pict_path = 'images_landing/tarot-direct-noel/';
+    $css = 'css/tarot-direct-noel.css';
+}
+// Paramètre formulaire
+include('include/questions/tarot-direct.php');
 session_start();
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
@@ -37,15 +33,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
-        <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
-        
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
-        
+
+        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
+
+        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -124,12 +120,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-rc-to" />
+                                <input type="hidden" name="source" value="tarot-direct-rc-g" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
+                                <input type="hidden" name="dri" value="tarot-direct-merci" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
@@ -256,38 +252,40 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </section>
         </form>
         <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
-        <div id="scn-tarot">
-            <section class="ContentBand Tarot" id="cards-container">
+        <div class="WidgetTarot">
+            <section class="ContentBand Tarot Arrowed" id="scn-tarot-draw">
                 <header class="ContentBand-ColumnHeader Title">- Tirez <strong>5 cartes</strong> -</header>
                 <div class="PageWrapper ContentBand-Table">
-                    <div class="ContentBand-Column">
-                        <article class="WidgetTarot">
-                            <div id="scn-tarot-draw">
-                                <div class="WidgetTarot-Draw" >
-                                    <?php for($i=1;$i<=20;$i++){ ?>
-                                    <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
-                                        <div class="WidgetTarot-Card-Face front "></div>
-                                        <div class="WidgetTarot-Card-Face back"></div>
-                                    </div>
-                                    <?php } ?>
-                                </div>
+                    <div id="cards-container" class="ContentBand-Column">
+                        <div class="WidgetTarot-Draw" >
+                            <?php for($i=1;$i<=20;$i++){ ?>
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                                <div class="WidgetTarot-Card-Face front "></div>
+                                <div class="WidgetTarot-Card-Face back"></div>
                             </div>
-                            <div id="scn-tarot-result">
-                                <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
-                                <div class="WidgetTarot-Result">
-                                    <?php for($i=1;$i<=5;$i++){ ?>
-                                    <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
-                                    <?php } ?>
-                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ContentBand Tarot-Result Arrowed" id="scn-tarot-result">
+                <div class="PageWrapper ContentBand-Table">
+                    <div id="cards-result" class="ContentBand-Column">
+                        <div class="WidgetTarot-Result" >
+                            <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
+                            <div class="WidgetTarot-Result">
+                                <?php for($i=1;$i<=5;$i++){ ?>
+                                <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                                <?php } ?>
                             </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -300,7 +298,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
