@@ -11,3 +11,4 @@ yyadmin/.htaccess
 .htaccess
 .brackets.json
 .idea
+*.map
