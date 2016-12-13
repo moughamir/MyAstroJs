@@ -39,8 +39,9 @@
                 </a>
             </div>
             <div class="one-third"></div>
-
+        <h1 class="hidden">Prévision de l'année 2017</h1>
         </header>
+
         <main class="site-content">
             <section class="view view--grid view--current">
                 <ul class="zodiac grid">
