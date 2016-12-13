@@ -13,18 +13,41 @@
     <title>Prévisions année 2017</title>
     <link rel="stylesheet" href="css/prevision-2017.css">
     <link rel="shortcut icon" href="images_landing/previsions-2017/favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
+<!-- SVG -->
+<svg class="hidden">
+    <defs>
+        <symbol id="icon-arrow" viewBox="0 0 32 32">
+            <title>arrow</title>
+            <path d="M7.333 24c-0.133 0-0.4 0-0.533-0.133l-6.667-6.667c0 0-0.133-0.133-0.133-0.267s0-0.133 0-0.267c0 0 0 0 0 0 0-0.133 0-0.133 0-0.267s0.133-0.133 0.133-0.267l6.667-6.667c0.4-0.133 0.8-0.133 1.067 0s0.267 0.667 0 0.933l-5.6 5.6h29.067c0.4 0 0.667 0.267 0.667 0.667s-0.267 0.667-0.667 0.667h-29.067l5.467 5.467c0.267 0.267 0.267 0.667 0 0.933 0 0.267-0.267 0.267-0.4 0.267z"></path>
+        </symbol>
+    </defs>
+</svg>
+<!-- /SVG -->
 <div class="PageWrapper">
     <section class="site">
-        <header class="site-header"><a href="#"><img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo"></a>
+        <header class="site-header grid-3-small-1">
+            <div class="one-third"></div>
+            <div class="one-third">
+                <a href="/">
+                    <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
+                </a>
+            </div>
+            <div class="one-third"></div>
+
         </header>
         <main>
+            <section class="view view--grid view--current">
             <ul class="zodiac grid">
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-1" class="sign-link">
+                            <a href="#aquarius" class="sign-link">
                                 <div class="content aquarius">
                                     <h2 class="sign-name">Verseau</h2>
                                     <div class="sign-image">
@@ -39,7 +62,7 @@
                     <div class="one-third"></div>
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-3" class="sign-link">
+                            <a href="#capricorn" class="sign-link">
                                 <div class="content capricorn">
                                     <h2 class="sign-name">Capricorne</h2>
                                     <div class="sign-image">
@@ -53,11 +76,11 @@
                         </li>
                     </div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third"></div>
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-2" class="sign-link">
+                            <a href="#pisces" class="sign-link">
                                 <div class="content pisces">
                                     <h2 class="sign-name">Poisson</h2>
                                     <div class="sign-image">
@@ -71,10 +94,10 @@
                     </div>
                     <div class="one-third"></div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-4" class="sign-link">
+                            <a href="#taurus" class="sign-link">
                                 <div class="content taurus">
                                     <h2 class="sign-name">Taureau</h2>
                                     <div class="sign-image">
@@ -89,7 +112,7 @@
                     <div class="one-third"></div>
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-6" class="sign-link">
+                            <a href="#aries" class="sign-link">
                                 <div class="content aries">
                                     <h2 class="sign-name">Bélier</h2>
                                     <div class="sign-image">
@@ -103,11 +126,11 @@
                             </a></li>
                     </div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third"></div>
                     <div class="one-third">
                         <li class="sign grid__item">
-                            <a href="#sign-5" class="sign-link">
+                            <a href="#gemini" class="sign-link">
                                 <div class="content gemini">
                                     <h2 class="sign-name">Gémeaux</h2>
                                     <div class="sign-image">
@@ -117,13 +140,15 @@
                                     </div>
                                     <h3 class="sign-period">22 mai > 21 juin</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                     <div class="one-third"></div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-7" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#leo" class="sign-link">
                                 <div class="content leo">
                                     <h2 class="sign-name">Lion</h2>
                                     <div class="sign-image">
@@ -134,11 +159,13 @@
                                     </div>
                                     <h3 class="sign-period">22 juillet > 22 août</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                     <div class="one-third"></div>
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-9" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#cancer" class="sign-link">
                                 <div class="content cancer">
                                     <h2 class="sign-name">Cancer</h2>
                                     <div class="sign-image">
@@ -149,13 +176,15 @@
                                     </div>
                                     <h3 class="sign-period">22 juin > 21 juillet</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third"></div>
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-8" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#virgo" class="sign-link">
                                 <div class="content virgo">
                                     <h2 class="sign-name">Vierge</h2>
                                     <div class="sign-image">
@@ -166,13 +195,15 @@
                                     </div>
                                     <h3 class="sign-period">23 août > 22 septembre</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                     <div class="one-third"></div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-10" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#scorpio" class="sign-link">
                                 <div class="content scorpio">
                                     <h2 class="sign-name">Scorpion</h2>
                                     <div class="sign-image">
@@ -182,11 +213,13 @@
                                     </div>
                                     <h3 class="sign-period">23 octobre > 22 novembre</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                     <div class="one-third"></div>
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-12" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#libra" class="sign-link">
                                 <div class="content libra">
                                     <h2 class="sign-name">Balance</h2>
                                     <div class="sign-image">
@@ -196,13 +229,15 @@
                                     </div>
                                     <h3 class="sign-period">23 septembre > 22 octobre</h3>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3-small-1">
                     <div class="one-third"></div>
                     <div class="one-third">
-                        <li class="sign grid__item"><a href="#sign-11" class="sign-link">
+                        <li class="sign grid__item">
+                            <a href="#sagittarius" class="sign-link">
                                 <div class="content sagittarius">
                                     <h2 class="sign-name">Sagittaire</h2>
                                     <div class="sign-image">
@@ -212,13 +247,20 @@
                                     </div>
                                 </div>
                                 <h3 class="sign-period">23 novembre > 21 décembre</h3>
-                            </a></li>
+                            </a>
+                        </li>
                     </div>
                     <div class="one-third"></div>
                 </div>
-
-
             </ul>
+            </section>
+            <section class="view view--prevision">
+                <button class="control-button control-button--back" aria-label="Retour à la liste du zodiaques">
+                    <svg class="icon icon--arrow">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </button>
+            </section>
         </main>
     </section>
     <footer class="SiteFooter">

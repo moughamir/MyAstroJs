@@ -1783,6 +1783,16 @@ th {
 /* Here should go your own CSS styles */
 /* You can also link them with a Sass @import */
 /* @import "my-styles"; */
+/* --------------------------------- MIXINS -------------------------------- */
+/*
+--- RETINA ---
+div.logo {
+    background: url("logo.png") no-repeat;
+    @include image-2x("logo2x.png", 100px, 25px);
+}*/
+/*
+source: https://github.com/alsacreations/KNACSS/blob/master/doc/07-responsive.md#mixins-alias
+*/
 html.js,
 .js body {
   overflow: hidden;
@@ -1795,6 +1805,16 @@ body {
   color: #FFFFFF;
   font-family: "Oswald", sans-serif;
   font-size: 16px; }
+
+.PageWrapper {
+  display: table;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem; }
+  @media screen and (max-width: 544px) {
+    .PageWrapper {
+      padding: 0; } }
 
 .site {
   margin-bottom: 3em; }
@@ -1932,13 +1952,6 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-
-.PageWrapper {
-  display: table;
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 2rem; }
 
 .SiteCopyright {
   text-align: center;

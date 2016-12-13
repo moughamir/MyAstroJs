@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "knacss444/knacss";
+@import "modules/mixins";
 // basic
 $assets : "../images_landing/previsions-2017/";
 // Zodiac signs
@@ -17,7 +18,7 @@ $aquarius: url($assets + "verseau.png");
 $pisces: url($assets + "poisson.png");
 // Zodiac bg
 
-//
+// Layout
 html.js,
 .js body {
   overflow: hidden;
@@ -31,6 +32,16 @@ body{
   font:{
     family: "Oswald", sans-serif;
     size: 16px;
+  }
+}
+.PageWrapper {
+  display: table;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+  @include respond-to("mobile"){
+    padding: 0;
   }
 }
 .site{
@@ -149,13 +160,6 @@ $zodiac:(
   align-items: center;
 }
 // footer
-.PageWrapper {
-  display: table;
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 2rem;
-}
 .Site{
   &Copyright {
     text-align: center;
