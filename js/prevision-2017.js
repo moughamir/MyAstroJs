@@ -1,6 +1,14 @@
 /**
  * Prevision-2017.js
  */
+ var dev = true;
+ if (dev){
+   console.info("Hey Fam :)");
+ } else {
+   console.info("Dev mode disabled.");
+ }
+ /*global $*/
+
 var zodiac = {
         "aries": "2017 n’a pas prévu que des choses positives pour vous, en prenant soin de placer plusieurs problèmes de taille sur votre route. Vos relations avec les personnes de votre entourage occuperont le devant de la scène durant toute l’année, et ce dans tous les domaines de votre quotidien. Chacun de ces petits problèmes devront vous pousser à prendre le recul nécessaire, pour trouver le meilleur équilibre avec tous ceux qui pourront se trouver à vos côtés. Vous devrez faire la part des choses en essayant de",
         "taurus": "Trouver un équilibre entre votre vie sociale et votre vie privée sera votre défi de 2017. Ces deux domaines seront très prenants, avec des opportunités et des challenges plus que motivants. Mais il faudra faire la part des choses. Prudence et rigueur seront vos maitres mots, surtout face à un problème de taille que vous allez avoir à régler. Un problème qu’il faudra prendre avec des pincettes sous peine de voir tous les efforts que vous avez fournis ces dernières années partir en fumée. Une seule solution : respectez votre",
@@ -15,4 +23,15 @@ var zodiac = {
         "aquarius": "2017 s’annonce comme une année positive pour vous. Une positivité et une énergie que vous devrez utiliser à bon escient, et qui donnera un coup de boost à tous les secteurs de votre quotidien en lien avec le travail, les voyages et les relations avec votre entourage. Surveillez vos humeurs qui pourront vous jouer des tours et vous écarter de cette route toute tracée. Une année positive qu’il faudra néanmoins aller chercher. N’attendez pas pour agir en 2017, sinon beaucoup de choses vous passeront sous le nez comme",
         "pisces": "2017 sera une année fertile pour vous. Fertile car elle vous tendra des opportunités à saisir. Vous devrez donc être en pleine forme et vous préparer pour transformer ces opportunités en chances concrètes. Evitez certaines affaires qui pourront vous porter préjudice et vous conduire dans des situations plus que périlleuses. Attention également à votre entourage, à votre confiance et aux confidences que vous pourrez faire. Certaines personnes mal intentionnées se feront un malin plaisir à "
     },
-    readMore = "lire la suite";
+    sign = $('.sign');
+    
+//
+$(function() {
+  sign.click(function(){
+    var s = $(this).find('a').attr('data-sign'); // Get sign of the Zodiac name
+    $('html').addClass('js');
+    if (dev) {
+      console.log(zodiac[s]); // Display current sign prevision
+    }
+  });
+});
