@@ -1,5 +1,5 @@
 <?php
-
+    $questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -41,218 +41,218 @@
             <div class="one-third"></div>
 
         </header>
-        <main>
+        <main class="site-content">
             <section class="view view--grid view--current">
-            <ul class="zodiac grid">
-                <div class="grid-3-small-1">
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#aquarius" class="sign-link">
-                                <div class="content aquarius">
-                                    <h2 class="sign-name">Verseau</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container">
-                                            <img src="images_landing/previsions-2017/astro/verseau.png"
-                                                 alt="Verseau" class="sign-1"></div>
+                <ul class="zodiac grid">
+                    <div class="grid-3-small-1">
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#aquarius" class="sign-link">
+                                    <div class="content aquarius">
+                                        <h2 class="sign-name">Verseau</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container">
+                                                <img src="images_landing/previsions-2017/astro/verseau.png"
+                                                     alt="Verseau" class="sign-1"></div>
+                                        </div>
+                                        <h3 class="sign-period">20 janvier > 19 février</h3>
                                     </div>
-                                    <h3 class="sign-period">20 janvier > 19 février</h3>
-                                </div>
-                            </a></li>
-                    </div>
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#capricorn" class="sign-link">
-                                <div class="content capricorn">
-                                    <h2 class="sign-name">Capricorne</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/capricorne.png"
-                                                    alt="Capricorne" class="sign-2"></div>
+                                </a></li>
+                        </div>
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#capricorn" class="sign-link">
+                                    <div class="content capricorn">
+                                        <h2 class="sign-name">Capricorne</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/capricorne.png"
+                                                        alt="Capricorne" class="sign-2"></div>
+                                        </div>
+                                        <h3 class="sign-period">22 décembre > 19 janvier</h3>
                                     </div>
-                                    <h3 class="sign-period">22 décembre > 19 janvier</h3>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#pisces" class="sign-link">
-                                <div class="content pisces">
-                                    <h2 class="sign-name">Poisson</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/poisson.png"
-                                                    alt="Poisson" class="sign-3"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#pisces" class="sign-link">
+                                    <div class="content pisces">
+                                        <h2 class="sign-name">Poisson</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/poisson.png"
+                                                        alt="Poisson" class="sign-3"></div>
+                                        </div>
+                                        <h3 class="sign-period">20 février > 20 mars</h3>
                                     </div>
-                                    <h3 class="sign-period">20 février > 20 mars</h3>
-                                </div>
-                            </a></li>
+                                </a></li>
+                        </div>
+                        <div class="one-third"></div>
                     </div>
-                    <div class="one-third"></div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#taurus" class="sign-link">
-                                <div class="content taurus">
-                                    <h2 class="sign-name">Taureau</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/taureau.png"
-                                                    alt="Taureau" class="sign-4"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#taurus" class="sign-link">
+                                    <div class="content taurus">
+                                        <h2 class="sign-name">Taureau</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/taureau.png"
+                                                        alt="Taureau" class="sign-4"></div>
+                                        </div>
+                                        <h3 class="sign-period">20 avril > 21 mai</h3>
                                     </div>
-                                    <h3 class="sign-period">20 avril > 21 mai</h3>
-                                </div>
-                            </a></li>
-                    </div>
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#aries" class="sign-link">
-                                <div class="content aries">
-                                    <h2 class="sign-name">Bélier</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/belier.png"
-                                                    alt="Bélier"
-                                                    class="sign-5"></div>
+                                </a></li>
+                        </div>
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#aries" class="sign-link">
+                                    <div class="content aries">
+                                        <h2 class="sign-name">Bélier</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/belier.png"
+                                                        alt="Bélier"
+                                                        class="sign-5"></div>
+                                        </div>
+                                        <h3 class="sign-period">21 mars > 19 avril</h3>
                                     </div>
-                                    <h3 class="sign-period">21 mars > 19 avril</h3>
-                                </div>
-                            </a></li>
+                                </a></li>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#gemini" class="sign-link">
-                                <div class="content gemini">
-                                    <h2 class="sign-name">Gémeaux</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/gemeaux.png"
-                                                    alt="Gémeaux" class="sign-6"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#gemini" class="sign-link">
+                                    <div class="content gemini">
+                                        <h2 class="sign-name">Gémeaux</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/gemeaux.png"
+                                                        alt="Gémeaux" class="sign-6"></div>
+                                        </div>
+                                        <h3 class="sign-period">22 mai > 21 juin</h3>
                                     </div>
-                                    <h3 class="sign-period">22 mai > 21 juin</h3>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="one-third"></div>
                     </div>
-                    <div class="one-third"></div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#leo" class="sign-link">
-                                <div class="content leo">
-                                    <h2 class="sign-name">Lion</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/lion.png"
-                                                    alt="Lion"
-                                                    class="sign-7"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#leo" class="sign-link">
+                                    <div class="content leo">
+                                        <h2 class="sign-name">Lion</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/lion.png"
+                                                        alt="Lion"
+                                                        class="sign-7"></div>
+                                        </div>
+                                        <h3 class="sign-period">22 juillet > 22 août</h3>
                                     </div>
-                                    <h3 class="sign-period">22 juillet > 22 août</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#cancer" class="sign-link">
-                                <div class="content cancer">
-                                    <h2 class="sign-name">Cancer</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/cancer.png"
-                                                    alt="Cancer"
-                                                    class="sign-8"></div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#cancer" class="sign-link">
+                                    <div class="content cancer">
+                                        <h2 class="sign-name">Cancer</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/cancer.png"
+                                                        alt="Cancer"
+                                                        class="sign-8"></div>
+                                        </div>
+                                        <h3 class="sign-period">22 juin > 21 juillet</h3>
                                     </div>
-                                    <h3 class="sign-period">22 juin > 21 juillet</h3>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#virgo" class="sign-link">
-                                <div class="content virgo">
-                                    <h2 class="sign-name">Vierge</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/vierge.png"
-                                                    alt="Vierge"
-                                                    class="sign-9"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#virgo" class="sign-link">
+                                    <div class="content virgo">
+                                        <h2 class="sign-name">Vierge</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/vierge.png"
+                                                        alt="Vierge"
+                                                        class="sign-9"></div>
+                                        </div>
+                                        <h3 class="sign-period">23 août > 22 septembre</h3>
                                     </div>
-                                    <h3 class="sign-period">23 août > 22 septembre</h3>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="one-third"></div>
                     </div>
-                    <div class="one-third"></div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#scorpio" class="sign-link">
-                                <div class="content scorpio">
-                                    <h2 class="sign-name">Scorpion</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/scorpion.png"
-                                                    alt="Scorpion" class="sign-10"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#scorpio" class="sign-link">
+                                    <div class="content scorpio">
+                                        <h2 class="sign-name">Scorpion</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/scorpion.png"
+                                                        alt="Scorpion" class="sign-10"></div>
+                                        </div>
+                                        <h3 class="sign-period">23 octobre > 22 novembre</h3>
                                     </div>
-                                    <h3 class="sign-period">23 octobre > 22 novembre</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#libra" class="sign-link">
-                                <div class="content libra">
-                                    <h2 class="sign-name">Balance</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/balance.png"
-                                                    alt="Balance" class="sign-11"></div>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#libra" class="sign-link">
+                                    <div class="content libra">
+                                        <h2 class="sign-name">Balance</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/balance.png"
+                                                        alt="Balance" class="sign-11"></div>
+                                        </div>
+                                        <h3 class="sign-period">23 septembre > 22 octobre</h3>
                                     </div>
-                                    <h3 class="sign-period">23 septembre > 22 octobre</h3>
-                                </div>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-3-small-1">
-                    <div class="one-third"></div>
-                    <div class="one-third">
-                        <li class="sign grid__item">
-                            <a href="#sagittarius" class="sign-link">
-                                <div class="content sagittarius">
-                                    <h2 class="sign-name">Sagittaire</h2>
-                                    <div class="sign-image">
-                                        <div class="img-container"><img
-                                                    src="images_landing/previsions-2017/astro/sagittaire.png"
-                                                    alt="Sagittaire" class="sign-12"></div>
+                    <div class="grid-3-small-1">
+                        <div class="one-third"></div>
+                        <div class="one-third">
+                            <li class="sign grid__item">
+                                <a href="#sagittarius" class="sign-link">
+                                    <div class="content sagittarius">
+                                        <h2 class="sign-name">Sagittaire</h2>
+                                        <div class="sign-image">
+                                            <div class="img-container"><img
+                                                        src="images_landing/previsions-2017/astro/sagittaire.png"
+                                                        alt="Sagittaire" class="sign-12"></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <h3 class="sign-period">23 novembre > 21 décembre</h3>
-                            </a>
-                        </li>
+                                    <h3 class="sign-period">23 novembre > 21 décembre</h3>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="one-third"></div>
                     </div>
-                    <div class="one-third"></div>
-                </div>
-            </ul>
+                </ul>
             </section>
             <section class="view view--prevision">
                 <button class="control-button control-button--back" aria-label="Retour à la liste du zodiaques">
