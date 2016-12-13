@@ -90,7 +90,9 @@ body{
         top: 16px;
       }
       @include respond-to("mobile"){
-
+        content: "Vous prévison 2017 Ú";
+        font-size: 12em;
+        top: 30px;
       }
     }
   }

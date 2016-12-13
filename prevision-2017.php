@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite"/>
+    <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie"/>
     <link rel="shortcut icon" href="images_landing/prevision-2017/favicon.ico">
     <title>Prévisions année 2017</title>
     <link rel="stylesheet" href="css/prevision-2017.css">

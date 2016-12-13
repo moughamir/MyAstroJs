@@ -1853,6 +1853,11 @@ body {
       .site-content:before {
         font-size: 19em;
         top: 16px; } }
+    @media screen and (max-width: 544px) {
+      .site-content:before {
+        content: "Vous prévison 2017 Ú";
+        font-size: 12em;
+        top: 30px; } }
 
 a {
   text-decoration: none;
