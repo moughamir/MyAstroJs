@@ -3,6 +3,7 @@
 @import "modules/mixins";
 // basic
 $assets : "../images_landing/previsions-2017/";
+$background: $assets + "background.png";
 $fonts : "../fonts/olesia/";
 // Fonts
 @font-face {
@@ -107,7 +108,7 @@ a {
     color: #FFFFFF;
   }
 }
-//
+// Sign Content
 .sign{
   &-name{
     font:{
@@ -150,6 +151,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+// Zodiac Color def
 $zodiac:(
   (capricorn, #267d9d),
   (taurus, #012eaa),
@@ -170,7 +172,7 @@ $zodiac:(
   }
 }
 
-//
+// Grid
 .grid {
   position: relative;
   min-height: 100vh;
@@ -198,6 +200,24 @@ $zodiac:(
   display: flex;
   justify-content: center;
   align-items: center;
+}
+// Views
+.view{
+  &--prevision {
+    display: none;
+  }
+}
+.js .view{
+  &--prevision{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url($background);
+    overflow: hidden;
+  }
 }
 // footer
 .Site{
@@ -269,5 +289,24 @@ $zodiac:(
     strong {
       font-weight: bold;
     }
+  }
+}
+
+// Iconography and buttons
+.control{
+  &-button{
+    &--back {
+      background: transparent;
+      border: none;
+      color: white;
+      width: 89px;
+      height: 55px;
+    }
+  }
+}
+.icon{
+  &--arrow {
+    fill: CurrentColor;
+    height: 100%;
   }
 }
