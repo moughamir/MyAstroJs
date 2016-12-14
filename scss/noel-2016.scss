@@ -1,96 +1,378 @@
+@charset "UTF-8";
 /* 
-    --------------------------
+    ---------------------
     --    noel-2016    --
-    --------------------------
+    ---------------------
 
-    Created on : 08 décembre 2016
+    Created on : 13 décembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+@import "templates/s-tarot-noel";
 
-@import "knacss444/knacss";
+/* Dossier images */
+$img_dir : "../images_landing/noel-2016/";
+$bg : $img_dir + 'background.jpg';
+$page_title : $img_dir + 'xmass.png';
+$page_title_w : 660;
+$page_title_h : 128;
+$gift_l : $img_dir + 'gift-l.png';
+$gift_l_w : 67;
+$gift_l_h : 74;
+$gift_l_bottom_pos : 46;
+$gift_r : $img_dir + 'gift-r.png';
+$gift_r_w : 48;
+$gift_r_h : 52;
+$gift_r_bottom_pos : 24;
+$snowball : $img_dir + 'snowball.png';
+$snowball_msg : $img_dir + 'noel-ball.png';
+$icon_star : $img_dir + "ico-star.png";
+$icon_lock : $img_dir + "ico-lock.png";
+$icon_tchat : $img_dir + "chat.png";
+$icon_trophy : $img_dir + "ico-trophy.png";
+$icon_secure : $img_dir + "secure.png";
+$noel_aside : $img_dir + "noel-aside.png";
+$dos_carte : $img_dir + "cardback.png";
+$noel_aside2 : $img_dir + "aside-2.png";
+$noel_aside2_w : 110;
+$noel_aside2_h : 67;
+/* Palette */
+$txt : white;
+$block-bg : rgba(27, 27, 27, 0.73);
+$red : #EF1649;
 
-.PageWrapper {
-    width: 100%;
-    max-width: 1280px;
-    margin: auto;
-    padding: 2rem;
-    padding-top: 5rem;
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    color: $txt;
+    background: url($bg) no-repeat center top fixed;
+    background-size: cover;
 }
-.PageHeader {
-    margin-bottom: 2rem;
-}
-.PageLogo {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    margin-bottom: 1rem;
-}
-.PageTitle {
-    height: 130px;
-    background-color: lightgrey;
-}
+
 .Container {
-    max-width: 520px;
-    margin: auto;
-    padding: 3rem;
-    background-color: lightgrey;
+    background-color: $block-bg;
 }
+
+@media screen and (max-width: 630px){
+    .PageWrapper {
+        padding-top: 3rem;
+    }
+}
+@media screen and (max-width: 360px){
+    .PageWrapper {
+        padding-top: 2rem;
+    }
+    .Container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (max-height: 560px){
+    .PageWrapper {
+        padding-top: 1rem;
+    }
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.PageLogo path {
+    stroke: $red;
+    stroke-width: 1.5;
+    stroke-miterlimit: 10;
+    fill: $red;
+}
+
+.PageTitle {
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    &-Img {
+        display: inline-block;
+        width: $page_title_w+px;
+        height: $page_title_h+px;
+        background: transparent url($page_title) no-repeat center;
+        background-size: 100% 100%;
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        width: $gift_l_w+px;
+        height: $gift_l_h+px;
+        margin-bottom: $gift_l_bottom_pos+px;
+        background: url($gift_l) no-repeat center;
+        background-size: 100% 100%;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        width: $gift_r_w+px;
+        height: $gift_r_h+px;
+        margin-bottom: $gift_r_bottom_pos+px;
+        background: url($gift_r) no-repeat center;
+        background-size: 100% 100%;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .PageTitle {
+        &-Img {
+            width: ($page_title_w * .75)+px;
+            height: ($page_title_h * .75)+px;
+        }
+        &:before {
+            width: ($gift_l_w * .75)+px;
+            height: ($gift_l_h * .75)+px;
+            margin-bottom: ($gift_l_bottom_pos * .75)+px;
+        }
+        &:after {
+            width: ($gift_r_w * .75)+px;
+            height: ($gift_r_h * .75)+px;
+            margin-bottom: ($gift_r_bottom_pos * .75)+px;
+        }
+    }
+}
+@media screen and (max-width: 630px){
+    .PageLogo {
+        width: 80px;
+        height: 80px;
+    }
+    .PageTitle {
+        padding: 0 1rem;
+        &-Img {
+            width: 100%;
+            background-size: contain;
+        }
+        &:before, &:after {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 420px){
+    .PageHeader {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 360px){
+    .PageLogo {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-height: 560px){
+    .PageTitle-Img {
+        height: 66px;
+    }
+}
+
+/* --------------------------------- ACCUEIL -------------------------------- */
 
 .Home {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    border-radius: 150px;
-    background-color: grey;
-    z-index: 2;
-    &-SnowLayout {
+    background-color: transparent;
+    &:before {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 308px;
         position: absolute;
-        height: 290px;
+        background: url($snowball) no-repeat;
+    }
+    &:after {
+        content: "";
+        display: block;
         width: 290px;
-        top: 7px;
-        left: 9px;
-        border-radius: 150px;
-        z-index: 1;
-        overflow: hidden;
+        height: 250px;
+        position: absolute;
+        left: 10px;
+        top: 21px;
+        background: url($snowball_msg) no-repeat center;
+        background-size: contain;
     }
     &-Button {
-        position: relative;
-        top: 85px;
+        @include shake();
+        &:hover {
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+        }
     }
 }
+
+/* ------------------------------ PRÉSENTATION ------------------------------ */
 
 .Text {
-    padding-left: 180px;
-    &-Title, &-Subtitle {
-        text-align: center;
+    background: url($noel_aside) no-repeat 2rem center;
+    > * {
+        margin-top: 0;
+        margin-bottom: 0.75em;
+    }
+    &-Title {
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+    &-Subtitle {
+        font-size: 1.5rem;
+    }
+    &-Content {
+        text-align: justify;
+        &.Italic {
+            font-style: italic;
+        }
+    }
+    &-Button:hover {
+        @include shake();
     }
 }
-
-.Button {
-    display: block;
-    margin: auto;
+@media screen and (max-width: 490px){
+    .Text {
+        background: none;
+    }
 }
-
+@media screen and (max-width: 360px){
+    .Text {
+        padding: 0 2rem;
+    }
+}
 
 /* ------------------------------ TIRAGE TAROT ------------------------------ */
 
-$card-width: 68;
-$card-height: 130;
-$overlap: -20;
-@import "modules/tarot-draw";
+.Tarot {
+    background: url($noel_aside2) no-repeat top left;
+    &-Title {
+        display: table;
+        width: 100%;
+        height: $noel_aside2_h+px;
+        padding-left: $noel_aside2_w+px;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        &-Cell {
+            display: table-cell;
+            padding-left: 1rem;
+            vertical-align: bottom;
+        }
+    }
+}
+.WidgetTarot {
+    margin-top: 3rem;
+}
+.WidgetTarot-Card {
+    &.notFlipped {
+        background-color: transparent;
+    }
+    &-Face.front {
+        border: none;
+        background: transparent url($dos_carte) center no-repeat;
+        background-size: 100% 100%;
+    }
+    &-Face.back {
+        border: none;
+        background-color: transparent;
+    }
+    &.place {
+        background-color: transparent;
+    }
+}
+@media screen and (max-width: 360px){
+    .Tarot {
+        background-position-x: 2rem;
+        &-Title {
+            padding-right: 2rem;
+            &-Cell {
+                padding-left: 3rem;
+            }
+        }
+    }
+}
 
+/* ----------------------------- RÉSULTAT TAROT ----------------------------- */
+.Result {
+    background: url($noel_aside2) no-repeat top left;
+    .WidgetTarot-Result {
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 360px){
+    .Result {
+        background-position-x: 2rem;
+        .WidgetTarot-Result {
+            padding: 0 2rem;
+        }
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.Form {
+    background: url($noel_aside2) no-repeat top left;
+}
+
+.FormContainer {
+    background-color: transparent;
+    &-Fields {
+        margin-bottom: 3rem;
+    }
+}
+.Fields-Table-Row {
+    margin-bottom: 1.5rem;
+}
+.FormField-Input {
+    border: 0;
+    box-shadow: 0 0 8px 1px #333;
+    text-align: center;
+}
+
+.Button {
+    padding: 0.5rem 1.4rem;
+    border: 2px solid $txt;
+    border-radius: 5px;
+    background-color: $red;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: $txt;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+@media screen and (max-width: 480px){
+    .Form .Button {
+        max-width: 80%;
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 390px){
+    .Form {
+        background: none;
+    }
+}
+@media screen and (max-width: 360px){
+    .Form .WidgetTarot-Result {
+        margin-right: 2rem;
+    }
+}
 
 /* ------------------------------- REASSURANCE ------------------------------ */
 
-.SiteFooter {
-    margin-bottom: 2rem;
+.ReassuranceList {
+    background-color: $block-bg;
+}
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icon_star) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icon_lock) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.tchat {
+    background: transparent url($icon_tchat) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icon_trophy) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.secure {
+    background: transparent url($icon_secure) center no-repeat;
+    background-size: contain;
 }
 
-@import "modules/reassurance";
-
-/* --------------------------------- FOOTER --------------------------------- */
-
-.SiteCopyright {
-    text-align: center;
+.SiteCopyright{
+    color: black;
 }

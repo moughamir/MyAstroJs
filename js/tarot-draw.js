@@ -66,14 +66,33 @@ $(document).ready(function(){
         }
     );
     */
-    
-    $(document).on('click', '#cards-shuffle', function(e){
+    if ($(window).width() <= trt_minSize) {
+        $('.toShuffle').removeClass('toShuffle');
+    } else {
         if($('#cards-container').hasClass('toShuffle')){
-            $('#cards-container').removeClass('toShuffle');
-        } else {
-            $('#cards-container').addClass('toShuffle');
+            trt_lock = true;
         }
-    });
+        $(document).on('click', '#cards-shuffle', function(e){
+            cards = $('#scn-tarot-draw .WidgetTarot-Card');
+            cards.each(function(e){
+                setTimeout(function(){
+                    card = cards.eq(e);
+                    if($(card).hasClass('toShuffle')){
+                        $(card).removeClass('toShuffle');
+                    } else {
+                        $(card).addClass('toShuffle');
+                    }
+                    if(e == cards.length - 1){
+                        setTimeout(function(){
+                            $('#cards-container').removeClass('toShuffle');
+                        }, 1000); // 1s temps transition css
+                        trt_lock = false;
+                        $(document).trigger('trt_shuffled_event');
+                    }
+                }, e * 250);
+            });
+        });
+    }
     
     // -- sélection de carte --
     $(document).on('click', '#cards-container .notFlipped', function(e){
@@ -140,7 +159,7 @@ $(document).ready(function(){
                 
                 setTimeout(function(){
                     // remplace l'image de la carte retournée
-                    place.css({'background-image': 'url('+ cardsPath + cardNumber +'.png)', 'background-color':'transparent'});
+                    $('.WidgetTarot-Result .place[data-number="' + currCardCounter + '"]').css({'background-image': 'url('+ cardsPath + cardNumber +'.png)', 'background-color':'transparent'});
                     // Scroll vers le formulaire quand le tirage est terminé
                     if (currCardCounter === nbCardsToDraw) {
                         $(document).trigger('trt_completed_event');

@@ -14,6 +14,7 @@
     &-Draw, &-Result {
         min-height: $card-height+px;
         margin-bottom: 3rem;
+        text-align: center;
     }
     
     &-ResultMsg {
@@ -35,7 +36,6 @@
         z-index: 5;
         margin-right: $overlap+px;
         margin-left: $overlap+px;
-        transition: top 1s cubic-bezier(0.68, -.55, .265, 1.55), position 1s cubic-bezier(0.68, -.55, .265, 1.55);
         
         &.notFlipped {
             background: white;
@@ -67,6 +67,8 @@
             &.front {
                 z-index: 5;
                 border: 3px solid grey;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
             
             &.back {
@@ -75,7 +77,7 @@
                 transform: rotateY(-180deg);
                 border: 3px solid orange;
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: 100% 100%;
             }
         }
         
@@ -95,79 +97,23 @@
             margin: 0;
             margin-right: 10px;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100% 100%;
         }
         
         &.place:last-child {
-            margin-right: 0;   
+            margin-right: 0;
         }
-    } 
+    }
     
-    &.toShuffle &-Draw {
-        min-height: $card-height+px;
-        .WidgetTarot-Card {
-            position: absolute;
-            top: ($card-height + 30)+px;
-            left: 50%;
-            margin: 0;
-            transform: translateX(-50%);
-        }
+    &.toShuffle &-Card {
+        transition: all 1s cubic-bezier(0.68, -.55, .265, 1.55);
+    }
+    &-Card.toShuffle {
+        position: absolute;
+        top: ($card-height + 30)+px; // 30 = margin-bottom du container des cartes à tirer
+        transform: translateX(-($card-width / 2 - 20)+px); // -20 = margin des cartes pour superposition
     }
     &.toShuffle &-Card.place {
         background-color: transparent;
-    }
-}
-
-/* Règles responsive tirage tarot */
-@media screen and (max-width: 1200px) {
-    .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped {
-        display: none;
-    }
-}
-@media screen and (max-width: 1050px){
-    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped {
-        display: none;
-    }
-}
-@media screen and (max-width: 880px){
-    .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped, .WidgetTarot-Card[data-card="11"].notFlipped, .WidgetTarot-Card[data-card="12"].notFlipped {
-        display: none;
-    }
-    .WidgetTarot-Card.place {
-        margin-right: 0.8rem;
-    }
-}
-@media screen and (max-width: 800px){
-    .WidgetTarot-Card {
-        width: 120px;
-        height: 213px;
-        margin-left: -42px;
-        margin-right: -42px;
-    }
-}
-@media screen and (max-width: 720px){
-    .WidgetTarot-Card {
-        width: 100px;
-        height: 178px;
-        margin-left: -34px;
-        margin-right: -34px;
-    }
-}
-@media screen and (max-width: 600px){
-    .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="13"].notFlipped, .WidgetTarot-Card[data-card="14"].notFlipped, .WidgetTarot-Card[data-card="15"].notFlipped, .WidgetTarot-Card[data-card="16"].notFlipped, .WidgetTarot-Card[data-card="17"].notFlipped, .WidgetTarot-Card[data-card="18"].notFlipped, .WidgetTarot-Card[data-card="19"].notFlipped, .WidgetTarot-Card[data-card="20"].notFlipped, .WidgetTarot-Card[data-card="21"].notFlipped, .WidgetTarot-Card[data-card="22"].notFlipped {
-        display: none;
-    }
-    
-    .WidgetTarot-Card {
-        margin-left: -28px;
-        margin-right: -28px;
-    }
-}
-@media screen and (max-width: 420px){
-    .WidgetTarot-Card {
-        width: 80px;
-        height: 143px;
-        margin-left: -16px;
-        margin-right: -16px;
     }
 }

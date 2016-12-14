@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/* 
+    -------------------------------
+    --    structure noel-2016    --
+    -------------------------------
+
+    Created on : 08 décembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+*/
+
+@import "../knacss444/knacss";
+
+.PageWrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+.Container {
+    max-width: 520px;
+    margin: auto;
+    padding: 3rem;
+    background-color: lightgrey;
+    overflow: hidden;
+}
+.PageHeader, .Container {
+    margin-bottom: 2rem;
+}
+@media screen and (max-width: 560px){
+    .PageWrapper {
+        padding: 0;
+    }
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.PageLogo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.PageTitle {
+    height: 130px;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+/* --------------------------------- ACCUEIL -------------------------------- */
+
+.Home {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 150px;
+    background-color: grey;
+    z-index: 2;
+    &-SnowLayout {
+        position: absolute;
+        height: 290px;
+        width: 290px;
+        top: 7px;
+        left: 9px;
+        border-radius: 150px;
+        z-index: 1;
+        overflow: hidden;
+    }
+    &-Button {
+        position: relative;
+        top: 85px;
+        z-index: 2;
+    }
+}
+
+/* ------------------------------ PRÉSENTATION ------------------------------ */
+
+.Text {
+    padding-left: 180px;
+    &-Title, &-Subtitle {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 490px){
+    .Text {
+        padding-left: 0;
+    }
+}
+
+.Button {
+    display: block;
+    margin: auto;
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+$card-width: 67;
+$card-height: 130;
+$overlap: -20;
+@import "../modules/tarot-draw";
+
+.Tarot-Title {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 460px){
+    .Tarot .WidgetTarot-Result {
+        display: none;
+    }
+    .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="7"].notFlipped, .WidgetTarot-Card[data-card="8"].notFlipped, .WidgetTarot-Card[data-card="9"].notFlipped, .WidgetTarot-Card[data-card="10"].notFlipped, .WidgetTarot-Card[data-card="11"].notFlipped, .WidgetTarot-Card[data-card="12"].notFlipped {
+        display: none;
+    }
+    .WidgetTarot-Card {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+}
+
+/* ----------------------------- RÉSULTAT TAROT ----------------------------- */
+
+@media screen and (max-width: 460px){
+    .Result .WidgetTarot-Result {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        .WidgetTarot-Card.place {
+            margin-right: 4px;
+            background-position-y: center;
+            background-size: contain;
+        }
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.Form {
+    .WidgetTarot-Result {
+        min-height: initial;
+        text-align: right;
+        .WidgetTarot-Card {
+            width: 34px;
+            height: 65px;
+            &.place {
+                margin-right: 4px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+@import "../modules/form";
+
+@media screen and (max-width: 400px){
+    .Form .FormContainer {
+        padding-left: 0; padding-right: 0;
+    }
+}
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.SiteFooter {
+    margin-bottom: 2rem;
+}
+
+@import "../modules/reassurance";
+
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+.SiteCopyright {
+    text-align: center;
+}
+
+
+/* ------------------------------- ANIMATIONS ------------------------------- */
+
+@import '../modules/animations';
+
+.scaleUp {
+    @include scaleUpOut(.7);
+}
+.scaleEnter {
+    @include scaleDownIn(.7);
+}
+.scaleDown {
+    @include scaleDownOut(.7);
+}
+.moveToLeft {
+    @include moveToLeftFade(.6);
+}
+.moveFromRight {
+    @include moveFromRightFade(.6);
+}
+.moveToTop {
+    @include moveToTopFade(.6);
+}
