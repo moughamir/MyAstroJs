@@ -18,20 +18,7 @@ $fonts : "../fonts/olesia/";
   font-weight: normal;
   font-style: normal;
 }
-// Zodiac signs
-$aries: url($assets + "belier.png");
-$taurus: url($assets + "taureau.png");
-$gemini: url($assets + "gemeaux.png");
-$cancer: url($assets + "cancer.png");
-$leo: url($assets + "lion.png");
-$virgo: url($assets + "vierge.png");
-$libra: url($assets + "balance.png");
-$scorpio: url($assets + "scorpion.png");
-$sagittarius: url($assets + "sagittaire.png");
-$capricorn: url($assets + "capricorne.png");
-$aquarius: url($assets + "verseau.png");
-$pisces: url($assets + "poisson.png");
-// Zodiac bg
+//
 .hidden{
   display: none;
 }
@@ -150,6 +137,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  // TODO: Talk to Amandine about this animation vv
+  svg{
+    fill: #fff;
+    opacity: .6;
+    height: 195px;
+  }
+    &:hover svg {
+      transform: translate(120px) rotate(360deg);
+      transition: 600ms all ease-in-out;
+    }
 }
 // Zodiac Color def
 $zodiac:(
@@ -167,7 +164,7 @@ $zodiac:(
   (pisces, #fdc8a1)
 );
 @each $sign, $background in $zodiac{
-  .#{$sign}{
+  .#{$sign}, article[data-sign="#{$sign}"]{
     background-color: #{$background};
   }
 }
@@ -185,11 +182,6 @@ $zodiac:(
     min-width: 280px;
     display: inline-block;
     width: calc(33.33% - 0.4em);
-    // TODO: Talk to Amandine about this animation vv
-    &:hover img {
-      transform: translate(120px) rotate(360deg);
-      transition: 600ms all ease-in-out;
-    }
   }
 }
 .content{
@@ -217,6 +209,22 @@ $zodiac:(
     height: 100vh;
     background: url($background);
     overflow: hidden;
+    .blur {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      filter: url(#svg-blur);
+      background: url($background);
+      z-index: -9;
+    }
+    .content {
+      width: 80vmin;
+      height: 80vmin;
+      top: 50%;
+      position: fixed;
+      left: 50%;
+      margin: -40vmin 0 0 -40vmin;
+    }
   }
 }
 // footer
