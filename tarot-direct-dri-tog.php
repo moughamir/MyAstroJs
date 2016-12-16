@@ -7,7 +7,10 @@
     Created on : 18 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
-include('include/process-dri.php');
+//include('include/process-dri.php');
+    $state = '';
+    $tel= '';
+    $prenom = '';
 $cards_dir = 'tarot/cartes/original-grand/';
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 

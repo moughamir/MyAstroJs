@@ -152,8 +152,21 @@ $overlap: -20;
             }
         }
     }
+    .FormContainer .alert {
+        margin-top: -3rem;
+    }
 }
 @import "../modules/form";
+
+.FormContainer.overlay {
+    position: fixed;
+    z-index: 10;
+    .alert {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 5rem;
+    }
+}
 
 @media screen and (max-width: 400px){
     .Form .FormContainer {

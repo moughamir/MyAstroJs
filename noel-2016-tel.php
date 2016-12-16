@@ -7,8 +7,8 @@
     Created on : 13 décembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
-    $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
     include('include/process-dri.php');
+    $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +19,7 @@
         
         <title>Tarot de Noël par MyAstro</title>
         
-        <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="images_landing/noel-2016/favicon.png">
         <link rel="stylesheet" href="css/noel-2016.css">
     </head>
     <body>
@@ -38,30 +38,27 @@
                 <div class="PageLogo">
                     <?php include('include/myastro-logo-svg.php');?>
                 </div>
-                <div class="PageTitle"></div>
+                <div class="PageTitle"><span class="PageTitle-Img"></span></div>
             </header>
             <article class="Container">
 <!-- ----------------------------- FORMULAIRE ------------------------------ -->
-                <section class="Form">
-                        <p class="info">Vos cartes ont été transmises à notre équipe.<br/>
-                        Vous recevrez votre interprétation sous 24h dans votre boite mail.
+                <section class="TelDRI">
+                    <p class="TelDRI-Info">
+                        Vos cartes ont été transmises à notre équipe.<br/>
+                        Vous recevrez votre interprétation sous 24h dans votre boite mail.
                     </p>
-                    <h2 class="section3-title">les <span class="bold">10 premières</span> minutes <span class="bold Cap">gratuites</span></h2>
-                    <header class="section-header">
-                        <img src="images_landing/dri-noel-2016/aside-2.png" alt="Tarot de noel">
-                        <div class="subtitle">
-                            <h3 class="section-subtitle">Vous ne pouvez pas attendre :</h3>
-                            <p class="cta-title">Demandez un rappel immédiat</p>
-                        </div>
-
+                    <h2 class="TelDRI-PromoTitle">les <em>10 premières</em> minutes <strong>gratuites</strong></h2>
+                    <header class="TelDRI-Title">
+                        <h3 class="TelDRI-Title-Intro">Vous ne pouvez pas attendre :</h3>
+                        <h2 class="TelDRI-Title-CTA">Demandez un rappel immédiat</h2>
                     </header>
                     <div class="FormContainer overlay" id="form-overlay"></div>
                     <article class="FormContainer">
                         <form method="post">
                             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="DRI-Sent">
-                                Merci, votre demande a bien été prise en compte.<br/>
-                                <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                                Merci, votre demande a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
                             </p>                        
                             <?php } else { ?>
                                 <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
@@ -107,7 +104,7 @@
                                 </div>
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
-                                <button class="Button" type="submit" name="valider">Rappel immédiat</button>
+                                <button class="Button" type="submit" name="demande_rappel">Rappel immédiat</button>
                             <?php } ?>
                         </form>
                     </article>
@@ -116,19 +113,6 @@
             <?php include('include/footer_reassurance.php'); ?>
             <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         </section>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/snow-ball.js"></script>
-        <script src="js/tarot-draw.js"></script>
-        <script>/* Configuration du tirage de tarot */
-            cardsPath = '<?= $cards_dir;?>';
-            trt_deckNbCards = 20;
-            trt_forceDrawFirst = false;
-            trt_scrollOnComplete = false;
-            trt_minSize = 460;
-        </script>
-        <script src="js/tarot-noel-wizard.js"></script>
-        <script src="js/formValidator.js"></script>
     </body>
 </html>
-<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald|Satisfy" rel="stylesheet" />

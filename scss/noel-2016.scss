@@ -35,8 +35,9 @@ $dos_carte : $img_dir + "cardback.png";
 $noel_aside2 : $img_dir + "aside-2.png";
 $noel_aside2_w : 110;
 $noel_aside2_h : 67;
+$icon_phone : $img_dir + 'phone.png';
 /* Palette */
-$txt : white;
+$txt : #FCFBFB;
 $block-bg : rgba(27, 27, 27, 0.73);
 $red : #EF1649;
 
@@ -330,6 +331,8 @@ body {
     white-space: nowrap
 }
 
+@import "modules_themes/form-alert-vivid";
+
 @media screen and (max-width: 480px){
     .Form .Button {
         max-width: 80%;
@@ -344,6 +347,82 @@ body {
 @media screen and (max-width: 360px){
     .Form .WidgetTarot-Result {
         margin-right: 2rem;
+    }
+    .FormContainer.overlay .alert {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/* --------------------------------- TELDRI --------------------------------- */
+
+.TelDRI {
+    &-Info {
+        text-align: center;
+    }
+    &-PromoTitle {
+        text-align: center;
+        font-family: "Satisfy", cursive;
+        font-size: 2.4rem;
+        color: $red;
+        text-shadow: 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white, -1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white, 1px 1px 0 white;
+        em {
+            font-family: "Oswald", sans-serif;
+            font-style: normal;
+        }
+        strong {
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-right: 1rem;
+            position: relative;
+            top: 8px;
+            background: url($icon_phone) center no-repeat;
+            background-size: contain;
+        }
+    }
+    &-Title {
+        background: url($noel_aside2) no-repeat left center;
+        padding-left: $noel_aside2_w+px;
+        text-align: center;
+        color: $txt;
+        &-Intro {
+            margin: 0;
+            font-family: "Satisfy", cursive;
+            font-size: 2.4rem;
+            font-weight: normal;
+        }
+        &-CTA {
+            margin: 0;
+            font-family: "Oswald", sans-serif;
+            font-style: normal;
+            font-size: 2rem;
+        }
+    }
+    .FormContainer {
+        padding-bottom: 0;
+        &-Fields {
+            margin-bottom: 0;
+        }
+    }
+    .DRI-Sent {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 460px){
+    .TelDRI-Title {
+        background: none;
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 360px){
+    .TelDRI-Info {
+        padding: 0 2rem;
     }
 }
 

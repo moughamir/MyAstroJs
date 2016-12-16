@@ -2,7 +2,7 @@
 
 $cards_dir = 'tarot/cartes/original-grand/';
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
-$question = ['code'=>'tarot_noel', 'subject'=>'evenement', 'text'=>'Tarot de Noël 2016'];
+$question = ['code'=>'tarot_noel16', 'subject'=>'evenement', 'text'=>'Tarot de Noël 2016'];
 
 // Form Vars
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
@@ -12,10 +12,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
         <title>Tarot de Noël par MyAstro</title>
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="images_landing/dri-noel-2016/favicon.png">
+        
+        <link rel="shortcut icon" type="image/x-icon" href="images_landing/noel-2016/favicon.png">
         <link rel="stylesheet" href="css/noel-2016.css">
     </head>
     <body itemscope itemtype="http://schema.org/WebPage">
@@ -95,15 +97,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
-                            <p class="alert alert-danger" style="display: none;"></p>
                             <div class="FormContainer-Fields Fields-Table">
+                                <p class="alert alert-danger" style="display: none;"></p>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="noel-2016"/>
                                 <input type="hidden" name="method" value="general-suscribe"/>
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="site" value="myastro.fr"/>
                                 <input type="hidden" name="affiliation" value="affil_base"/>
-                                <input type="hidden" name="dri" value="noel-2016-merci"/>
+                                <input type="hidden" name="dri" value="noel-2016-tel"/>
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <input type="hidden" name="cguv" value="1" />
@@ -145,3 +147,4 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     </body>
 </html>
 <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
