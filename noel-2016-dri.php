@@ -1,10 +1,10 @@
 <?php
 /* 
     --------------------------------------
-    --    noel-2016-tel = AFFIL BASE    --
+    --    noel-2016-dri = AFFIL BASE    --
     --------------------------------------
 
-    Created on : 13 décembre 2016
+    Created on : 16 décembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
     include('include/process-dri.php');
@@ -43,14 +43,12 @@
             <article class="Container">
 <!-- ----------------------------- FORMULAIRE ------------------------------ -->
                 <section class="DRI">
-                    <p class="DRI-Info">
-                        Vos cartes ont été transmises à notre équipe.<br/>
-                        Vous recevrez votre interprétation sous 24h dans votre boite mail.
-                    </p>
                     <h2 class="DRI-PromoTitle">les <em>10 premières</em> minutes <strong>gratuites</strong></h2>
                     <header class="DRI-Title">
-                        <h3 class="DRI-Title-Intro">Vous ne pouvez pas attendre :</h3>
-                        <h2 class="DRI-Title-CTA">Demandez un rappel immédiat</h2>
+                         <ol class="DRI-Title-How">
+                            <li class="DRI-Title-HowItem form">Je remplis le formulaire</li>
+                            <li class="DRI-Title-HowItem phone">Je suis rappelé(e) <strong>Gratuitement</strong></li>
+                        </ol>
                     </header>
                     <div class="FormContainer overlay" id="form-overlay"></div>
                     <article class="FormContainer">
@@ -70,11 +68,7 @@
                             </p>
                                 <?php } ?>
                             <div class="FormContainer-Fields">
-                                <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="save_tel" value="1" />
-                                <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="prenom" value="<?= $prenom ?>" />
-                                <!-- ############################################### -->
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
                                 </div>

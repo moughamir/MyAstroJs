@@ -36,6 +36,8 @@ $noel_aside2 : $img_dir + "aside-2.png";
 $noel_aside2_w : 110;
 $noel_aside2_h : 67;
 $icon_phone : $img_dir + 'phone.png';
+$how_form : $img_dir + 'form.png';
+$how_phone : $img_dir + 'allo.png';
 /* Palette */
 $txt : #FCFBFB;
 $block-bg : rgba(27, 27, 27, 0.73);
@@ -356,7 +358,7 @@ body {
 
 /* --------------------------------- TELDRI --------------------------------- */
 
-.TelDRI {
+.DRI {
     &-Info {
         text-align: center;
     }
@@ -387,6 +389,7 @@ body {
         }
     }
     &-Title {
+        position: relative;
         background: url($noel_aside2) no-repeat left center;
         padding-left: $noel_aside2_w+px;
         text-align: center;
@@ -403,6 +406,39 @@ body {
             font-style: normal;
             font-size: 2rem;
         }
+        &-How {
+            margin-left: 4rem;
+            list-style-type: decimal;
+            text-align: left;
+            font-family: Oswald, sans-serif;
+            font-size: 2rem;
+            white-space: nowrap;
+            &Item {
+                padding-left: 6px;
+                line-height: 42px;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                }
+                &.form:before {
+                    width: 26px;
+                    height: 34px;
+                    left: ($noel_aside2_w + 20)+px;
+                    background: url($how_form) no-repeat center;
+                }
+                &.phone:before {
+                    width: 32px;
+                    height: 32px;
+                    left: ($noel_aside2_w + 16)+px;
+                    background: url($how_phone) no-repeat center;
+                }
+            }
+        }
+        strong {
+            font-weight: normal;
+            text-transform: uppercase;
+        }
     }
     .FormContainer {
         padding-bottom: 0;
@@ -414,14 +450,20 @@ body {
         text-align: center;
     }
 }
-@media screen and (max-width: 460px){
-    .TelDRI-Title {
+@media screen and (max-width: 495px){
+    .DRI-Title {
         background: none;
         padding-left: 0;
+        &-HowItem.form:before {
+            left: 2rem;
+        }
+        &-HowItem.phone:before {
+            left: 1.6rem;
+        }
     }
 }
 @media screen and (max-width: 360px){
-    .TelDRI-Info {
+    .DRI-Info {
         padding: 0 2rem;
     }
 }
