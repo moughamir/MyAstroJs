@@ -112,7 +112,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div class="ContentBand-Column">
                         <article class="FormContainer">
                             <div class="Pop Pop-Voyant getFormValue" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
-                            <div class="FormContainer overlay" id="form-overlay"></div>
+                            <div class="FormContainer overlay" id="form-overlay" style="display: none"></div>
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->

@@ -7,8 +7,15 @@
     Created on : 18 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+<<<<<<< HEAD
+//include('include/process-dri.php');
+    $state = '';
+    $tel= '';
+    $prenom = '';
+=======
 include('include/process-dri.php');
 // Paramètres design
+>>>>>>> dev
 $cards_dir = 'tarot/cartes/original-grand/';
 $pict_path = 'images_landing/tarot-direct/';
 $css = 'css/tarot-direct.css';
