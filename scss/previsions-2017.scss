@@ -18,6 +18,8 @@ $fonts : "../fonts/olesia/";
   font-weight: normal;
   font-style: normal;
 }
+//Colors
+$btn-bg: #e99d26;
 //
 .hidden{
   display: none;
@@ -51,7 +53,7 @@ body{
 .site{
   margin-bottom: 3em;
   &-header{
-    width: 100%;
+    
     text-align: center;
     padding: 15px 0;
     margin-bottom: 6px;
@@ -68,7 +70,7 @@ body{
       display: block;
       color: #fafbfc;
       opacity: 0.5;
-      transform: translate(-50%) rotate(-5deg);
+      @include prefix(transform, translate(-50%) rotate(-5deg), webkit ms moz);
       position: absolute;
       z-index: -9;
       left: 50%;
@@ -97,6 +99,9 @@ a {
 }
 // Sign Content
 .sign{
+  &:hover .img-container{
+    @include prefix(transform, translate(120px) rotate(360deg), webkit ms moz);
+  }
   &-name{
     font:{
       size: 1.1em;
@@ -121,10 +126,6 @@ a {
   &-image{
     height: 180px;
     margin: 0 auto;
-    & img{
-      width: 187px;
-      transition: 600ms all ease-in-out;
-    }
   }
 
 }
@@ -138,15 +139,13 @@ a {
   justify-content: center;
   align-items: center;
   // TODO: Talk to Amandine about this animation vv
+  @include prefix(transform, 600ms transform ease-in-out, webkit ms moz);
   svg{
     fill: #fff;
     opacity: .6;
     height: 195px;
   }
-    &:hover svg {
-      transform: translate(120px) rotate(360deg);
-      transition: 600ms all ease-in-out;
-    }
+    
 }
 // Zodiac Color def
 $zodiac:(
@@ -164,10 +163,11 @@ $zodiac:(
   (pisces, #fdc8a1)
 );
 @each $sign, $background in $zodiac{
-  .#{$sign}, article[data-sign="#{$sign}"]{
+  .#{$sign}, article[data-sign="#{$sign}"] .form-content{
     background-color: #{$background};
   }
 }
+
 
 // Grid
 .grid {
@@ -193,13 +193,92 @@ $zodiac:(
   justify-content: center;
   align-items: center;
 }
+
+// Form FormField-Input
+//Placeholder
+  ::placeholder,
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  ::-ms-input-placeholder,
+  :-moz-placeholder{
+        color: #2e3b5e;
+  }
+  input, input:hover, input:active{
+  outline: none}
+.Form{
+  &Container {
+    color: white;
+    margin-bottom: 15px;
+    // Submit
+    &-Submit{
+      background: $btn-bg;
+      border: none;
+      padding: 10px 0;
+      color: #fff;
+      width: 100%;
+    }
+  }
+
+  &Field{
+    //Label
+    &-Label{
+      font-family: Arial, open-sans, sans-serif;
+      font-size: 18px;
+    }
+    // Input
+    &-Input{
+      border: none;
+      background: #a8cbd8;
+      color: #2e3b5e;
+      height: 51px;
+      padding: 0 12px;
+      &.has-error{
+        border: 1px solid rgba(169, 68, 66, 0.91);
+        box-shadow: 0 0 2px 0 #a94442 inset;
+      }
+      &[name="prenom"] {
+        width: 100%;
+      }
+      &[name="mois"] {
+        width: 150px;
+      }
+      &#email, &[name="annee"] {
+      width: 100%;
+      }
+    }
+    //TableInputContainer
+    &-TableInputContainer{  
+      &-Cell {
+        display: table-cell;
+        padding-right: 10px;
+        &:nth-of-type(3) {padding: 0;}
+      }
+    }
+  }
+}
+.Fields{
+  &-Table{
+    &-Row{
+      width: 100%;
+      padding: 0 15px;
+      margin: 1.8rem 0;
+      & > .FormField-Label:after{
+        content: " :";
+      }
+      &:nth-of-type(2) {display: table;}
+    }
+  }
+}
+
+
 // Views
 .view{
   &--prevision {
     display: none;
   }
 }
-.js .view{
+.js{
+  .view{
   &--prevision{
     position: fixed;
     top: 0;
@@ -219,14 +298,23 @@ $zodiac:(
     }
     .content {
       width: 80vmin;
-      height: 80vmin;
-      top: 50%;
-      position: fixed;
-      left: 50%;
-      margin: -40vmin 0 0 -40vmin;
+      position: relative;
+      margin: 0 auto;
     }
   }
 }
+  .sign{
+    &-name {
+      font-size: 70px;
+      font-family: Oswald;
+    }
+    &-period {
+      font-size: 2.3em;
+    }
+  }
+}
+
+
 // footer
 .Site{
   &Copyright {
@@ -318,3 +406,59 @@ $zodiac:(
     height: 100%;
   }
 }
+
+// Typography
+.prevision {
+    padding: 0 15px;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 21px;
+}
+// Overlay and Alerts
+.overlay{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: none; /*Must Be Flex*/
+    justify-content: center;
+    align-items: center;
+}
+.alert {
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%, -50%), webkit ms moz);
+    
+    &-success {
+      background-color: #dff0d8;
+      border-color: #d0e9c6;
+      color: #3c763d;
+    }
+    &-info {
+      background-color: #d9edf7;
+      border-color: #bcdff1;
+      color: #31708f;
+    }
+    &-warning {
+      background-color: #fcf8e3;
+      border-color: #faf2cc;
+      color: #8a6d3b;
+    }
+    &-danger {
+      background-color: #f2dede;
+      border-color: #ebcccc;
+      color: #a94442;
+    }
+}
+
