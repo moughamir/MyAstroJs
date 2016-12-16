@@ -6,6 +6,9 @@
     Created on : 04 avril 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+
+/* --------------------------- STRUCTURE GÉNÉRALE --------------------------- */
+
 @import "knacss444/knacss";
 
 .PageWrapper {
@@ -38,7 +41,7 @@
 .ContentBand {
     margin-bottom: 5rem;
     padding-top: 3rem;
-    
+
     &-Column {
         display: table-cell;
         vertical-align: top;

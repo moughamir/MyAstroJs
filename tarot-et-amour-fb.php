@@ -5,7 +5,7 @@
  * Date: 11/11/2016
  * Time: 17:43
  */
-$question = ['code'=>'question_1', 'subject'=>'amour', 'text'=>'Tarot et amour - Offre Tchat gratuit sans tirage'];
+$question = ['code'=>'td_question_1', 'subject'=>'amour', 'text'=>'Tarot et amour - Offre Tchat gratuit sans tirage'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 $dri = 'https://';

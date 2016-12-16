@@ -126,10 +126,10 @@ $(document).ready(function(){
             alreadyPicked.push(cardNumber);
 
             // Mise à jour des données
-            $('#cards-container .place[data-number="' + currCardCounter + '"]').data('card', cardNumber);
+            $('#cards-result .place[data-number="' + currCardCounter + '"]').data('card', cardNumber);
             card.attr('data-counter', currCardCounter);
             card.removeClass('notFlipped').addClass('Flipped');
-            var place = $('#cards-container .place[data-number="' + currCardCounter + '"]');
+            var place = $('#cards-result .place[data-number="' + currCardCounter + '"]');
             $('form').append('<input type="hidden" name="cards[]" value="'+ cardNumber +'.png" />');
 
             // chargement dos de la carte

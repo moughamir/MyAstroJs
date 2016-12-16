@@ -34,7 +34,6 @@
         
         <?php include('include/header_inc.php'); ?>
         <link rel="stylesheet" type="text/css" href="css/formulaire-top-2.css" />
-
     
         <div class="container-fluid" itemscope>
             <!-- Main Content -->

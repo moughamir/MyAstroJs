@@ -2,6 +2,7 @@
     $source = isset($source) ? $source : 'horoscope-gratuit';
     $method = isset($method) ? $method : 'general-suscribe';
     $support = isset($support) ? $support : 'voyance';
+    $dri = isset($dri) ? $dri : 'merci-voyance-tchat';
     
     $questions_default = array(
         'Amour' => array(
@@ -30,6 +31,7 @@
     <input type="hidden" name="support" value="<?= $support ?>" />
     <input type="hidden" name="site" value="myastro.fr" />
     <input type="hidden" name="affiliation" value="naturel" />
+    <input type="hidden" name="dri" value="<?= $dri ?>" />
     <div class="vt2">
         <label class="label-left">Ma question :</label>
         <select class="cnt-right cnt-qt" name="question_code" id="theme_id" required>

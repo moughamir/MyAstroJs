@@ -2,6 +2,7 @@
     $source = isset($source) ? $source : 'horoscope-gratuit';
     $method = isset($method) ? $method : 'general-suscribe';
     $support = isset($support) ? $support : 'voyance';
+    $dri = isset($dri) ? $dri : 'merci-voyance-tchat';
     
     $question_default = [ 'code' => 'question_25', 'subject' => 'sentimental', 'text' => 'Testez votre couple', 'conjoint' => true ];
     
@@ -14,6 +15,7 @@
     <input type="hidden" name="support" value="<?= $support ?>" />
     <input type="hidden" name="site" value="myastro.fr" />
     <input type="hidden" name="affiliation" value="naturel" />
+    <input type="hidden" name="dri" value="<?= $dri ?>" />
     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
     <div class="form-w-one">
         <input type="text" placeholder="Mon Prénom" id="name" name="prenom" required />

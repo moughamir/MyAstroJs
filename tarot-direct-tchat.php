@@ -8,8 +8,19 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 
+// Paramètres design
 $root = './';
 $cards_dir = 'tarot/cartes/original-grand/';
+$pict_path = 'images_landing/tarot-direct/';
+$css = 'css/tarot-direct.css';
+// Design Noël
+$j = date('j');
+$m = date('n');
+if($m == 12 || ($m == 1 && $j <= 5)){
+    $pict_path = 'images_landing/tarot-direct-noel/';
+    $css = 'css/tarot-direct-noel.css';
+}
+// Paramètre formulaire
 $include_form_dri = false;
 include('tchat-gratuit/init.php');
 ?>
@@ -24,9 +35,9 @@ include('tchat-gratuit/init.php');
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
+        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
         
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
+        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,22 +93,20 @@ include('tchat-gratuit/init.php');
             </section>
         </section>
 <!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
-        <div id="scn-tarot">
-            <section class="ContentBand Tarot">
-                <div class="PageWrapper ContentBand-Table">
-                    <div class="ContentBand-Column">
-                        <article class="WidgetTarot">
-                            <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <?= $tchat->getPsychicName();?></div>
-                            <div class="WidgetTarot-Result">
-                                <?php for($i=0;$i<5;$i++){ ?>
-                                <div class="WidgetTarot-Card place" data-number="<?= $i ?>" style="background-image: url('<?= $cards_dir.$draw[$i];?>')"></div>
-                                <?php } ?>
-                            </div>
-                        </article>
-                    </div>
+        <section class="ContentBand Tarot Arrowed">
+            <div class="PageWrapper ContentBand-Table">
+                <div class="ContentBand-Column">
+                    <article class="WidgetTarot">
+                        <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <?= $tchat->getPsychicName();?></div>
+                        <div class="WidgetTarot-Result">
+                            <?php for($i=0;$i<5;$i++){ ?>
+                            <div class="WidgetTarot-Card place" data-number="<?= $i ?>" style="background-image: url('<?= $cards_dir.$draw[$i];?>')"></div>
+                            <?php } ?>
+                        </div>
+                    </article>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
         
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         

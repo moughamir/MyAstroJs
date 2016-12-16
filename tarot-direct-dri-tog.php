@@ -7,11 +7,26 @@
     Created on : 18 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+<<<<<<< HEAD
 //include('include/process-dri.php');
     $state = '';
     $tel= '';
     $prenom = '';
+=======
+include('include/process-dri.php');
+// Paramètres design
+>>>>>>> dev
 $cards_dir = 'tarot/cartes/original-grand/';
+$pict_path = 'images_landing/tarot-direct/';
+$css = 'css/tarot-direct.css';
+// Design Noël
+$j = date('j');
+$m = date('n');
+if($m == 12 || ($m == 1 && $j <= 5)){
+    $pict_path = 'images_landing/tarot-direct-noel/';
+    $css = 'css/tarot-direct-noel.css';
+}
+// Paramètre formulaire
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 
 if(isset($_SESSION['user_id'])){
@@ -29,9 +44,9 @@ if(isset($_SESSION['user_id'])){
 
         <meta name="robots" content="noindex,nofollow" />
 
-        <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png" />
+        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct.css" />
+        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -136,7 +151,7 @@ if(isset($_SESSION['user_id'])){
         </section>
         <?php if($draw){ ?>
 <!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
-        <section class="ContentBand Tarot">
+        <section class="ContentBand Tarot Arrowed">
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="WidgetTarot">
