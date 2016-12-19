@@ -18,8 +18,16 @@ $fonts : "../fonts/olesia/";
   font-weight: normal;
   font-style: normal;
 }
+
+$oswald: 'Oswald', sans-serif;
+$lobster: 'Lobster', cursive;
+$open-sans: 'Open Sans', sans-serif;
+$olesia: 'Olesia', cursive;
+$arial: Arial, sans-serif;
 //Colors
 $btn-bg: #e99d26;
+$modal-bg: #171d2e;
+$modal: #27bdad;
 //
 .hidden{
   display: none;
@@ -36,7 +44,7 @@ body{
   overflow-x: hidden;
   color: #FFFFFF;
   font:{
-    family: "Oswald", sans-serif;
+    family: $oswald;
     size: 16px;
   }
 }
@@ -53,19 +61,24 @@ body{
 .site{
   margin-bottom: 3em;
   &-header{
-    
     text-align: center;
     padding: 15px 0;
     margin-bottom: 6px;
+    @include respond-to("mobile"){
+      height: 53px;
+    }
   }
   &-logo{
     width: 107px;
     height: 107px;
+    @include respond-to("mobile"){
+     width: 53px;
+    }
   }
   &-content{
-    &:before {
+    &::before {
       content: "2017";
-      font-family: "olesia", cursive;
+      font-family: $olesia;
       font-size: 13em;
       display: block;
       color: #fafbfc;
@@ -80,9 +93,13 @@ body{
         top: 16px;
       }
       @include respond-to("mobile"){
-        content: "Vous prévison 2017 Ú";
-        font-size: 12em;
-        top: 30px;
+        content: "";
+        display: block;
+        height: 144px;
+        background: url($assets + "prev-2017.png") no-repeat center center;
+        margin: 16px 0;
+        position: relative;
+        transform: translate(-50%);
       }
     }
   }
@@ -108,6 +125,7 @@ a {
       weight: 400;
     }
     padding-top: 5px;
+    @include respond-to("mobile"){font-size: 2.6rem;}
     &::before{
       content: '';
       display: inline-flex;
@@ -116,18 +134,22 @@ a {
       background: url($assets + "pre-title.png") no-repeat center center;
       background-size: contain;
       margin: 0 10px 0 25px;
+      @include respond-to("mobile"){margin: 0 10px 0 10px;}
     }
   }
   &-period {
     font-size: 14px;
     text-align: left;
     font-weight: 400;
+    @include respond-to("mobile"){
+      font-size: 2.5rem;
+    }
   }
   &-image{
     height: 180px;
     margin: 0 auto;
+    @include respond-to("mobile"){height: 147px;}
   }
-
 }
 .img-container {
   width: 240px;
@@ -139,11 +161,14 @@ a {
   justify-content: center;
   align-items: center;
   // TODO: Talk to Amandine about this animation vv
-  @include prefix(transform, 600ms transform ease-in-out, webkit ms moz);
+  @include prefix(transition, 600ms transform ease-in-out, webkit ms moz);
   svg{
     fill: #fff;
     opacity: .6;
     height: 195px;
+  }
+  @include respond-to("mobile"){
+    transform: translate(77px);
   }
     
 }
@@ -165,6 +190,10 @@ $zodiac:(
 @each $sign, $background in $zodiac{
   .#{$sign}, article[data-sign="#{$sign}"] .form-content{
     background-color: #{$background};
+    @include respond-to("mobile"){
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -182,6 +211,9 @@ $zodiac:(
     min-width: 280px;
     display: inline-block;
     width: calc(33.33% - 0.4em);
+    @include respond-to("mobile"){
+      margin: 3em 0;
+    }
   }
 }
 .content{
@@ -222,8 +254,11 @@ $zodiac:(
   &Field{
     //Label
     &-Label{
-      font-family: Arial, open-sans, sans-serif;
+      font-family: $arial;
       font-size: 18px;
+      @include respond-to("mobile"){
+        font-size: 14px;
+      }
     }
     // Input
     &-Input{
@@ -241,9 +276,15 @@ $zodiac:(
       }
       &[name="mois"] {
         width: 150px;
+        @include respond-to("mobile"){
+          width: 114px;
+        }
       }
-      &#email, &[name="annee"] {
+      &#email {
       width: 100%;
+      }
+      &[name="annee"]{
+        width: 96px;
       }
     }
     //TableInputContainer
@@ -251,7 +292,15 @@ $zodiac:(
       &-Cell {
         display: table-cell;
         padding-right: 10px;
-        &:nth-of-type(3) {padding: 0;}
+        &:nth-of-type(3) {
+          padding: 0;
+          @include respond-to("mobile"){
+            padding-right: 4px;
+          }
+        }
+        @include respond-to("mobile"){
+          padding-right: 4px;
+        }
       }
     }
   }
@@ -262,6 +311,9 @@ $zodiac:(
       width: 100%;
       padding: 0 15px;
       margin: 1.8rem 0;
+      @include respond-to("mobile"){
+        margin: 5px 0;
+      }
       & > .FormField-Label:after{
         content: " :";
       }
@@ -278,6 +330,12 @@ $zodiac:(
   }
 }
 .js{
+ .site-header{
+   @include respond-to("mobile"){
+     display: none;
+   }
+ }
+
   .view{
   &--prevision{
     position: fixed;
@@ -300,16 +358,63 @@ $zodiac:(
       width: 80vmin;
       position: relative;
       margin: 0 auto;
+      @include respond-to("mobile"){
+        min-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
     }
   }
 }
   .sign{
+    &-header{
+      @include respond-to("mobile"){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 5px 0;
+      }
+      svg {
+        margin-right: 15px;
+        display: none;
+        @include respond-to("mobile"){display: block;}
+      }
+    }
     &-name {
-      font-size: 70px;
-      font-family: Oswald;
+      font-size: 3em;
+      font-family: $oswald;
+      @include respond-to("mobile"){
+        font-size: 2em;
+        margin: 0 0 5px 0;
+      }
+      &::before{
+      content: '';
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0 10px 0 25px;
+      @include respond-to("mobile"){
+        width: 28px;
+        height: 28px;
+        margin: 0 10px 0 14px;
+      }
+    }
+    }
+    &-footer{
+      @include respond-to("mobile"){
+        display: none;
+      }
     }
     &-period {
       font-size: 2.3em;
+    }
+  }
+  .grid-2.has-gutter {
+    @include respond-to("mobile"){
+      width: 100vw;
     }
   }
 }
@@ -319,13 +424,24 @@ $zodiac:(
 .Site{
   &Copyright {
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: $arial;
     font-size: 13px;
     color: #fff;
+    @include respond-to("mobile"){
+      color: #454545;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    a {
+    @include respond-to("mobile"){color: #454545;}
+    }
   }
   &Footer {
     background: rgba(20,34,86,0.7);
-    font-family: Arial, sans-serif;
+    font-family: $arial;
     @include respond-to("mobile"){
       display: none;
     }
@@ -410,10 +526,14 @@ $zodiac:(
 // Typography
 .prevision {
     padding: 0 15px;
-    font-family: "Arial", sans-serif;
+    font-family: $arial;
     font-size: 18px;
     text-align: justify;
     line-height: 21px;
+    @include respond-to("mobile"){
+      font-size: 1.02em;
+      line-height: 1em;
+    }
 }
 // Overlay and Alerts
 .overlay{
@@ -438,6 +558,11 @@ $zodiac:(
     position: absolute;
     top: 50%;
     left: 50%;
+    @include respond-to("mobile"){
+      width: 90vmin;
+      font-size: 1em;
+      padding: .75rem 0.5rem;
+    }
     @include prefix(transform, translate(-50%, -50%), webkit ms moz);
     
     &-success {
@@ -462,3 +587,237 @@ $zodiac:(
     }
 }
 
+// DRI
+.dri {
+  .FormContainer {
+    padding: 0 2em;
+    @include respond-to("mobile"){
+      padding: 1rem;
+    }
+    &-Submit{
+      @include respond-to("mobile"){margin-top: 1rem;}
+    }
+  }
+    background-color: #171d34;
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    @include respond-to("mobile"){
+      height: 100vh;
+      width: 100vw;
+    }
+  .message {
+    @include respond-to("mobile"){font-size: 1em;}
+    font-family: $arial;
+    font-size: 1.8rem;
+    text-align: justify;
+    text-align-last: auto;
+    .highlight {
+      color: #e99d26;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  .form-title {
+    font-family: $oswald;
+    font-size: 2.3rem;
+    &::before {
+      content: '';
+      display: inline-flex;
+      width: 17px;
+      height: 27px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0 10px 0 -30px;
+    }
+  }
+  form {
+    width: 65%;
+    margin: 0 auto;
+    @include respond-to("mobile"){width: 100%;}
+  }
+  .FormField{
+     input {
+      width: 100%;
+    }
+    &-Label {
+      display: table-cell;
+    }
+    select {
+      width: 100%;
+    }
+  }
+  .img-center{
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+.v2 {
+  margin-top: 5em;
+}
+.site-v2{
+    height: 82vmin;
+}
+
+// Modal
+.modal {
+    /* TODO: add display: flex; via jQuery when the form successfuly submited
+    JQ snippet : $(".modal").show().css("display", "flex")
+    */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    &-container {
+    background-color: $modal-bg;
+    padding: 3em;
+    text-align: center;
+    @include respond-to("mobile"){
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+    }
+  }
+  &-title {
+    color: $modal;
+    font-family: $lobster;
+    @include respond-to("mobile"){font-size: 2.2em;}
+    &:before{
+      content: '';
+      display: inline-block;
+      background: url($assets + 'checked.png') no-repeat center;
+      width: 33px;
+      height: 33px;
+      margin-right: 0 15px;
+      @include respond-to("mobile"){
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &-message {
+    font-family: $arial;
+    font-size: 20px;
+    @include respond-to("mobile"){font-size: 1.8rem;}
+  }
+  &-btn {
+    border: 1px solid;
+    background: transparent;
+    color: $modal;
+    padding: 10px 20px;
+    width: 250px;
+    margin-top: 35px;
+    font-family: $open-sans;
+    font-size: 25px;
+  }
+}
+
+// vfx
+.deco-expander {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: calc(100vmax * 1.4142);
+	height: calc(100vmax * 1.4142);
+	margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+	pointer-events: none;
+	opacity: 0;
+	border-radius: 50%;
+	background: #45918e;
+	-webkit-transform: scale(0.001);
+	transform: scale(0.001);
+}
+
+
+@keyframes scale{
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+.scale{
+  animation: scale ease-in-out 600ms;
+}
+
+// Animations Module
+@import "modules/animations";
+.scaleUp{
+  animation: scaleUp .5s ease both;
+}
+// DREAM SOLUTIONS
+.have-addition {
+    display: flex;
+    margin: 0 -2px;
+    padding: 0;
+    border: none;
+    @include respond-to("mobile"){
+      display: none;
+    }
+}
+aside {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+@each $sign, $background in $zodiac{
+  article[data-sign="#{$sign}"] &::before {
+    content: '';
+    background: #{$background}; // generate it
+    width: 106px;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+}
+}
+.dri-c {
+  .site {
+    @include respond-to("mobile"){
+    min-height: 100vh;
+    height: 100vh;}
+    &-header {
+      @include respond-to("mobile"){display: none;}
+    }
+    &-content {
+      @include respond-to("mobile"){margin-top: 0;}
+      &::before{
+        @include respond-to("mobile"){display: none;}
+      }
+    }
+  }
+ .FormContainer {
+    @include respond-to("mobile"){
+      width: 100vw;
+      margin: -10px;
+      padding: 2rem 1rem 0 1rem;
+    }
+  }
+  .form-title::before{
+    @include respond-to("mobile"){
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 27px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
