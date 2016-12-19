@@ -68,7 +68,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             </div>
                         </div>
                         <div id="scn-tarot-result">
-                            <div class="WidgetTarot-Result">
+                            <div class="WidgetTarot-Result" id="cards-result">
                                 <?php for($i=1;$i<=5;$i++){ ?>
                                 <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
                                 <?php } ?>
@@ -144,6 +144,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-noel-wizard.js"></script>
         <script src="js/formValidator.js"></script>
+        
+        <!-- #### REMARKETINGS #### -->
+        <?php include('include/remarketing/adwords.php');
+              include('include/remarketing/analytics.php');
+              include('include/remarketing/facebook.php'); ?>
     </body>
 </html>
 <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet" />
