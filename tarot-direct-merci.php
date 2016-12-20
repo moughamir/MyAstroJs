@@ -11,16 +11,7 @@ require_once('inc/config.php');
 require_once('inc/bdd.php');
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 // Paramètres design
-$cards_dir = 'tarot/cartes/original-grand/';
-$pict_path = 'images_landing/tarot-direct/';
-$css = 'css/tarot-direct.css';
-// Design Noël
-$j = date('j');
-$m = date('n');
-if($m == 12 || ($m == 1 && $j <= 5)){
-    $pict_path = 'images_landing/tarot-direct-noel/';
-    $css = 'css/tarot-direct-noel.css';
-}
+include('include/tarot-direct-design.php');
 // Paramètre formulaire
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
@@ -115,7 +106,4 @@ if(isset($_SESSION['user_id'])){
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
