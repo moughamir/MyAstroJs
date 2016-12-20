@@ -17,7 +17,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
   <link rel="shortcut icon" href="images_landing/prevision-2017/favicon.ico">
   <title>Prévisions année 2017 - DRI</title>
   <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="css/previsions-2017.css">
+  <link rel="stylesheet" href="css/previsions-2017.min.css">
   <link rel="shortcut icon" href="images_landing/previsions-2017/favicon.ico">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

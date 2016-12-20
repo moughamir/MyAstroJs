@@ -21,7 +21,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <link rel="shortcut icon" href="images_landing/previsions-2017/favicon.ico">
   <title>Prévisions année 2017</title>
   <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
-  <link rel="stylesheet" media="all" href="css/previsions-2017.css">
+  <link rel="stylesheet" media="all" href="css/previsions-2017.min.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
