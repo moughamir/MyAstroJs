@@ -26,6 +26,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <meta property="og:title" content="Prévisions de l'année 2017" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.myastro.fr/previsions-2017" />
+  <meta property="og:image" content="http://www.myastro.fr/images_landing/previsions-2017/fb-ban.jpg" /><!-- add banner -->
+  <meta property="og:description" content="" /> <!-- Write something cool and attractive :3 -->
+  <meta property="og:locale" content="fr_FR" />
 </head>
 
 <body>
