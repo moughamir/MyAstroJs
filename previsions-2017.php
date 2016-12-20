@@ -4,7 +4,7 @@ $questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => '
 $pageName = "previsions-2017";
 $method = "general-suscribe";
 $support = "voyance";
-$site= "myastro-omnizya.c9users.io";
+$site= "myastro.fr";
 $pageDri = "previsions-2017-dri";
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -800,7 +800,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                    <input type="hidden" name="method" value="general-suscribe" />
+                    <input type="hidden" name="method" value="<?= $method ?>" />
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
