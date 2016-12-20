@@ -543,6 +543,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
                             <input type="hidden" name="optional_birthdate" value="1" />
                             <input type="hidden" name="email" value="<?= $email ?>">
                             <input type="hidden" name="date_naissance" value="<?= $dtn_bdd ?>">
+                            <!-- <input type="hidden" name="camp" value="Prev17"> -->
                             <!-- ############################################### -->
                             <div class="Fields-Table-Row">
                                 <div class="FormField input-email">

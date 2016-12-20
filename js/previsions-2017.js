@@ -64,7 +64,7 @@ $(function() {
     signSingle.find('.sign-period').text(date);
     // Draw the sign image
     d3.select(".zodiac-large").append("svg").attr("width", 500).attr("height", 500).style("opacity", 0.6).append("use").attr("xlink:href", "#"+s).style("fill", "#ffffff");
-    d3.select(".sign-header").append("svg").attr("width", 53).attr("height", 53).style("opacity", 0.6).append("use").attr("xlink:href", "#"+s).style("fill", "#ffffff");
+    d3.select(".svg-container").append("svg").attr("width", 53).attr("height", 53).style("opacity", 0.6).append("use").attr("xlink:href", "#"+s).style("fill", "#ffffff");
     
     // Add picked sign value into
     $('input[name="sign"]').val(zodiacFr[s]);
@@ -79,6 +79,7 @@ $(function() {
     hideExpander();
     $('.zodiac-large').empty();
      $('input[name="sign"]').val('');
+     $('.svg-container').empty();
   });
   
   /*
@@ -142,4 +143,7 @@ console.log('done')
 	  }
 	  */
   });
+  // Lock orientation
+  var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
+  orientation.lock('portrait');
 });

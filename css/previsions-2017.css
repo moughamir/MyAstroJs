@@ -1782,13 +1782,14 @@ body {
   .site-header {
     text-align: center;
     padding: 15px 0;
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    height: 64px; }
     @media screen and (max-width: 544px) {
       .site-header {
         height: 53px; } }
   .site-logo {
-    width: 107px;
-    height: 107px; }
+    width: 58px;
+    height: 58px; }
     @media screen and (max-width: 544px) {
       .site-logo {
         width: 53px; } }
@@ -1893,12 +1894,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="capricorn"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="capricorn"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #267d9d;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="capricorn"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="capricorn"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="capricorn"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .taurus, article[data-sign="taurus"] .form-content {
   background-color: #012eaa; }
   @media screen and (max-width: 544px) {
     .taurus, article[data-sign="taurus"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="taurus"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="taurus"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #012eaa;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="taurus"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="taurus"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="taurus"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .gemini, article[data-sign="gemini"] .form-content {
   background-color: #267d9d; }
@@ -1907,12 +1948,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="gemini"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="gemini"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #267d9d;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="gemini"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="gemini"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="gemini"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .cancer, article[data-sign="cancer"] .form-content {
   background-color: #fdc8a1; }
   @media screen and (max-width: 544px) {
     .cancer, article[data-sign="cancer"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="cancer"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="cancer"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #fdc8a1;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="cancer"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="cancer"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="cancer"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .leo, article[data-sign="leo"] .form-content {
   background-color: #01ce7f; }
@@ -1921,12 +2002,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="leo"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="leo"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #01ce7f;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="leo"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="leo"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="leo"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .virgo, article[data-sign="virgo"] .form-content {
   background-color: #c35f97; }
   @media screen and (max-width: 544px) {
     .virgo, article[data-sign="virgo"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="virgo"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="virgo"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #c35f97;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="virgo"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="virgo"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="virgo"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .libra, article[data-sign="libra"] .form-content {
   background-color: #62378e; }
@@ -1935,12 +2056,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="libra"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="libra"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #62378e;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="libra"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="libra"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="libra"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .scorpio, article[data-sign="scorpio"] .form-content {
   background-color: #142256; }
   @media screen and (max-width: 544px) {
     .scorpio, article[data-sign="scorpio"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="scorpio"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="scorpio"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #142256;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="scorpio"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="scorpio"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="scorpio"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .sagittarius, article[data-sign="sagittarius"] .form-content {
   background-color: #9e3fa5; }
@@ -1949,12 +2110,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="sagittarius"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="sagittarius"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #9e3fa5;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="sagittarius"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="sagittarius"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="sagittarius"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .aries, article[data-sign="aries"] .form-content {
   background-color: #62378e; }
   @media screen and (max-width: 544px) {
     .aries, article[data-sign="aries"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="aries"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="aries"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #62378e;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="aries"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="aries"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="aries"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .aquarius, article[data-sign="aquarius"] .form-content {
   background-color: #c35f97; }
@@ -1963,12 +2164,52 @@ a {
       width: 100%;
       height: 100%; } }
 
+article[data-sign="aquarius"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="aquarius"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #c35f97;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="aquarius"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="aquarius"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="aquarius"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
+
 .pisces, article[data-sign="pisces"] .form-content {
   background-color: #fdc8a1; }
   @media screen and (max-width: 544px) {
     .pisces, article[data-sign="pisces"] .form-content {
       width: 100%;
       height: 100%; } }
+
+article[data-sign="pisces"] .sign-controls {
+  display: none; }
+  @media screen and (max-width: 544px) {
+    article[data-sign="pisces"] .sign-controls {
+      display: flex;
+      align-items: center;
+      background-color: #fdc8a1;
+      height: 40px;
+      padding-top: 5px;
+      width: 100%; } }
+  article[data-sign="pisces"] .sign-controls .site-logo {
+    height: auto;
+    width: 46px; }
+  article[data-sign="pisces"] .sign-controls .one-quarter {
+    z-index: 9; }
+  article[data-sign="pisces"] .sign-controls .one-third {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0; }
 
 .grid {
   position: relative;
@@ -2031,11 +2272,9 @@ input, input:hover, input:active {
     box-shadow: 0 0 2px 0 #a94442 inset; }
   .FormField-Input[name="prenom"] {
     width: 100%; }
-  .FormField-Input[name="mois"] {
-    width: 150px; }
-    @media screen and (max-width: 544px) {
-      .FormField-Input[name="mois"] {
-        width: 114px; } }
+  @media screen and (max-width: 544px) {
+    .FormField-Input[name="mois"] {
+      width: 114px; } }
   .FormField-Input#email {
     width: 100%; }
   .FormField-Input[name="annee"] {
@@ -2055,7 +2294,7 @@ input, input:hover, input:active {
 .Fields-Table-Row {
   width: 100%;
   padding: 0 15px;
-  margin: 1.8rem 0; }
+  margin: 0.2rem 0; }
   @media screen and (max-width: 544px) {
     .Fields-Table-Row {
       margin: 5px 0; } }
@@ -2068,6 +2307,9 @@ input, input:hover, input:active {
   display: none; }
 
 @media screen and (max-width: 544px) {
+  .js .site-header {
+    display: none; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .js .site-header {
     display: none; } }
 .js .view--prevision {
@@ -2096,21 +2338,37 @@ input, input:hover, input:active {
         width: 100vw;
         overflow-y: auto;
         overflow-x: hidden; } }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .js .view--prevision .content {
+        min-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden; } }
 @media screen and (max-width: 544px) {
   .js .sign-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .js .sign-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 10px 0 5px 0; } }
-.js .sign-header svg {
+.js .sign-header .svg-container {
   margin-right: 15px;
   display: none; }
   @media screen and (max-width: 544px) {
-    .js .sign-header svg {
+    .js .sign-header .svg-container {
+      display: block; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .js .sign-header .svg-container {
       display: block; } }
 .js .sign-name {
   font-size: 3em;
-  font-family: "Oswald", sans-serif; }
+  font-family: "Oswald", sans-serif;
+  margin: 0; }
   @media screen and (max-width: 544px) {
     .js .sign-name {
       font-size: 2em;
@@ -2221,7 +2479,8 @@ input, input:hover, input:active {
   @media screen and (max-width: 544px) {
     .prevision {
       font-size: 1.02em;
-      line-height: 1em; } }
+      line-height: 1em;
+      padding: 0 10px; } }
 
 .overlay {
   position: fixed;
@@ -3825,7 +4084,7 @@ input, input:hover, input:active {
 
 .have-addition {
   display: flex;
-  margin: 0 -2px;
+  margin: 0;
   padding: 0;
   border: none; }
   @media screen and (max-width: 544px) {

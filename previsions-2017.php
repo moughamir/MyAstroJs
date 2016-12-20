@@ -15,13 +15,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
   <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/previsions-2017/favicon.ico">
   <title>Prévisions année 2017</title>
   <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="css/previsions-2017.css">
+  <link rel="stylesheet" media="all" href="css/previsions-2017.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -767,10 +767,25 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
           
           <!--Template-->
           <article class="sign-single content scaleUp" data-sign>
+            <header class="sign-controls">
+              <div class="one-quarter">
+                <button class="control-button control-button--back" aria-label="Retour à la liste du zodiaques">
+                  <svg class="icon icon--arrow">
+                    <use xlink:href="#icon-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="one-third">
+                <a href="/">
+                  <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
+                </a>
+              </div>
+            </header>
             <div class="grid-2 has-gutter">
             <div class="form-content one-half">
               <header class="sign-header">
                 <h1 class="sign-name">SIGN_NAME</h1>
+                <div class="svg-container"></div>
               </header>
               <div class="sign-prevision-container">
                 <p class="prevision">SIGN_TEXT</p>
