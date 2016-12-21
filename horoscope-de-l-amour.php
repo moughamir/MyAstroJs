@@ -1,5 +1,5 @@
 <?php
-    $source = 'horoscope-amour';
+    $source = 'horoscope-de-l-amour';
     $cs_url = 'horoscope-de-l-amour';
     $ipg_pubs = ['compatibilite-amoureuse-pour-les-femmes-amour', 'compatibilite-amoureuse-pour-les-hommes-amour'];
 ?>
