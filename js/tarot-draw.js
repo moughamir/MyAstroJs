@@ -102,7 +102,7 @@ $(document).ready(function(){
             card.attr('data-counter', currCardCounter);
             card.removeClass('notFlipped').addClass('Flipped');
             var place = $('#cards-container .place[data-number="' + currCardCounter + '"]');
-            $('form').append('<input type="hidden" name="cards[]" value="'+ cardNumber +'.png" />');
+            $('form').append('<input type="hidden" name="cards['+ cardNumber +']" value="'+ cardNumber +'.png" />');
 
             // chargement dos de la carte
             card.children('.back').css({'background-image': 'url('+ cardsPath + cardNumber +'.png)'});
