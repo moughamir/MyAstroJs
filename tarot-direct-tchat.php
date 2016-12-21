@@ -10,7 +10,7 @@
 
 // Paramètres design
 $root = './';
-include('include/tarot-direct-design.php');
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 $include_form_dri = false;
 include('tchat-gratuit/init.php');

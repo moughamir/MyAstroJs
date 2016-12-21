@@ -10,7 +10,7 @@
 */
 include('include/process-dri.php');
 // Paramètres design
-include('include/tarot-direct-design.php');
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 ?>

@@ -11,7 +11,7 @@ require_once('inc/config.php');
 require_once('inc/bdd.php');
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 // Paramètres design
-include('include/tarot-direct-design.php');
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
