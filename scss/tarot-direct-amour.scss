@@ -1,0 +1,583 @@
+@charset "UTF-8";
+/* 
+    ----------------------------------
+    --      tarot-direct-amour      --
+    ----------------------------------
+
+    Created on : 20 décembre 2016
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
+                 Mohamed Moughamir <moughamir+kgcom@gmail.com>
+*/
+@import "templates/s-landing-tarot-3";
+
+/* Dossier images */
+$img_dir : "../images_landing/tarot-direct-amour/";
+$logo : $img_dir + "logo.png";
+$header-bg: #fff url($img_dir + 'header-bg.png') no-repeat center;
+$dos_carte : $img_dir + "cardback.png";
+$place_carte : $img_dir + "cardplace.png";
+$bg_fleche : $img_dir + "bg_fleche.png";
+$hexagone-normal : $img_dir + "hexagone-normal.png";
+$hexagone-active : $img_dir + "hexagone-active.png";
+$hexagone-hover : $img_dir + "hexagone-hover.png";
+$christelle : $img_dir + "christelle.png";
+$sonia : $img_dir + "sonia.png";
+$icon_amour-normal : $img_dir + "coeur-normal.png";
+$icon_argent-normal : $img_dir + "argent-normal.png";
+$icon_travail-normal : $img_dir + "travail-normal.png";
+$icon_amour-hover : $img_dir + "coeur-hover.png";
+$icon_argent-hover : $img_dir + "argent-hover.png";
+$icon_travail-hover : $img_dir + "travail-hover.png";
+$icon_amour-active : $img_dir + "coeur-active.png";
+$icon_argent-active : $img_dir + "argent-active.png";
+$icon_travail-active : $img_dir + "travail-active.png";
+$icon_tel: $img_dir + "tel.png";
+
+/* Palette */
+$primary: #f1134c;
+$secondary: #4f9d7a;
+$addon: #da7b8e;
+$softGreen: #e7f2ec;
+
+$bleu: $primary;
+$rose: $secondary;
+$turquoise: $addon;
+
+$white: #ffffff;
+$grey: #454545;
+$lightgrey: #C0C3C8;
+$bg-bleu: #EAEEF4;
+$bg-grey: #616161;
+$woman: $rose;
+$men: $bleu;
+$tchat-bg: #E8E8E8;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $grey;
+    background: url($img_dir + 'background.png') no-repeat center bottom;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.ContentBand.Principal {
+    padding-bottom: 127px;
+    margin-bottom: -117px;
+    background: url($bg-fleche) no-repeat center bottom;
+    
+    .ContentBand-ColumnHeader {
+        background: $header-bg;
+        background-size: cover;
+        box-shadow: 0 0 10px 1px $lightgrey;
+        font-size:2.5rem;
+    }
+}
+
+/* --------------------------------- ENTETE --------------------------------- */
+
+.SiteHeader {
+    position: relative;
+    z-index: 2;
+    background-color: $primary;
+    color: $softGreen;
+    
+    &-Logo {
+        height: 100px;
+        background-color: transparent;
+        background-image: url($logo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &-Slogan1 {
+        font-family: 'Indie Flower';
+    }
+    &-Slogan2 {
+        font-weight: bold;
+        background-color: $softGreen;
+        color: $secondary;
+        
+        strong {
+            text-transform: uppercase;
+            color: $primary;
+            
+        }
+    }
+}
+
+.Title {
+    font-weight: bold;
+    color: $secondary;
+    
+    strong {
+        font-family: 'Lobster';
+        color: $primary;
+        font-weight: normal;
+        font-size: 3.5rem;
+    }
+}
+
+/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+
+.PsychicChoice-Psychic {
+    &-VisualForm {
+        color: $secondary;
+    }
+    &-Picture {
+        position: relative;
+        display: inline-block;
+        width: 237px;
+        height: 205px;
+        background-color: transparent;
+        background-image: url($hexagone-normal);
+    }
+    &-VisualForm:hover {
+        color: $primary;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone-active);
+        }
+    }
+    &-Input:checked + &-VisualForm {
+        color: $primary;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone-active);
+            &:after {
+                content: "\f00c";
+                font-family: 'FontAwesome';
+                background-color: transparent;
+                color: $primary;
+            }
+        }
+    }
+}
+
+.PsychicChoice-Psychic.Christelle .PsychicChoice-Psychic-Photo {
+    background-image: url($christelle);
+}
+
+.PsychicChoice-Psychic.Sonia .PsychicChoice-Psychic-Photo {
+    background-image: url($sonia);
+}
+
+/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+
+.ThemeChoice-ListItem {
+    border-color: $lightgrey;
+    color: $secondary;
+    font-weight: bold;
+    background: #fff;
+    position: relative;
+    border-left: 0;
+    border-right: 0;
+    &::before,  &::after{
+        content: '';
+        top: 0;
+        display: block;
+        background: no-repeat center;
+        width: 30px;
+        height: 100%;
+        position: absolute;
+        background-size: cover;
+        z-index: 0;
+    }
+    &::before{
+        left: -24px;
+        background-image: url($img_dir + 'left.svg');
+    }
+    &::after{
+        right: -21px;
+        background-image: url($img_dir + 'right.svg');
+    }
+    &-Icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        &.Amour {
+            background-image: url($icon_amour-normal);
+        }
+        &.Argent {
+            background-image: url($icon_argent-normal);
+        }
+        &.Travail {
+            background-image: url($icon_travail-normal);
+        }
+    }
+    
+    &:hover, &:active, &:focus {
+        color: $addon;
+    }
+    &:hover &-Icon {
+        background-color: transparent;
+        &.Amour {
+            background-image: url($icon_amour-hover);
+        }
+        &.Argent {
+            background-image: url($icon_argent-hover);
+        }
+        &.Travail {
+            background-image: url($icon_travail-hover);
+        }
+    }
+    &-Input:checked + & {
+        color: $primary;
+        .ThemeChoice-ListItem-Icon {
+            background-color: transparent;
+            &.Amour {
+                background-image: url($icon_amour-active);
+            }
+            &.Argent {
+                background-image: url($icon_argent-active);
+            }
+            &.Travail {
+                background-image: url($icon_travail-active);
+            }
+        }
+    }
+}
+
+/* ------------------------------ TIRAGE TAROT ------------------------------ */
+
+.WidgetTarot-Card {
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        border: none;
+        background: transparent url($dos_carte) center no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+        background-color: transparent;
+    }
+    
+    &.place {
+        background-color: transparent;
+        background-image: url($place_carte);
+        border-radius: 6px;
+    }
+}
+
+.WidgetTarot-ResultMsg {
+    font-weight: bold;
+    color: $bleu;
+}
+
+/* ------------------------------- POP VOYANT ------------------------------- */
+
+.Pop.Pop-Voyant {
+    background-color: transparent;
+    background-image: url($hexagone-active);
+    &.Christelle .Pop-Voyant-Photo{
+        background-image: url($christelle);
+    }
+    &.Sonia .Pop-Voyant-Photo{
+        background-image: url($sonia);
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.FormContainer {
+    background-color: $softGreen;
+    color: $grey;
+}
+
+.FormField-Label {
+    font-weight: bold;
+    position: relative;
+}
+.FormField-Input {
+    border: none;
+    border-radius: 3px;
+    padding: 1rem 1.2rem;
+    &.has-error {
+        box-shadow: 0 0 8px 1px #a94442 inset;
+    }
+}
+.FormContainer-Submit {
+    background-color: $primary;
+    color: $white;
+    border:2px solid $primary;
+    transition: all 0.5s ease-in;
+    
+    &:hover{
+        color: $primary; 
+        background-color:transparent;
+    }
+}
+
+.FormField-Label { 
+    span{
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;margin: auto; 
+        }
+        &::before{
+            background: linear-gradient( 90deg, rgb(242,242,242) 0%, rgb(255,255,255) 50%, rgb(255,255,255) 100%);
+            border: 1px solid rgb(230, 230, 230);
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &.radio{
+            &::before {
+                left: -40px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+            &::after {
+                left: -33px;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                transition: all 200ms ease;
+            }
+        }
+        &.checkbox{
+            font-size: 1.3rem;
+            font-weight: 500;
+            &::before {
+                width: 20px;
+                height: 20px;
+                left: -23px;
+                box-sizing: border-box;
+                transition: border-color .2s;
+                border-radius: 3px;
+            }
+            &:hover::before {
+                border: 3px solid #e7ebe9;
+            }
+            &::after {
+                content: '\f00c';
+                font-family: 'FontAwesome';
+                left: -21px;
+                top: 0;
+                color: transparent;
+                transition: color .2s;
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+.FormField-Info:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+}
+input{
+    outline: none;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    display: none !important;
+}
+input[type="radio"]{
+    &:checked + label span.radio::after {
+        left: -35px;
+        background: #999999;
+        width: 12px;
+        height: 12px;
+    }
+}
+input[type="checkbox"]{
+    &:checked + label span.checkbox::after {
+        color: $primary;
+    }
+}
+.overlay{
+    position: fixed !important;
+    z-index: 9 !important;
+}
+.alert {
+    text-align: center;
+    border-radius: 5px;
+    max-width: 500px;
+    min-width: 312px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    &-danger {
+        color: #a94442;
+        background-color: #f2dede;
+        border-color: #ebccd1;
+    }
+    &-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    &-info {
+        color: #31708f;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+}
+
+/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+
+.DRI-Promo {
+    font-weight: bold;
+    
+    &-Slogan {
+
+        &-Tel {
+            font-size: 2.8rem;
+            text-decoration: underline;
+            color: $turquoise;
+            
+            &:hover {
+                color: $bleu;
+            }
+            
+            &Icon {
+                background-image: url($icon_tel);
+            }
+        }
+        
+        &-CodePromo {
+            font-size: 2.8rem;
+            color: $turquoise;
+        }
+    }
+}
+
+/* ---------------------------------- TCHAT --------------------------------- */
+.Tchat-Gratuit-Title {
+    color: $bleu;
+}
+.Tchat-Overlay {
+    border-radius: 10px;
+}
+.Tchat-Window {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px $lightgrey;
+    
+    &-Output {
+        background-color: $tchat-bg;
+        border-radius: 10px;
+    }
+    &-Input {
+        .FormField-Input {
+            border: 2px solid $lightgrey;
+            color: inherit;
+        }
+        .FormField.withAside .aside {
+            background-color: $bleu;
+            border: 2px solid $lightgrey;
+            border-radius: 8px;
+            color: $lightgrey;
+        }
+    }
+}
+
+.codeastro {
+    font-size: 1.6rem;
+    color: $turquoise;
+}
+
+.Tchat-Message-Person.F {
+    color: $rose;
+}
+.Tchat-Message-Person.M {
+    color: $bleu;
+}
+
+/* ---------------------------------- DRI-POSTMAIL --------------------------------- */
+.DRI {
+    &-Slogan {
+        width: 80%;
+        margin: 3rem auto 0;
+        padding: 1rem;
+        border: 2px solid $turquoise;
+        text-align: center;
+        font-size: 2rem;
+        color: $turquoise;
+        hyphens: none;
+    }
+    
+    &-Sent {
+        text-align: center;
+    }
+    
+    &-Form {
+        & p {
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        &-Title {
+            padding: 1rem 0;
+            background-color: white;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            color: $bleu;
+            hyphens: none;
+
+            & strong {
+                font-weight: normal;
+                color: $turquoise;
+            }
+        }
+
+        &-Subtitle {
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            font-size: 2.8rem;
+            color: $rose;
+        }
+        
+        &Container {
+            margin-top: 2rem;
+        }
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
+    }
+}
+
+@media all and (max-width: 640px){
+   .DRI{
+        &-Slogan {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 510px){
+    .Tchat-Overlay {
+        border-radius: 0;
+    }
+    .Tchat-Window {
+        border-radius: 0;
+    }
+    .Tchat-Message {
+        padding: 0 1rem;
+    }
+}
+

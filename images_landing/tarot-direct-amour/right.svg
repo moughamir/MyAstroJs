@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="corner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-467 253.833 24.75 53.531" style="enable-background:new -467 253.833 24.75 53.531;" xml:space="preserve">
+<g id="right">
+	<rect id="XMLID_6_" x="-466.5" y="255" style="fill:#FFFFFF;" width="1" height="52"/>
+	<polyline id="XMLID_2_" style="fill:none;stroke:#C0C3C8;stroke-miterlimit:10;" points="-466.25,255 -442.75,281 -466.25,307 	"/>
+	<polygon id="XMLID_5_" style="fill:#FFF;" points="-465.5,256.302 -465.5,305.688 -443.178,281 	"/>
+</g>
+<g id="left_1_" style="display:none;">
+	<rect id="XMLID_84_" x="-443.5" y="255" style="display:inline;fill:#FFFFFF;" width="1" height="52"/>
+	<polyline id="XMLID_83_" style="display:inline;fill:none;stroke:#C0C3C8;stroke-miterlimit:10;" points="-443.25,255 -466.75,281 
+		-443.25,307 	"/>
+	<polygon id="XMLID_82_" style="display:inline;fill:#FFF;" points="-443.5,256.302 -443.5,305.688 -465.822,281 	"/>
+</g>
+</svg>
