@@ -1,17 +1,27 @@
 <?php
-$questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
-//
+/* 
+    --------------------------------------
+    --   previsions-2017 = AFFIL BASE   --
+    --------------------------------------
+
+    Created on : 20 décembre 2016
+    Author     : Mohamed Moughamir <moughamir@gmail.com>
+*/
+
 $pageName = "previsions-2017";
 $method = "general-suscribe";
 $support = "voyance";
-$site= "myastro-omnizya.c9users.io";
+$site = "myastro.fr";
+$seo = "affilbase";
 $pageDri = "previsions-2017-dri";
+
+$question = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Campagne Prévisions astro 2017'];
+
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,6 +39,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 </head>
 
 <body>
+  <div class="form-container overlay" id="form-overlay"></div>
   <!-- SVG -->
   <svg class="hidden">
     <defs>
@@ -790,17 +801,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               <div class="sign-prevision-container">
                 <p class="prevision">SIGN_TEXT</p>
                 <div class="FormContainer">
-                  <div class="form-container overlay" id="form-overlay"></div>
                   <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                    <input type="hidden" name="method" value="general-suscribe" />
+                    <input type="hidden" name="method" value="<?= $method; ?>" />
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
                     <input type="hidden" name="dri" value="<?= $pageDri; ?>" />
                     <!-- ########## autres champs pré-remplis ########## -->
-                    <input type="hidden" name="tel_needed" value="0" />
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
                     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
