@@ -10,16 +10,7 @@
 
 // Paramètres design
 $root = './';
-$cards_dir = 'tarot/cartes/original-grand/';
-$pict_path = 'images_landing/tarot-direct/';
-$css = 'css/tarot-direct.css';
-// Design Noël
-$j = date('j');
-$m = date('n');
-if($m == 12 || ($m == 1 && $j <= 5)){
-    $pict_path = 'images_landing/tarot-direct-noel/';
-    $css = 'css/tarot-direct-noel.css';
-}
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 $include_form_dri = false;
 include('tchat-gratuit/init.php');
@@ -132,7 +123,4 @@ include('tchat-gratuit/init.php');
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
