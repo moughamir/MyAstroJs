@@ -53,6 +53,10 @@ $woman: $rose;
 $men: $bleu;
 $tchat-bg: #E8E8E8;
 
+.hidden {
+    display: none;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
@@ -578,6 +582,16 @@ input[type="checkbox"]{
     }
     .Tchat-Message {
         padding: 0 1rem;
+    }
+}
+
+/*--------------------------       FOOTER         ----------------------------*/
+.footer-links{
+    li {
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
     }
 }
 

@@ -5,8 +5,9 @@
     --   tarot-direct-rc-g = REFLEX CACHE   --
     ------------------------------------------
 
-    Created on : 13 septembre 2016
+    Created on : 19 décembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
+    Co-Author  : Med Moughamir <moughamir@gmail.com>
 */
   $cards_dir = 'tarot/cartes/original-grand/';
   $questions = array (
@@ -37,12 +38,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>Tarot Direct - Interprétation en live !</title>
+        <title>Tarot Direct Amour - Interprétation en live !</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/png" href="images_landing/tarot-direct-amour/favicon.png" />
-        <!-- ### Ressources CSS à charger en dernier ### -->
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Raleway:400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/tarot-direct-amour.css" />
@@ -125,12 +125,12 @@
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-rc-g" />
+                                <input type="hidden" name="source" value="tarot-direct-amour" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="tarot-direct-dri" />
+                                <input type="hidden" name="dri" value="tarot-direct-amour-dri" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <!-- ############################################### -->
@@ -302,7 +302,7 @@
             </section>
         </div>
         
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <div class="SiteCopyright"><?php include('include/footer_copyright-v2.php'); ?></div>
         
         <!-- #### SCRIPTS #### -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
