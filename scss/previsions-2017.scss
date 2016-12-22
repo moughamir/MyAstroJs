@@ -664,6 +664,7 @@ $zodiac:(
   .form-title {
     font-family: $oswald;
     font-size: 2.3rem;
+    text-align: center;
     &::before {
       content: '';
       display: inline-flex;
