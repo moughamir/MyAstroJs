@@ -25,7 +25,8 @@ include('tchat-gratuit/init.php');
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/png" href="images_landing/tarot-direct-amour/favicon.png" />
-        
+        <link href="//fonts.googleapis.com/css?family=Indie+Flower|Lobster|Raleway:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/tarot-direct-amour.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -100,10 +101,10 @@ include('tchat-gratuit/init.php');
             </section>
         </div>
         
-        <div class="SiteCopyright"><?php include('include/footer_copyright-v2.php'); ?></div>s
+        <div class="SiteCopyright"><?php include('include/footer_copyright-v2.php'); ?></div>
         
         <!-- #### SCRIPTS #### -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript">
             /* Configuration du tchat */
             var msgs = <?= json_encode($tchat->getFlattenMessages()); ?>;
@@ -123,8 +124,3 @@ include('tchat-gratuit/init.php');
               include('include/conversion/reflexcash.php'); ?>
     </body>
 </html>
-<!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

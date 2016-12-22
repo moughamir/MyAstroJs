@@ -30,6 +30,14 @@
   $_SESSION['reflexcache_id'] = isset($_GET['t1']) ? $_GET['t1'] : '';
   $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
   $email = isset($_GET['email']) ? $_GET['email'] : '';
+  
+  $source ="tarot-direct-amour";
+  $method ="general-suscribe";
+  $support ="tarot";
+  $site ="myastro.fr";
+  $affiliation ="reflexcache";
+  $dri ="tarot-direct-amour-dri";
+  
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,7 +51,7 @@
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/png" href="images_landing/tarot-direct-amour/favicon.png" />
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Raleway:400,700" rel="stylesheet" type="text/css" />
+        <link href="//fonts.googleapis.com/css?family=Indie+Flower|Lobster|Raleway:400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="css/tarot-direct-amour.css" />
         
@@ -125,12 +133,12 @@
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-amour" />
-                                <input type="hidden" name="method" value="general-suscribe" />
-                                <input type="hidden" name="support" value="tarot" />
-                                <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="tarot-direct-amour-dri" />
+                                <input type="hidden" name="source" value="<?= $source ?>" />
+                                <input type="hidden" name="method" value="<?= $method ?>" />
+                                <input type="hidden" name="support" value="<?= $support ?>" />
+                                <input type="hidden" name="site" value="<?= $site ?>" />
+                                <input type="hidden" name="affiliation" value="<?= $affiliation ?>" />
+                                <input type="hidden" name="dri" value="<?= $dri ?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <!-- ############################################### -->
