@@ -13,3 +13,6 @@ yyadmin/.htaccess
 .idea
 *.map
 scss/*.css
+desktop.ini
+Thumbs.db
+

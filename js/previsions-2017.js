@@ -70,8 +70,7 @@ $(function() {
     $('input[name="sign"]').val(zodiacFr[s]);
     // effects
     showExpander({x: e.pageX, y: e.pageY}, function() {
-        console.log('Expand it');
-        
+        // no callback!
 				}, zodiacColor[s]);
   });
   // when the user click back empty zodiac-large
@@ -82,17 +81,6 @@ $(function() {
      $('.svg-container').empty();
   });
   
-  /*
-  single.forEach(function(i, p){
-    i.click(function(event){
-      event.preventDefault();
-      showExpander({x: event.pageX, y: event.pageY}, function() {
-        console.log('Expand it')
-				});
-console.log('done')
-    });
-  });
-  */
   // VFX
   // Expender
   // Source : http://tympanus.net/Development/RecordPlayer/
@@ -110,9 +98,8 @@ console.log('done')
       scale: 1.5,
       backgroundColor : zBackground // trying to put the clicked sign color
     };
-    console.log(zBackground);
     expander.css(expenderStyle);
-    expander.animate(expanderAnimation, 500, function(){console.log('animated')});
+    expander.animate(expanderAnimation, 500);
     expander.addClass('scale');
     setTimeout(function(){
       $('html').addClass('js');
@@ -143,7 +130,4 @@ console.log('done')
 	  }
 	  */
   });
-  // Lock orientation
-  var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-  orientation.lock('portrait');
 });
