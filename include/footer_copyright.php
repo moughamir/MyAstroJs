@@ -1,1 +1,1 @@
-Copyright © <?php echo date("Y"); ?> | Myastro
+Copyright © <span itemprop="copyrightYear" ><?php echo date("Y"); ?></span> | <a href="myastro.fr/" itemprop="copyrightHolder" itemtype="http://schema.org/Organization" itemscope="" title="MyAstro">Myastro</a>
