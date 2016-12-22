@@ -2526,10 +2526,19 @@ body {
 
 /* Dossier images */
 /* Palette */
+.hidden {
+  display: none; }
+
+strong a {
+  color: inherit;
+  text-decoration: inherit; }
+  strong a:hover {
+    color: inherit; }
+
 body {
   font-family: 'Raleway', sans-serif;
   color: #454545;
-  background: url("../images_landing/tarot-direct-amour/background.png") no-repeat center bottom;
+  background: url("../images_landing/tarot-direct-amour/background.png") fixed center bottom no-repeat;
   background-size: cover;
   min-height: 100vh; }
 
@@ -2817,18 +2826,43 @@ input[type="checkbox"]:checked + label span.checkbox::after {
   .DRI-Promo-Slogan-Tel {
     font-size: 2.8rem;
     text-decoration: underline;
-    color: #da7b8e; }
+    color: #f1134c; }
     .DRI-Promo-Slogan-Tel:hover {
-      color: #f1134c; }
+      color: #da7b8e; }
     .DRI-Promo-Slogan-TelIcon {
       background-image: url("../images_landing/tarot-direct-amour/tel.png"); }
   .DRI-Promo-Slogan-CodePromo {
     font-size: 2.8rem;
-    color: #da7b8e; }
+    color: #f1134c; }
+  .DRI-Promo-DescText {
+    font-weight: normal; }
 
 /* ---------------------------------- TCHAT --------------------------------- */
-.Tchat-Gratuit-Title {
+.Tchat-Message-Person {
   color: #f1134c; }
+
+.Tchat-Waiting {
+  color: #267d9d; }
+
+.Tchat-Gratuit-Title {
+  margin-top: 2rem;
+  color: #f1134c; }
+
+.Tchat-Gratuit-Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f1134c; }
+
+a.FormField-Button {
+  color: #fff;
+  background: #f1134c;
+  text-decoration: none;
+  font-weight: 600;
+  border: 3px solid #b1001d;
+  margin-left: 2rem; }
 
 .Tchat-Overlay {
   border-radius: 10px; }
@@ -2852,12 +2886,6 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 .codeastro {
   font-size: 1.6rem;
   color: #da7b8e; }
-
-.Tchat-Message-Person.F {
-  color: #4f9d7a; }
-
-.Tchat-Message-Person.M {
-  color: #f1134c; }
 
 /* ---------------------------------- DRI-POSTMAIL --------------------------------- */
 .DRI-Slogan {
@@ -2910,5 +2938,10 @@ input[type="checkbox"]:checked + label span.checkbox::after {
 
   .Tchat-Message {
     padding: 0 1rem; } }
+/*--------------------------       FOOTER         ----------------------------*/
+.footer-links li {
+  display: inline-block; }
+.footer-links a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=tarot-direct-amour.css.map */

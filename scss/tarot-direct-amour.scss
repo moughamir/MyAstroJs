@@ -56,11 +56,17 @@ $tchat-bg: #E8E8E8;
 .hidden {
     display: none;
 }
-
+strong a {
+    color: inherit;
+    text-decoration: inherit;
+    &:hover{
+        color: inherit;
+    }
+}
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
-    background: url($img_dir + 'background.png') no-repeat center bottom;
+    background: url($img_dir + 'background.png') fixed center bottom no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
@@ -441,16 +447,15 @@ input[type="checkbox"]{
 
 .DRI-Promo {
     font-weight: bold;
-    
     &-Slogan {
 
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
-            color: $turquoise;
+            color: $primary;
             
             &:hover {
-                color: $bleu;
+                color: $addon;
             }
             
             &Icon {
@@ -460,14 +465,40 @@ input[type="checkbox"]{
         
         &-CodePromo {
             font-size: 2.8rem;
-            color: $turquoise;
+            color: $primary;
         }
+    }
+    &-DescText {
+        font-weight: normal;
     }
 }
 
 /* ---------------------------------- TCHAT --------------------------------- */
+.Tchat-Message-Person {
+    color: $primary;
+}
+.Tchat-Waiting{
+    color: #267d9d;
+}
 .Tchat-Gratuit-Title {
+    margin-top: 2rem;
     color: $bleu;
+}
+.Tchat-Gratuit-Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f1134c;
+}
+a.FormField-Button {
+    color: #fff;
+    background: #f1134c;
+    text-decoration: none;
+    font-weight: 600;
+    border: 3px solid #b1001d;
+    margin-left: 2rem;
 }
 .Tchat-Overlay {
     border-radius: 10px;
@@ -498,13 +529,6 @@ input[type="checkbox"]{
 .codeastro {
     font-size: 1.6rem;
     color: $turquoise;
-}
-
-.Tchat-Message-Person.F {
-    color: $rose;
-}
-.Tchat-Message-Person.M {
-    color: $bleu;
 }
 
 /* ---------------------------------- DRI-POSTMAIL --------------------------------- */
