@@ -2572,6 +2572,10 @@ input, input:hover, input:active {
       background: url("../images_landing/previsions-2017/pre-title-big.png") no-repeat center center;
       background-size: contain;
       margin: 0 10px 0 -30px; }
+    .dri .form-title .highlight {
+      color: #e99d26;
+      text-transform: uppercase;
+      font-weight: 600; }
   .dri form {
     width: 65%;
     margin: 0 auto; }
