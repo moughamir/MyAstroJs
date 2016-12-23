@@ -56,7 +56,12 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer">
-                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class">
+                            <span class="Pop-Voyant-Photo"></span>
+                            <article class="offre">
+                                "Voici votre accès personnel à seulement <b>1€ <?= $prenom ?></b>, je vous attends sur mon espace privé !"
+                            </article>
+                        </div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
                             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
@@ -67,7 +72,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                                 </p>
                             </div>
                             <?php } else { ?>
-                            <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
+                            <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
                             <form method="post" class="DRI-FormContainer">
                                 <div class="DRI-Form FormContainer-Fields">
                                     <p>Nos voyants répondent à vos questions</p>
@@ -128,7 +133,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="WidgetTarot">
-                        <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <?= $voyant;?></div>
+                        <div class="WidgetTarot-ResultMsg">Votre tirage</div>
                         <div class="WidgetTarot-Result">
                             <?php for($i=0;$i<5;$i++){ ?>
                             <div class="WidgetTarot-Card place" data-number="<?= $i ?>" style="background-image: url('<?= $cards_dir.$draw[$i];?>')"></div>

@@ -2695,12 +2695,29 @@ body {
 /* ------------------------------- POP VOYANT ------------------------------- */
 .Pop.Pop-Voyant {
   background-color: transparent;
-  background-image: url("../images_landing/tarot-direct-amour/hexagone-active.png"); }
+  background-image: url("../images_landing/tarot-direct-amour/hexagone-active.png");
+  left: -153px; }
   .Pop.Pop-Voyant.Christelle .Pop-Voyant-Photo {
     background-image: url("../images_landing/tarot-direct-amour/christelle.png"); }
   .Pop.Pop-Voyant.Sonia .Pop-Voyant-Photo {
     background-image: url("../images_landing/tarot-direct-amour/sonia.png"); }
 
+@media all and (max-width: 680px) {
+  .Pop.Pop-Voyant {
+    width: 120px;
+    height: 105px;
+    left: -30px; }
+
+  .offre {
+    display: none; } }
+@media all and (max-width: 480px) {
+  .Pop.Pop-Voyant {
+    left: 50%;
+    top: -70px;
+    margin-left: -60px; }
+
+  .offre {
+    display: none; } }
 /* ------------------------------- FORMULAIRE ------------------------------- */
 .FormContainer {
   background-color: #e7f2ec;
@@ -2925,6 +2942,13 @@ a.FormField-Button {
   margin-top: 2rem; }
 .DRI .FormContainer-Submit.btn-rose {
   text-transform: uppercase; }
+
+.offre {
+  font-size: 2rem;
+  font-family: "Indie Flower";
+  color: #454545;
+  line-height: 1.2;
+  text-align: center; }
 
 @media all and (max-width: 640px) {
   .DRI-Slogan {
