@@ -1,4 +1,12 @@
 <?php
+/* 
+    ------------------------------------------
+    --   previsions-2017-dri = AFFIL BASE   --
+    ------------------------------------------
+
+    Created on : 20 décembre 2016
+    Author     : Mohamed Moughamir <moughamir@gmail.com>
+*/
 include('include/process-dri.php');
 ?>
 <!doctype html>
@@ -30,7 +38,7 @@ include('include/process-dri.php');
           </a>
         </div>
         <div class="one-third"></div>
-        <h1 class="hidden">Prévision de l'année 2017</h1>
+        <h1 class="hidden">Prévisions de lʼannée 2017</h1>
       </header>
 
       <main class="site-content v2">
@@ -46,8 +54,13 @@ include('include/process-dri.php');
                 </div>
             </article>
             <article class="FormContainer center">
+              <?php if($support_obj == 'MAILING'){ ?>
+              <h1 class="form-title sign-name">Nous vous rappellons <span class="highlight">gratuitement</span>.
+              <p class="message">Il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
+              <?php } elseif($support_obj == 'DRI'){ ?>
               <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos prévisions 2017 par Email</h1>
               <p class="message">Si vous ne souhaitez pas attendre d’avantage, notre équipe est à votre disposition et peut vous rappeller <span class="highlight">gratuitement</span>. Il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
+              <?php } ?>
               <div class="img-center">
                 <img src="images_landing/previsions-2017/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free" />
               </div>
@@ -60,14 +73,11 @@ include('include/process-dri.php');
                     <form action="" method="post" class="Primary-Form">
                         <div class="FormContainer-Fields Fields-Table">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="save_tel" value="1" />
-                            <input type="hidden" name="tel_needed" value="1" />
                             <input type="hidden" name="prenom" value="<?= $prenom ?>" />
-                            <!-- ############################################### -->
                             <div class="Fields-Table-Row">
                                 <div class="FormField input-email">
                                     <input id="tel" type="tel" name="tel" class="FormField-Input"
-                                           value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required/>
+                                           value="<?= $tel ?>" placeholder="Mon numéro de téléphone" required/>
                                 </div>
                             </div>
                             <div class="Fields-Table-Row">
