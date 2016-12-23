@@ -27,7 +27,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
         <link rel="icon" type="image/png" href="images_landing/tarot-direct-amour/favicon.png" />
         <link href="//fonts.googleapis.com/css?family=Indie+Flower|Lobster|Raleway:400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct-amour.css" />
+        <link rel="stylesheet" type="text/css" href="css/tarot-direct-amour.min.css" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
