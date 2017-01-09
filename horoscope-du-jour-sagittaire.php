@@ -52,7 +52,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DU JOUR GRATUIT : Sagittaire</h2>
+                                    <h4>VOTRE HOROSCOPE DU JOUR GRATUIT : Sagittaire</h4>
                                     <img src="images_voyance/signes/sagittaire.png" />
                                 </div>
                                 <!-- Résultat horoscope -->

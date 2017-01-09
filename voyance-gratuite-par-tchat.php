@@ -71,7 +71,7 @@
                             
                             <div class="formulaire-voyance-g">
                                 <div class="widget-title vy-title">
-                                    <h2 class="h4">Votre voyance gratuite par tchat</h2>
+                                    <h4>Votre voyance gratuite par tchat</h4>
                                 </div>
                                 <div class="widget w-adv">
                                     <div id="form-w" class="widget-content clearfix">

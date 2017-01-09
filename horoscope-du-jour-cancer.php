@@ -55,7 +55,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DU JOUR GRATUIT : Cancer</h2>
+                                    <h4>VOTRE HOROSCOPE DU JOUR GRATUIT : Cancer</h4>
                                     <img src="images_voyance/signes/cancer.png" class="signe" title="Symbole astrologique cancer" />
                                 </div>
                                 <!-- Résultat horoscope -->

@@ -101,10 +101,10 @@
                     <!-- Zone de texte -->
                     <div class="widget widget-home">
                         <div class="widget-title">
-                            <h2 class="h4">Votre voyance en ligne, par mail ou par tchat</h2>
+                            <h4>Votre voyance en ligne, par mail ou par tchat</h4>
                         </div>
                         <div class="text-justify text-front-end">
-                            <p><span style="color:#000000; ">MyAstro vous permet de suivre une séance de voyance aussi bien en chattant directement avec l'un de nos experts qu'en recevant un mail complet répondant à vos questions et vous en dévoilant plus sur votre avenir. Quoi qu'il en soit, notre site de voyance confidentielle se veut le plus accessible possible pour permettre à chacun de trouver les réponses à ses questions.</span></p>
+                            <p><span style="color:#000000; ">MyAstro vous permet de suivre une séance de voyance aussi bien en chattant directement avec lʼun de nos experts quʼen recevant un mail complet répondant à vos questions et vous en dévoilant plus sur votre avenir. Quoi quʼil en soit, notre site de voyance confidentielle se veut le plus accessible possible pour permettre à chacun de trouver les réponses à ses questions.</span></p>
                         </div>
                     </div>
                     
@@ -130,10 +130,10 @@
                                             </div>
                                             <div class="item">
                                                 <a href="http://<?= ROOT_URL ?>/tarot-de-l-amour">
-                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour" width="604" height="400" />
+                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de lʼamour" width="604" height="400" />
                                                 </a>
                                                 <div class="carousel-caption">
-                                                    <p>Une question sur votre vie sentimentale? Des interrogations sur la fiabilit&eacute; de votre partenaire? Essayez le <a href="http://<?= ROOT_URL ?>/tarot-de-l-amour">tarot de l'amour gratuit.</a></p>
+                                                    <p>Une question sur votre vie sentimentale? Des interrogations sur la fiabilit&eacute; de votre partenaire? Essayez le <a href="http://<?= ROOT_URL ?>/tarot-de-l-amour">tarot de lʼamour gratuit.</a></p>
                                                 </div>
                                             </div>
                                             <div class="item">
@@ -146,10 +146,10 @@
                                             </div>
                                             <div class="item">
                                                 <a href="http://<?= ROOT_URL ?>/tarot-mensuel">
-                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image d'un tirage de tarot"  width="604" height="400" />
+                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_MENSUEL.png" alt="Image dʼun tirage de tarot"  width="604" height="400" />
                                                 </a>
                                                 <div class="carousel-caption">
-                                                    <p>Gr&acirc;ce &agrave; notre tarot votre vie sentimentale s'&ecute;claircit en quelques clics. Faites le test sans attendre et essayez le <a href="http://<?= ROOT_URL ?>/tarot-mensuel">tarot mensuel gratuit.</a></p>
+                                                    <p>Gr&acirc;ce &agrave; notre tarot votre vie sentimentale sʼ&ecute;claircit en quelques clics. Faites le test sans attendre et essayez le <a href="http://<?= ROOT_URL ?>/tarot-mensuel">tarot mensuel gratuit.</a></p>
                                                 </div>
                                             </div>
                                             <div class="item">
@@ -164,10 +164,10 @@
                                         <div class="indicators-handler">
                                             <ol class="carousel-indicators">
                                                 <li data-target="#carousel-tarot" data-slide-to="0" class="active">
-                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image d'un tirage de tarot" width="604" height="400" />
+                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_HEBDOMADAIRE.png" alt="Image dʼun tirage de tarot" width="604" height="400" />
                                                 </li>
                                                 <li data-target="#carousel-tarot" data-slide-to="1">
-                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de l'amour"  width="604" height="400" />
+                                                    <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_AMOUR.png" alt="Image tarot de lʼamour"  width="604" height="400" />
                                                 </li>
                                                 <li data-target="#carousel-tarot" data-slide-to="2">
                                                     <img src="http://<?= ROOT_URL ?>/images/bannieres/tarot/TAROT_QUOTIDIEN.png" alt="Image tarot quotidien"  width="604" height="400" />
@@ -186,10 +186,10 @@
                             <!--zone de texte -->
                             <div class="widget">
                                 <div class="widget-title">
-                                    <h2 class="h4">Amour, travail, famille, argent : votre voyance avec MyAstro</h2>
+                                    <h4>Amour, travail, famille, argent : votre voyance avec MyAstro</h4>
                                 </div>
                                 <div class="text-justify text-front-end">
-                                    <p><span style="color:#000000;">Avec MyAstro, profitez simplement d'une voyance en direct sur le sujet qui vous intéresse le plus. Que vous préfériez connaître votre avenir amoureux ou savoir si la fortune vous sourira, la voyance vous apportera des réponses claires. Au quotidien, vous pourrez ainsi lire sur notre site votre horoscope, ou par exemple tirer les cartes du tarot chaque semaine.</span></p>
+                                    <p><span style="color:#000000;">Avec MyAstro, profitez simplement dʼune voyance en direct sur le sujet qui vous intéresse le plus. Que vous préfériez connaître votre avenir amoureux ou savoir si la fortune vous sourira, la voyance vous apportera des réponses claires. Au quotidien, vous pourrez ainsi lire sur notre site votre horoscope, ou par exemple tirer les cartes du tarot chaque semaine.</span></p>
                                 </div>
                             </div>
                         </div>

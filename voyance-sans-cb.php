@@ -56,7 +56,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 
                 <aside class="widget w-adv">
                     <div class="widget-title">
-                        <h2 class="h4">Fiable et confidentielle</h2>
+                        <h4>Fiable et confidentielle</h4>
                     </div>
 
                     <div class="widget-content clearfix">

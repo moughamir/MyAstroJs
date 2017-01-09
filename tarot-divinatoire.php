@@ -50,7 +50,7 @@
             <div class="span6 main-content">
 
                 <div class="widget-title">
-                        <h2 class="h4">Tarot divinatoire</h2>
+                        <h4>Tarot divinatoire</h4>
                 </div>
                 <!-- texte -->
                 <div>

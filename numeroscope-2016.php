@@ -49,7 +49,7 @@
 
                <aside class="widget w-adv">
                     <div class="widget-title">
-                        <h2 class="h4">MA DATE DE NAISSANCE</h2>
+                        <h4>MA DATE DE NAISSANCE</h4>
                     </div>
 <form method="POST" action="numero.php?cat=numeroscope-2016" >
                     <div class="widget-content clearfix">
@@ -220,7 +220,7 @@
 
                 <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h2 class="h4">QUEL EST VOTRE CHIFFRE PRÉFÉRÉ ?</h2>
+                        <h4>QUEL EST VOTRE CHIFFRE PRÉFÉRÉ ?</h4>
                     </div>
 
                     <div class="widget-content clearfix thumbnails">

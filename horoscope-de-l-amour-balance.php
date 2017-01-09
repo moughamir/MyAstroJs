@@ -60,7 +60,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DE L’AMOUR CE MOIS : Balance</h2>
+                                    <h4>VOTRE HOROSCOPE DE L’AMOUR CE MOIS : Balance</h4>
                                     <img src="images_voyance/signes/balance.png" class="signe" title="symbole Balance" />
                                 </div>
                                 <!-- Résultat horoscope -->

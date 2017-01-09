@@ -56,7 +56,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DU JOUR GRATUIT : Verseau</h2>
+                                    <h4>VOTRE HOROSCOPE DU JOUR GRATUIT : Verseau</h4>
                                     <img class="signe" src="images_voyance/signes/verseau.png" title="Sylbole Verseau" />
                                 </div>
                                 <!-- Résultat horoscope -->

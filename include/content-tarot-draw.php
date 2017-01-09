@@ -28,7 +28,7 @@
     </div>
 </div>
 <div class="widget-title second-title">
-    <h2 class="h4">Votre tirage</h2>
+    <h4>Votre tirage</h4>
 </div>
 <div class="donne">
     <div class="donneHandler">
