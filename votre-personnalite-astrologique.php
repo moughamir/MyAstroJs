@@ -28,7 +28,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
             <span class="share-icon icon-caret-right"></span>
 
             <div class="share-icons">
-              <h5 itemprop="headline">Avec Myastro, répondez à vos questionnements de compatibilité avec les personnes qui vous entourent en définissant votre personnalité astrologique.</h5>
+              <p itemprop="headline">Avec Myastro, répondez à vos questionnements de compatibilité avec les personnes qui vous entourent en définissant votre personnalité astrologique.</p>
             </div>
 
           </div>

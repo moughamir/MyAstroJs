@@ -76,7 +76,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
                             </header><br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
 
             <div class="row-fluid">
                 <div class="share-icons widget-title" style="margin-bottom:10px; text-align:center;width:97%; margin-left:-37px;width:100%;">

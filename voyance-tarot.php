@@ -54,7 +54,7 @@
                     <!-- Main Content -->
                     <div class="row-fluid">
                         <header>
-                            <h1 itemprop="headline" style="margin-bottom: 30px">Voyance tarot gratuit : Découvrez les prédictions des cartes</h1>
+                            <h1 itemprop="headline" style="margin-bottom: 30px">Voyance par tarot gratuit : Découvrez les prédictions des cartes</h1>
                         </header>
                         <span class="clearfix"></span>
                         

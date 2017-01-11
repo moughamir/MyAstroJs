@@ -22,7 +22,7 @@
 						<span class="share-icon icon-caret-right"></span>
 
 						<div class="share-icons">
-							<h5 itemprop="headline">Grâce aux conseils de Myastro, vous pourrez facilement surmonter toutes les étapes de votre vie au moyen des conseils qui vous sont donnés après une étude de votre numérologie.</h5>
+							<p itemprop="headline">Grâce aux conseils de Myastro, vous pourrez facilement surmonter toutes les étapes de votre vie au moyen des conseils qui vous sont donnés après une étude de votre numérologie.</p>
 						</div>
 					</div>
 

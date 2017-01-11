@@ -18,7 +18,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <title>Tarifs Forfait <?= ucfirst($forfait['name']);?> - Myastro</title>
+        <title>Tarifs Forfait <?= ucfirst($forfait['name']);?> | Myastro</title>
         <meta name="robots" content="noindex, nofollow" />
         
         <link href="css/forfait-abo.css" type="text/css" rel="stylesheet">
@@ -29,7 +29,7 @@
             <!-- Main Content -->
             <div class="row-fluid">
                 <div class="article-content">
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Left sidebar -->
                         <?php include('include/bloc-droit-principale.php'); ?>

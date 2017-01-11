@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Tarot de couple : êtes-vous avec la bonne personne? - Myastro</title>
+    <title>Tarot de couple : êtes-vous avec la bonne personne? | Myastro</title>
 	<meta name="description" content="Avec Myastro, questionnez les cartes de Tarot pour savoir si votre couple est compatible et si votre relation est vouée au succès." />
 <?php include('include/header_inc.php'); ?>
 

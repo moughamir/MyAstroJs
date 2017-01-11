@@ -89,7 +89,7 @@
                     </header>
                     <span class="clearfix"></span>
                     
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <section class="span270">
                             <!--Barre de centre-->

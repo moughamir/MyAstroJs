@@ -31,7 +31,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">déontologie fixe ce que les clients sont en droit d'attendre de nous.</h5>
+										<p itemprop="headline">déontologie fixe ce que les clients sont en droit d'attendre de nous.</p>
 									</div>
 
 								</div>
@@ -41,7 +41,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <div style="border:none; margin-right:20px; text-align:justify;"><a name="charte" id="charte"></a>
 
 <div style="margin-left:10px;">

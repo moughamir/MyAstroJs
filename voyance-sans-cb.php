@@ -5,7 +5,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance sans CB : ne vous faites pas avoir - Myastro</title>
+    <title>Voyance sans CB : ne vous faites pas avoir | Myastro</title>
     <meta name="description" content="Vous souhaitez bénéficier de conseils en voyance mais êtes réfractaire à l'idée de communiquer vos données bancaires. MyAstro vous propose un service de voyance sans CB." />
     <?= $tracker->getCanonical() ?>
 
@@ -41,7 +41,7 @@ $tracker = new Tracker(new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST));
           <br>
           <span class="clearfix"></span>
 
-          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
           <div class="row-fluid">			
              <!-- Right sidebar -->
              <?php include('include/bloc-droit-secondaire.php'); ?>

@@ -50,7 +50,7 @@
                     </header>
                     <span class="clearfix"></span>
                     
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid" style="background:url('voyance-gratuite-6_files/back_voyance_gratuite.pn') no-repeat fixed center center rgba(0, 0, 0, 0); margin-top:-22px;">
                         <!-- main content -->
                         <div class="span6 main-content" style="width:100%;">

@@ -33,7 +33,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Chiffre 8 : Calculez votre compatibilité amoureuse avec votre compagne grâce aux expertises de Myastro et sachez si votre relation peut être durable ou non.</h5>
+                                    <p itemprop="headline">Chiffre 8 : Calculez votre compatibilité amoureuse avec votre compagne grâce aux expertises de Myastro et sachez si votre relation peut être durable ou non.</p>
                                 </div>
 
                             </div>
@@ -43,7 +43,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
  <div class="row-fluid">
                <!-- Right sidebar -->
 							<?php include('include/bloc-droit-secondaire.php'); ?>	

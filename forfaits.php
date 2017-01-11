@@ -99,7 +99,7 @@ $voyants = array(
                         </div>
                     </header>
                     <span class="clearfix"></span>
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- main content -->
                         <aside class="widget w-adv">

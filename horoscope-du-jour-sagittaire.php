@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du jour Sagittaire : Comment appréhender votre journée ? - Myastro</title>
+        <title>Horoscope du jour Sagittaire : Comment appréhender votre journée ? | Myastro</title>
 	<meta name="description" content="Signe Sagittaire : Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>

@@ -7,6 +7,8 @@
 <?php 
     $i = 1;
     foreach ($ac_result as $titre => $texte){ 
+        $texte = preg_replace('#^(<br/?>)*#si', '', $texte);
+        $texte = preg_replace('#(<br/?>)*$#si', '', $texte);
 ?>
             <div class="accordion-group">
                 <div class="accordion-heading">
