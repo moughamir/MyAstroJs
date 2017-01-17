@@ -5,12 +5,12 @@
  */
 
 $(document).ready(function(){
-    
+
     // On commence par cacher la div d'erreur
     if($('.alert-danger').is(':visible')){
         $($('.alert-danger').hide());
     }
-    
+
     // Gestion affichage du champs du conjoint    
     var toogle_spouse = function(){
         var flag = false;
@@ -48,7 +48,7 @@ $(document).ready(function(){
     $('.theme_id').each(function(){
         $(this).change(toogle_spouse);
     });
-    
+
     // Soumission du formulaire
     $(document).on('submit', 'form.ajax', function(e){
         e.preventDefault();
@@ -57,12 +57,12 @@ $(document).ready(function(){
         form_overlay = $('#form-overlay');
         use_modal = true;
         use_form_alert = true;
-        
+
         form_alert = form.find('.alert-danger');
         if (form_alert.length < 1){
             use_form_alert = false;
         }
-        
+
         alert_loading = '\
             <p class="alert alert-warning">\
                 <b><i class="fa fa-refresh fa-spin"><img src="/images/warning-spinner.gif" /></i></b> \
@@ -110,13 +110,13 @@ $(document).ready(function(){
                 }
                 $('input,select').not('[type="submit"]').removeClass('has-an-error');
                 $('input,select').not('[type="submit"]').parent().removeClass('has-error');
-                
+
                 // Traitement de la réponse
                 if(typeof response !== 'object'){
                    console.log('ERROR : Response cannot be decoded as Json Object');   
                    console.log('RETURNED : ' + response);
                 }
-                
+
                 if(response.hasOwnProperty('conversion')){
                     $('body').append(response.conversion);
                 }

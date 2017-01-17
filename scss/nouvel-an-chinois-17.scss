@@ -132,8 +132,8 @@ body.DRI .SiteLogo {
 body.DRI.Amour .SiteLogo {
     stroke: $fushia;
     fill: $fushia;
-    -webkit-filter: drop-shadow( 0px 0px 2px $txt);
-    filter: drop-shadow( 0px 0px 2px $txt);
+    -webkit-filter: drop-shadow( 0px 0px 4px $txt);
+    filter: drop-shadow( 0px 0px 4px $txt);
 }
 
 .PageTitle {
@@ -496,7 +496,10 @@ body.DRI.Amour .ReassuranceList {
 }
 
 body.DRI.Amour {
-    .DRI-Intro-Title, .DRI-Slogan {
+    .DRI-Intro-Title {
+        color: $txt;
+    }
+    .DRI-Intro-Text, .DRI-Slogan {
         color: $fushia;
     }
 }

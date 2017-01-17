@@ -53,7 +53,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 <div class="Wheel-Item n12 Signe-Boeuf-Txt"></div>
                 <!-- Fin Signes astro -->
                 <h1 class="PageTitle">2017 annee du <strong>Coq</strong></h1>
-                <article class="FormContainer Wheel-Core">
+                <article class="FormContainer Wheel-Core" id="vm-anchor">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                     <form id="form-container" class="ajax">
                         <header class="Wheel-Core-Title FormSign-Title">
@@ -130,6 +130,9 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
         <script>
+            $(document).ready(function(){
+                $('html,body').animate({scrollTop: $('#vm-anchor').offset().top}, 1000);
+            });
             $(document).on('ajax_success', function(e){
                 $('body').addClass('Step2');
             });

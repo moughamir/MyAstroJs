@@ -43,7 +43,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                     <div class="DRI-Intro-Title">Faites-vous rappeler immédiatement</div>
                     <div class="DRI-Intro-Text">Nos voyants répondent à vos questions</div>
                 </div>
-                <article class="FormContainer">
+                <article class="FormContainer" id="vm-anchor">
                     <div class="FormContainer-Wrapper">
                         <div class="DRI-Slogan">Profitez d’une consultation<br>privée pour 1€ seulement</div>
                         <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
@@ -122,11 +122,18 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 </article>
             </div>
         </section>
-        
+
         <?php include('include/footer_reassurance.php'); ?>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('html,body').animate({scrollTop: $('#vm-anchor').offset().top}, 1000);
+            });
+        </script>
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
