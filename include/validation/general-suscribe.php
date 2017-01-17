@@ -1,5 +1,4 @@
-<?php
-// FICHIER INCLUS DEPUIS inc/ajaxHandler.php
+<?php // FICHIER INCLUS DEPUIS inc/ajaxHandler.php
 
 /* ========================================================================== *
  *                               INITIALISATION                               *

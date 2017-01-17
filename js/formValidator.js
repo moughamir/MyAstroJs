@@ -121,18 +121,17 @@ $(document).ready(function(){
                     $('body').append(response.conversion);
                 }
                 if(response.hasOwnProperty('reload_form')){
-                    $(document).trigger('form_completed_reload');
                     // Remplacement du formulaire
                     $.ajax({
                         url: response.reload_form,
                         type: 'POST',
                         success: function(data){
+                            $(document).trigger('form_completed_reload');
                             setTimeout(function(){
                                 form_container.html(data);
                                 form_overlay.fadeOut();
                                 $(document).trigger('ajax_success');
                             }, 1000);
-                            
                         }
                     });
                 }
