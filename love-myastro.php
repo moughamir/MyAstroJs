@@ -16,7 +16,7 @@ include('include/process-dri.php');
     <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
     <link href='https://fonts.googleapis.com/css?family=Parisienne|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/love-myastro.min.git css">
+    <link rel="stylesheet" type="text/css" href="css/love-myastro.min.css">
        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
