@@ -1,22 +1,29 @@
 <?php
+/* 
+    ------------------------------------------------------------
+    --      DRI POST-MAIL = LOVE-MYASTRO-DRI = AFFIL BASE     --
+    ------------------------------------------------------------
+    Created on : 17 janvier 2017
+    Author     : Laurène Dourdin <2aurene@gmail.com>
+                 Guillaume Deschamps <guillaumedeschamps75@gmail.com>
+                 Mohamed Moughamir <moughamir@gmail.com>
+*/
 include('include/process-dri.php');
 ?>
 <!doctype html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-    <title>Love 2017- MyAstro</title>
+        <title>Votre avenir sentimental | MyAstro</title>
+        
+        <meta name="robots" content="noindex,nofollow" />
     
-    <meta name="robots" content="noindex,nofollow" />
-    
-    <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-    <link href='https://fonts.googleapis.com/css?family=Parisienne|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/love-myastro.min.css">
+        <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+
+        <link rel="stylesheet" type="text/css" href="css/love-myastro.min.css">
        
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,10 +31,8 @@ include('include/process-dri.php');
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-          
-</head>
-
-<body>
+    </head>
+    <body>
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
@@ -40,14 +45,14 @@ include('include/process-dri.php');
                         <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous rappeler gratuitement<br/>par un voyant professionnel.</h2></header>
                         <article class="DescText">
                             <div class="DescText-Content">
-                                <p><b>Une question</b> sur votre avenir ou sur celui d'un être cher&nbsp;?<br/>L'un de nos voyants reconnus vous recontacte dans les plus brefs délais et vous éclaire sur vos doutes.</p>
-                                <p>Votre couple va-t-il durer&nbsp;? Votre travail va-t-il évoluer&nbsp;?<br/>Aurez-vous des enfants&nbsp;? N'hésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
+                                <p><b>Une question</b> sur votre avenir ou sur celui dʼun être cher ?<br/>Lʼun de nos voyants reconnus vous recontacte dans les plus brefs délais et vous éclaire sur vos doutes.</p>
+                                <p>Votre couple va-t-il durer ? Votre travail va-t-il évoluer ?<br/>Aurez-vous des enfants ? Nʼhésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
                             </div>
                         </article>
                     </div>
                     
                     <div class="faq">
-                        <h3>Comment ça marche&nbsp;?</h3>
+                        <h3>Comment ça marche ?</h3>
                         <ul>
                             <li class="ico-formulaire">Je remplis le <br/>formulaire</li>
                             <li class="ico-standardiste">Je suis rappelé(e) <br/>immédiatement</li>
@@ -57,7 +62,7 @@ include('include/process-dri.php');
                 <div class="colD Form">
                     <article class="FormContainer DRI">
                         <div class="DRI-list-voyants">
-                            <h2>Nos voyants sont à votre écoute&nbsp;!</h2>
+                            <h2>Nos voyants sont à votre écoute !</h2>
                             <ul class="grid-4-tiny-2-small-2-medium-4">
                                 <li>
                                     <div class="voyant-marc" ></div>
@@ -87,10 +92,10 @@ include('include/process-dri.php');
                             <?php } else { ?>
                             <form method="post">                                
                                 <div class="FormField">
-                                    <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                    <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
                                 </div>
                                 <div class="FormField">
-                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
+                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required />
                                 </div>
                                 <div class="FormField">
                                     <select name="pays" id="pays" class="FormField-Input" required>
@@ -99,7 +104,7 @@ include('include/process-dri.php');
                                         <option value="CA">Canada</option>
                                         <option value="LU">Luxembourg</option>
                                         <option value="CH">Suisse</option>
-                                        <option value="FR">France Métropolitaine</option>
+                                        <option value="FR" selected>France Métropolitaine</option>
                                         <optgroup label="DOM-TOM">
                                             <option value="MQ">Martinique</option>
                                             <option value="GP">Guadeloupe</option>
@@ -116,7 +121,6 @@ include('include/process-dri.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-                                
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose flash" type="submit" name="demande_rappel" >Rappel Gratuit</button>
@@ -124,17 +128,17 @@ include('include/process-dri.php');
                             <?php } ?>
                         </div>
                     </article>
-                    
                 </div>
             </div>
         </section>
-        <?php include('include/footer_reassurance.php'); ?>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+        <?php include('include/footer_reassurance.php');?>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
-
 </html>
+<link href="https://fonts.googleapis.com/css?family=Parisienne|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
