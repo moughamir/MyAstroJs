@@ -16,7 +16,7 @@ include('include/process-dri.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>Vendredi 13 Spécial Chance - MyAstro</title>
+        <title>Vendredi 13 Spécial Chance | Myastro</title>
         
         <meta name="robots" content="noindex,nofollow" />
         

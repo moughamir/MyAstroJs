@@ -37,7 +37,7 @@
                         <div class="row-fluid social-share-footer">
                             <span class="share-icon icon-caret-right"></span>
                             <div class="share-icons">
-                                <h5 itemprop="headline">Grâce à Myastro, définissez avec précision votre profil astrologique et tirez-en les conclusions qui s’imposent. Prenez ensuite les bonnes décisions en toute tranquilité.</h5>
+                                <p itemprop="headline">Grâce à Myastro, définissez avec précision votre profil astrologique et tirez-en les conclusions qui s’imposent. Prenez ensuite les bonnes décisions en toute tranquilité.</p>
                             </div>
                         </div>
                     </header>

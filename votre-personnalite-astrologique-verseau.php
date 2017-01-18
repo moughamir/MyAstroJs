@@ -57,7 +57,7 @@
 
                 <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h2 class="h4">Votre personnalité astrologique gratuite: Verseau</h2>
+                        <h4>Votre personnalité astrologique gratuite: Verseau</h4>
 						<div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/signes/verseau.png" />
