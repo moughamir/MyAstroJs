@@ -31,7 +31,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">MyAstro est un service d'information gratuit et complet qui vous guide peu à peu dans la découverte de votre personnalité.</h5>
+										<p itemprop="headline">MyAstro est un service d'information gratuit et complet qui vous guide peu à peu dans la découverte de votre personnalité.</p>
 									</div>
 
 								</div>
@@ -41,7 +41,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <div style="border:none; margin-right:20px; text-align:justify;"><br>
                        <br> <p>  MyAstro est un service d'information gratuit et complet qui vous guide peu à peu dans la découverte de votre personnalité. Enfin MyAstro vous mettra en relation avec un ensemble de voyants sélectionnés par ces soins qui sauront répondre efficacement à vos attentes.<p><br><br>
 						  

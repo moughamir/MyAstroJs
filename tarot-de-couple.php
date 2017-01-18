@@ -46,7 +46,7 @@
                                 <div class="wrapper">
                                     <section class="cat-widget h-cat-1 widget"> 
                                         <div class="cat-widget-title widget-title">
-                                            <h2 class="h4">CONSULTER VOTRE TAROT DE COUPLE GRATUIT</h2>
+                                            <h4>CONSULTER VOTRE TAROT DE COUPLE GRATUIT</h4>
                                         </div>
                                         <!---------------- Début Iframe tirage tarot ---->
                                         <script language="javascript">

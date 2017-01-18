@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-   <title>Horoscope de l'amour Gémeaux: soulevez les doutes, vivez tranquillement - Myastro</title>
+   <title>Horoscope de l'amour Gémeaux: soulevez les doutes, vivez tranquillement | Myastro</title>
 	<meta name="description" content="Signe Gémeaux :Vous vous posez des questions sur votre partenaire? Vous entretenez une relation platonique sans savoir quoi faire? L'horoscope de l'amour vous répond." />
  
  
@@ -39,7 +39,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Signe Gémeaux :Vous vous posez des questions sur votre partenaire? Vous entretenez une relation platonique sans savoir quoi faire? L'horoscope de l'amour vous répond.</h5>
+                                    <p itemprop="headline">Signe Gémeaux :Vous vous posez des questions sur votre partenaire? Vous entretenez une relation platonique sans savoir quoi faire? L'horoscope de l'amour vous répond.</p>
                                 </div>
 
                             </div>

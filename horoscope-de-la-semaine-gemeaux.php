@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-   <title>Horoscope de la semaine Gémeaux: pour une semaine réussie - Myastro</title>
+   <title>Horoscope de la semaine Gémeaux: pour une semaine réussie | Myastro</title>
 	<meta name="description" content="Signe Gémeaux :Les semaines s'enchainent les unes après les autres et il vous arrive de ne pas toujours en être satisfait. Prévoyez et planifiez grâce à l'horoscope de la semaine de Myastro." />
  
  
@@ -61,7 +61,7 @@
 
                <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Gémeaux</h2>
+                        <h4>VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Gémeaux</h4>
 						<div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/signes/gemeaux.png" />

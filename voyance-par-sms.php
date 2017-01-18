@@ -29,7 +29,7 @@
                     </header>
                     <span class="clearfix"></span>
 
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">			
                         <!-- Right sidebar -->
                         <?php include('include/bloc-droit-secondaire-2.php'); ?>
@@ -38,7 +38,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-adv">
                                 <div class="widget-title">
-                                    <h2 class="h4">Fiable et confidentielle</h2>
+                                    <h4>Fiable et confidentielle</h4>
                                 </div>
                                 <div class="widget-content clearfix">
                                     <img src="images_voyance/voyance-par-sms.jpg" alt="VOYANCE PAR SMS">

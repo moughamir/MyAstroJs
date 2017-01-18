@@ -9,6 +9,9 @@
 */
 @import "templates/s-landing-tarot-3";
 
+/* Typos */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
+
 /* Dossier images */
 $img_dir : "../images_landing/tarot-direct-noel/";
 $background : $img_dir + "background.jpg";
@@ -20,8 +23,6 @@ $bg_fleche : $img_dir + "bg_fleche.png";
 $hexagone : $img_dir + "hexagone.png";
 $hexagone_hover : $img_dir + "hexagone_hover.png";
 $hexagone_active : $img_dir + "hexagone_active.png";
-$christelle : $img_dir + "christelle.png";
-$sonia : $img_dir + "sonia.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
 $icon_amour: $img_dir + "coeur.png";
@@ -169,14 +170,6 @@ body {
     }
 }
 
-.PsychicChoice-Psychic.Christelle .PsychicChoice-Psychic-Photo {
-    background-image: url($christelle);
-}
-
-.PsychicChoice-Psychic.Sonia .PsychicChoice-Psychic-Photo {
-    background-image: url($sonia);
-}
-
 /* -------------------------- CHOIX DE LA QUESTION -------------------------- */
 
 .ThemeChoice-ListItem {
@@ -272,13 +265,11 @@ body {
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
-    &.Christelle .Pop-Voyant-Photo{
-        background-image: url($christelle);
-    }
-    &.Sonia .Pop-Voyant-Photo{
-        background-image: url($sonia);
-    }
 }
+
+/* ----------------------------- PHOTOS VOYANTS ----------------------------- */
+
+@import "modules_themes/tarot-direct-psychics";
 
 /* ------------------------------- FORMULAIRE ------------------------------- */
 
