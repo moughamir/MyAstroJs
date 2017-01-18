@@ -8,21 +8,22 @@
                  'tarot-mensuel', 'tarot-de-couple' ];
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
-<head>
-    <title>Compatibilité Amoureuse Numérologie : Chiffres et amour | Myastro</title>
-    <meta name="description" content="Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens." />
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Compatibilité Amoureuse Numérologie : Chiffres et amour | Myastro</title>
+        <meta name="description" content="Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens." />
 
-    <link rel="stylesheet" href="css/infobulle.css" />
-    <link rel="stylesheet" type="text/css" href="css/formulaire-top-3.css" />  
-    <style>
-        .widget .form-part { background-color: #eb2692;}
-        .widget #form-w .btn_button { background-color: #1871b9;}
-    </style>
+        <link rel="stylesheet" href="css/infobulle.css" />
+        <link rel="stylesheet" type="text/css" href="css/formulaire-top-3.css" />  
+        <style>
+            .widget .form-part { background-color: #eb2692;}
+            .widget #form-w .btn_button { background-color: #1871b9;}
+        </style>
 
-    <?php include('include/header_inc.php');?>
+        <?php include('include/header_inc.php');?>
 
-    <div class="container-fluid" itemscope>
+        <div class="container-fluid" itemscope>
         <!-- Main Content -->
         <div class="row-fluid">
             <div class="article-content">

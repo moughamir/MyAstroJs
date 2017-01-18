@@ -6,12 +6,13 @@ $ipg_pub_bdd = array(
         'url'   => 'astrologie-gratuite',
         'img'   => 'astrologie-gratuite.jpg',
         'desc'  => [
-            'L’astrologie est un art divinatoire basé sur la consultation des astres, qui jouent un rôle important sur les événements de votre vie. Nos médiums astrologues vous dévoilent votre astrologie gratuite, ce que les astres vous réservent sentimentalement, professionnellement, du côté de votre famille, financièrement…',
-            'L’astrologie gratuite pourrait grâçe à un moyen constant et sûr, vous apportez des renseignements capables d’influer votre destinée. Vous pourrez savoir se que vous réservent les astres pour votre avenir.', // -numerologie
-            'L’astrologie gratuite est aujourd’hui un moyen très simple de connaître vos prédictions qu’elles soient amoureuses, d’ordre financières… Pourquoi attendre ? Utiliser notre service gratuitement.', // -personnalite
-            'Avec l’astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.', // -tarot
-            'Le couple a sa propre alchimie, son énergie composante des deux individus. Vous pouvez faire votre astrologie gratuite avec MyAstro pour réaliser la composante idoine des deux individualités qui s’aiment souffrent et partagent leur bonheur.', // -couple
-            'Anticipez l’avenir proche avec l’astrologie gratuite MyAstro et découvrez ce que les planètes et le système solaire ont prévu pour vous : argent, rencontre, rupture, conflit, mariage, projets… Prenez connaissance de votre destin et avancez l’esprit tranquille.' // -tarot-quotidien
+            0 => 'L’astrologie est un art divinatoire basé sur la consultation des astres, qui jouent un rôle important sur les événements de votre vie. Nos médiums astrologues vous dévoilent votre astrologie gratuite, ce que les astres vous réservent sentimentalement, professionnellement, du côté de votre famille, financièrement…',
+            1 => 'L’astrologie gratuite pourrait grâçe à un moyen constant et sûr, vous apportez des renseignements capables d’influer votre destinée. Vous pourrez savoir se que vous réservent les astres pour votre avenir.', // -numerologie
+            2 => 'L’astrologie gratuite est aujourd’hui un moyen très simple de connaître vos prédictions qu’elles soient amoureuses, d’ordre financières… Pourquoi attendre ? Utiliser notre service gratuitement.', // -personnalite
+            3 => 'Avec l’astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.', // -tarot
+            4 => 'Le couple a sa propre alchimie, son énergie composante des deux individus. Vous pouvez faire votre astrologie gratuite avec MyAstro pour réaliser la composante idoine des deux individualités qui s’aiment souffrent et partagent leur bonheur.', // -couple
+            5 => 'Anticipez l’avenir proche avec l’astrologie gratuite MyAstro et découvrez ce que les planètes et le système solaire ont prévu pour vous : argent, rencontre, rupture, conflit, mariage, projets… Prenez connaissance de votre destin et avancez l’esprit tranquille.', // -tarot-quotidien
+            6 => 'Myastro : Le site spécialisé dans l’astrologie gratuite. Nous vous proposons des experts de la voyance qui pourront vous informer sur l’évolution de tout ce qui tourne autour de votre vie.',
         ]
     ],
     'compatibilite-amoureuse-feminine' => [
@@ -19,12 +20,21 @@ $ipg_pub_bdd = array(
         'url'   => 'compatibilite-amoureuse-feminine',
         'img'   => 'compatibilite-amoureuse-feminine.jpg',
         'desc'  => [
-            'Est-ce que lʼavenir avec lʼhomme que vous convoitez est possible et couronné de succès ou est un échec prévu dʼavance ? Grâce à Myastro, bénéficiez de toutes les informations dont vous avez besoin pour savoir si lʼinvestissement émotionnel est nécessaire pour cette relation.',
-            'La compatibilité amoureuse féminine vous indiquera, grâce à une science qui dépend de l’astrologie, si vous êtes compatible avec celui que vous voulez ou que vous aimez. Les apparences sont parfois trompeuses, et les hommes aussi. Sachez s’il est fait pour vous et si votre histoire d’amour sera la plus belle de votre vie.', // -numerologie
-            'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Grâce au calcul de compatibilité amoureuse gratuit de Myastro, ayez une vue précise sur vos affinités avec le signe astrologique de votre homme et bénéficiez de conseils si la situation ne se présente pas bien.', // -personnalite
-            'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Quelles seront vos affinités avec l’homme de vos rêves et votre couple peut-il marcher ? Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite !', // -tarot
-            'La femme fonctionne généralement sur son côté « yin », l’homme quant à lui utilise le côté « yang ». Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine « yin-yang » MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.', // -couple
-            'Un homme est entré dans votre vie, mais cette relation peut-elle évoluer vers le parfait amour ? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir ?', // - tarot-quotidien
+            0 => 'Est-ce que lʼavenir avec lʼhomme que vous convoitez est possible et couronné de succès ou est un échec prévu dʼavance ? Grâce à Myastro, bénéficiez de toutes les informations dont vous avez besoin pour savoir si lʼinvestissement émotionnel est nécessaire pour cette relation.',
+            1 => 'La compatibilité amoureuse féminine vous indiquera, grâce à une science qui dépend de l’astrologie, si vous êtes compatible avec celui que vous voulez ou que vous aimez. Les apparences sont parfois trompeuses, et les hommes aussi. Sachez s’il est fait pour vous et si votre histoire d’amour sera la plus belle de votre vie.', // -numerologie
+            2 => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Grâce au calcul de compatibilité amoureuse gratuit de Myastro, ayez une vue précise sur vos affinités avec le signe astrologique de votre homme et bénéficiez de conseils si la situation ne se présente pas bien.', // -personnalite
+            3 => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Quelles seront vos affinités avec l’homme de vos rêves et votre couple peut-il marcher ? Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite !', // -tarot
+            4 => 'La femme fonctionne généralement sur son côté « yin », l’homme quant à lui utilise le côté « yang ». Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine « yin-yang » MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.', // -couple
+            5 => 'Un homme est entré dans votre vie, mais cette relation peut-elle évoluer vers le parfait amour ? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir ?', // - tarot-quotidien
+            6 => 'Vous êtes aujourd’hui en couple ou vous souhaitez vous mettre en couple mais vous avez besoin de connaître les probabilités pour que ça fonctionne entre vous ? Grâce à Myastro, la compatibilité amoureuse n’aura plus de secrets.',
+        ]
+    ],
+    'compatibilite-amoureuse-masculine' => [
+        'titre' => 'Compatibilité amoureuse masculine',
+        'url'   => 'compatibilite-amoureuse-pour-les-hommes',
+        'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
+        'desc'  => [
+            'Votre compagne et vous êtes-vous faits l’un pour l’autre ? Le seul moyen fiable de le savoir est de découvrir si vous êtes compatibles à partir de vos signes astrologiques et donc de vos personnalités : faites confiance à l’horoscope gratuit de comptabilité amoureuse MyAstro pour votre couple.',
         ]
     ],
     'compatibilite-amoureuse-pour-les-femmes' => [
@@ -64,12 +74,14 @@ $ipg_pub_bdd = array(
         'url'   => 'horoscope-annee',
         'img'   => 'horoscope-2015.png',
         'desc'  => [
-            'Votre horoscope '.$annee.' gratuit vous permettra de terminer lʼannée en beauté. Anticipez les obstacles, prenez les bonnes décisions et faites les bons choix grâce aux recommandations fournies par votre horoscope '.$annee.'.',
-            'Votre horoscope '.$annee.' gratuit vous assurera de bien finir lʼannée. Devancer les difficultés qui viendront à vous, prenez les bonnes décisions et faites les choix les plus judicieux grâçe à lʼaide formulée par votre horoscope '.$annee.'.', // -numerologie
-            'Que vous réserve l’année '.$annee.' ? Amour, bonheur, argent, travail, changements ? N’attendez plus pour prendre connaissance de ce que prévoient les planètes pour votre signe astrologique avec l’horoscope '.$annee.' gratuit MyAstro !', // -portraitf
-            'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel '.$annee.'. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.', // -portraitm
-            'Quelles sont les tendances planétaires qui vous sont réservées pour cette année '.$annee.' ? Avec l’horoscope '.$annee.' gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.', // -tarot
-            'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope '.$annee.' avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !', // -tarot-mensuel
+            0 => 'Votre horoscope '.$annee.' gratuit vous permettra de terminer lʼannée en beauté. Anticipez les obstacles, prenez les bonnes décisions et faites les bons choix grâce aux recommandations fournies par votre horoscope '.$annee.'.',
+            1 => 'Votre horoscope '.$annee.' gratuit vous assurera de bien finir lʼannée. Devancer les difficultés qui viendront à vous, prenez les bonnes décisions et faites les choix les plus judicieux grâçe à lʼaide formulée par votre horoscope '.$annee.'.', // -numerologie
+            2 => 'Que vous réserve l’année '.$annee.' ? Amour, bonheur, argent, travail, changements ? N’attendez plus pour prendre connaissance de ce que prévoient les planètes pour votre signe astrologique avec l’horoscope '.$annee.' gratuit MyAstro !', // -portraitf
+            3 => 'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel '.$annee.'. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.', // -portraitm
+            4 => 'Quelles sont les tendances planétaires qui vous sont réservées pour cette année '.$annee.' ? Avec l’horoscope '.$annee.' gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.', // -tarot
+            5 => 'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope '.$annee.' avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !', // -tarot-mensuel
+            6 => 'Vous souhaitez connaître votre avenir pour la fin de l’année ? L’horoscope gratuit en '.$annee.' est accessible pour tous les visiteurs de Myastro.',
+            7 => 'Votre horoscope '.$annee.' gratuit vous permettra de terminer l’année en confiance. Préparez-vous aux différents obstacles qui se mettront sur votre chemin et prenez du recul. Nos mediums vous proposent de répondre à toutes vos questions pour les derniers mois de l’année.',
         ]
     ],
     'horoscope-de-la-semaine' => [
@@ -77,9 +89,11 @@ $ipg_pub_bdd = array(
         'url'   => 'horoscope-de-la-semaine',
         'img'   => 'horoscope-de-la-semaine.jpg',
         'desc'  => [
-            'Votre horoscope de la semaine gratuit vous permet dʼéviter toutes les surprises, et surtout les obstacles, que la vie vous réserve. Faites appel à de réels professionnels et ne vous laissez pas guider par le hasard.',
-            'Réussissez tout ce que vous entreprenez cette semaine avec l’horoscope hebdomadaire gratuit : amour, travail, santé, argent, famille et la citation de la semaine, vous aurez toutes les cartes en main pour passer une bonne semaine.', // -portraitf
-            'L’horoscope basé sur la position des planètes vous donne les grandes orientations de votre semaine. Il est toujours confortable d’être avisé avant que les choses ne nous prennent au dépourvu.', // -portraitm
+            0 => 'Votre horoscope de la semaine gratuit vous permet dʼéviter toutes les surprises, et surtout les obstacles, que la vie vous réserve. Faites appel à de réels professionnels et ne vous laissez pas guider par le hasard.',
+            1 => 'Réussissez tout ce que vous entreprenez cette semaine avec l’horoscope hebdomadaire gratuit : amour, travail, santé, argent, famille et la citation de la semaine, vous aurez toutes les cartes en main pour passer une bonne semaine.', // -portraitf
+            2 => 'L’horoscope basé sur la position des planètes vous donne les grandes orientations de votre semaine. Il est toujours confortable d’être avisé avant que les choses ne nous prennent au dépourvu.', // -portraitm
+            3 => 'Que vous soyez Taureau ou Capricorne voir Verseau, notre site vous donnera votre horoscope du jour gratuitement. Fini les surprises.',
+            4 => 'Comment connaître son avenir tous les jours ? Très simple, Myastro vous met à disposition votre horoscope du mois gratuitement. Toutes les informations sur votre avenir vous seront communiquées.',
         ]
     ],
     'horoscope-du-jour' => [
@@ -133,12 +147,14 @@ $ipg_pub_bdd = array(
         'url'   => 'tarot-de-couple',
         'img'   => 'tarot-couple.jpg',
         'desc'  => [
-            'Le tarot de couple gratuit vous donnera la possibilité de vous postionner afin de savoir si celui que vous convoitez est fait pour vous ou sʼil est indispensable dʼarrêter des investissements dans cette relation de manière immédiate.',
-            'Les 12 signes astrologiques du zodiaque sont très différents et ne sont pas toujours compatibles, avez-vous vérifié que votre signe Capricorne soit en accord avec celui de votre partenaire ? Découvrez l’avenir de votre couple avec le Tarot du couple MyAstro.', // -capricorne
-            'Les arts divinatoires font leurs preuves en amour depuis des siècles, la tarologie est surtout consultée pour des problèmes sentimentaux d’où est né le tarot du couple. En couple, tirez les cartes du Tarot du couple MyAstro, la vérité sur votre relation s’y trouve.', // -gemeaux
-            'Lorsque le couple du Bélier bat de l’aile, il est prêt à tout pour sauver cette relation s’il estime qu’elle en vaut la chandelle, et une aide est parfois la bienvenue. Le tarot du couple MyAstro est la clef de la porte des vérités sur votre couple, faites lui confiance.', // -belier
-            'Que vous soyez en couple ou célibataire, vous pouvez consulter le tarot du couple gratuit de MyAstro, ce dernier vous permettra de vous confronter aux significations des cartes tirées et de savoir si la personne convoitée est la bonne.', // -portrait-feminin
-            'Les tarots peuvent être tirés pour une personne mais aussi pour une association d’individus. C’est bien de cela que l’on parle pour un couple. Chacun amène sa pierre à l’atmosphère générale du couple. Le tarot de couple peut cependant être demandé par l’un des individus le composant, ça reste « fair ». Cela lui donne un avantage car il captera des flashs du futur.', // -portrait-masuclin
+            0 => 'Le tarot de couple gratuit vous donnera la possibilité de vous postionner afin de savoir si celui que vous convoitez est fait pour vous ou sʼil est indispensable dʼarrêter des investissements dans cette relation de manière immédiate.',
+            1 => 'Les 12 signes astrologiques du zodiaque sont très différents et ne sont pas toujours compatibles, avez-vous vérifié que votre signe Capricorne soit en accord avec celui de votre partenaire ? Découvrez l’avenir de votre couple avec le Tarot du couple MyAstro.', // -capricorne
+            2 => 'Les arts divinatoires font leurs preuves en amour depuis des siècles, la tarologie est surtout consultée pour des problèmes sentimentaux d’où est né le tarot du couple. En couple, tirez les cartes du Tarot du couple MyAstro, la vérité sur votre relation s’y trouve.', // -gemeaux
+            3 => 'Lorsque le couple du Bélier bat de l’aile, il est prêt à tout pour sauver cette relation s’il estime qu’elle en vaut la chandelle, et une aide est parfois la bienvenue. Le tarot du couple MyAstro est la clef de la porte des vérités sur votre couple, faites lui confiance.', // -belier
+            4 => 'Que vous soyez en couple ou célibataire, vous pouvez consulter le tarot du couple gratuit de MyAstro, ce dernier vous permettra de vous confronter aux significations des cartes tirées et de savoir si la personne convoitée est la bonne.', // -portrait-feminin
+            5 => 'Les tarots peuvent être tirés pour une personne mais aussi pour une association d’individus. C’est bien de cela que l’on parle pour un couple. Chacun amène sa pierre à l’atmosphère générale du couple. Le tarot de couple peut cependant être demandé par l’un des individus le composant, ça reste « fair ». Cela lui donne un avantage car il captera des flashs du futur.', // -portrait-masuclin
+            6 => 'Comment connaître les tendances au sein de votre couple ? Myastro vous propose, grâce au tarot de couple gratuit, de connaître votre avenir amoureux. Plus de secrets pour votre futur avec Myastro.',
+            7 => 'Des problèmes dans votre couple ? Des doutes sur votre partenaire ? Grâce au Tarot de couple gratuit, arrêtez de vous tracasser, posez-vous les bonnes questions et bénéficiez de réels conseils pour votre couple et sa bonne santé.'
         ]
     ],
     'tarot-de-l-amour' => [
@@ -160,12 +176,14 @@ $ipg_pub_bdd = array(
         'url'   => 'tarot-hebdomadaire',
         'img'   => 'tarot-hebdomadaire.jpg',
         'desc'  => [
-            'Depuis quelques mois, vous nʼarrivez pas à trouver de réponses à vos questions. Vous souhaitez savoir ce qui se profile dans votre avenir et ne savez pas dans quelle direction vous tourner. Faites confiance à Myastro et bénéficiez de solutions durables.',
-            'Le Tarot de la semaine est une technique ancienne qui permet, au travers des cartes d’un jeu, de pouvoir prédire les situations qui se présenteront à vous dans votre futur proche. Nous mettons à votre disposition de réels experts en taromancie qui sauront vous conseiller.', // -horoscope
-            'Le tarot est une discipline des arts divinatoires très ancienne, pratiquée à partir de cartes significatives, elle vous apporte des indications personnelles, de précieux conseils et vous aide à éviter les difficultés de la semaine grâce au Tarot hebdomadaire myAstro.', // -capricorne
-            'Connaître son futur proche est le rêve absolu du Gémeaux, c’est possible avec le Tarot hebdomadaire MyAstro, un jeu de cartes issus des arts divinatoires fiables et précis qui vous accompagnera chaque semaine vers les bons choix.', // -gemeaux
-            'Donnez une chance au tarot, vous ne pouvez pas soupçonner à quel point ses prédictions sont proches de la réalité… Les cartes vous guident vers la prospérité pour toute la semaine avec le tarot hebdomadaire gratuit My Astro.', // -portrait-feminin
-            'Le tarot hebdomadaire peut être réalisé en toute tranquilité. En effet, il s’agit d’un moment privilégié où vous ne pensez qu’à vous. Il n’est pas du nombrilisme ou de l’égoisme. L’homme ne profite pas toujours de ces périodes où il peut se concentrer sur sa vie, la tournure qu’il veut lui imprimer.', // -portrait-masculin
+            0 => 'Depuis quelques mois, vous nʼarrivez pas à trouver de réponses à vos questions. Vous souhaitez savoir ce qui se profile dans votre avenir et ne savez pas dans quelle direction vous tourner. Faites confiance à Myastro et bénéficiez de solutions durables.',
+            1 => 'Le Tarot de la semaine est une technique ancienne qui permet, au travers des cartes d’un jeu, de pouvoir prédire les situations qui se présenteront à vous dans votre futur proche. Nous mettons à votre disposition de réels experts en taromancie qui sauront vous conseiller.', // -horoscope
+            2 => 'Le tarot est une discipline des arts divinatoires très ancienne, pratiquée à partir de cartes significatives, elle vous apporte des indications personnelles, de précieux conseils et vous aide à éviter les difficultés de la semaine grâce au Tarot hebdomadaire myAstro.', // -capricorne
+            3 => 'Connaître son futur proche est le rêve absolu du Gémeaux, c’est possible avec le Tarot hebdomadaire MyAstro, un jeu de cartes issus des arts divinatoires fiables et précis qui vous accompagnera chaque semaine vers les bons choix.', // -gemeaux
+            4 => 'Donnez une chance au tarot, vous ne pouvez pas soupçonner à quel point ses prédictions sont proches de la réalité… Les cartes vous guident vers la prospérité pour toute la semaine avec le tarot hebdomadaire gratuit My Astro.', // -portrait-feminin
+            5 => 'Le tarot hebdomadaire peut être réalisé en toute tranquilité. En effet, il s’agit d’un moment privilégié où vous ne pensez qu’à vous. Il n’est pas du nombrilisme ou de l’égoisme. L’homme ne profite pas toujours de ces périodes où il peut se concentrer sur sa vie, la tournure qu’il veut lui imprimer.', // -portrait-masculin
+            6 => 'Une fois par semaine, grâce au tirage des cartes, votre avenir n’aura plus de secrets. Notre site vous informera sur votre avenir proche.',
+            7 => 'Aucune semaine ne se ressemble. Cʼest pour cette raison que le tarot hebdomadaire gratuit vous permettra de pouvoir prendre en main votre vie : plus rien nʼest laissé au hasard et vous reprenez le contrôle de toutes les situations désagréables qui peuvent survenir au cours de votre semaine.',
         ]
     ],
     'tarot-de-marseille' => [
@@ -179,12 +197,14 @@ $ipg_pub_bdd = array(
         'url'   => 'tarot-mensuel',
         'img'   => 'tarot-mensuel.jpg',
         'desc'  => [
-            'Les mois nʼont rien à voir les uns avec les autres. Sʼil vous est indispensable de savoir comment se prépare le votre, nʼhésitez pas à faire appel à Myastro pour obtenir toutes les réponses à vos questions et appréhender votre mois dans les meilleures conditions.',
-            'Chaque nouveau mois qui commence est une nouvelle aventure, avec ses hauts et ses bas, au déplaisir du Capricorne qui n’aime pas ce genre de surprise. Heureusement, grâce au Tarot mensuel MyAstro et aux interprétations de votre tirage, vous saurez tout !', // -capricorne
-            'Les combinaisons des cartes tirées par une personne Gémeaux ont des significations spécifiques que vous devez connaître, tirez les cartes du Tarot mensuel MyAstro et découvrez les interprétations de votre tirage, vous commencerez le mois serein.', // -gemeaux
-            'Le tarot est une manière fiable de faire le point sur une situation et d’obtenir des réponses à une question précise. Le pouvoir des cartes du tarot mensuel MyAstro est votre meilleur allié pour avancer l’esprit tranquille chaque mois de l’année.', // -belier
-            'Art divinatoire très ancien et apprécié, le tarot est un excellent moyen de connaître votre avenir, ses déceptions et ses bonheurs, à partir du tirage de vos cartes, influencé par votre inconscient. Découvrez ce que les cartes ont à vous dire sur le mois à venir avec le tarot mensuel gratuit !', // -portrait-feminin
-            'Le tirage dʼun tarot mensuel pour un homme est signe dʼun intérêt pour son avenir. MyAstro met à disposition ce type de tirage gratuit. Il permet de capter des bribes de lʼavenir et de préparer sa « riposte » car il commence son anticipation. Lʼastrologie, le tarot sont autant dʼoutils pour soulever un coin du voile.', // -portrait-masculin
+            0 => 'Les mois nʼont rien à voir les uns avec les autres. Sʼil vous est indispensable de savoir comment se prépare le votre, nʼhésitez pas à faire appel à Myastro pour obtenir toutes les réponses à vos questions et appréhender votre mois dans les meilleures conditions.',
+            1 => 'Chaque nouveau mois qui commence est une nouvelle aventure, avec ses hauts et ses bas, au déplaisir du Capricorne qui n’aime pas ce genre de surprise. Heureusement, grâce au Tarot mensuel MyAstro et aux interprétations de votre tirage, vous saurez tout !', // -capricorne
+            2 => 'Les combinaisons des cartes tirées par une personne Gémeaux ont des significations spécifiques que vous devez connaître, tirez les cartes du Tarot mensuel MyAstro et découvrez les interprétations de votre tirage, vous commencerez le mois serein.', // -gemeaux
+            3 => 'Le tarot est une manière fiable de faire le point sur une situation et d’obtenir des réponses à une question précise. Le pouvoir des cartes du tarot mensuel MyAstro est votre meilleur allié pour avancer l’esprit tranquille chaque mois de l’année.', // -belier
+            4 => 'Art divinatoire très ancien et apprécié, le tarot est un excellent moyen de connaître votre avenir, ses déceptions et ses bonheurs, à partir du tirage de vos cartes, influencé par votre inconscient. Découvrez ce que les cartes ont à vous dire sur le mois à venir avec le tarot mensuel gratuit !', // -portrait-feminin
+            5 => 'Le tirage dʼun tarot mensuel pour un homme est signe dʼun intérêt pour son avenir. MyAstro met à disposition ce type de tirage gratuit. Il permet de capter des bribes de lʼavenir et de préparer sa « riposte » car il commence son anticipation. Lʼastrologie, le tarot sont autant dʼoutils pour soulever un coin du voile.', // -portrait-masculin
+            6 => 'Tous les mois ne sont pas les mêmes. Après avoir passé plusieurs mois difficiles, pourquoi ne pas connaître votre avenir pour les prochains mois grâce au tarot mensuel. Aujourdʼhui Myastro vous offre cette possibilité.',
+            7 => 'Bénéficiez de conseils précieux grâce au tarot mensuel gratuit que nous vous proposons. Des personnes qui maîtrisent la science de la lecture des cartes pourront interpréter votre tirage et vous préparer à tous les évènements à venir dans le mois. Ne laissez plus votre vie être contrôlée par le hasard.',
         ]
     ],
     'tarot-oui-ou-non' => [
@@ -204,13 +224,15 @@ $ipg_pub_bdd = array(
         'url'   => 'tarot-quotidien',
         'img'   => 'tarot-quotidien.jpg',
         'desc'  => [
-            'Aucune journée ne se ressemble et cʼest la raison pour laquelle Myastro vous propose une lecture de votre horoscope quotidien gratuitement rapide et efficace. Afin de vous fournir toutes les réponses dont vous avez besoin de manière instantannée.',
-            'Le tarot journalier vous permettra, grâce à un tirage de cartes et leur interprétation, de pouvoir anticiper au quotidien les évènements qui vous attendent dans la journée. Vivez-la donc avec sérénité tout en faisant confiance à une expertise qui existe depuis plusieurs siècles : le Tarot.', // -horoscope
-            'Ne commencez pas la journée sans avoir tiré les cartes de votre Tarot quotidien MyAstro, en deux clics vous obtenez les prédictions du jour : amour, argent, travail, santé… Mettez du positif dans votre vie de Capricorne grâce aux conseils du tarot !', // -capricorne
-            'Les cartes du Tarot quotidien MyAstro ont le pouvoir de prédire les événements qui vont rythmer votre journée en bien ou en mal : une grande nouvelle, une décision, une trahison, un accident… Le moyen idéal pour appréhender chaque jour paisiblement !', // -gemeaux
-            'Le tarot quotidien MyAstro doit être un rituel matinal pour être efficace, il vous garantit une journée positive et agréable en vous indiquant les pièges à éviter : vous pourrez saisir les chances qui s’offrent à vous telles que des promotions, des opportunités etc. !', // -belier
-            'Que va-t-il se passer dans votre vie de femme aujourd’hui ? Vous pouvez connaître à l’avance les choses qui vont s’imposer à vous dans la journée et les appréhender de la meilleur façon avec le tirage du tarot quotidien gratuit MyAstro !', // -portrait-feminin
-            'Moins communément utilisé par les hommes, votre tirage de tarot quotidien gratuit peut être mis à profit pour déjouer les pièges nombreux de la vie. C’est simple d’utilisation et s’ils ne l’avouent pas, les hommes sont de plus en plus nombreux à l’utiliser quotidiennement.', // -portrait-masculin
+            0 => 'Aucune journée ne se ressemble et cʼest la raison pour laquelle Myastro vous propose une lecture de votre horoscope quotidien gratuitement rapide et efficace. Afin de vous fournir toutes les réponses dont vous avez besoin de manière instantannée.',
+            1 => 'Le tarot journalier vous permettra, grâce à un tirage de cartes et leur interprétation, de pouvoir anticiper au quotidien les évènements qui vous attendent dans la journée. Vivez-la donc avec sérénité tout en faisant confiance à une expertise qui existe depuis plusieurs siècles : le Tarot.', // -horoscope
+            2 => 'Ne commencez pas la journée sans avoir tiré les cartes de votre Tarot quotidien MyAstro, en deux clics vous obtenez les prédictions du jour : amour, argent, travail, santé… Mettez du positif dans votre vie de Capricorne grâce aux conseils du tarot !', // -capricorne
+            3 => 'Les cartes du Tarot quotidien MyAstro ont le pouvoir de prédire les événements qui vont rythmer votre journée en bien ou en mal : une grande nouvelle, une décision, une trahison, un accident… Le moyen idéal pour appréhender chaque jour paisiblement !', // -gemeaux
+            4 => 'Le tarot quotidien MyAstro doit être un rituel matinal pour être efficace, il vous garantit une journée positive et agréable en vous indiquant les pièges à éviter : vous pourrez saisir les chances qui s’offrent à vous telles que des promotions, des opportunités etc. !', // -belier
+            5 => 'Que va-t-il se passer dans votre vie de femme aujourd’hui ? Vous pouvez connaître à l’avance les choses qui vont s’imposer à vous dans la journée et les appréhender de la meilleur façon avec le tirage du tarot quotidien gratuit MyAstro !', // -portrait-feminin
+            6 => 'Moins communément utilisé par les hommes, votre tirage de tarot quotidien gratuit peut être mis à profit pour déjouer les pièges nombreux de la vie. C’est simple d’utilisation et s’ils ne l’avouent pas, les hommes sont de plus en plus nombreux à l’utiliser quotidiennement.', // -portrait-masculin
+            7 => 'Tous les jours sont différents. C’est pourquoi sur notre site, vous pourrez connaître votre avenir grâce au tarot quotidien mis en place sur Myastro.',
+            8 => 'Le Tarot quotidien est un moyen facile et rapide de pouvoir avoir une vision de ce qu’il pourra se produire au cours de votre journée. Ne laissez plus le hasard vous envahir et faites confiance à la taromancie pour pouvoir appréhender tranquillement votre journée et éviter les imprévus.',
         ]
     ],
     'tirage-tarot-gratuit' => [

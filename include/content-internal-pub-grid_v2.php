@@ -31,8 +31,8 @@
             $temp_code = explode('#', $code_pub);
             $code_pub = $temp_code[0];
             $desc_variation = isset($temp_code[1]) ? $temp_code[1] : 0;
-            $encart_bdd = $ipg_pub_bdd[$code];
-            
+            $encart_bdd = $ipg_pub_bdd[$code_pub];
+
             $titre = isset($encart_perso['titre']) ? $encart_perso['titre'] : $encart_bdd['titre'];
             $img = isset($encart_perso['img']) ? $encart_perso['img'] : $encart_bdd['img'];
             $url = isset($encart_perso['url']) ? $encart_perso['url'] : $encart_bdd['url'];
