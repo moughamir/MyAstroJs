@@ -36,7 +36,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Signe Vierge : Grâce à Myastro, définissez avec précision votre profil astrologique et tirez-en les conclusions qui s'imposent. Prenez ensuite les bonnes décisions en toute tranquilité.</h5>
+                                    <p itemprop="headline">Signe Vierge : Grâce à Myastro, définissez avec précision votre profil astrologique et tirez-en les conclusions qui s'imposent. Prenez ensuite les bonnes décisions en toute tranquilité.</p>
                                 </div>
 
                             </div>

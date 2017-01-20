@@ -63,7 +63,7 @@ if ($msg!=""){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance par téléphone <?= $prenom;?>: rapide et efficace - Myastro</title>
+    <title>Voyance par téléphone <?= $prenom;?>: rapide et efficace | Myastro</title>
 	<meta name="description" content="Vous avez besoin de pouvoir prévoir les événements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone." />
 
 	<link href="css/tel.css" type="text/css" rel="stylesheet">
@@ -97,7 +97,7 @@ if ($msg!=""){
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Vous avez besoin de pouvoir prévoir les événements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone.</h5>
+										<p itemprop="headline">Vous avez besoin de pouvoir prévoir les événements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone.</p>
 									</div>
 
 								</div>
@@ -107,7 +107,7 @@ if ($msg!=""){
 <br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
  <div class="row-fluid">	
 						
             <section class="span270">

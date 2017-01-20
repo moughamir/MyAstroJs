@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Tarot quotidien : des tirages de tarot tous les jours - Myastro</title>
+    <title>Tarot quotidien : des tirages de tarot tous les jours | Myastro</title>
 	<meta name="description" content="Myastro vous permet, grâce à un tirage de cartes de Tarot quotidien, de pouvoir aborder vos journées sans inquiétudes. Les cartes vous aideront à prendre les bonnes décisions." />
 <?php include('include/header_inc.php'); ?>
 

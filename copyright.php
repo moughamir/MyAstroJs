@@ -30,7 +30,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur..</h5>
+										<p itemprop="headline">Chacun a droit à la protection des intérêts moraux et matériels découlant de toute production scientifique, littéraire ou artistique dont il est l'auteur..</p>
 									</div>
 
 								</div>
@@ -40,7 +40,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <td width="650" bgcolor="#F1F1F8">
           <p style="margin-left: 30; margin-right: 20" align="justify"><br>
             <font color="#FF0000" size="3" face="Arial"><b>Article L111-1</b></font> </p>
