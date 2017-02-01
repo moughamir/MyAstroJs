@@ -1,0 +1,395 @@
+/* ============================ [ louise-grandol ] =============================
+ *
+ * Created on : 25 juillet 2016 By Guillaume Deschamps <guillaumedeschamps75@gmail.com>
+ * Updated on : 19 janvier 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@charset "UTF-8";
+
+@import "knacss501/knacss";
+/*@import "s-landing-voyance-2";*/
+
+/* Typographies */
+$txtbase: 'Arial', sans-serif;
+$handscripted: 'Gochi Hand', cursive;
+$title: 'Raleway', sans-serif;
+$slogan: 'Oswald', sans-serif;
+
+/* Images */
+$pic_dir: "../images_landing/louise-grandol/";
+$logo: $pic_dir + "logo.jpg";
+$psychic_pic: $pic_dir + "louise.jpg";
+$psychic_sign: $pic_dir + "louise-sign.jpg";
+$ico_amour: $pic_dir + "ico-amour.svg";
+$ico_amour_h: $pic_dir + "ico-amour-w.svg";
+$ico_argent: $pic_dir + "ico-argent.svg";
+$ico_argent_h: $pic_dir + "ico-argent-w.svg";
+$ico_travail: $pic_dir + "ico-travail.svg";
+$ico_travail_h: $pic_dir + "ico-travail-w.svg";
+$title_triangle: $pic_dir + "triangle.svg";
+
+/* Couleurs */
+$gray_txt: #454545;
+$gray_border: #CCC;
+$white_bg: white;
+$darkblue_bg: #B9CBD7;
+$lightblue_bg: #ECEFF1;
+$pink: #F05882;
+$woman: $pink;
+$man: $darkblue_bg;
+
+/* ------------------------------- [ LAYOUT ] ------------------------------- */
+
+html {
+    height: 100%;
+}
+
+body {
+    background: $lightblue_bg;
+    color: $gray_txt;
+    font-family: $txtbase;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.ContentBand {
+    background: $white_bg;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 12rem;
+    padding: 3rem;
+    padding-bottom: 0;
+    text-align: center;
+    &-Column {
+       margin-bottom: 3rem; 
+    }
+}
+
+.PageWrapper {
+    margin: auto;
+    max-width: 1080px;
+    position: relative;
+    width: 100%;
+}
+@media screen and (max-width: 780px){
+    .ContentBand {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+}
+
+/* ------------------------------- [ HEADER ] ------------------------------- */
+
+.SiteHeader {
+    background: $darkblue_bg url($logo) no-repeat;
+    background-position: center bottom 2rem;
+    height: 14rem;
+    margin-bottom: 4rem;
+    padding-top: .4rem;
+    text-align: center;
+    width: 100%;
+    &-Title {
+        color: white;
+        display: inline-block;
+        font-family: $title;
+        font-size: 5.3rem;
+        font-weight: 300;
+        margin-bottom: 6rem;
+        padding-right: 8rem;
+    }
+}
+@media screen and (max-width: 680px){
+    .SiteHeader {
+        background-position: bottom 2rem right 2rem;
+        background-size: 100%;
+        height: auto;
+        &-Title {
+            font-size: 4.5rem;
+        }
+    }
+}
+@media screen and (max-width: 580px){
+    .SiteHeader-Title {
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .SiteHeader {
+        background-position: bottom 1rem right 1rem;
+    }
+    .SiteHeader-Title {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+@media screen and (max-width: 380px){
+    .SiteHeader-Title {
+        font-size: 2.2rem;
+        margin-bottom: 3.4rem;
+    }
+}
+
+/* ------------------------- [ TEXTE INTRODUCTION ] ------------------------- */
+
+.DescText {
+    font-family: $handscripted;
+    font-size: 2rem;
+    text-align: left;
+    p {
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 0.8rem;
+    }
+    &-Sign {
+        text-align: right;
+    }
+}
+
+/* -------------------------- [ PORTRAIT VOYANT ] --------------------------- */
+
+.Psychic-Portrait {
+    margin-right: 4rem;
+    width: 34rem;
+
+    &-Picture {
+        background: url($psychic_pic) no-repeat;
+        height: 34rem;
+    }
+    &-Name {
+        font-family: $handscripted;
+        font-size: 2.5rem;
+        text-align: right;
+        width: 100%;
+    } 
+    &-Sign {
+        background: url($psychic_sign) top right no-repeat;
+        height: 7.2rem;
+        width: 100%;
+    } 
+}
+@media screen and (max-width: 780px){
+    .Psychic-Portrait {
+        margin-right: 0;
+    }
+}
+
+/* --------------------------- [ CHOIX DU THEME ] --------------------------- */
+
+.ThemeChoice {
+    margin: auto;
+    max-width: 400px;
+    
+    .FormContainer-Header {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    &-Input {
+        cursor: pointer;
+        display: inline-block;
+        height: 60px;
+        opacity: 0;
+        position: absolute;
+        width: 60px;
+    }
+    
+    &-Item {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        justify-content: center;
+        text-align: center;
+        
+        &Ico {
+            background-color: $lightblue_bg;
+            border-radius: 3rem;
+            cursor: pointer;
+            display: block;
+            height: 5rem;
+            margin: 0 auto;
+            width: 5rem;
+        }
+        
+        &.Amour &Ico {
+            background: $lightblue_bg url($ico_amour) center no-repeat; 
+            background-size: 70%;
+        }
+        &.Argent &Ico {
+            background: $lightblue_bg url($ico_argent) center no-repeat; 
+            background-size: 70%;
+        }
+        &.Travail &Ico {
+            background: $lightblue_bg url($ico_travail) center no-repeat; 
+            background-size: 70%;
+        }
+        
+        &:hover, &.hover {
+            color: $pink;
+        }
+        &:hover.Amour &Ico, &.hover.Amour &Ico {
+            background: $pink url($ico_amour_h) center no-repeat;
+            background-size: 70%;
+        }
+        &:hover.Argent &Ico, &.hover.Argent &Ico {
+            background: $pink url($ico_argent_h) center no-repeat;
+            background-size: 70%;
+        }
+        &:hover.Travail &Ico, &.hover.Travail &Ico {
+            background: $pink url($ico_travail_h) center no-repeat;
+            background-size: 70%;
+        }
+    }
+}
+
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
+
+@import "modules/form";
+
+.FormContainer {
+    padding: 0;
+    background: transparent;
+
+    &-Header {
+        text-align: center;
+        font-size: 2.5rem;
+        & + p {
+            font-size: 1.7rem;
+        }
+    }
+    
+    &-Title {
+        background: transparent url($title_triangle) center no-repeat;
+        background-position: center bottom;
+        font-size: 2rem;
+        padding-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    &-Submit {
+        background-color: $pink;
+        border-width: 0px;
+        color: $white_bg;
+        display: inline-block;
+        font-size: 2.2rem;
+        margin: 1rem auto;
+        min-width: 180px;
+        padding: 1rem 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in;
+        text-decoration: none;
+        &:hover {
+            background-color: darken($pink, 10%);
+            color: $white_bg;
+            cursor: pointer;
+        }
+    }
+}
+
+.FormField-Input {
+    border: 1px solid $gray_border;
+}
+.ico-woman { 
+    color: $woman;
+    font-weight: bold !important;
+}
+.ico-man{ 
+    color: $man;
+    font-weight: bold !important;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+@import "modules_themes/form-alert-bootstrap";
+
+@media screen and (max-width: 490px){
+    .FormContainer-Fields {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 420px){
+    .FormContainer-Title {
+        font-size: 1.6rem;
+    }
+}
+
+/* ------------------------------- [ MODALE ] ------------------------------- */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-width: 0;
+    display: none;
+    height: 100vh !important;
+    left: 0;
+    max-width: none;
+    position: fixed !important;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+
+    p.alert {
+        align-items: center;
+        background: $white_bg;
+        border-width: 0;
+        color: $gray_txt;
+        display: flex;
+        flex-direction: column;
+        height: 25rem;
+        justify-content: center;
+        left: 50%;
+        margin: -12.5rem -20rem;
+        padding: 1rem;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 40rem;
+        
+        b {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+/* --------------------------- [ PIED DE PAGE ] ----------------------------- */
+
+.SiteCopyright {
+    color: $gray_txt;
+    text-align: center;
+}
+
+/* ------------------------------- [ DRI ] ---------------------------------- */
+
+.FormContainer.DRI .DRI {
+    &-Intro-Text {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    &-Slogan {
+        background: transparent;
+        color: $pink;
+        font-family: $slogan;
+        font-weight: bold;
+    }
+    &-Form {
+        background-color: $lightblue_bg;
+        padding: 2rem;
+        .FormField-Input {
+            color: $gray_txt;
+            border-width: 0;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &-Sent {
+        font-size: 1.8rem;
+        strong {
+            font-weight: normal;
+            color: $pink;
+        }
+    } 
+}
