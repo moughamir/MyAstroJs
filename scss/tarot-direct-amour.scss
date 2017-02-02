@@ -1,257 +1,223 @@
 @charset "UTF-8";
-/* 
-    ----------------------------------
-    --      tarot-direct-amour      --
-    ----------------------------------
-
-    Created on : 20 décembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-                 Mohamed Moughamir <moughamir+kgcom@gmail.com>
+/* ========================== [ tarot-direct-amour ] ===========================
+ *
+ * Created on : 20 décembre 2016 By Mohamed Moughamir <moughamir+kgcom@gmail.com>
+ * Updated on : 02 février 2017 By Laurène Dourdin <2aurene@gmail.com>
 */
+
 @import "templates/s-landing-tarot-3";
 
+/* Typos */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
+
 /* Dossier images */
-$img_dir : "../images_landing/tarot-direct-amour/";
-$logo : $img_dir + "logo.png";
-$header-bg: #fff url($img_dir + 'header-bg.png') no-repeat center;
-$dos_carte : $img_dir + "cardback.png";
-$place_carte : $img_dir + "cardplace.png";
-$bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone-normal : $img_dir + "hexagone-normal.png";
-$hexagone-active : $img_dir + "hexagone-active.png";
-$hexagone-hover : $img_dir + "hexagone-hover.png";
-$christelle : $img_dir + "christelle.png";
-$sonia : $img_dir + "sonia.png";
-$icon_amour-normal : $img_dir + "coeur-normal.png";
-$icon_argent-normal : $img_dir + "argent-normal.png";
-$icon_travail-normal : $img_dir + "travail-normal.png";
-$icon_amour-hover : $img_dir + "coeur-hover.png";
-$icon_argent-hover : $img_dir + "argent-hover.png";
-$icon_travail-hover : $img_dir + "travail-hover.png";
-$icon_amour-active : $img_dir + "coeur-active.png";
-$icon_argent-active : $img_dir + "argent-active.png";
-$icon_travail-active : $img_dir + "travail-active.png";
+$img_dir: "../images_landing/tarot-direct-amour/";
+$background: $img_dir + "background.jpg";
+$logo: $img_dir + "logo.png";
+$header_bg: $img_dir + 'header-bg.png';
+$dos_carte: $img_dir + "cardback.png";
+$place_carte: $img_dir + "cardplace.png";
+$bg_fleche: $img_dir + "bg_fleche.png";
+$hexagone: $img_dir + "hexagone.png";
+$hexagone_hover: $img_dir + "hexagone_hover.png";
+$hexagone_active: $img_dir + "hexagone_active.png";
+$listitem_leftcorner : $img_dir + "corner-left.png";
+$listitem_rightcorner : $img_dir + "corner-right.png";
+$icon_amour: $img_dir + "coeur.png";
+$icon_argent: $img_dir + "argent.png";
+$icon_travail: $img_dir + "travail.png";
+$icon_amour_hover: $img_dir + "coeur_hover.png";
+$icon_argent_hover: $img_dir + "argent_hover.png";
+$icon_travail_hover: $img_dir + "travail_hover.png";
+$icon_amour_active: $img_dir + "coeur_active.png";
+$icon_argent_active: $img_dir + "argent_active.png";
+$icon_travail_active: $img_dir + "travail_active.png";
 $icon_tel: $img_dir + "tel.png";
+$offre_immediate : $img_dir + "offre-immediate.png";
 
 /* Palette */
-$primary: #f1134c;
-$secondary: #4f9d7a;
-$addon: #da7b8e;
-$softGreen: #e7f2ec;
-
-$bleu: $primary;
-$rose: $secondary;
-$turquoise: $addon;
-
-$white: #ffffff;
 $grey: #454545;
 $lightgrey: #C0C3C8;
-$bg-bleu: #EAEEF4;
-$bg-grey: #616161;
-$woman: $rose;
-$men: $bleu;
+$white: #FFF;
+$pink: #F1134C;
+$softgreen: #E7F2EC;
+$green: #4F9D7A;
+$lightpink: #DA7B8E;
+$woman: $pink;
+$man: $green;
 $tchat-bg: #E8E8E8;
 
-.hidden {
-    display: none;
-}
-strong a {
-    color: inherit;
-    text-decoration: inherit;
-    &:hover{
-        color: inherit;
-    }
-}
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
 body {
-    font-family: 'Raleway', sans-serif;
+    background: url($background) center bottom no-repeat;
     color: $grey;
-    background: url($img_dir + 'background.png') fixed center bottom no-repeat;
-    background-size: cover;
+    font-family: 'Raleway', sans-serif;
     min-height: 100vh;
 }
 
 .ContentBand.Principal {
-    padding-bottom: 127px;
-    margin-bottom: -117px;
-    background: url($bg-fleche) no-repeat center bottom;
+    background-color: $white;
+    background-image: none;
     
     .ContentBand-ColumnHeader {
-        background: $header-bg;
+        background: url($header_bg) no-repeat center;
         background-size: cover;
         box-shadow: 0 0 10px 1px $lightgrey;
-        font-size:2.5rem;
+        color: $white;
+        font-size: 2.5rem;
     }
 }
 
-/* --------------------------------- ENTETE --------------------------------- */
+.ContentBand.Arrowed {
+    background-color: transparent;
+    background-image: url($bg-fleche);
+    background-position: center top;
+    background-repeat: no-repeat;
+    .ContentBand-ColumnHeader { padding-top: 5rem;}
+}
+.ContentBand.Principal.Arrowed {
+    background-position: center 5rem;
+    .ContentBand-ColumnHeader { padding-top: 1rem;}
+}
+
+/* ------------------------------- [ ENTETE ] ------------------------------- */
 
 .SiteHeader {
+    background-color: $pink;
     position: relative;
     z-index: 2;
-    background-color: $primary;
-    color: $softGreen;
     
     &-Logo {
-        height: 100px;
         background-color: transparent;
         background-image: url($logo);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        height: 100px;
     }
     
     &-Slogan1 {
         font-family: 'Indie Flower';
     }
     &-Slogan2 {
-        font-weight: bold;
-        background-color: $softGreen;
-        color: $secondary;
-        
+        background-color: $softgreen;
+        color: $green;
         strong {
+            color: $pink;
             text-transform: uppercase;
-            color: $primary;
-            
         }
     }
 }
 
 .Title {
+    color: $green;
     font-weight: bold;
-    color: $secondary;
-    
     strong {
+        color: $pink;
         font-family: 'Lobster';
-        color: $primary;
-        font-weight: normal;
         font-size: 3.5rem;
+        font-weight: normal;
     }
 }
 
-/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
 
 .PsychicChoice-Psychic {
     &-VisualForm {
-        color: $secondary;
+        color: $green;
     }
     &-Picture {
-        position: relative;
-        display: inline-block;
-        width: 237px;
-        height: 205px;
         background-color: transparent;
-        background-image: url($hexagone-normal);
+        background-image: url($hexagone);
+        display: inline-block;
+        height: 205px;
+        position: relative;
+        width: 237px;
     }
     &-VisualForm:hover {
-        color: $primary;
+        color: $lightpink;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
-            background-image: url($hexagone-active);
+            background-image: url($hexagone_hover);
         }
     }
     &-Input:checked + &-VisualForm {
-        color: $primary;
+        color: $pink;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
-            background-image: url($hexagone-active);
+            background-image: url($hexagone_active);
             &:after {
+                background-color: transparent;
+                color: $pink;
                 content: "\f00c";
                 font-family: 'FontAwesome';
-                background-color: transparent;
-                color: $primary;
             }
         }
     }
 }
 
-.PsychicChoice-Psychic.Christelle .PsychicChoice-Psychic-Photo {
-    background-image: url($christelle);
-}
-
-.PsychicChoice-Psychic.Sonia .PsychicChoice-Psychic-Photo {
-    background-image: url($sonia);
-}
-
-/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
 
 .ThemeChoice-ListItem {
     border-color: $lightgrey;
-    color: $secondary;
+    border-left: none;
+    border-right: none;
+    color: $green;
     font-weight: bold;
-    background: #fff;
     position: relative;
-    border-left: 0;
-    border-right: 0;
-    &::before,  &::after{
-        content: '';
-        top: 0;
-        display: block;
-        background: no-repeat center;
-        width: 30px;
+    
+    &:before, &:after {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        content: "";
+        display: inline-block;
         height: 100%;
         position: absolute;
-        background-size: cover;
-        z-index: 0;
+        top: 0;
+        width: 2.4rem;
     }
-    &::before{
-        left: -24px;
-        background-image: url($img_dir + 'left.svg');
+    &:before {
+        background-image: url($listitem_leftcorner);
+        left: -2.4rem;
     }
-    &::after{
-        right: -21px;
-        background-image: url($img_dir + 'right.svg');
+    &:after {
+        background-image: url($listitem_rightcorner);
+        right: -2.4rem;
     }
+    
     &-Icon {
         background-color: transparent;
-        background-repeat: no-repeat;
         background-position: center;
+        background-repeat: no-repeat;
         background-size: contain;
         
-        &.Amour {
-            background-image: url($icon_amour-normal);
-        }
-        &.Argent {
-            background-image: url($icon_argent-normal);
-        }
-        &.Travail {
-            background-image: url($icon_travail-normal);
-        }
+        &.Amour { background-image: url($icon_amour);}
+        &.Argent { background-image: url($icon_argent);}
+        &.Travail {  background-image: url($icon_travail);}
     }
     
     &:hover, &:active, &:focus {
-        color: $addon;
+        color: $lightpink;
     }
-    &:hover &-Icon {
+    &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
         background-color: transparent;
-        &.Amour {
-            background-image: url($icon_amour-hover);
-        }
-        &.Argent {
-            background-image: url($icon_argent-hover);
-        }
-        &.Travail {
-            background-image: url($icon_travail-hover);
-        }
+        &.Amour { background-image: url($icon_amour_hover);}
+        &.Argent { background-image: url($icon_argent_hover);}
+        &.Travail { background-image: url($icon_travail_hover);}
     }
     &-Input:checked + & {
-        color: $primary;
+        color: $pink;
         .ThemeChoice-ListItem-Icon {
             background-color: transparent;
-            &.Amour {
-                background-image: url($icon_amour-active);
-            }
-            &.Argent {
-                background-image: url($icon_argent-active);
-            }
-            &.Travail {
-                background-image: url($icon_travail-active);
-            }
+            &.Amour { background-image: url($icon_amour_active);}
+            &.Argent { background-image: url($icon_argent_active);}
+            &.Travail { background-image: url($icon_travail_active);}
         }
     }
 }
 
-/* ------------------------------ TIRAGE TAROT ------------------------------ */
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
 
 .WidgetTarot-Card {
     
@@ -278,46 +244,24 @@ body {
 
 .WidgetTarot-ResultMsg {
     font-weight: bold;
-    color: $bleu;
+    color: $green;
 }
 
-/* ------------------------------- POP VOYANT ------------------------------- */
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
-    background-image: url($hexagone-active);
-    left: -153px;
-    &.Christelle .Pop-Voyant-Photo{
-        background-image: url($christelle);
-    }
-    &.Sonia .Pop-Voyant-Photo{
-        background-image: url($sonia);
-    }
+    background-image: url($hexagone_active);
 }
-@media all and (max-width: 680px){    
-    .Pop.Pop-Voyant {
-        width: 120px;
-        height: 105px;
-        left: -30px;
-    }
-    .offre{
-        display: none;
-    }
-}
-@media all and (max-width: 480px){
-    .Pop.Pop-Voyant {
-        left: 50%;
-        top: -70px;
-        margin-left: -60px;
-    }
-    .offre{
-        display: none;
-    }
-}
-/* ------------------------------- FORMULAIRE ------------------------------- */
+
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
+
+@import "modules_themes/tarot-direct-psychics";
+
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
 
 .FormContainer {
-    background-color: $softGreen;
+    background-color: $softgreen;
     color: $grey;
 }
 
@@ -334,71 +278,27 @@ body {
     }
 }
 .FormContainer-Submit {
-    background-color: $primary;
+    background-color: $pink;
     color: $white;
-    border:2px solid $primary;
+    border:2px solid $pink;
     transition: all 0.5s ease-in;
     
     &:hover{
-        color: $primary; 
+        color: $pink; 
         background-color:transparent;
     }
 }
 
-.FormField-Label { 
-    span{
-        &::before, &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;margin: auto; 
-        }
-        &::before{
-            background: linear-gradient( 90deg, rgb(242,242,242) 0%, rgb(255,255,255) 50%, rgb(255,255,255) 100%);
-            border: 1px solid rgb(230, 230, 230);
-        }
-        &:hover {
-            cursor: pointer;
-        }
-        &.radio{
-            &::before {
-                left: -40px;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-            }
-            &::after {
-                left: -33px;
-                width: 8px;
-                height: 8px;
-                border-radius: 100%;
-                transition: all 200ms ease;
-            }
-        }
-        &.checkbox{
-            font-size: 1.3rem;
-            font-weight: 500;
-            &::before {
-                width: 20px;
-                height: 20px;
-                left: -23px;
-                box-sizing: border-box;
-                transition: border-color .2s;
-                border-radius: 3px;
-            }
-            &:hover::before {
-                border: 3px solid #e7ebe9;
-            }
-            &::after {
-                content: '\f00c';
-                font-family: 'FontAwesome';
-                left: -21px;
-                top: 0;
-                color: transparent;
-                transition: color .2s;
-                font-size: 1.3em;
-            }
-        }
+.FormField-Label {
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $man;
     }
 }
 
@@ -408,101 +308,47 @@ body {
     font-weight: bold;
     padding-right: 0.5rem;
 }
-input{
-    outline: none;
-}
+
 input[type="checkbox"], input[type="radio"] {
     width: 20px !important;
     height: 20px !important;
-    display: none !important;
-}
-input[type="radio"]{
-    &:checked + label span.radio::after {
-        left: -35px;
-        background: #999999;
-        width: 12px;
-        height: 12px;
-    }
-}
-input[type="checkbox"]{
-    &:checked + label span.checkbox::after {
-        color: $primary;
-    }
-}
-.overlay{
-    position: fixed !important;
-    z-index: 9 !important;
-}
-.alert {
-    text-align: center;
-    border-radius: 5px;
-    max-width: 500px;
-    min-width: 312px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-
-    &-danger {
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-    &-success {
-        color: #3c763d;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-    }
-    &-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-    &-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-    }
 }
 
-/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+@import "modules_themes/form-alert-vivid";
+
+/* ------------------------------- [ FOOTER ] ------------------------------- */
+
+.SiteCopyright {
+    margin-top: 230px;
+}
+
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
     &-Slogan {
-
         &-Tel {
+            color: $pink;
             font-size: 2.8rem;
             text-decoration: underline;
-            color: $primary;
-            
-            &:hover {
-                color: $addon;
-            }
-            
-            &Icon {
-                background-image: url($icon_tel);
-            }
+            &:hover { color: $lightpink;}
+            &Icon { background-image: url($icon_tel);}
         }
-        
         &-CodePromo {
+            color: $pink;
             font-size: 2.8rem;
-            color: $primary;
         }
     }
-    &-DescText {
-        font-weight: normal;
-    }
+    &-DescText { font-weight: normal;}
 }
 
-/* ---------------------------------- TCHAT --------------------------------- */
+/* -------------------------------- [ TCHAT ] ------------------------------- */
 .Tchat-Message-Person {
-    color: $primary;
-}
-.Tchat-Waiting{
-    color: #267d9d;
+    color: $pink;
 }
 .Tchat-Gratuit-Title {
     margin-top: 2rem;
-    color: $bleu;
+    color: $green;
 }
 .Tchat-Gratuit-Footer {
     display: flex;
@@ -513,7 +359,7 @@ input[type="checkbox"]{
     color: #f1134c;
 }
 a.FormField-Button {
-    color: #fff;
+    color: $white;
     background: #f1134c;
     text-decoration: none;
     font-weight: 600;
@@ -538,7 +384,7 @@ a.FormField-Button {
             color: inherit;
         }
         .FormField.withAside .aside {
-            background-color: $bleu;
+            background-color: $pink;
             border: 2px solid $lightgrey;
             border-radius: 8px;
             color: $lightgrey;
@@ -548,19 +394,19 @@ a.FormField-Button {
 
 .codeastro {
     font-size: 1.6rem;
-    color: $turquoise;
+    color: $pink;
 }
 
-/* ---------------------------------- DRI-POSTMAIL --------------------------------- */
+/* -------------------------------- [ DRI ] --------------------------------- */
 .DRI {
     &-Slogan {
         width: 80%;
         margin: 3rem auto 0;
         padding: 1rem;
-        border: 2px solid $primary;
+        border: 2px solid $green;
         text-align: center;
         font-size: 2rem;
-        color: $primary;
+        color: $green;
         hyphens: none;
     }
     
@@ -581,12 +427,12 @@ a.FormField-Button {
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            color: $bleu;
+            color: $green;
             hyphens: none;
 
             & strong {
                 font-weight: normal;
-                color: $turquoise;
+                color: $lightpink;
             }
         }
 
@@ -596,7 +442,7 @@ a.FormField-Button {
             font-family: 'Lobster';
             font-weight: normal;
             font-size: 2.8rem;
-            color: $rose;
+            color: $pink;
         }
         
         &Container {
@@ -608,13 +454,6 @@ a.FormField-Button {
         text-transform: uppercase;
     }
 }
-.offre {
-  font-size: 2rem;
-  font-family: "Indie Flower";
-  color: $grey;
-  line-height: 1.2;
-  text-align: center;
-  }
 
 @media all and (max-width: 640px){
    .DRI{
@@ -636,13 +475,46 @@ a.FormField-Button {
     }
 }
 
-/*--------------------------       FOOTER         ----------------------------*/
-.footer-links{
-    li {
-        display: inline-block;
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+.Merci-Form {
+    background-color: $softgreen;
+    background-image: url($offre_immediate);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+    text-align: center;
+    
+    .Merci-Title {
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        color: $green;
+        strong {
+            color: $pink;
+        }
     }
-    a {
+    
+    .Merci-Text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $lightpink;
+        hyphens: none;
+    }
+    
+    .FormContainer-Submit {
+        display: inline-block;
         text-decoration: none;
     }
 }
 
+@media all and (max-width: 102.4rem){
+    .Merci-Form {
+        background-image: none;
+    }
+}
+@media all and (max-width: 400px){
+    .Merci-Title {
+        display: none;
+    }
+    .Merci-Text {
+        font-size: 1.7rem;
+    }
+}

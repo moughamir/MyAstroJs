@@ -35,7 +35,7 @@ $psychics = isset($psychics) ? $psychics : $def_psychics;
         $psy_name = $psychics_bdd[$psy_code]['name'];
         $psy_desc = $psychics_bdd[$psy_code]['desc'];
 ?>   
-    <div class="ContentBand-Column PsychicChoice-Psychic <?= ucfirst($psy_code);?>">
+    <div class="ContentBand-Column PsychicChoice-Psychic <?= $psy_name;?>">
         <input type="radio" name="voyant" value="<?= $psy_name;?>" id="<?= $psy_code;?>_choice" class="PsychicChoice-Psychic-Input" required />
         <label for="<?= $psy_code;?>_choice" class="PsychicChoice-Psychic-VisualForm">
             <span class="PsychicChoice-Psychic-Picture"><span class="PsychicChoice-Psychic-Photo"></span></span>
