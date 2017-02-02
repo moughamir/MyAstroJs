@@ -83,7 +83,7 @@ $questions = array (
                                             Parce que notre quotidien à tous est fait de hauts et de bas,<br>
                                             j’ai la conviction de pouvoir vous apporter sérénité et bien-être !
                                         </p>
-                                        <p>Amour, travail, argent… Ne soyez plus prisonnier de cette situation !</p>
+                                        <p><strong>Amour</strong>, travail, argent… Ne soyez plus prisonnier de cette situation !</p>
                                         <p>
                                             Ma philosophie ? Placer l’humain au centre de ma voyance !<br>
                                             Parce que votre bonheur est ma seule préoccupation. 
@@ -150,6 +150,7 @@ $questions = array (
                                 </section>
                                 <!-- TROISIÈME ÉTAPE -->
                                 <section id="scn-form" style="display:none">
+                                    <h2 id="scn-form-title"></h2>
                                     <h2 class="FormContainer-Title">Remplissez vite le formulaire afin que <br class="hidebloc"/>je puisse vous envoyer votre interprétation :</h2>
                                     <p class="alert alert-danger" style="display: none"></p>
                                     <div class="FormField radio">

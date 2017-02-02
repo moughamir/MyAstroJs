@@ -61,7 +61,8 @@ body {
     padding-bottom: 0;
     text-align: center;
     &-Column {
-       margin-bottom: 3rem; 
+        flex-grow: 1;
+        margin-bottom: 3rem; 
     }
 }
 
@@ -139,6 +140,10 @@ body {
         line-height: 1.2;
         margin: 0;
         margin-bottom: 0.8rem;
+        strong {
+            color: $pink;
+            font-weight: normal;
+        }
     }
     &-Sign {
         text-align: right;

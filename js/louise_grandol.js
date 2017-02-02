@@ -10,6 +10,7 @@ $(document).ready(function(){
     var question_select = $('#theme_id');
     var question_submit = '#scn-question-submit';
     var form = $('#scn-form');
+    var form_title = $('#scn-form-title');
     
     // ETAPE1 - CHOIX DU THÈME
     question.hide();
@@ -23,6 +24,7 @@ $(document).ready(function(){
         var theme_item_selector = '.ThemeChoice-Item.'+ theme_choice;
         var theme_item_code = $(theme_item_selector).addClass('hover').clone().wrap('<div></div>').parent().html();
         question_title.html(theme_item_code);
+        form_title.html(theme_item_code);
         question_select.find('option').each(function(){
             var filter = $(this).data('filter-value');
             if(theme_choice !== filter){
