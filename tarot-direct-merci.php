@@ -93,16 +93,16 @@ if(isset($_SESSION['user_id'])){
         </section>
         <?php } ?>
 
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
 
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
 
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
-              include('include/conversion/facebook.php'); ?>
+              include('include/conversion/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

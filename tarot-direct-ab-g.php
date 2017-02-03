@@ -53,7 +53,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <form id="form-container" class="ajax">
             <!-- -------------------------------------- CHOIX DU VOYANT -------------------------------------- -->
             <section class="ContentBand TwoCols PsychicChoice Principal" id="scn-psychic">
-                <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyante</strong> -</header>
+                <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyant</strong> -</header>
                 <div class="PageWrapper">
                     <?php include('include/visual_modules/tarot-direct/psychic-choice.php'); ?>
                 </div>
