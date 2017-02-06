@@ -19,25 +19,27 @@ $img_dir : "../images_landing/numerologie-amour-2017/";
 $color1 : #17202C;
 $color2 : #FD5610;
 $color3 : #FFFFFF; 
-
+$primary: #ff1844;
+$secondary: #ac4b5e;
 $font1: 'Amatic SC', cursive; // titre-princip1
 $font2: 'Cookie', cursive; // titre-princip1
 $font3: "Open Sans", sans-serif; // texte courant
 $font4: 'Ubuntu Condensed', sans-serif; // titres
 
-$bg : $color1;
-$woman : $color2;
+$bg : $secondary;
+$woman : $primary;
 $men : $color1;
 
 /* Images */
 $bg1 : $img_dir + "bg1.jpg";
 $bg2 : $img_dir + "bg2.jpg";
+$bg3 : $img_dir + "bg3.png";
 $logo : $img_dir + "logo-MYASTRO.svg";
 $title : $img_dir + "bg-title.png";
 $titre : $img_dir + "titre.svg";
 $promo : $img_dir + "ten-min-free.png";
-$photo1 : $img_dir + "photo-fete.png";
-$photo2 : $img_dir + "photo-nouvel-an.png";
+$photo1 : $img_dir + "couple-4.png";
+$photo2 : $img_dir + "i-love-u-4.png";
 $ico_star : $img_dir + "ico-star.png";
 $ico_gift : $img_dir + "ico-gift.png";
 $ico_lock : $img_dir + "ico-lock.png";
@@ -64,6 +66,11 @@ body {
     background: $bg url($bg2) no-repeat center top fixed;
     background-size: cover;
 }
+.bg3 {
+    background: $bg url($bg3) no-repeat center top fixed;
+    background-size: cover;
+}
+
 
 /* ------------------------------ MACRO-TYPOS ------------------------------- */
 h2, button { hyphens: none;}
@@ -142,14 +149,14 @@ h2, button { hyphens: none;}
     &-Submit {
         padding: 1rem 4rem;
         border: 0px solid $color1;
-        background-color: $color2;
+        background-color: $primary;
         color: white;
         font-family: $font3;
         font-size: 2.2rem;
         text-transform: uppercase;
         transition: background 0.25s ease-in;
         &:active, &:focus, &:hover {
-            background-color: darken($color2, 20%);
+            background-color: darken($primary, 20%);
         }
     }
     
