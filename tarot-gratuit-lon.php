@@ -130,12 +130,12 @@
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-gratuit-1-rak" />
+                                <input type="hidden" name="source" value="tarot-gratuit-lon" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="external_base" />
-                                <input type="hidden" name="dri" value="merci-voyance" />
+                                <input type="hidden" name="affiliation" value="londres" />
+                                <input type="hidden" name="dri" value="merci-voyance-tchat" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
