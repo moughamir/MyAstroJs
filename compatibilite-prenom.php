@@ -19,10 +19,10 @@
       </article>
       <form>
         <label for="mon-prenom">Mon prénom</label>
-        <input class="name" type="text" name="mon-prenom" placeholder="Mon prénom" value="MEd"/>
+        <input class="name" type="text" name="user" placeholder="Mon prénom"/>
         <label for="mon-prenom">Son prénom</label>
-        <input class="name0" type="text" name="son-prenom" placeholder="Son prénom"/>
-        <input class="btn-submit" type="submit" value="Voir le Résultat"/>
+        <input class="name" type="text" name="other" placeholder="Son prénom"/>
+        <a class="btn-submit"/>Voir le Résultat</a>
       </form>
     </section>
   </main>

@@ -7,7 +7,7 @@
 global $
 */
 
-const letters = {
+var letters = {
   A:1, J:1, S:1,
   B:2, K:2, T:2,
   C:3, L:3, U:3,
@@ -21,15 +21,23 @@ const letters = {
 paths = {
   'one' : 'Entre vous et {{OTHERPERSON}}, c’est toute feu toute flamme ! Votre couple est la somme de vos deux personnalités, fortes, indépendantes et capables de se réaliser soi-même. Pour que votre histoire fonctionne, vos deux caractères doivent se compléter et chacun doit fournir des efforts très particuliers. Votre relation avec {{OTHERPERSON}} est à prendre avec des pincettes, mais le jeu en vaut vraiment la chandelle. {{FIRSTPERSON}}, c’est en prenant du recul que vous avancerez efficacement…',
   'two' : 'A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de {{OTHERPERSON}}, attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié! {{FIRSTPERSON}}, allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.',
-  'three' : 'A première vue, vous n’êtes pas vraiment faits pour vivre l’un avec l’autre. Mais votre volonté, combinée à celle de {{OTHERPERSON}}, attenue cette fausse impression. Tout est possible avec l’état d’esprit approprié! {{FIRSTPERSON}}, allez-y pas à pas, en prenant soin de ne pas griller les étapes. Prenez le temps de réflexion nécessaire avant d’agir, sous peine de devoir faire face à bien des difficultés relationnelles.'
-  
+  'three' : 'Votre couple avec {{FIRSTNAME2}} est marqué par les blocages ! Vous manquez tout deux de souplesse d’esprit et de qualités d’adaptation. Ce qui va vous causer bien des ennuis dès que la première nouveauté ou la première instabilité va pointer le bout de son nez dans votre couple. Vous aimez la stabilité et vous pourriez aisément l’obtenir, à condition de surmonter tous ces blocages. Une chose facile à faire en soi, mais surtout très utile, car vous et {{FIRSTNAME2}} pourriez être promis à un bel avenir…'
 },
 user = '{{FIRSTPERSON}}',
 other = '{{OTHERPERSON}}',
-name = $('.name').val($(this).val().toUpperCase()),
+names = [],
+name = $('.name').val(),
 submit = $('.btn-submit');
     
+submit.on('click', function(){
+  $(".name").each(function() {
+    names[$(this).attr("name")] = $(this).val();
     
+    console.log(names);
+  });
+  
+  
+}); 
 
 function simpleScore(name) {
   var nameScore = 0;

@@ -168,7 +168,7 @@ $(document).ready(function(){
                         form_alert.show();
                         form_alert.removeClass('hidden');
                     } else {
-                        $(alert_form_errors).append('<br><i data-dismiss="modal" style="cursor:pointer;font-variant:sub">Cliquez pour fermer ce message</i>');
+                        $(alert_form_errors).append('<br><i data-dismiss="-" style="cursor:pointer;font-variant:sub">Cliquez pour fermer ce message</i>');
                     }
                     if (!use_modal){
                         form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);
