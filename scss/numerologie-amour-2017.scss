@@ -26,8 +26,8 @@ $font2: 'Cookie', cursive; // titre-princip1
 $font3: "Open Sans", sans-serif; // texte courant
 $font4: 'Ubuntu Condensed', sans-serif; // titres
 
-$bg : $secondary;
-$woman : $primary;
+$bg : $color1;
+$woman : $color2;
 $men : $color1;
 
 /* Images */
@@ -38,8 +38,8 @@ $logo : $img_dir + "logo-MYASTRO.svg";
 $title : $img_dir + "bg-title.png";
 $titre : $img_dir + "titre.svg";
 $promo : $img_dir + "ten-min-free.png";
-$photo1 : $img_dir + "couple-4.png";
-$photo2 : $img_dir + "i-love-u-4.png";
+$photo1 : $img_dir + "photo-fete.png";
+$photo2 : $img_dir + "photo-nouvel-an.png";
 $ico_star : $img_dir + "ico-star.png";
 $ico_gift : $img_dir + "ico-gift.png";
 $ico_lock : $img_dir + "ico-lock.png";
@@ -149,14 +149,14 @@ h2, button { hyphens: none;}
     &-Submit {
         padding: 1rem 4rem;
         border: 0px solid $color1;
-        background-color: $primary;
+        background-color: $color2;
         color: white;
         font-family: $font3;
         font-size: 2.2rem;
         text-transform: uppercase;
         transition: background 0.25s ease-in;
         &:active, &:focus, &:hover {
-            background-color: darken($primary, 20%);
+            background-color: darken($color2, 20%);
         }
     }
     

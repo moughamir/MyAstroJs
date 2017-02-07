@@ -2141,15 +2141,15 @@ body {
   color: white; }
 
 .bg1 {
-  background: #17202C url("../images_landing/numerologie-amour-2017/bg1.jpg") no-repeat center top fixed;
+  background: #ac4b5e url("../images_landing/numerologie-amour-2017/bg1.jpg") no-repeat center top fixed;
   background-size: cover; }
 
 .bg2 {
-  background: #17202C url("../images_landing/numerologie-amour-2017/bg2.jpg") no-repeat center top fixed;
+  background: #ac4b5e url("../images_landing/numerologie-amour-2017/bg2.jpg") no-repeat center top fixed;
   background-size: cover; }
 
 .bg3 {
-  background: #17202C url("../images_landing/numerologie-amour-2017/bg3.png") no-repeat center top fixed;
+  background: #ac4b5e url("../images_landing/numerologie-amour-2017/bg3.png") no-repeat center top fixed;
   background-size: cover; }
 
 /* ------------------------------ MACRO-TYPOS ------------------------------- */
@@ -2230,14 +2230,14 @@ h2, button {
   .FormContainer-Submit {
     padding: 1rem 4rem;
     border: 0px solid #17202C;
-    background-color: #FD5610;
+    background-color: #ff1844;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 2.2rem;
     text-transform: uppercase;
     transition: background 0.25s ease-in; }
     .FormContainer-Submit:active, .FormContainer-Submit:focus, .FormContainer-Submit:hover {
-      background-color: #a63201; }
+      background-color: #b10022; }
   .FormContainer.DRI .DRI {
     box-shadow: 0 0 0px 0px black;
     background: transparent; }
@@ -2275,7 +2275,7 @@ h2, button {
   .FormField-Label .ico-woman {
     font-size: 1.9rem;
     font-weight: bold;
-    color: #FD5610; }
+    color: #ff1844; }
   .FormField-Label .ico-man {
     font-size: 1.9rem;
     font-weight: bold;
@@ -2357,7 +2357,7 @@ input[type="checkbox"], input[type="radio"] {
   border: 0px solid red; }
 
 #photo1 {
-  background: url("../images_landing/numerologie-amour-2017/photo-fete.png") center no-repeat;
+  background: url("../images_landing/numerologie-amour-2017/couple-4.png") center no-repeat;
   background-size: contain;
   position: absolute;
   top: 10rem;
@@ -2365,7 +2365,7 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0; }
 
 #photo2 {
-  background: url("../images_landing/numerologie-amour-2017/photo-nouvel-an.png") center no-repeat;
+  background: url("../images_landing/numerologie-amour-2017/i-love-u-4.png") center no-repeat;
   background-size: contain;
   position: absolute;
   top: 25rem;
@@ -2567,4 +2567,4 @@ input[type="checkbox"], input[type="radio"] {
     background-position: top left;
     background-size: auto 75%; } }
 
-/*# sourceMappingURL=numerologie-amour-2017.css.map */
+/*# sourceMappingURL=numerologie-amour-saint-valentin.css.map */
