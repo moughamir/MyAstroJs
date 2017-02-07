@@ -7,12 +7,11 @@
     Created on : 19 juillet 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-    Updated     : Feb 6th, 2016
 */
 session_start();
 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
 $chiffre = rand(1, 5);
-$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour - Chiffre '.$chiffre, 'conjoint'=>true];
+$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour (été 2016) - Chiffre '.$chiffre, 'conjoint'=>true];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,7 +35,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="bg3">
+    <body class="bg1">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
@@ -53,7 +52,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                     <article class="FormContainer">
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h2 class="FormContainer-Header">Testez votre compatibilité amoureuse&nbsp;:</h2>
-                        <p>Êtes-vous faits l’un pour l’autre ? Votre histoire a-t-elle un espoir de fonctionner ? Que faire pour que votre couple dure pour toujours ? La numérologie de l’amour vous donne toutes les cartes en main pour construire cette histoire d’amour qui vous tient tant à cœur… Indiquez votre prénom et celui de la personne qui occupe votre esprit à ce moment précis. En recevant immédiatement le chiffre de votre couple, vous saurez ce que les chiffres de votre vie ont à vous révéler…</p>
+                        <p>Êtes-vous faits l’un pour l’autre ? Votre histoire a-t-elle un espoir de fonctionner ? Que faire pour que votre couple dure pour toujours ? La numérologie de l’amour vous donne toutes les cartes en main pour construire cette histoire d’amour qui vous tient tant à cœur… Indiquez votre prénom et celui de la personne qui occupe votre esprit à ce moment précis. En recevant immédiatement le chiffre de votre couple, vous saurez ce que les chiffres de votre vie ont à vous révéler…</p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
                             <form class="ajax">
@@ -144,7 +143,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### SCRIPTS #### -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
         <script src="js/numerologie-amour.js"></script>
         
@@ -156,5 +155,8 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href='//fonts.googleapis.com/css?family=Amatic+SC|Cookie|Open+Sans:300,700|Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
