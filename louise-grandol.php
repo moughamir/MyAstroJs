@@ -54,12 +54,89 @@ $questions = array (
             <section class="ContentBand">
                 <div class="ContentBand-Column Psychic-Portrait">
                     <div class="Psychic-Portrait-Picture"></div>
-                    <p class="Psychic-Portrait-Name">Louise Grandol</p>
-                    <div class="Psychic-Portrait-Sign"></div>
+                    <div id="scn-psychic-sign" style="display:none">
+                        <p class="Psychic-Portrait-Name">Louise Grandol</p>
+                        <div class="Psychic-Portrait-Sign"></div>
+                    </div>
+                    <div id="scn-pass-intro">
+                        <p>Pour passer l’introduction, cliquez ci-dessous</p>
+                        <button type="button" class="FormContainer-Submit">Commencer</button>
+                    </div>
                 </div>
                 <div class="ContentBand-Column">
                     <article id="form-container" class="FormContainer">
                         <div class="FormContainer overlay" id="form-overlay"></div>
+                        <!-- PREMIÈRE ÉTAPE -->
+                        <section id="scn-intro">
+                            <div class="DescText">
+                                <p class="DescText-Header">Bonjour à toutes et tous,</p>
+                                <p>Je m’appelle Louise, je suis voyante depuis maintenant 33 ans.</p>
+                                <p>Cartomancienne, c’est avec plaisir que je mets mes cartes du tarot à votre service.</p>
+                                <p>
+                                    Parce que notre quotidien à tous est fait de hauts et de bas,<br>
+                                    j’ai la conviction de pouvoir vous apporter sérénité et bien-être !
+                                </p>
+                                <p><strong>Amour</strong>, travail, argent… Ne soyez plus prisonnier de cette situation !</p>
+                                <p>
+                                    Ma philosophie ? Placer l’humain au centre de ma voyance !<br>
+                                    Parce que votre bonheur est ma seule préoccupation. 
+                                </p>
+                                <p>
+                                    Alors adieu les complications et les difficultés de paiement, <br>
+                                    je prône une voyance privée, claire et honnête, où seule votre satisfaction compte.
+                                </p>
+                                <p class="DescText-Sign">Louise Grandol</p>
+                            </div>
+                            <div class="ThemeChoice">
+                                <div class="FormField-FlexContainer">
+                                    <div class="FormField-FlexItem">
+                                        <label class="ThemeChoice-Item Amour hover">
+                                            <span class="ThemeChoice-ItemIco"></span> L’amour
+                                        </label>
+                                    </div>
+                                    <div class="FormField-FlexItem">
+                                        <label class="ThemeChoice-Item Travail">
+                                            <span class="ThemeChoice-ItemIco"></span> Le travail
+                                        </label>
+                                    </div>
+                                    <div class="FormField-FlexItem">
+                                        <label class="ThemeChoice-Item Argent">
+                                            <span class="ThemeChoice-ItemIco"></span> L’argent
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- DEUXIÈME ÉTAPE -->
+                        <section id="scn-theme" style="display:none">
+                            <div class="DescText">
+                                <p class="DescText-Header">Bonjour,</p>
+                                <p class="DescText-Content">Je suis ce que l’on appelle une voyante intuitive, mais le mot médium doit davantage vous parler. Cartomancienne, j’ai régulièrement recours au tarot de Marseille pour m’apporter un support physique et approfondir mes visions et mes ressentis. Voilà maintenant plus de trente années que me sont apparus mes dons de médiumnité pour la première fois. J’avais alors dix-sept ou dix-huit ans et je dois bien vous avouer que j’étais totalement perdue face à ce cadeau de la nature. Le point de départ d’une grande aventure pour moi. Une aventure qui m’a conduit du Brésil jusqu’en Inde, en passant par le Portugal et la Serbie, à la poursuite de connaissances et de techniques aussi nouvelles que précieuses pour moi, pour mieux dompter mes dons, pour mieux les gérer, pour mettre des mots sur mes visions. Une aventure qui m’a aussi fait redécouvrir l’Humain, une notion que je place au centre de toutes mes consultations. Parce que sans vous mes visions n’ont plus aucune signification, vous êtes la clé de toute ma passion.</p>
+                            </div>
+                            <div class="ThemeChoice">
+                                <h3 class="FormContainer-Header">Choisissez votre domaine :</h3>
+                                <div class="FormField-FlexContainer">
+                                    <div class="FormField-FlexItem">
+                                        <input type="radio" name="theme_choice" value="Amour" id="theme-amour" class="ThemeChoice-Input" />
+                                        <label for="theme-amour" class="ThemeChoice-Item Amour">
+                                            <span class="ThemeChoice-ItemIco"></span> L’amour
+                                        </label>
+                                    </div>
+                                    <div class="FormField-FlexItem">
+                                        <input type="radio" name="theme_choice" value="Travail" id="theme-travail" class="ThemeChoice-Input" />
+                                        <label for="theme-travail" class="ThemeChoice-Item Travail">
+                                            <span class="ThemeChoice-ItemIco"></span> Le travail
+                                        </label>
+                                    </div>
+                                    <div class="FormField-FlexItem">
+                                        <input type="radio" name="theme_choice" value="Argent" id="theme-argent" class="ThemeChoice-Input" />
+                                        <label for="theme-argent" class="ThemeChoice-Item Argent">
+                                            <span class="ThemeChoice-ItemIco"></span> L’argent
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <div class="FormContainer-Fields">
                             <form class="ajax">                                
                                 <!-- ########## identification formulaire ########## -->
@@ -73,52 +150,7 @@ $questions = array (
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
 
-                                <!-- PREMIÈRE ETAPE -->
-                                <section id="scn-theme">
-                                    <div class="DescText">
-                                        <p class="DescText-Header">Bonjour à toutes et tous,</p>
-                                        <p>Je m’appelle Louise, je suis voyante depuis maintenant 33 ans.</p>
-                                        <p>Cartomancienne, c’est avec plaisir que je mets mes cartes du tarot à votre service.</p>
-                                        <p>
-                                            Parce que notre quotidien à tous est fait de hauts et de bas,<br>
-                                            j’ai la conviction de pouvoir vous apporter sérénité et bien-être !
-                                        </p>
-                                        <p><strong>Amour</strong>, travail, argent… Ne soyez plus prisonnier de cette situation !</p>
-                                        <p>
-                                            Ma philosophie ? Placer l’humain au centre de ma voyance !<br>
-                                            Parce que votre bonheur est ma seule préoccupation. 
-                                        </p>
-                                        <p>
-                                            Alors adieu les complications et les difficultés de paiement, <br>
-                                            je prône une voyance privée, claire et honnête, où seule votre satisfaction compte.
-                                        </p>
-                                        <p class="DescText-Sign">Louise Grandol</p>
-                                    </div>
-                                    <div class="ThemeChoice">
-                                        <h3 class="FormContainer-Header">Choisissez votre domaine :</h3>
-                                        <div class="FormField-FlexContainer">
-                                            <div class="FormField-FlexItem">
-                                                <input type="radio" name="theme_choice" value="Amour" id="theme-amour" class="ThemeChoice-Input" />
-                                                <label for="theme-amour" class="ThemeChoice-Item Amour">
-                                                    <span class="ThemeChoice-ItemIco"></span> L’amour
-                                                </label>
-                                            </div>
-                                            <div class="FormField-FlexItem">
-                                                <input type="radio" name="theme_choice" value="Travail" id="theme-travail" class="ThemeChoice-Input" />
-                                                <label for="theme-travail" class="ThemeChoice-Item Travail">
-                                                    <span class="ThemeChoice-ItemIco"></span> Le travail
-                                                </label>
-                                            </div>
-                                            <div class="FormField-FlexItem">
-                                                <input type="radio" name="theme_choice" value="Argent" id="theme-argent" class="ThemeChoice-Input" />
-                                                <label for="theme-argent" class="ThemeChoice-Item Argent">
-                                                    <span class="ThemeChoice-ItemIco"></span> L’argent
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!-- DEUXIEME ETAPE -->
+                                <!-- TROISIÈME ÉTAPE -->
                                 <section id="scn-question" style="display:none">
                                     <h2 id="scn-question-title"></h2>
                                     <p class="alert alert-danger" style="display: none"></p>
@@ -148,10 +180,10 @@ $questions = array (
                                     </div>
                                     <a href="#" class="FormContainer-Submit" id="scn-question-submit">envoyer</a>
                                 </section>
-                                <!-- TROISIÈME ÉTAPE -->
+                                <!-- QUATRIÈME ÉTAPE -->
                                 <section id="scn-form" style="display:none">
                                     <h2 id="scn-form-title"></h2>
-                                    <h2 class="FormContainer-Title">Remplissez vite le formulaire afin que <br class="hidebloc"/>je puisse vous envoyer votre interprétation :</h2>
+                                    <h2 class="FormContainer-Title">Remplissez vite le formulaire afin que<br />je puisse vous envoyer votre interprétation :</h2>
                                     <p class="alert alert-danger" style="display: none"></p>
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
@@ -229,7 +261,7 @@ $questions = array (
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
         <script src="js/louise_grandol.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

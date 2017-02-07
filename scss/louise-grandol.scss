@@ -62,7 +62,6 @@ body {
     text-align: center;
     &-Column {
         flex-grow: 1;
-        margin-bottom: 3rem; 
     }
 }
 
@@ -75,6 +74,21 @@ body {
 @media screen and (max-width: 780px){
     .ContentBand {
         align-items: center;
+        flex-direction: column-reverse;
+    }
+    #scn-pass-intro {
+        left: 50%;
+        position: absolute;
+        top: 1.8rem;
+        transform: translateX(-50%);
+        width: 280px;
+        z-index: 1;
+    }
+    #scn-intro {
+        padding-top: 100px;
+    }
+    #scn-theme {
+        display: flex;
         flex-direction: column-reverse;
     }
 }
@@ -145,6 +159,9 @@ body {
             font-weight: normal;
         }
     }
+    &-Content {
+        font-size: 1.8rem;
+    }
     &-Sign {
         text-align: right;
     }
@@ -153,12 +170,14 @@ body {
 /* -------------------------- [ PORTRAIT VOYANT ] --------------------------- */
 
 .Psychic-Portrait {
+    margin-bottom: 3rem;
     margin-right: 4rem;
-    width: 34rem;
+    min-width: 34rem;
 
     &-Picture {
         background: url($psychic_pic) no-repeat;
         height: 34rem;
+        margin-bottom: 1.8rem;
     }
     &-Name {
         font-family: $handscripted;
@@ -182,7 +201,7 @@ body {
 
 .ThemeChoice {
     margin: auto;
-    max-width: 400px;
+    margin-bottom: 3rem;
     
     .FormContainer-Header {
         text-align: center;
@@ -266,9 +285,15 @@ body {
     &-Title {
         background: transparent url($title_triangle) center no-repeat;
         background-position: center bottom;
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding-bottom: 2.5rem;
         text-align: center;
+    }
+    
+    &-Fields {
+        margin: auto;
+        margin-bottom: 3rem;
+        max-width: 460px;
     }
 
     &-Submit {
