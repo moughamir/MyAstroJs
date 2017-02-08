@@ -59,7 +59,7 @@ if(isset($_SESSION['user_id'])){
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer DRI-Form">
-                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <div class="Pop Pop-Voyant getFormValue <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
                             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>

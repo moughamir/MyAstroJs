@@ -12,7 +12,5 @@ yyadmin/.htaccess
 .brackets.json
 .idea
 *.map
-scss/*.css
 desktop.ini
 Thumbs.db
-
