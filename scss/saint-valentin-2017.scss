@@ -1,0 +1,14 @@
+@import "s-landing-voyance-2";
+
+$img_dir : "../images_landing/saint-valentin-2017/";
+
+$primary: #e72336;
+
+$background: #feedf3 url($img_dir + 'stval-2017-bg.png') no-repeat center top fixed;
+
+body{
+  background: $background;
+  background-size: cover;
+}
+
+h1, h2, button { hyphens: none;}
