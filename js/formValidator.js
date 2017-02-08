@@ -30,10 +30,10 @@ $(document).ready(function(){
         $('.sonprenom').each(function(){
             if(flag){
                 $(this).slideDown();
-                $(this).prop('required', true);
+//                $(this).find('input').prop('required', true);
             } else {
                 $(this).slideUp();
-                $(this).prop('required', false);
+//                $(this).find('input').prop('required', false);
             }
         });
     };
@@ -180,6 +180,7 @@ $(document).ready(function(){
                         $('#modal').html(alert_form_errors ? alert_form_errors : alert_error);
                         $('#modal').modal('show');
                     }
+                    $(document).trigger('ajax_error');
                 };
             },
             error : function(){
