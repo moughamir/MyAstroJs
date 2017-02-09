@@ -11,7 +11,8 @@
 session_start();
 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
 $chiffre = rand(1, 5);
-$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour (été 2016) - Chiffre '.$chiffre, 'conjoint'=>true];
+$question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numérologie de l’amour - Chiffre '.$chiffre, 'conjoint'=>true];
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,7 +27,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-2017-saint-valentin.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-saint-valentin.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
