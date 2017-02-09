@@ -1825,7 +1825,7 @@ body {
     text-align: center; }
   .FormContainer-Fields {
     padding: 0 2rem; }
-  .FormContainer-Submit {
+  .FormContainer-Submit, .btn-submit {
     display: block;
     min-width: 60%;
     margin: auto;
@@ -1990,7 +1990,7 @@ body {
       display: inline-block;
       width: 3rem;
       height: 3rem;
-      margin: 0 2rem;
+      margin: 0 1rem;
       background-color: white; }
     .ReassuranceList-Item-Txt {
       display: inline-block; }
@@ -2050,7 +2050,7 @@ body {
   .ReassuranceList-Item {
     font-size: 1.3rem; }
 
-  .FormContainer-Submit {
+  .FormContainer-Submit, .btn-submit {
     white-space: normal; } }
 @media screen and (max-width: 900px) {
   .ContentBand {
@@ -2078,7 +2078,7 @@ body {
   .FormContainer-Fields {
     padding: 0; }
 
-  .FormContainer-Submit {
+  .FormContainer-Submit, .btn-submit {
     font-size: 1.8rem; } }
 @media screen and (max-width: 730px) {
   .ContentBand {
@@ -2102,7 +2102,7 @@ body {
 
   .FormContainer-Header {
     font-size: 2.5rem; }
-  .FormContainer-Submit {
+  .FormContainer-Submit, .btn-submit {
     font-size: 1.8rem;
     margin-bottom: 2rem; }
 
@@ -2116,8 +2116,456 @@ body {
 
   .FormContainer-Header {
     font-size: 2.3rem; } }
+/* Palette */
+/* Images */
+/* Mixins */
+html {
+  height: 100%; }
+
 body {
+  padding: 2rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #454545;
   background: #feedf3 url("../images_landing/saint-valentin-2017/stval-2017-bg.png") no-repeat center top fixed;
   background-size: cover; }
+
+/* ------------------------------ MACRO-TYPOS ------------------------------- */
+h2, button {
+  hyphens: none; }
+
+/* --------------------------------- LAYOUT --------------------------------- */
+.promo-img {
+  border: 12px solid transparent;
+  box-shadow: 0px 0px 0 1px #000; }
+  .promo-img:nth-of-type(1) {
+    margin-right: 15px; }
+  .promo-img:nth-of-type(2) {
+    margin-left: 15px; }
+
+.more {
+  display: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.hidden {
+  display: none; }
+
+.scale {
+  transition: all .2s ease-in-out;
+  animation: scale 0.5s both; }
+
+@keyframes scale {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+.FormContainer {
+  max-width: 60rem; }
+  .FormContainer > p {
+    text-align: center;
+    font-size: 14px; }
+
+.PageWrapper {
+  padding: 0; }
+
+.ContentBand {
+  margin-top: 0; }
+
+.SiteHeader .PageWrapper {
+  display: flex;
+  flex-direction: row; }
+
+.SiteLogo {
+  background: url("../images_landing/numerologie-amour-2017/logo-MYASTRO.svg") no-repeat;
+  background-size: contain;
+  height: 110px;
+  width: 15%;
+  filter: drop-shadow(0px 1px); }
+
+.PageLogo {
+  width: 70%;
+  text-align: center; }
+  .PageLogo h1 {
+    font-family: "Dancing Script", cursive;
+    color: #454545;
+    font-size: 4.6rem;
+    text-transform: capitalize;
+    font-weight: normal; }
+
+.ContentBand-ColumnHeader * {
+  text-align: center !important; }
+
+.ContentBand-ColumnHeader p,
+.FormContainer-Slogan,
+.FormContainer-name,
+.FormContainer-name + p {
+  font-weight: bold; }
+
+.DescText-Title {
+  background: transparent url("../images_landing/numerologie-amour-2017/titre.svg") no-repeat center;
+  background-size: contain;
+  margin-bottom: -8rem; }
+  .DescText-Title span {
+    display: none; }
+  .DescText-Title-Legend {
+    padding-top: 0;
+    background-color: transparent;
+    text-align: right;
+    font-size: 1.9rem;
+    text-shadow: 0 0 4px #17202C; }
+
+.DescText-Content {
+  background: transparent;
+  text-indent: 5rem; }
+
+.FormContainer {
+  background: transparent; }
+  .FormContainer-Fields {
+    padding: 2rem; }
+  .FormContainer-Header {
+    font-family: "Dancing Script", cursive;
+    color: #454545;
+    font-size: 4rem; }
+  .FormContainer-Submit, .btn-submit {
+    width: 224px;
+    padding: 1rem;
+    border: none;
+    background-color: #e72336;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background 0.25s ease-in; }
+    .FormContainer-Submit:active, .btn-submit:active, .FormContainer-Submit:focus, .btn-submit:focus, .FormContainer-Submit:hover, .btn-submit:hover {
+      background-color: #c21526;
+      color: #fff; }
+  .FormContainer.DRI .DRI {
+    box-shadow: 0 0 0px 0px black;
+    background: transparent; }
+    .FormContainer.DRI .DRI-Intro {
+      background-color: #17202C;
+      font-family: "Open Sans", sans-serif; }
+      .FormContainer.DRI .DRI-Intro-Title {
+        color: #17202C;
+        text-transform: uppercase; }
+      .FormContainer.DRI .DRI-Intro-Text {
+        color: white; }
+    .FormContainer.DRI .DRI-Slogan {
+      background: transparent url("../images_landing/numerologie-amour-2017/ten-min-free.png") center no-repeat;
+      width: 182px;
+      height: 111px;
+      display: inline-block;
+      margin: 15px auto; }
+      .FormContainer.DRI .DRI-Slogan span {
+        display: none; }
+    .FormContainer.DRI .DRI-Form {
+      padding: 2rem;
+      background-color: transparent; }
+      .FormContainer.DRI .DRI-Form .FormField-Input {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem; }
+    .FormContainer.DRI .DRI-Sent {
+      font-family: "Open Sans", sans-serif;
+      font-size: 3rem; }
+      .FormContainer.DRI .DRI-Sent strong {
+        font-weight: normal; }
+
+.FormField-Label {
+  text-transform: uppercase;
+  font-weight: 600; }
+  .FormField-Label .ico-woman {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #e72336; }
+  .FormField-Label .ico-man {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #17202C; }
+
+.FormField-Input {
+  border: none;
+  transition: all 0.25s ease-in; }
+  .FormField-Input:active, .FormField-Input:focus {
+    box-shadow: 0 0 6px -1px #17202C;
+    background-color: #fffdc5; }
+  .FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+    outline-width: 0;
+    box-shadow: 0 0 6px -1px #17202C;
+    border-color: #17202C; }
+
+.FormField-Info {
+  border: none;
+  color: #17202C;
+  box-shadow: 0 0 6px -1px #17202C; }
+
+input[type="checkbox"], input[type="radio"] {
+  width: 20px !important;
+  height: 20px !important; }
+
+/* --------------------------------- MODALE --------------------------------- */
+.overlay {
+  display: none;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh !important;
+  max-width: none;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 0px solid red;
+  color: black; }
+  .overlay p.alert {
+    display: table-cell;
+    vertical-align: middle;
+    height: 25rem;
+    width: 40rem;
+    left: 50%;
+    top: 50%;
+    margin: -12.5rem -20rem;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    background: #fff;
+    color: #17202C;
+    border: 0px;
+    font-family: "Open Sans", sans-serif; }
+    .overlay p.alert b {
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-size: 2rem;
+      width: 100%; }
+    .overlay p.alert br + i {
+      padding: 0.5rem 0.8rem;
+      background: #ccc;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      bottom: 1rem;
+      left: 22%; }
+      .overlay p.alert br + i :after {
+        content: "fermer";
+        text-transform: uppercase;
+        text-align: center;
+        width: 60%;
+        padding: 1rem; }
+
+/* ------------------------------- ANIMATIONS ------------------------------- */
+.polaroid {
+  width: 30rem;
+  height: 35.5rem;
+  border: 0px solid red; }
+
+#photo {
+  background: url("../images_landing/saint-valentin-2017/saint-valentin.png") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10rem;
+  left: -5rem;
+  opacity: 0; }
+
+.anim-photo1 {
+  animation-name: anim-photo;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s; }
+
+.anim-photo2 {
+  animation-name: anim-photo;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s; }
+
+@keyframes anim-photo {
+  0% {
+    opacity: 0;
+    transform: translate(-200px, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+/* --------------------------------- FOOTER --------------------------------- */
+.ReassuranceList {
+  background-color: #FFFFFF;
+  color: #17202C;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 0 6px -1px black; }
+
+.ReassuranceList-Item-Img.star {
+  background: transparent url("../images_landing/numerologie-amour-2017/ico-star.png") center no-repeat;
+  background-size: contain; }
+
+.ReassuranceList-Item-Img.lock {
+  background: transparent url("../images_landing/numerologie-amour-2017/ico-lock.png") center no-repeat;
+  background-size: contain; }
+
+.ReassuranceList-Item-Img.gift {
+  background: transparent url("../images_landing/numerologie-amour-2017/ico-gift.png") center no-repeat;
+  background-size: contain; }
+
+.ReassuranceList-Item-Img.trophy {
+  background: transparent url("../images_landing/numerologie-amour-2017/ico-trophy.png") center no-repeat;
+  background-size: contain; }
+
+.alert {
+  border-radius: 5px; }
+  .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1; }
+  .alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6; }
+  .alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc; }
+  .alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1; }
+
+/* -------------------------------- PAGE TEL -------------------------------- */
+.FormContainer.DRI {
+  background-color: transparent;
+  text-align: center;
+  box-shadow: inherit; }
+
+.FormContainer-Slogan-bloc {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 15px;
+  max-width: 60rem;
+  margin: 0 auto; }
+
+/* ------------------------- RESULTATS NUMEROLOGIE -------------------------- */
+.wrapper-num-result {
+  max-width: 60rem;
+  margin: 0 auto; }
+  .wrapper-num-result h3 {
+    text-align: left; }
+  .wrapper-num-result .num-result .num-result-numero {
+    font-size: 10rem;
+    margin: 0;
+    text-align: center;
+    font-weight: bold; }
+  .wrapper-num-result .num-result .num-result-text-name {
+    margin: 1rem 0 2rem;
+    font-size: 1.4rem; }
+    .wrapper-num-result .num-result .num-result-text-name span {
+      text-transform: uppercase; }
+
+@media screen and (min-height: 1000px) {
+  body {
+    padding-top: 3.5rem; } }
+@media screen and (max-width: 1000px) {
+  .TextContent .ContentBand-ColumnHeader {
+    background-position: top left;
+    background-size: auto 75%; } }
+@media screen and (max-width: 900px) {
+  .polaroid {
+    display: none; }
+
+  .PageLogo span {
+    line-height: 100%; }
+
+  .ReassuranceList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center; }
+    .ReassuranceList .ReassuranceList-Item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      border-right: none;
+      margin-bottom: 1rem; } }
+@media screen and (max-width: 730px) {
+  .promo-img {
+    margin: 5px 0 !important; }
+
+  .SiteHeader .PageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .SiteHeader .SiteLogo, .SiteHeader .PageLogo {
+    width: 100%;
+    text-align: center; }
+  .SiteHeader .SiteLogo {
+    position: inherit;
+    background-position: center; }
+
+  .TextContent {
+    max-width: 600px;
+    margin: auto; }
+    .TextContent .ContentBand-ColumnHeader {
+      background-size: initial;
+      background-position: bottom left; }
+
+  .DescText-Title {
+    display: none; }
+
+  .DescText {
+    margin-bottom: 2rem; } }
+@media screen and (max-width: 640px) {
+  .PageLogo {
+    width: 85%;
+    margin-top: 1.5rem;
+    text-align: center; }
+    .PageLogo span {
+      line-height: 100%;
+      font-size: 6rem; }
+    .PageLogo span + span {
+      font-size: 8rem; }
+
+  .FormContainer-Header {
+    font-family: inherit;
+    font-size: 1.5rem; }
+
+  .ReassuranceList {
+    display: flex;
+    flex-direction: column; }
+
+  .num-result {
+    margin-left: 0; } }
+@media screen and (max-width: 470px) {
+  .SiteHeader {
+    margin-bottom: 0; }
+
+  .DescText-Title-Legend {
+    font-size: 1.7rem; }
+
+  .FormContainer {
+    padding: 0; }
+    .FormContainer-Fields {
+      padding: 1rem 0 0 0; }
+    .FormContainer p {
+      text-align: justify; } }
+@media screen and (max-width: 400px) {
+  .PageLogo {
+    padding: 1rem; }
+    .PageLogo span {
+      font-size: 4rem; }
+    .PageLogo span + span {
+      font-size: 6rem; }
+
+  .TextContent .ContentBand-ColumnHeader {
+    background-position: top left;
+    background-size: auto 75%; } }
 
 /*# sourceMappingURL=saint-valentin-2017.css.map */
