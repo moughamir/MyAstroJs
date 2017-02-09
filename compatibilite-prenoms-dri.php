@@ -66,7 +66,7 @@ include('include/process-dri.php');
             </p>
             <?php } else { ?>
 
-            <form class="ajax" method="post">
+            <form method="post">
               
               <section class="step-1">
                 
@@ -138,7 +138,7 @@ include('include/process-dri.php');
 
   <!-- #### SCRIPTS #### -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/formValidator.js"></script>
+  
   <script type="text/javascript" src="js/nameCompa.js"></script>
 
   <!-- #### REMARKETINGS #### -->
