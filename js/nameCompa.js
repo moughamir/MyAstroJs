@@ -26,10 +26,11 @@ global $
     other = '{{OTHER}}',
     names = {},
     score = {},
-    name = $('.name').val(),
+    //name = $('.name').val(),
     submit = $('.btn-submit'),
-    person = [];
-
+    person = [], path, mapObj;
+    var personOne, personTwo;
+    
 $(document).ready(function() {
 
 
@@ -87,81 +88,60 @@ $(document).ready(function() {
 
       console.info('done');
     });
+   path = (score[names.user.toUpperCase()] + score[names.user.toUpperCase()]) / 2;
+
+
+
+
+mapObj = {
+   "{{USER}}": names.user,
+   "{{OTHER}}": names.other
+
+};
+
+
+
+function between(x, min, max) {
+  return x >= min && x <= max;
+}
+
+function findReplace(mapObj, text) {
+    
+    var re = new RegExp(Object.keys(mapObj).join("|"),"gi");
+    text = text.replace(re, function(matched){
+      return mapObj[matched];
+      
+    });
+    
+    var textArea = $('.resault-text').text(); 
+    
+    textArea = $('.resault-text').html(text);
+    
+    console.log(textArea.text());
+    
+
+  }
+  
+  
+  
+if (between(path, 1, 3)) {
+  findReplace(mapObj, paths.one);
+} else if (between(path, 4, 6)){
+  findReplace(mapObj, paths.two);
+} else {
+  findReplace(mapObj, paths.three);
+}
+
+
 
 
   });
 
-  function findReplace(word, replaceText, text) {
-    
-    var sRegExInput = new RegExp(word, 'g');
-    var textChange = text.replace(sRegExInput, replaceText);
-    
-    var textArea = $('.resault-text').text(); 
-    
-    textArea = $('.resault-text').html(textChange);
-
-
-
-    var personOne = person[0].toUpperCase();
-    var personTwo = person[1].toUpperCase();
-
-    var path = (score[personOne] + score[personTwo]) / 2;
-
-    if (path <= 1) {
-      // paths.one
-      for (var i = 0; i < person.length; i++) {
-        //person[i]
-        switch (true) {
-          case person[0]:
-            findReplace(user, person[0], path.one);
-            break;
-
-          case person[1]:
-            findReplace(other, person[1], path.one);
-            break;
-          default:
-            console.info('done with cases');
-        }
-        console.log('Get path one');
-      }
-
-    }
-    else if (path > 1 && path <= 2) {
-      for (var i = 0; i < person.length; i++) {
-        //person[i]
-        switch (true) {
-          case person[0]:
-            findReplace(user, person[0], path.two);
-            break;
-
-          case person[1]:
-            findReplace(other, person[1], path.two);
-            break;
-          default:
-            console.info('done with cases');
-        }
-        console.log('Get path two');
-      }
-    }
-    else {
-      for (var i = 0; i < person.length; i++) {
-        //person[i]
-        switch (true) {
-          case person[0]:
-            findReplace(user, person[0], path.three);
-            break;
-
-          case person[1]:
-            findReplace(other, person[1], path.three);
-            break;
-          default:
-            console.info('done with cases');
-        }
-        console.log('Get path three');
-      }
-    }
-  }
+ 
 
 
   console.info('Loaded');
 });
+
+
+ 
