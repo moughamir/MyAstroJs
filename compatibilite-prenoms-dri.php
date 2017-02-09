@@ -66,7 +66,7 @@ include('include/process-dri.php');
             </p>
             <?php } else { ?>
 
-            <form class="ajax">
+            <form class="ajax" method="post">
               
               <section class="step-1">
                 
