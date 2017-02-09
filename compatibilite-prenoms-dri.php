@@ -1,3 +1,14 @@
+<?php
+/* 
+    ------------------------------------------------------------
+    --      DRI POST-MAIL = COMPTABILITE-PRENOM = AFFIL BASE     --
+    ------------------------------------------------------------
+    Created on : Feb 7th, 2017
+    Updated    : Feb 9th, 2017
+*/
+include('include/process-dri.php');
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -48,8 +59,15 @@
           <div class="FormContainer-Fields">
 
             <p class="alert alert-danger" style="display: none"></p>
+            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+            <p class="DRI-Sent">
+              Merci, votre demande a bien été prise en compte.<br/>
+              <strong>Un voyant vous recontactera dans quelques instants</strong>.
+            </p>
+            <?php } else { ?>
 
             <form class="ajax">
+              
               <section class="step-1">
                 
                 <div class="FormField">
@@ -68,7 +86,7 @@
               <section class="resault hidden">
                 <div class="FormField">
                   <label for="tel" class="FormField-Label">Mon numéro de téléphone</label>
-                  <input id="tel " type="tel" class="FormField-Input" name="tel" required/>
+                  <input id="tel " type="tel" class="FormField-Input" name="tel" placeholder="06 ## ## ## ##" required/>
                 </div>
                 <div class="Fields-Table-Row">
                   <label for="pays" class="FormField-Label">Votre pays</label>
@@ -79,7 +97,7 @@
                       <option value="CA">Canada</option>
                       <option value="LU">Luxembourg</option>
                       <option value="CH">Suisse</option>
-                      <option value="FR" selected>France Métropolitaine</option>
+                      <option value="FR">France Métropolitaine</option>
                       <optgroup label="DOM-TOM">
                         <option value="MQ">Martinique</option>
                         <option value="GP">Guadeloupe</option>
@@ -97,12 +115,12 @@
                     </select>
                   </div>
                 </div>
-                <button class="FormContainer-Submit" type="submit" name="valider">Rappel gratuit</button>
+                <button class="FormContainer-Submit" type="submit" name="demande_rappel" >Rappel Gratuit</button>
               </section>
               
               
             </form>
-
+            <?php } ?>
           </div>
 
         </article>

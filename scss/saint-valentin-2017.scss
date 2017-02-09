@@ -260,11 +260,9 @@ input[type="checkbox"], input[type="radio"] {
     top: 0;
     left: 0;
     z-index: 100;
-    width: 100vw;
-    height: 100vh !important;
     max-width: none;
     background-color: rgba(0, 0, 0, 0.75);
-    border: 0px solid red;
+    
     color: black;
 
     p.alert {
