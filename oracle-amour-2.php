@@ -20,25 +20,25 @@ $questions = array(
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>My Astro - Que va vous révéler l’Oracle de l’amour ?</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/oracle-amour-2-v2.min.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
-        <!-- pour la retro-compatibilité de l'effet "poker"  -->
+
+        <!-- pour la retro-compatibilité de l'effet "poker" -->
         <script src="js/modernizr.custom.79639.js"></script>
-        
+
     </head>
     <body>
         <header class="SiteHeader">
@@ -47,7 +47,7 @@ $questions = array(
                 <h1 class="PageLogo"><span>Oracle de l’amour</span></h1>
             </div>
         </header>
-        
+
         <!-- -------------------------------------- TEXTES STEP1  -------------------------------------- -->
         <section class=" PageWrapper600 step1">
             <header class="ContentBand-ColumnHeader titrage">
@@ -55,11 +55,11 @@ $questions = array(
             </header>
             <article class="DescText">
                 <div class="DescText-Content">
-                    <p>Les messages de l’Oracle résonnent comme des conseils et des indications à suivre pour marcher vers une vie amoureuse épanouie et heureuse. Pensez à ce qui vous tient à cœur, et tirez vos cinq cartes. Chacune d’entre elles est un pas de plus vers la vie sentimentale que vous désirez.  </p>
+                    <p>Les messages de l’Oracle résonnent comme des conseils et des indications à suivre pour marcher vers une vie amoureuse épanouie et heureuse. Pensez à ce qui vous tient à cœur, et tirez vos cinq cartes. Chacune d’entre elles est un pas de plus vers la vie sentimentale que vous désirez.</p>
                 </div>
             </article>
         </section>
-        
+
         <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
         <section class="WidgetTarot" id="cards-container">
             <header id="titreTarot" class="WidgetTarotHeader titrage"><h2>Tirez les cartes</h2></header>
@@ -71,13 +71,13 @@ $questions = array(
                     </div>
                     <?php } ?>
                 </div>
-            <div class="WidgetTarot-Result">
+            <div class="WidgetTarot-Result" id="cards-result">
                 <?php for($i=1;$i<=5;$i++){ ?>
                 <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
                 <?php } ?>
             </div>
         </section>
-            
+
         <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
         <div class="overlay" id="form-overlay"></div>
 
@@ -111,12 +111,12 @@ $questions = array(
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="FormField">
                             <label for="name" class="FormField-Label">Prénom</label>
                             <input type="text" placeholder="Votre prénom" id="name" name="prenom" class="FormField-Input" required />
                         </div>
-                        
+
                         <div class="FormField">
                             <label class="FormField-Label">Date de naissance</label>
                             <div class="FormField-TableInputContainer">
@@ -155,7 +155,7 @@ $questions = array(
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="FormField radio">
                             <label class="FormField-Label">Votre situation</label>
                             <div class="FormField-TableInputContainer fixed-2-col">
@@ -169,10 +169,10 @@ $questions = array(
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="FormField sonprenom">
                             <label for="son_prenom" class="FormField-Label">Son prénom</label>
-                            <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint">
+                            <input type="text" placeholder="Son prénom" id="son_prenom" class="FormField-Input" name="conjoint" />
                         </div>
                         
                         <div class="FormField">
@@ -186,7 +186,7 @@ $questions = array(
                 </div>
             </article>
         </section>
-                
+
         <footer class="SiteFooter">
             <div class="PageWrapper">
                 <ul class="ReassuranceList">
@@ -209,9 +209,9 @@ $questions = array(
                 </ul>
             </div>
         </footer>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -236,7 +236,6 @@ $questions = array(
                     });
                 }
             });
-                
         </script>
         <script src="js/oracle-amour-2.js"></script>     
         <script>/* Configuration du tirage de tarot */
@@ -244,16 +243,13 @@ $questions = array(
             alwaysDraw = [4, 5, 13, 14, 19];
         </script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arya' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300|Ubuntu+Condensed|Arya|Parisienne" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />

@@ -13,7 +13,7 @@
         <meta name="HandheldFriendly" content="True" />
         <meta name="robots" content="noindex,nofollow" />
 
-        <title>Saint Patrick &#x1F340; - MyAstro</title>
+        <title>Saint Patrick &#x1F340; | Myastro</title>
         
         <meta property="og:title" content="Mini jeu de la Saint Patrick" />
         <meta property="og:type" content="website" />

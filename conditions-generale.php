@@ -51,7 +51,7 @@ td{
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
            <div class="facade" style="border:none; margin-right:20px; text-align:justify;">
           <div class="text-justify">
 	         <h2>Identification de la Société</h2>

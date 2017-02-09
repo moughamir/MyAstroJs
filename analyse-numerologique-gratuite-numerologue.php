@@ -33,7 +33,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Réponse Claire, Précise et Gratuite. En numérologie, les propriétés des nombres permettraient de mieux connaître votre futur et votre personnalité.</h5>
+										<p itemprop="headline">Réponse Claire, Précise et Gratuite. En numérologie, les propriétés des nombres permettraient de mieux connaître votre futur et votre personnalité.</p>
 									</div>
 
 								</div>
@@ -43,7 +43,7 @@
 <br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <aside class="widget w-sponsors">
                     <div class="widget-title">
                         <h4>CHOISISSEZ UN NUMÉROLOGUE</h4>

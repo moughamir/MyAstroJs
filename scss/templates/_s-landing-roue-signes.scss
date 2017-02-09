@@ -9,6 +9,10 @@
 */
 @import "../knacss444/knacss";
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 1.3rem;
     padding-top: 2rem;
@@ -55,10 +59,10 @@ body {
 @import "../modules/form";
 
 /* ------------------------------ ROUE SIGNES ------------------------------- */
-
 @import "../modules/wheel";
 
 .ContentBand {
+    position: relative;
     box-sizing: initial;
     padding: 5rem 0;
 }
@@ -99,92 +103,9 @@ body {
     margin-bottom: 2rem;
 }
 
-
-/* ---------------------------------- DRI ----------------------------------- */
-
-body.DRI {
-    .SiteLogo {
-        top: initial;
-    }
-    .DRI-Intro {
-        margin-bottom: 4rem;
-        padding: 0 2rem;
-        text-align: center;
-        &-Title {
-            margin-bottom: 0;
-            font-size: 3rem;
-            hyphens: none;
-        }
-        &-Text {
-            margin-top: 0;
-            font-size: 1.8rem;
-            hyphens: none;
-        }
-    }
-    .DRI-Slogan {
-        padding: 0 8rem;
-        text-align: center;
-        font-size: 2.5rem;
-    }
-    .FormContainer {
-        box-sizing: border-box;
-        height: 620px;
-        margin: auto;
-        padding: 0;
-        background-color: transparent;
-        
-        &-Wrapper {
-            position: absolute;
-            left: 50%;
-            display: table;
-            width: 490px;
-            height: 620px;
-            margin-left: -245px;
-            background-color: grey;
-            
-            > div {
-                display: table-cell;
-                vertical-align: bottom;
-                padding-bottom: 1.5rem;
-            }
-        }
-        &-Fields {
-            margin-top: 3rem;
-            padding: 0 8rem;
-        }
-    }
-}
-
-@media all and (max-width: 860px){
-    body.DRI {
-        .ContentBand {
-            padding-top: 0;
-        }
-        .SiteLogo {
-            position: static;
-            margin: auto;
-            margin-bottom: 2rem;
-        }
-    }
-}
-
-@media all and (max-width: 380px){
-    body.DRI {
-        .DRI-Intro-Title {
-            font-size: 2.6rem;
-            margin-bottom: 1rem;
-        }
-        .DRI-Slogan, .FormContainer-Fields {
-            padding: 0 10rem;
-        }
-        .DRI-Slogan {
-            font-size: 2.2rem;
-        }
-    }
-}
-
 /* ---------------------------------- HOW ----------------------------------- */
 
+$how_media_queries: false;
 @import "../modules/how";
 
 .How {

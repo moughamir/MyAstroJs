@@ -1,46 +1,36 @@
-<?php
+<?php // FICHIER INCLUS DEPUIS inc/ajaxHandler.php
 
-session_start();
-$bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
-
-/* ========================================================================== * 
- *                        INITIALISATION DES VARIABLES                        *
+/* ========================================================================== *
+ *                               INITIALISATION                               *
  * ========================================================================== */
 
+$bdd = new bdd(DBLOGIN,DBPASS,DBNAME,DBHOST);
 $err = array();
-
-$prenom           = (isset($param['prenom'])) ? $param['prenom'] : false;
-$date_naissance_j = (isset($param['jour']))   ? $param['jour']   : false;
-$date_naissance_m = (isset($param['mois']))   ? $param['mois']   : false;
-$date_naissance_a = (isset($param['annee']))  ? $param['annee']  : false;
-$dri              = (isset($param['dri']))    ? $param['dri']    : false;
-
-$redirect_method = (isset($param['redirect_method'])) ? $param['redirect_method'] : 'url';
-
 
 /* ========================================================================== * 
  *                         TRAITEMENT DE L'UTILISATEUR                        *
  * ========================================================================== */
 
-$test_prenom = trim($prenom, ' ');
-if(empty($test_prenom)){
-    $err['prenom'] = 'Merci dʼindiquer votre prénom';
-} elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-    $err['prenom'] = 'Merci dʼindiquer votre prénom sans chiffres';
-}
+// Prénom ----------------------------------------------------------------------
+$prenom = form_firstname($err, $param);
 
-if($date_naissance_j && $date_naissance_m && $date_naissance_a){
-    if($date_naissance_j > 0 && $date_naissance_m > 0 && $date_naissance_a > 0){
-        $signe = get_signe_astro_arabe($date_naissance_j, $date_naissance_m);
-    }
+// Date de naissance & Signe Astrologique --------------------------------------
+$dtn_j = (isset($param['jour']))  ? $param['jour']  : false;
+$dtn_m = (isset($param['mois']))  ? $param['mois']  : false;
+$dtn_a = (isset($param['annee'])) ? $param['annee'] : false;
+
+if($dtn_j && $dtn_m && $dtn_a){
+    $signe = get_signe_astro_arabe($dtn_j, $dtn_m);
 } else {
     $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance';
 }
 
-
 /* ========================================================================== * 
  *                         TRAITEMENT DE LA REDIRECTION                       *
  * ========================================================================== */
+
+$dri = isset($param['dri']) ? $param['dri'] : false;
+$redirect_method = (isset($param['redirect_method'])) ? $param['redirect_method'] : 'url';
 
 if (!$dri) {
     $err['dri'] = 'Donnée de redirection manquante.';
@@ -52,9 +42,9 @@ if (!$dri) {
 
 if(empty($err)){
     $_SESSION['prenom'] = $prenom;
-    $_SESSION['jour']   = $date_naissance_j;
-    $_SESSION['mois']   = $date_naissance_m;
-    $_SESSION['annee']  = $date_naissance_a;
+    $_SESSION['jour']   = $dtn_j;
+    $_SESSION['mois']   = $dtn_m;
+    $_SESSION['annee']  = $dtn_a;
     $_SESSION['signe']  = $signe;
 
 /* ========================================================================== * 

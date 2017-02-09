@@ -11,3 +11,6 @@ yyadmin/.htaccess
 .htaccess
 .brackets.json
 .idea
+*.map
+desktop.ini
+Thumbs.db
