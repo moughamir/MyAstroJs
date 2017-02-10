@@ -65,13 +65,14 @@ $(document).ready(function() {
       singleDigitScore = total;
       score[name] = singleDigitScore;
 
-      console.log(capitalize(name) + " Single Digit score is: " + singleDigitScore);
+      //console.log(capitalize(name) + " Single Digit score is: " + singleDigitScore);
     }
 
   }
 
 
   submit.on('click', function() {
+    
     $(".step-1").addClass('hidden');
     $(".resault").removeClass('hidden');
     $(".FormContainer").addClass('scale');
@@ -86,12 +87,13 @@ $(document).ready(function() {
 
       simpleScore(names[$(this).attr("name")]);
 
-      console.info('done');
+      //console.info('done');
     });
    path = (score[names.user.toUpperCase()] + score[names.user.toUpperCase()]) / 2;
 
 
-
+names.user = capitalize(names.user);
+names.other = capitalize(names.other);
 
 mapObj = {
    "{{USER}}": names.user,
@@ -100,11 +102,13 @@ mapObj = {
 };
 
 
-
+// NOTE: we may use in future lodash library 
+// (between) exist in lodash as _.inRange function
 function between(x, min, max) {
   return x >= min && x <= max;
 }
 
+// find set of strings and replace them with given ones
 function findReplace(mapObj, text) {
     
     var re = new RegExp(Object.keys(mapObj).join("|"),"gi");
@@ -117,9 +121,9 @@ function findReplace(mapObj, text) {
     
     textArea = $('.resault-text').html(text);
     
-    console.log(textArea.text());
+    //-console.log(textArea.text());
     
-
+    
   }
   
   
@@ -133,14 +137,12 @@ if (between(path, 1, 3)) {
 }
 
 
-
-
+  // remplacer le sous-titre par les Prénoms
+  $('.FormContainer-Header').text(capitalize(person[0]) + ' & ' + capitalize(person[1]));
+  
   });
 
- 
 
-
-  console.info('Loaded');
 });
 
 
