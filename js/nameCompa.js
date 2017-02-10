@@ -73,16 +73,21 @@ $(document).ready(function(){
         });
         path = (score[names.prenom.toUpperCase()] + score[names.prenom.toUpperCase()]) / 2;
 
+        names.prenom = capitalize(names.prenom);
+        names.conjoint = capitalize(names.conjoint);
+        
         mapObj = {
             "{{USER}}": names.prenom,
             "{{OTHER}}": names.conjoint
         };
 
-
+        // NOTE: we may use in future lodash library 
+        // (between) exist in lodash as _.inRange function
         function between(x, min, max) {
             return x >= min && x <= max;
         }
 
+        // find set of strings and replace them with given ones
         function findReplace(mapObj, text) {
             var re = new RegExp(Object.keys(mapObj).join("|"),"gi");
             text = text.replace(re, function(matched){
@@ -100,5 +105,7 @@ $(document).ready(function(){
         } else {
             findReplace(mapObj, paths.three);
         }
+        // remplacer le sous-titre par les Prénoms
+        $('.FormContainer-Header').text(capitalize(person[0]) + ' & ' + capitalize(person[1]));
     });
 });
