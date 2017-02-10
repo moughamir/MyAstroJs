@@ -45,7 +45,7 @@ switch ($n) {
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
                 
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-saint-valentin.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-stval.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,7 +54,7 @@ switch ($n) {
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="bg">
+    <body class="bg1">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
@@ -149,19 +149,18 @@ switch ($n) {
             </div>
         </section>
         
-        <?php include('include/footer_reassurance.php'); ?>
+        <?php include('include/footer_reassurance.php');?>
         
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <!--<script src="js/formValidator.js"></script>-->
-
+        <script src="js/numerologie-amour.js"></script>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
