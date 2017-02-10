@@ -102,7 +102,7 @@ if ($msg!=""){
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance par téléphone : rapide et efficace - Myastro</title>
+    <title>Voyance par téléphone : rapide et efficace | Myastro</title>
 	<meta name="description" content="Vous avez besoin de pouvoir prévoir les évènements qui sont susceptibles de vous arriver afin de les anticipez. Utilisez la voyance par téléphone." />
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 	<?= $tracker->getCanonical() ?>
@@ -146,7 +146,7 @@ if ($msg!=""){
 <br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
  <div class="row-fluid">	
 						
             <section class="span270">

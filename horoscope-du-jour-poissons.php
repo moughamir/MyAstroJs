@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du jour Poissons : Comment appréhender votre journée ? - Myastro</title>
+        <title>Horoscope du jour Poissons : Comment appréhender votre journée ? | Myastro</title>
 	<meta name="description" content="Signe Poissons : Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>
@@ -56,7 +56,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DU JOUR GRATUIT : Poissons</h2>
+                                    <h4>VOTRE HOROSCOPE DU JOUR GRATUIT : Poissons</h4>
                                     <img src="images_voyance/signes/poissons.png" class="signe" title="Symbole astrologique Poissons" />
                                 </div>
                                 <!-- Résultat horoscope -->

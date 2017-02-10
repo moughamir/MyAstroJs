@@ -8,16 +8,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 // Paramètres design
-$cards_dir = 'tarot/cartes/original-grand/';
-$pict_path = 'images_landing/tarot-direct/';
-$css = 'css/tarot-direct.css';
-// Design Noël
-$j = date('j');
-$m = date('n');
-if($m == 12 || ($m == 1 && $j <= 5)){
-    $pict_path = 'images_landing/tarot-direct-noel/';
-    $css = 'css/tarot-direct-noel.css';
-}
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 include('include/questions/tarot-direct.php');
 session_start();
@@ -76,28 +67,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             <section class="ContentBand TwoCols PsychicChoice Principal" id="scn-psychic">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyante</strong> -</header>
                 <div class="PageWrapper">
-                    <div class="ContentBand-Table">
-                        <div class="ContentBand-Column PsychicChoice-Psychic Christelle">
-                            <input type="radio" name="voyant" value="Christelle" id="christelle_choice" class="PsychicChoice-Psychic-Input" required />
-                            <label for="christelle_choice" class="PsychicChoice-Psychic-VisualForm">
-                                <span class="PsychicChoice-Psychic-Picture"><span class="PsychicChoice-Psychic-Photo"></span></span>
-                                <span class="PsychicChoice-Psychic-Name">Christelle</span>
-                            </label>
-                            <div class="PsychicChoice-Psychic-Introduction">
-                                Bonjour, je suis Christelle et je suis tarologue et médium depuis maintenant treize ans. En plus de mes visions, je maitrise tous les messages du tarot. Leur profondeur sans limite me permet de compléter mes flashs afin de vous apporter des réponses claires et complètes. Je suis plus particulièrement spécialisée dans les questions amoureuses et sentimentales mais je peux aborder facilement le sujet de votre choix sans aucun problème. Je mets mes dons et mes connaissances divinatoires à votre service, afin de répondre à toutes les questions que vous vous posez.
-                            </div>
-                        </div>
-                        <div class="ContentBand-Column PsychicChoice-Psychic Sonia">
-                            <input type="radio" name="voyant" value="Sonia" id="sonia_choice" class="PsychicChoice-Psychic-Input" required />
-                            <label for="sonia_choice" class="PsychicChoice-Psychic-VisualForm">
-                                <span class="PsychicChoice-Psychic-Picture"><span class="PsychicChoice-Psychic-Photo"></span></span>
-                                <span class="PsychicChoice-Psychic-Name">Sonia</span>
-                            </label>
-                            <div class="PsychicChoice-Psychic-Introduction">
-                                Bienvenue à tous et à toutes, je m’appelle Sonia et pour moi, le tarot est une histoire de famille puisque c’est ma grand-mère qui m’a initié à cette pratique. Très jeune j’ai commencé à avoir mes visions et grâce aux cartes du tarot, je peux mettre des mots sur ces flashs, et ainsi vous transmettre des interprétations très détaillées. Grâce à cette double compétence, je peux interpréter votre tirage du tarot et vous communiquer toutes les visions que j’ai vous concernant. Avec un seul mot d’ordre : chasser tous vos doutes pour vous aider à avancer l’esprit léger et serein.
-                            </div>
-                        </div>
-                    </div>
+                    <?php include('include/visual_modules/tarot-direct/psychic-choice.php'); ?>
                 </div>
             </section>
             <!-- -------------------------------------- CHOIX DE LA QUESTION -------------------------------------- -->

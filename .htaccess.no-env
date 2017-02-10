@@ -1,7 +1,7 @@
 # Configuration
-SetEnv  MYASTRO_ROOT_URL  "http://www.myastro.fr"
-SetEnv  MYASTRO_DB_LOGIN  myastro
-SetEnv  MYASTRO_DB_PASS   "myastro"
+SetEnv  MYASTRO_ROOT_URL  "http://myastro.dev"
+SetEnv  MYASTRO_DB_LOGIN  root
+SetEnv  MYASTRO_DB_PASS   ""
 SetEnv  MYASTRO_DB_NAME   myastro
 
 php_value date.timezone "Europe/Paris"
@@ -29,6 +29,15 @@ Options -Multiviews
 
 # Réécriture d'URL
 RewriteEngine on
+
+RewriteRule ^tarotdelamour/([a-z0-9-]+)$ tarotdelamour/$1.php [L]
+RewriteRule ^tarotdelamour/tarot_amour-(\w+)-(\d+)$ tarotdelamour/tarot_amour.php?ID=$1&sequence=$2
+
+RewriteRule ^horoscope-([0-9]{4})$ horoscope-annee.php [L]
+RewriteRule ^horoscope-([0-9]{4})-(.*)$ horoscope-annee-$2.php [L]
+RewriteRule ^numeroscope-([0-9]{4})$ numeroscope-annee.php [L]
+RewriteRule ^numeroscope-([0-9]{4})-([0-9]{1})$ numeroscope-annee-$2.php [L]
+
 
 RewriteRule ^([a-z0-9-]+)$ $1.php [L]
 

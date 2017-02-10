@@ -31,14 +31,14 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">les deux paiements sécurisé  Bluepaid  et Syspay est la solution la plus adaptée.</h5>
+										<p itemprop="headline">les deux paiements sécurisé  Bluepaid  et Syspay est la solution la plus adaptée.</p>
 									</div>
 
 								</div>
               </header>
 
                             
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                           <?php 
                           /*
                           * Bon bah désolé, mais je réindente pas cette page :/

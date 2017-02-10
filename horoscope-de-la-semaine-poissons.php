@@ -54,7 +54,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT : Poissons</h2>
+                                    <h4>VOTRE HOROSCOPE DE LA SEMAINE GRATUIT : Poissons</h4>
                                     <img src="images_voyance/signes/poissons.png" class="signe" alt="Symbole astrologique Poissons" />
                                 </div>
                                 <!-- Résultat horoscope -->

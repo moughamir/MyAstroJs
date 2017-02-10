@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope de la semaine : Pour une semaine réussie - Myastro</title>
+        <title>Horoscope de la semaine : Pour une semaine réussie | Myastro</title>
         <meta name="description" content="Les semaines s'enchainent les unes après les autres et il vous arrive de ne pas toujours en être satisfait. Prévoyez et planifiez grâce à l'horoscope de la semaine de Myastro." />
         
         <script src="js/jquery-1.11.js"></script>

@@ -19,16 +19,17 @@ $img_dir : "../images_landing/numerologie-amour-2017/";
 $color1 : #17202C;
 $color2 : #FD5610;
 $color3 : #FFFFFF; 
-$primary: #ff1844;
-$secondary: #ac4b5e;
+$primary: #FF1844;
+$secondary: #AC4B5E;
+$bg : $color1;
+$woman : $color2;
+$men : $color1;
+
+/* Typos */
 $font1: 'Amatic SC', cursive; // titre-princip1
 $font2: 'Cookie', cursive; // titre-princip1
 $font3: "Open Sans", sans-serif; // texte courant
 $font4: 'Ubuntu Condensed', sans-serif; // titres
-
-$bg : $color1;
-$woman : $color2;
-$men : $color1;
 
 /* Images */
 $bg1 : $img_dir + "bg1.jpg";
