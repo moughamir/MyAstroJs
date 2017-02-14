@@ -1,18 +1,15 @@
 @charset "UTF-8";
-/* 
-    ----------------------------
-    --      tarot-direct      --
-    ----------------------------
-
-    Created on : 25 mai 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-*/
+/* ============================ [ tarot-direct ] ===============================
+ *
+ * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 @import "templates/s-landing-tarot-3";
+
+/* Typos */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
 
-/* Dossier images */
+/* Images */
 $img_dir : "../images_landing/tarot-direct/";
 $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "cardback.png";
@@ -48,6 +45,8 @@ $woman: $rose;
 $man: $bleu;
 $tchat-bg: #E8E8E8;
 
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
@@ -69,6 +68,7 @@ body {
     background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center top;
+    min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -76,7 +76,7 @@ body {
     .ContentBand-ColumnHeader { padding-top: 1rem;}
 }
 
-/* --------------------------------- ENTETE --------------------------------- */
+/* ------------------------------- [ ENTETE ] ------------------------------- */
 
 .SiteHeader {
     position: relative;
@@ -133,7 +133,7 @@ body {
     }
 }
 
-/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
 
 .PsychicChoice-Psychic {
     &-VisualForm {
@@ -170,7 +170,7 @@ body {
     }
 }
 
-/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
 
 .ThemeChoice-ListItem {
     position: relative;
@@ -230,7 +230,7 @@ body {
     }
 }
 
-/* ------------------------------ TIRAGE TAROT ------------------------------ */
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
 
 .WidgetTarot-Card {
     
@@ -260,18 +260,18 @@ body {
     color: $bleu;
 }
 
-/* ------------------------------- POP VOYANT ------------------------------- */
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
 }
 
-/* ----------------------------- PHOTOS VOYANTS ----------------------------- */
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
 @import "modules_themes/tarot-direct-psychics";
 
-/* ------------------------------- FORMULAIRE ------------------------------- */
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
 
 .FormContainer {
     background-color: $bg-grey;
@@ -327,7 +327,7 @@ input[type="checkbox"], input[type="radio"] {
 
 @import "modules_themes/form-alert-bootstrap";
 
-/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
@@ -355,7 +355,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ---------------------------------- TCHAT --------------------------------- */
+/* -------------------------------- [ TCHAT ] ------------------------------- */
+
 .Tchat-Gratuit-Title {
     color: $bleu;
 }
@@ -397,7 +398,8 @@ input[type="checkbox"], input[type="radio"] {
     color: $bleu;
 }
 
-/* ------------------------------ DRI-POSTMAIL ------------------------------ */
+/* -------------------------------- [ DRI ] --------------------------------- */
+
 .DRI {
     &-Slogan {
         width: 80%;
@@ -475,7 +477,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ------------------------------- PAGE MERCI ------------------------------- */
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
 .Merci-Form {
     background-color: $bleu;
     background-image: url($offre_immediate);
