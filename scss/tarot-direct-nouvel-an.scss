@@ -1,17 +1,14 @@
 @charset "UTF-8";
-/* 
-    --------------------------------------
-    --      tarot-direct-nouvel-an      --
-    --------------------------------------
-
-    Created on : 19 décembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/* ======================== [ tarot-direct-nouvel-an ] =========================
+ *
+ * Created on : 19 décembre 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 @import "templates/s-landing-tarot-3";
 
+/* Typos */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Great+Vibes');
 
-/* Dossier images */
+/* Images */
 $img_dir : "../images_landing/tarot-direct-nouvel-an/";
 $background : $img_dir + "background.jpg";
 $header: $img_dir + "header-degrade.jpg";
@@ -47,6 +44,8 @@ $tchat-bg: #E8E8E8;
 $man: black;
 $woman: $yellow;
 
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
 body {
     background: transparent url($background) fixed center bottom no-repeat;
     font-family: 'Raleway', sans-serif;
@@ -69,6 +68,7 @@ body {
     background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center top;
+    min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -76,7 +76,7 @@ body {
     .ContentBand-ColumnHeader { padding-top: 1rem;}
 }
 
-/* --------------------------------- ENTETE --------------------------------- */
+/* ------------------------------- [ ENTETE ] ------------------------------- */
 
 .SiteHeader {
     position: relative;
@@ -134,7 +134,8 @@ body {
     }
 }
 
-/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
+
 .PsychicChoice-Psychic {
     &-VisualForm {
         color: black;
@@ -169,7 +170,7 @@ body {
     }
 }
 
-/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
 
 .ThemeChoice-ListItem {
     position: relative;
@@ -229,7 +230,7 @@ body {
     }
 }
 
-/* ------------------------------ TIRAGE TAROT ------------------------------ */
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
 
 .WidgetTarot-Card {
     
@@ -259,18 +260,18 @@ body {
     color: black;
 }
 
-/* ------------------------------- POP VOYANT ------------------------------- */
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
 }
 
-/* ----------------------------- PHOTOS VOYANTS ----------------------------- */
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
 @import "modules_themes/tarot-direct-psychics";
 
-/* ------------------------------- FORMULAIRE ------------------------------- */
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
 
 .FormContainer {
     background-color: $form_bg;
@@ -322,33 +323,9 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
-.alert {
-    text-align: center;
-    border-radius: 5px;
+@import "modules_themes/form-alert-bootstrap";
 
-    &-danger {
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-    &-success {
-        color: #3c763d;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-    }
-    &-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-    &-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-    }
-}
-
-/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
@@ -376,7 +353,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ---------------------------------- TCHAT --------------------------------- */
+/* -------------------------------- [ TCHAT ] ------------------------------- */
+
 .Tchat-Gratuit-Title {
     color: black;
 }
@@ -418,7 +396,8 @@ input[type="checkbox"], input[type="radio"] {
     color: black;
 }
 
-/* ------------------------------ DRI-POSTMAIL ------------------------------ */
+/* -------------------------------- [ DRI ] --------------------------------- */
+
 .DRI {
     &-Slogan {
         width: 80%;
@@ -496,7 +475,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ------------------------------- PAGE MERCI ------------------------------- */
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
 .Merci-Form {
     background-color: $form_bg;
     background-image: url($offre_immediate);

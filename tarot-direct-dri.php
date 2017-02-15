@@ -122,9 +122,9 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                 </div>
             </div>
         </section>
-        <?php if($draw){ ?>
 <!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
         <section class="ContentBand Tarot Arrowed">
+        <?php if($draw){ ?>
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="WidgetTarot">
@@ -137,8 +137,8 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                     </article>
                 </div>
             </div>
-        </section>
         <?php } ?>
+        </section>
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
 

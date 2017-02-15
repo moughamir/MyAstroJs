@@ -3,14 +3,14 @@
  *
  * Created on : 20 décembre 2016 By Mohamed Moughamir <moughamir+kgcom@gmail.com>
  * Updated on : 02 février 2017 By Laurène Dourdin <2aurene@gmail.com>
-*/
+ */
 
 @import "templates/s-landing-tarot-3";
 
 /* Typos */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
 
-/* Dossier images */
+/* Images */
 $img_dir: "../images_landing/tarot-direct-amour/";
 $background: $img_dir + "background.jpg";
 $logo: $img_dir + "logo.png";
@@ -74,6 +74,7 @@ body {
     background-image: url($bg-fleche);
     background-position: center top;
     background-repeat: no-repeat;
+    min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -343,6 +344,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* -------------------------------- [ TCHAT ] ------------------------------- */
+
 .Tchat-Message-Person {
     color: $pink;
 }
@@ -398,6 +400,7 @@ a.FormField-Button {
 }
 
 /* -------------------------------- [ DRI ] --------------------------------- */
+
 .DRI {
     &-Slogan {
         width: 80%;
@@ -476,6 +479,7 @@ a.FormField-Button {
 }
 
 /* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
 .Merci-Form {
     background-color: $softgreen;
     background-image: url($offre_immediate);
