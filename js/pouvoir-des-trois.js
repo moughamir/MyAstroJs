@@ -1,0 +1,188 @@
+/* global $*/
+/* global _*/
+/* global atob*/
+
+var quiz = [{
+
+    "question": "Quel es t le domaine vous préoccupe le plus?",
+    "choices": [{
+      "rel": "amour",
+      "color": "#bc91cd",
+      "text": "L'Amour"
+    }, {
+      "rel": "travail",
+      "color": "#6c437c",
+      "text": "Le Travail"
+    }, {
+      "rel": "argent",
+      "color": "#411575",
+      "text": "L'Argent"
+    }]
+  }, {
+
+    "question": "Quel objet vous inspire le plus?",
+    "choices": [{
+      "color": "#6c437c",
+      "text": "La boule de cristale"
+    }, {
+      "color": "#411575",
+      "text": "Le pendule"
+    }, {
+      "color": "#bc91cd",
+      "text": "Le tarot"
+    }]
+  }, {
+
+    "question": "Comment voyez-vous votre avenir?",
+    "choices": [{
+      "color": "#411575",
+      "text": "avec des hauts et des bas"
+    }, {
+      "color": "#bc91cd",
+      "text": "Plein de surprises"
+    }, {
+      "color": "#6c437c",
+      "text": "Plutôt sombre"
+    }]
+  }, {
+
+    "question": "Au quotidien, vous vous sentez?",
+    "choices": [{
+      "color": "#bc91cd",
+      "text": "Seul(e)"
+    }, {
+      "color": "#6c437c",
+      "text": "Comblé(e)"
+    }, {
+      "color": "#411575",
+      "text": "Frustré(e)"
+    }]
+  }, {
+
+    "question": "Quelle couleur vous correspond le plus?",
+    "choices": [{
+      "color": "#e676a3",
+      "text": "Rose"
+    }, {
+      "color": "#b5aaad",
+      "text": "Gris"
+    }, {
+      "color": "#518fc9",
+      "text": "Bleu"
+    }]
+  }],
+  resault = {
+    "amour": "Les mois à venir vont vous réserver de bien belles surprises avec notamment une personne de votre entourage qui risque de vous surprendre. De grands changements se profilent et vous allez aborder un tournant majeur de votre vie. C’est à vous de faire en sorte que ce tournant soit positif ou négatif.<br/> Beaucoup de questions vont se présenter à vous, plus spécialement sur le comportement d’une personne à votre égard. Des doutes et des interrogations qui… ",
+    "argent": "Même si toutes vos pensées concernent votre argent, sachez au fond de vous qu’après la pluie vient toujours le bon temps. Vous avez peur pour votre avenir financier et cela se comprend très bien.<br/> Un évènement important va avoir lieu dans les semaines à venir, un évènement qui concerne directement votre argent. Vous êtes effectivement proche d’atteindre votre objectif financier mais j’ai également perçu une personne malveillante qui…",
+    "travail": "Un petit coup de pouce ne serait pas de refus, notamment dans votre vie professionnelle. Le travail est un domaine qui vous préoccupe assez souvent car tout n’est pas toujours facile, et vous avez aujourd’hui à cœur de vous épanouir professionnellement.<br/> Rassurez-vous, les mois à venir seront une période idéale pour lancer tous les projets que vous avez en tête et les mener à bien. Il faut que vous ayez un rôle actif dans votre avenir professionnel et que vous ne laissiez pas…"
+  },
+  choice = $('.choice'),
+  holder = $('.resault'),
+  name;
+
+var q = 0;
+//qPrepare(q);
+
+$('.read-more').on('click', function() {
+  $('html, body').animate({
+    scrollTop: $('.FormContainer').offset().top
+  }, 1800);
+  return false;
+});
+/*
+
+$("#button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#myDiv").offset().top
+    }, 2000);
+});
+
+*/
+
+
+
+
+$('.start').on('click', function() {
+  name = $('input[name="name"]').val();
+
+  qPrepare(q);
+  q++;
+  return false;
+});
+
+choice.on('click', function() {
+
+  var d = $(this).data();
+  if (typeof d !== typeof undefined && d !== false) {
+    // Element has this attribute
+    console.info('True');
+    if ($(this).data('option') == "amour") {
+      holder.html(resault.amour);
+    }
+    else if ($(this).data('option') == "travail") {
+      holder.html(resault.travail);
+    }
+    else if ($(this).data('option') == "argent") {
+      holder.html(resault.argent);
+    }
+    qPrepare(q);
+  }
+  else {
+    console.info('False');
+    qPrepare(q);
+  }
+  q++;
+});
+
+
+/**
+ * q integer : Index of question 
+ */
+
+/*
+ $('#test').fadeOut(500, function() {
+        $(this).text('Some other text!').fadeIn(500);
+    });
+*/
+
+function qPrepare(q) {
+  let duration = 300;
+  if (q <= 4) {
+    var question = quiz[q].question;
+    var choices = quiz[q].choices;
+
+
+    $('.question').fadeOut(duration, function() {
+      $(this).text(question).fadeIn(duration);
+    });
+
+    choice.each(function(elmIndex) {
+
+      $(this).fadeOut(duration, function() {
+        $(this).text(choices[elmIndex].text).css({
+          'background-color': choices[elmIndex].color
+        }).fadeIn(duration);
+      });
+
+      if (_.hasIn(choices[elmIndex], 'rel')) {
+        $(this).data('option', choices[elmIndex].rel);
+
+      }
+      else {
+        $(this).data('option', null);
+
+      }
+    });
+    return false;
+  }
+  else {
+
+    console.log('Next Step pls');
+    return false;
+  }
+
+}
+
+
+// typeof quiz[0].choices[0].rel !== 'undefined' => true
+var a = atob('T21uaVp5YQ==');
