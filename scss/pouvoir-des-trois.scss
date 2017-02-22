@@ -1,0 +1,313 @@
+@charset 'UTF-8';
+@import "s-landing-voyance-2";
+//
+$assets: '/images_landing/pouvoir-des-trois/';
+$promo: $assets+"offre.png";
+// scheme
+$primary: #411575;
+
+/* sidebar element hover, btn, Psychic name, highlight */
+
+$primary-txt: #ffffff;
+$secondary: #505050;
+$secondary-hvr: #9a9898;
+$icons: #454545;
+// fonts
+$courgette: 'Courgette',
+cursive;
+$openSans: 'Open Sans',
+sans-serif;
+// Typo
+h1,
+h2,
+button {
+  color: $primary-txt;
+  font: {
+    family: $courgette;
+    weight: lighter;
+  }
+  ;
+  hyphens: none;
+}
+
+// Layout
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  font-family: $courgette;
+  //font-weight: 400;
+  color: #1f1f1f;
+}
+
+.FormContainer {
+  max-width: 60rem;
+}
+
+.Site {
+  &Header {
+    background: $primary url($assets + 'header.png') no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
+    .PageWrapper {
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  &Logo {
+    background: url($assets + 'logo.png') no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 220px;
+  }
+}
+
+.main {
+  //background: url($assets + 'tetra-small.png') no-repeat top left fixed, url($assets + 'tetra-big.png') no-repeat center right fixed, url($assets + 'background.png') no-repeat center fixed;
+  background-size: 350px, 450px, cover;
+  >section {
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    //background: rgba(255, 0, 0, 0.1);;
+    padding: 10px 0;
+  }
+}
+
+.home {
+  background: url($assets + 'pbc.png') no-repeat center;
+  height: 100vh;
+}
+
+.landing-logo {
+  height: 90px;
+}
+
+.section {
+  display: block;
+  overflow: hidden;
+  min-height: 300px;
+  width: 100%;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.header {
+  background: $primary url($assets + 'header.png') no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  z-index: 2;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
+  height: 120px;
+  position: relative;
+  &-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.title {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: $primary;
+  padding: 2px 0;
+  font-size: 1.5rem;
+  //font-family: $courgette;
+  margin: 10px 0;
+  h1 {
+    color: $primary-txt;
+    font-size: 1.5rem;
+  }
+}
+
+.content {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.choice {
+  width: 250px;
+  height: 250px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .18), 0 1px 5px 0 rgba(0, 0, 0, .15);
+  transform: translateZ(0);
+  transition: all .25s cubic-bezier(.02, .01, .47, 1);
+  color: $primary-txt;
+  font: {
+    size: 2rem;
+    family: $openSans;
+  }
+  margin: 5px;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+    transition: box-shadow .4s ease-out;
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+  }
+}
+
+// components
+.btn {
+  background: $primary;
+  color: $primary-txt;
+  padding: 5px 12px;
+  cursor: pointer;
+  font: {
+    family: inherit;
+    size: 20px;
+    weight: 400;
+  }
+  border: {
+    width: 0;
+    color: transparent;
+    radius: 2px;
+  }
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .18),
+  0 1px 5px 0 rgba(0, 0, 0, .15);
+  transition: all .25s cubic-bezier(.02, .01, .47, 1);
+  transform: translateZ(0);
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+    transition: box-shadow .4s ease-out;
+  }
+}
+
+.rotate {
+  animation: rotate 2s 2 both ease-in;
+}
+
+.fadein {
+  animation: fadeIn 1500ms both ease-in;
+}
+
+.expander {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+  pointer-events: none;
+  //opacity: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.26);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+.scale {
+  animation: scale ease-in-out 600ms;
+}
+
+// form
+.form {
+  display: block;
+  padding: 15px 0;
+  margin: 10px 0;
+  .FormField-Input {
+    display: block;
+    margin: 0 auto;
+  }
+  .btn {
+    width: 300px;
+    padding: 8px;
+    margin: 10px 0;
+  }
+}
+
+.FormContainer {
+  background: transparent;
+}
+
+.FormContainer-Submit {
+  @extend .btn;
+}
+
+.FormField-Input {
+  background: #bc91cd;
+  border: none;
+  box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.89);
+  max-width: 530px;
+  width: 300px;
+  height: 38px;
+  padding: 0 10px;
+  border-radius: 2px;
+  &:focus {
+    outline: none;
+  }
+}
+
+footer {
+  font-family: $openSans;
+  text-align: center;
+}
+
+.read-more {
+  display: block;
+  text-decoration: underline;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.resault {
+  max-width: 60rem;
+  margin: 7px auto;
+  text-align: justify;
+}
+
+.promo {
+  background: transparent url($promo) center no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 260px;
+  height: 87px;
+  display: block;
+  margin: 15px auto;
+}
