@@ -2153,6 +2153,9 @@ body {
   background-size: contain;
   width: 220px; }
 
+.ContentBand {
+  margin-top: 0; }
+
 .main {
   background-size: 350px, 450px, cover; }
   .main > section {
@@ -2175,19 +2178,26 @@ body {
   width: 100%;
   background: rgba(255, 0, 0, 0.1); }
 
+/*
 .header {
-  background: #411575 url("/images_landing/pouvoir-des-trois/header.png") no-repeat center;
+  background: $primary url($assets + 'header.png') no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
   z-index: 2;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
   height: 120px;
-  position: relative; }
-  .header-content {
+  position: relative;
+  &-content {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+  }
+}
+*/
+ul {
+  margin: 0;
+  padding: 0; }
 
 .title {
   display: block;
@@ -2200,7 +2210,9 @@ body {
   margin: 10px 0; }
   .title h1 {
     color: #ffffff;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 5px; }
 
 .content {
   position: relative;
@@ -2287,15 +2299,25 @@ body {
 .scale {
   animation: scale ease-in-out 600ms; }
 
+.post-test p {
+  padding: 5px;
+  text-align: justify; }
+
+.resault {
+  padding: 5px;
+  margin-top: 15px; }
+
 .form {
   display: block;
-  padding: 15px 0;
-  margin: 10px 0; }
+  padding: 15px 5px;
+  margin: 10px 0;
+  text-align: center; }
   .form .FormField-Input {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    height: 46px; }
   .form .btn, .form .FormContainer-Submit {
-    width: 300px;
+    width: 310px;
     padding: 8px;
     margin: 10px 0; }
 
@@ -2303,6 +2325,24 @@ body {
   background: transparent; }
 
 .FormField-Input {
+  border: none;
+  transition: all 0.25s ease-in;
+  background: #bc91cd;
+  border-radius: 2px; }
+  .FormField-Input:active, .FormField-Input:focus {
+    box-shadow: 0 0 6px -1px #411575;
+    background: #c7a3d5; }
+  .FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+    outline: none;
+    box-shadow: 0 0 3px -1px #411575;
+    border-color: #411575; }
+
+.FormField-Info {
+  border: none;
+  color: #411575;
+  box-shadow: 0 0 6px -1px #411575; }
+
+/*.FormField-Input {
   background: #bc91cd;
   border: none;
   box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.89);
@@ -2310,17 +2350,20 @@ body {
   width: 300px;
   height: 38px;
   padding: 0 10px;
-  border-radius: 2px; }
-  .FormField-Input:focus {
-    outline: none; }
-
+  border-radius: 2px;
+  &:focus {
+    outline: none;
+  }
+}*/
 footer {
   font-family: "Open Sans", sans-serif;
   text-align: center; }
 
 .read-more {
   display: block;
-  text-decoration: underline; }
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.6rem; }
   .read-more:hover {
     cursor: pointer; }
 
@@ -2337,5 +2380,31 @@ footer {
   height: 87px;
   display: block;
   margin: 15px auto; }
+
+.hidden {
+  display: none; }
+
+@media screen and (max-width: 900px) {
+  .question {
+    font-size: 1.6rem;
+    text-shadow: 0px 0px 1px #3c3c3c;
+    text-align: center; }
+
+  .choice {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    font-size: 2.3rem;
+    margin: 3px 0; }
+
+  .FormContainer-Submit {
+    font-size: 1.8rem; }
+
+  .final-step {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; } }
 
 /*# sourceMappingURL=pouvoir-des-trois.css.map */
