@@ -1,6 +1,5 @@
 /* global $*/
 /* global _*/
-/* global atob*/
 
 var quiz = [{
 
@@ -78,35 +77,24 @@ var quiz = [{
   },
   choice = $('.choice'),
   holder = $('.resault'),
-  name;
+  name,
+  section = $('.section');
 
 var q = 0;
-//qPrepare(q);
 
-$('.read-more').on('click', function() {
-  $('html, body').animate({
-    scrollTop: $('.FormContainer').offset().top
-  }, 1800);
-  return false;
-});
-/*
-
-$("#button").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#myDiv").offset().top
-    }, 2000);
-});
-
-*/
 
 
 
 
 $('.start').on('click', function() {
-  name = $('input[name="name"]').val();
 
+  name = $('input[name="name"]').val();
   qPrepare(q);
-  q++;
+  //q++;
+  section.eq(0).fadeOut(300, function() {
+    section.eq(1).removeClass('hidden');
+    q++;
+  });
   return false;
 });
 
@@ -134,6 +122,12 @@ choice.on('click', function() {
   q++;
 });
 
+$('.read-more').on('click', function() {
+  $('html, body').animate({
+    scrollTop: $('.FormContainer').offset().top
+  }, 800);
+  return false;
+});
 
 /**
  * q integer : Index of question 
@@ -146,7 +140,7 @@ choice.on('click', function() {
 */
 
 function qPrepare(q) {
-  let duration = 300;
+  let duration = 150;
   if (q <= 4) {
     var question = quiz[q].question;
     var choices = quiz[q].choices;
@@ -176,8 +170,10 @@ function qPrepare(q) {
     return false;
   }
   else {
-
-    console.log('Next Step pls');
+    section.eq(1).fadeOut(300);
+    section.eq(2).removeClass('hidden');
+    console.log(name);
+    $('#name').val(name);
     return false;
   }
 
@@ -185,4 +181,3 @@ function qPrepare(q) {
 
 
 // typeof quiz[0].choices[0].rel !== 'undefined' => true
-var a = atob('T21uaVp5YQ==');

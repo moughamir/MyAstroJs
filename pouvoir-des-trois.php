@@ -7,8 +7,7 @@
  */
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
-
-$question = ['code'=>'CODE', 'subject'=>'', 'text'=>''];
+$url = 'https://myastro-omnizya.c9users.io';
 /**
  * <section class="home">
   <img src="<?= $assets ?>/tri.png" class="rotate" />
@@ -25,6 +24,19 @@ $question = ['code'=>'CODE', 'subject'=>'', 'text'=>''];
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
     <meta name="robots" content="noindex, nofollow" />
+    
+    <meta property="fb:app_id" content="1276526482364681" /> 
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?= $url.'/'.$assets ?>/cover.jpg" />
+    <meta property="og:image:secure_url" content="<?= $url.'/'.$assets ?>/cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:title" content="Pouvoir des Trois" />
+    <meta property="og:url" content="<?= $url ?>/pouvoir-des-trois" />
+    <meta property="og:description" content="Allez-vous avoir de la chance en 2017 ? Jouez et recevez votre étude personnalisée !" />
+    <meta property="og:locale" content="fr_FR" />
+    
     <title>Pouvoir Des Trois | MyAstro</title>
     <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
     <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
@@ -47,147 +59,135 @@ $question = ['code'=>'CODE', 'subject'=>'', 'text'=>''];
     <div class="title">
       <h1>Amour, Travail, Argent</h1>
     </div>
-
-    <section class="section post-test">
-      
-      Pouvoir des trois<br> Prenez en main votre <span class="cap">a</span>venir,<br> Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot;<br> nous allons pouvoir répondre à vos intérrogations,
-      grace à ce petit teste.<br> Simple et rapida ces révélations sont étonnantes... Inscrivez votre Prénom ci-dessous. <br>
-      
-      <div class="form">
-        <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
-        <button class="btn start">Commencer</button>
-      </div>
-      
-      
-    </section>
-    
-    <section class="section content">
-      
-      <h2 class="question">QUESTION</h2>
-      
-      <ul class="qui" id="choices">
-        <li class="choice">PLACEHOLDER</li>
-        <li class="choice">PLACEHOLDER</li>
-        <li class="choice">PLACEHOLDER</li>
-      </ul>
-
-    </section>
-
-
-    <section class="section">
-      <article>
-      <p class="resault"></p>
-      <a href='#FormContainer' class='read-more'>Lire la suite</a>
-      </article>
-      <article class="FormContainer">
-        <div class="promo"></div>
-        <div class="Pop Pop-Voyant getFormValue" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
-        <div class="FormContainer overlay" id="form-overlay"></div>
+    <main class="ContentBand">
+      <div class="PageWrapper">
+      <section class="section post-test">
         
-        <div class="FormContainer-Fields Fields-Table">
-          
-          
-          <p class="alert alert-danger" style="display: none"></p>
-          
-          <!-- ########## identification formulaire ########## -->
-          <input type="hidden" name="source" value="tarot-direct-a" />
-          <input type="hidden" name="method" value="general-suscribe" />
-          <input type="hidden" name="support" value="tarot" />
-          <input type="hidden" name="site" value="myastro.fr" />
-          <input type="hidden" name="affiliation" value="adwords" />
-          <input type="hidden" name="dri" value="tarot-direct-merci" />
-          <!-- ########## autres champs pré-remplis ########## -->
-          <input type="hidden" name="tel_needed" value="1" />
-          <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
-          <input type="hidden" name="cguv" value="1" />
-          <input type="hidden" name="partenaires" value="1" />
-          <!-- ############################################### -->
-          // gender
-          <div class="Fields-Table-Row gender">
-            <label class="FormField-Label">Vous êtes</label>
-            <div class="FormField radio">
-              <div class="FormField-TableInputContainer fixed-2-col gender">
-                <div class="FormField-TableInputContainer-Cell">
-                  <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span>une femme</label>
-                  <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
-                </div>
-                <div class="FormField-TableInputContainer-Cell">
-                  <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span>un homme</label>
-                  <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
-                </div>
-              </div>
-            </div>
-          </div>
-          //bdd
-          <div class="Fields-Table-Row">
-            <label class="FormField-Label">Votre date de naissance</label>
-            <div class="FormField">
-              <div class="FormField-TableInputContainer">
-                <div class="FormField-TableInputContainer-Cell">
-                  <select class="FormField-Input" name="jour" required>
-                    <option value="" selected disabled>Jour</option>
-                    <?php for($i=1;$i<=31;$i++){ ?>
-                    <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-                <div class="FormField-TableInputContainer-Cell">
-                  <select class="FormField-Input" name="mois" required>
-                    <option value="" selected disabled>Mois</option>
-                    <option value="01">Janv.</option>
-                    <option value="02">Fev.</option>
-                    <option value="03">Mars</option>
-                    <option value="04">Avr.</option>
-                    <option value="05">Mai</option>
-                    <option value="06">Juin</option>
-                    <option value="07">Juil.</option>
-                    <option value="08">Aout</option>
-                    <option value="09">Sept.</option>
-                    <option value="10">Oct.</option>
-                    <option value="11">Nov.</option>
-                    <option value="12">Dec.</option>
-                  </select>
-                </div>
-                <div class="FormField-TableInputContainer-Cell">
-                  <select class="FormField-Input" name="annee" required>
-                  <option value="" selected disabled>Année</option>
-                  <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                  <option value="<?= $i ?>"><?= $i ?></option>
-                  <?php } ?>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          // email
-          <div class="Fields-Table-Row">
-            <label for="email" class="FormField-Label">Votre email</label>
-            <div class="FormField">
-              <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" placeholder="Votre Email" required />
-            </div>
-          </div>
-          <div class="Fields-Table-Row">
-            <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
-          </div>
-          
-          // tel
-          <div class="Fields-Table-Row">
-            <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
-            <div class="FormField">
-              <input id="tel" type="tel" name="tel" class="FormField-Input" required />
-            </div>
-          </div>
-          <div class="Fields-Table-Row">
-            <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
-          </div>
+        <p>Pouvoir des trois<br> Prenez en main votre <span class="cap">a</span>venir,<br> Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot;<br> nous allons pouvoir répondre à vos intérrogations,
+        grace à ce petit teste.<br> Simple et rapida ces révélations sont étonnantes... Inscrivez votre Prénom ci-dessous.</p>
+        
+        <div class="form">
+          <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
+          <button class="btn start">Commencer</button>
         </div>
-        //btn
-        <button class="FormContainer-Submit" type="submit" name="valider">Commencer le Tchat Gratuit</button>
         
-      </article>
-    </section>
+        
+      </section>
+    
+      <section class="section content hidden">
+        
+        <h2 class="question">QUESTION</h2>
+        
+        <ul id="choices">
+          <li class="choice">PLACEHOLDER</li>
+          <li class="choice">PLACEHOLDER</li>
+          <li class="choice">PLACEHOLDER</li>
+        </ul>
+  
+      </section>
 
+      <section class="section hidden">
+        
+        <article class="final-step">
+          <p class="resault"></p>
+          <a href='#FormContainer' class='read-more'>Lire la suite</a>
+        </article>
+        
+        <article class="FormContainer">
+          <form id="form-container" class="ajax">
+          <div class="promo"></div>
+          <div class="FormContainer overlay" id="form-overlay"></div>
+          
+          <div class="FormContainer-Fields Fields-Table">
+            
+            
+            <p class="alert alert-danger" style="display: none"></p>
+            
+            <!-- ########## identification formulaire ########## -->
+            <input type="hidden" name="source" value="pouvoir-des-trois" />
+            <input type="hidden" name="method" value="general-suscribe" />
+            <input type="hidden" name="support" value="voyance" />
+            <input type="hidden" name="affiliation" value="affilbase" />
+            <input type="hidden" name="dri" value="pouvoir-des-trois" />
+            <!-- ########## autres champs pré-remplis ########## -->
+            <input type="hidden" name="tel_needed" value="1" />
+            
+            <input type="hidden" name="cguv" value="1" />
+            <input type="hidden" name="partenaires" value="1" />
+            <input type="hidden" name="question_code" id="theme_id" value="" />
+            <!-- ############################################### -->
+            <input type="hidden" id="name" name="prenom" value=""/>
+            
+            <div class="Fields-Table-Row">
+              <label for="email" class="FormField-Label hidden">Votre email</label>
+              <div class="FormField">
+                <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" placeholder="Votre Email" required />
+              </div>
+            </div>
+            <div class="Fields-Table-Row">
+              <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
+            </div>
+            
+            <div class="Fields-Table-Row">
+              <label for="tel" class="FormField-Label hidden">Votre numéro de téléphone</label>
+              <div class="FormField">
+                <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="Votre Téléphone" required />
+              </div>
+            </div>
+            <div class="Fields-Table-Row">
+              <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
+            </div>
+            
+            <div class="Fields-Table-Row">
+              <label class="FormField-Label">Votre date de naissance</label>
+              <div class="FormField">
+                <div class="FormField-TableInputContainer">
+                  <div class="FormField-TableInputContainer-Cell">
+                    <select class="FormField-Input" name="jour" required>
+                      <option value="" selected disabled>Jour</option>
+                      <?php for($i=1;$i<=31;$i++){ ?>
+                      <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                      <?php } ?>
+                    </select>
+                  </div>
+                  <div class="FormField-TableInputContainer-Cell">
+                    <select class="FormField-Input" name="mois" required>
+                      <option value="" selected disabled>Mois</option>
+                      <option value="01">Janv.</option>
+                      <option value="02">Fev.</option>
+                      <option value="03">Mars</option>
+                      <option value="04">Avr.</option>
+                      <option value="05">Mai</option>
+                      <option value="06">Juin</option>
+                      <option value="07">Juil.</option>
+                      <option value="08">Aout</option>
+                      <option value="09">Sept.</option>
+                      <option value="10">Oct.</option>
+                      <option value="11">Nov.</option>
+                      <option value="12">Dec.</option>
+                    </select>
+                  </div>
+                  <div class="FormField-TableInputContainer-Cell">
+                    <select class="FormField-Input" name="annee" required>
+                    <option value="" selected disabled>Année</option>
+                    <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
+                    <option value="<?= $i ?>"><?= $i ?></option>
+                    <?php } ?>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="FormContainer-Submit" type="submit" name="valider">Commencer le Tchat Gratuit</button>
+          </form>
+        </article>
+        
+      </section>
+      </div>
+    </main>
+    
     <footer>
       <p class="SiteCopyright">
         <?php include('include/footer_copyright.php'); ?>
@@ -203,8 +203,7 @@ $question = ['code'=>'CODE', 'subject'=>'', 'text'=>''];
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </footer>
-
-
+    
   </body>
 
   </html>
