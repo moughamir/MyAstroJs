@@ -18,7 +18,7 @@ $(document).ready(function() {
   // we can use Ajax call here and get questions from database 
   var quiz = [{
 
-      "question": "Quel es t le domaine vous préoccupe le plus?",
+      "question": "Quel domaine vous préoccupe le plus?",
       "choices": [{
         "rel": "amour",
         "color": "#bc91cd",
@@ -104,6 +104,7 @@ $(document).ready(function() {
       $(".tri").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
         $(this).hide();
         $('.post-test').removeClass('hidden').addClass('fade');
+
       });
 
     });
