@@ -114,7 +114,7 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
             <input type="hidden" name="method" value="telnum-save" />
             <input type="hidden" name="support" value="voyance" />
             <input type="hidden" name="affiliation" value="affilbase" />
-            <input type="hidden" name="dri" value="l?link=https%3A%2F%2Fvoyance-en-direct.tv%2Fpouvoir-des-trois%2F" />
+            <input type="hidden" name="dri" value="l" />
             <!-- ########## autres champs pré-remplis ########## -->
             <input type="hidden" name="tel_needed" value="1" />
             
