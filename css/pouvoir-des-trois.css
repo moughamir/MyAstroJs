@@ -2132,21 +2132,23 @@ html {
 body {
   padding: 0;
   font-family: "Courgette", cursive;
-  color: #1f1f1f; }
+  color: #fff; }
 
 .FormContainer {
   max-width: 60rem; }
+
+.PageWrapper {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden; }
 
 .SiteHeader {
   background: #411575 url("/images_landing/pouvoir-des-trois/header.png") no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19); }
-  .SiteHeader .PageWrapper {
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
 .SiteLogo {
   background: url("/images_landing/pouvoir-des-trois/logo.png") no-repeat;
   -webkit-background-size: contain;
@@ -2210,11 +2212,10 @@ ul {
   text-align: center;
   background: #411575;
   padding: 2px 0;
-  font-size: 1.5rem;
-  margin: 10px 0; }
+  margin: 0; }
   .title h1 {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin: 0;
     padding: 5px; }
 
@@ -2268,10 +2269,13 @@ ul {
     transition: box-shadow .4s ease-out; }
 
 .rotate {
-  animation: rotate 2s 2 both ease-in; }
+  animation: rotate 1s 2 both linear; }
 
 .fadein, .preload {
   animation: fadeIn 1500ms 1.5s both ease-in; }
+
+.fade {
+  animation: fadeIn 300ms both ease-in; }
 
 .expander {
   position: absolute;
@@ -2306,12 +2310,14 @@ ul {
 .post-test p {
   padding: 5px;
   text-align: justify;
-  font-size: 1.6rem;
-  width: 430px; }
+  font-size: 1.9rem;
+  width: 430px;
+  text-shadow: 1px 1px #454545; }
 
 .resault {
   padding: 5px;
-  margin-top: 15px; }
+  margin-top: 15px;
+  text-shadow: 1px 1px #454545; }
 
 .form {
   display: block;
@@ -2321,20 +2327,23 @@ ul {
   .form .FormField-Input {
     display: block;
     margin: 0 auto;
-    height: 46px; }
+    height: 46px;
+    font-size: 2rem; }
   .form .btn, .form .FormContainer-Submit {
     width: 310px;
     padding: 8px;
     margin: 10px 0; }
 
 .FormContainer {
-  background: transparent; }
+  background: transparent;
+  margin: 1.8rem 0; }
 
 .FormField-Input {
   border: none;
   transition: all 0.25s ease-in;
   background: #bc91cd;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-size: 2rem; }
   .FormField-Input:active, .FormField-Input:focus {
     box-shadow: 0 0 6px -1px #411575;
     background: #c7a3d5; }
@@ -2364,22 +2373,28 @@ ul {
 footer {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  position: absolute;
+  position: relative;
   width: 100%;
-  bottom: 0; }
+  bottom: 0;
+  margin-top: 2rem;
+  display: none; }
 
 .read-more {
   display: block;
   text-decoration: none;
   text-align: center;
-  font-size: 1.6rem; }
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 1px 1px #454545; }
   .read-more:hover {
     cursor: pointer; }
 
 .resault {
   max-width: 60rem;
   margin: 7px auto;
-  text-align: justify; }
+  text-align: justify;
+  font-size: 1.8rem;
+  line-height: 1.8; }
 
 .promo {
   background: transparent url("/images_landing/pouvoir-des-trois/offre.png") center no-repeat;
@@ -2398,7 +2413,7 @@ footer {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: -1;
   display: flex;
@@ -2433,7 +2448,7 @@ footer {
     font-size: 1.8rem; }
 
   .final-step {
-    height: 75vh;
+    height: 72vh;
     display: flex;
     justify-content: center;
     align-items: center;

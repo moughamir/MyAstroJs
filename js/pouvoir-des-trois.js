@@ -1,10 +1,24 @@
 /* global $*/
 /* global _*/
+/**
+ * Note for 'MEP'
+ * 
+ * Please use the compressed version of this file on Production
+ * link to compressed version : https://bitbucket.org/snippets/kgcomdev/nex6k
+ *  
+ * @Author    : Mohamed Moughamir <hello@omnizya.com>
+ * @Version   : 0.1b
+ * @Licence   : GPL v3
+ * @Copyright : KGcom <https://kg-com.fr/>
+ */
+
 $(document).ready(function() {
 
+
+  // we can use Ajax call here and get questions from database 
   var quiz = [{
 
-      "question": "Quel es t le domaine vous préoccupe le plus?",
+      "question": "Quel domaine vous préoccupe le plus?",
       "choices": [{
         "rel": "amour",
         "color": "#bc91cd",
@@ -83,44 +97,63 @@ $(document).ready(function() {
 
   var q = 0;
 
-  function rotate(elm, angle, repeat) {
-    var $elm = $(elm);
-
-    var step;
-    for (step = 0; step < repeat; step++) {
-
-      $({
-        deg: 0
-      }).animate({
-        deg: angle
-      }, {
-        duration: 2000,
-        step: function(now) {
-          $elm.css({
-            transform: 'rotate(' + now + 'deg)'
-          });
-        }
+  setTimeout(function() {
+    $('.tri').fadeIn(500, function() {
+      $(this).removeClass('hidden');
+      $(this).addClass('rotate');
+      $(".tri").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+        $(this).hide();
+        $('.post-test').removeClass('hidden').addClass('fade');
+        $('footer').show();
       });
-      console.log('animated' + step);
-    }
-  }
 
-  $('.start').on('click', function() {
+    });
+  }, 3300);
 
+  /**
+   * loadQuiz function
+   */
+  function loadQuiz() {
+    // get value of input field and store it (optimized)
     name = $('input[name="name"]').val();
+
     qPrepare(q);
-    //q++;
+
     section.eq(0).fadeOut(300, function() {
-      section.eq(1).removeClass('hidden');
+
+      section.eq(1).removeClass('hidden').addClass('fade');
       q++;
+
     });
     return false;
+  }
+
+  // when user write their name and press ENTER key '13'
+
+  $('input[name="name"]').keypress(function(e) {
+    if (e.which == 13) {
+      loadQuiz();
+    }
   });
 
+  // event listen to click on button.start element
+  $('.start').on('click', function() {
+    loadQuiz();
+  });
+
+  /**
+   * listen to user first choice, and populate .resault element with
+   * corresponding value.
+   * then keep calling qPrepare()
+   * 
+   * @see qPrepare()
+   */
   choice.on('click', function() {
 
     var d = $(this).data();
+
     if (typeof d !== typeof undefined && d !== false) {
+
       // Element has this attribute
       console.info('True');
       if ($(this).data('option') == "amour") {
@@ -138,9 +171,13 @@ $(document).ready(function() {
       console.info('False');
       qPrepare(q);
     }
+
     q++;
   });
 
+  /**
+   * scroll animation
+   */
   $('.read-more').on('click', function() {
     $('html, body').animate({
       scrollTop: $('.FormContainer').offset().top
@@ -149,18 +186,14 @@ $(document).ready(function() {
   });
 
   /**
-   * q integer : Index of question 
+   * easy pz to understand
    */
-
-  /*
-   $('#test').fadeOut(500, function() {
-          $(this).text('Some other text!').fadeIn(500);
-      });
-  */
-
   function qPrepare(q) {
+
     let duration = 150;
+
     if (q <= 4) {
+
       var question = quiz[q].question;
       var choices = quiz[q].choices;
 
@@ -186,11 +219,13 @@ $(document).ready(function() {
 
         }
       });
+
       return false;
     }
     else {
-      section.eq(1).fadeOut(300);
-      section.eq(2).removeClass('hidden');
+
+      section.eq(1).addClass('hidden');
+      section.eq(2).removeClass('hidden').addClass('fade');
       console.log(name);
       $('#name').val(name);
       return false;
@@ -198,6 +233,4 @@ $(document).ready(function() {
 
   }
 
-
-  // typeof quiz[0].choices[0].rel !== 'undefined' => true
 });

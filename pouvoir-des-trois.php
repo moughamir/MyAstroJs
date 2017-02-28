@@ -69,8 +69,8 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
       
       <section class="section post-test hidden">
         
-        <p>Pouvoir des trois<br> Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations,
-        grace à ce petit teste.<br> Simple et rapida ces révélations sont étonnantes...<br> Inscrivez votre Prénom ci-dessous.</p>
+        <p>Pouvoir des trois<br> Prenez en main votre Avenir, grâce au Pouvoir des trois et de ces supports divinatoires ancestraux : le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations,
+        grâce à ce petit test.<br> Simple et rapide ces révélations sont étonnantes...<br> Inscrivez votre Prénom ci-dessous.</p>
         
         <div class="form">
           <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
@@ -114,7 +114,7 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
             <input type="hidden" name="method" value="telnum-save" />
             <input type="hidden" name="support" value="voyance" />
             <input type="hidden" name="affiliation" value="affilbase" />
-            <input type="hidden" name="dri" value="merci-voyance-tchat" />
+            <input type="hidden" name="dri" value="l?link=https%3A%2F%2Fvoyance-en-direct.tv%2Fpouvoir-des-trois%2F" />
             <!-- ########## autres champs pré-remplis ########## -->
             <input type="hidden" name="tel_needed" value="1" />
             
