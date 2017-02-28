@@ -10,10 +10,6 @@ $assets = 'images_landing/pouvoir-des-trois';
 $site = getenv('MYASTRO_ROOT_URL');
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='.$email;
-/**
- * <section class="home">
-  <img src="<?= $assets ?>/tri.png" class="rotate" />
-  </section>*/
 
 ?>
 
