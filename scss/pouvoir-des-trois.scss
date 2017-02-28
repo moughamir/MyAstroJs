@@ -46,18 +46,20 @@ body {
   max-width: 60rem;
 }
 
+.PageWrapper {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .Site {
   &Header {
     background: $primary url($assets + 'header.png') no-repeat center;
     -webkit-background-size: cover;
     background-size: cover;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
-    .PageWrapper {
-      padding: 5px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
   }
   &Logo {
     background: url($assets + 'logo.png') no-repeat;
@@ -210,11 +212,15 @@ ul {
 }
 
 .rotate {
-  animation: rotate 2s 2 both ease-in;
+  animation: rotate 2s 2 both linear;
 }
 
 .fadein {
   animation: fadeIn 1500ms 1.5s both ease-in;
+}
+
+.fade {
+  animation: fadeIn 300ms both ease-in;
 }
 
 .expander {
