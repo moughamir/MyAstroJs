@@ -8,6 +8,8 @@
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
 $url = 'https://myastro-omnizya.c9users.io';
+$email = isset($_SESSION['email'])? $_SESSION['email'] : '';
+$target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='.$email;
 /**
  * <section class="home">
   <img src="<?= $assets ?>/tri.png" class="rotate" />
@@ -34,7 +36,7 @@ $url = 'https://myastro-omnizya.c9users.io';
     <meta property="og:image:height" content="675" />
     <meta property="og:title" content="Pouvoir des Trois" />
     <meta property="og:url" content="<?= $url ?>/pouvoir-des-trois" />
-    <meta property="og:description" content="Allez-vous avoir de la chance en 2017 ? Jouez et recevez votre étude personnalisée !" />
+    <meta property="og:description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste." />
     <meta property="og:locale" content="fr_FR" />
     
     <title>Pouvoir Des Trois | MyAstro</title>
@@ -60,11 +62,15 @@ $url = 'https://myastro-omnizya.c9users.io';
       <h1>Amour, Travail, Argent</h1>
     </div>
     <main class="ContentBand">
+      <div class="preload">
+        <span class="tri hidden"></span>
+      </div>
       <div class="PageWrapper">
-      <section class="section post-test">
+      
+      <section class="section post-test hidden">
         
-        <p>Pouvoir des trois<br> Prenez en main votre <span class="cap">a</span>venir,<br> Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot;<br> nous allons pouvoir répondre à vos intérrogations,
-        grace à ce petit teste.<br> Simple et rapida ces révélations sont étonnantes... Inscrivez votre Prénom ci-dessous.</p>
+        <p>Pouvoir des trois<br> Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations,
+        grace à ce petit teste.<br> Simple et rapida ces révélations sont étonnantes...<br> Inscrivez votre Prénom ci-dessous.</p>
         
         <div class="form">
           <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
@@ -105,10 +111,10 @@ $url = 'https://myastro-omnizya.c9users.io';
             
             <!-- ########## identification formulaire ########## -->
             <input type="hidden" name="source" value="pouvoir-des-trois" />
-            <input type="hidden" name="method" value="general-suscribe" />
+            <input type="hidden" name="method" value="telnum-save" />
             <input type="hidden" name="support" value="voyance" />
             <input type="hidden" name="affiliation" value="affilbase" />
-            <input type="hidden" name="dri" value="pouvoir-des-trois" />
+            <input type="hidden" name="dri" value="merci-voyance-tchat" />
             <!-- ########## autres champs pré-remplis ########## -->
             <input type="hidden" name="tel_needed" value="1" />
             
@@ -126,6 +132,32 @@ $url = 'https://myastro-omnizya.c9users.io';
             </div>
             <div class="Fields-Table-Row">
               <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
+            </div>
+            
+            <div class="FormField">
+            <label for="pays" class="FormField-Label">Votre pays </label>
+              <select name="pays" id="pays" class="FormField-Input" required>
+                <option value="" selected>Votre Pays</option>
+                <option value="BE">Belgique</option>
+                <option value="CA">Canada</option>
+                <option value="LU">Luxembourg</option>
+                <option value="CH">Suisse</option>
+                <option value="FR" selected>France Métropolitaine</option>
+                <optgroup label="DOM-TOM">
+                    <option value="MQ">Martinique</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GF">Guyane</option>
+                    <option value="RE">La Réunion</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="PM">St Pierre et Miquelon</option>
+                    <option value="BL">St Barthélémy</option>
+                    <option value="SM">St Martin</option>
+                    <option value="WF">Wallis et Futunua</option>
+                    <option value="PF">Polynésie Française</option>
+                    <option value="NC">Nouvelle Calédonie</option>
+                </optgroup>
+                <option value="ZZ">Autre</option>
+              </select>
             </div>
             
             <div class="Fields-Table-Row">
