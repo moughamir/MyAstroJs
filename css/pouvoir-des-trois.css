@@ -3070,7 +3070,8 @@ ul {
 }
 
 .rotate {
-  animation: rotate 2s 2 both linear;
+  animation: rotate 900ms 2 both linear;
+  transform-origin: center 150px;
 }
 
 .fadein,
@@ -3130,7 +3131,7 @@ ul {
   padding: 5px;
   text-align: justify;
   font-size: 1.9rem;
-  width: 430px;
+  width: 530px;
   text-shadow: 1px 1px #454545;
 }
 

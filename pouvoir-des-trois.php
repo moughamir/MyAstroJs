@@ -69,9 +69,10 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
       
       <section class="section post-test hidden">
         
-        <p>Pouvoir des trois<br> Prenez en main votre Avenir, grâce au Pouvoir des trois et de ces supports divinatoires ancestraux : le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations,
-        grâce à ce petit test.<br> Simple et rapide ces révélations sont étonnantes...<br> Inscrivez votre Prénom ci-dessous.</p>
-        
+        <p>Prenez en main votre Avenir ! <br>
+        Grâce au Pouvoir des trois et ses supports divinatoires ancestraux : le pendule, la boule de cristal et le tarot nous allons pouvoir répondre à toutes vos interrogations.<br>
+        Réalisez ce test simple et rapide qui nous permettra de mieux vous connaître.<br>
+        Inscrivez votre prénom ci-dessous pour commencer :</p>
         <div class="form">
           <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
           <button class="btn start">Commencer</button>
@@ -96,7 +97,7 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
         
         <article class="final-step">
           <p class="resault"></p>
-          <a href='#FormContainer' class='read-more'>Lire la suite</a>
+          <a href='#FormContainer' class='read-more'>savoir la suite</a>
         </article>
         
         <article class="FormContainer">
