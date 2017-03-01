@@ -93,7 +93,8 @@ $(document).ready(function() {
     choice = $('.choice'),
     holder = $('.resault'),
     name,
-    section = $('.section');
+    section = $('.section'),
+    promo = "";
 
   var q = 0;
 
@@ -148,6 +149,10 @@ $(document).ready(function() {
    * 
    * @see qPrepare()
    */
+
+  /**
+   * pdt_amour  pdt_argent  pdt_travail
+   */
   choice.on('click', function() {
 
     var d = $(this).data();
@@ -158,12 +163,15 @@ $(document).ready(function() {
       console.info('True');
       if ($(this).data('option') == "amour") {
         holder.html(resault.amour);
+        promo = "pdt_amour";
       }
       else if ($(this).data('option') == "travail") {
         holder.html(resault.travail);
+        promo = "pdt_travail";
       }
       else if ($(this).data('option') == "argent") {
         holder.html(resault.argent);
+        promo = "pdt_argent";
       }
       qPrepare(q);
     }
@@ -227,7 +235,9 @@ $(document).ready(function() {
       section.eq(1).addClass('hidden');
       section.eq(2).removeClass('hidden').addClass('fade');
       console.log(name);
+      $('#promo').val(promo);
       $('#name').val(name);
+
       return false;
     }
 
