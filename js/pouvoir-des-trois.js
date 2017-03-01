@@ -37,7 +37,7 @@ $(document).ready(function() {
       "question": "Quel objet vous inspire le plus?",
       "choices": [{
         "color": "#6c437c",
-        "text": "La boule de cristale"
+        "text": "La boule de cristal"
       }, {
         "color": "#411575",
         "text": "Le pendule"
@@ -50,7 +50,7 @@ $(document).ready(function() {
       "question": "Comment voyez-vous votre avenir?",
       "choices": [{
         "color": "#411575",
-        "text": "avec des hauts et des bas"
+        "text": "Avec des hauts et des bas"
       }, {
         "color": "#bc91cd",
         "text": "Plein de surprises"
