@@ -7,7 +7,7 @@
  */
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
-$url = 'https://myastro-omnizya.c9users.io';
+$site = getenv('MYASTRO_ROOT_URL');
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='.$email;
 /**
@@ -26,16 +26,14 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="">
     <meta name="robots" content="noindex, nofollow" />
-    
     <meta property="fb:app_id" content="1276526482364681" /> 
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="<?= $url.'/'.$assets ?>/cover.jpg" />
-    <meta property="og:image:secure_url" content="<?= $url.'/'.$assets ?>/cover.jpg" />
+    <meta property="og:title" content="Pouvoir des Trois" />
+    <meta property="og:url" content="http://<?= $site ?>/pouvoir-des-trois" />
+    <meta property="og:image" content="http://<?= $site.'/'.$assets ?>/cover.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
-    <meta property="og:title" content="Pouvoir des Trois" />
-    <meta property="og:url" content="<?= $url ?>/pouvoir-des-trois" />
     <meta property="og:description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste." />
     <meta property="og:locale" content="fr_FR" />
     
@@ -55,7 +53,6 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
       <div class="PageWrapper">
         <div class="SiteLogo"></div>
       </div>
-      <!--div class="header-content"><a href="/"><img src="<?= $assets ?>/logo.png" alt="Pouvoir des trois" class="landing-logo"></a></div-->
     </header>
     
     <div class="title">
@@ -236,7 +233,7 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </footer>
-    
+
   </body>
 
   </html>
