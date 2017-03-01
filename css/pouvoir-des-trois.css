@@ -2386,7 +2386,11 @@ footer {
   text-align: center;
   font-size: 2rem;
   color: #fff;
-  text-shadow: 1px 1px #454545; }
+  text-shadow: 1px 1px #454545;
+  padding: 5px;
+  padding: 5px 15px;
+  border: 2px solid;
+  border-radius: 2px; }
   .read-more:hover {
     cursor: pointer; }
 
