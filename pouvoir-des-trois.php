@@ -109,7 +109,7 @@ $target = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email='
             
             <!-- ########## identification formulaire ########## -->
             <input type="hidden" name="source" value="pouvoir-des-trois" />
-            <input type="hidden" name="method" value="telnum-save" />
+            <input type="hidden" name="method" value="general" />
             <input type="hidden" name="support" value="voyance" />
             <input type="hidden" name="affiliation" value="affilbase" />
             <input type="hidden" name="dri" value="l" />
