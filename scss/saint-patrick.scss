@@ -204,7 +204,6 @@ td.ng-scope {
 
 .card {
   background: $primary url($assets+'Saint-Patrick.svg') no-repeat 50% 45%;
-  ;
   @include square(100%);
   cursor: pointer;
   border-radius: 6px;
@@ -213,6 +212,10 @@ td.ng-scope {
   transform-style: preserve-3d;
   transition: all .25s linear;
   backface-visibility: hidden;
+  &:hover {
+    @extend .shine;
+    background-color: lighten($primary, 5%);
+  }
 }
 
 .face {
@@ -711,4 +714,17 @@ label {
 
 .shine {
   background-image: url($assets+'sp-shine.svg');
+}
+
+.flash {
+  animation: flash infinite 500ms ease;
+}
+
+@keyframes flash {
+  from {
+    color: $primary;
+  }
+  to {
+    color: lighten($primary, 100%);
+  }
 }

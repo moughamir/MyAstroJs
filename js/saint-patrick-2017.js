@@ -10,6 +10,7 @@ function GameController($scope, $timeout) {
   $scope.isGuarding = false;
   $scope.inGame = false;
   $scope.shine = shine();
+  shine(true);
 
   $scope.check = function(card) {
     if (currentSessionOpen && previousCard != card && previousCard.item == card.item && !card.isFaceUp) {
@@ -17,7 +18,7 @@ function GameController($scope, $timeout) {
       previousCard = null;
       currentSessionOpen = false;
       numPairs++;
-      shine(true);
+      shine(false);
     }
     else if (currentSessionOpen && previousCard != card && previousCard.item != card.item && !card.isFaceUp) {
       $scope.isGuarding = true;
@@ -34,10 +35,12 @@ function GameController($scope, $timeout) {
       card.isFaceUp = true;
       currentSessionOpen = true;
       previousCard = card;
+      shine(false);
     }
 
     if (numPairs == constants.getNumMatches()) {
       shine(true);
+      console.log('Well')
       $('#modal').modal('toggle');
     }
   }; //end of check()

@@ -659,6 +659,8 @@ td.ng-scope {
   transform-style: preserve-3d;
   transition: all .25s linear;
   backface-visibility: hidden; }
+  .card:hover {
+    background-color: #09575c; }
 
 .face {
   position: absolute;
@@ -1096,7 +1098,16 @@ label {
   50% {
     color: #FF5400;
     transform: scale(1.1); } }
-.shine {
+.shine, .card:hover {
   background-image: url("/images_landing/saint-patrick-2017/sp-shine.svg"); }
+
+.flash {
+  animation: flash infinite 500ms ease; }
+
+@keyframes flash {
+  from {
+    color: #074145; }
+  to {
+    color: white; } }
 
 /*# sourceMappingURL=saint-patrick-2017.css.map */

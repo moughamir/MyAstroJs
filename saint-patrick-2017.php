@@ -70,9 +70,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 </td>
               </tr>
             </table>
-            <!--div class="startbtn" ng-show="inGame == false">
-              <button type="button" class="btn btn-default btn-lg" ng-disabled="inGame == true" ng-click="start()">Démarrer</button>
-            </div-->
           </div>
         </article>
         <article>
