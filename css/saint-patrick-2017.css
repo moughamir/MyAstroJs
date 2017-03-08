@@ -378,6 +378,10 @@ div.logo {
     background: url("logo.png") no-repeat;
     @include image-2x("logo2x.png", 100px, 25px);
 }*/
+/**
+* USAGE:
+* refere to https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+*/
 @font-face {
   font-family: 'Fjalla One';
   font-style: normal;
@@ -404,9 +408,10 @@ div.logo {
   font-weight: 700;
   src: local("Oxygen Bold"), local("Oxygen-Bold"), url(https://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2ltXRa8TVwTICgirnJhmVJw.woff2) format("woff2"); }
 html {
-  background: url("/images_landing/saint-patrick-2017/background.jpg") no-repeat scroll 0% 0%/100% auto, #074145 linear-gradient(to right, #226325 0%, #93bc45 50%, #669936 100%) repeat scroll 0% 0%;
+  background: url("/images_landing/saint-patrick-2017/background.jpg") no-repeat scroll 0% 0%/100% auto, #074145 linear-gradient(to right, #074145 0%, #125d49 50%, #074145 100%) repeat scroll 0% 0%;
   min-height: 100%;
-  background-size: 100%; }
+  background-size: 100%;
+  background-attachment: fixed; }
 
 .modal-open {
   overflow: hidden; }
@@ -426,7 +431,8 @@ html {
     transform: translate(0, -25%);
     transition: transform 0.3s ease-out; }
   .modal.in .modal-dialog {
-    transform: translate(0, 0); }
+    transform: translate(0, 100%);
+    top: -50%; }
 
 .modal-open .modal {
   overflow-x: hidden;
@@ -580,7 +586,7 @@ main {
   justify-content: center;
   align-items: center; }
   .center-ner h3 {
-    font-family: FjallaOne;
+    font-family: "Fjalla One";
     font-size: 26px;
     font-weight: 500;
     text-transform: uppercase;
@@ -595,7 +601,7 @@ main {
 
 .article--title {
   color: white;
-  font-family: FjallaOne;
+  font-family: "Fjalla One";
   font-size: 26px;
   font-weight: 500;
   text-align: center; }
@@ -1102,12 +1108,17 @@ label {
   background-image: url("/images_landing/saint-patrick-2017/sp-shine.svg"); }
 
 .flash {
-  animation: flash infinite 500ms ease; }
+  animation: flash infinite 1.5s ease; }
+  .flash:hover {
+    animation: none; }
 
 @keyframes flash {
-  from {
-    color: #074145; }
+  from,
+  50%,
   to {
-    color: white; } }
+    opacity: 1; }
+  25%,
+  75% {
+    opacity: 0.5; } }
 
 /*# sourceMappingURL=saint-patrick-2017.css.map */

@@ -58,7 +58,8 @@ $modal-sm: 300px !default;
     @include transition-transform(0.3s ease-out);
   }
   &.in .modal-dialog {
-    @include translate(0, 0)
+    @include translate(0, 100%);
+    top: -50%;
   }
 }
 

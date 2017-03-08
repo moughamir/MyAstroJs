@@ -80,7 +80,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <form class="astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
-                <h1 class="form--title">vite !!! recevez<br>votre étude personnalisée</h1>
+                <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
                 <hr />
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
               </header>
@@ -139,7 +139,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               </article>
             </div>
             <!-- ### BOUTON SUBMIT -->
-            <button class="form--btn" type="submit" id="submit-form" name="valider">Rappel gratuit</button>
+            <button class="form--btn" type="submit" id="submit-form" name="valider"><span class="flash">Rappel gratuit</span></button>
           </form>
         </article>
       </section>
@@ -213,7 +213,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <form class="astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
-                <h1 class="form--title">vite !!! recevez<br>votre étude personnalisée</h1>
+                <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
                 <hr>
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
               </header>
