@@ -6,7 +6,6 @@
  * Author       : Mohamed Moughamir <hello@omnizya.com>
  *
  */
-session_start();
 require_once(realpath('include/tools.php'));
 $assets = 'images_landing/saint-patrick-2017';
 $site   = getenv('MYASTRO_ROOT_URL');
