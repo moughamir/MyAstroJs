@@ -7,6 +7,7 @@
  *
  */
 require_once(realpath('include/tools.php'));
+
 $assets = 'images_landing/saint-patrick-2017';
 $site   = getenv('MYASTRO_ROOT_URL');
 $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
@@ -79,7 +80,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             <h1 class="article--headline small">Remplissez vite le formulaire pour
             <br/>recevoir votre étude personnalisée !</h1>
           </header>
-          <form class="astro-form" accept-charset="utf-8" role="form">
+          <form class="ajax astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -212,7 +213,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <form class="astro-form" accept-charset="utf-8" role="form">
+          <form class="ajax astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -223,7 +224,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <!-- ########## identification formulaire ########## -->
                 <input type="hidden" name="source" value="<?= $page ?>" />
                 <input type="hidden" name="method" value="affil-mini" />
-                <input type="hidden" name="dri" value="tel-saint-patrick-2017" />
                 <input type="hidden" name="support" value="voyance" />
                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                 <input type="hidden" name="affiliation" value="affilbase" />

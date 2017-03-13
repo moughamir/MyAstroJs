@@ -59,7 +59,7 @@ $screen-md-max: ($screen-lg-min - 1) !default;
 //== style
 html {
   // Maybe I will optimize this in near future
-  background: url($assets+'background.jpg') no-repeat scroll 0% 0% / 100% auto, $primary linear-gradient(to right, $primary 0%, #125d49 50%, $primary 100%) repeat scroll 0% 0%;
+  background: url($assets+'background.jpg') no-repeat;
   min-height: 100%;
   background-size: 100%;
   background-attachment: fixed;
@@ -241,6 +241,9 @@ td.ng-scope {
 
 .face--image {
   @include square(85%);
+  position: relative;
+  margin: 0 auto;
+  display: block;
 }
 
 .flip .card {
@@ -518,7 +521,7 @@ select {
 
 #pays {
   width: 203px;
-  margin: 0 !important;
+  margin: 0 5px;
 }
 
 #tel {
@@ -564,6 +567,9 @@ label {
 
 /// media Query
 @media (max-width: 960px) {
+  html {
+    background-size: cover;
+  }
   .container {
     width: 90% !important;
     justify-content: center;
@@ -621,6 +627,12 @@ label {
   .form-content>* {
     height: 40px !important;
   }
+  .form--btn {
+    margin: 0 auto;
+    display: block;
+    position: static;
+    transform: none;
+  }
   #jour,
   #mois,
   #year {
@@ -628,7 +640,8 @@ label {
   }
   #prenom,
   #prenom+select,
-  #email {
+  #email,
+  #tel {
     width: 96%;
   }
   .two {
@@ -683,14 +696,17 @@ label {
   }
   .modal-content {
     height: auto;
+    border: none;
   }
   .modal-body {
     flex-direction: column !important;
     padding: 0;
   }
   .modal-gif {
-    width: 100%;
+    width: 70%;
     height: auto;
+    margin: 0 auto;
+    display: block;
   }
   .startbtn {
     display: block;
@@ -698,6 +714,10 @@ label {
     left: 100%;
     transform: translate(0%, 29%);
     position: initial !important;
+  }
+  .modal-dialog {
+    transform: none;
+    top: initial;
   }
 }
 
