@@ -2392,7 +2392,7 @@ button {
 .ReassuranceList {
     background-color: #5f451e;
     color: white;
-    box-shadow: 0 0 6px -1px black
+    box-shadow: 0 0 6px -1px black;
 }
 
 .ReassuranceList-Item-Img.star {
