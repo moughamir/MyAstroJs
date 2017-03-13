@@ -56,9 +56,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             <h2 class="article--subtitle">Cliquez sur les cartes, et trouvez la paire...</h2>
           </header>
           <div class="cntr" ng-controller="GameController">
+            <div class="timer" ng-class="{critical:isCritical}" ng-show="inGame == true">
+              {{timeLimit | date: 'm:ss'}}
+            </div>
             <table class="table-top">
               <tr ng-repeat="row in deck.rows">
-                <td ng-repeat="card in row.cards">
+                <td ng-repeat="card in row.cards" >
                   <div class="card_container {{!card.isFaceUp ? '' : 'flip'}}" ng-click="isGuarding || check(card)">
                     <div class="card shadow">
                       <div class="front face"></div>
@@ -109,8 +112,8 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <!-- Prénom -->
                 <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
 
-                <!-- Email -->
-                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?php isset($_GET['email']) ?>" required />
+                <!-- Tel -->
+                <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
                 <!-- Pays -->
                 <div class="pays">
                   <label for="pays">Votre pays</label>
@@ -241,8 +244,8 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 </div>
                 <!-- Prénom -->
                 <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
-                <!-- Email -->
-                <input name="email" id="email" type="email" class="" placeholder="Mon adresse email" value="<?php isset($_GET['email']) ?>" required />
+                <!-- Tel -->
+                <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
                 <!-- Pays -->
                 <div class="pays">
                   <label for="pays">Votre pays</label>

@@ -1,7 +1,4 @@
 // Main Application
-/*global angular*/
-/*global $*/
-
 'use strict';
 var app = angular.module('myAstro', ['ngAnimate']);
 
@@ -9,16 +6,17 @@ function GameController($scope, $timeout) {
   $scope.deck = createDeck();
   $scope.isGuarding = false;
   $scope.inGame = false;
-  $scope.shine = shine();
   shine(true);
 
   $scope.check = function(card) {
+
     if (currentSessionOpen && previousCard != card && previousCard.item == card.item && !card.isFaceUp) {
       card.isFaceUp = true;
       previousCard = null;
       currentSessionOpen = false;
       numPairs++;
       shine(false);
+
     }
     else if (currentSessionOpen && previousCard != card && previousCard.item != card.item && !card.isFaceUp) {
       $scope.isGuarding = true;
@@ -30,17 +28,19 @@ function GameController($scope, $timeout) {
         $scope.isGuarding = $scope.timeLimit ? false : true;
       }, 1000);
       shine(false);
+
     }
     else {
       card.isFaceUp = true;
       currentSessionOpen = true;
       previousCard = card;
       shine(false);
+
     }
 
     if (numPairs == constants.getNumMatches()) {
       shine(true);
-      console.log('Well')
+      $scope.stopTimer();
       $('#modal').modal('toggle');
     }
   }; //end of check()
@@ -89,6 +89,7 @@ function ModalController($scope) {
     $scope.showModal = !$scope.showModal;
   };
 }
+
 GameController.$inject = ["$scope", "$timeout"];
 ModalController.$inject = ["$scope"];
 
@@ -248,6 +249,7 @@ function shine(state) {
   }
   else {
     clearInterval(1);
+
   }
 
 }
