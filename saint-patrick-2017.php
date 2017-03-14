@@ -92,60 +92,61 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           			echo $msg.'<br>';
           		} ?>
           		</p>
+          		<?php } ?>
           		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
-              <div class="container-90">
-                <header class="form--header">
-                  <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
-                  <hr />
-                  <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
-                </header>
-                <article class="form-content">
-                  <!-- Genre -->
-                  <div class="Genre">
-                    <label class="gender-l" for="gender-f">
-                      <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
-                      <input type="radio" name="sexe" id="gender-f" value="F" required />
-                    </label>
-                    <label class="gender-l" for="gender-h">
-                      <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
-                      <input type="radio" name="sexe" id="gender-h" value="M" />
-                    </label>
-                  </div>
-                  <!-- Prénom -->
-                  <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
-  
-                  <!-- Tel -->
-                  <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
-                  <!-- Pays -->
-                  <div class="pays">
-                    <label for="pays">Votre pays</label>
-                    <select name="pays" id="pays" required>
-                      <option value="BE">Belgique</option>
-                      <option value="CA">Canada</option>
-                      <option value="LU">Luxembourg</option>
-                      <option value="CH">Suisse</option>
-                      <option value="FR" selected>France Métropolitaine</option>
-                      <optgroup label="DOM-TOM">
-                        <option value="MQ">Martinique</option>
-                        <option value="GP">Guadeloupe</option>
-                        <option value="GF">Guyane</option>
-                        <option value="RE">La Réunion</option>
-                        <option value="YT">Mayotte</option>
-                        <option value="PM">St Pierre et Miquelon</option>
-                        <option value="BL">St Barthélémy</option>
-                        <option value="SM">St Martin</option>
-                        <option value="WF">Wallis et Futunua</option>
-                        <option value="PF">Polynésie Française</option>
-                        <option value="NC">Nouvelle Calédonie</option>
-                      </optgroup>
-                      <option value="ZZ">Autre</option>
-                    </select>
-                  </div>
-                </article>
-              </div>
-              <!-- ### BOUTON SUBMIT -->
-              <button class="form--btn" type="submit" id="submit-form" name="valider"><span class="flash">Rappel gratuit</span></button>
-            </form>
+                <div class="container-90">
+                  <header class="form--header">
+                    <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
+                    <hr />
+                    <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
+                  </header>
+                  <article class="form-content">
+                    <!-- Genre -->
+                    <div class="Genre">
+                      <label class="gender-l" for="gender-f">
+                        <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
+                        <input type="radio" name="sexe" id="gender-f" value="F" required />
+                      </label>
+                      <label class="gender-l" for="gender-h">
+                        <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
+                        <input type="radio" name="sexe" id="gender-h" value="M" />
+                      </label>
+                    </div>
+                    <!-- Prénom -->
+                    <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
+    
+                    <!-- Tel -->
+                    <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
+                    <!-- Pays -->
+                    <div class="pays">
+                      <label for="pays">Votre pays</label>
+                      <select name="pays" id="pays" required>
+                        <option value="BE">Belgique</option>
+                        <option value="CA">Canada</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="CH">Suisse</option>
+                        <option value="FR" selected>France Métropolitaine</option>
+                        <optgroup label="DOM-TOM">
+                          <option value="MQ">Martinique</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GF">Guyane</option>
+                          <option value="RE">La Réunion</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="PM">St Pierre et Miquelon</option>
+                          <option value="BL">St Barthélémy</option>
+                          <option value="SM">St Martin</option>
+                          <option value="WF">Wallis et Futunua</option>
+                          <option value="PF">Polynésie Française</option>
+                          <option value="NC">Nouvelle Calédonie</option>
+                        </optgroup>
+                        <option value="ZZ">Autre</option>
+                      </select>
+                    </div>
+                  </article>
+                </div>
+                <!-- ### BOUTON SUBMIT -->
+                <button class="form--btn" type="submit" id="submit-form" name="valider"><span class="flash">Rappel gratuit</span></button>
+              </form>
           <?php } ?>
         </article>
       </section>
@@ -237,59 +238,60 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           			echo $msg.'<br>';
           		} ?>
           		</p>
+          		<?php } ?>
           		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
-                <div class="container-90">
-                  <header class="form--header">
-                    <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
-                    <hr>
-                    <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
-                  </header>
-                  <article class="form-content">
-                    <!-- Genre -->
-                    <div class="Genre">
-                      <label class="gender-l" for="gender-f">
-                        <img src="<?= $assets ?>/icons/female.svg" alt="♀"> <span>Femme</span>
-                        <input type="radio" name="sexe" id="gender-f" value="F" required />
-                      </label>
-                      <label class="gender-l" for="gender-h">
-                        <img src="<?= $assets ?>/icons/male.svg" alt="♂"> <span>Homme</span>
-                        <input type="radio" name="sexe" id="gender-h" value="M" />
-                      </label>
-                    </div>
-                    <!-- Prénom -->
-                    <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
-                    <!-- Tel -->
-                    <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
-                    <!-- Pays -->
-                    <div class="pays">
-                      <label for="pays">Votre pays</label>
-                      <select name="pays" id="pays" required>
-                        <option value="BE">Belgique</option>
-                        <option value="CA">Canada</option>
-                        <option value="LU">Luxembourg</option>
-                        <option value="CH">Suisse</option>
-                        <option value="FR" selected>France Métropolitaine</option>
-                        <optgroup label="DOM-TOM">
-                          <option value="MQ">Martinique</option>
-                          <option value="GP">Guadeloupe</option>
-                          <option value="GF">Guyane</option>
-                          <option value="RE">La Réunion</option>
-                          <option value="YT">Mayotte</option>
-                          <option value="PM">St Pierre et Miquelon</option>
-                          <option value="BL">St Barthélémy</option>
-                          <option value="SM">St Martin</option>
-                          <option value="WF">Wallis et Futunua</option>
-                          <option value="PF">Polynésie Française</option>
-                          <option value="NC">Nouvelle Calédonie</option>
-                        </optgroup>
-                        <option value="ZZ">Autre</option>
-                      </select>
-                    </div>
-                  </article>
-                </div>
-                <!-- ### BOUTON SUBMIT -->
-                <button class="form--btn" type="submit" id="submit-form" name="valider">Découvrir</button>
-              </form>
+              <div class="container-90">
+                <header class="form--header">
+                  <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
+                  <hr>
+                  <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
+                </header>
+                <article class="form-content">
+                  <!-- Genre -->
+                  <div class="Genre">
+                    <label class="gender-l" for="gender-f">
+                      <img src="<?= $assets ?>/icons/female.svg" alt="♀"> <span>Femme</span>
+                      <input type="radio" name="sexe" id="gender-f" value="F" required />
+                    </label>
+                    <label class="gender-l" for="gender-h">
+                      <img src="<?= $assets ?>/icons/male.svg" alt="♂"> <span>Homme</span>
+                      <input type="radio" name="sexe" id="gender-h" value="M" />
+                    </label>
+                  </div>
+                  <!-- Prénom -->
+                  <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
+                  <!-- Tel -->
+                  <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
+                  <!-- Pays -->
+                  <div class="pays">
+                    <label for="pays">Votre pays</label>
+                    <select name="pays" id="pays" required>
+                      <option value="BE">Belgique</option>
+                      <option value="CA">Canada</option>
+                      <option value="LU">Luxembourg</option>
+                      <option value="CH">Suisse</option>
+                      <option value="FR" selected>France Métropolitaine</option>
+                      <optgroup label="DOM-TOM">
+                        <option value="MQ">Martinique</option>
+                        <option value="GP">Guadeloupe</option>
+                        <option value="GF">Guyane</option>
+                        <option value="RE">La Réunion</option>
+                        <option value="YT">Mayotte</option>
+                        <option value="PM">St Pierre et Miquelon</option>
+                        <option value="BL">St Barthélémy</option>
+                        <option value="SM">St Martin</option>
+                        <option value="WF">Wallis et Futunua</option>
+                        <option value="PF">Polynésie Française</option>
+                        <option value="NC">Nouvelle Calédonie</option>
+                      </optgroup>
+                      <option value="ZZ">Autre</option>
+                    </select>
+                  </div>
+                </article>
+              </div>
+              <!-- ### BOUTON SUBMIT -->
+              <button class="form--btn" type="submit" id="submit-form" name="valider">Découvrir</button>
+            </form>
           <?php } ?>
           
         </div>
