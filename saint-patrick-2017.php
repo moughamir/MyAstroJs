@@ -28,7 +28,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta property="og:title" content="Mini jeu de la Saint Patrick" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://<?= $site ?>/saint-patrick-2017" />
-    <meta property="og:image" content="http://<?= $site ?>/<?= $assets ?>/cover.jpg" />
+    <meta property="og:image" content="http://<?= $site ?>/<?= $assets ?>/cover.png" />
     <meta property="og:description" content="Allez-vous avoir de la chance en 2017 ? Jouez et recevez votre étude personnalisée !" />
     <meta property="og:locale" content="fr_FR" />
 
