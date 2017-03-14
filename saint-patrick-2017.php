@@ -6,8 +6,7 @@
  * Author       : Mohamed Moughamir <hello@omnizya.com>
  *
  */
-require_once(realpath('include/tools.php'));
-
+include("include/process-dri.php");
 $assets = 'images_landing/saint-patrick-2017';
 $site   = getenv('MYASTRO_ROOT_URL');
 $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
@@ -80,7 +79,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             <h1 class="article--headline small">Remplissez vite le formulaire pour
             <br/>recevoir votre étude personnalisée !</h1>
           </header>
-          <form class="ajax astro-form" accept-charset="utf-8" role="form">
+          <form class="astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -88,16 +87,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
               </header>
               <article class="form-content">
-                <!-- ########## identification formulaire ########## -->
-                <input type="hidden" name="source" value="saint-patrick-2017" />
-                <input type="hidden" name="method" value="general-suscribe" />
-                <input type="hidden" name="dri" value="tel-saint-patrick-2017" />
-                <input type="hidden" name="support" value="voyance" />
-                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
-                <input type="hidden" name="affiliation" value="affilbase" />
-                <!-- ########## autres champs pré-remplis ########## -->
-                <input type="hidden" name="cguv" value="1" />
-                <!-- ############################################### -->
                 <!-- Genre -->
                 <div class="Genre">
                   <label class="gender-l" for="gender-f">
@@ -221,7 +210,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <form class="ajax astro-form" accept-charset="utf-8" role="form">
+          <form class="astro-form" accept-charset="utf-8" role="form">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -229,15 +218,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
               </header>
               <article class="form-content">
-                <!-- ########## identification formulaire ########## -->
-                <input type="hidden" name="source" value="<?= $page ?>" />
-                <input type="hidden" name="method" value="affil-mini" />
-                <input type="hidden" name="support" value="voyance" />
-                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
-                <input type="hidden" name="affiliation" value="affilbase" />
-                <!-- ########## autres champs pré-remplis ########## -->
-                <input type="hidden" name="cguv" value="1" />
-                <!-- ############################################### -->
                 <!-- Genre -->
                 <div class="Genre">
                   <label class="gender-l" for="gender-f">
@@ -290,7 +270,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <!-- #### SCRIPTS #### -->
     <script src="//cdn.jsdelivr.net/g/jquery@2.2.4,angularjs@1.5.5(angular.min.js+angular-animate.min.js),bootstrap@3.3.7" charset="utf-8"></script>
     <script src="js/saint-patrick-2017.js" charset="utf-8"></script>
-    <script type="text/javascript" charset="utf-8" src="js/formValidator.js"></script>
 
     <!-- #### TRACKINGS #### -->
     <?php include('include/remarketing/adwords.php');
