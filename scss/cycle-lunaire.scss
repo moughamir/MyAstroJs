@@ -18,7 +18,7 @@ $color1 : #2c2927; // pour les blocs foncés
 $color2 : #f05882; // rose pour les boutons et "femme"
 $color3 : #0ae9d1; // turquoise pour "homme"
 $color4 : #3e96ba; // background
-$color5 : #304d59; // background reassurance
+$color5 : #414245; // background reassurance
 
 $font1: "Open Sans", sans-serif; //texte courant
 $font2: 'Ubuntu Condensed', sans-serif; //titres
@@ -28,11 +28,11 @@ $woman : $color2;
 $men : $color3;
 
 /* Images */
-$img_bg : $img_dir + "bg2.jpg";
+$img_bg : $img_dir + "bg3.jpg";
 $logo : $img_dir + "logo-MYASTRO.svg";
 $page_title : $img_dir + "title.png";
 $moon_title : $img_dir + "titre.svg";
-$moon : $img_dir + "lune-anim.gif";
+$moon : $img_dir + "lune-anim-printemps.gif";
 $arrow : $img_dir + "fleche.svg";
 $promo : $img_dir + "ten-min-free.png";
 $ico_star : $img_dir + "ico-star.png";
@@ -41,7 +41,7 @@ $ico_gift : $img_dir + "ico-gift.png";
 $ico_trophy : $img_dir + "ico-trophy.png";
 
 /* Mixins */
-@mixin box-shadow{
+@mixin box-shadow {
     box-shadow: 0 0 6px -1px black;
 }
 
@@ -59,14 +59,13 @@ body {
 }
 
 /* ************** MACRO-TYPOS *************** */
-h2,
-button{
+h2, button {
     hyphens: none;
 }
 
 
 /* ************** LAYOUT *************** */
-.PageWrapper{
+.PageWrapper {
     padding:0;
 }
 .ContentBand {
@@ -118,7 +117,7 @@ button{
     }
 }
 
-.moon-gif{
+.moon-gif {
     background: transparent url($moon) no-repeat top center;
     background-size: 85%;
     height: 51.6rem;
@@ -285,6 +284,11 @@ button{
     }
 }
 
+.SiteCopyright a {
+    color: inherit;
+    text-decoration: none;
+}
+
 @media screen and (min-height: 1000px){
     body {
         padding-top: 3.5rem;
@@ -299,7 +303,7 @@ button{
 @media screen and (max-width: 730px){
     // mettre le formulaire en avant sur les mobiles
     .SiteHeader {
-        .PageWrapper{
+        .PageWrapper {
             display:flex;
             flex-direction: column;
             align-items: center;
