@@ -146,7 +146,7 @@ main {
 
 .article--content {
   width: 669px;
-  height: 132px;
+  height: auto;
   color: white;
   font-family: Oxygen;
   font-size: 14px;
@@ -565,6 +565,10 @@ label {
   height: 400px;
 }
 
+.shine {
+  background: $primary url($assets+'sp-shine.svg') no-repeat 50% 45%;
+}
+
 /// media Query
 @media (max-width: 960px) {
   html {
@@ -719,6 +723,10 @@ label {
     transform: none;
     top: initial;
   }
+  .shine {
+    background: #074145 url($assets+'sp-shine.svg') no-repeat 50% 45%;
+    background-size: 90%;
+  }
 }
 
 /// animation
@@ -731,10 +739,6 @@ label {
     color: #FF5400;
     transform: scale(1.1);
   }
-}
-
-.shine {
-  background-image: url($assets+'sp-shine.svg');
 }
 
 .flash {
