@@ -41,7 +41,7 @@ function GameController($scope, $timeout) {
     if (numPairs == constants.getNumMatches()) {
       shine(true);
       $scope.stopTimer();
-      $('#modal').modal('toggle');
+      $('#modal-g').modal('toggle');
     }
   }; //end of check()
 
@@ -96,7 +96,7 @@ ModalController.$inject = ["$scope"];
 app.controller('ModalController', ModalController);
 app.directive('modal', function() {
   return {
-    template: '<div class="modal fade" id="modal">' +
+    template: '<div class="modal fade" id="modal-g">' +
       '<div class="modal-dialog">' +
       '<div class="modal-Container">' +
       '<div class="modal-content">' +

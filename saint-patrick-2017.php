@@ -207,8 +207,16 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         <p class="attribute">Copyright &copy; 2017 | My Astro</p>
       </div>
     </footer>
-
+    
     <!-- MODAL -->
+    <div class="modal-formSub" id="modal">
+      test
+    </div>
+    <div class="modal-popup">
+      <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
+      <p class="modal-text">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
+      <div class="btn-close">Fermer</div>
+    </div>
     <div ng-controller="ModalController" class="container">
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
