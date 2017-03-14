@@ -79,7 +79,21 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             <h1 class="article--headline small">Remplissez vite le formulaire pour
             <br/>recevoir votre étude personnalisée !</h1>
           </header>
-          <form class="astro-form" accept-charset="utf-8" role="form">
+          <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+          	<p class="DRI-Sent">
+          		Merci, votre demande a bien été prise en compte.<br/>
+          		<strong>Un voyant vous recontactera dans quelques instants</strong>.
+          	</p>
+          <?php } else { ?>
+          	<?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+          		<p class="alert alert-danger"><b><i class="fa fa-warning"></i> Une erreur est survenue.</b>
+          		<br>
+          		<?php foreach($err as $msg){
+          			echo $msg.'<br>';
+          		} ?>
+          		</p>
+          <?php } ?>
+          <form class="astro-form" accept-charset="utf-8" role="form" method="post">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -210,7 +224,21 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <form class="astro-form" accept-charset="utf-8" role="form">
+          <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+          	<p class="DRI-Sent">
+          		Merci, votre demande a bien été prise en compte.<br/>
+          		<strong>Un voyant vous recontactera dans quelques instants</strong>.
+          	</p>
+          <?php } else { 
+            if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+          		<p class="alert alert-danger"><b><i class="fa fa-warning"></i> Une erreur est survenue.</b>
+          		<br>
+          		<?php foreach($err as $msg){
+          			echo $msg.'<br>';
+          		} ?>
+          		</p>
+          <?php } ?>
+          <form class="astro-form" accept-charset="utf-8" role="form" method="post">
             <div class="container-90">
               <header class="form--header">
                 <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -276,5 +304,4 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
   </body>
-
 </html>
