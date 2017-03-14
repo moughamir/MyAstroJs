@@ -28,12 +28,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://<?= $site ?>/saint-patrick-2017" />
     <meta property="og:image" content="http://<?= $site ?>/<?= $assets ?>/cover.png" />
-    <meta property="og:description" content="Allez-vous avoir de la chance en 2017 ? Jouez et recevez votre étude personnalisée !" />
+    <meta property="og:description" content="Allez-vous avoir de la chance en 2017 ? Jouez et recevez votre étude personnalisée !" />
     <meta property="og:locale" content="fr_FR" />
 
     <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
-    <link href="css/saint-patrick-2017.css" rel="stylesheet" />
+    <link href="css/saint-patrick.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
             <script src="//cdn.jsdelivr.me/g/html5shiv@3.7.3,respond@1.4.2"></script>
@@ -51,7 +51,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <section class="main-section">
         <article class="leJeu">
           <header class="article--header">
-            <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
+            <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
             <h2 class="article--subtitle">Cliquez sur les cartes, et trouvez la paire...</h2>
           </header>
           <div class="cntr" ng-controller="GameController">
@@ -77,30 +77,29 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         <article>
           <header class="article--header">
             <h1 class="article--headline small">Remplissez vite le formulaire pour
-            <br/>recevoir votre étude personnalisée !</h1>
+            <br/>recevoir votre étude personnalisée !</h1>
           </header>
-          <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-          	<p class="DRI-Sent">
-          		Merci, votre demande a bien été prise en compte.<br/>
-          		<strong>Un voyant vous recontactera dans quelques instants</strong>.
-          	</p>
-          <?php } else { ?>
-          	<?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
-          		<p class="alert alert-danger"><b><i class="fa fa-warning"></i> Une erreur est survenue.</b>
-          		<br>
-          		<?php foreach($err as $msg){
-          			echo $msg.'<br>';
-          		} ?>
-          		</p>
-          		<?php } ?>
-          		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
+            <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
                 <div class="container-90">
                   <header class="form--header">
-                    <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
+                    <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
                     <hr />
                     <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
                   </header>
                   <article class="form-content">
+                    <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                      <p class="DRI-Sent">
+                        Merci, votre demande a bien été prise en compte.<br/><br/>
+                        <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                      </p>
+                    <?php } else { ?>
+                      <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+                        <p class="alert alert-danger"><b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br>
+                        <?php foreach($err as $msg){
+                            echo $msg.'<br>';
+                        } ?>
+                        </p>
+                      <?php } ?>
                     <!-- Genre -->
                     <div class="Genre">
                       <label class="gender-l" for="gender-f">
@@ -113,8 +112,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                       </label>
                     </div>
                     <!-- Prénom -->
-                    <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
-    
+                    <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
                     <!-- Tel -->
                     <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
                     <!-- Pays -->
@@ -143,11 +141,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                       </select>
                     </div>
                   </article>
+                  <!-- ### BOUTON SUBMIT -->
+                  <input type="text" name="antisp" value="" style="display: none" />
+                  <button class="form--btn" type="submit" name="demande_rappel"><span class="flash">Rappel gratuit</span></button>
+                  <?php } ?>
                 </div>
-                <!-- ### BOUTON SUBMIT -->
-                <button class="form--btn" type="submit" id="submit-form" name="valider"><span class="flash">Rappel gratuit</span></button>
               </form>
-          <?php } ?>
         </article>
       </section>
       <section class="two">
@@ -155,12 +154,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <h3>en cadeau votre étude personnalisée</h3>
         </article>
         <article class="study">
-          <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2017 ?</h1>
+          <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2017 ?</h1>
           <p class="article--content">
-            Symbole de la chance, le jour de la Saint Patrick est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que l’année 2017 vous réserve. Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine
+            Symbole de la chance, le jour de la Saint Patrick est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que l’année 2017 vous réserve. Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine
             sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée. Réalisée par un astrologue professionnel, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages
-            et de découvrir toutes les opportunités qui se présenteront à vous tout au long de l’année 2017. L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : profiter et
-            croquer la vie à pleines dents !
+            et de découvrir toutes les opportunités qui se présenteront à vous tout au long de l’année 2017. L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : profiter et
+            croquer la vie à pleines dents !
           </p>
         </article>
       </section>
@@ -213,9 +212,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     </footer>
     
     <!-- MODAL -->
-    <div class="modal-formSub" id="modal">
-      test
-    </div>
     <div class="modal-popup">
       <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
       <p class="modal-text">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
@@ -225,41 +221,41 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-          	<p class="DRI-Sent">
-          		Merci, votre demande a bien été prise en compte.<br/>
-          		<strong>Un voyant vous recontactera dans quelques instants</strong>.
-          	</p>
-          <?php } else { ?>
             <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
-          		<p class="alert alert-danger"><b><i class="fa fa-warning"></i> Une erreur est survenue.</b>
-          		<br>
-          		<?php foreach($err as $msg){
-          			echo $msg.'<br>';
-          		} ?>
-          		</p>
-          		<?php } ?>
-          		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
-              <div class="container-90">
+              <p class="alert alert-danger">
+                <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br/>
+                  <?php foreach($err as $msg){
+                    echo $msg.'<br>';
+                  } ?>
+              </p>
+            <?php } ?>
+          <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
+            <div class="container-90">
+                <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+          	  <p class="DRI-Sent">
+                    Merci, votre demande a bien été prise en compte.<br/>
+                    <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                  </p>
+                <?php } else { ?>
                 <header class="form--header">
-                  <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
+                  <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement :</h1>
                   <hr>
                   <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
                 </header>
                 <article class="form-content">
                   <!-- Genre -->
-                  <div class="Genre">
-                    <label class="gender-l" for="gender-f">
-                      <img src="<?= $assets ?>/icons/female.svg" alt="♀"> <span>Femme</span>
-                      <input type="radio" name="sexe" id="gender-f" value="F" required />
-                    </label>
-                    <label class="gender-l" for="gender-h">
-                      <img src="<?= $assets ?>/icons/male.svg" alt="♂"> <span>Homme</span>
-                      <input type="radio" name="sexe" id="gender-h" value="M" />
-                    </label>
-                  </div>
+                    <div class="Genre">
+                      <label class="gender-l" for="gendert-f">
+                        <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
+                        <input type="radio" name="sexe" id="gendert-f" value="F" required />
+                      </label>
+                      <label class="gender-l" for="gendert-h">
+                        <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
+                        <input type="radio" name="sexe" id="gendert-h" value="M" />
+                      </label>
+                    </div>
                   <!-- Prénom -->
-                  <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" required />
+                  <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
                   <!-- Tel -->
                   <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
                   <!-- Pays -->
@@ -288,12 +284,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                     </select>
                   </div>
                 </article>
-              </div>
-              <!-- ### BOUTON SUBMIT -->
-              <button class="form--btn" type="submit" id="submit-form" name="valider">Découvrir</button>
-            </form>
-          <?php } ?>
-          
+                <!-- ### BOUTON SUBMIT -->
+                <input type="text" name="antisp" value="" style="display: none" />
+                <button class="form--btn" type="submit" name="demande_rappel">Découvrir</button>
+            <?php } ?>
+            </div>
+          </form>
         </div>
       </modal>
     </div>
@@ -304,7 +300,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
 
     <!-- #### TRACKINGS #### -->
     <?php include('include/remarketing/adwords.php');
-              include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+          include('include/remarketing/analytics.php');
+          include('include/remarketing/facebook.php');?>
   </body>
 </html>
