@@ -1,13 +1,8 @@
 <?php
-/* 
-    -------------------------------------------
-    --      numérologie amour = AFFIL BASE       --
-    -------------------------------------------
-
-    Created on : 19 juillet 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-*/
+/* ==================== [ numerologie-amour-lon > LONDRES ] ====================
+ *
+ *  Created : 14 février 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 session_start();
 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
 $chiffre = rand(1, 5);
@@ -26,7 +21,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-stval.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-2017.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,10 +52,10 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                             <p class="alert alert-danger" style="display: none"></p>
                             <form class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="numerologie-amour" />
+                                <input type="hidden" name="source" value="numerologie-amour-lon" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="londres" />
                                 <input type="hidden" name="dri" value="numerologie-amour-tel" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
@@ -155,5 +150,8 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Amatic+SC|Cookie|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

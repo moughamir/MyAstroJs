@@ -14,3 +14,4 @@ yyadmin/.htaccess
 *.map
 desktop.ini
 Thumbs.db
+.htpasswd

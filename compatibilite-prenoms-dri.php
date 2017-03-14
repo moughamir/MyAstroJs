@@ -48,16 +48,16 @@ include('include/process-dri.php');
                     <div id="photo" class="polaroid anim-photo1"></div>
                     <article class="FormContainer"id="vm-anchor">
                         <h2 class="FormContainer-Header">Vos prénoms sont-ils compatibles ?</h2>
+                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <p class="DRI-Sent">
+                            Merci, votre demande a bien été prise en compte.<br/>
+                            <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                        </p>
+                        <?php } else { ?>
                         <p class="result-text">La compatibilité des prénoms vous décrit en détail les possibilités amoureuses avec la personne qui occupe vos pensées. Évaluez les chances de réussite de cette relation et apportez des réponses claires à toutes vos interrogations.<br/> Découvrez en un CLIC l’affinité AMOUREUSE de vos deux prénoms.</p>
                         <p class="more">Pour en savoir plus :</p>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-                            <p class="DRI-Sent">
-                                Merci, votre demande a bien été prise en compte.<br/>
-                                <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                            </p>
-                            <?php } else { ?>
                             <form method="post">
                                 <section class="step-1">
                                     <div class="FormField">
