@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-   <title>Horoscope de l'amour Capricorne: soulevez les doutes, vivez tranquillement - Myastro</title>
+   <title>Horoscope de l'amour Capricorne: soulevez les doutes, vivez tranquillement | Myastro</title>
 	<meta name="description" content="Signe Capricorne :Vous vous posez des questions sur votre partenaire? Vous entretenez une relation platonique sans savoir quoi faire? L'horoscope de l'amour vous répond." />
  
  
@@ -61,7 +61,7 @@
 
                <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Capricorne</h2>
+                        <h4>VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Capricorne</h4>
 						<div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/signes/capricorne.png" />

@@ -31,7 +31,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Notre politique de confidentialité sur le site www.myastro.fr.</h5>
+										<p itemprop="headline">Notre politique de confidentialité sur le site www.myastro.fr.</p>
 									</div>
 
 								</div>
@@ -41,7 +41,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <div style="border:none; margin-right:20px; text-align:justify;"><br><br><p>Nous nous engageons à préserver la confidentialité des personnes visitant notre site&nbsp;; cette politique explique comment nous allons traiter vos informations personnelles. </p>
 <p>Notre site web utilise des cookies. &nbsp;En utilisant notre site web et en acceptant cette politique, vous consentez à ce que nous utilisions des cookies conformément aux conditions de la présente politique. </p>
 <h2>&nbsp;<br></h2>

@@ -1,0 +1,867 @@
+@charset "UTF-8";
+@import "knacss444/knacss";
+@import "modules/mixins";
+// basic
+$assets : "../images_landing/previsions-2017/";
+$background: $assets + "background.png";
+$fonts : "../fonts/olesia/";
+// Fonts
+@font-face {
+  font-family: 'Olesia';
+  src: url($fonts + 'hinted-Olesia-Regular.eot');
+  src: local('Olesia'), local('Olesia-Regular'),
+  url($fonts + 'hinted-Olesia-Regular.eot?#iefix') format('embedded-opentype'),
+  url($fonts + "hinted-Olesia-Regular.woff2") format('woff2'),
+  url($fonts + 'hinted-Olesia-Regular.woff') format('woff'),
+  url($fonts + 'hinted-Olesia-Regular.ttf') format('truetype'),
+  url($fonts + "hinted-Olesia-Regular.svg#Olesia-Regular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$oswald: 'Oswald', sans-serif;
+$lobster: 'Lobster', cursive;
+$open-sans: 'Open Sans', sans-serif;
+$olesia: 'Olesia', cursive;
+$arial: Arial, sans-serif;
+//Colors
+$btn-bg: #e99d26;
+$modal-bg: #171d2e;
+$modal: #27bdad;
+//
+.hidden{
+  display: none;
+}
+// Layout
+html.js,
+.js body {
+  overflow: hidden;
+  height: 100%;
+}
+body{
+  background: url($assets + "background.png") no-repeat center;
+  background-size: cover;
+  overflow-x: hidden;
+  color: #FFFFFF;
+  font:{
+    family: $oswald;
+    size: 16px;
+  }
+}
+.PageWrapper {
+  display: table;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+  @include respond-to("mobile"){
+    padding: 0;
+  }
+}
+.site{
+  margin-bottom: 3em;
+  &-header{
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 6px;
+    height: 64px;
+    @include respond-to("mobile"){
+      height: 53px;
+    }
+  }
+  &-logo{
+    width: 58px;
+    height: 58px;
+    @include respond-to("mobile"){
+     width: 53px;
+    }
+  }
+  &-content{
+    &::before {
+      content: "2017";
+      font-family: $olesia;
+      font-size: 13em;
+      display: block;
+      color: #fafbfc;
+      opacity: 0.5;
+      @include prefix(transform, translate(-50%) rotate(-5deg), webkit ms moz);
+      position: absolute;
+      z-index: -9;
+      left: 50%;
+      top: 48px;
+      @include respond-to("desktop"){
+        font-size: 19em;
+        top: 16px;
+      }
+      @include respond-to("mobile"){
+        content: "";
+        display: block;
+        height: 144px;
+        background: url($assets + "prev-2017.png") no-repeat center center;
+        margin: 16px 0;
+        position: relative;
+        transform: translate(-50%);
+      }
+    }
+  }
+}
+//
+a {
+  text-decoration: none;
+  color: #fcfcfc;
+  outline: none;
+  &:hover,
+  &:focus {
+    color: #FFFFFF;
+  }
+}
+// Sign Content
+.sign{
+  &:hover .img-container{
+    @include prefix(transform, translate(120px) rotate(360deg), webkit ms moz);
+  }
+  &-name{
+    font:{
+      size: 1.1em;
+      weight: 400;
+    }
+    padding-top: 5px;
+    @include respond-to("mobile"){font-size: 2.6rem;}
+    &::before{
+      content: '';
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+      background: url($assets + "pre-title.png") no-repeat center center;
+      background-size: contain;
+      margin: 0 10px 0 25px;
+      @include respond-to("mobile"){margin: 0 10px 0 10px;}
+    }
+  }
+  &-period {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    @include respond-to("mobile"){
+      font-size: 2.5rem;
+    }
+  }
+  &-image{
+    height: 180px;
+    margin: 0 auto;
+    @include respond-to("mobile"){height: 147px;}
+  }
+}
+.img-container {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // TODO: Talk to Amandine about this animation vv
+  @include prefix(transition, 600ms transform ease-in-out, webkit ms moz);
+  svg{
+    fill: #fff;
+    opacity: .6;
+    height: 195px;
+  }
+  @include respond-to("mobile"){
+    transform: translate(77px);
+  }
+    
+}
+// Zodiac Color def
+$zodiac:(
+  (capricorn, #267d9d),
+  (taurus, #012eaa),
+  (gemini, #267d9d,),
+  (cancer, #fdc8a1),
+  (leo, #01ce7f,),
+  (virgo, #c35f97),
+  (libra, #62378e),
+  (scorpio, #142256),
+  (sagittarius,#9e3fa5),
+  (aries,#62378e),
+  (aquarius, #c35f97),
+  (pisces, #fdc8a1)
+);
+@each $sign, $background in $zodiac{
+  .#{$sign}, article[data-sign="#{$sign}"] .form-content{
+    background-color: #{$background};
+    @include respond-to("mobile"){
+      width: 100%;
+      height: 100%;
+    }
+  }
+  article[data-sign="#{$sign}"] .sign-controls {
+    display: none;
+    @include respond-to("mobile"){
+      display: flex;
+      align-items: center;
+      background-color: #{$background};
+      height: 40px;
+      padding-top: 5px;
+      width: 100%;
+      }
+    .site-logo {
+      height: auto;
+      width: 46px;
+    }
+    .one-quarter {
+      z-index: 9;
+    }
+    .one-third {
+      position: absolute;
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  
+}
+
+
+// Grid
+.grid {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  &__item{
+    position: relative;
+    min-width: 280px;
+    display: inline-block;
+    width: calc(33.33% - 0.4em);
+    @include respond-to("mobile"){
+      margin: 3em 0;
+    }
+  }
+}
+.content{
+  width: 240px;
+  height: 240px;
+}
+.one-third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Form FormField-Input
+//Placeholder
+  ::placeholder,
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  ::-ms-input-placeholder,
+  :-moz-placeholder{
+        color: #2e3b5e;
+  }
+  input, input:hover, input:active{
+  outline: none}
+.Form{
+  &Container {
+    color: white;
+    margin-bottom: 15px;
+    // Submit
+    &-Submit{
+      background: $btn-bg;
+      border: none;
+      padding: 10px 0;
+      color: #fff;
+      width: 100%;
+    }
+  }
+
+  &Field{
+    //Label
+    &-Label{
+      font-family: $arial;
+      font-size: 18px;
+      @include respond-to("mobile"){
+        font-size: 14px;
+      }
+    }
+    // Input
+    &-Input{
+      border: none;
+      background: #a8cbd8;
+      color: #2e3b5e;
+      height: 51px;
+      padding: 0 12px;
+      &.has-error{
+        border: 1px solid rgba(169, 68, 66, 0.91);
+        box-shadow: 0 0 2px 0 #a94442 inset;
+      }
+      &[name="prenom"] {
+        width: 100%;
+      }
+      &[name="mois"] {
+        //width: 150px;
+        @include respond-to("mobile"){
+          width: 114px;
+        }
+      }
+      &#email {
+      width: 100%;
+      }
+      &[name="annee"]{
+        width: 96px;
+      }
+    }
+    //TableInputContainer
+    &-TableInputContainer{  
+      &-Cell {
+        display: table-cell;
+        padding-right: 10px;
+        &:nth-of-type(3) {
+          padding: 0;
+          @include respond-to("mobile"){
+            padding-right: 4px;
+          }
+        }
+        @include respond-to("mobile"){
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+}
+.Fields{
+  &-Table{
+    &-Row{
+      width: 100%;
+      padding: 0 15px;
+      margin: 0.2rem 0;
+      @include respond-to("mobile"){
+        margin: 5px 0;
+      }
+      & > .FormField-Label:after{
+        content: " :";
+      }
+      &:nth-of-type(2) {display: table;}
+    }
+  }
+}
+
+
+// Views
+.view{
+  &--prevision {
+    display: none;
+  }
+}
+.js{
+ .site-header{
+   @include respond-to("mobile"){
+     display: none;
+   }
+   @include respond-to("landscape"){
+     display: none;
+   }
+ }
+
+  .view{
+  &--prevision{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: url($background);
+    overflow: hidden;
+    .blur {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      filter: url(#svg-blur);
+      background: url($background);
+      z-index: -9;
+    }
+    .content {
+      width: 80vmin;
+      position: relative;
+      margin: 0 auto;
+      @include respond-to("mobile"){
+        min-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      @include respond-to("landscape"){
+        min-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+  }
+}
+  .sign{
+    &-header{
+      @include respond-to("mobile"){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+      }
+      @include respond-to("landscape"){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 5px 0;
+      }
+      .svg-container {
+        margin-right: 15px;
+        display: none;
+        @include respond-to("mobile"){display: block;}
+        @include respond-to("landscape"){display: block;}
+      }
+    }
+    &-name {
+      font-size: 3em;
+      font-family: $oswald;
+      margin: 0;
+      @include respond-to("mobile"){
+        font-size: 2em;
+        margin: 0 0 5px 0;
+      }
+      &::before{
+      content: '';
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0 10px 0 25px;
+      @include respond-to("mobile"){
+        width: 28px;
+        height: 28px;
+        margin: 0 10px 0 14px;
+      }
+    }
+    }
+    &-footer{
+      @include respond-to("mobile"){
+        display: none;
+      }
+    }
+    &-period {
+      font-size: 2.3em;
+    }
+  }
+  .grid-2.has-gutter {
+    @include respond-to("mobile"){
+      width: 100vw;
+    }
+  }
+}
+
+
+// footer
+.Site{
+  &Copyright {
+    text-align: center;
+    font-family: $arial;
+    font-size: 13px;
+    color: #fff;
+    @include respond-to("mobile"){
+      color: #454545;
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    a {
+    @include respond-to("mobile"){color: #454545;}
+    }
+  }
+  &Footer {
+    background: rgba(20,34,86,0.7);
+    font-family: $arial;
+    @include respond-to("mobile"){
+      display: none;
+    }
+  }
+}
+.ReassuranceList {
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  height: 44px;
+  padding: .5rem 0;
+  text-align: center;
+
+  &-Item {
+    display: table-cell;
+    border-right: 1px solid;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+
+    &-Img {
+      display: inline-block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 2rem;
+      background-color: white;
+      &.star {
+        background: transparent url($assets + "ico-star.png") center no-repeat;
+        background-size: contain;
+      }
+      &.lock {
+        background: transparent url($assets + "ico-lock.png") center no-repeat;
+        background-size: contain;
+      }
+      &.chat {
+        background: transparent url($assets + "ico-chat.png") center no-repeat;
+        background-size: contain;
+      }
+      &.trophy {
+        background: transparent url($assets + "ico-trophy.png") center no-repeat;
+        background-size: contain;
+      }
+      &.card {
+        background: transparent url($assets + "ico-card.png") center no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &-Txt {
+      display: inline-block;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}
+
+// Iconography and buttons
+.control{
+  &-button{
+    &--back {
+      background: transparent;
+      border: none;
+      color: white;
+      width: 89px;
+      height: 55px;
+    }
+  }
+}
+.icon{
+  &--arrow {
+    fill: CurrentColor;
+    height: 100%;
+  }
+}
+
+// Typography
+.prevision {
+    padding: 0 15px;
+    font-family: $arial;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 21px;
+    @include respond-to("mobile"){
+      font-size: 1.02em;
+      line-height: 1em;
+      padding: 0 10px;
+    }
+}
+// Overlay and Alerts
+.overlay{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: none; /*Must Be Flex*/
+    justify-content: center;
+    align-items: center;
+}
+.alert {
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include respond-to("mobile"){
+      width: 90vmin;
+      font-size: 1em;
+      padding: .75rem 0.5rem;
+    }
+    @include prefix(transform, translate(-50%, -50%), webkit ms moz);
+    
+    &-success {
+      background-color: #dff0d8;
+      border-color: #d0e9c6;
+      color: #3c763d;
+    }
+    &-info {
+      background-color: #d9edf7;
+      border-color: #bcdff1;
+      color: #31708f;
+    }
+    &-warning {
+      background-color: #fcf8e3;
+      border-color: #faf2cc;
+      color: #8a6d3b;
+    }
+    &-danger {
+      background-color: #f2dede;
+      border-color: #ebcccc;
+      color: #a94442;
+    }
+}
+
+// DRI
+.dri {
+  .FormContainer {
+    padding: 0 2em;
+    @include respond-to("mobile"){
+      padding: 1rem;
+    }
+    &-Submit{
+      @include respond-to("mobile"){margin-top: 1rem;}
+    }
+  }
+    background-color: #171d34;
+    width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    @include respond-to("mobile"){
+      height: 100vh;
+      width: 100vw;
+    }
+  .message {
+    @include respond-to("mobile"){font-size: 1em;}
+    font-family: $arial;
+    font-size: 1.8rem;
+    text-align: justify;
+    text-align-last: auto;
+    .highlight {
+      color: #e99d26;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+  .form-title {
+    font-family: $oswald;
+    font-size: 2.3rem;
+    text-align: center;
+    &::before {
+      content: '';
+      display: inline-flex;
+      width: 17px;
+      height: 27px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0 10px 0 -30px;
+    }
+  }
+  form {
+    width: 65%;
+    margin: 0 auto;
+    @include respond-to("mobile"){width: 100%;}
+  }
+  .FormField{
+     input {
+      width: 100%;
+    }
+    &-Label {
+      display: table-cell;
+    }
+    select {
+      width: 100%;
+    }
+  }
+  .img-center{
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+.v2 {
+  margin-top: 5em;
+}
+.site-v2{
+    height: 82vmin;
+}
+
+// Modal
+.modal {
+    /* TODO: add display: flex; via jQuery when the form successfuly submited
+    JQ snippet : $(".modal").show().css("display", "flex")
+    */
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    &-container {
+    background-color: $modal-bg;
+    padding: 3em;
+    text-align: center;
+    @include respond-to("mobile"){
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+    }
+  }
+  &-title {
+    color: $modal;
+    font-family: $lobster;
+    @include respond-to("mobile"){font-size: 2.2em;}
+    &:before{
+      content: '';
+      display: inline-block;
+      background: url($assets + 'checked.png') no-repeat center;
+      width: 33px;
+      height: 33px;
+      margin-right: 0 15px;
+      @include respond-to("mobile"){
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &-message {
+    font-family: $arial;
+    font-size: 20px;
+    @include respond-to("mobile"){font-size: 1.8rem;}
+  }
+  &-btn {
+    border: 1px solid;
+    background: transparent;
+    color: $modal;
+    padding: 10px 20px;
+    width: 250px;
+    margin-top: 35px;
+    font-family: $open-sans;
+    font-size: 25px;
+  }
+}
+
+// vfx
+.deco-expander {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: calc(100vmax * 1.4142);
+	height: calc(100vmax * 1.4142);
+	margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+	pointer-events: none;
+	opacity: 0;
+	border-radius: 50%;
+	background: #45918e;
+	-webkit-transform: scale(0.001);
+	transform: scale(0.001);
+}
+
+
+@keyframes scale{
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+.scale{
+  animation: scale ease-in-out 600ms;
+}
+
+// Animations Module
+@import "modules/animations";
+.scaleUp{
+  animation: scaleUp .5s ease both;
+}
+// DREAM SOLUTIONS
+.have-addition {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    @include respond-to("mobile"){
+      display: none;
+    }
+}
+aside {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+@each $sign, $background in $zodiac{
+  article[data-sign="#{$sign}"] &::before {
+    content: '';
+    background: #{$background}; // generate it
+    width: 106px;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+}
+}
+.dri-c {
+  .site {
+    @include respond-to("mobile"){
+    min-height: 100vh;
+    height: 100vh;}
+    &-header {
+      @include respond-to("mobile"){display: none;}
+    }
+    &-content {
+      @include respond-to("mobile"){margin-top: 0;}
+      &::before{
+        @include respond-to("mobile"){display: none;}
+      }
+    }
+  }
+ .FormContainer {
+    @include respond-to("mobile"){
+      width: 100vw;
+      margin: -10px;
+      padding: 2rem 1rem 0 1rem;
+    }
+  }
+  .form-title::before{
+    @include respond-to("mobile"){
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 27px;
+      background: url($assets + "pre-title-big.png") no-repeat center center;
+      background-size: contain;
+      margin: 0;
+      transform: rotate(90deg);
+    }
+  }
+}

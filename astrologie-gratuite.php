@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
+    <meta charset="UTF-8" />
     <title>Astrologie gratuite : votre avenir à lire dans les étoiles | Myastro</title>
     
     <meta name="description" content="Grâce à l'astrologie gratuite, accédez à plusieurs services qui vous permettront d'en savoir plus, d'anticiper et de maîtriser votre futur proche." />
