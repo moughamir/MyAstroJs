@@ -30,7 +30,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Le Tarot est une pratique très ancienne qui permet de tirer des cartes et de les interpréter pour apporter des réponses à vos questionnements. Le tarot de l'amour aborde la question sentimentale.</h5>
+                                    <p itemprop="headline">Le Tarot est une pratique très ancienne qui permet de tirer des cartes et de les interpréter pour apporter des réponses à vos questionnements. Le tarot de l'amour aborde la question sentimentale.</p>
                                 </div>
 
                             </div>

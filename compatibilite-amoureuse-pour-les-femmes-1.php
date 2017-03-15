@@ -1,113 +1,59 @@
 <?php
-include('lib.php');
+    include('lib.php');
 
-$xml1 = read_numerologie('1', 1 ,'f');
-$xml1['description']=utf8_encode_array($xml1['description']);
-$f = array();
+    $xml1 = read_numerologie('1', 1 ,'f');
+    $ac_result = $xml1['desc'];
 
-foreach($xml1['description'] as $s_cle => $s_value){
-    if($s_cle === 'Femme 1 - Homme 1'){
-        $f['1'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 2'){
-        $f['2'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 3'){
-        $f['3'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 4'){
-        $f['4'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 5'){
-        $f['5'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 6'){
-        $f['6'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 7'){
-        $f['7'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 8'){
-        $f['8'] = $s_value;
-    } elseif($s_cle === 'Femme 1 - Homme 9'){
-        $f['9'] = preg_replace('@<center[^>]*?>.*?</center>@si', '', $s_value);
-    }
-}
-
-$ipg_title = 'Numérologie gratuite';
-$ipg_pubs = ['astrologie-gratuite', 'compatibilite-amoureuse-feminine', 
-             'votre-personnalite-astrologique', 'portrait-astrologique-feminin',
-             'tarot-quotidien', 'tarot-hebdomadaire',
-             'tarot-mensuel', 'tarot-de-couple'];
+    $ipg_title = 'Numérologie gratuite';
+    $ipg_pubs = ['astrologie-gratuite', 'compatibilite-amoureuse-feminine', 
+                 'votre-personnalite-astrologique', 'portrait-astrologique-feminin'];
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
-<head>
-    <title>Votre Compatibilité amoureuse pour les femmes chiffre 1 | Myastro</title>
-    <meta name="description" content="Chiffre 1 : Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens." />
+<html lang="fr">
+    <head>
+        <title>Votre Compatibilité amoureuse pour les femmes : Chiffre 1 | Myastro</title>
+        <meta name="description" content="Chiffre 1 : Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens." />
 
-    <?php include('include/header_inc.php'); ?>
+        <?php include('include/header_inc.php');?>
 
-    <div class="container-fluid" itemscope>
-        <!-- Main Content -->
-        <div class="row-fluid">
-            <div class="article-content">
-                <header>
-                    <!--div itemscope >
-                        <ul class="breadcrumb" itemprop="breadcrumb">
-                            <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></h4></li>
-                            <li><a href="http://<?= ROOT_URL ?>/numerologie-gratuite">Numérologie gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                            <li><a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse pour les femmes</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
-                        <li>Compatibilité amoureuse pour les femmes chiffre 1</h4></li>
-                        </ul>
-                    </div-->
-                    <h1 itemprop="headline">Compatibilité amoureuse pour les femmes chiffre 1</h1>
-                    <div class="row-fluid social-share-footer">
-                        <span class="share-icon icon-caret-right"></span>
-                        <div class="share-icons">
-                            <h5 itemprop="headline">Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens.</h5>
-                        </div>
-                    </div>
-                </header>
-                <span class="clearfix"></span>
-                
-                <!--  ************************ contenu ****************************  -->
-                <div class="row-fluid">
-                    <!-- Right sidebar -->
-                    <?php include('include/bloc-droit-secondaire.php'); ?>
-                    
-                    <!-- main content -->
-                    <div class="span6 main-content widget">
-                        <div class="widget-title">
-                            <img src="images_voyance/chiffres/1.jpg" />
-                        </div>
-                        <div class="widget-content clearfix">
-                            <div class="modern-accordion-container">
-                                <div class="accordion" id="accordion1">
-                                    <?php for($i=1;$i<=9;$i++){ ?>
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a class="accordion-toggle btn-theme" data-toggle="collapse" data-parent="#accordion1" href="#collapse<?= $i ?>">
-                                                Femme 1 - Homme <?= $i ?>
-                                                <i class="icon-angle-down pull-right"></i>
-                                            </a>
-                                        </div>
-                                        <div id="collapse<?= $i ?>" class="accordion-body collapse">
-                                            <div class="accordion-inner">
-                                                <p><?= $f[$i] ?></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                </div>
+        <div class="container-fluid" itemscope>
+            <!-- Main Content -->
+            <div class="row-fluid">
+                <div class="article-content">
+                    <header>
+                        <h1 itemprop="headline">Compatibilité amoureuse pour les femmes : Chiffre 1</h1>
+                        <div class="row-fluid social-share-footer">
+                            <span class="share-icon icon-caret-right"></span>
+                            <div class="share-icons">
+                                <p itemprop="headline">Avec Myastro, étudiez au moyen de la numérologie la compatibilité amoureuse avec votre partenaire et sachez si vous avez choisi le bon en fonction de vos chiffres et des siens.</p>
                             </div>
-                            <?php include('include/content-article-social-share.php'); ?>
                         </div>
-
-                        <!-- Horizontal Categories -->
-                        <section class="cat-widget h-cat-1">
-                            <?php include('include/content-internal-pub-grid.php'); ?>
-                        </section>
+                    </header>
+                    <span class="clearfix"></span>
+<!-- ------------------------------- CONTENU ------------------------------- -->
+                    <div class="row-fluid">
+                        <!-- Left sidebar -->
+                        <?php include('include/bloc-droit-secondaire.php'); ?>
+                        <!-- Main content -->
+                        <div class="span6 main-content">
+                            <aside class="widget w-pictures">
+                                <img src="images_voyance/chiffres/1.jpg" class="signe" alt="Chiffre 1" />
+                                <!-- Résultat compatibilité -->
+                                <?php include('include/content-result-accordion.php');?>
+                                <!-- Partages -->
+                                <?php include('include/content-article-social-share.php');?>
+                            </aside>
+                            <!-- Horizontal Categories -->
+                            <section class="cat-widget h-cat-1">
+                                <?php include('include/content-internal-pub-grid_v2.php');?>
+                            </section>
+                        </div>
+                        <!-- Right sidebar -->
+                        <?php include('include/bloc-gauche-secondaire.php');?>
                     </div>
-                    
-                    <!-- Left sidebar -->
-                    <?php include('include/bloc-gauche-secondaire.php'); ?>
+<!-- ----------------------------- FIN CONTENU ----------------------------- -->
                 </div>
-            </div><!-- end .article-content -->
+            </div>
         </div>
-    </div>
-    
-    <?php include('include/footer_inc_compatibilite_amoureuse_femmes.php'); ?>
+
+        <?php include('include/footer_inc_compatibilite_amoureuse_femmes.php');?>

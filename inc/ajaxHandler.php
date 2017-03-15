@@ -67,6 +67,9 @@ if(isset($_POST) && $_POST['data'] != null){
         case 'signe-astro-arabe' :
             require_once(realpath('../include/validation/signe-astro-arabe.php'));
             break;
+        case 'signe-astro-chinois' :
+            require_once(realpath('../include/validation/signe-astro-chinois.php'));
+            break;
         case 'general-suscribe' :
             require_once(realpath('../include/validation/general-suscribe.php'));
             break;

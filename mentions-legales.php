@@ -31,7 +31,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Mentions légales</h5>
+										<p itemprop="headline">Mentions légales</p>
 									</div>
 
 								</div>
@@ -41,7 +41,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                <div class="facade" style="border:none; margin-right:20px; text-align:justify;">
           <div class="text-justify">
 	         <h2>Identification de la Société</h2>

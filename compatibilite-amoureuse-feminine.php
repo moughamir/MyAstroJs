@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-  <title>Campatibilité amoureuse féminine : êtes vous faits l'un pour l'autre?</title>
+  <title>Compatibilité amoureuse féminine : Êtes vous faits l'un pour l'autre ?</title>
   <meta name="description" content="Myastro vous permet de savoir si cette personne que vous affectionnez tant est faite pour vous. Les astres vous le diront et vous pourrez ensuite prendre votre décision." />
   <?php include('include/header_sans_nav_inc.php'); ?>
 
@@ -23,7 +23,7 @@
             <span class="share-icon icon-caret-right"></span>
 
             <div class="share-icons">
-              <h5 itemprop="headline">Myastro vous permet de savoir si cette personne que vous affectionnez tant est faite pour vous. Les astres vous le diront et vous pourrez ensuite prendre votre décision.</h5>
+              <p itemprop="headline">Myastro vous permet de savoir si cette personne que vous affectionnez tant est faite pour vous. Les astres vous le diront et vous pourrez ensuite prendre votre décision.</p>
             </div>
 
           </div>
