@@ -80,34 +80,6 @@ body {
       width: 53px;
     }
   }
-  &-content {
-    &::before {
-      content: "2017";
-      font-family: $olesia;
-      font-size: 13em;
-      display: block;
-      color: #fafbfc;
-      opacity: 0.5;
-      @include prefix(transform, translate(-50%) rotate(-5deg), webkit ms moz);
-      position: absolute;
-      z-index: -9;
-      left: 50%;
-      top: 48px;
-      @include respond-to("desktop") {
-        font-size: 19em;
-        top: 16px;
-      }
-      @include respond-to("mobile") {
-        content: "";
-        display: block;
-        height: 144px;
-        background: url($assets + "prev-2017.png") no-repeat center center;
-        margin: 16px 0;
-        position: relative;
-        transform: translate(-50%);
-      }
-    }
-  }
 }
 
 //
@@ -496,7 +468,7 @@ input:active {
     }
   }
   &Footer {
-    background: rgba(20, 34, 86, 0.7);
+    background: rgba(163, 38, 108, 0.7);
     font-family: $arial;
     @include respond-to("mobile") {
       display: none;
@@ -898,4 +870,23 @@ aside {
       transform: rotate(90deg);
     }
   }
+}
+
+.logo::before,
+.logo::after {
+  color: #a3266c;
+  font-family: Tangerine;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 0 20px;
+}
+
+.logo::before {
+  content: "Le Printemps";
+  margin: 0 20px 0 0;
+}
+
+.logo::after {
+  content: "des Amours";
+  margin: 0 0 0 20px;
 }

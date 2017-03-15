@@ -1793,34 +1793,6 @@ body {
     @media screen and (max-width: 544px) {
       .site-logo {
         width: 53px; } }
-  .site-content::before {
-    content: "2017";
-    font-family: "Olesia", cursive;
-    font-size: 13em;
-    display: block;
-    color: #fafbfc;
-    opacity: 0.5;
-    -webkit-transform: translate(-50%) rotate(-5deg);
-    -ms-transform: translate(-50%) rotate(-5deg);
-    -moz-transform: translate(-50%) rotate(-5deg);
-    transform: translate(-50%) rotate(-5deg);
-    position: absolute;
-    z-index: -9;
-    left: 50%;
-    top: 48px; }
-    @media screen and (min-width: 1025px) {
-      .site-content::before {
-        font-size: 19em;
-        top: 16px; } }
-    @media screen and (max-width: 544px) {
-      .site-content::before {
-        content: "";
-        display: block;
-        height: 144px;
-        background: url("../images_landing/printemps-17/prev-2017.png") no-repeat center center;
-        margin: 16px 0;
-        position: relative;
-        transform: translate(-50%); } }
 
 a {
   text-decoration: none;
@@ -2438,7 +2410,7 @@ input:active {
     .SiteCopyright a {
       color: #454545; } }
 .SiteFooter {
-  background: rgba(20, 34, 86, 0.7);
+  background: rgba(163, 38, 108, 0.7);
   font-family: Arial, sans-serif; }
   @media screen and (max-width: 544px) {
     .SiteFooter {
@@ -4259,5 +4231,21 @@ aside {
     background-size: contain;
     margin: 0;
     transform: rotate(90deg); } }
+
+.logo::before,
+.logo::after {
+  color: #a3266c;
+  font-family: Tangerine;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 0 20px; }
+
+.logo::before {
+  content: "Le Printemps";
+  margin: 0 20px 0 0; }
+
+.logo::after {
+  content: "des Amours";
+  margin: 0 0 0 20px; }
 
 /*# sourceMappingURL=printemps-17.css.map */

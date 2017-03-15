@@ -1,5 +1,5 @@
 <?php
-$questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
+$questions = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
 //
 $pageName = "printemps-17";
 $method = "general-suscribe";
@@ -20,7 +20,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
   <title>Prévisions année 2017</title>
-  <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
+  
   <link rel="stylesheet" media="all" href="css/printemps-17.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -506,12 +507,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
       <header class="site-header grid-3-small-1">
         <div class="one-third"></div>
         <div class="one-third">
-          <a href="/">
+          <a href="/" class="logo">
             <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
           </a>
         </div>
         <div class="one-third"></div>
-        <h1 class="hidden">Prévision de l'année 2017</h1>
+        <h1 class="hidden">Le Printemps des Amours</h1>
       </header>
 
       <main class="site-content">
@@ -763,7 +764,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </button>
           </div>
           <div class="one-third">
-            <a href="/">
+            <a href="/" class="logo">
               <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
             </a>
           </div>
