@@ -21,6 +21,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="robots" content="noindex,nofollow" />
+    <meta name="304Fix" content="safari-fix">
 
     <title>Saint Patrick &#x1F340; - MyAstro</title>
 
@@ -93,7 +94,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           		} ?>
           		</p>
           		<?php } ?>
-          		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
+          		<form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
                 <div class="container-90">
                   <header class="form--header">
                     <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
@@ -239,7 +240,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           		} ?>
           		</p>
           		<?php } ?>
-          		<form class="astro-form" accept-charset="utf-8" role="form" method="post">
+          		<form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
               <div class="container-90">
                 <header class="form--header">
                   <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement:</h1>
