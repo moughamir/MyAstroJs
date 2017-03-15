@@ -4,7 +4,7 @@ $questions = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text'
 $pageName = "printemps-17";
 $method = "general-suscribe";
 $support = "voyance";
-$site= "myastro.fr";
+$site   = getenv('MYASTRO_ROOT_URL');
 $pageDri = "printemps-17-dri";
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -27,11 +27,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <meta property="og:title" content="Prévisions de l'année 2017" />
+
+  <meta property="og:title" content="le Printemps des Amours 2017" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.myastro.fr/printemps-17" />
-  <meta property="og:image" content="http://www.myastro.fr/images_landing/printemps-17/cover.jpg" /><!-- add banner -->
-  <meta property="og:description" content="" /> <!-- Write something cool and attractive :3 -->
+  <meta property="og:url" content="http://<?= $site; ?>/printemps-17/" />
+  <meta property="og:image" content="http://<?= $site; ?>/images_landing/printemps-17/cover.png" />
+  <meta property="og:description" content="le Printemps des Amours est là..." />
   <meta property="og:locale" content="fr_FR" />
 </head>
 

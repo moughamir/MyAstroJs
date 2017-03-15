@@ -20,8 +20,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
   <link rel="stylesheet" href="css/printemps-17.css">
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="//cdn.jsdelivr.me/g/html5shiv@3.7.3,respond@1.4.2"></script>
   <![endif]-->
 </head>
 
@@ -617,9 +616,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
     </p>
   </div>
   <!-- #### SCRIPTS #### -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.min.js"></script>
+  <script src="//cdn.jsdelivr.net/g/jquery@3.1.1,underscorejs@1.8.3,d3js@4.7.3"></script>
   <script src="js/formValidator.js"></script>
   <script type="text/javascript" src="js/printemps-17.js"></script>
   <!-- #### REMARKETINGS #### -->
