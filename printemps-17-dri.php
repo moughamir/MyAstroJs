@@ -1,5 +1,5 @@
 <?php
-$questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
+$questions = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
 //
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -15,8 +15,8 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
   <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
   <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/prevision-2017/favicon.ico">
-  <title>Prévisions année 2017 - DRI</title>
-  <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
+  <title>Prévisions année 2017 - DRI | MyAstro</title>
+  <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
   <link rel="stylesheet" href="css/printemps-17.css">
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
   <!--[if lt IE 9]>
@@ -497,7 +497,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
       <header class="site-header grid-3-small-1">
         <div class="one-third"></div>
         <div class="one-third">
-          <a href="/">
+          <a href="/" class="logo">
             <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
           </a>
         </div>

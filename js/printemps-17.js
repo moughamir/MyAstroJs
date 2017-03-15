@@ -141,14 +141,15 @@ console.log('done')
   // Modal
   $('.modal-btn').click(function() {
     $('.modal').fadeOut("slow");
-    /*
-    // Si il y a une redirection vers une autre page
-    function() {
-      window.location.replace("/previsions-2017");
-    }
-    */
   });
-  // Lock orientation
-  var orientation = screen.orientation || screen.mozOrientation || screen.msOrientation;
-  orientation.lock('portrait');
+
+
+  setTimeout(function() {
+    $('.view--loading').addClass('hidden');
+    $('.site-header').removeClass('hidden');
+    $('.view--current').removeClass('hidden');
+    $('.SiteFooter').removeClass('hidden');
+    $('.SiteCopyright').removeClass('hidden');
+  }, 2500);
+
 });

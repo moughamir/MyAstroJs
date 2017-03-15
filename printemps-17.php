@@ -30,7 +30,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <meta property="og:title" content="Prévisions de l'année 2017" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://www.myastro.fr/printemps-17" />
-  <meta property="og:image" content="http://www.myastro.fr/images_landing/printemps-17/fb-ban.jpg" /><!-- add banner -->
+  <meta property="og:image" content="http://www.myastro.fr/images_landing/printemps-17/cover.jpg" /><!-- add banner -->
   <meta property="og:description" content="" /> <!-- Write something cool and attractive :3 -->
   <meta property="og:locale" content="fr_FR" />
 </head>
@@ -504,7 +504,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <!-- /SVG -->
   <div class="PageWrapper">
     <section class="site">
-      <header class="site-header grid-3-small-1">
+      <header class="site-header grid-3-small-1 hidden">
         <div class="one-third"></div>
         <div class="one-third">
           <a href="/" class="logo">
@@ -516,7 +516,16 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
       </header>
 
       <main class="site-content">
-        <section class="view view--grid view--current">
+        <section class="view view--loading">
+          <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
+          <div class="ghfc">
+            <div class="one slideInLeft">Le printemps</div>
+            <div class="two slideInRight">des Amours</div>
+            <div class="kiss">
+            </div>
+          </div>
+        </section>
+        <section class="view view--grid view--current hidden">
           <ul class="zodiac grid">
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -890,7 +899,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </section>
       </main>
     </section>
-    <footer class="SiteFooter">
+    <footer class="SiteFooter hidden">
       <div class="FooterWrapper">
         <ul class="ReassuranceList">
           <li class="ReassuranceList-Item">
@@ -916,7 +925,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </ul>
       </div>
     </footer>
-    <p class="SiteCopyright">
+    <p class="SiteCopyright hidden">
       <?php include('include/footer_copyright.php'); ?>
     </p>
   </div>
