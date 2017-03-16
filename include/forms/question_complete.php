@@ -92,13 +92,13 @@
         </div>
         <div class="vt2 dn-part">
             <label>Sa date de naissance :<br></label>
-            <select class="daten jour" name="jour_c" required>
+            <select class="daten jour" name="jour_c">
                 <option selected value="">Jour</option>
                 <?php for($i=1;$i<=31;$i++){ ?>
                 <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
                 <?php } ?>
             </select>
-            <select class="daten mois" name="mois_c" required>
+            <select class="daten mois" name="mois_c">
                 <option selected value="">Mois</option>
                 <option value="01">Janv.</option>
                 <option value="02">Fev.</option>
@@ -113,7 +113,7 @@
                 <option value="11">Nov.</option>
                 <option value="12">Dec.</option>
             </select>
-            <select name="annee_c" class="daten annee" required>
+            <select name="annee_c" class="daten annee">
                 <option selected value="">Année</option>
                 <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
                 <option value="<?= $i ?>"><?= $i ?></option>
