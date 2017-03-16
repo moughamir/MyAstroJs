@@ -3,6 +3,7 @@
  * User: Laurène Dourdin <2aurene@gmail.com>
  * Date: 14/03/2017
  */
+session_start();
 $question = ['code'=>'td_question_1', 'subject'=>'amour', 'text'=>'Tarot et amour - Offre Tchat gratuit sans tirage'];
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
@@ -66,7 +67,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </header>
                 <form class="form ajax">
                     <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="tarot-et-amour-fb" />
+                    <input type="hidden" name="source" value="tarot-et-amour-rc" />
                     <input type="hidden" name="method" value="general-suscribe" />
                     <input type="hidden" name="support" value="tarot" />
                     <input type="hidden" name="site" value="myastro.fr" />
