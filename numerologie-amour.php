@@ -26,7 +26,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-2017.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-stval.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -155,8 +155,5 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Amatic+SC|Cookie|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

@@ -1,4 +1,12 @@
 <?php
+/* 
+    ------------------------------------------
+    --   previsions-2017-dri = AFFIL BASE   --
+    ------------------------------------------
+
+    Created on : 20 décembre 2016
+    Author     : Mohamed Moughamir <moughamir@gmail.com>
+*/
 include('include/process-dri.php');
 ?>
 <!doctype html>
@@ -8,7 +16,6 @@ include('include/process-dri.php');
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/prevision-2017/favicon.ico">
   <title>Prévisions année 2017 - DRI</title>
   <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
@@ -31,7 +38,7 @@ include('include/process-dri.php');
           </a>
         </div>
         <div class="one-third"></div>
-        <h1 class="hidden">Prévision de lʼannée 2017</h1>
+        <h1 class="hidden">Prévisions de lʼannée 2017</h1>
       </header>
       <main class="site-content v2">
         <section class="view flex-container-v">
@@ -46,30 +53,31 @@ include('include/process-dri.php');
                 </div>
             </article>
             <article class="FormContainer center">
+              <?php if($support_obj == 'MAILING'){ ?>
+              <h1 class="form-title sign-name">Nous vous rappellons <span class="highlight">gratuitement</span>.
+              <p class="message">Il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
+              <?php } elseif($support_obj == 'DRI'){ ?>
               <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos prévisions 2017 par Email</h1>
-              <p class="message">Si vous ne souhaitez pas attendre d’avantage, notre équipe est à votre disposition et peut vous rappeller <span class="highlight">gratuitement</span>, il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
+              <p class="message">Si vous ne souhaitez pas attendre d’avantage, notre équipe est à votre disposition et peut vous rappeller <span class="highlight">gratuitement</span>. Il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
+              <?php } ?>
               <div class="img-center">
-                <img src="images_landing/previsions-2017/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free">
-              </div><br>
+                <img src="images_landing/previsions-2017/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free" />
+              </div>
               <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-                    <p class="message">
-                        Merci, votre demande a bien été prise en compte.<br/>
-                        <strong class="highlight">Un voyant vous recontactera dans quelques instants</strong>.
-                    </p>                        
+                    <p class="DRI-Sent" style="text-align: center;font-size: 1.8rem;">
+                        Merci, votre demande a bien été prise en compte.<br/>
+                        <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                    </p>
                 <?php } else { ?>
-                    <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
-                <p class="alert alert-danger">
-                    <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br>
-                        <?php foreach($err as $msg){
-                            echo $msg.'<br>';
-                        } ?>
-                </p>
-                    <?php } ?>
-                <form action="" method="post" class="Primary-Form">
-                    <div class="FormContainer-Fields Fields-Table">
-                        <div class="Fields-Table-Row">
-                            <div class="FormField input-email">
-                                <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?= $tel;?>" placeholder="Mon numéro de téléphone" required />
+                    <form action="" method="post" class="Primary-Form">
+                        <div class="FormContainer-Fields Fields-Table">
+                            <!-- ########## identification formulaire ########## -->
+                            <input type="hidden" name="prenom" value="<?= $prenom ?>" />
+                            <div class="Fields-Table-Row">
+                                <div class="FormField input-email">
+                                    <input id="tel" type="tel" name="tel" class="FormField-Input"
+                                           value="<?= $tel ?>" placeholder="Mon numéro de téléphone" required/>
+                                </div>
                             </div>
                         </div>
                         <div class="Fields-Table-Row">
@@ -99,13 +107,11 @@ include('include/process-dri.php');
                                 </select>
                             </div>
                         </div>
-                    </div>
-                    <input type="hidden" name="prenom" value="<?= $prenom;?>" />
-                    <input type="text" name="antisp" value="" style="display: none" />
-                    <button class="btn cta-call FormContainer-Submit" type="submit" name="demande_rappel">Rappel gratuit</button>
-                </form>
+                        <input type="text" name="antisp" value="" style="display: none" />
+                        <button class="btn cta-call FormContainer-Submit" type="submit" name="demande_rappel">Rappel gratuit</button>
+                    </form>
                 <?php } ?>
-            </article>
+                </article>
           </article>
         </section>
       </main>

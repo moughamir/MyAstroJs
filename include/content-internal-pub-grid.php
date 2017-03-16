@@ -1,17 +1,18 @@
 <?php
+    $annee = isset($annee) ? $annee : date('Y');
     $ipg_title = isset($ipg_title) ? $ipg_title : 'Voyance gratuite';
     $ipg_pub_bdd = array(
         'astrologie-gratuite' => [
             'titre' => 'Astrologie gratuite',
             'url'   => 'astrologie-gratuite',
             'img'   => 'astrologie-gratuite.jpg',
-            'desc'  => 'L’astrologie est un art divinatoire basé sur la consultation des astres, qui jouent un rôle important sur les événements de votre vie. Nos médiums astrologues vous dévoilent votre astrologie gratuite, ce que les astres vous réservent sentimentalement, professionnellement, du côté de votre famille, financièrement...'
+            'desc'  => 'L’astrologie est un art divinatoire basé sur la consultation des astres, qui jouent un rôle important sur les événements de votre vie. Nos médiums astrologues vous dévoilent votre astrologie gratuite, ce que les astres vous réservent sentimentalement, professionnellement, du côté de votre famille, financièrement…'
         ],
         'astrologie-gratuite-numerologie' => [
             'titre' => 'Astrologie gratuite',
             'url'   => 'astrologie-gratuite',
             'img'   => 'astrologie-gratuite.jpg',
-            'desc'  => 'L’astrologie gratuite pourrait grâçe a un moyen constant et sûr, vous apportez des renseignements capable d’influer votre destinée.Vous pourrez savoir se que vous réservent les astres pour votre avenir.'
+            'desc'  => 'L’astrologie gratuite pourrait grâçe a un moyen constant et sûr, vous apportez des renseignements capables d’influer votre destinée.Vous pourrez savoir se que vous réservent les astres pour votre avenir.'
         ],
         'astrologie-gratuite-personnalite' => [
             'titre' => 'Astrologie gratuite',
@@ -65,7 +66,7 @@
             'titre' => 'Compatibilité amoureuse féminine',
             'url'   => 'compatibilite-amoureuse-feminine',
             'img'   => 'compatibilite-amoureuse-feminine.jpg',
-            'desc'  => 'La femme fonctionne généralement sur son côté "yin", l’homme quant à lui utilise le côté "yang". Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine "yin-yang" MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.'
+            'desc'  => 'La femme fonctionne généralement sur son côté « yin », l’homme quant à lui utilise le côté « yang ». Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine « yin-yang » MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.'
         ],
         'compatibilite-amoureuse-feminine-tarot-quotidien' => [
             'titre' => 'Compatibilité amoureuse féminine',
@@ -77,7 +78,7 @@
             'titre' => 'La compatibilité amoureuse avec votre partenaire',
             'url'   => 'compatibilite-amoureuse-pour-les-femmes',
             'img'   => 'compatibilite-amoureuse-feminine.jpg',
-            'desc'  => 'L’année 2016 est-elle est celle de votre couple ? Découvrez la comptabilité amoureuse entre vous et votre partenaire grâce à votre horoscope 2016 gratuit, vos signes astrologiques sont peut-être liés, faits pour être rassemblés, ou… totalement contraires !'
+            'desc'  => 'L’année '.$annee.' est-elle est celle de votre couple ? Découvrez la comptabilité amoureuse entre vous et votre partenaire grâce à votre horoscope '.$annee.' gratuit, vos signes astrologiques sont peut-être liés, faits pour être rassemblés, ou… totalement contraires !'
         ],
         'compatibilite-amoureuse-pour-les-femmes-amour' => [
             'titre' => 'La compatibilité amoureuse avec votre partenaire',
@@ -434,40 +435,40 @@
             'desc'  => 'Lʼhoroscope du mois est gratuit sur Myastro. Oui, aujourdʼhui notre site vous propose votre avenir gratuitement. Fini la longue attente pour la prédiction de votre avenir. On vous répond immédiatement !'
         ],
         'horoscope-annee' => [
-            'titre' => 'HOROSCOPE 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'HOROSCOPE '.$annee,
+            'url'   => 'horoscope-annee',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Votre horoscope 2016 gratuit vous permettra de terminer lʼannée en beauté. Anticipez les obstacles, prenez les bonnes décisions et faites les bons choix grâce aux recommandations fournies par votre horoscope 2016.'
+            'desc'  => 'Votre horoscope '.$annee.' gratuit vous permettra de terminer lʼannée en beauté. Anticipez les obstacles, prenez les bonnes décisions et faites les bons choix grâce aux recommandations fournies par votre horoscope '.$annee.'.'
         ],
         'horoscope-annee-numerologie' => [
-            'titre' => 'Votre horoscope 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'Votre horoscope '.$annee,
+            'url'   => 'horoscope-annee',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Votre horoscope 2016 gratuit vous assurera de bien finir lʼannée. Devancer les difficultés qui viendront à vous, prenez les bonnes décisions et faites les choix les plus judicieux grâçe à lʼaide formulée par votre horoscope 2016.'
+            'desc'  => 'Votre horoscope '.$annee.' gratuit vous assurera de bien finir lʼannée. Devancer les difficultés qui viendront à vous, prenez les bonnes décisions et faites les choix les plus judicieux grâçe à lʼaide formulée par votre horoscope '.$annee.'.'
         ],
         'horoscope-annee-portraitf' => [
-            'titre' => 'Votre horoscope 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'Votre horoscope '.$annee,
+            'url'   => 'horoscope-anne',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Que vous réserve l’année 2016 ? Amour, bonheur, argent, travail, changements ? N’attendez plus pour prendre connaissance de ce que prévoient les planètes pour votre signe astrologique avec l’horoscope 2016 gratuit MyAstro !'
+            'desc'  => 'Que vous réserve l’année '.$annee.' ? Amour, bonheur, argent, travail, changements ? N’attendez plus pour prendre connaissance de ce que prévoient les planètes pour votre signe astrologique avec l’horoscope '.$annee.' gratuit MyAstro !'
         ],
         'horoscope-annee-portraitm' => [
-            'titre' => 'Votre horoscope 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'Votre horoscope '.$annee,
+            'url'   => 'horoscope-annee',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel 2016. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.'
+            'desc'  => 'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel '.$annee.'. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.'
         ],
         'horoscope-annee-tarot' => [
-            'titre' => 'Votre horoscope 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'Votre horoscope '.$annee,
+            'url'   => 'horoscope-annee',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Quelles sont les tendances planétaires qui vous sont réservées pour cette année 2016 ? Avec l’horoscope 2016 gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.'
+            'desc'  => 'Quelles sont les tendances planétaires qui vous sont réservées pour cette année '.$annee.' ? Avec l’horoscope '.$annee.' gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.'
         ],
         'horoscope-annee-tarot-mensuel' => [
-            'titre' => 'Votre horoscope 2016',
-            'url'   => 'horoscope-2016',
+            'titre' => 'Votre horoscope '.$annee,
+            'url'   => 'horoscope-annee',
             'img'   => 'horoscope-2015.png',
-            'desc'  => 'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope 2016 avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !'
+            'desc'  => 'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope '.$annee.' avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !'
         ],
         'voyance-par-chat' => [
             'titre' => 'Voyance gratuite par tchat',
@@ -550,36 +551,33 @@
     </div>
     <div class="cat-widget-content">
         <div class="row-fluid cat-horiz">
-            <div class="cat-horiz-divider"></div>
-            <div class="related-posts clearfix">
-                <div class="row-fluid modern-items-list">
-                    <div id="h_cat_slider1" class="flexslider">
-                        <ul class="slides"><li>
-                            <ul class="items left clearfix">
-                                <?php foreach($ipg_pubs as $key => $code){ ?>
-                                    <?php $encart = $ipg_pub_bdd[$code]; ?>
-                                    <?php if($key % 2 == 0){ ?>
-                                <li class="row-fluid">
-                                    <?php } ?>
-                                    <div class="span6">
-                                        <article class="fold-item span12">
-                                            <div class="clearfix">
-                                                <img src="images_voyance/banniere/<?= $encart['img'] ?>" class="post-img" />
-                                                <div class="description visible-part">
-                                                    <h5 class="title"><?= $encart['titre'] ?></h5>
-                                                    <h6 class="info"><?= $encart['desc'] ?></h6>
-                                                </div>
-                                                <a href="http://<?= ROOT_URL.'/'.$encart['url'] ?>" class="more" title=""></a>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <?php if($key % 2 == 1){ ?>
-                                </li>
-                                    <?php } ?>
+            <div class="row-fluid modern-items-list">
+                <div id="h_cat_slider1" class="flexslider">
+                    <ul class="slides"><li>
+                        <ul class="items left clearfix">
+                            <?php foreach($ipg_pubs as $key => $code){ ?>
+                                <?php $encart = $ipg_pub_bdd[$code]; ?>
+                                <?php if($key % 2 == 0){ ?>
+                            <li class="row-fluid">
                                 <?php } ?>
-                            </ul>
-                        </li></ul>
-                    </div>
+                                <div class="span6">
+                                    <article class="fold-item span12">
+                                        <div class="clearfix">
+                                            <img src="images_voyance/banniere/<?= $encart['img'] ?>" class="post-img" />
+                                            <div class="description visible-part">
+                                                <h5 class="title"><?= $encart['titre'] ?></h5>
+                                                <h6 class="info"><?= $encart['desc'] ?></h6>
+                                            </div>
+                                            <a href="http://<?= ROOT_URL.'/'.$encart['url'] ?>" class="more" title=""></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <?php if($key % 2 == 1){ ?>
+                            </li>
+                                <?php } ?>
+                            <?php } ?>
+                        </ul>
+                    </li></ul>
                 </div>
             </div>
         </div>

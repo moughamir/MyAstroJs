@@ -31,13 +31,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot gratuit : amour et destin à chaque tirage gratuit | Myastro</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/tarot-sable.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,7 +83,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="WidgetTarot-Result">
+                        <div class="WidgetTarot-Result" id="cards-result">
                             <?php for($i=1;$i<=5;$i++){ ?>
                             <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
                             <?php } ?>
@@ -172,17 +172,17 @@
                                             <select class="FormField-Input" name="mois" required>
                                                 <option value="" selected="selected">Mois</option>
                                                 <option value="01">Janv.</option>
-                                                <option value="02">Fev.</option>
+                                                <option value="02">Fév.</option>
                                                 <option value="03">Mars</option>
                                                 <option value="04">Avr.</option>
                                                 <option value="05">Mai</option>
                                                 <option value="06">Juin</option>
                                                 <option value="07">Juil.</option>
-                                                <option value="08">Aout</option>
+                                                <option value="08">Août</option>
                                                 <option value="09">Sept.</option>
                                                 <option value="10">Oct.</option>
                                                 <option value="11">Nov.</option>
-                                                <option value="12">Dec.</option>
+                                                <option value="12">Déc.</option>
                                             </select>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
@@ -277,16 +277,16 @@
             </div>
         </footer>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

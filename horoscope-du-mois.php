@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du mois : Soulevez les doutes, vivez tranquillement - Myastro</title>
+        <title>Horoscope du mois : Soulevez les doutes, vivez tranquillement | Myastro</title>
         <meta name="description" content="L'horoscope du mois de Myastro répond à toutes vos questions et vous prépare pour tous les évènements du mois. Sans déception et sans exception." />
         
         <script src="js/jquery-1.11.js"></script>

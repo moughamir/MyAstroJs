@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* 
         -----------------------------------------
         --            structure landing tarot 3            --
@@ -9,10 +8,10 @@
         Author         : Laurène Dourdin <2aurene@gmail.com>
 */
 
-
 /* --------------------------- STRUCTURE GÉNÉRALE --------------------------- */
 
 @import "../knacss444/knacss";
+
 body {
     font-size: 1.3rem;
 }
@@ -32,6 +31,7 @@ body {
     &-Column {
         display: table-cell;
         vertical-align: middle;
+
         &Header {
             text-align: center;
             font-size: 3.5rem;
@@ -42,6 +42,7 @@ body {
             }
         }
     }
+
     &.TwoCols &-Column {
         width: 50%;
     }
@@ -68,13 +69,13 @@ body {
     }
 }
 
-
 /* --------------------------------- ENTETE --------------------------------- */
 
 .SiteHeader {
     background-color: darkgrey;
     color: white;
     font-size: 2.4rem;
+
     &-Logo {
         display: block;
         height: 120px;
@@ -111,7 +112,6 @@ body {
     }
 }
 
-
 /* ---------------------------- CHOIX DU VOYANT ----------------------------- */
 
 @import "../modules/psychic-choice";
@@ -127,6 +127,7 @@ body {
 /* ------------------------------- POP VOYANT ------------------------------- */
 
 @import "../modules/pop";
+
 .Pop.Pop-Voyant {
     width: 150px;
     height: 131px;
@@ -135,6 +136,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+
     .Pop-Voyant-Photo {
         display: block;
         width: 100%;
@@ -161,17 +163,19 @@ body {
     }
 }
 
-
 /* ------------------------------- FORMULAIRE ------------------------------- */
 
 @import "../modules/form";
+
 .FormContainer {
     width: 85%;
     margin: auto;
     margin-bottom: 3rem;
+
     &-Fields {
         padding: 0 18%;
     }
+
     &.overlay {
         width: 100%;
     }
@@ -181,20 +185,21 @@ body {
     margin-bottom: 1.8rem;
 }
 
-.Fields-Table-Row>.FormField-Label:after {
+.Fields-Table-Row > .FormField-Label:after {
     content: " :";
 }
 
 @media all and (max-width: 680px) {
-    .Fields-Table-Row>.FormField-Label {
+    .Fields-Table-Row > .FormField-Label {
         display: block;
         width: 100%;
         text-align: left;
     }
-    .Fields-Table-Row.gender>.FormField-Label {
+    .Fields-Table-Row.gender > .FormField-Label {
         text-align: center;
     }
-    .Fields-Table-Row>.FormField {
+
+    .Fields-Table-Row > .FormField {
         display: block;
         margin-bottom: 0;
     }
@@ -228,26 +233,26 @@ body {
         }
     }
 }
-
 @media all and (max-width: 440px) {
     .FormContainer {
         padding: 3rem 1.5rem;
     }
 }
-
-
 /* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
 
 .DRI-Promo {
     text-align: center;
     font-size: 1.4rem;
+
     &-DescText {
         padding: 0 10rem;
     }
+
     &-Slogan {
         margin-top: 3rem;
         margin-bottom: 3rem;
         font-size: 2.4rem;
+
         &-TelIcon {
             display: inline-block;
             position: absolute;
@@ -313,10 +318,10 @@ body {
     }
 }
 
-
 /* ---------------------------------- TCHAT --------------------------------- */
 
 @import "../modules/tchat";
+
 .Tchat-Gratuit {
     &-Title {
         font-size: 1.8rem;
@@ -334,7 +339,6 @@ body {
         }
     }
 }
-
 
 /* --------------------------------- FOOTER --------------------------------- */
 

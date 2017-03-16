@@ -54,7 +54,7 @@
                     <!-- Main Content -->
                     <div class="row-fluid">
                         <header>
-                            <h1 itemprop="headline" style="margin-bottom: 30px">Voyance tarot gratuit : Découvrez les prédictions des cartes</h1>
+                            <h1 itemprop="headline" style="margin-bottom: 30px">Voyance par tarot gratuit : Découvrez les prédictions des cartes</h1>
                         </header>
                         <span class="clearfix"></span>
                         
@@ -62,7 +62,7 @@
                             <div class="tarot-content">
                                 <div class="tarot-left">
                                     <div class="widget-title first-title">
-                                        <h2 class="h4">Tirez vos cartes</h2>
+                                        <h4>Tirez vos cartes</h4>
                                     </div>
                                     <?php include("include/content-tarot-draw.php");?>
                                 </div>
@@ -70,7 +70,7 @@
                                 <!-- debut form -->
                                 <div class="form-group tarot-right">
                                     <div class="widget-title vy-title">
-                                        <h2 class="h4">Posez votre question de tarot gratuit</h2>
+                                        <h4>Posez votre question de tarot gratuit</h4>
                                     </div>
                                     <div class="widget-t w-adv">
                                         <div id="form-w-t" class="widget-content clearfix">

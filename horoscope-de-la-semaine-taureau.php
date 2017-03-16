@@ -61,7 +61,7 @@
 
                <aside class="widget w-pictures">
                     <div class="widget-title">
-                        <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Taureau</h2>
+                        <h4>VOTRE HOROSCOPE DE LA SEMAINE GRATUIT: Taureau</h4>
 						<div class="thumb-effect">
                                         <div class="mask"></div>
                                         <img src="images_voyance/signes/taureau.png" />

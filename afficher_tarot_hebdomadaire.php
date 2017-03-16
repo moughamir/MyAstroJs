@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Tarot hebdomadaire : des tirages de cartes contre des réponses - Myastro</title>
+    <title>Tarot hebdomadaire : des tirages de cartes contre des réponses | Myastro</title>
 	<meta name="description" content="Avec Myastro, bénéficiez d'un tirage de Tarot toutes les semaines afin de les aborder sereinement et sans préoccupations." />
 <?php include('include/header_inc.php'); ?>
 
