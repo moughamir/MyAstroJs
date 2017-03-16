@@ -19,7 +19,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
   <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
-  <title>Prévisions année 2017</title>
+  <title>Printemps des Amours 2017 | MyAstro</title>
   <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
   
   <link rel="stylesheet" media="all" href="css/printemps-17.css">

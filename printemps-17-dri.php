@@ -15,7 +15,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
   <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
   <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/prevision-2017/favicon.ico">
-  <title>Prévisions année 2017 - DRI | MyAstro</title>
+  <title>Printemps des Amours - DRI | MyAstro</title>
   <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
   <link rel="stylesheet" href="css/printemps-17.css">
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
@@ -501,7 +501,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
           </a>
         </div>
         <div class="one-third"></div>
-        <h1 class="hidden">Prévision de l'année 2017</h1>
+        <h1 class="hidden">Printemps des Amours 2017</h1>
       </header>
 
       <main class="site-content v2">
@@ -517,7 +517,7 @@ $dtn = isset($_GET['dtn_bdd']) ? $_GET['dtn_bdd'] : '';
                 </div>
             </article>
             <article class="FormContainer center">
-              <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos prévisions 2017 par Email</h1>
+              <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos AMOUREUSE par EMAIL</h1>
               <p class="message">Si vous ne souhaitez pas attendre d’avantage,notre équipe est à votre disposition et peut vous rappeller <span class="highlight">gratuitement</span> il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous:</p>
               <div class="img-center">
                 <img src="images_landing/printemps-17/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free">
