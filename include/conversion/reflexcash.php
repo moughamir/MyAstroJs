@@ -23,6 +23,9 @@ if($source == 'reflexcache' && isset($id_transaction)){
         if(isset($urls_conversion[$formulaire])){
             $url = $urls_conversion[$formulaire];
             file_get_contents($url);
+            if(isset($_SESSION['user_id'])){
+                $bdd->update($bdd->users, ['conversion' => 1], ['internal_id' => $_SESSION['user_id']]);
+            }
             unset($_SESSION['conversion']);
             unset($_SESSION['reflexcash_transactionid']);
         }

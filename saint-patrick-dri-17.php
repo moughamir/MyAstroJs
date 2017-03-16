@@ -21,6 +21,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="robots" content="noindex,nofollow" />
+    <meta name="304Fix" content="safari-fix">
 
     <title>Saint Patrick &#x1F340; - MyAstro</title>
 
