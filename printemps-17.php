@@ -870,6 +870,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </div>
                     </div>
                     <div class="Fields-Table-Row">
+                      <div class="FormField input-email">
+                        <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required/>
+                      </div>
+                    </div>
+                    <div class="Fields-Table-Row">
                       <label for="email" class="FormField-Label hidden">Votre email</label>
                       <div class="FormField">
                         <input id="email" type="email" name="email" class="FormField-Input" value="<?php $email ?>" placeholder="Mon Email" required />

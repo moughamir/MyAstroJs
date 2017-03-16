@@ -273,6 +273,7 @@ input:active {
       color: #2e3b5e;
       height: 51px;
       padding: 0 12px;
+      width: 100%;
       &.has-error {
         border: 1px solid rgba(169, 68, 66, 0.91);
         box-shadow: 0 0 2px 0 #a94442 inset;
