@@ -6,8 +6,8 @@
     Created on : 20 avril 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
-@import "knacss444/knacss";
 
+@import "knacss444/_knacss";
 body {
     font-size: 1.3rem;
 }
@@ -21,7 +21,6 @@ body {
     position: relative;
 }
 
-
 .SiteLogo {
     display: inline-block;
     height: 100px;
@@ -32,7 +31,6 @@ body {
 .ContentBand {
     margin-top: 5.5rem;
     margin-bottom: 4rem;
-    
     &-Column {
         display: table-cell;
         vertical-align: bottom;
@@ -82,7 +80,6 @@ body {
     margin: auto;
     text-align: left;
     background-color: grey;
-    
     &.overlay {
         display: none;
         position: absolute;
@@ -93,7 +90,6 @@ body {
         height: 100%;
         z-index: 2;
     }
-    
     &-Header {
         margin: 0;
         margin-bottom: 1.5rem;
@@ -102,16 +98,13 @@ body {
         font-size: 2.8rem;
         font-weight: inherit;
     }
-    
     &-Slogan {
         font-size: 1.8rem;
         text-align: center;
     }
-    
     &-Fields {
         padding: 0 2rem;
     }
-    
     &-Submit {
         display: block;
         min-width: 60%;
@@ -123,11 +116,9 @@ body {
         font-weight: bold;
         white-space: nowrap;
     }
-    
     &.DRI {
         background-color: transparent;
         text-align: center;
-        
         .DRI {
             &-Intro {
                 padding: 2rem;
@@ -174,14 +165,12 @@ body {
     display: block;
     position: relative;
     margin-bottom: 2rem;
-    
     &-Label {
         display: block;
         margin-bottom: 0.2rem;
         font-family: inherit;
         font-size: 1.6rem;
     }
-    
     &-Input {
         display: block;
         width: 100%;
@@ -191,46 +180,40 @@ body {
             display: inline-block;
         }
     }
-    
     &-TableInputContainer {
         display: table;
         width: 100%;
         margin: auto;
-        
         &-Cell {
             display: table-cell;
             padding-right: 1rem;
             text-align: center;
             white-space: nowrap;
-            
             &:last-child {
                 padding-right: 0;
             }
         }
-        
         &.fixed-2-col &-Cell {
             width: 33.333%;
         }
         &.fixed-3-col &-Cell {
             width: 33.333%;
         }
-        
         &.gender {
             max-width: 300px;
-        }    
+        }
         &.relationship-status {
             max-width: 400px;
         }
     }
-    
-    &.radio &-Label, &.radio &-Input {
+    &.radio &-Label,
+    &.radio &-Input {
         display: inline-block;
         width: auto;
         margin-top: 0;
         vertical-align: middle;
         margin: 0 0.2rem;
     }
-    
     &-Info {
         display: block;
         position: absolute;
@@ -242,8 +225,7 @@ body {
         opacity: 0;
         z-index: -1;
     }
-    
-    &-Input:focus + &-Info {
+    &-Input:focus+&-Info {
         margin-top: -8rem;
         opacity: 1;
         z-index: 1;
@@ -263,7 +245,6 @@ body {
     box-sizing: content-box;
     border: 1px solid;
     background-color: white;
-    
     &Item {
         display: inline-block;
         height: 8rem;
@@ -272,7 +253,6 @@ body {
         border: 4rem solid transparent;
         border-left-color: inherit;
         border-right: 0;
-        
         &:before {
             content: "";
             display: inline-block;
@@ -283,20 +263,17 @@ body {
             border-left-color: white;
             border-right: 0;
         }
-        
         &:first-child {
             border: none;
             &:before {
                 display: none;
             }
         }
-        
-        > * {
+        >* {
             display: inline-block;
             position: relative;
             top: -4rem;
         }
-        
         &-Img {
             width: 5rem;
             height: 5rem;
@@ -305,7 +282,6 @@ body {
             float: left;
             background-color: grey;
         }
-        
         &-Txt {
             line-height: 2rem;
             margin: 2rem 1rem;
@@ -321,13 +297,11 @@ body {
     padding: 1.5rem 0;
     text-align: center;
     background-color: grey;
-    
     &-Item {
         display: table-cell;
         border-right: 1px solid;
         padding: 0 2rem;
         text-align: left;
-        
         &-Img {
             display: inline-block;
             width: 3rem;
@@ -335,15 +309,12 @@ body {
             margin: 0 2rem;
             background-color: white;
         }
-        
         &-Txt {
             display: inline-block;
         }
-        
         &:last-child {
             border-right: 0;
         }
-        
         strong {
             font-weight: bold;
         }
@@ -354,15 +325,17 @@ body {
     text-align: center;
 }
 
+
 /* Autres règles responsives */
-@media screen and (min-width: 900px) and (max-width: 1200px){
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
     .How-Wizard {
         height: auto;
         width: 100%;
         &Item {
             display: block;
             border: none;
-            > * {
+            >* {
                 position: static;
             }
             &::before {
@@ -371,13 +344,14 @@ body {
         }
     }
 }
-@media screen and (max-width: 695px){
+
+@media screen and (max-width: 695px) {
     .How-Wizard {
         height: auto;
         &Item {
             display: block;
             border: none;
-            > * {
+            >* {
                 position: static;
             }
             &::before {
@@ -386,7 +360,8 @@ body {
         }
     }
 }
-@media screen and (max-width: 1200px){
+
+@media screen and (max-width: 1200px) {
     .ReassuranceList-Item {
         padding: 0 1rem;
         &-Img {
@@ -394,21 +369,20 @@ body {
         }
     }
 }
-@media screen and (max-width: 970px){
+
+@media screen and (max-width: 970px) {
     .WidgetBand {
         padding-top: 1.5rem;
     }
-    .ContentBand-Column.WidgetBand-DescText { 
+    .ContentBand-Column.WidgetBand-DescText {
         width: 100%;
         padding-right: 0;
-        
         .ContentBand-ColumnHeader {
             display: table-cell;
             vertical-align: top;
             padding-right: 2rem;
             text-align: left;
         }
-        
         .DescText {
             display: table-cell;
         }
@@ -423,7 +397,8 @@ body {
         white-space: normal;
     }
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 900px) {
     .ContentBand {
         margin-top: 3rem;
     }
@@ -458,7 +433,8 @@ body {
         font-size: 1.8rem;
     }
 }
-@media screen and (max-width: 730px){
+
+@media screen and (max-width: 730px) {
     .ContentBand {
         margin-bottom: 3rem;
         &-Column {
@@ -470,27 +446,26 @@ body {
             }
         }
     }
-    
 }
-@media screen and (max-width: 695px){
+
+@media screen and (max-width: 695px) {
     .How {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
-@media screen and (max-width: 470px){
+
+@media screen and (max-width: 470px) {
     .PageWrapper {
         padding: 0;
     }
     .How-Header {
         font-size: 2rem;
     }
-    
     .FormContainer {
         &-Header {
             font-size: 2.5rem;
         }
-        
         &-Submit {
             font-size: 1.8rem;
             margin-bottom: 2rem;
@@ -502,7 +477,8 @@ body {
         text-align: left;
     }
 }
-@media screen and (max-width: 340px){
+
+@media screen and (max-width: 340px) {
     .DescText-Title-Legend {
         font-size: 1.7rem;
     }
