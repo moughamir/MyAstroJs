@@ -127,7 +127,7 @@ a {
     text-align: left;
     font-weight: 400;
     @include respond-to("mobile") {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
   }
   &-image {
@@ -355,6 +355,10 @@ input:active {
     align-items: center;
     flex-direction: column;
     line-height: 1.1;
+    @include respond-to("landscape-i5") {
+      font-size: 7rem;
+      line-height: 0.9;
+    }
     @include respond-to("mobile") {
       font-size: 7.5rem;
     }
@@ -363,6 +367,9 @@ input:active {
       top: 15px;
       position: relative;
       width: 84px;
+      @include respond-to("landscape-i5") {
+        width: 50px;
+      }
     }
     .one {
       left: -56px;
@@ -391,6 +398,9 @@ input:active {
       @include respond-to("mobile") {
         @include square(200px);
       }
+      @include respond-to("landscape-i5") {
+        @include square(150px);
+      }
     }
   }
 }
@@ -400,7 +410,7 @@ input:active {
     @include respond-to("mobile") {
       display: none;
     }
-    @include respond-to("landscape") {
+    @include respond-to("landscape-i5") {
       display: none;
     }
   }
@@ -432,7 +442,7 @@ input:active {
           overflow-y: auto;
           overflow-x: hidden;
         }
-        @include respond-to("landscape") {
+        @include respond-to("landscape-i5") {
           min-height: 100vh;
           width: 100vw;
           overflow-y: auto;
@@ -449,7 +459,7 @@ input:active {
         align-items: center;
         margin: 0;
       }
-      @include respond-to("landscape") {
+      @include respond-to("landscape-i5") {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -461,7 +471,7 @@ input:active {
         @include respond-to("mobile") {
           display: block;
         }
-        @include respond-to("landscape") {
+        @include respond-to("landscape-i5") {
           display: block;
         }
       }
@@ -474,6 +484,10 @@ input:active {
         font-size: 2em;
         margin: 0 0 5px 0;
       }
+      @include respond-to("landscape-i5") {
+        font-size: 2em;
+        margin: 0 0 5px 0;
+      }
       &::before {
         content: '';
         display: inline-flex;
@@ -483,6 +497,11 @@ input:active {
         background-size: contain;
         margin: 0 10px 0 25px;
         @include respond-to("mobile") {
+          width: 28px;
+          height: 28px;
+          margin: 0 10px 0 14px;
+        }
+        @include respond-to("landscape-i5") {
           width: 28px;
           height: 28px;
           margin: 0 10px 0 14px;
@@ -500,6 +519,11 @@ input:active {
   }
   .grid-2.has-gutter {
     @include respond-to("mobile") {
+      width: 100vw;
+    }
+  }
+  .form-content {
+    @include respond-to("landscape-i5") {
       width: 100vw;
     }
   }
@@ -530,6 +554,9 @@ input:active {
     background: rgba(163, 38, 108, 0.7);
     font-family: $arial;
     @include respond-to("mobile") {
+      display: none;
+    }
+    @include respond-to("landscape")y {
       display: none;
     }
   }
@@ -912,6 +939,9 @@ input:active {
   @include respond-to("mobile") {
     display: none;
   }
+  @include respond-to("landscape-i5") {
+    display: none;
+  }
 }
 
 aside {
@@ -977,6 +1007,24 @@ aside {
   }
 }
 
+.site-logo {
+  @include respond-to("landscape-i5") {
+    width: 42px;
+  }
+}
+
+.one-third {
+  @include respond-to("landscape-i5") {
+    width: 100vw;
+  }
+}
+
+.zodiac .one-third {
+  @include respond-to("landscape-i5") {
+    margin-bottom: 20px;
+  }
+}
+
 .logo::before,
 .logo::after {
   color: #a3266c;
@@ -986,6 +1034,9 @@ aside {
   margin: 0 0 0 20px;
   @include respond-to("mobile") {
     font-size: 2.6rem;
+  }
+  @include respond-to("landscape-i5") {
+    font-size: 2.4rem;
   }
 }
 

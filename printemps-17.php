@@ -546,7 +546,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#capricorn" class="sign-link" data-sign="capricorn">
@@ -566,7 +566,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#pisces" class="sign-link" data-sign="pisces">
@@ -584,7 +584,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -604,7 +604,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#aries" class="sign-link" data-sign="aries">
@@ -624,7 +624,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#gemini" class="sign-link" data-sign="gemini">
@@ -642,7 +642,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -662,7 +662,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#cancer" class="sign-link" data-sign="cancer">
@@ -682,7 +682,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#virgo" class="sign-link" data-sign="virgo">
@@ -700,7 +700,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -720,7 +720,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#libra" class="sign-link" data-sign="libra">
@@ -740,7 +740,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#sagittarius" class="sign-link" data-sign="sagittarius">
@@ -758,7 +758,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
           </ul>
         </section>
