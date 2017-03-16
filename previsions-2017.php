@@ -1,6 +1,5 @@
 <?php
-$questions = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
-//
+$question = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Compagne Prévisions asto 2017'];
 $pageName = "previsions-2017";
 $method = "general-suscribe";
 $support = "voyance";

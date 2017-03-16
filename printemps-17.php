@@ -1,10 +1,10 @@
 <?php
-$questions = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
-//
+$question = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
 $pageName = "printemps-17";
+$seo = 'affilbase';
 $method = "general-suscribe";
 $support = "voyance";
-$site   = getenv('MYASTRO_ROOT_URL');
+$site   = 'myastro.fr';
 $pageDri = "printemps-17-dri";
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -16,8 +16,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
-  <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
   <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
   <title>Printemps des Amours 2017 | MyAstro</title>
   <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
@@ -817,7 +815,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
                     <input type="hidden" name="dri" value="<?= $pageDri; ?>" />
                     <!-- ########## autres champs pré-remplis ########## -->
-                    <input type="hidden" name="tel_needed" value="0" />
+                    <input type="hidden" name="tel_needed" value="1" />
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
                     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
@@ -832,46 +830,41 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div class="Fields-Table-Row">
                       <label class="FormField-Label">Date de naissance</label>
                       <div class="FormField">
-                    <div class="FormField-TableInputContainer">
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select  class="FormField-Input" name="jour" required>
-                          <option selected="selected" value="">Jour</option>
-                          <?php for($i=1;$i<=31;$i++){ ?>
-                          <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
-                          <?php } ?>
-                        </select>
-                      </div>
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select class="FormField-Input" name="mois" required>
-                          <option value="" selected="selected">Mois</option>
-                          <option value="01">Janv.</option>
-                          <option value="02">Fev.</option>
-                          <option value="03">Mars</option>
-                          <option value="04">Avr.</option>
-                          <option value="05">Mai</option>
-                          <option value="06">Juin</option>
-                          <option value="07">Juil.</option>
-                          <option value="08">Aout</option>
-                          <option value="09">Sept.</option>
-                          <option value="10">Oct.</option>
-                          <option value="11">Nov.</option>
-                          <option value="12">Dec.</option>
-                        </select>
-                      </div>
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select class="FormField-Input" name="annee" required>
-                          <option selected="selected" value="">Année</option>
-                          <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                          <option value="<?= $i ?>"><?= $i ?></option>
-                          <?php } ?>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                    </div>
-                    <div class="Fields-Table-Row">
-                      <div class="FormField input-email">
-                        <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required/>
+                        <div class="FormField-TableInputContainer">
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select  class="FormField-Input" name="jour" required>
+                              <option selected="selected" value="">Jour</option>
+                              <?php for($i=1;$i<=31;$i++){ ?>
+                              <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                              <?php } ?>
+                            </select>
+                          </div>
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select class="FormField-Input" name="mois" required>
+                              <option value="" selected="selected">Mois</option>
+                              <option value="01">Janv.</option>
+                              <option value="02">Fev.</option>
+                              <option value="03">Mars</option>
+                              <option value="04">Avr.</option>
+                              <option value="05">Mai</option>
+                              <option value="06">Juin</option>
+                              <option value="07">Juil.</option>
+                              <option value="08">Aout</option>
+                              <option value="09">Sept.</option>
+                              <option value="10">Oct.</option>
+                              <option value="11">Nov.</option>
+                              <option value="12">Dec.</option>
+                            </select>
+                          </div>
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select class="FormField-Input" name="annee" required>
+                              <option selected="selected" value="">Année</option>
+                              <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
+                              <option value="<?= $i ?>"><?= $i ?></option>
+                              <?php } ?>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="Fields-Table-Row">
@@ -881,32 +874,37 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                       </div>
                     </div>
                     <div class="Fields-Table-Row">
-                                <label for="pays" class="FormField-Label">Mon pays</label>
-                                <div class="FormField">
-                                    <select name="pays" id="pays" class="FormField-Input input-country" required>
-                                        <option value="" selected>Votre Pays</option>
-                                        <option value="BE">Belgique</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="LU">Luxembourg</option>
-                                        <option value="CH">Suisse</option>
-                                        <option value="FR" selected>France Métropolitaine</option>
-                                        <optgroup label="DOM-TOM">
-                                            <option value="MQ">Martinique</option>
-                                            <option value="GP">Guadeloupe</option>
-                                            <option value="GF">Guyane</option>
-                                            <option value="RE">La Réunion</option>
-                                            <option value="YT">Mayotte</option>
-                                            <option value="PM">St Pierre et Miquelon</option>
-                                            <option value="BL">St Barthélémy</option>
-                                            <option value="SM">St Martin</option>
-                                            <option value="WF">Wallis et Futunua</option>
-                                            <option value="PF">Polynésie Française</option>
-                                            <option value="NC">Nouvelle Calédonie</option>
-                                        </optgroup>
-                                        <option value="ZZ">Autre</option>
-                                    </select>
-                                </div>
-                            </div>
+                      <div class="FormField input-email">
+                        <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required />
+                      </div>
+                    </div>
+                    <div class="Fields-Table-Row">
+                        <label for="pays" class="FormField-Label">Mon pays</label>
+                        <div class="FormField">
+                            <select name="pays" id="pays" class="FormField-Input input-country" required>
+                                <option value="" selected>Votre Pays</option>
+                                <option value="BE">Belgique</option>
+                                <option value="CA">Canada</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="CH">Suisse</option>
+                                <option value="FR" selected>France Métropolitaine</option>
+                                <optgroup label="DOM-TOM">
+                                    <option value="MQ">Martinique</option>
+                                    <option value="GP">Guadeloupe</option>
+                                    <option value="GF">Guyane</option>
+                                    <option value="RE">La Réunion</option>
+                                    <option value="YT">Mayotte</option>
+                                    <option value="PM">St Pierre et Miquelon</option>
+                                    <option value="BL">St Barthélémy</option>
+                                    <option value="SM">St Martin</option>
+                                    <option value="WF">Wallis et Futunua</option>
+                                    <option value="PF">Polynésie Française</option>
+                                    <option value="NC">Nouvelle Calédonie</option>
+                                </optgroup>
+                                <option value="ZZ">Autre</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="Fields-Table-Row">
                       <button class="FormContainer-Submit" type="submit" name="valider">Lire la suite</button>
                     </div>
