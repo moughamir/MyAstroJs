@@ -30,6 +30,10 @@ $card-shadow: 0px 3px 5px 1px rgba(3, 3, 3, 0.5);
 ///
 $line-height-base: 1.428571429 !default; // 20/14
 $border-radius-large: 3px;
+// Images
+$background : $assets + 'background.jpg';
+$carte : $assets + 'Saint-Patrick.svg';
+$shine : $assets + 'sp-shine.svg';
 // Media queries breakpoints
 // --------------------------------------------------
 // Extra small screen / phone
@@ -59,7 +63,7 @@ $screen-md-max: ($screen-lg-min - 1) !default;
 //== style
 html {
   // Maybe I will optimize this in near future
-  background: url($assets+'background.jpg') no-repeat;
+  background: url($background) no-repeat;
   min-height: 100%;
   background-size: 100%;
   background-attachment: fixed;
@@ -204,7 +208,7 @@ td.ng-scope {
 }
 
 .card {
-  background: $primary url($assets+'Saint-Patrick.svg') no-repeat 50% 45%;
+  background: $primary url($carte) no-repeat 50% 45%;
   @include square(100%);
   cursor: pointer;
   border-radius: 6px;
@@ -566,7 +570,7 @@ label {
 }
 
 .shine {
-  background: $primary url($assets+'sp-shine.svg') no-repeat 50% 45%;
+  background: $primary url($shine) no-repeat 50% 45%;
 }
 
 /// media Query
@@ -721,7 +725,7 @@ label {
     top: initial !important;
   }
   .shine {
-    background: #074145 url($assets+'sp-shine.svg') no-repeat 50% 45%;
+    background: #074145 url($shine) no-repeat 50% 45%;
     background-size: 90%;
   }
 }

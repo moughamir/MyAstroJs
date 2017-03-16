@@ -40,7 +40,6 @@ include('include/process-dri.php');
         <div class="one-third"></div>
         <h1 class="hidden">Prévisions de lʼannée 2017</h1>
       </header>
-
       <main class="site-content v2">
         <section class="view flex-container-v">
           <article class="dri ">
@@ -80,32 +79,32 @@ include('include/process-dri.php');
                                            value="<?= $tel ?>" placeholder="Mon numéro de téléphone" required/>
                                 </div>
                             </div>
-                            <div class="Fields-Table-Row">
-                                <label for="pays" class="FormField-Label">Mon pays</label>
-                                <div class="FormField">
-                                    <select name="pays" id="pays" class="FormField-Input input-country" required>
-                                        <option value="" selected>Votre Pays</option>
-                                        <option value="BE">Belgique</option>
-                                        <option value="CA">Canada</option>
-                                        <option value="LU">Luxembourg</option>
-                                        <option value="CH">Suisse</option>
-                                        <option value="FR" selected>France Métropolitaine</option>
-                                        <optgroup label="DOM-TOM">
-                                            <option value="MQ">Martinique</option>
-                                            <option value="GP">Guadeloupe</option>
-                                            <option value="GF">Guyane</option>
-                                            <option value="RE">La Réunion</option>
-                                            <option value="YT">Mayotte</option>
-                                            <option value="PM">St Pierre et Miquelon</option>
-                                            <option value="BL">St Barthélémy</option>
-                                            <option value="SM">St Martin</option>
-                                            <option value="WF">Wallis et Futunua</option>
-                                            <option value="PF">Polynésie Française</option>
-                                            <option value="NC">Nouvelle Calédonie</option>
-                                        </optgroup>
-                                        <option value="ZZ">Autre</option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="Fields-Table-Row">
+                            <label for="pays" class="FormField-Label">Mon pays</label>
+                            <div class="FormField">
+                                <select name="pays" id="pays" class="FormField-Input input-country" required>
+                                    <option value="" selected>Votre Pays</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="CH">Suisse</option>
+                                    <option value="FR" selected>France Métropolitaine</option>
+                                    <optgroup label="DOM-TOM">
+                                        <option value="MQ">Martinique</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GF">Guyane</option>
+                                        <option value="RE">La Réunion</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="PM">St Pierre et Miquelon</option>
+                                        <option value="BL">St Barthélémy</option>
+                                        <option value="SM">St Martin</option>
+                                        <option value="WF">Wallis et Futunua</option>
+                                        <option value="PF">Polynésie Française</option>
+                                        <option value="NC">Nouvelle Calédonie</option>
+                                    </optgroup>
+                                    <option value="ZZ">Autre</option>
+                                </select>
                             </div>
                         </div>
                         <input type="text" name="antisp" value="" style="display: none" />
@@ -148,10 +147,8 @@ include('include/process-dri.php');
     </p>
   </div>
   <!-- #### REMARKETINGS #### -->
-  <?php
-include('include/remarketing/adwords.php');
-include('include/remarketing/analytics.php');
-include('include/remarketing/facebook.php');
-?>
+  <?php include('include/remarketing/adwords.php');
+        include('include/remarketing/analytics.php');
+        include('include/remarketing/facebook.php');?>
 </body>
 </html>

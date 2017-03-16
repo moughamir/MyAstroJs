@@ -1,51 +1,40 @@
 <?php
-/* 
-    --------------------------------------
-    --   previsions-2017 = AFFIL BASE   --
-    --------------------------------------
-
-    Created on : 20 décembre 2016
-    Author     : Mohamed Moughamir <moughamir@gmail.com>
-*/
-
-$pageName = "previsions-2017";
+$question = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
+$pageName = "printemps-17";
+$seo = 'affilbase';
 $method = "general-suscribe";
 $support = "voyance";
-$site = "myastro.fr";
-$seo = "affilbase";
-$pageDri = "previsions-2017-dri";
-
-$question = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Campagne Prévisions astro 2017'];
-
+$site   = 'myastro.fr';
+$pageDri = "printemps-17-dri";
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Prévision   horoscopre   de   l'année   2017   gratuite" />
-  <meta name="keywords" content="Prévision, 2017, zodiaques, horoscope, astrologie" />
-  <link rel="shortcut icon" href="images_landing/previsions-2017/favicon.ico">
-  <title>Prévisions année 2017</title>
-  <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
-  <link rel="stylesheet" media="all" href="css/previsions-2017.min.css">
+  <link rel="shortcut icon" href="images_landing/printemps-17/favicon.ico">
+  <title>Printemps des Amours 2017 | MyAstro</title>
+  <link href="//fonts.googleapis.com/css?family=Tangerine|Lobster|Open+Sans|Oswald:300,400" rel="stylesheet">
+  
+  <link rel="stylesheet" media="all" href="css/printemps-17.css">
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <meta property="og:title" content="Prévisions de l'année 2017" />
+
+  <meta property="og:title" content="le Printemps des Amours 2017" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.myastro.fr/previsions-2017" />
-  <meta property="og:image" content="http://www.myastro.fr/images_landing/previsions-2017/fb-ban.jpg" /><!-- add banner -->
-  <meta property="og:description" content="" /> <!-- Write something cool and attractive :3 -->
+  <meta property="og:url" content="http://<?= $site; ?>/printemps-17/" />
+  <meta property="og:image" content="http://<?= $site; ?>/images_landing/printemps-17/cover.png" />
+  <meta property="og:description" content="le Printemps des Amours est là..." />
   <meta property="og:locale" content="fr_FR" />
 </head>
 
 <body>
-  <div class="form-container overlay" id="form-overlay"></div>
   <!-- SVG -->
   <svg class="hidden">
     <defs>
@@ -514,19 +503,28 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <!-- /SVG -->
   <div class="PageWrapper">
     <section class="site">
-      <header class="site-header grid-3-small-1">
+      <header class="site-header grid-3-small-1 hidden">
         <div class="one-third"></div>
         <div class="one-third">
-          <a href="/">
+          <a href="/" class="logo">
             <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
           </a>
         </div>
         <div class="one-third"></div>
-        <h1 class="hidden">Prévision de l'année 2017</h1>
+        <h1 class="hidden">Le Printemps des Amours</h1>
       </header>
 
       <main class="site-content">
-        <section class="view view--grid view--current">
+        <section class="view view--loading">
+          <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
+          <div class="ghfc">
+            <div class="one slideInLeft">Le printemps</div>
+            <div class="two slideInRight">des Amours</div>
+            <div class="kiss">
+            </div>
+          </div>
+        </section>
+        <section class="view view--grid view--current hidden">
           <ul class="zodiac grid">
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -546,7 +544,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#capricorn" class="sign-link" data-sign="capricorn">
@@ -566,7 +564,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#pisces" class="sign-link" data-sign="pisces">
@@ -584,7 +582,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -604,7 +602,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#aries" class="sign-link" data-sign="aries">
@@ -624,7 +622,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#gemini" class="sign-link" data-sign="gemini">
@@ -642,7 +640,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -662,7 +660,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#cancer" class="sign-link" data-sign="cancer">
@@ -682,7 +680,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#virgo" class="sign-link" data-sign="virgo">
@@ -700,7 +698,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
             <div class="grid-3-small-1">
               <div class="one-third">
@@ -720,7 +718,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#libra" class="sign-link" data-sign="libra">
@@ -740,7 +738,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               </div>
             </div>
             <div class="grid-3-small-1">
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
               <div class="one-third">
                 <li class="sign grid__item">
                   <a href="#sagittarius" class="sign-link" data-sign="sagittarius">
@@ -758,7 +756,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   </a>
                 </li>
               </div>
-              <div class="one-third"></div>
+              <div class="one-third ls-hide"></div>
             </div>
           </ul>
         </section>
@@ -774,7 +772,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </button>
           </div>
           <div class="one-third">
-            <a href="/">
+            <a href="/" class="logo">
               <img src="images_landing/site-logo.png" alt="MyAstro" class="site-logo">
             </a>
           </div>
@@ -807,10 +805,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
               <div class="sign-prevision-container">
                 <p class="prevision">SIGN_TEXT</p>
                 <div class="FormContainer">
+                  <div class="form-container overlay" id="form-overlay"></div>
                   <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                    <input type="hidden" name="method" value="<?= $method; ?>" />
+                    <input type="hidden" name="method" value="<?= $method ?>" />
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
@@ -831,42 +830,42 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div class="Fields-Table-Row">
                       <label class="FormField-Label">Date de naissance</label>
                       <div class="FormField">
-                    <div class="FormField-TableInputContainer">
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select  class="FormField-Input" name="jour" required>
-                          <option selected="selected" value="">Jour</option>
-                          <?php for($i=1;$i<=31;$i++){ ?>
-                          <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
-                          <?php } ?>
-                        </select>
+                        <div class="FormField-TableInputContainer">
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select  class="FormField-Input" name="jour" required>
+                              <option selected="selected" value="">Jour</option>
+                              <?php for($i=1;$i<=31;$i++){ ?>
+                              <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                              <?php } ?>
+                            </select>
+                          </div>
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select class="FormField-Input" name="mois" required>
+                              <option value="" selected="selected">Mois</option>
+                              <option value="01">Janv.</option>
+                              <option value="02">Fev.</option>
+                              <option value="03">Mars</option>
+                              <option value="04">Avr.</option>
+                              <option value="05">Mai</option>
+                              <option value="06">Juin</option>
+                              <option value="07">Juil.</option>
+                              <option value="08">Aout</option>
+                              <option value="09">Sept.</option>
+                              <option value="10">Oct.</option>
+                              <option value="11">Nov.</option>
+                              <option value="12">Dec.</option>
+                            </select>
+                          </div>
+                          <div class="FormField-TableInputContainer-Cell">
+                            <select class="FormField-Input" name="annee" required>
+                              <option selected="selected" value="">Année</option>
+                              <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
+                              <option value="<?= $i ?>"><?= $i ?></option>
+                              <?php } ?>
+                            </select>
+                          </div>
+                        </div>
                       </div>
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select class="FormField-Input" name="mois" required>
-                          <option value="" selected="selected">Mois</option>
-                          <option value="01">Janv.</option>
-                          <option value="02">Fev.</option>
-                          <option value="03">Mars</option>
-                          <option value="04">Avr.</option>
-                          <option value="05">Mai</option>
-                          <option value="06">Juin</option>
-                          <option value="07">Juil.</option>
-                          <option value="08">Aout</option>
-                          <option value="09">Sept.</option>
-                          <option value="10">Oct.</option>
-                          <option value="11">Nov.</option>
-                          <option value="12">Dec.</option>
-                        </select>
-                      </div>
-                      <div class="FormField-TableInputContainer-Cell">
-                        <select class="FormField-Input" name="annee" required>
-                          <option selected="selected" value="">Année</option>
-                          <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                          <option value="<?= $i ?>"><?= $i ?></option>
-                          <?php } ?>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
                     </div>
                     <div class="Fields-Table-Row">
                       <label for="email" class="FormField-Label hidden">Votre email</label>
@@ -875,15 +874,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                       </div>
                     </div>
                     <div class="Fields-Table-Row">
-                      <label for="tel" class="FormField-Label hidden">Votre numéro de téléphone</label>
-                      <div class="FormField">
-                        <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?php $tel ?>" placeholder="Mon numéro de téléphone" style="width: 100%" required/>
+                      <div class="FormField input-email">
+                        <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?php $tel ?>" placeholder="Mon numéro de téléphone" required />
                       </div>
                     </div>
                     <div class="Fields-Table-Row">
                         <label for="pays" class="FormField-Label">Mon pays</label>
                         <div class="FormField">
-                            <select name="pays" id="pays" class="FormField-Input input-country" style="width: 100%" required>
+                            <select name="pays" id="pays" class="FormField-Input input-country" required>
                                 <option value="" selected>Votre Pays</option>
                                 <option value="BE">Belgique</option>
                                 <option value="CA">Canada</option>
@@ -932,7 +930,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </section>
       </main>
     </section>
-    <footer class="SiteFooter">
+    <footer class="SiteFooter hidden">
       <div class="FooterWrapper">
         <ul class="ReassuranceList">
           <li class="ReassuranceList-Item">
@@ -958,7 +956,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </ul>
       </div>
     </footer>
-    <p class="SiteCopyright">
+    <p class="SiteCopyright hidden">
       <?php include('include/footer_copyright.php'); ?>
     </p>
   </div>
@@ -967,7 +965,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.min.js"></script>
   <script src="js/formValidator.js"></script>
-  <script type="text/javascript" src="js/previsions-2017.js"></script>
+  <script type="text/javascript" src="js/printemps-17.js"></script>
   <!-- #### REMARKETINGS #### -->
   <?php
 include('include/remarketing/adwords.php');
