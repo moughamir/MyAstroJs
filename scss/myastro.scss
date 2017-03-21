@@ -11,6 +11,9 @@ $rose_clair: #EE4BA4;
     font-weight: 400;
     font-style: normal
 }
+
+header { margin-bottom: 20px;}
+
 /*---------------------------------------------*/
 /* Bootstrap.min.css */
 
@@ -5890,8 +5893,8 @@ a.badge:focus {
 }
 @media(max-width:767px) {
     body {
-        padding-right: 20px;
-        padding-left: 20px
+/*        padding-right: 20px;
+        padding-left: 20px*/
     }
     .navbar-fixed-top,
     .navbar-fixed-bottom,
@@ -10241,7 +10244,7 @@ div.dark_square #pp_full_res .pp_inline {
 }
 @media (max-width: 480px) {
     .container-fluid {
-        max-width: 300px!important
+        padding: 0 16px;
     }
     .navbar-banner .logo-240 {
         text-align: center;
@@ -14781,9 +14784,9 @@ ul.the-icons>li>[class^=icon-] {
     float: left;
 }
 .article-content .social-share-footer .share-icons {
-    width: 91%;
-    float: left;
     padding: 10px 0;
+    margin-left: 25px;
+    padding-right: 15px;
 }
 .article-content .social-share-footer ul {
     list-style: none;
@@ -16492,7 +16495,8 @@ label,
 }
 @media screen and (max-width: 980px) {
     header {
-        margin-top: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .top-section {
         left: 0px;
@@ -16947,8 +16951,6 @@ html[xmlns] .slides {
 .modern-items-list .fold-item .description>.title {
     font-weight: normal !important;
 }
-
-header { margin-bottom: 20px;}
 
 .text-justify > p {
     text-indent: 3em;
