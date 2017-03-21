@@ -29,15 +29,13 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Right sidebar -->
                         <?php include('include/bloc-droit-secondaire-2.php'); ?>
-
-                        <!-- main content -->
+                        <!-- Main content -->
                         <div class="span6 main-content">
-                            <!-- choix signe astro -->
+                            <!-- Choix signe astro -->
                             <?php include('include/content-choix-signe.php'); ?>
                             <!-- Texte -->
                             <div>

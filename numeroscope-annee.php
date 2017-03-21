@@ -30,9 +30,9 @@
                         <?php include('include/bloc-droit-secondaire.php');?>
                         <!-- Main content -->
                         <div class="span6 main-content">
-                            <!-- choix numéro -->
+                            <!-- Choix numéro -->
                             <?php include('include/content-choix-numero.php');?>
-                            <!-- texte -->
+                            <!-- Texte -->
                             <hr/>
                             <div>
                                 <div class="text-justify">

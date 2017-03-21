@@ -90,7 +90,7 @@
                         </div>
                         <div class="formulaire-voyance-g" id="ancre-form">
                             <div class="widget-title vy-title">
-                                <h4>Votre voyance gratuite de 2016</h4>
+                                <h4>Votre voyance gratuite de <?= date('Y');?></h4>
                             </div>           
                             <div class="widget w-adv">
                                 <div id="form-w" class="widget-content clearfix" style="margin-top: 0;">
