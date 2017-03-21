@@ -54,7 +54,7 @@
                                 <!-- Partages -->
                                 <?php include('include/content-article-social-share.php');?>
                             </aside>
-                            <!-- texte -->
+                            <!-- Texte -->
                             <div>
                                 <div class="text-justify">
                                     <h2><?= $annee;?> Verseau : Ambiance générale très positive</h2>

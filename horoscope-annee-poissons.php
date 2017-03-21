@@ -38,12 +38,10 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Left sidebar -->
                         <?php include('include/bloc-droit-secondaire.php');?>
-                        
                         <!-- Main content -->
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
@@ -56,7 +54,7 @@
                                 <!-- Partages -->
                                 <?php include('include/content-article-social-share.php');?>
                             </aside>
-                            <!-- texte -->
+                            <!-- Texte -->
                             <div>
                                 <div class="text-justify">
                                     <h2>Ce que lʼhoroscope poissons révèle sur votre vie sentimentale</h2>
@@ -70,10 +68,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Right sidebar -->
                         <?php include('include/bloc-gauche-secondaire.php');?>
                     </div>
+<!-- ----------------------------- FIN CONTENU ----------------------------- -->
                 </div>
             </div>
         </div>

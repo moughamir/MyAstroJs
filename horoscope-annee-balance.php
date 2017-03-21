@@ -38,8 +38,7 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Left sidebar -->
                         <?php include('include/bloc-droit-secondaire.php');?>	

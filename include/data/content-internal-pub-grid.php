@@ -11,7 +11,7 @@ $ipg_pub_bdd = array(
             2 => 'L’astrologie gratuite est aujourd’hui un moyen très simple de connaître vos prédictions qu’elles soient amoureuses, d’ordre financières… Pourquoi attendre ? Utiliser notre service gratuitement.', // -personnalite
             3 => 'Avec l’astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.', // -tarot
             4 => 'Le couple a sa propre alchimie, son énergie composante des deux individus. Vous pouvez faire votre astrologie gratuite avec MyAstro pour réaliser la composante idoine des deux individualités qui s’aiment souffrent et partagent leur bonheur.', // -couple
-            5 => 'Anticipez l’avenir proche avec l’astrologie gratuite MyAstro et découvrez ce que les planètes et le système solaire ont prévu pour vous : argent, rencontre, rupture, conflit, mariage, projets… Prenez connaissance de votre destin et avancez l’esprit tranquille.', // -tarot-quotidien
+            5 => 'Anticipez l’avenir proche avec l’astrologie gratuite MyAstro et découvrez ce que les planètes et le système solaire ont prévu pour vous : argent, rencontre, rupture, conflit, mariage, projets… Prenez connaissance de votre destin et avancez l’esprit tranquille.', // -tarot-quotidien
             6 => 'Myastro : Le site spécialisé dans l’astrologie gratuite. Nous vous proposons des experts de la voyance qui pourront vous informer sur l’évolution de tout ce qui tourne autour de votre vie.',
         ]
     ],
@@ -25,7 +25,7 @@ $ipg_pub_bdd = array(
             2 => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Grâce au calcul de compatibilité amoureuse gratuit de Myastro, ayez une vue précise sur vos affinités avec le signe astrologique de votre homme et bénéficiez de conseils si la situation ne se présente pas bien.', // -personnalite
             3 => 'Entre signes, la compatibilité amoureuse n’est pas toujours évidente. Quelles seront vos affinités avec l’homme de vos rêves et votre couple peut-il marcher ? Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite !', // -tarot
             4 => 'La femme fonctionne généralement sur son côté « yin », l’homme quant à lui utilise le côté « yang ». Que le couple soit hétéro ou homo, il est important de réaliser sa compatibilité amoureuse féminine « yin-yang » MyAstro vous y aidera car ce schéma se vérifie même en cas d’homosexualité.', // -couple
-            5 => 'Un homme est entré dans votre vie, mais cette relation peut-elle évoluer vers le parfait amour ? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir ?', // - tarot-quotidien
+            5 => 'Un homme est entré dans votre vie, mais cette relation peut-elle évoluer vers le parfait amour ? Votre signe astrologique et celui de votre conquête peuvent s’accorder harmonieusement ou au contraire ne pas concorder du tout… Envie de savoir ?', // - tarot-quotidien
             6 => 'Vous êtes aujourd’hui en couple ou vous souhaitez vous mettre en couple mais vous avez besoin de connaître les probabilités pour que ça fonctionne entre vous ? Grâce à Myastro, la compatibilité amoureuse n’aura plus de secrets.',
         ]
     ],
@@ -42,15 +42,17 @@ $ipg_pub_bdd = array(
         'url'   => 'compatibilite-amoureuse-pour-les-femmes',
         'img'   => 'compatibilite-amoureuse-feminine.jpg',
         'desc'  => [
-            'L’année '.$annee.' est-elle est celle de votre couple ? Découvrez la comptabilité amoureuse entre vous et votre partenaire grâce à votre horoscope '.$annee.' gratuit, vos signes astrologiques sont peut-être liés, faits pour être rassemblés, ou… totalement contraires !',
-            'Le calcul de la compatibilité amoureuse gratuit est une information précieuse afin de savoir si vous et votre ami êtes faits l’un pour l’autre. La lecture de la position des astres de vos deux horoscopes donne des indications sur la viabilité et la bonne santé de votre couple.', // -amour
-            'Découvrez votre compatibilité amoureuse et vos affinités avec votre partenaire grâce à l’horoscope gratuit MyAstro, vos signes astrologiques sont-ils compatibles ou opposés ? Les planètes ne mentent jamais et vous apportent des réponses précises.', // -horoscope
-            'L’horoscope gratuit de votre journée ou à plus long terme. Par exemple : vérifier l’affinité et la concordance de caracatères avec votre partenaire. C’est une chose essentielle lorsque vous décidez de cheminer avec celui ou celle qui sera intime. L’harmonie sera-t-elle au RDV ? Ne prenez pas de risques.', // -horoscope-jour
-            'La compatibilité amoureuse permet à la personne Capricorne en couple de mesurer ses affinités avec son partenaire en fonction de leurs signes astrologiques et à la personne Capricorne célibataire de savoir avec quels signes elle a le plus de chances.', //  -capricorne
-            'Le Gémeaux s’attache très facilement et parfois à des personnes avec lesquelles aucune relation solide et durable n’est envisageable… Vos signes astrologiques sont-ils vraiment compatibles ? La réponse avec la compatibilité amoureuse MyAstro.', // -gemeaux
-            'Le Bélier ne supporte pas d’être célibataire, cette tendance à se jeter dans les bras des mauvaises personnes ne lui rend pas service. Avec la compatibilité amoureuse, assurez-vous de savoir si cette fois vos signes astrologiques sont vraiment compatibles.', // -belier
-            'Vous être proche de l’engagement, mais êtes-vous sûr d’être vraiment compatible avec votre bien-aimée ? Seuls les arts divinatoires et leurs pouvoirs peuvent le confirmer, alors découvrez vite votre compatibilité amoureuse gratuite sur MyAstro.', // -portraitf
-            'MyAstro vous permet de réaliser la compatibilité amoureuse avec votre partenaire de façon gratuite. C’est très important car cela permet notamment de faire des arbitrages sur ce qui est acceptable ou non dans vos relations.', // -portraitm
+            0 => 'L’année '.$annee.' est-elle est celle de votre couple ? Découvrez la comptabilité amoureuse entre vous et votre partenaire grâce à votre horoscope '.$annee.' gratuit, vos signes astrologiques sont peut-être liés, faits pour être rassemblés, ou… totalement contraires !',
+            1 => 'Le calcul de la compatibilité amoureuse gratuit est une information précieuse afin de savoir si vous et votre ami êtes faits l’un pour l’autre. La lecture de la position des astres de vos deux horoscopes donne des indications sur la viabilité et la bonne santé de votre couple.', // -amour
+            2 => 'Découvrez votre compatibilité amoureuse et vos affinités avec votre partenaire grâce à l’horoscope gratuit MyAstro, vos signes astrologiques sont-ils compatibles ou opposés ? Les planètes ne mentent jamais et vous apportent des réponses précises.', // -horoscope
+            3 => 'L’horoscope gratuit de votre journée ou à plus long terme. Par exemple : vérifier l’affinité et la concordance de caracatères avec votre partenaire. C’est une chose essentielle lorsque vous décidez de cheminer avec celui ou celle qui sera intime. L’harmonie sera-t-elle au RDV ? Ne prenez pas de risques.', // -horoscope-jour
+            4 => 'La compatibilité amoureuse permet à la personne Capricorne en couple de mesurer ses affinités avec son partenaire en fonction de leurs signes astrologiques et à la personne Capricorne célibataire de savoir avec quels signes elle a le plus de chances.', //  -capricorne
+            5 => 'Le Gémeaux s’attache très facilement et parfois à des personnes avec lesquelles aucune relation solide et durable n’est envisageable… Vos signes astrologiques sont-ils vraiment compatibles ? La réponse avec la compatibilité amoureuse MyAstro.', // -gemeaux
+            6 => 'Le Bélier ne supporte pas d’être célibataire, cette tendance à se jeter dans les bras des mauvaises personnes ne lui rend pas service. Avec la compatibilité amoureuse, assurez-vous de savoir si cette fois vos signes astrologiques sont vraiment compatibles.', // -belier
+            7 => 'Vous être proche de l’engagement, mais êtes-vous sûr d’être vraiment compatible avec votre bien-aimée ? Seuls les arts divinatoires et leurs pouvoirs peuvent le confirmer, alors découvrez vite votre compatibilité amoureuse gratuite sur MyAstro.', // -portraitf
+            8 => 'MyAstro vous permet de réaliser la compatibilité amoureuse avec votre partenaire de façon gratuite. C’est très important car cela permet notamment de faire des arbitrages sur ce qui est acceptable ou non dans vos relations.', // -portraitm
+            9 => 'Vous savez que vous l’aimez mais êtes-vous faits l’un pour l’autre ? Répondez à cette question grâce à la compatibilité amoureuse gratuite que vous propose Myastro. Sachez réellement si vous et votre partenaires aurez la chance d’être compatibles à 100%.',
+           10 => 'Vous être proche de l’engagement, mais êtes-vous sûr d’être vraiment compatible avec votre bien-aimée ? Seuls les arts divinatoires et leurs pouvoirs peuvent le confirmer, alors découvrez vite votre compatibilité amoureuse gratuitement sur MyAstro.',
         ]
     ],
     'compatibilite-amoureuse-pour-les-hommes' => [
@@ -58,15 +60,16 @@ $ipg_pub_bdd = array(
         'url'   => 'compatibilite-amoureuse-pour-les-hommes',
         'img'   => 'compatibilite-amoureuse-pour-les-hommes.jpg',
         'desc'  => [
-            'Vous avez des sentiments pour elle, mais est-ce réciproque ? Votre relation peut-elle durer ? Vous êtes peut-être véritablement faits pour être ensemble, alors consultez votre horoscope de compatibilité amoureuse pour le savoir : vos signes en disent long sur votre couple.',
-            'La compatibilité amoureuse pour les hommes vous donnera la possibilité de savoir si votre amie est astrologiquement compatible avec vous. S’il s’avère que vous êtes faits l’un pour l’autre, vous avez de longues années de bonheur devant vous.', // -amour
-            'Votre compagne et vous êtes-vous faits l’un pour l’autre ? Le seul moyen fiable de le savoir est de découvrir si vous êtes compatibles à partir de vos signes astrologiques et donc de vos personnalités : faites confiance à l’horoscope gratuit de comptabilité amoureuse MyAstro pour votre couple.', // -horoscope
-            'Elle est belle, charmante, charmeuse et vous êtes comme envoûté. Vérifiez gratuitement la compatibilité amoureuse de votre muse. Au plus vous réagirez tôt, au moins vous souffrirez.', // -horoscope-jour
-            'En tant que Capricorne, vous appréciez les relations sérieuses et vous demandez si votre couple peut durer. La compatibilité amoureuse pour les hommes va vous aider à identifier les failles et les forces de votre relation, vous ferez ensuite le bon choix !', // -capricorne
-            'Certes, l’homme Gémeaux est compliqué en amour, mais aujourd’hui vous pouvez vous assurer de votre compatibilité avec votre bien-aimée sur MyAstro : êtes-vous vraiment faits l’un pour l’autre sur le long terme? Les astres vous le diront immédiatement !', // -gemeaux
-            'Fonceur et ambitieux, l’homme Bélier souffre de ses perpétuelles erreurs en amour. Si vos histoires ne marchent jamais, votre signe astrologique est peut-être responsable. La compatibilité pour les hommes MyAstro vous éclaire sur la compatibilité de votre signe !', // -belier
-            'Est-elle la femme de votre vie ? Vous pouvez en avoir le coeur net avec la compatibilité amoureuse gratuite de MyAstro : une compatibilité précise permettant de savoir comment votre couple va évoluer, parfaitement, difficilement ou désastreusement…', // -portraitf
-            'Les hommes sont généralement moins portés sur les consultations des arts divinatoires que les femmes. Messieurs, sachez que ces techniques peuvent vous aider vous aussi. Ainsi, si votre partenaire a une vue sur le futur, vous pouvez vous aussi faire gratuitement un tirage de compatibilité amoureuse.', // -portraitm
+            0 => 'Vous avez des sentiments pour elle, mais est-ce réciproque ? Votre relation peut-elle durer ? Vous êtes peut-être véritablement faits pour être ensemble, alors consultez votre horoscope de compatibilité amoureuse pour le savoir : vos signes en disent long sur votre couple.',
+            1 => 'La compatibilité amoureuse pour les hommes vous donnera la possibilité de savoir si votre amie est astrologiquement compatible avec vous. S’il s’avère que vous êtes faits l’un pour l’autre, vous avez de longues années de bonheur devant vous.', // -amour
+            2 => 'Votre compagne et vous êtes-vous faits l’un pour l’autre ? Le seul moyen fiable de le savoir est de découvrir si vous êtes compatibles à partir de vos signes astrologiques et donc de vos personnalités : faites confiance à l’horoscope gratuit de comptabilité amoureuse MyAstro pour votre couple.', // -horoscope
+            3 => 'Elle est belle, charmante, charmeuse et vous êtes comme envoûté. Vérifiez gratuitement la compatibilité amoureuse de votre muse. Au plus vous réagirez tôt, au moins vous souffrirez.', // -horoscope-jour
+            4 => 'En tant que Capricorne, vous appréciez les relations sérieuses et vous demandez si votre couple peut durer. La compatibilité amoureuse pour les hommes va vous aider à identifier les failles et les forces de votre relation, vous ferez ensuite le bon choix !', // -capricorne
+            5 => 'Certes, l’homme Gémeaux est compliqué en amour, mais aujourd’hui vous pouvez vous assurer de votre compatibilité avec votre bien-aimée sur MyAstro : êtes-vous vraiment faits l’un pour l’autre sur le long terme ? Les astres vous le diront immédiatement !', // -gemeaux
+            6 => 'Fonceur et ambitieux, l’homme Bélier souffre de ses perpétuelles erreurs en amour. Si vos histoires ne marchent jamais, votre signe astrologique est peut-être responsable. La compatibilité pour les hommes MyAstro vous éclaire sur la compatibilité de votre signe !', // -belier
+            7 => 'Est-elle la femme de votre vie ? Vous pouvez en avoir le coeur net avec la compatibilité amoureuse gratuite de MyAstro : une compatibilité précise permettant de savoir comment votre couple va évoluer, parfaitement, difficilement ou désastreusement…', // -portraitf
+            8 => 'Les hommes sont généralement moins portés sur les consultations des arts divinatoires que les femmes. Messieurs, sachez que ces techniques peuvent vous aider vous aussi. Ainsi, si votre partenaire a une vue sur le futur, vous pouvez vous aussi faire gratuitement un tirage de compatibilité amoureuse.', // -portraitm
+            9 => 'Votre amie et vous êtes éperdument amoureux et n’imaginez pas vous séparer l’un de l’autre. Le calcul gratuit de la compatibilité amoureuse pour les hommes vous donnera la possibilité, grâce à l’étude de vos horoscopes, de savoir si vous êtes aussi compatibles que vous le pensez.',
         ]
     ],
     'horoscope-annee' => [
@@ -80,8 +83,9 @@ $ipg_pub_bdd = array(
             3 => 'Les grandes tendances peuvent être dévoilées grâce à l’horoscope annuel '.$annee.'. MyAstro met ce fabuleux outil gratuit à la disposition de tous. Un seul effort vous est demandé, celui de vous concentrer sur votre propre vie afin d’en extraire les pépites et de savoir comment gérer les accidents de parcours.', // -portraitm
             4 => 'Quelles sont les tendances planétaires qui vous sont réservées pour cette année '.$annee.' ? Avec l’horoscope '.$annee.' gratuit, ne vous laissez plus surprendre. La fin de cette année n’aura plus aucun secret pour vous et vous pourrez la terminer tranquillement.', // -tarot
             5 => 'Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope '.$annee.' avec MyAstro qui a déjà eu de grands résultats est chose facile et gratuit. Profitez-en !', // -tarot-mensuel
-            6 => 'Vous souhaitez connaître votre avenir pour la fin de l’année ? L’horoscope gratuit en '.$annee.' est accessible pour tous les visiteurs de Myastro.',
+            6 => 'Vous souhaitez connaître votre avenir pour la fin de l’année ? L’horoscope gratuit en '.$annee.' est accessible pour tous les visiteurs de Myastro.',
             7 => 'Votre horoscope '.$annee.' gratuit vous permettra de terminer l’année en confiance. Préparez-vous aux différents obstacles qui se mettront sur votre chemin et prenez du recul. Nos mediums vous proposent de répondre à toutes vos questions pour les derniers mois de l’année.',
+            8 => 'L’année '.$annee.' n’est pas encore terminée. Avec votre horoscope '.$annee.' gratuit, n’ayez plus aucune crainte. Vous pourrez appréhender calmement les réussites comme les échecs grâce à la lecture des informations que nous transmettent les astres.'
         ]
     ],
     'horoscope-de-la-semaine' => [
@@ -93,7 +97,8 @@ $ipg_pub_bdd = array(
             1 => 'Réussissez tout ce que vous entreprenez cette semaine avec l’horoscope hebdomadaire gratuit : amour, travail, santé, argent, famille et la citation de la semaine, vous aurez toutes les cartes en main pour passer une bonne semaine.', // -portraitf
             2 => 'L’horoscope basé sur la position des planètes vous donne les grandes orientations de votre semaine. Il est toujours confortable d’être avisé avant que les choses ne nous prennent au dépourvu.', // -portraitm
             3 => 'Que vous soyez Taureau ou Capricorne voir Verseau, notre site vous donnera votre horoscope du jour gratuitement. Fini les surprises.',
-            4 => 'Comment connaître son avenir tous les jours ? Très simple, Myastro vous met à disposition votre horoscope du mois gratuitement. Toutes les informations sur votre avenir vous seront communiquées.',
+            4 => 'Comment connaître son avenir tous les jours ? Très simple, Myastro vous met à disposition votre horoscope du mois gratuitement. Toutes les informations sur votre avenir vous seront communiquées.',
+            5 => 'Votre horoscope de la semaine gratuit vous donnera une vision d’ensemble sur les jours à venir. En amour ou au travail, sachez à quoi vous attendre et préparez-vous aux éventuelles déconvenues qui pourraient surgir à tout moment le long de votre semaine.',
         ]
     ],
     'horoscope-du-jour' => [
@@ -154,7 +159,8 @@ $ipg_pub_bdd = array(
             4 => 'Que vous soyez en couple ou célibataire, vous pouvez consulter le tarot du couple gratuit de MyAstro, ce dernier vous permettra de vous confronter aux significations des cartes tirées et de savoir si la personne convoitée est la bonne.', // -portrait-feminin
             5 => 'Les tarots peuvent être tirés pour une personne mais aussi pour une association d’individus. C’est bien de cela que l’on parle pour un couple. Chacun amène sa pierre à l’atmosphère générale du couple. Le tarot de couple peut cependant être demandé par l’un des individus le composant, ça reste « fair ». Cela lui donne un avantage car il captera des flashs du futur.', // -portrait-masuclin
             6 => 'Comment connaître les tendances au sein de votre couple ? Myastro vous propose, grâce au tarot de couple gratuit, de connaître votre avenir amoureux. Plus de secrets pour votre futur avec Myastro.',
-            7 => 'Des problèmes dans votre couple ? Des doutes sur votre partenaire ? Grâce au Tarot de couple gratuit, arrêtez de vous tracasser, posez-vous les bonnes questions et bénéficiez de réels conseils pour votre couple et sa bonne santé.'
+            7 => 'Des problèmes dans votre couple ? Des doutes sur votre partenaire ? Grâce au Tarot de couple gratuit, arrêtez de vous tracasser, posez-vous les bonnes questions et bénéficiez de réels conseils pour votre couple et sa bonne santé.',
+            8 => 'Des problèmes dans votre couple dont vous n’arrivez pas à déceler l’origine ni la cause ? Avec le tarot de couple gratuit, obtenez toutes les informations nécessaires et ne vivez plus sans cesse dans le doute de vivre une relation défectueuse.', // -compatibilite-amoureuse-feminine
         ]
     ],
     'tarot-de-l-amour' => [
@@ -183,7 +189,8 @@ $ipg_pub_bdd = array(
             4 => 'Donnez une chance au tarot, vous ne pouvez pas soupçonner à quel point ses prédictions sont proches de la réalité… Les cartes vous guident vers la prospérité pour toute la semaine avec le tarot hebdomadaire gratuit My Astro.', // -portrait-feminin
             5 => 'Le tarot hebdomadaire peut être réalisé en toute tranquilité. En effet, il s’agit d’un moment privilégié où vous ne pensez qu’à vous. Il n’est pas du nombrilisme ou de l’égoisme. L’homme ne profite pas toujours de ces périodes où il peut se concentrer sur sa vie, la tournure qu’il veut lui imprimer.', // -portrait-masculin
             6 => 'Une fois par semaine, grâce au tirage des cartes, votre avenir n’aura plus de secrets. Notre site vous informera sur votre avenir proche.',
-            7 => 'Aucune semaine ne se ressemble. Cʼest pour cette raison que le tarot hebdomadaire gratuit vous permettra de pouvoir prendre en main votre vie : plus rien nʼest laissé au hasard et vous reprenez le contrôle de toutes les situations désagréables qui peuvent survenir au cours de votre semaine.',
+            7 => 'Aucune semaine ne se ressemble. Cʼest pour cette raison que le tarot hebdomadaire gratuit vous permettra de pouvoir prendre en main votre vie : plus rien nʼest laissé au hasard et vous reprenez le contrôle de toutes les situations désagréables qui peuvent survenir au cours de votre semaine.',
+            8 => 'Chaque semaine étant différente, il sera intéressant pour vous de connaître votre tirage de tarot hebdomadaire. Les différentes couleurs et séries ont chacune une signification qui s’appliquera à vous et à votre situation, lue par l’oracle qui effectue le tirage.',
         ]
     ],
     'tarot-de-marseille' => [
@@ -205,6 +212,7 @@ $ipg_pub_bdd = array(
             5 => 'Le tirage dʼun tarot mensuel pour un homme est signe dʼun intérêt pour son avenir. MyAstro met à disposition ce type de tirage gratuit. Il permet de capter des bribes de lʼavenir et de préparer sa « riposte » car il commence son anticipation. Lʼastrologie, le tarot sont autant dʼoutils pour soulever un coin du voile.', // -portrait-masculin
             6 => 'Tous les mois ne sont pas les mêmes. Après avoir passé plusieurs mois difficiles, pourquoi ne pas connaître votre avenir pour les prochains mois grâce au tarot mensuel. Aujourdʼhui Myastro vous offre cette possibilité.',
             7 => 'Bénéficiez de conseils précieux grâce au tarot mensuel gratuit que nous vous proposons. Des personnes qui maîtrisent la science de la lecture des cartes pourront interpréter votre tirage et vous préparer à tous les évènements à venir dans le mois. Ne laissez plus votre vie être contrôlée par le hasard.',
+            8 => 'Que va-t-il se passer ce mois-ci ? Quelles sont les surprises que vous réserve votre futur ? Avec le tarot mensuel, ayez une visibilité plus importante sur les faits et votre situation psychologique pour le mois à venir et adaptez votre comportement en conséquence.', // -compatibilite-amoureuse-feminine
         ]
     ],
     'tarot-oui-ou-non' => [
@@ -233,6 +241,8 @@ $ipg_pub_bdd = array(
             6 => 'Moins communément utilisé par les hommes, votre tirage de tarot quotidien gratuit peut être mis à profit pour déjouer les pièges nombreux de la vie. C’est simple d’utilisation et s’ils ne l’avouent pas, les hommes sont de plus en plus nombreux à l’utiliser quotidiennement.', // -portrait-masculin
             7 => 'Tous les jours sont différents. C’est pourquoi sur notre site, vous pourrez connaître votre avenir grâce au tarot quotidien mis en place sur Myastro.',
             8 => 'Le Tarot quotidien est un moyen facile et rapide de pouvoir avoir une vision de ce qu’il pourra se produire au cours de votre journée. Ne laissez plus le hasard vous envahir et faites confiance à la taromancie pour pouvoir appréhender tranquillement votre journée et éviter les imprévus.',
+            9 => 'Avec un tirage de tarot quotidien gratuit, portez vos efforts sur les sujets importants de votre journée. Il y a toujours du positif dans la lecture d’un tirage de cartes de tarot et des problèmes plus importants méritent toute votre attention. Identifiez-les et traitez-les.',
+           10 => 'Que va-t-il se passer dans votre vie d’homme aujourd’hui ? Vous pouvez connaître à l’avance les choses qui vont s’imposer à vous dans la journée et les appréhender de la meilleure façon avec le tirage gratuit du tarot quotidien sur MyAstro !',
         ]
     ],
     'tirage-tarot-gratuit' => [
