@@ -70,10 +70,11 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="affiliation" value="adwords" />
                     <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
                     <!-- ########## autres champs pré-remplis ########## -->
+                    <input type="hidden" name="voyant" value="christelle" />
+                    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                     <input type="hidden" name="convertir" value="1" />
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
-                    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                     <input type="hidden" name="optional_birthdate" value="1" />
                     <!-- ############################################### -->
                     <div class="input-container">
