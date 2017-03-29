@@ -8,9 +8,9 @@
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
 $site = getenv('MYASTRO_ROOT_URL');
-$prenom = isset($_SESSION['prenom']) ? $_SESSION['prenom'] : '';
-$email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
-$target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $prenom . '&email=' . $email;
+
+include ('inc/bdd.php');
+include ('include/validation/general-suscribe.php');
 ?>
 <!doctype html>
 <html lang="fr">
@@ -49,7 +49,17 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
         </div>
         <main class="ContentBand">
             <div class="PageWrapper fullview">
-                <form action="<?= $target ?>" method="POST">
+                <form>
+                    <!-- ########## identification formulaire ########## -->
+                    <input type="hidden" name="source" value="tchat-ma" />
+                    <input type="hidden" name="method" value="general-subscribe" />
+                    <input type="hidden" name="support" value="voyance-tchat" />
+                    <input type="hidden" name="affiliation" value="affilbase" />
+                    <!-- ########## autres champs pré-remplis ######### -->
+                    <input type="hidden" name="cguv" value="1" />
+                    <input type="hidden" name="partenaires" value="1" />
+                    <!-- ############################################### -->
+                    
                     <section class="Merci-From">
                         <header class="Merci-From--header">
                             <h2>5 MINUTES de Tchat GRATUITES</h2>
@@ -72,44 +82,17 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
                             <div class="Fields-Table-Row">
                                 <label for="name" class="FormField-Label hidden">Votre prénom</label>
                                 <div class="FormField">
-                                    <input id="name" type="text" name="prenom" value="<?= $prenom ?>" class="FormField-Input" placeholder="Votre prénom" required />
+                                    <input id="name" type="text" name="prenom" class="FormField-Input" placeholder="Votre prénom" required />
                                 </div>
                             </div>
                             <!--eMail-->
                             <div class="Fields-Table-Row">
                                 <label for="email" class="FormField-Label hidden">Votre email</label>
                                 <div class="FormField">
-                                    <input id="email" type="email" name="email" value="<?= $email ?>" class="FormField-Input" placeholder="Votre Email" required />
+                                    <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
                                 </div>
                             </div>
-                            <!--Pays-->
-                            <div class="FormField flex-sb">
-                                <label for="pays" class="FormField-Label">Votre pays </label>
-                                <select name="pays" id="pays" class="FormField-Input" required>
-                                    <option value="" selected>Votre Pays</option>
-                                    <option value="BE">Belgique</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="LU">Luxembourg</option>
-                                    <option value="CH">Suisse</option>
-                                    <option value="FR" selected>France Métropolitaine</option>
-                                    <optgroup label="DOM-TOM">
-                                        <option value="MQ">Martinique</option>
-                                        <option value="GP">Guadeloupe</option>
-                                        <option value="GF">Guyane</option>
-                                        <option value="RE">La Réunion</option>
-                                        <option value="YT">Mayotte</option>
-                                        <option value="PM">St Pierre et Miquelon</option>
-                                        <option value="BL">St Barthélémy</option>
-                                        <option value="SM">St Martin</option>
-                                        <option value="WF">Wallis et Futunua</option>
-                                        <option value="PF">Polynésie Française</option>
-                                        <option value="NC">Nouvelle Calédonie</option>
-                                    </optgroup>
-                                    <option value="ZZ">Autre</option>
-                                </select>
-                            </div>
-                            <!--<a href="<?= $target; ?>" class="btn cta-chat">Je tchat</a>-->
-                            <button class="FormContainer-Submit cta-chat" type="submit" name="valider">Je tchat</button>
+                            <button class="FormContainer-Submit cta-chat" type="submit" name="valider">Je Tchat!</button>
                         </div>
                     </section>
                 </form>
@@ -120,9 +103,10 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
                 <?php include('include/footer_copyright.php'); ?>
             </p>
             <!-- #### SCRIPTS #### -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+            <script src="js/formValidator.js"></script>
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
             <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
-            <script src="js/formValidator.js"></script>
             <!-- #### REMARKETINGS #### -->
             <?php
             include('include/remarketing/adwords.php');
