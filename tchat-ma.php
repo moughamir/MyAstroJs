@@ -50,8 +50,9 @@ $site = getenv('MYASTRO_ROOT_URL');
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="tchat-ma" />
                     <input type="hidden" name="method" value="general-subscribe" />
-                    <input type="hidden" name="support" value="voyance-tchat" />
+                    <input type="hidden" name="support" value="voyance" />
                     <input type="hidden" name="affiliation" value="affilbase" />
+                    <input type="hidden" name="site" value="beta.myastro.fr" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
