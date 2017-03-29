@@ -2,15 +2,13 @@
 @import "s-landing-voyance-2";
 @import "modules/mixins";
 //
-$assets: '/images_landing/pouvoir-des-trois/';
+$assets: '/images_landing/tchat/';
 $promo: $assets+"offre.png";
 // scheme
-$primary: #411575;
-
-/* sidebar element hover, btn, Psychic name, highlight */
-
+$primary: #f40a3b;
+$secondary: #22424d;
+$background: #eaeaea;
 $primary-txt: #ffffff;
-$secondary: #505050;
 $secondary-hvr: #9a9898;
 $icons: #454545;
 // fonts
@@ -39,9 +37,10 @@ html {
 body {
   padding: 0;
   font-family: $courgette;
-  //font-weight: 400;
-  //color: #1f1f1f;
-  color: #fff;
+  background: $background url($assets + 'background.jpg') no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $primary-txt;
 }
 
 .FormContainer {
@@ -50,24 +49,23 @@ body {
 
 .PageWrapper {
   padding: 5px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .Site {
   &Header {
-    background: $primary url($assets + 'header.png') no-repeat center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
+    height: 150px;
+    background: transparent;
   }
   &Logo {
     background: url($assets + 'logo.png') no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
-    width: 220px;
   }
 }
 
@@ -81,24 +79,17 @@ body {
 }
 
 .main {
-  background: url($assets + 'tetra-small.png') no-repeat top left fixed, url($assets + 'tetra-big.png') no-repeat center right fixed, url($assets + 'background.jpg') no-repeat center fixed;
-  background-size: 350px, 450px, cover;
+  min-height: 100vh;
   >section {
     display: block;
     text-align: center;
     margin: 10px auto;
-    //background: rgba(255, 0, 0, 0.1);;
     padding: 10px 0;
   }
 }
 
-.home {
-  background: url($assets + 'pbc.png') no-repeat center;
-  height: 100vh;
-}
-
 .landing-logo {
-  height: 90px;
+  height: 95px;
 }
 
 .section {
@@ -113,25 +104,6 @@ body {
   align-items: center;
 }
 
-
-/*
-.header {
-  background: $primary url($assets + 'header.png') no-repeat center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  z-index: 2;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
-  height: 120px;
-  position: relative;
-  &-content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-*/
-
 ul {
   margin: 0;
   padding: 0
@@ -142,14 +114,22 @@ ul {
   position: relative;
   width: 100%;
   text-align: center;
-  background: $primary;
+  background: $secondary;
   padding: 2px 0;
   margin: 0;
   h1 {
     color: $primary-txt;
-    font-size: 2.5rem;
     margin: 0;
     padding: 5px;
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      background: $primary-txt;
+      @include square(18px);
+      margin: 0 25px;
+      transform: rotate(45deg);
+    }
   }
 }
 
@@ -327,20 +307,20 @@ ul {
 .FormField-Input {
   border: none;
   transition: all 0.25s ease-in;
-  background: #bc91cd;
+  background: $background;
   border-radius: 2px;
   font-size: 2rem;
   box-shadow: inset 1px 1px 6px -2px rgb(0, 0, 0);
   &:active,
   &:focus {
-    box-shadow: 0 0 6px -1px $primary;
-    background: lighten(#bc91cd, 5%);
+    box-shadow: 0 0 6px -1px $secondary;
+    background: lighten($background, 5%);
   }
   &:not([type=radio]):focus,
   &:not([type=radio]):focus:invalid {
     outline: none;
-    box-shadow: 0 0 3px -1px $primary;
-    border-color: $primary;
+    box-shadow: 0 0 3px -1px $secondary;
+    border-color: $secondary;
   }
   &[type=radio] {
     width: 18px !important;
@@ -355,7 +335,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   label {
-    color: black;
     font-size: 2rem;
     margin: 0;
   }
@@ -380,29 +359,13 @@ ul {
   box-shadow: 0 0 6px -1px $primary;
 }
 
-
-/*.FormField-Input {
-  background: #bc91cd;
-  border: none;
-  box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.89);
-  max-width: 530px;
-  width: 300px;
-  height: 38px;
-  padding: 0 10px;
-  border-radius: 2px;
-  &:focus {
-    outline: none;
-  }
-}*/
-
 footer {
   font-family: $openSans;
   text-align: center;
-  position: relative;
+  position: absolute;
   width: 100%;
   bottom: 0;
   margin-top: 2rem;
-  display: none;
 }
 
 .read-more {
@@ -528,19 +491,22 @@ footer {
 
 .Merci {
   &-From {
-    background-color: rgba(172, 150, 165, 0.72);
-    box-shadow: 0px 2px 15px -5px #212121;
+    background-color: rgba(30, 27, 27, .57);
+    box-shadow: 0px 4px 12px -1px #212121;
     width: 60rem;
     select#pays {
       width: 280px;
     }
     &--header {
-      background: $primary;
+      background: $primary-txt;
+      color: $primary;
+      border: 3px solid $primary;
       height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
       h2 {
+        color: $primary;
         margin: 0;
       }
     }
