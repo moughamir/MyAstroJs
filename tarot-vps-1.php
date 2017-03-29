@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Tirage de tarot - Partenariat Voir pour Savoir - Myastro</title>
+        <title>Tirage de tarot - Partenariat Voir pour Savoir | Myastro</title>
     
         <meta name="robots" content="noindex,nofollow">
         

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du mois : Soulevez les doutes, vivez tranquillement - Myastro</title>
+        <title>Horoscope du mois : Soulevez les doutes, vivez tranquillement | Myastro</title>
         <meta name="description" content="L'horoscope du mois de Myastro répond à toutes vos questions et vous prépare pour tous les évènements du mois. Sans déception et sans exception." />
         
         <script src="js/jquery-1.11.js"></script>
@@ -29,15 +29,13 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Right sidebar -->
                         <?php include('include/bloc-droit-secondaire-2.php'); ?>
-
-                        <!-- main content -->
+                        <!-- Main content -->
                         <div class="span6 main-content">
-                            <!-- choix signe astro -->
+                            <!-- Choix signe astro -->
                             <?php include('include/content-choix-signe.php'); ?>
                             <!-- Texte -->
                             <div>

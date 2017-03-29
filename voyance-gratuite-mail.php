@@ -52,7 +52,7 @@
                     </header>
                     <span class="clearfix"></span>
                     
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Right sidebar -->
                         <?php include('include/bloc-droit-principale.php'); ?>
@@ -61,7 +61,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-adv">
                             <div class="widget-title" style="text-align:center;">
-                                <h2 class="h4">Voyance gratuite par mail</h2>
+                                <h4>Voyance gratuite par mail</h4>
                             </div>
                             <div id="form-w" class="widget-content clearfix" style="background-image:url('images/voyance-gratuite-mail.jpg');">
                                 <div class="visible-part form-part form-part-two">

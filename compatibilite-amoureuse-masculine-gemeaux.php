@@ -36,7 +36,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Signe Gémeaux : Les astres, leur alignement et leur position pourront vous indiquer si cette personne que vous chérissez est bien faite pour vous et si la relation doit être entretenue.</h5>
+                                    <p itemprop="headline">Signe Gémeaux : Les astres, leur alignement et leur position pourront vous indiquer si cette personne que vous chérissez est bien faite pour vous et si la relation doit être entretenue.</p>
                                 </div>
 
                             </div>

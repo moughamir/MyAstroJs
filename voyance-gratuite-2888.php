@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance par sms : fiable et confidentielle - Myastro</title>
+    <title>Voyance par sms : fiable et confidentielle | Myastro</title>
 	<meta name="description" content="Vous souhaitez bénéficier de conseils en voyance mais ne voulez pas communiquer de vive voix. Myastro vous propose la voyance par SMS." />
 	
 	

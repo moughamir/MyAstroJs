@@ -26,11 +26,11 @@
         <script src="js/jquery-1.11.js"></script>
         <link rel="stylesheet" href="css/infobulle.css" />
  
-        <?php include('include/header_inc.php'); ?>
+        <?php include('include/header_inc.php');?>
         
         <link rel="stylesheet" type="text/css" href="css/formulaire-top-3.css" />
 
-        <div class="container-fluid" itemscope >
+        <div class="container-fluid">
             <!-- Main Content -->
             <div class="row-fluid">
                 <div class="article-content">
@@ -44,25 +44,23 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-                    
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
-                        <!-- Right sidebar -->
-                        <?php include('include/bloc-droit-secondaire-2.php'); ?>
-                        
-                        <!-- main content -->
+                        <!-- Left sidebar -->
+                        <?php include('include/bloc-droit-secondaire-2.php');?>
+                        <!-- Main content -->
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT : Poissons</h2>
-                                    <img src="images_voyance/signes/poissons.png" class="signe" alt="Symbole astrologique Poissons" />
+                                    <h4>Votre horoscope de la semaine gratuit : Poissons</h4>
                                 </div>
+                                <img src="images_voyance/signes/poissons.png" class="signe" alt="Symbole astrologique Poissons" />
                                 <!-- Résultat horoscope -->
-                                <?php include('include/content-result-accordion.php'); ?>
+                                <?php include('include/content-result-accordion.php');?>
                                 <!-- Partages -->
-                                <?php include('include/content-article-social-share.php'); ?>
+                                <?php include('include/content-article-social-share.php');?>
                             </aside>
-                            <!-- texte -->
+                            <!-- Texte -->
                             <div>
                                 <div class="text-justify">
                                     <p>Désir d’être rassuré sur un rendez-vous sentimental ou envie d’évaluer l’opportunité d’une perspective professionnelle, l’horoscope de la semaine pour les natifs du poisson offre de précieuses prédictions sur de nombreuses questions. Amour, travail, santé, famille, argent, toutes les grandes préoccupations de la vie se trouvent abordées. </p>
@@ -77,17 +75,15 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Left sidebar -->
-                        <?php include('include/bloc-gauche-secondaire-2.php'); ?>
+                        <!-- Right sidebar -->
+                        <?php include('include/bloc-gauche-secondaire-2.php');?>
                     </div>
+<!-- ----------------------------- FIN CONTENU ----------------------------- -->
                 </div>
             </div>
         </div>
-            
-        <?php include('include/footer_inc_horoscope_semaine.php'); ?>
-    
+
+        <?php include('include/footer_inc_horoscope_semaine.php');?>
+
 <script src="js/formValidator.js"></script>
 <script src="js/infoBulle.js"></script>
-   
-

@@ -127,7 +127,7 @@ if(isset($_POST['captcha']) && isset($_POST['motivations']) && isset($_POST['mai
 <br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
 
  <div class="row-fluid">
             <!-- Right sidebar -->

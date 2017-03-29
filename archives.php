@@ -30,7 +30,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Grâce à cette page d'archives vous pouvez désormais en quelques clics découvrir toutes les informations relatives aux activités du site.</h5>
+										<p itemprop="headline">Grâce à cette page d'archives vous pouvez désormais en quelques clics découvrir toutes les informations relatives aux activités du site.</p>
 									</div>
 
 								</div>
@@ -40,7 +40,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
              <div class="sitemap-title">
                                         <h2><a href="#">2013</a></h2>
                                     </div>

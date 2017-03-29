@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
     <head>
-        <title>Horoscope du jour : Comment appréhender votre journée ? - Myastro</title>
+        <title>Horoscope du jour : Comment appréhender votre journée ? | Myastro</title>
         <meta name="description" content="Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>

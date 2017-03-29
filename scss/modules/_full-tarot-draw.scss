@@ -7,9 +7,9 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 
-$card-width: 135px;
-$card-height: 240px;
-$overlap: -47px;
+$card-width: 135;
+$card-height: 240;
+$overlap: -47;
 
 @import "tarot-draw";
 
@@ -52,7 +52,6 @@ $overlap: -47px;
     .WidgetTarot-Card[data-card="6"].notFlipped, .WidgetTarot-Card[data-card="13"].notFlipped, .WidgetTarot-Card[data-card="14"].notFlipped, .WidgetTarot-Card[data-card="15"].notFlipped, .WidgetTarot-Card[data-card="16"].notFlipped, .WidgetTarot-Card[data-card="17"].notFlipped, .WidgetTarot-Card[data-card="18"].notFlipped, .WidgetTarot-Card[data-card="19"].notFlipped, .WidgetTarot-Card[data-card="20"].notFlipped, .WidgetTarot-Card[data-card="21"].notFlipped, .WidgetTarot-Card[data-card="22"].notFlipped {
         display: none;
     }
-    
     .WidgetTarot-Card {
         margin-left: -28px;
         margin-right: -28px;

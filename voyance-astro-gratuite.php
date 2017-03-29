@@ -32,7 +32,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Vous avez des doutes sur certains aspects de votre vie et voulez être rassuré? Faites appel à Myastro.</h5>
+										<p itemprop="headline">Vous avez des doutes sur certains aspects de votre vie et voulez être rassuré? Faites appel à Myastro.</p>
 									</div>
 
 								</div>
@@ -42,7 +42,7 @@
 <br>
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
  <aside class="widget w-sponsors">
                     <div class="widget-title">
                         <h4>Choisissez un Astrologue</h4>

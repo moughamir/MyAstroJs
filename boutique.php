@@ -60,7 +60,7 @@ function prixProduit(prix,detail){
             </header><br>
             <span class="clearfix"></span>
 
-            <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <div class="row-fluid">    
 
                 <?php 

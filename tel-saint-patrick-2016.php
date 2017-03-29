@@ -8,7 +8,7 @@
         <meta name="HandheldFriendly" content="True" />
         <meta name="robots" content="noindex,nofollow" />
 
-        <title>Saint Patrick &#x1F340; - MyAstro</title>
+        <title>Saint Patrick &#x1F340; | Myastro</title>
 
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         

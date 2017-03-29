@@ -30,7 +30,7 @@
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">L'ensemble de règles qui s'appliquent à l'exercice de myastro.</h5>
+										<p itemprop="headline">L'ensemble de règles qui s'appliquent à l'exercice de myastro.</p>
 									</div>
 
 								</div>
@@ -40,7 +40,7 @@
 
                             <span class="clearfix"></span>
 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
             <div style="margin-left:10px;">
 <h2 style="color:#DC4796; font-weight:bold; font-size:13px; text-align:left;">L'équipe de mediums et voyants auditifs My Astro s'engage à respecter avec rigueur la présente charte de déontologie
 :</h2>
