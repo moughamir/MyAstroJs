@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Horoscope 2016 Scorpion: est-ce une bonne année pour vous? - Myastro</title>
+    <title>Horoscope 2016 Scorpion: est-ce une bonne année pour vous? | Myastro</title>
 	<meta name="description" content="Signe Scorpion : Avec Myastro, répondez à vos questionnements de compatibilité avec les personnes qui vous entourent en définissant votre personnalité astrologique." />
     
 	<?php include('include/header_inc.php'); ?>

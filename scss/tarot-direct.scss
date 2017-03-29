@@ -1,16 +1,15 @@
 @charset "UTF-8";
-/* 
-    ----------------------------
-    --      tarot-direct      --
-    ----------------------------
-
-    Created on : 25 mai 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-*/
+/* ============================ [ tarot-direct ] ===============================
+ *
+ * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 @import "templates/s-landing-tarot-3";
 
-/* Dossier images */
+/* Typos */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
+
+/* Images */
 $img_dir : "../images_landing/tarot-direct/";
 $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "cardback.png";
@@ -19,8 +18,6 @@ $bg_fleche : $img_dir + "bg_fleche.png";
 $hexagone : $img_dir + "hexagone_bleu.png";
 $hexagone_hover : $img_dir + "hexagone_rose.png";
 $hexagone_active : $img_dir + "hexagone_turquoise.png";
-$christelle : $img_dir + "christelle.png";
-$sonia : $img_dir + "sonia.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
 $icon_amour : $img_dir + "coeur_bleu.png";
@@ -48,11 +45,12 @@ $woman: $rose;
 $man: $bleu;
 $tchat-bg: #E8E8E8;
 
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
 }
-
 .ContentBand.Principal {
     background-color: $bg-bleu;
     background-repeat: no-repeat;
@@ -69,6 +67,7 @@ body {
     background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center top;
+    min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -76,7 +75,7 @@ body {
     .ContentBand-ColumnHeader { padding-top: 1rem;}
 }
 
-/* --------------------------------- ENTETE --------------------------------- */
+/* ------------------------------- [ ENTETE ] ------------------------------- */
 
 .SiteHeader {
     position: relative;
@@ -133,7 +132,7 @@ body {
     }
 }
 
-/* ---------------------------- CHOIX DU VOYANT ----------------------------- */
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
 
 .PsychicChoice-Psychic {
     &-VisualForm {
@@ -170,15 +169,7 @@ body {
     }
 }
 
-.PsychicChoice-Psychic.Christelle .PsychicChoice-Psychic-Photo {
-    background-image: url($christelle);
-}
-
-.PsychicChoice-Psychic.Sonia .PsychicChoice-Psychic-Photo {
-    background-image: url($sonia);
-}
-
-/* -------------------------- CHOIX DE LA QUESTION -------------------------- */
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
 
 .ThemeChoice-ListItem {
     position: relative;
@@ -238,7 +229,7 @@ body {
     }
 }
 
-/* ------------------------------ TIRAGE TAROT ------------------------------ */
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
 
 .WidgetTarot-Card {
     
@@ -268,20 +259,18 @@ body {
     color: $bleu;
 }
 
-/* ------------------------------- POP VOYANT ------------------------------- */
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
-    &.Christelle .Pop-Voyant-Photo{
-        background-image: url($christelle);
-    }
-    &.Sonia .Pop-Voyant-Photo{
-        background-image: url($sonia);
-    }
 }
 
-/* ------------------------------- FORMULAIRE ------------------------------- */
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
+
+@import "modules_themes/tarot-direct-psychics";
+
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
 
 .FormContainer {
     background-color: $bg-grey;
@@ -335,33 +324,9 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
-.alert {
-    text-align: center;
-    border-radius: 5px;
+@import "modules_themes/form-alert-bootstrap";
 
-    &-danger {
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-    &-success {
-        color: #3c763d;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-    }
-    &-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-    &-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-    }
-}
-
-/* -------------------------- BANDEAU PROMOTIONNEL -------------------------- */
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
@@ -389,7 +354,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ---------------------------------- TCHAT --------------------------------- */
+/* -------------------------------- [ TCHAT ] ------------------------------- */
+
 .Tchat-Gratuit-Title {
     color: $bleu;
 }
@@ -431,7 +397,8 @@ input[type="checkbox"], input[type="radio"] {
     color: $bleu;
 }
 
-/* ------------------------------ DRI-POSTMAIL ------------------------------ */
+/* -------------------------------- [ DRI ] --------------------------------- */
+
 .DRI {
     &-Slogan {
         width: 80%;
@@ -509,7 +476,8 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-/* ------------------------------- PAGE MERCI ------------------------------- */
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
 .Merci-Form {
     background-color: $bleu;
     background-image: url($offre_immediate);

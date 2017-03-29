@@ -36,7 +36,7 @@
                                 <span class="share-icon icon-caret-right"></span>
 
                                 <div class="share-icons">
-                                    <h5 itemprop="headline">Signe Verseau :Myastro vous permet de savoir si cette personne que vous affectionnez tant est faite pour vous. Les astres vous le diront et vous pourrez ensuite prendre votre décision.</h5>
+                                    <p itemprop="headline">Signe Verseau :Myastro vous permet de savoir si cette personne que vous affectionnez tant est faite pour vous. Les astres vous le diront et vous pourrez ensuite prendre votre décision.</p>
                                 </div>
 
                             </div>

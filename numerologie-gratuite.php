@@ -35,7 +35,7 @@
                 </header>
                 <span class="clearfix"></span>
                 
-                <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                 <div class="row-fluid">
                     <!-- Right sidebar -->
                     <?php include('include/bloc-droit-principale-2.php'); ?>

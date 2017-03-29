@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du jour Verseau : comment appréhender votre journée ? - Myastro</title>
+        <title>Horoscope du jour Verseau : comment appréhender votre journée ? | Myastro</title>
 	<meta name="description" content="Signe Verseau : Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>
@@ -56,7 +56,7 @@
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DU JOUR GRATUIT : Verseau</h2>
+                                    <h4>VOTRE HOROSCOPE DU JOUR GRATUIT : Verseau</h4>
                                     <img class="signe" src="images_voyance/signes/verseau.png" title="Sylbole Verseau" />
                                 </div>
                                 <!-- Résultat horoscope -->
