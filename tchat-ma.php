@@ -121,7 +121,6 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
             </p>
             <!-- #### SCRIPTS #### -->
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
-            <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <script src="js/formValidator.js"></script>
             <!-- #### REMARKETINGS #### -->
             <?php
