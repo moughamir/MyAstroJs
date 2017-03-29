@@ -8,10 +8,6 @@
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
 $site = getenv('MYASTRO_ROOT_URL');
-
-include ('inc/config.php');
-include ('inc/bdd.php');
-include ('include/validation/general-suscribe.php');
 ?>
 <!doctype html>
 <html lang="fr">
