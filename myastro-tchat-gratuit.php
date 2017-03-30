@@ -16,7 +16,6 @@ $seo = "affilbase";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
-$redirection = '?email='.$email.'&prenom='.$prenom;
 ?>
 <!doctype html>
 <html lang="fr">
@@ -63,7 +62,7 @@ $redirection = '?email='.$email.'&prenom='.$prenom;
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
-                    <input type="hidden" name="dri" value="<?php echo urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite'.$redirection); ?>" />
+                    <input type="hidden" name="dri" value="<?php echo urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]'); ?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
