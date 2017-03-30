@@ -13,7 +13,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$redirection = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email='.$_GET['email'].'&prenom='.$_GET['prenom'];
+$redirection = '?email='.$_GET['email'].'&prenom='.$_GET['prenom'];
 
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
@@ -26,17 +26,17 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste.">
+        <meta name="description" content="">
         <meta name="robots" content="noindex, nofollow" />
         <meta property="fb:app_id" content="1276526482364681" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Pouvoir des Trois" />
+        <meta property="og:title" content="Tchat MyAstro" />
         <meta property="og:url" content="http://<?= $site ?>/tchat-ma" />
         <meta property="og:image" content="http://<?= $site . '/' . $assets ?>/cover.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="675" />
-        <meta property="og:description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste."/>
+        <meta property="og:description" content=""/>
         <meta property="og:locale" content="fr_FR" />
         <title>Tchat MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
@@ -65,7 +65,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
-                    <input type="hidden" name="dri" value="<?php urlencode($redirection); ?>" />
+                    <input type="hidden" name="dri" value="<?php urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite'.$redirection); ?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
