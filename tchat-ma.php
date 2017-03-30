@@ -46,6 +46,7 @@ $site = getenv('MYASTRO_ROOT_URL');
         </div>
         <main class="ContentBand">
             <div class="PageWrapper fullview">
+                <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="tchat-ma" />
@@ -93,6 +94,7 @@ $site = getenv('MYASTRO_ROOT_URL');
                         </div>
                     </section>
                 </form>
+                </div>
             </div>
         </main>
         <footer>
@@ -102,6 +104,14 @@ $site = getenv('MYASTRO_ROOT_URL');
             <!-- #### SCRIPTS #### -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="js/formValidator.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('html,body').animate({scrollTop: $('#vm-anchor').offset().top}, 1000);
+                });
+                $(document).on('ajax_success', function(e){
+                    $('body').addClass('Step2');
+                });
+            </script>
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
             <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <!-- #### REMARKETINGS #### -->
