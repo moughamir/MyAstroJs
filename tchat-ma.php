@@ -13,12 +13,10 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$redirection = '?email='.$_GET['email'].'&prenom='.$_GET['prenom'];
-
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
-
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+$redirection = '?email='.$email.'&prenom='.$prenom;
 ?>
 <!doctype html>
 <html lang="fr">
