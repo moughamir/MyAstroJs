@@ -65,7 +65,6 @@ $redirection = '?email='.$email.'&prenom='.$prenom;
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
                     <input type="hidden" name="dri" value="<?php echo urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite'.$redirection); ?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
-                    <input type="hidden" name="redirect_method" value="reload_form" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
