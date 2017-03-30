@@ -33,7 +33,7 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
         <title>Tchat MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
         <link rel="stylesheet" href="css/myastro-miniform.css" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
         <![endif]-->
@@ -52,7 +52,7 @@ $target = 'https://voyance-en-direct.tv/myastro/offre-gratuite?prenom=' . $preno
                 <form action="<?= $target ?>" method="POST">
                     <section class="Merci-From">
                         <header class="Merci-From--header">
-                            <h2>5 MINUTES de Tchat GRATUITES</h2>
+                            <h2><span class="cap">5 minutes</span> de Tchat <span class="cap">gratuites</span></h2>
                         </header>
                         <div class="FormContainer">
                             <!---->
