@@ -65,7 +65,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
                     <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
-                    <input type="hidden" name="dri" value="<?php urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite'.$redirection); ?>" />
+                    <input type="hidden" name="dri" value="<?php echo urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite'.$redirection); ?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
