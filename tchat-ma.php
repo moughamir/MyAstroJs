@@ -8,6 +8,7 @@
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
 $site = getenv('MYASTRO_ROOT_URL');
+$question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 ?>
 <!doctype html>
 <html lang="fr">
@@ -53,9 +54,11 @@ $site = getenv('MYASTRO_ROOT_URL');
                     <input type="hidden" name="method" value="general-suscribe" />
                     <input type="hidden" name="support" value="voyance" />
                     <input type="hidden" name="affiliation" value="affilbase" />
+                    <input type="hidden" name="optional_birthdate" value="true" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
+                    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                     <!-- ############################################### -->
                     
                     <section class="Merci-From">
@@ -104,14 +107,6 @@ $site = getenv('MYASTRO_ROOT_URL');
             <!-- #### SCRIPTS #### -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="js/formValidator.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $('html,body').animate({scrollTop: $('#vm-anchor').offset().top}, 1000);
-                });
-                $(document).on('ajax_success', function(e){
-                    $('body').addClass('Step2');
-                });
-            </script>
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
             <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <!-- #### REMARKETINGS #### -->
