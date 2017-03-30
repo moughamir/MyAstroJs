@@ -332,7 +332,7 @@ if(isset($_POST['valider'])){
 									<span class="share-icon icon-caret-right"></span>
 
 									<div class="share-icons">
-										<h5 itemprop="headline">Recevez votre voyance médium gratuit rapide et personnalisée.</h5>
+										<p itemprop="headline">Recevez votre voyance médium gratuit rapide et personnalisée.</p>
 									</div>
 
 								</div>
@@ -350,7 +350,7 @@ if(isset($_POST['valider'])){
                  		echo "</div>";
                  	}
                 ?> 
-                          <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
  <form  id="form" action="inscription-voyance-medium-gratuit-<?= $vt;?>-<?= $ch;?>#form" method="post" onsubmit="return valider()" >
                         <div class="article-content">
                             

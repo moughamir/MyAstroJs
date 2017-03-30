@@ -1,14 +1,9 @@
-/* 
-    ----------------------------
-    --     numerologie-amour     --
-    ----------------------------
-
-    Created on : 19 juillet 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-
-    Description : un layout basé sur une grille d'une seule colonne centrale
-*/
+/* ======================== [ numerologie-amour-2017 ] =========================
+ *
+ * Created on : 19 juillet 2016 By Guillaume Deschamps <guillaumedeschamps75@gmail.com>
+ * Updated on : 10 février 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@charset "UTF-8";
 
 @import "s-landing-voyance-2";
 
@@ -18,16 +13,18 @@ $img_dir : "../images_landing/numerologie-amour-2017/";
 /* Palette */
 $color1 : #17202C;
 $color2 : #FD5610;
-$color3 : #FFFFFF; 
-
-$font1: 'Amatic SC', cursive; // titre-princip1
-$font2: 'Cookie', cursive; // titre-princip1
-$font3: "Open Sans", sans-serif; // texte courant
-$font4: 'Ubuntu Condensed', sans-serif; // titres
-
+$color3 : #FFFFFF;
+$primary: #FF1844;
+$secondary: #AC4B5E;
 $bg : $color1;
 $woman : $color2;
 $men : $color1;
+
+/* Typos */
+$font1: 'Amatic SC', cursive; // titre-principal
+$font2: 'Cookie', cursive; // titre-principal
+$font3: 'Open Sans', sans-serif; // texte courant
+$font4: 'Ubuntu Condensed', sans-serif; // boutons
 
 /* Images */
 $bg1 : $img_dir + "bg1.jpg";
@@ -49,6 +46,7 @@ $ico_trophy : $img_dir + "ico-trophy.png";
 }
 
 
+/* ------------------------------- [ LAYOUT ] ------------------------------- */
 html { height: 100%;}
 body {
     padding: 2rem;
@@ -64,6 +62,7 @@ body {
     background: $bg url($bg2) no-repeat center top fixed;
     background-size: cover;
 }
+
 
 /* ------------------------------ MACRO-TYPOS ------------------------------- */
 h2, button { hyphens: none;}
@@ -406,11 +405,13 @@ input[type="checkbox"], input[type="radio"] {
 
 /* ------------------------- RESULTATS NUMEROLOGIE -------------------------- */
 .wrapper-num-result {
-    max-width: 60rem;
+    max-width: 54rem;
     margin: 0 auto;
     h3 { text-align: left;}
     
     .num-result {
+        flex-wrap: initial;
+        margin-left: 0;
         .num-result-numero {
             font-size: 10rem;  
             margin: 0;
@@ -542,5 +543,11 @@ input[type="checkbox"], input[type="radio"] {
     .TextContent .ContentBand-ColumnHeader {
         background-position: top left;
         background-size: auto 75%;
+    }
+}
+
+@media (min-width: 641px){
+    .grid-1-2>:nth-child(even) {
+        width: calc(100% - 9rem - .01px);
     }
 }

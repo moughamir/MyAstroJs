@@ -26,7 +26,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Horoscope du jour Capricorne : Comment appréhender votre journée ? - Myastro</title>
+        <title>Horoscope du jour Capricorne : Comment appréhender votre journée ? | Myastro</title>
 	<meta name="description" content="Signe Capricorne : Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée." />
         
         <script src="js/jquery-1.11.js"></script>
@@ -49,7 +49,7 @@
                         <div class="row-fluid social-share-footer">
                             <span class="share-icon icon-caret-right"></span>
                             <div class="share-icons">
-                                <h5 itemprop="headline">Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée.</h5>
+                                <p itemprop="headline">Grâce à Myastro, consultez votre horoscope tous les jours et prévoyez ainsi tous les évènements qui vont survenir au cours de la journée.</p>
                             </div>
                         </div>
                     </header>

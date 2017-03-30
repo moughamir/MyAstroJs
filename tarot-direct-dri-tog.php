@@ -9,16 +9,7 @@
 */
 include('include/process-dri.php');
 // Paramètres design
-$cards_dir = 'tarot/cartes/original-grand/';
-$pict_path = 'images_landing/tarot-direct/';
-$css = 'css/tarot-direct.css';
-// Design Noël
-$j = date('j');
-$m = date('n');
-if($m == 12 || ($m == 1 && $j <= 5)){
-    $pict_path = 'images_landing/tarot-direct-noel/';
-    $css = 'css/tarot-direct-noel.css';
-}
+include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 
@@ -68,7 +59,7 @@ if(isset($_SESSION['user_id'])){
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer DRI-Form">
-                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
+                        <div class="Pop Pop-Voyant getFormValue <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
                             <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
@@ -142,9 +133,9 @@ if(isset($_SESSION['user_id'])){
                 </div>
             </div>
         </section>
-        <?php if($draw){ ?>
 <!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
         <section class="ContentBand Tarot Arrowed">
+        <?php if($draw){ ?>
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="WidgetTarot">
@@ -157,8 +148,8 @@ if(isset($_SESSION['user_id'])){
                     </article>
                 </div>
             </div>
-        </section>
         <?php } ?>
+        </section>
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
 
@@ -174,7 +165,4 @@ if(isset($_SESSION['user_id'])){
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

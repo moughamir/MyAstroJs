@@ -89,7 +89,7 @@
                     </header>
                     <span class="clearfix"></span>
                     
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <section class="span270">
                             <!--Barre de centre-->
@@ -118,7 +118,7 @@
                             <aside class="widget w-posts">
                                 <div style="text-align:justify;">
                                     <div class="widget-title">
-                                        <h2 class="h4">Pourquoi opter pour la voyance par téléphone ?</h2>
+                                        <h4>Pourquoi opter pour la voyance par téléphone ?</h4>
                                     </div>
                                     <div class="widget-content text-justify clearfix">
                                         <p>Solliciter les services d’un voyant n’est pas un acte anodin. Il implique de s’ouvrir à une personne souvent inconnue, de lui révéler ses peurs, ses faiblesses, de se mettre à nu. Un obstacle que peu de personnes, pourtant en quête de réponses, consentent à franchir, par pudeur, par gêne, ou tout simplement par timidité.</p><br>
@@ -377,7 +377,7 @@ $voyants = array(
                             <aside class="widget w-posts">
                                 <div class="" >
                                     <div class="widget-title">
-                                        <h2 class="h4">Voyance par téléphone : Posez vos questions aux médiums de MyAstro !</h2>
+                                        <h4>Voyance par téléphone : Posez vos questions aux médiums de MyAstro !</h4>
                                     </div>
                                     <div class="text-justify">
                                         <br><p>Dotés d’un véritable don de voyance, nos médiums vous éclairent, vous guident et vous aident à résoudre vos problèmes du quotidien, à répondre à vos interrogations, à apaiser vos souffrances. Que vous soyez célibataire et à la recherche de l’âme sœur, en couple et en quête d’équilibre sentimental, que vous soyez à la poursuite d’un éventuel succès professionnel et financier, ou que vous cherchiez tout simplement le bonheur et la paix intérieure, notre équipe de voyance par téléphone vous donnera les réponses qui vous permettrons d’affronter vos aléas de la vie courante, vos peurs et vos craintes.</p>

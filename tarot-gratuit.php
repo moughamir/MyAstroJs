@@ -61,7 +61,7 @@
                     
                     <div class="span6 main-content">
                         <div class="cat-widget-title cat-title-tarot widget-t-title first-title">
-                            <h2 class="h4">1 - Tirez vos cartes</h2>
+                            <h4>1 - Tirez vos cartes</h4>
                         </div>
                         <div class="widget-t w-sponsors">
                             <div class="tarot-content">
