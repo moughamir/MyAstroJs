@@ -101,7 +101,7 @@ $site = getenv('MYASTRO_ROOT_URL');
             </p>
             <!-- #### SCRIPTS #### -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-            <script src="js/formValidator-w.js"></script>
+            <script src="js/formValidator.js"></script>
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
             <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <!-- #### REMARKETINGS #### -->
