@@ -46,7 +46,7 @@ $site = getenv('MYASTRO_ROOT_URL');
         </div>
         <main class="ContentBand">
             <div class="PageWrapper fullview">
-                <form>
+                <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="tchat-ma" />
                     <input type="hidden" name="method" value="general-suscribe" />
