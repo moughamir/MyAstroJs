@@ -6,9 +6,16 @@
  * Author     : Mohamed Moughamir <hello@omnizya.com>
  */
 session_start();
-$assets = 'images_landing/pouvoir-des-trois';
-$site = getenv('MYASTRO_ROOT_URL');
+
+$assets = 'images_landing/tchat';
+$pageName = "myastro-tchat-gratuit";
+$method = "general-suscribe";
+$support = "voyance";
+$site = "myastro.fr";
+$seo = "affilbase";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
@@ -16,17 +23,17 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste.">
+        <meta name="description" content="">
         <meta name="robots" content="noindex, nofollow" />
         <meta property="fb:app_id" content="1276526482364681" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Pouvoir des Trois" />
-        <meta property="og:url" content="http://<?= $site ?>/pouvoir-des-trois" />
+        <meta property="og:title" content="Tchat MyAstro" />
+        <meta property="og:url" content="http://<?= $site ?>/tchat-ma" />
         <meta property="og:image" content="http://<?= $site . '/' . $assets ?>/cover.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="675" />
-        <meta property="og:description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste."/>
+        <meta property="og:description" content=""/>
         <meta property="og:locale" content="fr_FR" />
         <title>Tchat MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
@@ -50,10 +57,12 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
                 <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="tchat-ma" />
-                    <input type="hidden" name="method" value="general-suscribe" />
-                    <input type="hidden" name="support" value="voyance" />
-                    <input type="hidden" name="affiliation" value="affilbase" />
+                    <input type="hidden" name="source" value="<?= $pageName; ?>" />
+                    <input type="hidden" name="method" value="<?= $method; ?>" />
+                    <input type="hidden" name="support" value="<?= $support; ?>" />
+                    <input type="hidden" name="site" value="<?= $site; ?>" />
+                    <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
+                    <input type="hidden" name="dri" value="<?php echo urlencode('https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]'); ?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
