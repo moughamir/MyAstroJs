@@ -71,6 +71,10 @@ body {
     background-size: contain;
     @include square(80px);
   }
+  &Copyright a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 .ContentBand {
@@ -88,6 +92,7 @@ body {
 
 .main {
   min-height: 100vh;
+  position: relative;
   >section {
     display: block;
     text-align: center;
