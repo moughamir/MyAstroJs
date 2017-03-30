@@ -8,7 +8,7 @@
 session_start();
 
 $assets = 'images_landing/tchat';
-$pageName = "tchat-ma";
+$pageName = "myastro-tchat-gratuit";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
