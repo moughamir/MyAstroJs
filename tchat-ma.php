@@ -13,7 +13,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$redirection = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email='.$_GET['email'];
+$redirection = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email='.$_GET['email'].'&prenom='.$_GET['prenom'];
 
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
