@@ -12,7 +12,7 @@ $primary-txt: #ffffff;
 $secondary-hvr: #9a9898;
 $icons: #454545;
 // fonts
-$courgette: 'Courgette',
+$fjallaone: 'Fjalla One',
 cursive;
 $openSans: 'Open Sans',
 sans-serif;
@@ -22,7 +22,7 @@ h2,
 button {
   color: $primary-txt;
   font: {
-    family: $courgette;
+    family: $fjallaone;
     weight: lighter;
   }
   ;
@@ -36,8 +36,8 @@ html {
 
 body {
   padding: 0;
-  font-family: $courgette;
-  background: $background url($assets + 'background.jpg') no-repeat center;
+  font-family: $fjallaone;
+  background: $background url($assets + 'background.jpg') no-repeat center fixed;
   -webkit-background-size: cover;
   background-size: cover;
   color: $primary-txt;
@@ -61,11 +61,15 @@ body {
   &Header {
     height: 150px;
     background: transparent;
+    @include respond-to("mobile") {
+      height: auto;
+    }
   }
   &Logo {
     background: url($assets + 'logo.png') no-repeat;
     -webkit-background-size: contain;
     background-size: contain;
+    @include square(80px);
   }
 }
 
@@ -76,6 +80,10 @@ body {
 .fullview {
   align-items: center;
   min-height: 60rem;
+  @include respond-to("mobile") {
+    min-height: initial;
+    margin-top: 10px;
+  }
 }
 
 .main {
@@ -102,11 +110,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-ul {
-  margin: 0;
-  padding: 0
 }
 
 .title {
@@ -143,30 +146,6 @@ ul {
   margin-top: 40px;
 }
 
-.choice {
-  width: 250px;
-  height: 250px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .18), 0 1px 5px 0 rgba(0, 0, 0, .15);
-  transform: translateZ(0);
-  transition: all .25s cubic-bezier(.02, .01, .47, 1);
-  color: $primary-txt;
-  font: {
-    size: 2rem;
-    family: $openSans;
-  }
-  margin: 5px;
-  overflow: hidden;
-  &:hover {
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
-    transition: box-shadow .4s ease-out;
-    -webkit-filter: brightness(85%);
-    filter: brightness(85%);
-  }
-}
-
 // components
 .btn {
   background: $primary;
@@ -194,81 +173,6 @@ ul {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
     transition: box-shadow .4s ease-out;
   }
-}
-
-.rotate {
-  animation: rotate 900ms 2 both linear;
-  transform-origin: center 150px;
-}
-
-.fadein {
-  animation: fadeIn 1500ms 1.5s both ease-in;
-}
-
-.fade {
-  animation: fadeIn 300ms both ease-in;
-}
-
-.expander {
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
-  pointer-events: none;
-  //opacity: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.26);
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes scale {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(2);
-    opacity: 1;
-  }
-}
-
-.scale {
-  animation: scale ease-in-out 600ms;
-}
-
-.post-test {
-  p {
-    padding: 5px;
-    text-align: justify;
-    font-size: 1.9rem;
-    width: 530px;
-    text-shadow: 1px 1px #454545;
-  }
-}
-
-.resault {
-  padding: 5px;
-  margin-top: 15px;
-  text-shadow: 1px 1px #454545;
 }
 
 // form
@@ -302,9 +206,13 @@ ul {
 
 .FormField-Label {
   color: #ffffff;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .FormField-Input {
+  font-family: "Open Sans";
   border: none;
   transition: all 0.25s ease-in;
   background: $background;
@@ -337,6 +245,9 @@ ul {
   label {
     font-size: 2rem;
     margin: 0;
+    @include respond-to("mobile") {
+      display: none;
+    }
   }
 }
 
@@ -368,113 +279,13 @@ footer {
   margin-top: 2rem;
 }
 
-.read-more {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 1px 1px #454545;
-  padding: 5px;
-  padding: 5px 15px;
-  border: 2px solid;
-  border-radius: 2px;
-  width: 200px;
-  margin: 0 auto;
-  box-shadow: 1px 1px 3px -1px #454545;
-  &:hover,
-  &:active {
-    cursor: pointer;
-    color: #fff;
-    text-shadow: -2px 1px 0px #454545;
-    transition: all 300ms ease;
-    box-shadow: -2px -1px 3px -1px #454545;
-  }
-}
-
-.resault {
-  max-width: 60rem;
-  margin: 7px auto;
-  text-align: justify;
-  font-size: 1.8rem;
-  line-height: 1.8;
-}
-
-.promo {
-  background: transparent url($promo) center no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-  width: 260px;
-  height: 87px;
-  display: block;
-  margin: 15px auto;
-}
-
-.hidden {
-  display: none;
-}
-
-.preload {
-  background: url($assets + 'pbc.png') no-repeat center;
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @extend .fadein;
-}
-
-.tri {
-  width: 250px;
-  height: 250px;
-  background: url($assets + 'tri.png') no-repeat center;
-  background-size: cover;
-  filter: drop-shadow(1px 2px 1px black);
-}
-
 // MQ
 @media screen and (max-width: 900px) {
-  .main {
-    background-size: 150px, 240px, cover;
-    background-position: 0 100px, right bottom, center;
-  }
-  .question {
-    font-size: 1.6rem;
-    text-shadow: 0px 0px 1px #3c3c3c;
-    text-align: center;
-  }
-  .choice {
-    width: 100vw;
-    height: 80px;
-    display: flex;
-    font-size: 2.3rem;
-    margin: 3px 0;
-  }
   .FormContainer-Submit {
     font-size: 1.8rem;
   }
-  .final-step {
-    height: 72vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .post-test p {
-    padding: 0 3px;
-    text-align: justify;
-    font-size: 1.5rem;
-    width: 100%;
-  }
   section {
     margin-top: 0;
-  }
-  .resault {
-    font-size: 1.5rem;
   }
   footer {
     position: relative;
@@ -487,6 +298,7 @@ footer {
 //  }
 .cap {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .Merci {
@@ -494,8 +306,14 @@ footer {
     background-color: rgba(30, 27, 27, .57);
     box-shadow: 0px 4px 12px -1px #212121;
     width: 60rem;
+    @include respond-to("mobile") {
+      width: 100vw;
+    }
     select#pays {
       width: 280px;
+      @include respond-to("mobile") {
+        width: 100%;
+      }
     }
     &--header {
       background: $primary-txt;
@@ -508,13 +326,19 @@ footer {
       h2 {
         color: $primary;
         margin: 0;
+        @include respond-to("mobile") {
+          font-size: 1.8rem;
+        }
       }
     }
     .FormContainer {
       width: 80%;
-      min-width: 450px;
       margin: 0 auto;
       display: block;
+      @include respond-to("mobile") {
+        width: 100vw;
+        padding: 1.5rem 0.5rem 0.5rem;
+      }
     }
   }
 }
