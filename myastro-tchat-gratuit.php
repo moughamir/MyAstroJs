@@ -55,8 +55,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <main class="ContentBand">
             <div class="PageWrapper fullview">
                 <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
-                <!--<form id="form-container" class="ajax">-->
-                <form action="fichier.php" method="POST">
+                <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName; ?>" />
                     <input type="hidden" name="method" value="<?= $method; ?>" />
