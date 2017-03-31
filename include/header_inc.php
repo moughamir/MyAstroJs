@@ -9,7 +9,7 @@
 ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="sstyle.css" />
+    <link rel="stylesheet" href="css/myastro.css" />
     <style>
         .modal p.alert {
             margin: 0;

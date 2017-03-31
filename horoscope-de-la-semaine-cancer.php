@@ -18,7 +18,7 @@
     }
     
     $ipg_title = 'HOROSCOPE DE LA SEMAINE CANCER';
-    $ipg_pubs = ['compatibilite-amoureuse-pour-les-femmes-horoscope', 'compatibilite-amoureuse-pour-les-hommes-horoscope'];
+    $ipg_pubs = ['compatibilite-amoureuse-pour-les-femmes#2', 'compatibilite-amoureuse-pour-les-hommes#2'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -52,25 +52,23 @@
                         </div>
                     </header>
                     <span class="clearfix"></span>
-                    
-                    <!--  ************************ ici ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
                     <div class="row-fluid">
                         <!-- Right sidebar -->
-                        <?php include('include/bloc-droit-secondaire-2.php'); ?>	
-							
+                        <?php include('include/bloc-droit-secondaire-2.php');?>			
                         <!-- main content -->
                         <div class="span6 main-content">
                             <aside class="widget w-pictures">
                                 <div class="widget-title">
-                                    <h2 class="h4">VOTRE HOROSCOPE DE LA SEMAINE GRATUIT : Cancer</h2>
-                                    <img src="images_voyance/signes/cancer.png" />
+                                    <h4>VOTRE HOROSCOPE DE LA SEMAINE GRATUIT : Cancer</h4>
                                 </div>
+                                <img src="images_voyance/signes/cancer.png" class="signe" alt="Signe astrologique Cancer" />
                                 <!-- Résultat horoscope -->
-                                <?php include('include/content-result-accordion.php'); ?>
+                                <?php include('include/content-result-accordion.php');?>
                                 <!-- Partages -->
-                                <?php include('include/content-article-social-share.php'); ?>
+                                <?php include('include/content-article-social-share.php');?>
                             </aside>
-                            <!-- texte -->
+                            <!-- Texte -->
                             <div>
                                 <div class="text-justify">
                                     <h2>Un horoscope de la semaine cancer gratuit</h2>
@@ -85,18 +83,18 @@
                             </div><br/>
                             <!-- Horizontal Categories -->
                             <section class="cat-widget h-cat-1">
-                                <?php include('include/content-internal-pub-grid.php'); ?>
+                                <?php include('include/content-internal-pub-grid_v2.php');?>
                             </section>
                         </div>
-                        
-                        <!-- Left sidebar -->
-                        <?php include('include/bloc-gauche-secondaire-2.php'); ?>
+                        <!-- Right sidebar -->
+                        <?php include('include/bloc-gauche-secondaire-2.php');?>
                     </div>
+<!-- ----------------------------- FIN CONTENU ----------------------------- -->
                 </div>
             </div>
         </div>
     
-        <?php include('include/footer_inc_horoscope_semaine.php'); ?>
+        <?php include('include/footer_inc_horoscope_semaine.php');?>
     
 <script src="js/formValidator.js"></script>
 <script src="js/infoBulle.js"></script>

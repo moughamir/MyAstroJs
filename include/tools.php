@@ -51,9 +51,9 @@ function form_phone(&$err, $param = array()){
     $tel_needed = isset($param['tel_needed']) ? $param['tel_needed'] : false;
     $pays = isset($param['pays']) && !empty($param['pays']) ? $param['pays'] : false;
 
-    if($tel_needed && !$tel) { // Téléphone requis mais non remplis
+    if($tel_needed && !$tel){ // Téléphone requis mais non remplis
         $err['tel'] = 'Merci dʼindiquer votre numéro de téléphone.';
-    } elseif($tel) { // Téléphone remplis
+    } elseif($tel){ // Téléphone remplis
         if ($pays){
             // Vérification du format
             $test_baseformat = preg_match("#^[0-9]{5,}$#", $tel);
@@ -166,7 +166,7 @@ function decoder($texte){
 *
 * return string
 */
-function uuid() {
+function uuid(){
 
    // The field names refer to RFC 4122 section 4.1.2
    return sprintf('%04x%04x-%04x-%03x4-%04x-%04x%04x%04x',
@@ -208,18 +208,18 @@ function addFormLog($bdd, $page, $alert, $msg )
 */
 function get_signe_astro($day, $month)
 {
-         if(($month ==  1 && $day >= 21) || ($month ==  2 && $day <= 18)) { $signe = "verseau";}
-    else if(($month ==  2 && $day >= 19) || ($month ==  3 && $day <= 20)) { $signe = "poissons";}
-    else if(($month ==  3 && $day >= 21) || ($month ==  4 && $day <= 20)) { $signe = "belier";}
-    else if(($month ==  4 && $day >= 21) || ($month ==  5 && $day <= 21)) { $signe = "taureau";}
-    else if(($month ==  5 && $day >= 22) || ($month ==  6 && $day <= 21)) { $signe = "gemeaux";}
-    else if(($month ==  6 && $day >= 22) || ($month ==  7 && $day <= 22)) { $signe = "cancer";}
-    else if(($month ==  7 && $day >= 23) || ($month ==  8 && $day <= 23)) { $signe = "lion";}
-    else if(($month ==  8 && $day >= 24) || ($month ==  9 && $day <= 23)) { $signe = "vierge";}
-    else if(($month ==  9 && $day >= 24) || ($month == 10 && $day <= 23)) { $signe = "balance";}
-    else if(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)) { $signe = "scorpion";}
-    else if(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)) { $signe = "sagittaire";}
-    else if(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)) { $signe = "capricorne";}
+         if(($month ==  1 && $day >= 21) || ($month ==  2 && $day <= 18)){ $signe = "verseau";}
+    else if(($month ==  2 && $day >= 19) || ($month ==  3 && $day <= 20)){ $signe = "poissons";}
+    else if(($month ==  3 && $day >= 21) || ($month ==  4 && $day <= 20)){ $signe = "belier";}
+    else if(($month ==  4 && $day >= 21) || ($month ==  5 && $day <= 21)){ $signe = "taureau";}
+    else if(($month ==  5 && $day >= 22) || ($month ==  6 && $day <= 21)){ $signe = "gemeaux";}
+    else if(($month ==  6 && $day >= 22) || ($month ==  7 && $day <= 22)){ $signe = "cancer";}
+    else if(($month ==  7 && $day >= 23) || ($month ==  8 && $day <= 23)){ $signe = "lion";}
+    else if(($month ==  8 && $day >= 24) || ($month ==  9 && $day <= 23)){ $signe = "vierge";}
+    else if(($month ==  9 && $day >= 24) || ($month == 10 && $day <= 23)){ $signe = "balance";}
+    else if(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)){ $signe = "scorpion";}
+    else if(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)){ $signe = "sagittaire";}
+    else if(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)){ $signe = "capricorne";}
 
     return $signe;
 }
@@ -237,18 +237,77 @@ function get_signe_astro_arabe($day, $month)
 {
     $signe = [];
 
-        if(($month ==  1 && $day >= 21) || ($month ==  2 && $day <= 18)) { $signe = ['nom'=>'la fronde', 'code'=>'fronde']; }
-    elseif(($month ==  2 && $day >= 19) || ($month ==  3 && $day <= 20)) { $signe = ['nom'=>'la hache', 'code'=>'hache']; }
-    elseif(($month ==  3 && $day >= 21) || ($month ==  4 && $day <= 20)) { $signe = ['nom'=>'le poignard', 'code'=>'poignard']; }
-    elseif(($month ==  4 && $day >= 21) || ($month ==  5 && $day <= 21)) { $signe = ['nom'=>'la massue paysanne', 'code'=>'massue']; }
-    elseif(($month ==  5 && $day >= 22) || ($month ==  6 && $day <= 21)) { $signe = ['nom'=>'la masse de fer', 'code'=>'masse']; }
-    elseif(($month ==  6 && $day >= 22) || ($month ==  7 && $day <= 22)) { $signe = ['nom'=>'le coutelas', 'code'=>'coutelas']; }
-    elseif(($month ==  7 && $day >= 23) || ($month ==  8 && $day <= 23)) { $signe = ['nom'=>'lʼépée', 'code'=>'epee']; }
-    elseif(($month ==  8 && $day >= 24) || ($month ==  9 && $day <= 23)) { $signe = ['nom'=>'le couteau', 'code'=>'couteau']; }
-    elseif(($month ==  9 && $day >= 24) || ($month == 10 && $day <= 23)) { $signe = ['nom'=>'la chaine', 'code'=>'chaine']; }
-    elseif(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)) { $signe = ['nom'=>'le poignard arabe', 'code'=>'poignardarabe']; }
-    elseif(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)) { $signe = ['nom'=>'lʼarc', 'code'=>'arc']; }
-    elseif(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)) { $signe = ['nom'=>'la lance', 'code'=>'lance']; }
+        if(($month ==  1 && $day >= 21) || ($month ==  2 && $day <= 18)){ $signe = ['nom'=>'la fronde', 'code'=>'fronde'];}
+    elseif(($month ==  2 && $day >= 19) || ($month ==  3 && $day <= 20)){ $signe = ['nom'=>'la hache', 'code'=>'hache'];}
+    elseif(($month ==  3 && $day >= 21) || ($month ==  4 && $day <= 20)){ $signe = ['nom'=>'le poignard', 'code'=>'poignard'];}
+    elseif(($month ==  4 && $day >= 21) || ($month ==  5 && $day <= 21)){ $signe = ['nom'=>'la massue paysanne', 'code'=>'massue'];}
+    elseif(($month ==  5 && $day >= 22) || ($month ==  6 && $day <= 21)){ $signe = ['nom'=>'la masse de fer', 'code'=>'masse'];}
+    elseif(($month ==  6 && $day >= 22) || ($month ==  7 && $day <= 22)){ $signe = ['nom'=>'le coutelas', 'code'=>'coutelas'];}
+    elseif(($month ==  7 && $day >= 23) || ($month ==  8 && $day <= 23)){ $signe = ['nom'=>'lʼépée', 'code'=>'epee'];}
+    elseif(($month ==  8 && $day >= 24) || ($month ==  9 && $day <= 23)){ $signe = ['nom'=>'le couteau', 'code'=>'couteau'];}
+    elseif(($month ==  9 && $day >= 24) || ($month == 10 && $day <= 23)){ $signe = ['nom'=>'la chaine', 'code'=>'chaine'];}
+    elseif(($month == 10 && $day >= 24) || ($month == 11 && $day <= 22)){ $signe = ['nom'=>'le poignard arabe', 'code'=>'poignardarabe'];}
+    elseif(($month == 11 && $day >= 23) || ($month == 12 && $day <= 21)){ $signe = ['nom'=>'lʼarc', 'code'=>'arc'];}
+    elseif(($month == 12 && $day >= 22) || ($month ==  1 && $day <= 20)){ $signe = ['nom'=>'la lance', 'code'=>'lance'];}
+
+    return $signe;
+}
+
+/*
+* function get_signe_astro_chinois
+* Renvoie le signe astro chinois en fonction de la date de naissance
+*
+* @param string : day
+* @param string : month
+* @param string : year
+*
+* return string
+*/
+function get_signe_astro_chinois($day, $month, $year)
+{
+    if($month <= 2){ // Pour les mois de janvier et de février
+        // On cherche la date du nouvel an chinois de cette année
+        $wanted_year = $year;
+        $ref_date = new DateTime('1923-02-15 19:07');
+        $work_date = $ref_date;
+        $moon_cycle = new DateInterval('P29DT12H44M3S');
+        $solstice = ($wanted_year - 1).'1223';
+        $c = 0;
+        if($wanted_year != $ref_date->format('Y')){
+            if($wanted_year < $ref_date->format('Y')){
+                do { $work_date->sub($moon_cycle);}
+                while($work_date->format('Ymd') >= $solstice);
+            }
+            do {
+                $work_date->add($moon_cycle);
+                $compare_to_solstice = $work_date->format('Ymd') < $solstice;
+                if(!$compare_to_solstice){
+                    $c++;
+                }
+            } while($compare_to_solstice || !$compare_to_solstice && $c < 2);
+        }
+        $nouvel_an = $work_date->format('md');
+        // Si la date de naissance est antérieure au nouvel an chinois
+        if($month.$day < $nouvel_an){
+            // on se base sur l'année précédente pour le signe
+            $year--;
+        }
+    }
+
+    $signe = [];
+
+        if($year % 12 ==  0){ $signe = ['nom'=>'le singe', 'code'=>'singe'];}
+    elseif($year % 12 ==  1){ $signe = ['nom'=>'le coq', 'code'=>'coq'];}
+    elseif($year % 12 ==  2){ $signe = ['nom'=>'le chien', 'code'=>'chien'];}
+    elseif($year % 12 ==  3){ $signe = ['nom'=>'le cochon', 'code'=>'cochon'];}
+    elseif($year % 12 ==  4){ $signe = ['nom'=>'le rat', 'code'=>'rat'];}
+    elseif($year % 12 ==  5){ $signe = ['nom'=>'le boeuf', 'code'=>'boeuf'];}
+    elseif($year % 12 ==  6){ $signe = ['nom'=>'le tigre', 'code'=>'tigre'];}
+    elseif($year % 12 ==  7){ $signe = ['nom'=>'le lapin', 'code'=>'lapin'];}
+    elseif($year % 12 ==  8){ $signe = ['nom'=>'le dragon', 'code'=>'dragon'];}
+    elseif($year % 12 ==  9){ $signe = ['nom'=>'le serpent', 'code'=>'serpent'];}
+    elseif($year % 12 == 10){ $signe = ['nom'=>'le cheval', 'code'=>'cheval'];}
+    elseif($year % 12 == 11){ $signe = ['nom'=>'la chèvre', 'code'=>'chevre'];}
 
     return $signe;
 }
@@ -270,7 +329,7 @@ function checkPhoneNumber($tel, $pays = '')
     // supression de tous les caractères non numériques
     $tel = preg_replace("#[^\d]#", "", $tel);
     // ####### SWITCH PAYS #####################################################
-    switch ($pays) {
+    switch ($pays){
         case "FR": // France
         case "MQ": // Martinique
         case "GP": // Guadeloupe
@@ -586,7 +645,7 @@ function return_mois_textuel($mois, $mode = "html"){
     }
     return $mois;
 }
-function prepare( $query, $args ) {
+function prepare( $query, $args ){
   if ( is_null( $query ) )
     return;
 
@@ -614,7 +673,7 @@ function prepare( $query, $args ) {
  * @param bool $pretty Whether or not you want a comma separated string or raw array returned
  * @return string|array Either a string containing a reversed comma separated trace or an array of individual calls.
  */
-function wp_debug_backtrace_summary( $ignore_class = null, $skip_frames = 0, $pretty = true ) {
+function wp_debug_backtrace_summary( $ignore_class = null, $skip_frames = 0, $pretty = true ){
   if ( version_compare( PHP_VERSION, '5.2.5', '>=' ) )
     $trace = debug_backtrace( false );
   else
@@ -624,18 +683,18 @@ function wp_debug_backtrace_summary( $ignore_class = null, $skip_frames = 0, $pr
   $check_class = ! is_null( $ignore_class );
   $skip_frames++; // skip this function
 
-  foreach ( $trace as $call ) {
-    if ( $skip_frames > 0 ) {
+  foreach ( $trace as $call ){
+    if ( $skip_frames > 0 ){
       $skip_frames--;
-    } elseif ( isset( $call['class'] ) ) {
+    } elseif ( isset( $call['class'] ) ){
       if ( $check_class && $ignore_class == $call['class'] )
         continue; // Filter out calls
 
       $caller[] = "{$call['class']}{$call['type']}{$call['function']}";
     } else {
-      if ( in_array( $call['function'], array( 'do_action', 'apply_filters' ) ) ) {
+      if ( in_array( $call['function'], array( 'do_action', 'apply_filters' ) ) ){
         $caller[] = "{$call['function']}('{$call['args'][0]}')";
-      } elseif ( in_array( $call['function'], array( 'include', 'include_once', 'require', 'require_once' ) ) ) {
+      } elseif ( in_array( $call['function'], array( 'include', 'include_once', 'require', 'require_once' ) ) ){
         $caller[] = $call['function'] . "('" . str_replace( array( WP_CONTENT_DIR, ABSPATH ) , '', $call['args'][0] ) . "')";
       } else {
         $caller[] = $call['function'];
@@ -648,7 +707,7 @@ function wp_debug_backtrace_summary( $ignore_class = null, $skip_frames = 0, $pr
     return $caller;
 }
 
-function __( $text, $domain = 'default' ) {
+function __( $text, $domain = 'default' ){
   return $text;
 }
 
@@ -657,7 +716,7 @@ function getSquareAd($show = true)
     $support = array('voyance','tarot');
     $randomSupport = array_rand($support);
 
-    switch ($support[$randomSupport]) {
+    switch ($support[$randomSupport]){
         case 'voyance':
             $imgPath = ROOT_PATH . '/images/bannieres/square/voyance/';
             $imgUrl  = '/images/bannieres/square/voyance/';
@@ -747,7 +806,7 @@ function getVoyantScryscraperVTE2($show = true)
     $files = array_diff(scandir($path), array('.','..'));
     shuffle($files);
 
-    if($show) {
+    if($show){
         echo '<img src="'.$url.$files[0].'" alt="'.str_replace('-', ' ', $files[0]).'" />';
     } else {
         return $files[0];
@@ -756,7 +815,7 @@ function getVoyantScryscraperVTE2($show = true)
 
 function getHoroscopeBlock($type = "jour"){
 
-  switch ($type) {
+  switch ($type){
     case 'jour':
       $baseurl = 'http://'.ROOT_URL.'/horoscope-du-jour';
       break;

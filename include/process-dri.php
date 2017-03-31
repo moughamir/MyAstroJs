@@ -18,6 +18,7 @@ $kgestion = new APIKGestion;
 function secure_formdata($n){
     return htmlentities(strip_tags($n));
 }
+
 $form = array_map('secure_formdata', $_POST);
 $get  = array_map('secure_formdata', $_GET);
 

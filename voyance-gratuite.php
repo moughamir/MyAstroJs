@@ -9,26 +9,42 @@
         
 	<script src="js/jquery-1.11.js"></script>
 	<style>
-	    .infob-tel-w,.infob-email-w {
-		position:absolute; 
-		width:192px;
-		color:#fff; 
-		background:#246BAD; 
-		padding:15px; 
-		border-radius:3px; 
-		box-shadow:0 0 2px rgba(0,0,0,.5);
-		transform:scale(0) rotate(-12deg);
-		transition:all .25s;
-		opacity:0;
+	    .infob-tel-w, .infob-email-w {
+		position: absolute; 
+		width: 192px;
+		color: #fff; 
+		background: #246BAD; 
+		padding: 15px; 
+		border-radius: 3px; 
+		box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+		transform: scale(0) rotate(-12deg);
+		transition: all .25s;
+		opacity: 0;
 	    }
 	    .infob-email-w {
-		margin-top:-76px; 
-		margin-left:-284px;
+		margin-top: -76px; 
+		margin-left: -284px;
 	    }
 	    .infob-tel-w {
-		margin-top:-95px; 
-		margin-left:-284px;
+		margin-top: -95px; 
+		margin-left: -284px;
 	    }
+            .main-content {
+                display: flex;
+                -webkit-display: flex;
+                flex-direction: row-reverse;
+                -webkit-flex-direction: row-reverse;
+                justify-content: space-between;
+                -webkit-justify-content: space-between;
+            }
+            @media (max-width: 979px){
+                .main-content {
+                    flex-direction: column-reverse;
+                    -webkit-flex-direction: column-reverse;
+                    align-items: center;
+                    -webkit-align-items: center;
+                }
+            }
 	</style>
 
 	<?php include('include/header_inc.php'); ?>
@@ -40,7 +56,7 @@
             <div class="row-fluid">
                 <div class="article-content">
                     <header>
-                        <h1 itemprop="headline">Voyance Gratuite : Découvrez votre avenir !</h1>
+                        <a href="#ancre-form"><h1 itemprop="headline">Voyance Gratuite : Découvrez votre avenir !</h1></a>
                         <div class="row-fluid social-share-footer" style="padding:0px;">
                             <span class="share-icon icon-caret-right"></span>
                             <div class="share-icons" >
@@ -50,9 +66,9 @@
                     </header>
                     <span class="clearfix"></span>
                     
-                    <!--  ************************ contenu ****************************  -->
+<!-- ------------------------------- CONTENU ------------------------------- -->
 
-                    <div class="row-fluid" style="background:url('voyance-gratuite-6_files/back_voyance_gratuite.pn') no-repeat fixed center center rgba(0, 0, 0, 0); margin-top:-22px;">
+                    <div class="row-fluid main-content" style="background:url('voyance-gratuite-6_files/back_voyance_gratuite.pn') no-repeat fixed center center rgba(0, 0, 0, 0);">
                         <!-- main content -->
                         <div class="texte-voyance-g">
                             <div class="text-justify">
@@ -72,14 +88,13 @@
                                 <p>Parce que My Astro s’engage à répondre à tous vos besoins et vos attentes en matière de divination, nous mettons à votre entière disposition <a href="http://<?= ROOT_URL ?>/voyance-gratuite-par-tchat">une offre de voyance gratuite par tchat</a>. Une offre qui vous permet de bénéficier de nombreux avantages et de chasser toutes les éventuelles contraintes vous empêchant de franchir le pas. Accessible depuis n’importe lequel de vos écrans, qu’il s’agisse d’un smartphone, d’un ordinateur ou encore d’une tablette numérique, le tchat vous permet d’entrer en consultation directe avec notre équipe de professionnels sans avoir à bouger de chez vous. Ne nécessitant qu’une connexion, vous pouvez ainsi jouir de tous les avantages d’une voyance traditionnelle depuis l’endroit de votre choix. Le tout dans une discrétion absolue vous permettant d’aborder les sujets de votre choix à l’abri des regards. De quoi profiter pleinement et en toute liberté de votre consultation et des interprétations de votre voyant.</p>
                             </div>
                         </div>
-                        
-                        <div class="formulaire-voyance-g">
+                        <div class="formulaire-voyance-g" id="ancre-form">
                             <div class="widget-title vy-title">
-                                <h2 class="h4">Votre voyance gratuite de 2016</h2>
+                                <h4>Votre voyance gratuite de <?= date('Y');?></h4>
                             </div>           
                             <div class="widget w-adv">
-                                <div id="form-w" class="widget-content clearfix">
-                                    <div class="visible-part form-part">
+                                <div id="form-w" class="widget-content clearfix" style="margin-top: 0;">
+                                    <div class="visible-part form-part" style="margin-top: 0;">
                                         <?php include('include/forms/question_complete.php'); ?>
                                     </div>
                                 </div>

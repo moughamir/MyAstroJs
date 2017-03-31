@@ -137,17 +137,15 @@
 }
 
 .widget-title .h4:after {
-	content:"";
-	display:block;
-	position:relative;
-	height:4px;
-	left:50%;
-	margin-left: -30px;
-	margin-top: 10px;
-	width:60px;
-	top:-3px;
-	z-index: 2;
-	background:linear-gradient(to bottom, rgba(251, 131, 250, 1) 0%, rgba(233, 60, 236, 1) 100%) repeat scroll 0 0 #e93cec;	
-	background-image:-moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); 
-	background-size: 12px 12px;
+    content: "";
+    display: block;
+    height: 4px; width: 60px;
+    position: relative;
+    top: -3px; left: 50%;
+    margin-top: 10px; margin-left: -30px;
+    z-index: 2;
+    background-color: #E51E85;	
+    background: -webkit-linear-gradient(-45deg, #E51E85 25%, #EE4BA4 25%, #EE4BA4 50%, #E51E85 50%, #E51E85 75%,#EE4BA4 75%, #EE4BA4);
+    background: linear-gradient(-45deg, #E51E85 25%, #EE4BA4 25%, #EE4BA4 50%, #E51E85 50%, #E51E85 75%,#EE4BA4 75%, #EE4BA4);
+    background-size: 12px 12px;
 }

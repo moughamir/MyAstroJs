@@ -8,6 +8,8 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 
+$how_media_queries: 0 !default; @if $how_media_queries == 0 { $how_media_queries: true}
+
 .How {
     padding: 0 3rem;
     text-align: center;
@@ -76,6 +78,10 @@
     }
 }
 
+.How-WizardItem:first-child .How-WizardItem-Img {
+    margin-left: 1rem;
+}
+
 .How-Horizontal {
     display: flex;
     list-style-type: none;
@@ -119,61 +125,64 @@
     }
 }
 
-@media screen and (max-width: 1000px) and (min-width: 730px){
-    @include column-how-wizard();
-}
-
-@media screen and (max-width: 900px){
-    .How {
-        text-align: center;
-        &-Header {
-            text-align: left;
-        }
-        &-Wizard {
-            margin-bottom: 4rem;
-            &Item {
-                border-left-width: 2.5rem;
-                &::before {
-                    left: -2.6rem;
+@if $how_media_queries {
+/*
+    @media screen and (max-width: 1000px) and (min-width: 730px){
+        @include column-how-wizard();
+    }
+*/
+    @media screen and (max-width: 900px){
+        .How {
+            text-align: center;
+            &-Header {
+                text-align: left;
+            }
+            &-Wizard {
+                margin-bottom: 4rem;
+                &Item {
                     border-left-width: 2.5rem;
+                    &::before {
+                        left: -2.6rem;
+                        border-left-width: 2.5rem;
+                    }
                 }
             }
         }
     }
-}
-@media screen and (max-width: 695px){
-    .How {
-        padding-left: 2rem;
-        padding-right: 2rem;
+    @media screen and (max-width: 695px){
+        .How {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
     }
-}
-@media all and (max-width: 540px){
-    .How-Horizontal {
-        flex-direction: column;
-        &Item {
-            padding-left: 40%;
-            &-Img {
-                margin-left: -6.5rem;
+    @media all and (max-width: 540px){
+        .How-Horizontal {
+            flex-direction: column;
+            &Item {
+                padding-left: 40%;
+                &-Img {
+                    margin-left: -6.5rem;
+                }
             }
         }
     }
-}
-@media screen and (max-width: 485px){
-    .How-Header {
-        font-size: 2rem;
-        text-align: center;
-    }
-    .How-Wizard {
-        height: auto;
-        width: 100%;
-        &Item {
-            display: block;
-            border: none;
-            > * {
-                position: static;
-            }
-            &::before {
-                display: none;
+    @media screen and (max-width: 485px){
+        .How-Header {
+            font-size: 2rem;
+            text-align: center;
+        }
+        .How-Wizard {
+            height: auto;
+            width: 100%;
+            &Item {
+                display: block;
+                border: none;
+                > * {
+                    position: static;
+                }
+                &::before {
+                    display: none;
+                }
             }
         }
     }

@@ -1,0 +1,823 @@
+/**
+* Saint Patrick
+* @version 1.2
+* @author Mohamed Moughamir <hello@omnizya.com>
+* @copyright KGcom 2017
+*/
+
+@charset "utf-8";
+// TODO : include variables & mixins
+@import "knacss501/_normalize/normalize"; // normalizer
+@import "knacss501/_include-media/include-media"; // Media Query mixin
+@import "modules/mixins";
+@import "modules/fonts";
+//== variables
+//0- dir
+$assets: '/images_landing/saint-patrick-2017/';
+//1- Font face
+$lobster: 'Lobster',
+cursive;
+//2- color scheme
+$primary: #074145;
+$secondary: #53FD19;
+$c: #094B4D;
+$dark: #2b2b2b;
+$modal-green: #256F6B;
+$modal-border: $secondary;
+$card-face: $secondary;
+$card-border: #064524;
+$card-shadow: 0px 3px 5px 1px rgba(3, 3, 3, 0.5);
+///
+$line-height-base: 1.428571429 !default; // 20/14
+$border-radius-large: 3px;
+// Images
+$background : $assets + 'background.jpg';
+$carte : $assets + 'Saint-Patrick.svg';
+$shine : $assets + 'sp-shine.svg';
+// Media queries breakpoints
+// --------------------------------------------------
+// Extra small screen / phone
+// Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
+// Small screen / tablet
+// Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+// Medium screen / desktop
+// Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+//== style
+html {
+  // Maybe I will optimize this in near future
+  background: url($background) no-repeat;
+  min-height: 100%;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+@import "modules/modals";
+body {
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+.container {
+  width: 960px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/// header
+.site--header {
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  height: 81px;
+  background: $secondary;
+  //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
+  border: none;
+  box-shadow: $card-shadow;
+}
+
+.logo {
+  width: 73px;
+  height: 73px;
+}
+
+.site-name {
+  font-family: 'Lobster', cursive;
+  color: $primary;
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+/// content
+.center-ner {
+  width: 100%;
+  background-color: rgb( 255, 255, 255);
+  height: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-family: "Fjalla One";
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $primary;
+  }
+}
+
+.study {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+.article--title {
+  color: white;
+  font-family: "Fjalla One";
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.article--content {
+  width: 669px;
+  height: auto;
+  color: white;
+  font-family: Oxygen;
+  font-size: 14px;
+  font-weight: 400;
+  ;
+  margin: 15px auto;
+}
+
+.article--headline {
+  font-size: 32px;
+  font-family: "Lobster";
+  font-weight: 500;
+}
+
+.small {
+  font-size: 26px;
+}
+
+.article--subtitle {
+  font-size: 20px;
+  font-family: "Fjalla One";
+  font-weight: 300;
+}
+
+.article--header {
+  margin: 16px auto;
+  color: #fff;
+  text-align: center;
+}
+
+/// main section
+.main-section {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  article {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+}
+
+/// The Game
+.card_container {
+  margin: 1px auto;
+  padding: 3px;
+  @include square(100px);
+  line-height: 100px;
+  z-index: 1;
+  perspective: 1000;
+}
+
+td.ng-scope {
+  padding: 8px;
+}
+
+.card {
+  background: $primary url($carte) no-repeat 50% 45%;
+  @include square(100%);
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  box-shadow: $card-shadow;
+  transform-style: preserve-3d;
+  transition: all .25s linear;
+  backface-visibility: hidden;
+  &:hover {
+    @extend .shine;
+    background-color: lighten($primary, 5%);
+  }
+}
+
+.face {
+  position: absolute;
+  @include square(100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.face.back {
+  display: block;
+  background-color: $card-face;
+  border-radius: 6px;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: $card-shadow;
+}
+
+.face--image {
+  @include square(85%);
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+
+.flip .card {
+  transform: rotateY(180deg);
+}
+
+table {
+  margin: 0px auto;
+}
+
+.timer {
+  display: block;
+  margin: 10px auto;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: $primary;
+  border-radius: 100%;
+  border: 2px solid #064524;
+  font-size: 30px;
+  text-align: center;
+  color: #eec904;
+  top: 15px;
+  left: 15px;
+}
+
+.critical {
+  color: #FF5400;
+  animation: critical 1s infinite ease-in-out;
+}
+
+.startbtn {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn.btn-default.btn-lg {
+  width: 200px;
+  height: 60px;
+  background: $modal-green none repeat scroll 0% 0%;
+  color: wheat;
+  font-family: Oxygen;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: 1px solid $card-border;
+  box-shadow: $card-shadow;
+}
+
+.cntr {
+  margin: 15px auto;
+  position: relative;
+}
+
+.points {
+  position: absolute;
+}
+
+/// footer
+footer {
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  margin-top: 4em;
+  .attribute {
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 14px;
+  }
+}
+
+.reassure {
+  height: 53px;
+  width: 960px;
+  margin: 10px auto;
+  background: #fefefe;
+  background-image: linear-gradient( 0deg, rgb(224, 220, 220) 0%, rgb(240, 238, 238) 19%, rgb(255, 255, 255) 100%);
+  box-shadow: 0px 1px 5px 0px rgb( 0, 0, 0);
+  ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-of-type(1)::before {
+        content: '';
+        display: none;
+      }
+      &:before {
+        content: '';
+        border-right: 1px solid black;
+        opacity: 0.3;
+        margin-right: 21px;
+        width: 15px;
+        height: 30px;
+      }
+      &:nth-of-type(1)>.elem>.elem-icon {
+        margin-right: 4px !important;
+        margin-left: 9px;
+      }
+      &:nth-of-type(5)>.elem {
+        margin-right: 9px !important;
+      }
+    }
+  }
+}
+
+.elem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 1.3;
+  p {
+    font-family: Oxygen;
+    font-size: 13px;
+    font-weight: 700;
+    color: $primary;
+  }
+}
+
+.elem-icon {
+  width: 27px;
+  height: auto;
+  margin-right: 6px;
+}
+
+/// FORM
+.astro-form {
+  background-color: $primary;
+  width: 381px;
+  height: 416px;
+  z-index: 48;
+  position: relative;
+}
+
+.form--header {
+  top: 15px;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 1px auto !important;
+  background-color: #efebe1;
+  width: 312px;
+}
+
+.form--title {
+  font-size: 20px;
+  font-family: "Fjalla One";
+  color: rgb( 255, 254, 254);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form--subtitle {
+  font-size: 19px;
+  font-family: "Fjalla One";
+  color: rgb( 255, 255, 255);
+  line-height: 1.305;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form--btn {
+  font-size: 20px;
+  font-family: "Oxygen";
+  color: rgb( 0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0.5px 0.866px 0px rgb( 0, 0, 0);
+  border: none;
+  //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
+  background: $secondary;
+  box-shadow: $card-shadow;
+  width: 263px;
+  height: 50px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  &:hover {
+    background-image: linear-gradient(to top, $secondary 0%, darken($secondary, 10%) 100%);
+  }
+}
+
+.container-90 {
+  margin: 0px auto;
+  height: 100%;
+  width: 90%;
+  align-items: stretch;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content {
+  margin: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-8%);
+}
+
+.Genre {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Genre>label>img {
+  margin-right: 10px;
+  height: 17px;
+  width: 17px;
+}
+
+.Date {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#jour {
+  width: 56px;
+  height: 24px;
+  background-color: #FFF;
+  background-image: linear-gradient(to top, #F2F2F2 0%, #FFF 50%, #FFF 100%);
+  border: 1px solid #E6E6E6;
+}
+
+#mois {
+  width: 111px;
+  height: 24px;
+  background-color: #FFF;
+  background-image: linear-gradient(to top, #F2F2F2 0%, #FFF 50%, #FFF 100%);
+  border: 1px solid #E6E6E6;
+}
+
+#year {
+  width: 80px;
+  height: 24px;
+  background-color: white;
+  background-image: linear-gradient(to top, #f2f2f2 0%, white 50%, white 100%);
+  border: 1px solid #e6e6e6;
+}
+
+#prenom {
+  width: 334px;
+  height: 30px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+select {
+  width: 334px;
+  height: 30px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+#pays {
+  width: 203px;
+  margin: 0 5px;
+}
+
+#tel {
+  width: 334px;
+  height: 30px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+label {
+  color: #BDBEBE;
+  font-family: Oxygen;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.gender-l {
+  text-transform: uppercase;
+  font-style: unset;
+  display: inline-flex;
+  margin: 5px 25px;
+  justify-content: center;
+  input {
+    margin: auto 10px !important;
+  }
+}
+
+.pays {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/// modal
+.modal-gif {
+  width: 536px;
+  height: 400px;
+}
+
+.shine {
+  background: $primary url($shine) no-repeat 50% 45%;
+}
+
+/// media Query
+@media (max-width: 960px) {
+  html {
+    background-size: cover;
+  }
+  .container {
+    width: 90% !important;
+    justify-content: center;
+  }
+  main {
+    width: 100vw !important;
+  }
+  .main-section {
+    flex-direction: column;
+  }
+  .reassure {
+    width: 100%;
+    height: auto;
+  }
+  .site--header {
+    height: 58px;
+    width: 100vw;
+    border: none !important;
+  }
+  .logo {
+    width: 48px;
+  }
+  .site-name {
+    font-size: 2em;
+  }
+  .article--headline {
+    font-size: 1.6rem;
+  }
+  .article--subtitle {
+    font-size: 1.15rem;
+  }
+  td.ng-scope {
+    padding: 0.1px;
+  }
+  .card_container {
+    width: 75px;
+    height: 75px;
+    line-height: 100px;
+    z-index: 1;
+    padding: 3px;
+  }
+  .card {
+    background-size: 90%;
+  }
+  .small {
+    font-size: 1.3rem;
+  }
+  .astro-form {
+    width: 100%;
+    height: unset;
+  }
+  .container-90 {
+    width: 95%;
+  }
+  .form-content>* {
+    height: 40px !important;
+  }
+  .form--btn {
+    margin: 0 auto;
+    display: block;
+    position: static;
+    transform: none;
+  }
+  #jour,
+  #mois,
+  #year {
+    height: 40px;
+  }
+  #prenom,
+  #prenom+select,
+  #email,
+  #tel {
+    width: 96%;
+  }
+  .two {
+    margin-top: 3.2333em;
+  }
+  .center-ner h3 {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  .study>.article--title {
+    font-size: 1.3rem;
+  }
+  .article--content {
+    width: 90%;
+    font-size: 1rem;
+  }
+  li::before {
+    display: none;
+  }
+  .reassure ul li:nth-of-type(1)>.elem>.elem-icon {
+    margin: 0 !important;
+  }
+  .reassure ul {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+  .elem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.3;
+    width: 100%;
+  }
+  .reassure ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .elem p {
+    font-family: Oxygen;
+    font-size: 13px;
+    font-weight: 700;
+    color: $primary;
+    width: 80%;
+  }
+  .modal-dialog {
+    width: 100vw !important;
+    margin: 0;
+  }
+  .modal-content {
+    height: auto;
+    border: none;
+  }
+  .modal-body {
+    flex-direction: column !important;
+    padding: 0;
+  }
+  .modal-gif {
+    display: none;
+  }
+  .startbtn {
+    display: block;
+    text-align: center;
+    left: 100%;
+    transform: translate(0%, 29%);
+    position: initial !important;
+  }
+  .modal-dialog {
+    transform: none !important;
+    top: initial !important;
+  }
+  .shine {
+    background: #074145 url($shine) no-repeat 50% 45%;
+    background-size: 90%;
+  }
+}
+
+/// animation
+@keyframes critical {
+  0% {
+    color: #eec904;
+    transform: scale(1);
+  }
+  50% {
+    color: #FF5400;
+    transform: scale(1.1);
+  }
+}
+
+.flash {
+  animation: flash infinite 1.5s ease;
+  &:hover {
+    animation: none;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+
+.modal {
+  &-formSub {
+    display: none;
+  }
+  &-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #115e5b;
+    width: 470px;
+    height: 216px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans";
+  }
+  &-headline {
+    color: #53fe1a;
+    font-size: 1.25rem;
+    font-family: Lobster;
+    font-weight: normal;
+    padding: 10px 0;
+  }
+  &-text {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+  .btn {
+    &-close {
+      position: absolute;
+      /* width: 150px; */
+      border: 0.15rem solid #53fd19;
+      padding: 8px;
+      width: 100px;
+      font-size: 1.4rem;
+      color: #53fd19;
+      text-transform: uppercase;
+      left: 50%;
+      transform: translate(-50%);
+      &:hover {
+        color: #115e5b;
+        background: #53fe1a;
+        transition: all 500ms ease;
+      }
+    }
+  }
+}
+.DRI-Sent {
+    color: white;
+    text-align: center;
+    font-family: Oxygen;
+    strong {
+        font-family: "Fjalla One";
+        font-weight: 500;
+        font-size: 19px;
+    }
+}

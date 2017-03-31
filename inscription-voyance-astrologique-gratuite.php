@@ -325,7 +325,7 @@ if(isset($_POST['valider'])){
 					<div class="row-fluid social-share-footer">
 						<span class="share-icon icon-caret-right"></span>
 						<div class="share-icons">
-							<h5 itemprop="headline">Recevez votre étude Astrologique gratuite rapide et personnalisée.</h5>
+							<p itemprop="headline">Recevez votre étude Astrologique gratuite rapide et personnalisée.</p>
 						</div>
 					</div>
 				</header>
