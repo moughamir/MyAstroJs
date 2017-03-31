@@ -160,7 +160,6 @@ $(document).ready(function() {
     if (typeof d !== typeof undefined && d !== false) {
 
       // Element has this attribute
-      console.info('True');
       if ($(this).data('option') == "amour") {
         holder.html(resault.amour);
         promo = "pdt_amour";
