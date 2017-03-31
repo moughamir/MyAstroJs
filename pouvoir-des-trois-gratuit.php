@@ -12,7 +12,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$question = ['code' => 'question1_pdt', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois'];
+$question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois Mini Formulaire'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
