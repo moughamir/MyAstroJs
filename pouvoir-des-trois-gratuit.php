@@ -12,7 +12,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$question = ['code' => 'question_pdt_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois'];
+$question = ['code' => 'question1_pdt', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
@@ -92,7 +92,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="Fields-Table-Row">
                                 <label for="name" class="FormField-Label hidden">Votre prénom</label>
                                 <div class="FormField">
-                                    <input id="name" type="text" name="email" class="FormField-Input" value="<?= $prenom ?>" placeholder="Votre prénom" required />
+                                    <input id="name" type="text" name="prenom" class="FormField-Input" value="<?= $prenom ?>" placeholder="Votre prénom" required />
                                 </div>
                             </div>
                             <!--eMail-->
@@ -102,33 +102,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                     <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" placeholder="Votre Email" required />
                                 </div>
                             </div>
-                            <!--Pays-->
-                            <div class="FormField flex-sb">
-                                <label for="pays" class="FormField-Label">Votre pays </label>
-                                <select name="pays" id="pays" class="FormField-Input" required>
-                                    <option value="" selected>Votre Pays</option>
-                                    <option value="BE">Belgique</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="LU">Luxembourg</option>
-                                    <option value="CH">Suisse</option>
-                                    <option value="FR" selected>France Métropolitaine</option>
-                                    <optgroup label="DOM-TOM">
-                                        <option value="MQ">Martinique</option>
-                                        <option value="GP">Guadeloupe</option>
-                                        <option value="GF">Guyane</option>
-                                        <option value="RE">La Réunion</option>
-                                        <option value="YT">Mayotte</option>
-                                        <option value="PM">St Pierre et Miquelon</option>
-                                        <option value="BL">St Barthélémy</option>
-                                        <option value="SM">St Martin</option>
-                                        <option value="WF">Wallis et Futunua</option>
-                                        <option value="PF">Polynésie Française</option>
-                                        <option value="NC">Nouvelle Calédonie</option>
-                                    </optgroup>
-                                    <option value="ZZ">Autre</option>
-                                </select>
-                            </div>
-                            <!--<a href="<?= $target; ?>" class="btn cta-chat">Je tchat</a>-->
                             <button class="FormContainer-Submit cta-chat" type="submit" name="valider">Je tchat</button>
                         </div>
                     </section>
@@ -141,7 +114,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </p>
             <!-- #### SCRIPTS #### -->
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
-            <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <script src="js/formValidator.js"></script>
             <!-- #### REMARKETINGS #### -->
             <?php
