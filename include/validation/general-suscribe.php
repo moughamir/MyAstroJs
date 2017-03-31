@@ -40,7 +40,7 @@ $rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_sourc
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
-    $website = 'myastro.dev';
+    $website = 'myastro.fr';
 }
 if(!$source){
     addFormLog($bdd, $page, 'WARNING', 'Missing Source, setting <naturel> by default');
