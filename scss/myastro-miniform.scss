@@ -205,6 +205,41 @@ body {
   color: black;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vw;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .7);
+  color: #000;
+}
+
+.alert {
+  border-radius: 3px;
+  min-width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  position: absolute;
+  border: 1px solid rgba(242, 242, 242, 0.28);
+  background-color: #BDE5F8;
+  border-color: darken(#BDE5F8, 10%);
+  &-success {
+    background: #DFF2BF;
+    border-color: darken(#DFF2BF, 10%);
+  }
+  &-warning {
+    background: #FEEFB3;
+    border-color: darken(#FEEFB3, 10%);
+  }
+  &-danger {
+    background: #FFBABA;
+    border-color: darken(#FFBABA, 10%);
+  }
+}
+
 .FormContainer-Submit {
   @extend .btn;
 }
