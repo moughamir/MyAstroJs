@@ -43,6 +43,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <![endif]-->
     </head>
     <body class="main">
+      <div class="overlay" id="form-overlay"></div>
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <div class="SiteLogo"></div>
