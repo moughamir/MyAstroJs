@@ -13,7 +13,7 @@ $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] 
 $retour = array();
 $trouve = false;
 $reinscription = false;
-$tchatabo_dri =  ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"];
+$tchatabo_dri =  ["tarot-en-direct/offre-gratuite", "tarot-direct-merci", "myastro/offre-gratuite"];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
 
@@ -40,7 +40,7 @@ $rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_sourc
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
-    $website = 'myastro.fr';
+    $website = 'myastro.dev';
 }
 if(!$source){
     addFormLog($bdd, $page, 'WARNING', 'Missing Source, setting <naturel> by default');
@@ -485,6 +485,8 @@ if(empty($err)){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
                 if($dri == "tarot-en-direct/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
+                } elseif ($dri == "myastro/offre-gratuite"){
+                    $redirect_url = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]';
                 } else {
                     $redirect_url = $dri;
                 }
