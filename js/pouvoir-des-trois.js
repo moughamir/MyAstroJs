@@ -105,7 +105,7 @@ $(document).ready(function() {
       $(".tri").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
         $(this).hide();
         $('.post-test').removeClass('hidden').addClass('fade');
-        $('footer').show();
+
       });
 
     });
@@ -160,7 +160,7 @@ $(document).ready(function() {
     if (typeof d !== typeof undefined && d !== false) {
 
       // Element has this attribute
-      console.info('True');
+
       if ($(this).data('option') == "amour") {
         holder.html(resault.amour);
         promo = "pdt_amour";

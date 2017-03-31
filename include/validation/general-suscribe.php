@@ -13,7 +13,7 @@ $redirect_method = isset($param['redirect_method']) ? $param['redirect_method'] 
 $retour = array();
 $trouve = false;
 $reinscription = false;
-$tchatabo_dri =  ["tarot-en-direct/offre-gratuite", "tarot-direct-merci"];
+$tchatabo_dri =  ["pouvoir-des-trois/offre-gratuite", "tarot-en-direct/offre-gratuite", "tarot-direct-merci", "myastro/offre-gratuite"];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
 
@@ -483,7 +483,9 @@ if(empty($err)){
             }
         } elseif(in_array($dri, $tchatabo_dri)){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
-                if($dri == "tarot-en-direct/offre-gratuite"){
+                if($dri == "pouvoir-des-trois/offre-gratuite") {
+                    $redirect_url = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]';
+                } elseif($dri == "tarot-en-direct/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
                 } else {
                     $redirect_url = $dri;
