@@ -7,7 +7,7 @@
  */
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
-$pageName = "pouvoir-des-trois-gratuit";
+$pageName = "pdt-tchat-gratuit-m";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
