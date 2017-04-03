@@ -7,12 +7,12 @@
  */
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
-$pageName = "pouvoir-des-trois";
+$pageName = "pouvoir-des-trois-grand-gratuit";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$dri = "pouvoir-des-trois-dri";
+$dri = "pouvoir-des-trois/offre-gratuite";
 
 $questions = array(
     'Amour' => array(
