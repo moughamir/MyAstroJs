@@ -7,22 +7,34 @@
  */
 session_start();
 $assets = 'images_landing/pouvoir-des-trois';
-$pageName = "pouvoir-des-trois-";
+$pageName = "pouvoir-des-trois";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $seo = "affilbase";
-$question = ['code' => 'question_pdt_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois'];
+$dri = "pouvoir-des-trois-dri";
+
+$questions = array(
+    'Amour' => array(
+        ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Vais-je rencontrer l’amour ?']
+    ),
+    'Argent' => array(
+        ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Vais-je gagner de l’argent ?']
+    ),
+    'Travail' => array(
+        ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?']
+    )
+);
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="">
+        <meta name="description" content="" />
         <meta name="robots" content="noindex, nofollow" />
         <meta property="fb:app_id" content="1276526482364681" /> 
         <meta property="og:type" content="website" />
@@ -37,13 +49,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <title>Pouvoir Des Trois | MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
         <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet" />
         <!--[if lt IE 9]>
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
         <![endif]-->
     </head>
     <body class="main">
-      <div class="overlay" id="form-overlay"></div>
+        <div class="overlay" id="form-overlay"></div>
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <div class="SiteLogo"></div>
@@ -87,17 +99,18 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="pouvoir-des-trois" />
-                                <input type="hidden" name="method" value="general-suscribe" />
-                                <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
-                                <input type="hidden" name="dri" value="pouvoir-des-trois/offre-gratuite" />
+                                <input type="hidden" name="source" value="<?= $pageName; ?>" />
+                                <input type="hidden" name="method" value="<?= $method; ?>" />
+                                <input type="hidden" name="support" value="<?= $support; ?>" />
+                                <input type="hidden" name="site" value="<?= $site; ?>" />
+                                <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
+                                <input type="hidden" name="dri" value="<?= $dri; ?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="camp" id="promo">
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="question_code" id="theme_id" value="" />
+                                <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <!-- ############################################### -->
                                 <input type="hidden" id="name" name="prenom" value=""/>
                                 <div class="Fields-Table-Row">
