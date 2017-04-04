@@ -103,9 +103,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="method" value="<?= $method; ?>" />
                                 <input type="hidden" name="support" value="<?= $support; ?>" />
                                 <input type="hidden" name="site" value="<?= $site; ?>" />
-                                <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
+                                <input type="hidden" name="affiliation" value="<?= $adw; ?>" />
                                 <input type="hidden" name="dri" value="<?= $dri; ?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="camp" id="promo">
                                 <input type="hidden" name="cguv" value="1" />

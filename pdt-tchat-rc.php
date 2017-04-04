@@ -11,9 +11,8 @@ $pageName = "pdt-tchat-rc";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$seo = "affilbase";
+$reflex = "reflexcache";
 $dri = "pouvoir-des-trois/offre-gratuite";
-
 $questions = array(
     'Amour' => array(
         ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Vais-je rencontrer l’amour ?']
@@ -25,6 +24,9 @@ $questions = array(
         ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?']
     )
 );
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
@@ -103,9 +105,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="method" value="<?= $method; ?>" />
                                 <input type="hidden" name="support" value="<?= $support; ?>" />
                                 <input type="hidden" name="site" value="<?= $site; ?>" />
-                                <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
+                                <input type="hidden" name="affiliation" value="<?= $reflex; ?>" />
                                 <input type="hidden" name="dri" value="<?= $dri; ?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="camp" id="promo">
                                 <input type="hidden" name="cguv" value="1" />
