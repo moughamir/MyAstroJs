@@ -9,8 +9,6 @@
     $assets = 'images_landing/tchat';
     $pageName = 'myastro-tchat-dri';
     $site   = getenv('MYASTRO_ROOT_URL');
-    $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
-    $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
@@ -55,10 +53,19 @@
                 <article class="FormContainer DRI-Form">
                     <div class="Fields-Table">
                         <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-                        <div class="">
-                            <p class="DRI-Sent"> Merci, votre demande de rappel a bien été prise en compte.<br/> <strong>Un voyant vous recontactera dans quelques instants</strong>. </p>
-                        </div>
-                        <?php } else { ?>
+                    <p class="message">
+                        Merci, votre demande a bien été prise en compte.<br/>
+                        <strong class="highlight">Un voyant vous recontactera dans quelques instants</strong>.
+                    </p>                        
+                <?php } else { ?>
+                    <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+                <p class="alert alert-danger">
+                    <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br>
+                        <?php foreach($err as $msg){
+                            echo $msg.'<br>';
+                        } ?>
+                </p>
+                    <?php } ?>
                         <h2 class="DRI-Form-Title"> Vous avez déjà bénéficié de l’offre :<br><strong>&#8220; 3 minutes de tchat gratuit &#8221;</strong></h2>
                         <p> Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>En attendant, vous pouvez consulter un voyant immédiatement par téléphone.</p>
                         <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
