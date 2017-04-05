@@ -63,6 +63,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         </p>
                     </div>
                     <?php } else { ?>
+                        <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+                    <p class="alert alert-danger">
+                        <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br>
+                            <?php foreach($err as $msg){
+                                echo $msg.'<br>';
+                            } ?>
+                    </p>
+                    <?php } ?>
+                    
                     <h2 class="DRI-Form-Title"> Vous avez déjà bénéficié de l’offre :<br><strong>&#8220; 3 minutes de tchat gratuit &#8221;</strong></h2>
                     <p> Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>En attendant, vous pouvez consulter un voyant immédiatement par téléphone.</p>
                     <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
@@ -107,6 +116,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" name="prenom" value="<?= $prenom;?>" />
                         <h1 class="DRI-Slogan">Vos 10 premières minutes <span class="cap">gratuites</span> </h1>
                         <!-- SUBMIT -->
                             <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel">Rappel Gratuit</button>
