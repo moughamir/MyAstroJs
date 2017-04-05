@@ -32,3 +32,35 @@
   font-weight: 700;
   src: local('Oxygen Bold'), local('Oxygen-Bold'), url(https://fonts.gstatic.com/s/oxygen/v5/yVHpdQrmTj9Kax1tmFSx2ltXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
 }
+
+@font-face {
+  font-family: 'Caviar Dreams regular';
+  src: url('fonts/CaviarDreams/CaviarDreams-regular.eot');
+  src: url('fonts/CaviarDreams/CaviarDreams-regular.eot?#iefix') format('embedded-opentype'), url('fonts/CaviarDreams/CaviarDreams-regular.woff') format('woff'), url('fonts/CaviarDreams/CaviarDreams-regular.ttf') format('truetype'), url('fonts/CaviarDreams/CaviarDreams-regular.svg#caviar_dreamsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams italic';
+  src: url('fonts/CaviarDreams/CaviarDreams-italic.eot');
+  src: url('fonts/CaviarDreams/CaviarDreams-italic.eot?#iefix') format('embedded-opentype'), url('fonts/CaviarDreams/CaviarDreams-italic.woff') format('woff'), url('fonts/CaviarDreams/CaviarDreams-italic.ttf') format('truetype'), url('fonts/CaviarDreams/CaviarDreams-italic.svg#caviar_dreamsitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams bold';
+  src: url('fonts/CaviarDreams/CaviarDreams-bold.eot');
+  src: url('fonts/CaviarDreams/CaviarDreams-bold.eot?#iefix') format('embedded-opentype'), url('fonts/CaviarDreams/CaviarDreams-bold.woff') format('woff'), url('fonts/CaviarDreams/CaviarDreams-bold.ttf') format('truetype'), url('fonts/CaviarDreams/CaviarDreams-bold.svg#Ccaviar_dreamsbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams bold italic';
+  src: url('fonts/CaviarDreams/CaviarDreams-bold-italic.eot');
+  src: url('fonts/CaviarDreams/CaviarDreams-bold-italic.eot?#iefix') format('embedded-opentype'), url('fonts/CaviarDreams/CaviarDreams-bold-italic.woff') format('woff'), url('fonts/CaviarDreams/CaviarDreams-bold-italic.ttf') format('truetype'), url('fonts/CaviarDreams/CaviarDreams-bold-italic.svg#caviar_dreamsbold_italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
