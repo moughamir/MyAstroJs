@@ -9,9 +9,6 @@ include("include/process-dri.php");
 $assets = 'images_landing/pouvoir-des-trois';
 $pageName = "pdt-tchat-dri";
 $site   = getenv('MYASTRO_ROOT_URL');
-//$email  = isset($_SESSION['email'])? $_SESSION['email']: '';
-$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
