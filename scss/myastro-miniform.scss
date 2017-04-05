@@ -341,8 +341,8 @@ footer {
   font-weight: 600;
 }
 
-.Merci {
-  &-From {
+.Merci, .DRI {
+  &-Form {
     background-color: rgba(30, 27, 27, .57);
     box-shadow: 0px 4px 12px -1px #212121;
     width: 60rem;
@@ -379,6 +379,74 @@ footer {
         width: 100vw;
         padding: 1.5rem 0.5rem 0.5rem;
       }
+    }
+  }
+}
+
+.DRI {
+  &-Slogan {
+    color: $primary;
+    border: 1px solid $primary;
+    padding: 5px;
+    max-width: 320px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    @include respond-to("mobile") {
+      font-size: 1.4rem;
+    }
+  }
+  &-Form {
+    .FormContainer-Submit {
+      bottom: -20px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @include respond-to("mobile") {
+        bottom: -38px;
+      }
+    }
+    &-Title {
+      background-color: #fff;
+      color: $primary;
+      text-align: center;
+      line-height: initial;
+      padding: 5px;
+      font-family: "Caviar Dreams regular";
+      font-weight: 600;
+      @include respond-to("mobile") {
+        font-size: 1.5rem;
+      }
+    }
+    &-Subtitle {
+      color: $primary;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+    .FormField {
+      &-Label {
+        font-family: "Open Sans";
+        font-weight: 500;
+        &:after {
+          content: ' : ';
+        }
+      }
+      &-Input {
+        border-radius: 5px;
+        background: #fff;
+        font-family: "Open Sans";
+        font-weight: 600;
+        color: #454545;
+      }
+    }
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: "Open Sans";
+    }
+    select#pays {
+      width: 100%;
     }
   }
 }

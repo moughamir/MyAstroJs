@@ -71,8 +71,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                     <!-- ############################################### -->
                     
-                    <section class="Merci-From">
-                        <header class="Merci-From--header">
+                    <section class="Merci-Form">
+                        <header class="Merci-Form--header">
                             <h2><span class="cap">5 minutes</span> de Tchat <span class="cap">gratuites</span></h2>
                         </header>
                         <div class="FormContainer">

@@ -1,24 +1,20 @@
 <?php
-/**
- * pouvoir-des-trois == AFFILBASE
- * 
- * Created on : Feb 13th, 2017
- * Author     : Mohamed Moughamir <hello@omnizya.com>
- */
-session_start();
-
-$assets = 'images_landing/tchat';
-$pageName = "myastro-tchat";
-$method = "general-suscribe";
-$support = "voyance";
-$site = "myastro.fr";
-$seo = "affilbase";
-$question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
-$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
+    /**
+     * Tchat My Astro DRi
+     * 
+     * Created on : Apr 5th, 2017
+     * Author     : Mohamed Moughamir <hello@omnizya.com>
+     */
+    include('include/process-dri.php');
+    $assets = 'images_landing/tchat';
+    $pageName = 'myastro-tchat-dri';
+    $site   = getenv('MYASTRO_ROOT_URL');
+    $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+    $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!doctype html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,13 +23,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta name="robots" content="noindex, nofollow" />
         <meta property="fb:app_id" content="1276526482364681" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Tchat MyAstro" />
+        <meta property="og:title" content="DRI Tchat MyAstro" />
         <meta property="og:url" content="http://<?= $site ?>/tchat-ma" />
         <meta property="og:image" content="http://<?= $site . '/' . $assets ?>/cover.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="675" />
-        <meta property="og:description" content=""/>
+        <meta property="og:description" content="" />
         <meta property="og:locale" content="fr_FR" />
         <title>Tchat MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
@@ -43,6 +39,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
         <![endif]-->
     </head>
+
     <body class="main">
         <div class="overlay" id="form-overlay"></div>
         <header class="SiteHeader">
@@ -55,76 +52,71 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </div>
         <main class="ContentBand">
             <div class="PageWrapper fullview">
-                
-                <form id="form-container" class="ajax">
-                    <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                    <input type="hidden" name="method" value="<?= $method; ?>" />
-                    <input type="hidden" name="support" value="<?= $support; ?>" />
-                    <input type="hidden" name="site" value="<?= $site; ?>" />
-                    <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
-                    <input type="hidden" name="dri" value="myastro/offre-gratuite" />
-                    <input type="hidden" name="optional_birthdate" value="true" />
-                    <!-- ########## autres champs pré-remplis ######### -->
-                    <input type="hidden" name="cguv" value="1" />
-                    <input type="hidden" name="partenaires" value="1" />
-                    <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
-                    <!-- ############################################### -->
-                    
-                    <section class="Merci-From">
-                        <header class="Merci-From--header">
-                            <h2><span class="cap">5 minutes</span> de Tchat <span class="cap">gratuites</span></h2>
-                        </header>
-                        <div class="FormContainer">
-                            <!---->
-                            <div class="FormField radio">
-                                <div class="FormField-TableInputContainer fixed-2-col gender">
-                                    <div class="FormField-TableInputContainer-Cell">
-                                        <label for="sexe-f" class="FormField-Label "><span class="ico ico-woman fa fa-venus"></span>Femme</label>
-                                        <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
-                                    </div>
-                                    <div class="FormField-TableInputContainer-Cell">
-                                        <label for="sexe-h" class="FormField-Label"><span class="ico ico-man fa fa-mars"></span>Homme</label>
-                                        <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Prénom-->
-                            <div class="Fields-Table-Row">
-                                <label for="name" class="FormField-Label hidden">Votre prénom</label>
-                                <div class="FormField">
-                                    <input id="name" type="text" name="prenom" class="FormField-Input" placeholder="Votre prénom" required />
-                                </div>
-                            </div>
-                            <!--eMail-->
-                            <div class="Fields-Table-Row">
-                                <label for="email" class="FormField-Label hidden">Votre email</label>
-                                <div class="FormField">
-                                    <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
-                                </div>
-                            </div>
-                            <button class="FormContainer-Submit cta-chat" type="submit" name="valider">Je Tchat!</button>
+                <article class="FormContainer DRI-Form">
+                    <div class="Fields-Table">
+                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <div class="">
+                            <p class="DRI-Sent"> Merci, votre demande de rappel a bien été prise en compte.<br/> <strong>Un voyant vous recontactera dans quelques instants</strong>. </p>
                         </div>
-                    </section>
-                </form>
-                </div>
+                        <?php } else { ?>
+                        <h2 class="DRI-Form-Title"> Vous avez déjà bénéficié de l’offre :<br><strong>&#8220; 3 minutes de tchat gratuit &#8221;</strong></h2>
+                        <p> Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>En attendant, vous pouvez consulter un voyant immédiatement par téléphone.</p>
+                        <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
+                        <p><strong>Nos voyants répondent à vos questions</strong></p>
+                        <form class="DRI-FormContainer" method="post">
+                            <div class="FormContainer-Fields">
+                                <div class="Fields-Table-Row"> <label for="name" class="FormField-Label">Mon prénom</label>
+                                    <div class="FormField"> <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required /> </div>
+                                </div>
+                                <div class="Fields-Table-Row"> <label for="tel" class="FormField-Label">Mon numéro de téléphone</label>
+                                    <div class="FormField"> <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required /> </div>
+                                </div>
+                                <div class="Fields-Table-Row"> <label for="pays" class="FormField-Label">Mon pays</label>
+                                    <div class="FormField"> <select name="pays" id="pays" class="FormField-Input" required>
+                                    <option value="" selected>Votre Pays</option>
+                                    <option value="BE">Belgique</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="CH">Suisse</option>
+                                    <option value="FR" selected>France Métropolitaine</option>
+                                    <optgroup label="DOM-TOM">
+                                        <option value="MQ">Martinique</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GF">Guyane</option>
+                                        <option value="RE">La Réunion</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="PM">St Pierre et Miquelon</option>
+                                        <option value="BL">St Barthélémy</option>
+                                        <option value="SM">St Martin</option>
+                                        <option value="WF">Wallis et Futunua</option>
+                                        <option value="PF">Polynésie Française</option>
+                                        <option value="NC">Nouvelle Calédonie</option>
+                                    </optgroup>
+                                    <option value="ZZ">Autre</option>
+                                </select> </div>
+                                </div>
+                            </div>
+                            <h1 class="DRI-Slogan">Vos 10 premières minutes <span class="cap">gratuites</span> </h1>
+                            <!-- SUBMIT --><button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel">Rappel Gratuit</button> </form>
+                        <?php } ?> </div>
+                </article>
             </div>
         </main>
         <footer>
-            <p class="SiteCopyright">
-                <?php include('include/footer_copyright.php'); ?>
-            </p>
-            <!-- #### SCRIPTS #### -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-            <script src="js/formValidator.js"></script>
+            <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?> </p>
             <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
-            <!--script type="text/javascript" src="js/pouvoir-des-trois.js"></script-->
             <!-- #### REMARKETINGS #### -->
             <?php
-            include('include/remarketing/adwords.php');
-            include('include/remarketing/analytics.php');
-            include('include/remarketing/facebook.php');
+                include('include/remarketing/adwords.php');
+                include('include/remarketing/analytics.php');
+                include('include/remarketing/facebook.php');
+            ?>
+                <!-- #### CONVERSION #### -->
+            <?php
+                include('include/conversion/adwords.php');
+                include('include/conversion/facebook.php');
             ?>
         </footer>
     </body>
+
 </html>
