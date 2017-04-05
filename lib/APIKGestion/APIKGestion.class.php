@@ -7,12 +7,14 @@
 class APIKGestion {
     
     const BASE_URL = 'https://kgestion.kg-com.fr/';
+    const GET = 'GET';
     const POST = 'POST';
     const PATCH = 'PATCH';
     
-    private function request ($url, $data, $method)
+    private function request ($method, $url, $data = array())
     {
         // traverse array and prepare data for posting (key1=value1)
+        $post_items = array();
         foreach ($data as $key => $value) {
             $post_items[] = $key.'='.$value;
         }
@@ -47,7 +49,7 @@ class APIKGestion {
 
         // close the connection
         curl_close($curl_connection);
-        
+        var_dump($result);
         return json_decode($result);
     }
     
@@ -55,20 +57,27 @@ class APIKGestion {
     {
         $url = $this::BASE_URL.'client/api/client';
         
-        return $this->request($url, $data, $this::POST);
+        return $this->request($this::POST, $url, $data);
     }
     
     public function updateUser($id, $data)
     {
         $url = $this::BASE_URL.'client/api/client/'.$id;
         
-        return $this->request($url, $data, $this::PATCH);
+        return $this->request($this::PATCH, $url, $data);
     }
     
     public function registerDRI($id, $data)
     {
         $url = $this::BASE_URL.'client/api/client/dri/'.$id;
         
-        return $this->request($url, $data, $this::PATCH);
+        return $this->request($this::PATCH, $url, $data);
+    }
+    
+    public function getTracking($id)
+    {
+        $url = $this::BASE_URL.'client/api/client/tracking/'.$id;
+        
+        return $this->request($this::GET, $url);
     }
 }

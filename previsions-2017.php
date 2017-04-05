@@ -7,12 +7,12 @@
     Created on : 20 décembre 2016
     Author     : Mohamed Moughamir <moughamir@gmail.com>
 */
+include('include/init-affilbase.php');
 
 $pageName = "previsions-2017";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$seo = "affilbase";
 $pageDri = "previsions-2017-dri";
 
 $question = ['code' => 'prev17_question', 'subject' => 'evenement', 'text' => 'Campagne Prévisions astro 2017'];
@@ -813,7 +813,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="method" value="<?= $method; ?>" />
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
-                    <input type="hidden" name="affiliation" value="<?= $seo; ?>" />
+                    <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                    <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                     <input type="hidden" name="dri" value="<?= $pageDri; ?>" />
                     <!-- ########## autres champs pré-remplis ########## -->
                     <input type="hidden" name="tel_needed" value="1" />

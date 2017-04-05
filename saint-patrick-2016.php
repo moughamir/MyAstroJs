@@ -88,7 +88,7 @@
                                 <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="affil_base" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <!-- ############################################### -->
@@ -254,7 +254,7 @@
                                 <input type="hidden" name="dri" value="tel-saint-patrick-2016" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="affil_base" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <!-- ############################################### -->

@@ -32,7 +32,7 @@
                             <input type="hidden" name="source" value="nouvel-an-chinois-17-can" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
-                            <input type="hidden" name="affiliation" value="external_base" />
+                            <input type="hidden" name="affiliation" value="base_externe" />
                             <input type="hidden" name="dri" value="nouvel-an-chinois-17-dri" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />

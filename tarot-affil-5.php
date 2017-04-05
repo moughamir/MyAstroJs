@@ -173,7 +173,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="method" value="affil-mini" />
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="theme_id" value="question_2">
-                                <input type="hidden" name="affiliation" value="affilbase">
+                                <input type="hidden" name="affiliation" value="affil_base">
                                 <div class="form-w-one li-form">
                                     <label>Mon prénom</label>
                                     <input type="text" id="name" name="prenom" required>
