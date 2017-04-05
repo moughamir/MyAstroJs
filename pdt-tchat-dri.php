@@ -116,7 +116,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" name="prenom" value="<?= $prenom;?>" />
                         <h1 class="DRI-Slogan">Vos 10 premières minutes <span class="cap">gratuites</span> </h1>
                         <!-- SUBMIT -->
                             <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel">Rappel Gratuit</button>
