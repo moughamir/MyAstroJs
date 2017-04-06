@@ -483,7 +483,9 @@ if(empty($err)){
             }
         } elseif(in_array($dri, $tchatabo_dri)){
             if(!isset($_COOKIE['offre_tchat_gratuit'])){
-                if($dri == "tarot-en-direct/offre-gratuite"){
+                if($dri == "pouvoir-des-trois/offre-gratuite") {
+                    $redirect_url = 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]';
+                } elseif($dri == "tarot-en-direct/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]';
                 } elseif ($dri == "myastro/offre-gratuite"){
                     $redirect_url = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]';
