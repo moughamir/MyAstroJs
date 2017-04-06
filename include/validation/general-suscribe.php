@@ -492,10 +492,12 @@ if(empty($err)){
                 }
                 setcookie('offre_tchat_gratuit', '1', time() + 6*24*3600, null, null, false, true);
             } else {
-                if($dri == "tarot-en-direct/offre-gratuite"){
-                    $redirect_url = 'tarot-direct-dri-tog'; 
-                } else if($dri == "myastro/offre-gratuite"){
+                if($dri == "pouvoir-des-trois/offre-gratuite") {
+                    $redirect_url = 'pdt-tchat-dri';
+                } elseif ($dri == "myastro/offre-gratuite") {
                     $redirect_url = 'myastro-tchat-dri';
+                } elseif ($dri == "tarot-en-direct/offre-gratuite") {
+                    $redirect_url = 'tarot-direct-dri-tog';
                 }
                     
             }
