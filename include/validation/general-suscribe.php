@@ -501,7 +501,6 @@ if(empty($err)){
                 } elseif ($dri == "tarot-en-direct/offre-gratuite") {
                     $redirect_url = 'tarot-direct-dri-tog';
                 }
-                    
             }
         } else {
             $redirect_url = $dri;
