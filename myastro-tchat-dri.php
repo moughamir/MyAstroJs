@@ -102,8 +102,6 @@ include('include/process-dri.php');
         <footer>
             <p class="SiteCopyright"><?php include('include/footer_copyright.php');?> </p>
         </footer>
-        <!-- #### SCRIPTS #### -->
-<!--        <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>-->
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

@@ -39,7 +39,7 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
         </div>
         <main class="ContentBand">
             <div class="PageWrapper fullview">
-                <form class="ajax">
+                <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName;?>" />
                     <input type="hidden" name="method" value="<?= $method;?>" />
