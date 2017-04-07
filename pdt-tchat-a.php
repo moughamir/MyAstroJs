@@ -1,53 +1,33 @@
 <?php
 /**
- * pouvoir-des-trois == AFFILBASE
- * 
- * Created on : Feb 13th, 2017
- * Author     : Mohamed Moughamir <hello@omnizya.com>
+ * pdt-tchat-a == ADWORDS
+ * ----------------------
+ * Created on : 04 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
-session_start();
-$assets = 'images_landing/pouvoir-des-trois';
 $pageName = "pdt-tchat-a";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$adw = "adwords";
+$source = "adwords";
 $dri = "pouvoir-des-trois/offre-gratuite";
-
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+// A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
-    'Amour' => array(
-        ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Vais-je rencontrer l’amour ?']
-    ),
-    'Argent' => array(
-        ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Vais-je gagner de l’argent ?']
-    ),
-    'Travail' => array(
-        ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Quel sera mon avenir professionnel ?']
-    )
+    ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Pouvoir des Trois - Amour'],
+    ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Pouvoir des Trois - Argent'],
+    ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Pouvoir des Trois - Travail']
 );
-$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
+$assets = 'images_landing/pouvoir-des-trois';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
         <meta name="robots" content="noindex, nofollow" />
-        <meta property="fb:app_id" content="1276526482364681" /> 
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Pouvoir des Trois" />
-        <meta property="og:url" content="http://<?= $site ?>/pouvoir-des-trois" />
-        <meta property="og:image" content="http://<?= $site . '/' . $assets ?>/cover.jpg" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="675" />
-        <meta property="og:description" content="Prenez en main votre Avenir, Grâce au Pouvoir des trois et de ces support divinatoires ancestraux: le pendule, la boule de cristal, et le tarot; nous allons pouvoir répondre à vos intérrogations, grace à ce petit teste." />
-        <meta property="og:locale" content="fr_FR" />
-        <title>Pouvoir Des Trois | MyAstro</title>
-        <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
+        <title>Pouvoir Des Trois - Prenez en main votre Avenir</title>
+        <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
         <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet" />
         <!--[if lt IE 9]>
@@ -70,12 +50,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </div>
             <div class="PageWrapper">
                 <section class="section post-test hidden">
-                    <p>Prenez en main votre Avenir ! <br>
-                        Grâce au Pouvoir des trois et ses supports divinatoires ancestraux : le pendule, la boule de cristal et le tarot nous allons pouvoir répondre à toutes vos interrogations.<br>
+                    <p>
+                        Prenez en main votre Avenir !<br>
+                        Grâce au Pouvoir des trois et ses supports divinatoires ancestraux : le pendule, la boule de cristal et le tarot nous allons pouvoir répondre à toutes vos interrogations.<br>
                         Réalisez ce test simple et rapide qui nous permettra de mieux vous connaître.<br>
-                        Inscrivez votre prénom ci-dessous pour commencer :</p>
+                        Inscrivez votre prénom ci-dessous pour commencer :
+                    </p>
                     <div class="form">
-                        <input type="text" name="name" class="FormField-Input" placeholder="Votre prénom"/>
+                        <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
                         <button class="btn start">Commencer</button>
                     </div>
                 </section>
@@ -89,35 +71,34 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </section>
                 <section class="section hidden">
                     <article class="final-step">
-                        <p class="resault"></p>
-                        <a href='#FormContainer' class='read-more'>savoir la suite</a>
+                        <p class="result"></p>
+                        <a href="#FormContainer" class="read-more">savoir la suite</a>
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
                             <div class="promo"></div>
-                            <div class="FormContainer overlay" id="form-overlay"></div>
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                                <input type="hidden" name="method" value="<?= $method; ?>" />
-                                <input type="hidden" name="support" value="<?= $support; ?>" />
-                                <input type="hidden" name="site" value="<?= $site; ?>" />
-                                <input type="hidden" name="affiliation" value="<?= $adw; ?>" />
-                                <input type="hidden" name="dri" value="<?= $dri; ?>" />
+                                <input type="hidden" name="source" value="<?= $pageName;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
+                                <input type="hidden" name="support" value="<?= $support;?>" />
+                                <input type="hidden" name="site" value="<?= $site;?>" />
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
-                                <input type="hidden" name="camp" id="promo">
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+                                <input type="hidden" name="prenom" id="js-name" /><!-- rempli par pouvoir-des-trois.js -->
+                                <input type="hidden" name="question_code" id="js-question" /><!-- rempli par pouvoir-des-trois.js -->
                                 <!-- ############################################### -->
-                                <input type="hidden" id="name" name="prenom" value=""/>
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label hidden">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" placeholder="Votre Email" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -165,7 +146,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select class="FormField-Input" name="jour" required>
                                                     <option value="" selected disabled>Jour</option>
                                                     <?php for ($i = 1; $i <= 31; $i++) { ?>
-                                                        <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                        <option value="<?= $i ?>"><?= sprintf('%02d', $i);?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -190,7 +171,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select class="FormField-Input" name="annee" required>
                                                     <option value="" selected disabled>Année</option>
                                                     <?php for ($i = date('Y') - 18; $i >= 1900; $i--) { ?>
-                                                        <option value="<?= $i ?>"><?= $i ?></option>
+                                                        <option value="<?= $i;?>"><?= $i;?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -201,24 +182,21 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <button class="FormContainer-Submit" type="submit" name="valider">Commencer le Tchat Gratuit</button>
                         </form>
                     </article>
-
                 </section>
             </div>
         </main>
         <footer>
             <p class="SiteCopyright">
-                <?php include('include/footer_copyright.php'); ?>
+                <?php include('include/footer_copyright.php');?>
             </p>
-            <!-- #### SCRIPTS #### -->
-            <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
-            <script type="text/javascript" src="js/pouvoir-des-trois.js"></script>
-            <script src="js/formValidator.js"></script>
-            <!-- #### REMARKETINGS #### -->
-            <?php
-            include('include/remarketing/adwords.php');
-            include('include/remarketing/analytics.php');
-            include('include/remarketing/facebook.php');
-            ?>
         </footer>
+        <!-- #### SCRIPTS #### -->
+        <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
+        <script type="text/javascript" src="js/pouvoir-des-trois.js"></script>
+        <script src="js/formValidator.js"></script>
+        <!-- #### REMARKETINGS #### -->
+        <?php include('include/remarketing/adwords.php');
+              include('include/remarketing/analytics.php');
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
