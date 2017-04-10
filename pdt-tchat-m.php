@@ -42,7 +42,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
         <![endif]-->
     </head>
-    <body class="main">
+    <body class="main mf">
         <div class="overlay" id="form-overlay"></div>
         <header class="SiteHeader">
             <div class="PageWrapper">
@@ -56,7 +56,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             <div class="preload">
             </div>
             <div class="PageWrapper fullview">
-                
+                <div class="FormContainer">
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $pageName; ?>" />
@@ -91,14 +91,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             </div>
                             <!--Prénom-->
                             <div class="Fields-Table-Row">
-                                <label for="name" class="FormField-Label hidden">Votre prénom</label>
+                                <label for="name" class="FormField-Label">Votre prénom</label>
                                 <div class="FormField">
                                     <input id="name" type="text" name="prenom" class="FormField-Input" value="<?= $prenom ?>" placeholder="Votre prénom" required />
                                 </div>
                             </div>
                             <!--eMail-->
                             <div class="Fields-Table-Row">
-                                <label for="email" class="FormField-Label hidden">Votre email</label>
+                                <label for="email" class="FormField-Label">Votre email</label>
                                 <div class="FormField">
                                     <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" placeholder="Votre Email" required />
                                 </div>
@@ -107,6 +107,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         </div>
                     </section>
                 </form>
+                </div>
             </div>
         </main>
         <footer>
