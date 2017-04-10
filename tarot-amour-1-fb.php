@@ -12,6 +12,7 @@ $questions = array(
     'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
     'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
 );
+$assets = 'images_landing/tarot-amour/';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,13 +20,13 @@ $questions = array(
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot de lʼamour : Laissez les lames parler | Myastro</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
-        <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
+        <link rel="icon" type="image/png" href="<?= $assets;?>favicon.png" />
+
         <link rel="stylesheet" type="text/css" href="css/tarot-amour.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -268,12 +269,10 @@ $questions = array(
             </div>
         </footer>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
-        
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
         <script src="js/formValidator.js"></script>
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

@@ -12,6 +12,7 @@ $questions = array(
     'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Séparés', 'conjoint' => true],
     'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Amants', 'conjoint' => true],
 );
+$assets = 'images_landing/voyance-amour/';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,7 +26,7 @@ $questions = array(
         <meta name="robots" content="noindex,nofollow" />
         <meta name="description" content="My Astro : Voyance gratuite par chat - Obtenez des réponses immédiates à toutes vos questions. Voyance gratuite par chat." />
         
-        <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <link rel="icon" type="image/png" href="<?= $assets;?>favicon.png" />
         
         <link rel="stylesheet" type="text/css" href="css/voyance-amour.css" />
         
