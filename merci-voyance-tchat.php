@@ -1,12 +1,10 @@
 <?php
-/*
-    --------------------------------------------
-    --   merci-voyance-tchat = POST-LANDING   --
-    --------------------------------------------
-
-    Created on : 23 novembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * merci-voyance-tchat == DRI
+ * ---------------------------------
+ * Created on : 23 novembre 2016 By Laurène Dourdin <2aurene@gmail.com>
+ * Updated on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 session_start();
 $img_path = 'images_landing/merci-voyance-tchat/';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
@@ -18,7 +16,7 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Voyance par tchat gratuit : Essayez 5 minutes de tchat gratuites</title>
+        <title>Voyance par tchat gratuit : Essayez 5 minutes de tchat gratuites</title>
 
         <meta name="robots" content="noindex,nofollow" />
 
@@ -29,9 +27,9 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!--
-                 --><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
+                    <a href="http://<?= ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!--
+                 --><a href="http://<?= ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
+                 --><a href="http://<?= ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </nav>
             </div>
         </header>
@@ -47,38 +45,38 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                             <p>Vous recevrez un appel dès demain en provenance du numéro 04.81.68.20.14</p>
                         </article>
                     </div>
-                    <img src="<?= $img_path ?>voyante.png" alt="" class="WithDecoration-Img" />
+                    <img src="<?= $img_path;?>voyante.png" alt="" class="WithDecoration-Img" />
                 </div>
                 <div class="ContentBand-FlexItem PromoContent">
                     <article class="PromoContent-Window">
                         <h2 class="PromoContent-Slogan">Toutes vos réponses en un simple CLIC</h2>
                         <h1 class="PromoContent-Title">5 minutes de tchat gratuites</h1>
-                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
                         <ul class="PromoContent-PsychicList" id="psychic_list">
                             <li class="PsychicList-Item">
-                                <img src="<?= $img_path ?>charly.jpg" alt="Charly" class="PsychicList-Item-Img" />
-                                Charly
+                                <img src="<?= $img_path;?>ulysse.jpg" alt="Ulysse" class="PsychicList-Item-Img" />
+                                Ulysse
                             </li>
                             <li class="PsychicList-Item">
-                                <img src="<?= $img_path ?>christelle.jpg" alt="Charly" class="PsychicList-Item-Img" />
-                                Christelle
+                                <img src="<?= $img_path;?>gaelle.jpg" alt="Gaëlle" class="PsychicList-Item-Img" />
+                                Gaëlle
                             </li>
                             <li class="PsychicList-Item PsychicList-Line2">
-                                <img src="<?= $img_path ?>daniel.jpg" alt="Charly" class="PsychicList-Item-Img" />
-                                Daniel
+                                <img src="<?= $img_path;?>sylvain.jpg" alt="Sylvain" class="PsychicList-Item-Img" />
+                                Sylvain
                             </li>
                             <li class="PsychicList-Item PsychicList-Line2">
-                                <img src="<?= $img_path ?>sonia.jpg" alt="Charly" class="PsychicList-Item-Img" />
-                                Sonia
+                                <img src="<?= $img_path;?>helene.jpg" alt="Hélène" class="PsychicList-Item-Img" />
+                                Hélène
                             </li>
                         </ul>
                         <ul class="PromoContent-PsychicList PsychicList-Line2">
                             <li class="PsychicList-Item">
-                                <img src="<?= $img_path ?>daniel.jpg" alt="Charly" class="PsychicList-Item-Img" />
+                                <img src="<?= $img_path;?>daniel.jpg" alt="Charly" class="PsychicList-Item-Img" />
                                 Daniel
                             </li>
                             <li class="PsychicList-Item">
-                                <img src="<?= $img_path ?>sonia.jpg" alt="Charly" class="PsychicList-Item-Img" />
+                                <img src="<?= $img_path;?>sonia.jpg" alt="Charly" class="PsychicList-Item-Img" />
                                 Sonia
                             </li>
                         </ul>
@@ -106,7 +104,7 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                     <article class="FormContainer">
                         <h4 class="FormContainer-Title">Amour, Travail, Argent…</h4>
                         <p class="FormContainer-Slogan">Pour profiter immédiatement des 5 minutes de tchat gratuites, cliquez sur le bouton ci-dessous :</p>
-                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email ?>" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
                     </article>
                 </div>
             </div>
@@ -147,16 +145,14 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                 </ul>
             </div>
         </footer>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
-
+              include('include/remarketing/facebook.php');?>
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
-              include('include/conversion/facebook.php'); ?>
+              include('include/conversion/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

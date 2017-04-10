@@ -8,9 +8,9 @@
 $page = 'tarot-amour-1-fb';
 $button = 'Accéder au tchat';
 $questions = array(
-    'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
-    'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
-    'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
+    'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
+    'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
+    'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
 );
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ $questions = array(
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>Tarot de lʼamour : laissez les lames parler | Myastro</title>
+        <title>Tarot de lʼamour : Laissez les lames parler | Myastro</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
@@ -38,9 +38,9 @@ $questions = array(
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
-                 --><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                    <a href="http://<?= ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                 --><a href="http://<?= ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
+                 --><a href="http://<?= ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
                 </nav>
             </div>
         </header>
@@ -55,7 +55,7 @@ $questions = array(
                         <div class="DescText-Content">
                             <p>Que disent les lames sur votre avenir amoureux ? Avec notre tarot de lʼamour, découvrez ce que votre destin sentimental vous réserve.</p>
                             <p>En toute simplicité, tirez les lames et laissez nos experts en divination interpréter votre tirage. Grâce à notre tarot de lʼamour en ligne, nʼattendez pas quʼil soit trop tard pour obtenir des réponses.</p>
-                            <p>Seul, en couple ou séparés, notre tarot gratuit vous permet de répondre à vos interrogations en interrogeant le destin, qui se laissera découvrir dans les lames...</p>
+                            <p>Seul, en couple ou séparés, notre tarot de lʼamour vous permet de répondre à vos questions en interrogeant le destin, qui se laissera découvrir dans les lames…</p>
                         </div>
                     </article>
                 </div>
@@ -64,7 +64,7 @@ $questions = array(
                     <article class="WidgetTarot">
                         <div class="WidgetTarot-Draw" id="cards-container">
                             <?php for($i=1;$i<=22;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
@@ -72,7 +72,7 @@ $questions = array(
                         </div>
                         <div class="WidgetTarot-Result" id="cards-result">
                             <?php for($i=1;$i<=5;$i++){ ?>
-                            <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                            <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                             <?php } ?>
                         </div>
                     </article>
@@ -124,7 +124,8 @@ $questions = array(
                                 <input type="hidden" name="affiliation" value="facebook_adds" />
                                 <input type="hidden" name="dri" value="myastro/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ######### -->
-                                <input type="hidden" name="convertir" value="1">
+                                <input type="hidden" name="tel_needed" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
@@ -151,7 +152,7 @@ $questions = array(
                                             <select  class="FormField-Input" name="jour" required>
                                                 <option selected="selected" value="">Jour</option>
                                                 <?php for($i=1;$i<=31;$i++){ ?>
-                                                <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -176,7 +177,7 @@ $questions = array(
                                             <select class="FormField-Input" name="annee" required>
                                                 <option selected="selected" value="">Année</option>
                                                 <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                                <option value="<?= $i;?>"><?= $i;?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -237,7 +238,7 @@ $questions = array(
                                     <label for="tel" class="FormField-Label">Téléphone</label>
                                     <input type="tel" name="tel" id="tel" class="FormField-Input" required />
                                 </div>
-                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button ?></button>
+                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button;?></button>
                             </form>
                         </div>
                     </article>
@@ -266,7 +267,7 @@ $questions = array(
                 </ul>
             </div>
         </footer>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -276,7 +277,7 @@ $questions = array(
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
