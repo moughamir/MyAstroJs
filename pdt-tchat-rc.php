@@ -5,6 +5,7 @@
  * Created on : 04 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
 session_start();
+
 $pageName = "pdt-tchat-rc";
 $method = "general-suscribe";
 $support = "voyance";
