@@ -51,7 +51,7 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                     <article class="PromoContent-Window">
                         <h2 class="PromoContent-Slogan">Toutes vos réponses en un simple CLIC</h2>
                         <h1 class="PromoContent-Title">5 minutes de tchat gratuites</h1>
-                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="https://voyance-en-direct.tv/myastro/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
                         <ul class="PromoContent-PsychicList" id="psychic_list">
                             <li class="PsychicList-Item">
                                 <img src="<?= $img_path;?>ulysse.jpg" alt="Ulysse" class="PsychicList-Item-Img" />
