@@ -27,7 +27,7 @@ $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
 
 /* ========================================================================== *
- *                     TRAITEMENT DES DONNÃ‰ES DE TRACKING                     *
+ *                     TRAITEMENT DES DONNÉES DE TRACKING                     *
  * ========================================================================== */
 
 $id_rdm  = uuid();
@@ -53,29 +53,29 @@ if(!$source){
 }
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
-    $err['sys'] = 'SystÃ¨me indisponible, veuillez rÃ©essayer plus tard.';
+    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
 } else {
     // Recherche de l'url kgestion
     $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl.'"';
     $formurl_kgs = $bdd->get_var($tracking_qry);
     if(!isset($formurl_kgs)){
-        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvÃ©e');
-        $err['sys'] = 'SystÃ¨me indisponible, veuillez rÃ©essayer plus tard.';
+        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     }
 }
 
 /* ========================================================================== *
- *                        TRAITEMENT DES DONNÃ‰ES ASTRO                        *
+ *                        TRAITEMENT DES DONNÉES ASTRO                        *
  * ========================================================================== */
 
-// Conditions gÃ©nÃ©rales & Newsletter -------------------------------------------
+// Conditions générales & Newsletter -------------------------------------------
 $partenaires = isset($param['partenaires']) ? 1 : 0;
 $horoscope   = isset($param['horoscope']) && !empty($param['horoscope']) ? 1 : 0;
 $cguv        = isset($param['cguv']) ? $param['cguv'] : false;
 if(!$cguv){
-    $err['cguv'] = 'Veuillez accepter les conditions gÃ©nÃ©rales';
+    $err['cguv'] = 'Veuillez accepter les conditions générales';
 }
-// Question posÃ©e --------------------------------------------------------------
+// Question posée --------------------------------------------------------------
 if (isset($param['question_code'])){
     // Nouveau champs de question avec texte de la question (value json)
     if(!empty($param['question_code'])){
@@ -83,7 +83,7 @@ if (isset($param['question_code'])){
         if($question == 'AMOUR-CONJOINT'){
             // En fonction de si le conjoint est rempli, soit amour, soit avour avec P2
             $questions = array(
-                'question_1' => [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - cÃ©libataire', 'conjoint' => false ],
+                'question_1' => [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - célibataire', 'conjoint' => false ],
                 'question_2' => [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - en couple', 'conjoint' => true ],
             );
             $code = (isset($param['conjoint']) && !empty($param['conjoint'])) ? 'question_2' : 'question_1';
@@ -93,7 +93,7 @@ if (isset($param['question_code'])){
         }
         $question['content'] = isset($param['question_content']) ? $param['question_content'] : null;
     } else {
-        $err['question_code'] = 'Veuillez choisir votre questionÂ : Quel est le sujet de vos tourmentsÂ ?';
+        $err['question_code'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
     }
 } else {
     // Anciens champs de question
@@ -110,12 +110,12 @@ if (isset($param['question_code'])){
 
     $question['text'] = '';
 
-    // Tableau comprenant les questions qui nÃ©cessitent les infos du conjoint.
+    // Tableau comprenant les questions qui nécessitent les infos du conjoint.
     $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour');
     $question['conjoint'] = in_array($question['code'], $questionConjoint);
 
     if(!$question['code']){
-        $err['theme_id'] = 'Veuillez choisir votre questionÂ : Quel est le sujet de vos tourmentsÂ ?';
+        $err['theme_id'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
     }
 
     $mind = isset($param['mind']) && !empty($param['mind']) ? $param['mind'] : false;
@@ -137,7 +137,7 @@ $sexe = isset($param['sexe']) ? $param['sexe'] : null;
 $sexe = str_replace('homme', 'M', $sexe);
 $sexe = str_replace('femme', 'F', $sexe);
 
-// PrÃ©nom ----------------------------------------------------------------------
+// Prénom ----------------------------------------------------------------------
 $prenom = form_firstname($err, $param);
 // Date de naissance & Signe Astrologique --------------------------------------
 $dtn_bdd = $dtn_smf = $dtn_ses = '';
@@ -155,17 +155,17 @@ if($need_birthdate){
 
         $signe = get_signe_astro($dtn_j, $dtn_m);
     } else {
-        $err['date_naissance'] = 'Merci dÊ¼indiquer votre dateÂ deÂ naissance.';
+        $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
     }
 }
 
 // Adresse mail ----------------------------------------------------------------
 $email = isset($param['email']) ? trim($param['email']) : false;
 if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,4}$", $email)){
-    $err['email'] = 'Cette adresse email nÊ¼estÂ pasÂ valide.';
+    $err['email'] = 'Cette adresse email nʼest pas valide.';
 }
 
-// NumÃ©ro de tÃ©lÃ©phone & Pays --------------------------------------------------
+// Numéro de téléphone & Pays --------------------------------------------------
 list($tel, $pays) = form_phone($err, $param);
 
 /* ========================================================================== *
@@ -175,13 +175,13 @@ list($tel, $pays) = form_phone($err, $param);
 $conjoint_prenom  = $conjoint_dtn_bdd = $conjoint_dtn_smf = $conjoint_dtn_ses = $conjoint_signe = '';
 
 if($question['conjoint']){
-// PrÃ©nom ----------------------------------------------------------------------
+// Prénom ----------------------------------------------------------------------
     $conjoint_prenom  = isset($param['conjoint']) ? $param['conjoint'] : '';
     $test_prenom = trim($conjoint_prenom, ' ');
     if(empty($test_prenom)){
-        $err['conjoint'] = 'Merci dÊ¼indiquer le prÃ©nom de lÊ¼Ãªtre aimÃ©.';
-    } elseif(!preg_match("#^([a-zA-Z'Ã Ã¢Ã©Ã¨ÃªÃ´Ã¹Ã»Ã§Ã€Ã‚Ã‰ÃˆÃ”Ã™Ã›Ã‡[:blank:]-]{1,75})$#", $prenom)){
-        $err['conjoint'] = 'Les chiffres et caractÃ¨res spÃ©ciaux ne sont pas autorisÃ©s pour le prÃ©nom de lÊ¼Ãªtre aimÃ©.';
+        $err['conjoint'] = 'Merci dʼindiquer le prénom de lʼêtre aimé.';
+    } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
+        $err['conjoint'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom de lʼêtre aimé.';
     }
     unset($test_prenom);
 
@@ -198,7 +198,7 @@ if($question['conjoint']){
 
             $conjoint_signe = get_signe_astro($conjoint_dtn_j, $conjoint_dtn_m);
         } else {
-            $err['date_naissance'] = 'Merci dÊ¼indiquer la date de naissance de lÊ¼Ãªtre aimÃ©.';
+            $err['date_naissance'] = 'Merci dʼindiquer la date de naissance de lʼêtre aimé.';
         }
     }
 }
@@ -270,7 +270,7 @@ if(empty($err)){
         $kgestion_insert = $kgestion->insertUser($post_data);
         if(!$kgestion_insert->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
-            $err['sys'] = 'SystÃ¨me indisponible, veuillez rÃ©essayer plus tard.';
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
             $kgestion_id = $kgestion_insert->id;
         }
@@ -285,7 +285,7 @@ if(empty($err)){
     $conversion = 1;
     if (!$trouve){ // Nouveau prospect
         $conversion = 2;
-    } else { // Existe dÃ©jÃ 
+    } else { // Existe déjà
         // inscrits il y a plus d'1 mois ?
         $date_derniere_inscription = date_create_from_format('Y-m-d', $user->questionDate);
         $date_validite = $date_derniere_inscription->add(new DateInterval('P1M'));
@@ -337,7 +337,7 @@ if(empty($err)){
         );
         $idindex  = $bdd->insert_id;
 
-// Mise Ã  jour du prospect existant --------------------------------------------
+// Mise à jour du prospect existant --------------------------------------------
     } else {
         $bdd_data = array(
             'kgestion_id'             => $kgestion_id,
@@ -378,10 +378,10 @@ if(empty($err)){
     
     if(!$result){
         addFormLog($bdd, $page, 'ERROR', '[BDD MYASTRO] Erreur > '.$bdd->last_error);
-        $err['sys'] = 'SystÃ¨me indisponible, veuillez rÃ©essayer plus tard.';
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     }
 
-// Insertion du dÃ©tail de la question ------------------------------------------
+// Insertion du détail de la question ------------------------------------------
     if(isset($user_responses)){
         $bdd->insert(
             $bdd->user_response,
@@ -511,7 +511,7 @@ if(empty($err)){
     $retour[$redirect_method] = $redirect_url;
 
 /* ========================================================================== *
- *                           CONVERSION INSTANTANÃ‰E                           *
+ *                           CONVERSION INSTANTANÉE                           *
  * ========================================================================== */
 
     if(isset($param['convertir'])){
