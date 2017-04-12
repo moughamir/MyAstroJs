@@ -34,9 +34,10 @@
 <?php
     include('include/conversion/adwords.php');
     include('include/conversion/facebook.php');
+    include('include/conversion/taboola.php');
 ?>
         <script type="text/javascript">
-            var url = "<?= $redirection ?>";
+            var url = "<?= $redirection;?>";
             $(window).load(function() {
                 if(url !== 'NULL'){
                     document.location.replace(url);
