@@ -4,12 +4,11 @@
  * --------------------------
  * Created on : 30 mars 2017 By Mohamed Moughamir <hello@omnizya.com> 
  */
-
+include('include/init-affilbase.php');
 $pageName = "myastro-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "affilbase";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
@@ -49,6 +48,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="support" value="<?= $support;?>" />
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                    <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                     <input type="hidden" name="dri" value="myastro/offre-gratuite" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />

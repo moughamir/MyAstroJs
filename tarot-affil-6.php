@@ -167,7 +167,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="source" value="tarot-affil-6" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot"/>
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="affil_base" />
                                 <input type="hidden" name="dri" value="dri-5" />
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>

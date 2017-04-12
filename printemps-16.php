@@ -61,7 +61,7 @@
                         <input type="hidden" name="method" value="general-suscribe" />
                         <input type="hidden" name="dri" value="printemps-16-tel" />
                         <input type="hidden" name="support" value="voyance"/>
-                        <input type="hidden" name="affiliation" value="affilbase" />
+                        <input type="hidden" name="affiliation" value="affil_base" />
                         <!-- ########## autres champs pré-remplis ########## -->
                         <input type="hidden" name="theme_id" value="printemps16_amour" />
                         <input type="hidden" name="cguv" value="1" />

@@ -18,7 +18,7 @@ $urls_conversion = array(
     'tarot-et-amour-rc' => 'http://b2.a4trk.com/aff_lsr?offer_id=4507&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb'
 );
 
-if($source == 'reflexcache' && isset($id_transaction)){
+if($source == 'reflexcash' && isset($id_transaction)){
     if(isset($_SESSION['conversion']) && $_SESSION['conversion'] == 2){
         if(isset($urls_conversion[$formulaire])){
             $url = $urls_conversion[$formulaire];

@@ -10,7 +10,7 @@ $pageName = "pdt-tchat-rc";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "reflexcache";
+$source = "reflexcash";
 $dri = "pouvoir-des-trois/offre-gratuite";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(

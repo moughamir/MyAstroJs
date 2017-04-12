@@ -4,11 +4,11 @@
  * ----------------------
  * Created on : 03 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
+include('include/init-affilbase.php');
 $pageName = "pdt-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "affilbase";
 $dri = "pouvoir-des-trois/offre-gratuite";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
@@ -86,6 +86,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="<?= $support;?>" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />

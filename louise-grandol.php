@@ -8,7 +8,7 @@
     Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
                : Laurène Dourdin <2aurene@gmail.com>
 */
-
+include('include/init-affilbase.php');
 $questions = array (
     'Amour' => array(
         'celibat'  => [ 'code' => 'lg_q4', 'subject' => 'sentimental', 'text' => 'Quand vais-je trouver l’amour ?' ],
@@ -142,7 +142,8 @@ $questions = array (
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="louise-grandol" />
                                 <input type="hidden" name="method" value="general-suscribe" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="dri" value="louise-grandol-dri" />
                                 <!-- ########## autres champs pré-remplis ########## -->

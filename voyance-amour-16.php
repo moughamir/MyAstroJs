@@ -83,7 +83,7 @@ $questions = array(
                                 <input type="hidden" name="source" value="voyance-amour-16" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="affiliation" value="affilbase" />
+                                <input type="hidden" name="affiliation" value="affil_base" />
                                 <input type="hidden" name="dri" value="voyance-amour-16-tel" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
