@@ -1,29 +1,27 @@
 <?php
-/* 
-    --------------------------------------------
-    --   tarot-gratuit-1-rak = BASE EXTERNE   --
-    --------------------------------------------
-
-    Created on : 19 avril 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
-    $page = 'tarot-gratuit-1';
-    $button = 'Découvrir mon interprétation';
-    $questions = array(
-        'Amour' => array(
-            [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Vous en avez marre d’être seul(e)' ],
-            [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Est-ce qu’il/elle m’aime ?', 'conjoint' => true ],
-            [ 'code' => 'question_24', 'subject' => 'sentimental', 'text' => 'Vous en aimez un(e) autre', 'conjoint' => true],
-            [ 'code' => 'question_11', 'subject' => 'sentimental', 'text' => 'Il/Elle vous a quitté', 'conjoint' => true],
-        ),
-        'Argent' => array(
-            [ 'code' => 'question_73', 'subject' => 'financier', 'text' => 'Vous attendez un investissement' ],
-        ),
-        'Travail' => array(
-            [ 'code' => 'question_4', 'subject' => 'professionnel', 'text' => 'Vous attendez un changement professionnel' ],
-            [ 'code' => 'question_3', 'subject' => 'professionnel', 'text' => 'Vous cherchez un emploi' ],
-        )
-    );
+/**
+ * tarot-flash-a == ADWORDS
+ * ------------------------
+ * Created on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+$page = 'tarot-flash-a';
+$assets = 'images_landing/tarot-sable/';
+$button = 'Accéder au tchat';
+$questions = array(
+    'Amour' => array(
+        [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Vous en avez marre d’être seul(e)' ],
+        [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Est-ce qu’il/elle m’aime ?', 'conjoint' => true ],
+        [ 'code' => 'question_24', 'subject' => 'sentimental', 'text' => 'Vous en aimez un(e) autre', 'conjoint' => true],
+        [ 'code' => 'question_11', 'subject' => 'sentimental', 'text' => 'Il/Elle vous a quitté', 'conjoint' => true],
+    ),
+    'Argent' => array(
+        [ 'code' => 'question_73', 'subject' => 'financier', 'text' => 'Vous attendez un investissement' ],
+    ),
+    'Travail' => array(
+        [ 'code' => 'question_4', 'subject' => 'professionnel', 'text' => 'Vous attendez un changement professionnel' ],
+        [ 'code' => 'question_3', 'subject' => 'professionnel', 'text' => 'Vous cherchez un emploi' ],
+    )
+);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,11 +30,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Tarot gratuit : amour et destin à chaque tirage gratuit | Myastro</title>
+        <title>Tarot flash : Amour et destin à chaque tirage | Myastro</title>
 
         <meta name="robots" content="noindex,nofollow" />
 
-        <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
+        <link rel="icon" type="image/png" href="<?= $assets;?>favicon.png" />
 
         <link rel="stylesheet" type="text/css" href="css/tarot-sable.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -50,9 +48,9 @@
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
-                 --><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                    <a href="http://<?= ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                 --><a href="http://<?= ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
+                 --><a href="http://<?= ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
                 </nav>
             </div>
         </header>
@@ -61,23 +59,23 @@
                 <div class="ContentBand-Column WidgetBand-DescText">
                     <header class="ContentBand-ColumnHeader">
                         <span class="SiteLogo"></span>
-                        <h1 class="DescText-Title">Tarot gratuit</h1>
+                        <h1 class="DescText-Title">Tarot flash</h1>
                     </header>
                     <article class="DescText">
                         <div class="DescText-Content">
-                            <p>Et si les cartes vous en disaient plus sur votre avenir ? Avec la voyance par tarot gratuit de MyAsto, tirez 5 lames et recevez par mail votre interprétation sous 24 heures.</p>
-                            <p>Que signifient le Chariot ou le Monde ? Votre tirage de tarot gratuit est-il porteur de bonnes ou de mauvaises nouvelles ?</p>
+                            <p>Et si les cartes vous en disaient plus sur votre avenir ? Avec la voyance par tarot gratuit de MyAstro, tirez 5 lames et recevez par mail votre interprétation sous 24 heures.</p>
+                            <p>Que signifient le Chariot ou le Monde ? Votre tirage de tarot flash est-il porteur de bonnes ou de mauvaises nouvelles ?</p>
                             <p>Les voyants spécialistes du tarot de MyAstro se tiennent à votre disposition pour interpréter au plus juste ce que les lames auront révélé.</p>
-                            <p>Amour, argent, famille, notre tarot gratuit vous permet de répondre à vos interrogations en interrogeant le destin, qui se laissera découvrir dans les lames...</p>
+                            <p>Amour, argent, famille, notre tarot vous permet de répondre à vos questions en interrogeant le destin, qui se laissera découvrir dans les lames...</p>
                         </div>
                     </article>
                 </div>
                 <div class="ContentBand-Column WidgetBand-Tarot">
                     <h2 class="ContentBand-ColumnHeader">Tirez <strong>5</strong> lames</h2>
-                    <article class="WidgetTarot" id="cards-container">
-                        <div class="WidgetTarot-Draw">
+                    <article class="WidgetTarot">
+                        <div class="WidgetTarot-Draw" id="cards-container">
                             <?php for($i=1;$i<=22;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
@@ -85,7 +83,7 @@
                         </div>
                         <div class="WidgetTarot-Result" id="cards-result">
                             <?php for($i=1;$i<=5;$i++){ ?>
-                            <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                            <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                             <?php } ?>
                         </div>
                     </article>
@@ -130,13 +128,15 @@
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-gratuit-1-rak" />
+                                <input type="hidden" name="source" value="tarot-flash-a" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="base_externe" />
-                                <input type="hidden" name="dri" value="merci-voyance" />
+                                <input type="hidden" name="affiliation" value="adwords" />
+                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ######### -->
+                                <input type="hidden" name="convertir" value="1" />
+                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '';?>" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
@@ -164,7 +164,7 @@
                                             <select  class="FormField-Input" name="jour" required>
                                                 <option selected="selected" value="">Jour</option>
                                                 <?php for($i=1;$i<=31;$i++){ ?>
-                                                <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -172,24 +172,24 @@
                                             <select class="FormField-Input" name="mois" required>
                                                 <option value="" selected="selected">Mois</option>
                                                 <option value="01">Janv.</option>
-                                                <option value="02">Fév.</option>
+                                                <option value="02">Fev.</option>
                                                 <option value="03">Mars</option>
                                                 <option value="04">Avr.</option>
                                                 <option value="05">Mai</option>
                                                 <option value="06">Juin</option>
                                                 <option value="07">Juil.</option>
-                                                <option value="08">Août</option>
+                                                <option value="08">Aout</option>
                                                 <option value="09">Sept.</option>
                                                 <option value="10">Oct.</option>
                                                 <option value="11">Nov.</option>
-                                                <option value="12">Déc.</option>
+                                                <option value="12">Dec.</option>
                                             </select>
                                         </div>
                                         <div class="FormField-TableInputContainer-Cell">
                                             <select class="FormField-Input" name="annee" required>
                                                 <option selected="selected" value="">Année</option>
                                                 <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                                <option value="<?= $i;?>"><?= $i;?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -200,9 +200,9 @@
                                     <select class="FormField-Input" name="question_code" id="theme_id" required>
                                         <option value="" selected disabled>Thème de la question</option>
                                         <?php foreach($questions as $optgroup => $options){ ?>
-                                        <optgroup label="<?= $optgroup ?>">
+                                        <optgroup label="<?= $optgroup;?>">
                                             <?php foreach($options as $question){ ?>
-                                            <option value="<?= str_replace('"', "'", json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'] ?></option>
+                                            <option value="<?= str_replace('"', "'", json_encode($question));?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?>><?= $question['text'];?></option>
                                             <?php } ?>
                                         </optgroup>
                                         <?php } ?>
@@ -247,7 +247,7 @@
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button ?></button>
+                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button;?></button>
                             </form>
                         </div>
                     </article>
@@ -276,13 +276,11 @@
                 </ul>
             </div>
         </footer>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
         <script src="js/formValidator.js"></script>
-
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

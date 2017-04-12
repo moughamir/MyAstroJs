@@ -77,7 +77,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                                 <input type="hidden" name="dri" value="dri-8" />
                                 <input type="hidden" name="support" value="voyance"/>
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>"/>
-                                <input type="hidden" name="affiliation" value="affilvps">
+                                <input type="hidden" name="affiliation" value="affil_vps">
                                 <div class="form-w-one li-form">
                                     <label>Prénom</label>
                                     <input type="text" id="name" name="prenom" required>

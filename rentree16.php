@@ -178,7 +178,7 @@ $questions = array(
                             <input type="hidden" name="source" value="<?= $url ?>" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
-                            <input type="hidden" name="affiliation" value="affilbase" />
+                            <input type="hidden" name="affiliation" value="affil_base" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="dri" value="<?= $dri ?>" />
                             <!-- ########## autres champs pré-remplis ######### -->

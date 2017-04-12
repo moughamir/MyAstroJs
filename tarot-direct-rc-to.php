@@ -30,7 +30,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
+        <link rel="icon" type="image/png" href="<?= $pict_path;?>favicon.png" />
         
         <!-- Meta Facebook --
         <meta property="og:title" content="Nouvelle Lune = Nouvelle Vie" />
@@ -40,7 +40,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta property="og:description" content="À l’image de son incidence sur le cycle lunaire, auquel elle donne un nouveau départ, la nouvelle lune a des conséquences et des influences similaires sur la vie de chacun d’entre nous." />
         <meta property="og:locale" content="fr_FR" /-->
         
-        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
+        <link rel="stylesheet" type="text/css" href="<?= $css;?>" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,31 +64,31 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </div>
         </header>
         <form id="form-container" class="ajax">
-            <!-- -------------------------------------- CHOIX DU VOYANT -------------------------------------- -->
+<!-- --------------------------- CHOIX DU VOYANT --------------------------- -->
             <section class="ContentBand TwoCols PsychicChoice Principal" id="scn-psychic">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyante</strong> -</header>
                 <div class="PageWrapper">
-                    <?php include('include/visual_modules/tarot-direct/psychic-choice.php'); ?>
+                    <?php include('include/visual_modules/tarot-direct/psychic-choice.php');?>
                 </div>
             </section>
-            <!-- -------------------------------------- CHOIX DE LA QUESTION -------------------------------------- -->
+<!-- ------------------------- CHOIX DE LA QUESTION ------------------------ -->
             <section class="ContentBand ThemeChoice Principal" id="scn-theme" style="display:none">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>Thème</strong> -</header>
                 <div class="PageWrapper">
                     <article class="ThemeChoice-List">
                         <?php foreach($questions as $optgroup => $options){ ?>
                             <?php foreach($options as $theme => $question){ ?>
-                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
-                            <label for="theme_<?= $theme ?>" class="ThemeChoice-ListItem">
-                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup ?>"></span>
-                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'] ?></span>
+                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" id="theme_<?= $theme;?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
+                            <label for="theme_<?= $theme;?>" class="ThemeChoice-ListItem">
+                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup;?>"></span>
+                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'];?></span>
                             </label>
                             <?php } ?>
                         <?php } ?>
                     </article>
                 </div>
             </section>
-            <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
+<!-- ------------------------------ FORMULAIRE ----------------------------- -->
             <section class="ContentBand Form Principal" id="scn-form" style="display:none">
                 <header class="ContentBand-ColumnHeader Title">- Pour poursuivre remplissez le <strong>formulaire</strong> ci-dessous -</header>
                 <div class="PageWrapper ContentBand-Table">
@@ -103,8 +103,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="reflexcache" />
-                                <input type="hidden" name="dri" value="<?= urlencode($dri) ?>" />
+                                <input type="hidden" name="affiliation" value="reflexcash" />
+                                <input type="hidden" name="dri" value="<?= urlencode($dri);?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
@@ -129,7 +129,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -140,7 +140,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select  class="FormField-Input" name="jour" required>
                                                     <option selected="selected" value="">Jour</option>
                                                     <?php for($i=1;$i<=31;$i++){ ?>
-                                                    <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                    <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -165,7 +165,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select class="FormField-Input" name="annee" required>
                                                     <option selected="selected" value="">Année</option>
                                                     <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                    <option value="<?= $i ?>"><?= $i ?></option>
+                                                    <option value="<?= $i;?>"><?= $i;?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -181,7 +181,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -230,7 +230,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </form>
-        <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
+<!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
         <div class="WidgetTarot">
             <section class="ContentBand Tarot Arrowed" id="scn-tarot-draw">
                 <header class="ContentBand-ColumnHeader Title">- Tirez <strong>5 cartes</strong> -</header>
@@ -238,7 +238,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div id="cards-container" class="ContentBand-Column">
                         <div class="WidgetTarot-Draw" >
                             <?php for($i=1;$i<=20;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
@@ -254,7 +254,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
                             <div class="WidgetTarot-Result">
                                 <?php for($i=1;$i<=5;$i++){ ?>
-                                <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                                <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                                 <?php } ?>
                             </div>
                         </div>
@@ -262,9 +262,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </div>
-        
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+<!-- ------------------------------- FOOTER -------------------------------- -->
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -277,11 +276,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

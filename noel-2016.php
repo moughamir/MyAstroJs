@@ -1,4 +1,5 @@
 <?php
+include('include/init-affilbase.php');
 
 $cards_dir = 'tarot/cartes/original-grand/';
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
@@ -104,7 +105,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="method" value="general-suscribe"/>
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="site" value="myastro.fr"/>
-                                <input type="hidden" name="affiliation" value="affil_base"/>
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="noel-2016-tel"/>
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />

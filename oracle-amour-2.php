@@ -7,6 +7,7 @@
     Created on : 25 mai 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+include('include/init-affilbase.php');
 $cards_dir = 'tarot/cartes/cartes-oracle-amour/';
 $button ="Je veux savoir";
 $questions = array(
@@ -93,7 +94,8 @@ $questions = array(
                         <input type="hidden" name="method" value="general-suscribe" />
                         <input type="hidden" name="support" value="tarot" />
                         <input type="hidden" name="site" value="myastro.fr" />
-                        <input type="hidden" name="affiliation" value="affilbase" />
+                        <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                        <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                         <input type="hidden" name="dri" value="oracle-amour-2-tel" />
                         <!-- ########## autres champs pré-remplis ######### -->
                         <input type="hidden" name="cguv" value="1" />

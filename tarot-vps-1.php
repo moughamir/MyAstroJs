@@ -62,7 +62,7 @@
                             <input type="hidden" name="dri" value="dri-vps-tarot" />
                             <input type="hidden" name="support" value="tarot"/>
                             <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>"/>
-                            <input type="hidden" name="affiliation" value="affilvps" />
+                            <input type="hidden" name="affiliation" value="affil_vps" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="cguv" value="1" />
                             <!-- ############################################### -->

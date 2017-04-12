@@ -1,20 +1,18 @@
 <?php
-/* 
-    ------------------------------------------
-    --   tarot-amour-1-fb = FACEBOOK_ADDS   --
-    ------------------------------------------
-
-    Created on : 01 avril 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
-    $page = 'tarot-amour-1-fb';
-    $button = 'Découvrir mon interprétation';
-    $questions = array(
-        'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
-        'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
-        'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
-    );
-    require_once(realpath('include/tools.php'));
+/**
+ * tarot-amour-1-fb == FACEBOOK ADDS
+ * ---------------------------------
+ * Created on : 01 avril 2016 By Laurène Dourdin <2aurene@gmail.com>
+ * Updated on : 07 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+$page = 'tarot-amour-1-fb';
+$button = 'Accéder au tchat';
+$questions = array(
+    'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
+    'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
+    'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
+);
+$assets = 'images_landing/tarot-amour/';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,13 +20,13 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        <title>Tarot de lʼamour : laissez les lames parler | Myastro</title>
-        
+
+        <title>Tarot de lʼamour : Laissez les lames parler | Myastro</title>
+
         <meta name="robots" content="noindex,nofollow" />
-        
-        <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
+        <link rel="icon" type="image/png" href="<?= $assets;?>favicon.png" />
+
         <link rel="stylesheet" type="text/css" href="css/tarot-amour.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,9 +39,9 @@
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
-                 --><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                    <a href="http://<?= ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                 --><a href="http://<?= ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
+                 --><a href="http://<?= ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
                 </nav>
             </div>
         </header>
@@ -58,24 +56,24 @@
                         <div class="DescText-Content">
                             <p>Que disent les lames sur votre avenir amoureux ? Avec notre tarot de lʼamour, découvrez ce que votre destin sentimental vous réserve.</p>
                             <p>En toute simplicité, tirez les lames et laissez nos experts en divination interpréter votre tirage. Grâce à notre tarot de lʼamour en ligne, nʼattendez pas quʼil soit trop tard pour obtenir des réponses.</p>
-                            <p>Seul, en couple ou séparés, notre tarot gratuit vous permet de répondre à vos interrogations en interrogeant le destin, qui se laissera découvrir dans les lames...</p>
+                            <p>Seul, en couple ou séparés, notre tarot de lʼamour vous permet de répondre à vos questions en interrogeant le destin, qui se laissera découvrir dans les lames…</p>
                         </div>
                     </article>
                 </div>
                 <div class="ContentBand-Column WidgetBand-Tarot">
                     <h2 class="ContentBand-ColumnHeader">Tirez <strong>5</strong> lames</h2>
-                    <article class="WidgetTarot" id="cards-container">
-                        <div class="WidgetTarot-Draw">
+                    <article class="WidgetTarot">
+                        <div class="WidgetTarot-Draw" id="cards-container">
                             <?php for($i=1;$i<=22;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="WidgetTarot-Result">
+                        <div class="WidgetTarot-Result" id="cards-result">
                             <?php for($i=1;$i<=5;$i++){ ?>
-                            <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                            <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                             <?php } ?>
                         </div>
                     </article>
@@ -118,16 +116,17 @@
                         <h2 class="FormContainer-Header">Mes informations</h2>
                         <div class="FormContainer-Fields">
                             <p class="alert alert-danger" style="display: none"></p>
-                            <form id="form-container">
+                            <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="myastro-tarot-fb2" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="facebook_adds" />
-                                <input type="hidden" name="dri" value="tarot-amour-1-fb-tel" />
-                                <input type="hidden" name="redirect_method" value="reload_form" />
+                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ######### -->
+                                <input type="hidden" name="tel_needed" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
@@ -154,7 +153,7 @@
                                             <select  class="FormField-Input" name="jour" required>
                                                 <option selected="selected" value="">Jour</option>
                                                 <?php for($i=1;$i<=31;$i++){ ?>
-                                                <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -179,7 +178,7 @@
                                             <select class="FormField-Input" name="annee" required>
                                                 <option selected="selected" value="">Année</option>
                                                 <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                <option value="<?= $i ?>"><?= $i ?></option>
+                                                <option value="<?= $i;?>"><?= $i;?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>
@@ -211,7 +210,36 @@
                                     <input id="email" type="email" name="email" class="FormField-Input" required />
                                     <span class="FormField-Info">Une étude personnalisée vous sera envoyée à cette adresse</span>
                                 </div>
-                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button ?></button>
+                                <div class="FormField">
+                                    <label for="pays" class="FormField-Label">Votre pays </label>
+                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                        <option value="" selected>Votre Pays</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="CH">Suisse</option>
+                                        <option value="FR" selected>France Métropolitaine</option>
+                                        <optgroup label="DOM-TOM">
+                                            <option value="MQ">Martinique</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GF">Guyane</option>
+                                            <option value="RE">La Réunion</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="PM">St Pierre et Miquelon</option>
+                                            <option value="BL">St Barthélémy</option>
+                                            <option value="SM">St Martin</option>
+                                            <option value="WF">Wallis et Futunua</option>
+                                            <option value="PF">Polynésie Française</option>
+                                            <option value="NC">Nouvelle Calédonie</option>
+                                        </optgroup>
+                                        <option value="ZZ">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="FormField">
+                                    <label for="tel" class="FormField-Label">Téléphone</label>
+                                    <input type="tel" name="tel" id="tel" class="FormField-Input" required />
+                                </div>
+                                <button class="FormContainer-Submit" type="submit" name="valider"><?= $button;?></button>
                             </form>
                         </div>
                     </article>
@@ -240,17 +268,15 @@
                 </ul>
             </div>
         </footer>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
         <script src="js/formValidator.js"></script>
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

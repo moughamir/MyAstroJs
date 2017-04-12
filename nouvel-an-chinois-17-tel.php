@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include('include/init-affilbase.php');
     session_start();
     $questions = array(
         'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
@@ -32,7 +33,8 @@
                             <input type="hidden" name="source" value="nouvel-an-chinois-17" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
-                            <input type="hidden" name="affiliation" value="affilbase" />
+                            <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                            <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                             <input type="hidden" name="dri" value="nouvel-an-chinois-17-dri" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />

@@ -55,7 +55,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                                 <input type="hidden" name="source" value="numerologie-amour-can" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="external_base" />
+                                <input type="hidden" name="affiliation" value="base_externe" />
                                 <input type="hidden" name="dri" value="numerologie-amour-tel" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />

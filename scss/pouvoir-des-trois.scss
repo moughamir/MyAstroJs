@@ -6,14 +6,18 @@ $assets: '/images_landing/pouvoir-des-trois/';
 $promo: $assets+"offre.png";
 // scheme
 $primary: #411575;
+
 /* sidebar element hover, btn, Psychic name, highlight */
+
 $primary-txt: #ffffff;
 $secondary: #505050;
 $secondary-hvr: #9a9898;
 $icons: #454545;
 // fonts
-$courgette: 'Courgette', cursive;
-$openSans: 'Open Sans', sans-serif;
+$courgette: 'Courgette',
+cursive;
+$openSans: 'Open Sans',
+sans-serif;
 // Typo
 h1,
 h2,
@@ -74,6 +78,9 @@ body {
 .fullview {
   align-items: center;
   min-height: 60rem;
+  @include respond-to("mobile") {
+    min-height: initial;
+  }
 }
 
 .main {
@@ -524,7 +531,7 @@ footer {
   &-Form {
     background-color: rgba(172, 150, 165, 0.72);
     box-shadow: 0px 2px 15px -5px #212121;
-    width: 60rem;
+    max-width: 60rem;
     select#pays {
       width: 280px;
     }
@@ -541,6 +548,9 @@ footer {
     .FormContainer {
       width: 80%;
       min-width: 450px;
+      @include respond-to("mobile") {
+        min-width: initial;
+      }
       margin: 0 auto;
       display: block;
     }
@@ -557,6 +567,7 @@ footer {
   background-color: rgba(0, 0, 0, .7);
   color: #000;
 }
+
 .overlay .alert {
   z-index: 9999;
   top: 50%;
@@ -655,8 +666,32 @@ footer {
     font-family: $courgette !important;
     font-size: 2rem;
     strong {
-        color: $primary;
-        font-weight: normal;
+      color: $primary;
+      font-weight: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .mf {
+    .fullview {
+      min-height: initial;
+    }
+    .FormContainer {
+      width: 100vw;
+      padding: 0;
+    }
+    h2 {
+      font-size: 2.18rem;
+    }
+    .radio {
+      margin-top: 1.8rem;
+    }
+    .gender {
+      margin: 0;
+    }
+    .Fields-Table-Row {
+      padding: 0 3px;
     }
   }
 }

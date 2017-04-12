@@ -1,12 +1,9 @@
 <?php
-/* 
-    ----------------------------------------------------
-    --   tarot-direct-rak-g = AFFIL BASE EXTERNE RAK  --
-    ----------------------------------------------------
-
-    Created on : 30 septembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * tarot-direct-tab == TABOOLA
+ * ---------------------------
+ * Created on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
@@ -20,14 +17,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        <title>Tarot Direct - Interprétation en live !</title>
-        
+
+        <title>Tarot Direct - Interprétation en live !</title>
+
         <meta name="robots" content="noindex,nofollow" />
-        
-        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
-        
-        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
+
+        <link rel="icon" type="image/png" href="<?= $pict_path;?>favicon.png" />
+
+        <link rel="stylesheet" type="text/css" href="<?= $css;?>" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,31 +48,31 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </div>
         </header>
         <form id="form-container" class="ajax">
-            <!-- -------------------------------------- CHOIX DU VOYANT -------------------------------------- -->
+<!-- --------------------------- CHOIX DU VOYANT --------------------------- -->
             <section class="ContentBand TwoCols PsychicChoice Principal" id="scn-psychic">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>voyante</strong> -</header>
                 <div class="PageWrapper">
-                    <?php include('include/visual_modules/tarot-direct/psychic-choice.php'); ?>
+                    <?php include('include/visual_modules/tarot-direct/psychic-choice.php');?>
                 </div>
             </section>
-            <!-- -------------------------------------- CHOIX DE LA QUESTION -------------------------------------- -->
+<!-- ------------------------ CHOIX DE LA QUESTION ------------------------- -->
             <section class="ContentBand ThemeChoice Principal" id="scn-theme" style="display:none">
                 <header class="ContentBand-ColumnHeader Title">- Choisissez votre <strong>Thème</strong> -</header>
                 <div class="PageWrapper">
                     <article class="ThemeChoice-List">
                         <?php foreach($questions as $optgroup => $options){ ?>
                             <?php foreach($options as $theme => $question){ ?>
-                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
-                            <label for="theme_<?= $theme ?>" class="ThemeChoice-ListItem">
-                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup ?>"></span>
-                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'] ?></span>
+                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" id="theme_<?= $theme;?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
+                            <label for="theme_<?= $theme;?>" class="ThemeChoice-ListItem">
+                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup;?>"></span>
+                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'];?></span>
                             </label>
                             <?php } ?>
                         <?php } ?>
                     </article>
                 </div>
             </section>
-            <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
+<!-- ----------------------------- FORMULAIRE ------------------------------ -->
             <section class="ContentBand Form Principal" id="scn-form" style="display:none">
                 <header class="ContentBand-ColumnHeader Title">- Pour poursuivre remplissez le <strong>formulaire</strong> ci-dessous -</header>
                 <div class="PageWrapper ContentBand-Table">
@@ -86,15 +83,17 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-rak-g" />
+                                <input type="hidden" name="source" value="tarot-direct-tab" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="base_externe" />
+                                <input type="hidden" name="affiliation" value="taboola" />
                                 <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
                                 <!-- ########## autres champs pré-remplis ########## -->
+                                <input type="hidden" name="tel_needed" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="partenaires" value="1" />  
+                                <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
@@ -114,7 +113,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -125,7 +124,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select  class="FormField-Input" name="jour" required>
                                                     <option selected="selected" value="">Jour</option>
                                                     <?php for($i=1;$i<=31;$i++){ ?>
-                                                    <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                    <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -150,7 +149,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                                 <select class="FormField-Input" name="annee" required>
                                                     <option selected="selected" value="">Année</option>
                                                     <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                    <option value="<?= $i ?>"><?= $i ?></option>
+                                                    <option value="<?= $i;?>"><?= $i;?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -166,11 +165,47 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
                                     <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
+                                </div>
+                                <div class="Fields-Table-Row">
+                                    <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
+                                    <div class="FormField">
+                                        <input id="tel" type="tel" name="tel" class="FormField-Input" required />
+                                    </div>
+                                </div>
+                                <div class="Fields-Table-Row">
+                                    <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
+                                </div>
+                                <div class="Fields-Table-Row">
+                                    <label for="pays" class="FormField-Label">Votre pays</label>
+                                    <div class="FormField">
+                                        <select name="pays" id="pays" class="FormField-Input" required>
+                                            <option value="" selected>Votre Pays</option>
+                                            <option value="BE">Belgique</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="LU">Luxembourg</option>
+                                            <option value="CH">Suisse</option>
+                                            <option value="FR" selected>France Métropolitaine</option>
+                                            <optgroup label="DOM-TOM">
+                                                <option value="MQ">Martinique</option>
+                                                <option value="GP">Guadeloupe</option>
+                                                <option value="GF">Guyane</option>
+                                                <option value="RE">La Réunion</option>
+                                                <option value="YT">Mayotte</option>
+                                                <option value="PM">St Pierre et Miquelon</option>
+                                                <option value="BL">St Barthélémy</option>
+                                                <option value="SM">St Martin</option>
+                                                <option value="WF">Wallis et Futunua</option>
+                                                <option value="PF">Polynésie Française</option>
+                                                <option value="NC">Nouvelle Calédonie</option>
+                                            </optgroup>
+                                            <option value="ZZ">Autre</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
@@ -179,7 +214,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </form>
-        <!-- -------------------------------------- TIRAGE DU TAROT -------------------------------------- -->
+<!-- --------------------------- TIRAGE DU TAROT --------------------------- -->
         <div class="WidgetTarot">
             <section class="ContentBand Tarot Arrowed" id="scn-tarot-draw">
                 <header class="ContentBand-ColumnHeader Title">- Tirez <strong>5 cartes</strong> -</header>
@@ -187,7 +222,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div id="cards-container" class="ContentBand-Column">
                         <div class="WidgetTarot-Draw" >
                             <?php for($i=1;$i<=20;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
@@ -203,7 +238,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
                             <div class="WidgetTarot-Result">
                                 <?php for($i=1;$i<=5;$i++){ ?>
-                                <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                                <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                                 <?php } ?>
                             </div>
                         </div>
@@ -211,9 +246,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
             </section>
         </div>
-        
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -226,11 +259,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
