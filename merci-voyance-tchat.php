@@ -8,6 +8,7 @@
 session_start();
 $img_path = 'images_landing/merci-voyance-tchat/';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
+$url = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email='.$email;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -51,7 +52,7 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                     <article class="PromoContent-Window">
                         <h2 class="PromoContent-Slogan">Toutes vos réponses en un simple CLIC</h2>
                         <h1 class="PromoContent-Title">5 minutes de tchat gratuites</h1>
-                        <a href="https://voyance-en-direct.tv/myastro/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="<?= $url;?>" class="FormField-Button">Je lance le TCHAT</a>
                         <ul class="PromoContent-PsychicList" id="psychic_list">
                             <li class="PsychicList-Item">
                                 <img src="<?= $img_path;?>ulysse.jpg" alt="Ulysse" class="PsychicList-Item-Img" />
@@ -104,7 +105,7 @@ $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
                     <article class="FormContainer">
                         <h4 class="FormContainer-Title">Amour, Travail, Argent…</h4>
                         <p class="FormContainer-Slogan">Pour profiter immédiatement des 5 minutes de tchat gratuites, cliquez sur le bouton ci-dessous :</p>
-                        <a href="https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=<?= $email;?>" class="FormField-Button">Je lance le TCHAT</a>
+                        <a href="<?= $url;?>" class="FormField-Button">Je lance le TCHAT</a>
                     </article>
                 </div>
             </div>
