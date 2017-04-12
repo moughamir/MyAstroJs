@@ -10,7 +10,7 @@ $pageName = "myastro-tchat-rc";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "reflexcache";
+$source = "reflexcash";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
