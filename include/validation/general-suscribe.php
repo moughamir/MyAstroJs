@@ -515,7 +515,7 @@ if(empty($err)){
  * ========================================================================== */
 
     if(isset($param['convertir'])){
-        if($source == 'reflexcache'){
+        if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
         } else {
             $retour = array();
