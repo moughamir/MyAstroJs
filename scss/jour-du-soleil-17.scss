@@ -1,0 +1,371 @@
+/**
+ * =========================== [ jour-du-soleil-17 ] ===========================
+ * Created on : 26 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@charset "UTF-8";
+
+@import "templates/s-landing-tarot-2";
+
+/* Typographies */
+$txtbase: "Open Sans", sans-serif;
+$handscripted: "Courgette", cursive;
+$title: 'Ubuntu Condensed', sans-serif;
+
+/* Images */
+$img_dir: "../images_landing/jour-du-soleil-17/";
+$bg_img: $img_dir + "bg.jpg";
+$logo: $img_dir + "logo-myastro.png";
+$title_img: $img_dir + "title.png";
+$aline: $img_dir + "aline.png";
+$cardback: $img_dir + "verso_cartes.png";
+$fleche: $img_dir + "fleche.png";
+$icon_star: $img_dir + "ico-star.png";
+$icon_gift: $img_dir + "ico-gift.png";
+$icon_lock: $img_dir + "ico-lock.png";
+$icon_trophy: $img_dir + "ico-trophy.png";
+$how_ico_form: $img_dir + "how-ico-form.png";
+$how_ico_phone: $img_dir + "how-ico-phone.png";
+
+/* Couleurs */
+$white: white;
+$soft_black: #111111;
+$grey: #444033;
+$yellow: #F4CF4E;
+$card_place: linear-gradient(to bottom, #D8D7D4 0%, #4E4D4B 100%);
+$bg_grey: rgba(68, 54, 51, 0.5);
+$woman: #F9324D;
+$men: #2BCEDD;
+$btn_light_yellow: #F7DA61;
+$btn_dark_yellow: #F1C43B;
+$bg_transparent: rgba(108, 122, 133, 0.23);
+
+/* Animations */
+@-webkit-keyframes sunshine {
+    0%   { opacity: 0.1; }
+    35%  { opacity: 1; }
+    50%  { opacity: 0.5; }
+    65%  { opacity: 1; }
+    100% { opacity: 0.1; }
+}
+@keyframes sunshine {
+    0%   { opacity: 0.1; }
+    35%  { opacity: 1; }
+    50%  { opacity: 0.5; }
+    65%  { opacity: 1; }
+    100% { opacity: 0.1; }
+}
+
+/* ------------------------------- [ LAYOUT ] ------------------------------- */
+
+body {
+    background: url($bg_img) no-repeat center top fixed;
+    background-size: cover;
+    color: $white;
+    font-family: $txtbase;
+    font-weight: 300;
+    padding-top: 2rem;
+}
+
+/* ------------------------------- [ HEADER ] ------------------------------- */
+
+.SiteLogo {
+    background: transparent url($logo) center no-repeat;
+    background-size: contain;
+    height: 107px;
+    width: 107px;
+}
+.PageLogo {
+    background: transparent url($title_img) center bottom no-repeat;
+}
+
+@media screen and (max-width: 800px) {
+    .PageLogo {
+        background-size: contain;
+    }
+}
+@media screen and (max-width: 600px){
+    .PageLogo {
+        background-position: center;
+        height: 110px;
+    }
+}
+
+/* ---------------------------- [ TEXT CONTENT ] ---------------------------- */
+
+.DescText {
+    text-shadow: 0 0 6px $soft_black;
+}
+
+.DescText-Title {
+    background-color: transparent;
+    color: $grey;
+    height: auto;
+    font-family: $handscripted;
+    font-size: 2.3rem;
+    text-align: center;
+    
+    &-Legend {
+        background: url($aline) right no-repeat;
+        font-size: 1.9rem;
+        min-height: 107px;
+        text-align: right;
+        padding-right: 111px;
+    }
+}
+
+.DescText-DrawSuccess {
+    color: $grey;
+    font-family: $handscripted;
+    font-size: 1.8rem;
+    height: auto;
+    margin-top: 1.4rem !important;
+}
+
+.DescText-Content {
+    background: transparent;
+    text-indent: 5rem;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 730px){
+    .DescText-Title {
+        font-size: 2rem;
+        &-Legend {
+            font-size: 1.7rem;
+        }
+    }
+}
+@media screen and (max-width: 810px) and (min-width: 730px){
+    .DescText-Title {
+        font-size: 1.8rem;
+        &-Legend {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width: 430px){
+    .DescText-Title {
+        font-size: 1.8rem;
+        &-Legend {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* -------------------------------- [ TAROT ] ------------------------------- */
+
+.WidgetTarot {
+    margin-bottom: 3rem;
+}
+
+.WidgetTarot-Result {
+    margin-bottom: 0;
+}
+
+.WidgetTarot-Card {
+    overflow: visible;
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        background-color: transparent;
+        background-image: url($cardback);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: none;
+    }
+    &-Face.back {
+        border: none;
+    }
+    
+    &.Flipped[data-result="7"]::after {
+        -webkit-box-shadow: 0px 0px 12px 4px $yellow;
+        box-shadow: 0px 0px 12px 4px $yellow;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        transition: opacity 1s ease-in-out;
+        width: 100%;
+        
+        animation-name: sunshine;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    
+    &.place {
+        background: -webkit-$card_place;
+        background: $card_place;
+        border-radius: 6px;
+        opacity: 0.55;
+    }
+}
+
+/* -------------------------------- [ FORM ] -------------------------------- */
+
+.FormContainer {
+    background-color: $bg_grey;
+    border: none;
+    padding: 2rem;
+    
+    &-Header {
+        background: url($fleche) no-repeat bottom center;
+        font-family: $title;
+        font-size: 2.2rem;
+        padding-bottom: 3rem; 
+    }
+    
+    &-Submit {
+        border: none;
+        border-radius: 4rem;
+        background: -webkit-linear-gradient(to bottom, $btn_light_yellow 35%, $btn_dark_yellow 60%);
+        background: linear-gradient(to bottom, $btn_light_yellow 35%, $btn_dark_yellow 60%);
+        background-color: $btn_light_yellow;
+        box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.8), inset -2px -2px 2px rgba(0, 0, 0, 0.5);
+        color: $grey;
+        font-family: $title;
+        font-size: 2.2rem;
+        padding: 1rem 4rem;
+        text-transform: uppercase;
+        
+        &:hover {
+            box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.8);
+        }
+    }
+}
+
+.FormField-Label {
+    text-transform: uppercase;
+    
+    .ico-woman {
+        color: $woman;
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+    .ico-man {
+        color: $men;
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+}
+
+.FormField-Input {
+    border: none;
+    color: $grey;
+    
+    &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
+        outline-width: 0;
+        box-shadow: 0 0 6px -1px $yellow;
+        border-color: transparent;
+    }
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.FormField-InfoPop {
+    color: $grey;
+    border: none;
+    box-shadow: 0 0 6px -1px $grey;
+}
+
+@import "modules_themes/form-alert-vivid";
+
+/* ----------------------------- [ REASSURANCE ] ---------------------------- */
+
+.ReassuranceList {
+    background: $grey;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icon_star) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icon_lock) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($icon_gift) center no-repeat;
+    background-size: contain;
+}
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icon_trophy) center no-repeat;
+    background-size: contain;
+}
+
+/* ------------------------------- [ DRI ] ---------------------------------- */
+
+.DRI {
+    .DescText {
+        text-shadow: none;
+        color: $soft_black;
+    }
+
+    &-Intro {
+        background-color: $bg_transparent;
+        font-family: $title;
+        &-Title {
+            color: $grey;
+            text-transform: uppercase;
+        }
+        &-Text {
+            color: $grey;
+            font-family: $txtbase;
+            font-size: 1.6rem;
+        }
+    }
+    
+    &-Slogan {
+        background-color: $yellow;
+        font-family: $title;
+        color: $grey;
+        text-transform: uppercase;
+    }
+    
+    &-Form {
+        padding: 2rem;
+        background-color: $grey;
+        .FormField-Input {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+    
+    &-Sent {
+        font-family: $title;
+        strong {
+            font-weight: normal;
+            color: $yellow;
+        }
+    }
+}
+
+/* ------------------------------- [ HOW ] ---------------------------------- */
+
+.How-Header {
+    margin-top: 2rem !important;
+    font-weight: normal;
+    font-size: 2.4rem;
+    font-family: $title;
+}
+
+.How-Wizard {
+    border: none;
+    color: $soft_black;
+    
+    &Item-Img.form {
+        background: transparent url($how_ico_form) center no-repeat;
+        background-size: contain;
+    }
+    &Item-Img.phone {
+        background: transparent url($how_ico_phone) center no-repeat;
+        background-size: contain;
+    }
+}

@@ -11,7 +11,7 @@ $(document).ready(function(){
         $($('.alert-danger').hide());
     }
 
-    // Gestion affichage du champs du conjoint    
+    // Gestion affichage du champs du conjoint
     var toogle_spouse = function(){
         var flag = false;
         var questions_amour_p2 = ['question_11', 'question_2', 'question_24' ];
