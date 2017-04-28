@@ -49,7 +49,7 @@ class APIKGestion {
 
         // close the connection
         curl_close($curl_connection);
-        var_dump($result);
+        
         return json_decode($result);
     }
     
