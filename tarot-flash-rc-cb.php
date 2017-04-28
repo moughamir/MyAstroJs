@@ -1,12 +1,13 @@
 <?php
 /**
- * tarot-flash-a == ADWORDS
- * ------------------------
- * Created on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * tarot-flash-rc-cb == REFLEXCASH
+ * -------------------------------
+ * Created on : 28 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$page = 'tarot-flash-a';
-$assets = 'images_landing/tarot-sable/';
+session_start();
+
 $button = 'Accéder au tchat';
+$assets = 'images_landing/tarot-sable/';
 $questions = array(
     'Amour' => array(
         [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Vous en avez marre d’être seul(e)' ],
@@ -22,6 +23,13 @@ $questions = array(
         [ 'code' => 'question_3', 'subject' => 'professionnel', 'text' => 'Vous cherchez un emploi' ],
     )
 );
+
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
+
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -66,7 +74,7 @@ $questions = array(
                             <p>Et si les cartes vous en disaient plus sur votre avenir ? Avec la voyance par tarot gratuit de MyAstro, tirez 5 lames et recevez par mail votre interprétation sous 24 heures.</p>
                             <p>Que signifient le Chariot ou le Monde ? Votre tirage de tarot flash est-il porteur de bonnes ou de mauvaises nouvelles ?</p>
                             <p>Les voyants spécialistes du tarot de MyAstro se tiennent à votre disposition pour interpréter au plus juste ce que les lames auront révélé.</p>
-                            <p>Amour, argent, famille, notre tarot vous permet de répondre à vos questions en interrogeant le destin, qui se laissera découvrir dans les lames...</p>
+                            <p>Amour, argent, famille, notre tarot vous permet de répondre à vos questions en interrogeant le destin, qui se laissera découvrir dans les lames…</p>
                         </div>
                     </article>
                 </div>
@@ -128,15 +136,14 @@ $questions = array(
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-flash-a" />
+                                <input type="hidden" name="source" value="tarot-flash-rc-cb" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                                <input type="hidden" name="affiliation" value="reflexcash" />
+                                <input type="hidden" name="dri" value="myastro/saisie-cb" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="convertir" value="1" />
-                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '';?>" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
