@@ -16,7 +16,7 @@ $reinscription = false;
 $tchatabo_dri =  [
     "tarot-en-direct/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]', 'dri' => 'tarot-direct-dri-tog' ],
     "myastro/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'dri' => 'myastro-tchat-dri' ],
-    "pouvoir-des-trois/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'dri' => 'pdt-tchat-dri' ],
+    "pouvoir-des-trois/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]', 'dri' => 'pdt-tchat-dri' ],
     "tarot-direct-merci" => [],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
@@ -515,7 +515,7 @@ if(empty($err)){
  * ========================================================================== */
 
     if(isset($param['convertir'])){
-        if($source == 'reflexcache'){
+        if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
         } else {
             $retour = array();
