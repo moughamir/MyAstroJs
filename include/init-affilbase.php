@@ -15,11 +15,11 @@ $idkgestion = isset($get['idkgestion']) && !empty($get['idkgestion']) ? $get['id
 $source = 'affil_base';
 $gclid = '';
 
-if(isset($idkgestion)){
+if($idkgestion){
     $kgestion = new APIKGestion;
     $tracking_data = $kgestion->getTracking($idkgestion);
     if($tracking_data){
-        $source = $tracking_data['source'];
-        $gclid = isset($tracking_data['gclid']) ? $tracking_data['gclid'] : '';
+        $source = $tracking_data->source;
+        $gclid = isset($tracking_data->gclid) ? $tracking_data->gclid : '';
     }
 }
