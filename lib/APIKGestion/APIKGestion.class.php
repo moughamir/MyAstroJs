@@ -18,7 +18,6 @@ class APIKGestion {
         foreach ($data as $key => $value) {
             $post_items[] = $key.'='.$value;
         }
-
         // create the final string to be posted using implode()
         $post_string = implode('&', $post_items);
 
@@ -26,7 +25,9 @@ class APIKGestion {
         $curl_connection = curl_init();
         curl_setopt($curl_connection, CURLOPT_URL, $url);
         curl_setopt($curl_connection, CURLOPT_HTTPHEADER, ['apikey: CdF7w445KBlBUt2mjWKVggY2EkOCN4Y9']);
-        curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $post_string);
+        if(!empty($post_string)){
+            curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $post_string);
+        }
         if(getenv('MYASTRO_CURL_NOSSL')){
             curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
         }
