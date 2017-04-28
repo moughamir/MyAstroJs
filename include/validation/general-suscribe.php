@@ -14,10 +14,12 @@ $retour = array();
 $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
-    "tarot-en-direct/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]', 'dri' => 'tarot-direct-dri-tog' ],
-    "myastro/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'dri' => 'myastro-tchat-dri' ],
-    "pouvoir-des-trois/offre-gratuite" => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]', 'dri' => 'pdt-tchat-dri' ],
-    "tarot-direct-merci" => [],
+    'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]', 'dri' => 'tarot-direct-dri-tog' ],
+    'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'dri' => 'myastro-tchat-dri' ],
+    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?email=[EMAIL]', 'dri' => 'myastro-tchat-dri' ],
+    'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]', 'dri' => 'pdt-tchat-dri' ],
+    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?email=[EMAIL]', 'dri' => 'pdt-tchat-dri' ],
+    'tarot-direct-merci' => [],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
