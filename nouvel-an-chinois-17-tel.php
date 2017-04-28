@@ -1,6 +1,5 @@
 <?php
     include('include/init-affilbase.php');
-    session_start();
     $questions = array(
         'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
         'nac17-cheval'  => ['code'=>'nac17-cheval', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cheval"],

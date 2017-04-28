@@ -112,17 +112,17 @@
     &-InfoPop {
         display: block;
         position: absolute;
-        margin-top: -3.7rem;
+        margin-top: -4.5rem;
         padding: 0.8rem 1.4rem;
         background-color: white;
         border: 1px solid;
-        transition: all 0.25s;
+        transition: all 0.35s;
         opacity: 0;
         z-index: -1;
     }
     
     &-Input:focus + &-InfoPop {
-        margin-top: -8rem;
+        margin-top: 0.4rem;
         opacity: 1;
         z-index: 1;
     }

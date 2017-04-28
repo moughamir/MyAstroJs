@@ -1,57 +1,57 @@
-/* 
-    ----------------------
-    --    automne-16    --
-    ----------------------
+/**
+ * ============================== [ automne-16 ] ===============================
+ * Created on : 21 septembre 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@charset "UTF-8";
 
-    Created on : 21 septembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
 @import "templates/s-landing-tarot-2";
 
-/* Dossier images */
-$img_dir : "../images_landing/automne-16/";
-$background : $img_dir + "bg.jpg";
-$logo : $img_dir + "logo-myastro.png";
-$header : $img_dir + "title.png";
-$psychic : $img_dir + "aline.png";
-$cardback : $img_dir + "cardback.png";
-$formtitle_arrow : $img_dir + "fleche.png";
-$icon_star : $img_dir + "ico-star.png";
-$icon_gift : $img_dir + "ico-gift.png";
-$icon_lock : $img_dir + "ico-lock.png";
-$icon_trophy : $img_dir + "ico-trophy.png";
-$icon_how_form : $img_dir + "how-ico-form.png";
-$icon_how_phone : $img_dir + "how-ico-phone.png";
+/* Typographies */
+$txtbase: 'Open Sans', sans-serif;
+$handscripted: 'Dancing Script', cursive;
+$title: 'Ubuntu Condensed', sans-serif;
 
-/* Palette */
-$bg : #FFFCF3;
-$grey : #454545;
-$brown : #543D13;
-$orange : #ED3E09;
-$light-orange : #F17B46;
-$btn-orange : #F64E09;
-$btn-darkorange : #F43B07;
-$card-place : linear-gradient(to bottom, rgba(216, 215, 212, 0.6) 0%, rgba(78, 77, 75, 0.6) 100%);
-$bg-grey-transparent : rgba(81, 71, 70, 0.25);
-$bg-grey : #514746;
-$woman : #F9324D;
-$men : #2BCEDD;
+/* Images */
+$img_dir: "../images_landing/automne-16/";
+$background: $img_dir + "bg.jpg";
+$logo: $img_dir + "logo-myastro.png";
+$header: $img_dir + "title.png";
+$psychic: $img_dir + "aline.png";
+$cardback: $img_dir + "cardback.png";
+$formtitle_arrow: $img_dir + "fleche.png";
+$icon_star: $img_dir + "ico-star.png";
+$icon_gift: $img_dir + "ico-gift.png";
+$icon_lock: $img_dir + "ico-lock.png";
+$icon_trophy: $img_dir + "ico-trophy.png";
+$icon_how_form: $img_dir + "how-ico-form.png";
+$icon_how_phone: $img_dir + "how-ico-phone.png";
 
-/* ------------------------------- STRUCTURE -------------------------------- */
+/* Couleurs */
+$white: white;
+$bg: #FFFCF3;
+$grey: #454545;
+$brown: #543D13;
+$orange: #ED3E09;
+$light-orange: #F17B46;
+$btn-orange: #F64E09;
+$btn-darkorange: #F43B07;
+$card-place: linear-gradient(to bottom, rgba(216, 215, 212, 0.6) 0%, rgba(78, 77, 75, 0.6) 100%);
+$bg-grey-transparent: rgba(81, 71, 70, 0.25);
+$bg-grey: #514746;
+$woman: #F9324D;
+$men: #2BCEDD;
+
+/* ------------------------------- [ LAYOUT ] ------------------------------- */
 
 body {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    color: $grey;
     background: url($background) no-repeat center top fixed;
     background-size: cover;
+    color: $grey;
+    font-family: $txtbase;
+    font-weight: 300;
 }
 
-.ContentBand-Column {
-    vertical-align: middle;
-}
-
-/* --------------------------------- HEADER --------------------------------- */
+/* ------------------------------- [ HEADER ] ------------------------------- */
 
 .SiteLogo {
     background: url($logo) center no-repeat;
@@ -61,32 +61,37 @@ body {
 }
 
 .PageLogo {
-    display: table-cell;
     background: url($header) center bottom no-repeat;
 }
 
-@media screen and (max-width: 600px){
-    .SiteHeader .PageLogo {
+@media screen and (max-width: 800px) {
+    .PageLogo {
         background-size: contain;
     }
 }
+@media screen and (max-width: 600px){
+    .PageLogo {
+        background-position: center;
+        height: 100px;
+    }
+}
 
-/* ---------------------------- CONTENU TEXTUEL ----------------------------- */
+/* ---------------------------- [ TEXT CONTENT ] ---------------------------- */
 
 .DescText-Title {
-    height: auto;
     background-color: transparent;
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.4rem;
     color: $orange;
+    font-family: $handscripted;
+    font-size: 2.4rem;
+    height: auto;
+    text-align: center;
     
     &-Legend {
-        text-align: right;
-        font-size: 1.9rem;
         background: url($psychic) right no-repeat;
+        font-size: 1.9rem;
         min-height: 107px;
         padding-right: 111px;
+        text-align: right;
     }
 }
 
@@ -95,7 +100,16 @@ body {
     text-indent: 5rem;
 }
 
-/* ------------------------------ TIRAGE TAROT ------------------------------ */
+@media screen and (max-width: 430px){
+    .DescText-Title {
+        font-size: 2rem;
+        &-Legend {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+/* -------------------------------- [ TAROT ] ------------------------------- */
 
 .WidgetTarot-Card {
     overflow: visible;
@@ -105,11 +119,11 @@ body {
     }
     
     &-Face.front {
-        border: none;
         background-color: transparent;
         background-image: url($cardback);
         background-repeat: no-repeat;
         background-size: cover;
+        border: none;
     }
     &-Face.back {
         border: none;
@@ -123,84 +137,57 @@ body {
     &.place {
         background: -webkit-$card-place;
         background: $card-place;
-        opacity: 0.6;
         border-radius: 6px;
+        opacity: 0.6;
     }
 }
 
-/* ------------------------------- FORMULAIRE ------------------------------- */
+/* -------------------------------- [ FORM ] -------------------------------- */
 
 .FormContainer {
+    background-color: $bg-grey-transparent;
+    border: none;
     max-width: 450px;
     padding: 2rem;
-    border: none;
-    background-color: $bg-grey-transparent;
     
     &-Header {
-        font-family: 'Ubuntu Condensed';
-        color: $brown;
-        padding-bottom: 3rem; 
         background: url($formtitle_arrow) no-repeat bottom center;
+        color: $brown;
+        font-family: $title;
+        padding-bottom: 3rem; 
     }
 
     &-Submit {
-        padding: 1rem 4rem;
-        border: none;
-        border-radius: 4rem;
-        background-color: $btn-orange;
         background: -webkit-linear-gradient(to bottom, $btn-orange 0%, $btn-darkorange 100%);
         background: linear-gradient(to bottom, $btn-orange 0%, $btn-darkorange 100%);
+        background-color: $btn-orange;
+        border: none;
+        border-radius: 4rem;
         box-shadow: inset 2px 2px 1px rgba(255, 255, 255, 0.8), inset -2px -2px 2px rgba(0, 0, 0, 0.5);
-        color: white;
-        font-family: 'Ubuntu Condensed';
+        color: $white;
+        cursor: pointer;
+        font-family: $title;
         font-size: 2.2rem;
         text-transform: uppercase;
-        cursor: pointer;
+        padding: 1rem 4rem;
         
         &:hover {
             box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.8);
         }
     }
 }
-    
-.alert {
-    text-align: center;
-    border-radius: 5px;
-
-    &-danger {
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-    &-success {
-        color: #3c763d;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-    }
-    &-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-    &-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-    }
-}
 
 .FormField-Label {
     text-transform: uppercase;
-    
     .ico-woman {
+        color: $woman;
         font-size: 1.9rem;
         font-weight: bold;
-        color: $woman;
     }
     .ico-man {
+        color: $men;
         font-size: 1.9rem;
         font-weight: bold;
-        color: $men;
     }
 }
 
@@ -208,28 +195,31 @@ body {
     border: none;
     
     &:not([type=radio]):focus, &:not([type=radio]):focus:invalid {
-        outline-width: 0;
-        box-shadow: 0 0 6px -1px $orange;
         border-color: transparent;
+        box-shadow: 0 0 6px -1px $orange;
+        outline-width: 0;
     }
 }
+
 input[type="checkbox"], input[type="radio"] {
-    width: 20px !important;
     height: 20px !important;
+    width: 20px !important;
 }
+
 .FormField-InfoPop {
-    color: $brown;
     border: none;
     box-shadow: 0 0 6px -1px $brown;
+    color: $brown;
 }
 
-/* ----------------------------- FORMULAIRE DRI ----------------------------- */
+@import "modules_themes/form-alert-vivid";
 
-.FormContainer.DRI .DRI {
+/* ------------------------------- [ DRI ] ---------------------------------- */
+
+.DRI {
     &-Intro {
         background-color: $bg-grey-transparent;
-        font-family: 'Ubuntu Condensed', sans-serif;
-
+        font-family: $title;
         &-Title {
             color: $orange;
             text-transform: uppercase;
@@ -238,46 +228,47 @@ input[type="checkbox"], input[type="radio"] {
             color: $brown;
         }
     }
+    
     &-Slogan {
         background-color: $light-orange;
-        font-family: 'Ubuntu Condensed', sans-serif;
-        color: white;
+        color: $white;
+        font-family: $title;
         text-transform: uppercase;
     }
+    
     &-Form {
-        padding: 2rem;
         background-color: $bg-grey;
-        color: white;
-
+        color: $white;
+        padding: 2rem;
         .FormField-Input {
-            text-align: center;
+            color: $grey;
             font-weight: bold;
             font-size: 1.4rem;
-            color: $grey;
+            text-align: center;
         }
     }
+    
     &-Sent {
-        font-family: 'Ubuntu Condensed', sans-serif;
-
+        font-family: $title;
         strong {
-            font-weight: normal;
             color: $light-orange;
+            font-weight: normal;
         }
     }
 }
-    
-/* --------------------------- COMMENT ÇA MARCHE ? -------------------------- */
+
+/* ------------------------------- [ HOW ] ---------------------------------- */
 
 .How-Header {
-    margin-top: 2rem !important;
-    font-weight: normal;
+    font-family: $title;
     font-size: 2.4rem;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: normal;
+    margin-top: 2rem !important;
 }
+
 .How-Wizard {
     border: 0;
     color: $grey;
-    
     &Item-Img.form {
         background: transparent url($icon_how_form) center no-repeat;
         background-size: contain;
@@ -288,12 +279,11 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-
-/* ------------------------------- REASSURANCE ------------------------------ */
+/* ----------------------------- [ REASSURANCE ] ---------------------------- */
 
 .ReassuranceList {
     background: $bg-grey;
-    color: white;
+    color: $white;
 }
 
 .ReassuranceList-Item-Img.star {
@@ -312,49 +302,3 @@ input[type="checkbox"], input[type="radio"] {
     background: transparent url($icon_trophy) center no-repeat;
     background-size: contain;
 }
-/*
-@media screen and (max-width: 1000px) and (min-width: 730px){
-    .DescText-Title {
-        font-size: 2rem;
-        &-Legend {
-            font-size: 1.7rem;
-        }
-    }
-}
-@media screen and (max-width: 810px) and (min-width: 730px){
-    .DescText-Title {
-        font-size: 1.8rem;
-        &-Legend {
-            font-size: 1.5rem;
-        }
-    }
-}
-@media screen and (max-width: 600px){
-    .ContentBand {
-        margin-top: 1rem;
-    }
-    .SiteHeader {
-        margin-bottom: 0;
-        .SiteLogo, .PageLogo {
-            display: block;
-            width: 90%;
-            margin: auto;
-            background-position: center;
-        }
-        .PageLogo {
-            height: 120px;
-        }
-    }
-}
-@media screen and (max-width: 430px){
-    body {
-        background: $bg;
-    }
-    .DescText-Title {
-        font-size: 1.8rem;
-        &-Legend {
-            font-size: 1.5rem;
-        }
-    }
-}
-*/
