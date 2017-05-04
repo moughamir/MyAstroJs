@@ -84,7 +84,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
-                            <div class="promo"></div>
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
