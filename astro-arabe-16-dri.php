@@ -22,7 +22,7 @@ include('include/process-dri.php');
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/astro-arabe-16.css" />
+        <link rel="stylesheet" type="text/css" href="css/astro-arabe.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -119,28 +119,7 @@ include('include/process-dri.php');
                 </article>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        <?php include('include/footer_reassurance.php');?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### REMARKETINGS #### -->
@@ -150,6 +129,4 @@ include('include/process-dri.php');
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Lobster|Ubuntu+Condensed" rel="stylesheet" type="text/css" />

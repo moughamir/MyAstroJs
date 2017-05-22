@@ -1,13 +1,10 @@
 <?php
-/* 
-    --------------------------------------------
-    --      Louise-grandol = AFFIL BASE       --
-    --------------------------------------------
-
-    Created on : 25 juillet 2016
-    Author     : Guillaume Deschamps <guillaumed.kgcom@gmail.com>
-               : Laurène Dourdin <2aurene@gmail.com>
-*/
+/** 
+ * louise-grandol = AFFIL BASE
+ * ---------------------------
+ * Created on : 25 juillet 2016 By Guillaume Deschamps <guillaumed.kgcom@gmail.com>
+ * Updated on : 07 février 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 include('include/init-affilbase.php');
 $questions = array (
     'Amour' => array(

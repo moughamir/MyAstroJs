@@ -4,7 +4,14 @@
  * ------------------------
  * Created on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$page = 'tarot-flash-a';
+$url = 'tarot-flash-a';
+$method = 'general-suscribe';
+$support = 'tarot';
+$site = 'myastro.fr';
+$source = 'adwords';
+$dri = 'myastro/offre-gratuite';
+$dri2 = 'myastro-tchat-dri';
+
 $assets = 'images_landing/tarot-sable/';
 $button = 'Accéder au tchat';
 $questions = array(
@@ -128,12 +135,13 @@ $questions = array(
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-flash-a" />
-                                <input type="hidden" name="method" value="general-suscribe" />
-                                <input type="hidden" name="support" value="tarot" />
-                                <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
+                                <input type="hidden" name="support" value="<?= $support;?>" />
+                                <input type="hidden" name="site" value="<?= $site;?>" />
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '';?>" />

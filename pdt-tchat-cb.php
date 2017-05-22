@@ -1,16 +1,14 @@
 <?php
 /**
- * pdt-tchat-rc-cb == REFLEXCASH
- * -----------------------------
- * Created on : 28 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
+ * pdt-tchat-cb == AFFILBASE
+ * -------------------------
+ * Created on : 19 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-session_start();
-
-$pageName = "pdt-tchat-rc";
+include('include/init-affilbase.php');
+$pageName = "pdt-tchat-cb";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "reflexcash";
 $dri = "pouvoir-des-trois/saisie-cb";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
@@ -18,11 +16,6 @@ $questions = array(
     ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Pouvoir des Trois - Argent'],
     ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Pouvoir des Trois - Travail']
 );
-
-$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
-$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
-$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
-
 $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -84,6 +77,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
+                            <div class="promo"></div>
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
@@ -92,9 +86,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="<?= $support;?>" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />

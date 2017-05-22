@@ -11,6 +11,7 @@ $support = "voyance";
 $site = "myastro.fr";
 $source = "base_externe";
 $dri = "pouvoir-des-trois/offre-gratuite";
+$dri2 = "pdt-tchat-dri";
 $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois Mini Formulaire'];
 
 $assets = 'images_landing/pouvoir-des-trois';
@@ -55,6 +56,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <input type="hidden" name="convertir" value="1" />

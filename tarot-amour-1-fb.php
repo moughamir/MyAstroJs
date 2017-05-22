@@ -124,6 +124,7 @@ $assets = 'images_landing/tarot-amour/';
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="facebook_adds" />
                                 <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                                <input type="hidden" name="dri2" value="myastro-tchat-dri" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="convertir" value="1" />
