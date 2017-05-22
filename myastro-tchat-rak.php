@@ -10,7 +10,8 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "base_externe";
-$dri = "pouvoir-des-trois/offre-gratuite";
+$dri = "myastro/offre-gratuite";
+$dri2 = "myastro-tchat-dri";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
@@ -51,6 +52,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />

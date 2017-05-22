@@ -12,6 +12,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $dri = "pouvoir-des-trois/offre-gratuite";
+$dri2 = "pdt-tchat-dri";
 $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois Mini Formulaire'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -55,6 +56,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                     <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="optional_birthdate" value="true" />
                     <input type="hidden" name="cguv" value="1" />

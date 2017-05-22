@@ -3,6 +3,7 @@
                                         <!-- ########## identification formulaire ########## -->
                                         <input type="hidden" name="method" value="telnum-save" />
                                         <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                                        <input type="hidden" name="dri2" value="myastro-tchat-dri" />
                                         <!-- ############################################### -->
                                         <div class="FormField">
                                             <textarea name="question" id="message" rows="5" cols="40" placeholder="Écrivez ici votre question avec le plus de détails possible. Pour plus de confidentialité, ne citez aucun nom." class="FormField-Input"></textarea>

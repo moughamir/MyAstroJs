@@ -13,6 +13,7 @@ $site = "myastro.fr";
 $source = "adwords";
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 $dri = "pouvoir-des-trois/offre-gratuite";
+$dri2 = "pdt-tchat-dri";
 $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Pouvoir des trois Mini Formulaire'];
 ?>
 <!DOCTYPE html>
@@ -53,6 +54,7 @@ $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="convertir" value="1" />
                     <input type="hidden" name="optional_birthdate" value="true" />

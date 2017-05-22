@@ -47,6 +47,7 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                    <input type="hidden" name="dri2" value="myastro-tchat-dri" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />

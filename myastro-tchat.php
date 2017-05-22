@@ -5,10 +5,12 @@
  * Created on : 30 mars 2017 By Mohamed Moughamir <hello@omnizya.com> 
  */
 include('include/init-affilbase.php');
-$pageName = "myastro-tchat";
-$method = "general-suscribe";
-$support = "voyance";
-$site = "myastro.fr";
+$url = 'myastro-tchat';
+$method = 'general-suscribe';
+$support = 'voyance';
+$site = 'myastro.fr';
+$dri = 'myastro/offre-gratuite';
+$dri2 = 'myastro-tchat-dri';
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
@@ -43,13 +45,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             <div class="PageWrapper fullview">
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="<?= $pageName;?>" />
+                    <input type="hidden" name="source" value="<?= $url;?>" />
                     <input type="hidden" name="method" value="<?= $method;?>" />
                     <input type="hidden" name="support" value="<?= $support;?>" />
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                    <input type="hidden" name="dri" value="myastro/offre-gratuite" />
+                    <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
