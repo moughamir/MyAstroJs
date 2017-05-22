@@ -1,10 +1,10 @@
 <?php
 /**
- * nouvel-an-chinois-17 = AFFIL BASE
- * ---------------------------------
- * Created on : 11 janvier 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * astro-arabe-pdt == AFFILBASE
+ * ----------------------------
+ * Created on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
+$assets = 'images_landing/astro-arabe';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,57 +13,55 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-        <title>2017 L’année du Coq !</title>
+        <title>Votre signe astrologique arabe</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <link rel="icon" type="image/png" href="<?= $assets;?>/favicon-pdt.png" />
         
-        <link rel="stylesheet" type="text/css" href="css/nouvel-an-chinois-17.css" />
+        <link rel="stylesheet" type="text/css" href="css/astro-arabe.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
     <body>
+        <div class="Background">
         <section class="ContentBand Form Wheel">
             <div class="PageWrapper">
                 <!-- Logo -->
-                <div class="SiteLogo">
-                    <?php include('include/myastro-logo-svg.php');?>
-                </div>
+                <div class="SiteLogo PDT"></div>
                 <!-- Signes Astros -->
-                <div class="Wheel-Item n01 Signe-Rat-Txt"></div>
-                <div class="Wheel-Item n02 Signe-Serpent-Txt"></div>
-                <div class="Wheel-Item n03 Signe-Tigre-Txt"></div>
-                <div class="Wheel-Item n04 Signe-Lapin-Txt"></div>
-                <div class="Wheel-Item n05 Signe-Cochon-Txt"></div>
-                <div class="Wheel-Item n06 Signe-Cheval-Txt"></div>
-                <div class="Wheel-Item n07 Signe-Dragon-Txt"></div>
-                <div class="Wheel-Item n08 Signe-Chien-Txt"></div>
-                <div class="Wheel-Item n09 Signe-Singe-Txt"></div>
-                <div class="Wheel-Item n10 Signe-Chevre-Txt"></div>
-                <div class="Wheel-Item n11 Signe-Coq-Txt"></div>
-                <div class="Wheel-Item n12 Signe-Boeuf-Txt"></div>
+                <div class="Wheel-Item n01 Signe-Coutelas-Txt"></div>
+                <div class="Wheel-Item n02 Signe-Couteau-Txt"></div>
+                <div class="Wheel-Item n03 Signe-Poignard-Txt"></div>
+                <div class="Wheel-Item n04 Signe-Lance-Txt"></div>
+                <div class="Wheel-Item n05 Signe-Masse-Txt"></div>
+                <div class="Wheel-Item n06 Signe-Epee-Txt"></div>
+                <div class="Wheel-Item n07 Signe-Hache-Txt"></div>
+                <div class="Wheel-Item n08 Signe-Massue-Txt"></div>
+                <div class="Wheel-Item n09 Signe-Poignardarabe-Txt"></div>
+                <div class="Wheel-Item n10 Signe-Arc-Txt"></div>
+                <div class="Wheel-Item n11 Signe-Fronde-Txt"></div>
+                <div class="Wheel-Item n12 Signe-Chaine-Txt"></div>
                 <!-- Fin Signes astro -->
-                <h1 class="PageTitle">2017 annee du <strong>Coq</strong></h1>
-                <article class="FormContainer Wheel-Core" id="vm-anchor">
+                <article class="FormContainer Wheel-Core">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                     <form id="form-container" class="ajax">
                         <header class="Wheel-Core-Title FormSign-Title">
                             <span class="FormSign-Title-c1">Quel est votre signe<br>astrologique</span>
-                            <span class="FormSign-Title-c2">Chinois ?</span>
+                            <span class="FormSign-Title-c2">Arabe</span>
                         </header>
                         <div class="DescText-Content">
-                            Les natifs de l’année du Coq sont trés courageux, talentueux, travailleurs et débrouillards. Ce sont des personnes honnêtes et loyales, elles aiment se montrer sous leur meilleur jour. Perfectionnistes, elles excellent en…
+                            Les 12 armes symbolisent notre comportement face aux enjeux et aux difficultés de la vie. Chaque signe est une porte qui s’ouvre sur nous même, notre entourage, notre vie, notre passé et notre destinée.
                         </div>
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="method" value="signe-astro-chinois" />
-                            <input type="hidden" name="dri" value="nouvel-an-chinois-17-tel" />
+                            <input type="hidden" name="method" value="signe-astro-arabe" />
+                            <input type="hidden" name="dri" value="astro-arabe-pdt-tel" />
                             <input type="hidden" name="redirect_method" value="reload_form" />
                             <!-- ############################################### -->
                             <div class="Fields-Table">
@@ -81,7 +79,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                                         <select  class="FormField-Input" name="jour" required>
                                             <option selected="selected" value="">Jour</option>
                                             <?php for($i=1;$i<=31;$i++){ ?>
-                                            <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                            <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -106,7 +104,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                                         <select class="FormField-Input" name="annee" required>
                                             <option selected="selected" value="">Année</option>
                                             <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                            <option value="<?= $i ?>"><?= $i ?></option>
+                                            <option value="<?= $i;?>"><?= $i;?></option>
                                             <?php } ?>
                                         </select>
                                     </div>
@@ -118,19 +116,16 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 </article>
             </div>
         </section>
+        <?php include('include/footer_reassurance.php');?>
+        </div><!-- FIN .Background -->
         
-        <?php include('include/footer_reassurance.php'); ?>
-        
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright">Copyright © <span itemprop="copyrightYear" ><?php echo date("Y"); ?></span> | <a href="https://voyance-en-direct.tv/pouvoir-des-trois/" title="Pouvoir des trois">Pouvoir-des-trois</a></p>
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/formValidator.js"></script>
         <script>
-            $(document).ready(function(){
-                $('html,body').animate({scrollTop: $('#vm-anchor').offset().top}, 1000);
-            });
-            $(document).on('ajax_success', function(e){
+            $(document).on('form_completed_reload', function(e){
                 $('body').addClass('Step2');
             });
         </script>
@@ -138,10 +133,9 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
-        
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Oxygen|Kaushan+Script|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Lobster|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

@@ -1,16 +1,21 @@
 <?php
 /**
- * myastro-tchat-a == ADWORDS
- * --------------------------
- * Created on : 04 avril 2017 By Mohamed Moughamir <hello@omnizya.com> 
+ * myastro-tchat-can == BASE EXTERNE
+ * ---------------------------------
+ * Created on : 19 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
 
-$pageName = "myastro-tchat-a";
+$pageName = "myastro-tchat-can";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "adwords";
+$source = "base_externe";
+$dri = "myastro/offre-gratuite";
+$dri2 = "myastro-tchat-dri";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
+
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -46,18 +51,17 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
                     <input type="hidden" name="support" value="<?= $support;?>" />
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
-                    <input type="hidden" name="dri" value="myastro/offre-gratuite" />
-                    <input type="hidden" name="dri2" value="myastro-tchat-dri" />
+                    <input type="hidden" name="dri" value="<?= $dri;?>" />
+                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->
                     <input type="hidden" name="cguv" value="1" />
                     <input type="hidden" name="partenaires" value="1" />
                     <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" />
                     <input type="hidden" name="optional_birthdate" value="true" />
-                    <input type="hidden" name="convertir" value="1" />
                     <!-- ############################################### -->
                     <section class="Merci-Form">
                         <header class="Merci-Form-Header">
-                            <h2><span class="cap">5 minutes</span> de Tchat <span class="cap">gratuites</span></h2>
+                            <h2><span class="cap">5 minutes</span> de Tchat <span class="cap">gratuites</span></h2>
                         </header>
                         <div class="FormContainer">
                             <!---->
@@ -75,16 +79,16 @@ $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Ca
                             </div>
                             <!--Prénom-->
                             <div class="Fields-Table-Row">
-                                <label for="name" class="FormField-Label hidden">Votre prénom</label>
+                                <label for="name" class="FormField-Label hidden">Votre prénom</label>
                                 <div class="FormField">
-                                    <input id="name" type="text" name="prenom" class="FormField-Input" placeholder="Votre prénom" required />
+                                    <input id="name" type="text" name="prenom" class="FormField-Input" placeholder="Votre prénom" value="<?= $prenom;?>"required />
                                 </div>
                             </div>
                             <!--eMail-->
                             <div class="Fields-Table-Row">
-                                <label for="email" class="FormField-Label hidden">Votre email</label>
+                                <label for="email" class="FormField-Label hidden">Votre email</label>
                                 <div class="FormField">
-                                    <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
+                                    <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" value="<?= $email;?>" required />
                                 </div>
                             </div>
                             <button class="FormContainer-Submit cta-chat" type="submit" name="valider">Je Tchat !</button>

@@ -1,24 +1,24 @@
 <?php
 /**
- * pdt-tchat-fb == FACEBOOK ADDS
- * -----------------------------
- * Created on : 04 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
+ * pdt-tchat-cb == AFFILBASE
+ * -------------------------
+ * Created on : 19 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$pageName = "pdt-tchat-fb";
+include('include/init-affilbase.php');
+$pageName = "pdt-tchat-cb";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "facebook_adds";
-$dri = "pouvoir-des-trois/offre-gratuite";
-$dri2 = "pdt-tchat-dri";
+$dri = "pouvoir-des-trois/saisie-cb";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
     ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Pouvoir des Trois - Amour'],
     ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Pouvoir des Trois - Argent'],
     ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Pouvoir des Trois - Travail']
 );
-
 $assets = 'images_landing/pouvoir-des-trois';
+$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
+$email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -58,7 +58,7 @@ $assets = 'images_landing/pouvoir-des-trois';
                         Inscrivez votre prénom ci-dessous pour commencer :
                     </p>
                     <div class="form">
-                        <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
+                        <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" value="<?= $prenom;?>" required />
                         <button class="btn start">Commencer</button>
                     </div>
                 </section>
@@ -86,10 +86,9 @@ $assets = 'images_landing/pouvoir-des-trois';
                                 <input type="hidden" name="support" value="<?= $support;?>" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
-                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
@@ -99,7 +98,7 @@ $assets = 'images_landing/pouvoir-des-trois';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label hidden">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email;?>" placeholder="Votre Email" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">

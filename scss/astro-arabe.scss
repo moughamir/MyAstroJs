@@ -1,76 +1,82 @@
+/**
+ * ============================== [ astro-arabe ] ==============================
+ * Created on : 10 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
+ * Updated on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 @charset "UTF-8";
-/* 
-    ------------------------------
-    --      astro-arabe-16      --
-    ------------------------------
 
-    Created on : 10 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
 @import "templates/s-landing-roue-signes";
 
+/* Typographies */
+$txtbase: 'Oxygen', sans-serif;
+$handscripted: 'Lobster', sans-serif;
+$title: 'Ubuntu Condensed', sans-serif;
+
 /* Dossier images */
-$img_dir : "../images_landing/astro-arabe-16/";
-$logo : $img_dir + "logo-myastro.png";
-$bg1 : $img_dir + "bg1.jpg";
-$bg2 : $img_dir + "bg2.jpg";
-$bg_dri : $img_dir + "bg-dri.jpg";
-$bg_form_dri : $img_dir + "bg-form-dri.png";
-$bg2 : $img_dir + "bg2.jpg";
-$bg_dri_amour : $img_dir + "bg-dri-amour.jpg";
-$bg_form_dri_amour : $img_dir + "bg-form-dri-amour.png";
-$bg2_gradient : $img_dir + "bg2-gradient.jpg";
-$icon_star : $img_dir + "ico-star.png";
-$icon_gift : $img_dir + "ico-gift.png";
-$icon_lock : $img_dir + "ico-lock.png";
-$icon_trophy : $img_dir + "ico-trophy.png";
-$how_ico_form : $img_dir + "how-ico-form.png";
-$how_ico_phone : $img_dir + "how-ico-phone.png";
+$img_dir: "../images_landing/astro-arabe/";
+$logo: $img_dir + "logo-myastro.png";
+$logo_pdt: $img_dir + "logo-pdt.png";
+$bg1: $img_dir + "bg1.jpg";
+$bg2: $img_dir + "bg2.jpg";
+$bg_dri: $img_dir + "bg-dri.jpg";
+$bg_form_dri: $img_dir + "bg-form-dri.png";
+$bg2: $img_dir + "bg2.jpg";
+$bg_dri_amour: $img_dir + "bg-dri-amour.jpg";
+$bg_form_dri_amour: $img_dir + "bg-form-dri-amour.png";
+$bg2_gradient: $img_dir + "bg2-gradient.jpg";
+$icon_star: $img_dir + "ico-star.png";
+$icon_gift: $img_dir + "ico-gift.png";
+$icon_lock: $img_dir + "ico-lock.png";
+$icon_trophy: $img_dir + "ico-trophy.png";
+$how_ico_form: $img_dir + "how-ico-form.png";
+$how_ico_phone: $img_dir + "how-ico-phone.png";
 
 /* Signes */
-$coutelas : $img_dir + "signes/coutelas.png";
-$couteau : $img_dir + "signes/couteau.png";
-$poignard : $img_dir + "signes/poignard.png";
-$lance : $img_dir + "signes/lance.png";
-$masse : $img_dir + "signes/masse-de-fer.png";
-$epee : $img_dir + "signes/epee.png";
-$hache : $img_dir + "signes/hache.png";
-$massue : $img_dir + "signes/massue-paysanne.png";
-$poignard_arabe : $img_dir + "signes/poignard-arabe.png";
+$coutelas: $img_dir + "signes/coutelas.png";
+$couteau: $img_dir + "signes/couteau.png";
+$poignard: $img_dir + "signes/poignard.png";
+$lance: $img_dir + "signes/lance.png";
+$masse: $img_dir + "signes/masse-de-fer.png";
+$epee: $img_dir + "signes/epee.png";
+$hache: $img_dir + "signes/hache.png";
+$massue: $img_dir + "signes/massue-paysanne.png";
+$poignard_arabe: $img_dir + "signes/poignard-arabe.png";
 $arc: $img_dir + "signes/arc.png";
 $fronde: $img_dir + "signes/fronde.png";
 $chaine: $img_dir + "signes/chaine.png";
 /* Signes avec Texte */
-$coutelas_txt : $img_dir + "signes_txt/coutelas.png";
-$couteau_txt : $img_dir + "signes_txt/couteau.png";
-$poignard_txt : $img_dir + "signes_txt/poignard.png";
-$lance_txt : $img_dir + "signes_txt/lance.png";
-$masse_txt : $img_dir + "signes_txt/masse-de-fer.png";
-$epee_txt : $img_dir + "signes_txt/epee.png";
-$hache_txt : $img_dir + "signes_txt/hache.png";
-$massue_txt : $img_dir + "signes_txt/massue-paysanne.png";
-$poignard_arabe_txt : $img_dir + "signes_txt/poignard-arabe.png";
+$coutelas_txt: $img_dir + "signes_txt/coutelas.png";
+$couteau_txt: $img_dir + "signes_txt/couteau.png";
+$poignard_txt: $img_dir + "signes_txt/poignard.png";
+$lance_txt: $img_dir + "signes_txt/lance.png";
+$masse_txt: $img_dir + "signes_txt/masse-de-fer.png";
+$epee_txt: $img_dir + "signes_txt/epee.png";
+$hache_txt: $img_dir + "signes_txt/hache.png";
+$massue_txt: $img_dir + "signes_txt/massue-paysanne.png";
+$poignard_arabe_txt: $img_dir + "signes_txt/poignard-arabe.png";
 $arc_txt: $img_dir + "signes_txt/arc.png";
 $fronde_txt: $img_dir + "signes_txt/fronde.png";
 $chaine_txt: $img_dir + "signes_txt/chaine.png";
 
 /* Palette */
-$bg1_color : #151426;
-$darkblue : #050418;
-$darkpurple : #1E152D;
-$darkfushia : #2F1930;
-$darkgreyblue : #39384B;
-$darkgreypurple : #261C2E;
-$form_bg : rgba(249, 249, 243, 0.1);
-$border_white : #B3B2B9;
-$gold : #FFCB38;
-$vlightgold : #FFF7E4;
-$man : #0AE9D1;
-$woman : #FA2E54;
+$bg1_color: #151426;
+$darkblue: #050418;
+$darkpurple: #1E152D;
+$darkfushia: #2F1930;
+$darkgreyblue: #39384B;
+$darkgreypurple: #261C2E;
+$form_bg: rgba(249, 249, 243, 0.1);
+$border_white: #B3B2B9;
+$gold: #FFCB38;
+$vlightgold: #FFF7E4;
+$man: #0AE9D1;
+$woman: #FA2E54;
 
+
+/* --------------------------------- LAYOUT --------------------------------- */
 
 body {
-    font-family: 'Oxygen', sans-serif;
+    font-family: $txtbase;
     background-color: $darkblue;
     color: white;
     padding-top: 0;
@@ -109,12 +115,21 @@ body.Step2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    &.PDT {
+        background-image: url($logo_pdt);
+        width: 200px;
+    }
 }
 
 @media all and (max-width: 620px){
     .SiteLogo {
-        height: 80px;
-        width: 80px;
+        height: 90px;
+        width: 90px;
+        &.PDT {
+            height: 60px;
+            margin-left: 0;
+            width: 100%;
+        }
     }
 }
 
@@ -163,7 +178,7 @@ select.FormField-Input {
     background: -webkit-linear-gradient(to bottom, $gold 20%, $vlightgold 50%, $gold 80%);
     background: linear-gradient(to bottom, $gold 20%, $vlightgold 50%, $gold 80%);
     color: $darkblue;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: $title;
     font-size: 2.2rem;
     text-transform: uppercase;
 
@@ -178,30 +193,7 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
-.alert {
-    border-radius: 5px;
-
-    &-danger {
-        color: #a94442;
-        background-color: #f2dede;
-        border-color: #ebccd1;
-    }
-    &-success {
-        color: #3c763d;
-        background-color: #dff0d8;
-        border-color: #d6e9c6;
-    }
-    &-warning {
-        color: #8a6d3b;
-        background-color: #fcf8e3;
-        border-color: #faebcc;
-    }
-    &-info {
-        color: #31708f;
-        background-color: #d9edf7;
-        border-color: #bce8f1;
-    }
-}
+@import "modules_themes/form-alert-vivid";
 
 /* ------------------------------ ROUE SIGNES ------------------------------- */
 
@@ -218,7 +210,7 @@ input[type="checkbox"], input[type="radio"] {
     text-align: center; 
     font-size: 3rem;
     line-height: 3.5rem;
-    font-family: 'Lobster', sans-serif;
+    font-family: $handscripted;
 }
 
 .FormSign-Title {
@@ -404,7 +396,7 @@ body.DRI {
 
 body.DRI {
     .DRI-Intro-Title, .DRI-Slogan {
-        font-family: 'Lobster';
+        font-family: $handscripted;
         color: $gold;
     }
     .FormContainer-Wrapper {

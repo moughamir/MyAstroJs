@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    include('include/init-affilbase.php');
     $questions = array(
         'astro-arabe-arc' => ['code'=>'astro-arabe-arc','subject'=>'signe','text'=>"Votre signe astrologique arabe est l’arc"],
         'astro-arabe-chaine' => ['code'=>'astro-arabe-chaine','subject'=>'signe','text'=>"Votre signe astrologique arabe est la chaine"],
@@ -32,14 +32,15 @@
                             <input type="hidden" name="source" value="astro-arabe-16" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
-                            <input type="hidden" name="affiliation" value="affil_base" />
+                            <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                            <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                             <input type="hidden" name="dri" value="astro-arabe-16-dri" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />
                             <input type="hidden" name="jour" value="<?= $_SESSION['jour'];?>" />
                             <input type="hidden" name="mois" value="<?= $_SESSION['mois'];?>" />
                             <input type="hidden" name="annee" value="<?= $_SESSION['annee'];?>" />
-                            <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+                            <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" />
                             <input type="hidden" name="cguv" value="1" />
                             <input type="hidden" name="partenaires" value="1" />  
                             <!-- ############################################### -->

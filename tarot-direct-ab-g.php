@@ -94,6 +94,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="tarot-direct-merci" />
+                                <input type="hidden" name="dri2" value="tarot-direct-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

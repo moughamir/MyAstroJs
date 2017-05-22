@@ -1,40 +1,46 @@
-<?php
+<?php 
     include('include/init-affilbase.php');
+    
+    $url = 'astro-arabe-pdt';
+    $method = 'general-suscribe';
+    $website = 'myastro.fr';
+    $dri = 'pouvoir-des-trois/saisie-cb';
+    
     $questions = array(
-        'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
-        'nac17-cheval'  => ['code'=>'nac17-cheval', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cheval"],
-        'nac17-chevre'  => ['code'=>'nac17-chevre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est la Chèvre"],
-        'nac17-chien'   => ['code'=>'nac17-chien', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Chien"],
-        'nac17-cochon'  => ['code'=>'nac17-cochon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cochon"],
-        'nac17-coq'     => ['code'=>'nac17-coq', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Coq"],
-        'nac17-dragon'  => ['code'=>'nac17-dragon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Dragon"],
-        'nac17-lapin'   => ['code'=>'nac17-lapin', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Lapin"],
-        'nac17-rat'     => ['code'=>'nac17-rat', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Rat"],
-        'nac17-serpent' => ['code'=>'nac17-serpent', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Serpent"],
-        'nac17-singe'   => ['code'=>'nac17-singe', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Singe"],
-        'nac17-tigre'   => ['code'=>'nac17-tigre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Tigre"],
+        'astro-arabe-arc' => ['code'=>'astro-arabe-arc','subject'=>'signe','text'=>"Votre signe astrologique arabe est l’arc"],
+        'astro-arabe-chaine' => ['code'=>'astro-arabe-chaine','subject'=>'signe','text'=>"Votre signe astrologique arabe est la chaine"],
+        'astro-arabe-couteau' => ['code'=>'astro-arabe-couteau','subject'=>'signe','text'=>"Votre signe astrologique arabe est le couteau"],
+        'astro-arabe-coutelas' => ['code'=>'astro-arabe-coutelas','subject'=>'signe','text'=>"Votre signe astrologique arabe est le coutelas"],
+        'astro-arabe-epee' => ['code'=>'astro-arabe-epee','subject'=>'signe','text'=>"Votre signe astrologique arabe est l’épée"],
+        'astro-arabe-fronde' => ['code'=>'astro-arabe-fronde','subject'=>'signe','text'=>"Votre signe astrologique arabe est la fronde"],
+        'astro-arabe-hache' => ['code'=>'astro-arabe-hache','subject'=>'signe','text'=>"Votre signe astrologique arabe est la hache"],
+        'astro-arabe-lance' => ['code'=>'astro-arabe-lance','subject'=>'signe','text'=>"Votre signe astrologique arabe est la lance"],
+        'astro-arabe-masse' => ['code'=>'astro-arabe-masse','subject'=>'signe','text'=>"Votre signe astrologique arabe est la masse de fer"],
+        'astro-arabe-massue' => ['code'=>'astro-arabe-massue','subject'=>'signe','text'=>"Votre signe astrologique arabe est la massue paysanne"],
+        'astro-arabe-poignard' => ['code'=>'astro-arabe-poignard','subject'=>'signe','text'=>"Votre signe astrologique arabe est le poignard"],
+        'astro-arabe-poignardarabe' => ['code'=>'astro-arabe-poignardarabe','subject'=>'signe','text'=>"Votre signe astrologique arabe est le poignard arabe"],
     );
-    $question = $questions['nac17-'.$_SESSION['signe']['code']];
+    $question = $questions['astro-arabe-'.$_SESSION['signe']['code']];
 ?>
                         <script>
                             $('.Wheel-Core').addClass('Signe-<?= ucfirst($_SESSION['signe']['code']) ;?>');
                         </script>
                         <header class="Wheel-Core-Title Form-Title">
                             <span>
-                            <?= ucfirst($_SESSION['prenom']);?> vous êtes : <span class="Signe-Name"><?= ucfirst(str_replace(' ', ' ', $_SESSION['signe']['nom']));?></span>
+                            <?= ucfirst($_SESSION['prenom']);?> vous êtes <span class="Signe-Name"><?= ucfirst(str_replace(' ', ' ', $_SESSION['signe']['nom']));?></span>
                             </span>
                         </header>
                         <div class="DescText-Content">
-                            Recevez par mail l’interprétation gratuite de votre signe par nos spécialistes de l’astrologie chinoise sous 24h.
+                            Recevez par mail l’interprétation gratuite de votre signe par nos spécialistes de l’astrologie arabe sous 24h.
                         </div>
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="source" value="nouvel-an-chinois-17" />
-                            <input type="hidden" name="method" value="general-suscribe" />
-                            <input type="hidden" name="site" value="myastro.fr" />
+                            <input type="hidden" name="source" value="<?= $url;?>" />
+                            <input type="hidden" name="method" value="<?= $method;?>" />
+                            <input type="hidden" name="site" value="<?= $website;?>" />
                             <input type="hidden" name="affiliation" value="<?= $source;?>" />
                             <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                            <input type="hidden" name="dri" value="nouvel-an-chinois-17-dri" />
+                            <input type="hidden" name="dri" value="<?= $dri;?>" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />
                             <input type="hidden" name="jour" value="<?= $_SESSION['jour'];?>" />

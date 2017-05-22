@@ -1,12 +1,10 @@
 <?php
-/* 
-    -------------------------------------
-    --   astro-arabe-16 = AFFIL BASE   --
-    -------------------------------------
-
-    Created on : 10 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * astro-arabe-16 == AFFILBASE
+ * ----------------------------
+ * Created on : 10 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
+ * Updated on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,11 +23,11 @@
         <meta property="og:title" content="Découvrez ce que l’avenir vous réserve avec l’astrologie arabe" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://<?= ROOT_URL ?>/astro-arabe-16" />
-        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/astro-arabe-16/fb-ban.jpg" />
+        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/astro-arabe/fb-ban.jpg" />
         <meta property="og:description" content="Entrez dans le monde de l’astrologie arabe et ses 12 signes en forme d’armes." />
         <meta property="og:locale" content="fr_FR" />
         
-        <link rel="stylesheet" type="text/css" href="css/astro-arabe-16.css" />
+        <link rel="stylesheet" type="text/css" href="css/astro-arabe.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -127,29 +125,7 @@
                 </article>
             </div>
         </section>
-        
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        <?php include('include/footer_reassurance.php');?>
         </div><!-- FIN .Background -->
         
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
@@ -171,7 +147,5 @@
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Lobster|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
