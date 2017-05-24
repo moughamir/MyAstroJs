@@ -33,7 +33,7 @@
 
 									<div class="widget-content clearfix">
 										<a href="http://<?= ROOT_URL ?>/voyance-sans-cb">
-											<img src="images_voyance/banniere/audiotel.gif" width="271" height="362"/>
+											<img src="images_voyance/banniere/audiotel.jpg" width="271" height="362"/>
 										</a>
 									</div>
 
