@@ -4,6 +4,7 @@
  * ----------------------------
  * Created on : 28 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+$form = 'tarot-flash-ab';
 include('include/init-affilbase.php');
 
 $button = 'Accéder au tchat';

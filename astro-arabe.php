@@ -5,6 +5,14 @@
  * Created on : 10 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
  * Updated on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
+function secure_formdata($n){
+    return htmlentities(strip_tags($n));
+}
+$get = array_map('secure_formdata', $_GET);
+$_SESSION['ab_email'] = isset($get['email']) ? $get['email'] : false;
+$_SESSION['ab_idkgestion'] = isset($get['idkgestion']) ? $get['idkgestion'] : false;
+$_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,7 +64,6 @@
                 <div class="Wheel-Item n11 Signe-Fronde-Txt"></div>
                 <div class="Wheel-Item n12 Signe-Chaine-Txt"></div>
                 <!-- Fin Signes astro -->
-
                 <article class="FormContainer Wheel-Core">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                     <form id="form-container" class="ajax">

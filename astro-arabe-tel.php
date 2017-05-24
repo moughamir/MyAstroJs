@@ -1,7 +1,8 @@
-<?php 
+<?php
+    $form = 'astro-arabe';
     include('include/init-affilbase.php');
     
-    $url = 'astro-arabe';
+    $url = $form;
     $method = 'general-suscribe';
     $website = 'myastro.fr';
     $dri = 'astro-arabe-dri';

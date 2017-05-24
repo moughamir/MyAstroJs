@@ -4,7 +4,12 @@
  * -------------------------------
  * Created on : 26 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+$form = 'jour-du-soleil-17';
 include('include/init-affilbase.php');
+$url = $form;
+$method = 'general-suscribe';
+$website = 'myastro.fr';
+$dri = 'jour-du-soleil-17-tel';
 $question = ['code'=>'jds17_question', 'subject'=>'evenement', 'text'=>"Jour du soleil 2017"];
 $assets = 'images_landing/jour-du-soleil-17/';
 ?>
@@ -80,12 +85,13 @@ $assets = 'images_landing/jour-du-soleil-17/';
                             <form id="form-container" class="ajax">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="jour-du-soleil-17" />
-                                <input type="hidden" name="method" value="general-suscribe" />
-                                <input type="hidden" name="support" value="tarot" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
+                                <input type="hidden" name="site" value="<?= $website;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                                <input type="hidden" name="dri" value="jour-du-soleil-17-tel" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />

@@ -4,6 +4,7 @@
  * ---------------------------
  * Created on : 19 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+$form = 'pdt-tchat-m-cb';
 include('include/init-affilbase.php');
 $assets = 'images_landing/pouvoir-des-trois';
 $pageName = "pdt-tchat-m-cb";

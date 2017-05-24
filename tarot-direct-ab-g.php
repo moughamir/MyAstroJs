@@ -7,6 +7,7 @@
     Created on : 13 septembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+$form = 'tarot-direct-ab-g';
 include('include/init-affilbase.php');
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');

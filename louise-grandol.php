@@ -5,7 +5,12 @@
  * Created on : 25 juillet 2016 By Guillaume Deschamps <guillaumed.kgcom@gmail.com>
  * Updated on : 07 février 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+$form = 'louise-grandol';
 include('include/init-affilbase.php');
+$url = $form;
+$method = 'general-suscribe';
+$website = 'myastro.fr';
+$dri = 'louise-grandol-dri';
 $questions = array (
     'Amour' => array(
         'celibat'  => [ 'code' => 'lg_q4', 'subject' => 'sentimental', 'text' => 'Quand vais-je trouver l’amour ?' ],
@@ -137,12 +142,12 @@ $questions = array (
                         <div class="FormContainer-Fields">
                             <form class="ajax">                                
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="louise-grandol" />
-                                <input type="hidden" name="method" value="general-suscribe" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
+                                <input type="hidden" name="site" value="<?= $website;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                                <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="dri" value="louise-grandol-dri" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />

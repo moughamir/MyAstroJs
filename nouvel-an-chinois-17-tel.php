@@ -1,4 +1,5 @@
 <?php
+    $form = 'nouvel-an-chinois-17';
     include('include/init-affilbase.php');
     $questions = array(
         'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
