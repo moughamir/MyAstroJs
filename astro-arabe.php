@@ -1,10 +1,18 @@
 <?php
 /**
- * astro-arabe-16 == AFFILBASE
- * ----------------------------
+ * astro-arabe == AFFILBASE
+ * ------------------------
  * Created on : 10 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
  * Updated on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
+function secure_formdata($n){
+    return htmlentities(strip_tags($n));
+}
+$get = array_map('secure_formdata', $_GET);
+$_SESSION['ab_email'] = isset($get['email']) ? $get['email'] : false;
+$_SESSION['ab_idkgestion'] = isset($get['idkgestion']) ? $get['idkgestion'] : false;
+$_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +30,7 @@
         <!-- Meta Facebook -->
         <meta property="og:title" content="Découvrez ce que l’avenir vous réserve avec l’astrologie arabe" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://<?= ROOT_URL ?>/astro-arabe-16" />
+        <meta property="og:url" content="http://<?= ROOT_URL ?>/astro-arabe" />
         <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/astro-arabe/fb-ban.jpg" />
         <meta property="og:description" content="Entrez dans le monde de l’astrologie arabe et ses 12 signes en forme d’armes." />
         <meta property="og:locale" content="fr_FR" />
@@ -56,7 +64,6 @@
                 <div class="Wheel-Item n11 Signe-Fronde-Txt"></div>
                 <div class="Wheel-Item n12 Signe-Chaine-Txt"></div>
                 <!-- Fin Signes astro -->
-
                 <article class="FormContainer Wheel-Core">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                     <form id="form-container" class="ajax">
@@ -70,7 +77,7 @@
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="method" value="signe-astro-arabe" />
-                            <input type="hidden" name="dri" value="astro-arabe-16-tel" />
+                            <input type="hidden" name="dri" value="astro-arabe-tel" />
                             <input type="hidden" name="redirect_method" value="reload_form" />
                             <!-- ############################################### -->
                             <div class="Fields-Table">
@@ -128,7 +135,7 @@
         <?php include('include/footer_reassurance.php');?>
         </div><!-- FIN .Background -->
         
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -138,12 +145,10 @@
                 $('body').addClass('Step2');
             });
         </script>
-        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
-        
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

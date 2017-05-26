@@ -4,6 +4,7 @@
  * -------------------------
  * Created on : 19 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+$form = 'pdt-tchat-cb';
 include('include/init-affilbase.php');
 $pageName = "pdt-tchat-cb";
 $method = "general-suscribe";

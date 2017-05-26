@@ -1,7 +1,8 @@
-<?php 
+<?php
+    $form = 'astro-arabe-pdt';
     include('include/init-affilbase.php');
     
-    $url = 'astro-arabe-pdt';
+    $url = $form;
     $method = 'general-suscribe';
     $website = 'myastro.fr';
     $dri = 'pouvoir-des-trois/saisie-cb';

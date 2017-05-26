@@ -4,8 +4,9 @@
  * --------------------------
  * Created on : 30 mars 2017 By Mohamed Moughamir <hello@omnizya.com> 
  */
+$form = 'myastro-tchat';
 include('include/init-affilbase.php');
-$url = 'myastro-tchat';
+$url = $form;
 $method = 'general-suscribe';
 $support = 'voyance';
 $site = 'myastro.fr';
