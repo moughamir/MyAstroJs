@@ -4,6 +4,7 @@
  * ----------------------
  * Created on : 03 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
+$form = 'pdt-tchat';
 include('include/init-affilbase.php');
 $pageName = "pdt-tchat";
 $method = "general-suscribe";

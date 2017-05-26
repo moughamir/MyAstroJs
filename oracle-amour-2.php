@@ -7,6 +7,7 @@
     Created on : 25 mai 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+$form = 'oracle-amour-2';
 include('include/init-affilbase.php');
 $cards_dir = 'tarot/cartes/cartes-oracle-amour/';
 $button ="Je veux savoir";

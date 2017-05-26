@@ -5,6 +5,7 @@
  * Created on : Feb 13th, 2017
  * Author     : Mohamed Moughamir <hello@omnizya.com>
  */
+$form = 'pdt-tchat-m';
 include('include/init-affilbase.php');
 $assets = 'images_landing/pouvoir-des-trois';
 $pageName = "pdt-tchat-m";

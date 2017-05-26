@@ -1,4 +1,5 @@
 <?php
+$form = 'printemps-17';
 include('include/init-affilbase.php');
 $question = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
 $pageName = "printemps-17";

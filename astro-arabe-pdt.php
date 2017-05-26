@@ -4,6 +4,15 @@
  * ----------------------------
  * Created on : 22 mai 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
+function secure_formdata($n){
+    return htmlentities(strip_tags($n));
+}
+$get = array_map('secure_formdata', $_GET);
+$_SESSION['ab_email'] = isset($get['email']) ? $get['email'] : null;
+$_SESSION['ab_idkgestion'] = isset($get['idkgestion']) ? $get['idkgestion'] : null;
+$_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
+
 $assets = 'images_landing/astro-arabe';
 ?>
 <!DOCTYPE html>

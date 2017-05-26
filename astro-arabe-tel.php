@@ -1,5 +1,12 @@
-<?php 
+<?php
+    $form = 'astro-arabe';
     include('include/init-affilbase.php');
+    
+    $url = $form;
+    $method = 'general-suscribe';
+    $website = 'myastro.fr';
+    $dri = 'astro-arabe-dri';
+    
     $questions = array(
         'astro-arabe-arc' => ['code'=>'astro-arabe-arc','subject'=>'signe','text'=>"Votre signe astrologique arabe est l’arc"],
         'astro-arabe-chaine' => ['code'=>'astro-arabe-chaine','subject'=>'signe','text'=>"Votre signe astrologique arabe est la chaine"],
@@ -29,12 +36,12 @@
                         </div>
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="source" value="astro-arabe-16" />
-                            <input type="hidden" name="method" value="general-suscribe" />
-                            <input type="hidden" name="site" value="myastro.fr" />
+                            <input type="hidden" name="source" value="<?= $url;?>" />
+                            <input type="hidden" name="method" value="<?= $method;?>" />
+                            <input type="hidden" name="site" value="<?= $website;?>" />
                             <input type="hidden" name="affiliation" value="<?= $source;?>" />
                             <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                            <input type="hidden" name="dri" value="astro-arabe-16-dri" />
+                            <input type="hidden" name="dri" value="<?= $dri;?>" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="prenom" value="<?= $_SESSION['prenom'];?>" />
                             <input type="hidden" name="jour" value="<?= $_SESSION['jour'];?>" />

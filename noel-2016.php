@@ -1,4 +1,5 @@
 <?php
+$form = 'noel-2016';
 include('include/init-affilbase.php');
 
 $cards_dir = 'tarot/cartes/original-grand/';

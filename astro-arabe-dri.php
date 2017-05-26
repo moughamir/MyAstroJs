@@ -1,12 +1,9 @@
 <?php
-/* 
-    --------------------------------------------------------------------
-    --   DRI POST-MAIL & POST-LANDING = astro-arabe-16 = AFFIL BASE   --
-    --------------------------------------------------------------------
-
-    Created on : 16 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * astro-arabe-dri
+ * ---------------
+ * Created on : 16 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 include('include/process-dri.php');
 ?>
 <!DOCTYPE html>

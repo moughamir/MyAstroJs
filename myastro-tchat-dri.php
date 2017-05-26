@@ -61,10 +61,10 @@ include('include/process-dri.php');
                     <form class="DRI-FormContainer" method="post">
                         <div class="FormContainer-Fields">
                             <div class="Fields-Table-Row"> <label for="name" class="FormField-Label">Mon prénom</label>
-                                <div class="FormField"> <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required /> </div>
+                                <div class="FormField"> <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required /> </div>
                             </div>
                             <div class="Fields-Table-Row"> <label for="tel" class="FormField-Label">Mon numéro de téléphone</label>
-                                <div class="FormField"> <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required /> </div>
+                                <div class="FormField"> <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required /> </div>
                             </div>
                             <div class="Fields-Table-Row"> <label for="pays" class="FormField-Label">Mon pays</label>
                                 <div class="FormField"> <select name="pays" id="pays" class="FormField-Input" required>

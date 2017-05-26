@@ -1,12 +1,9 @@
 <?php
-/* 
-    --------------------------------------------------------------------
-    --   DRI POST-MAIL & POST-LANDING = astro-arabe-16 = AFFIL BASE   --
-    --------------------------------------------------------------------
-
-    Created on : 16 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * astro-arabe-dri-amour
+ * ---------------------
+ * Created on : 16 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 include('include/process-dri.php');
 ?>
 <!DOCTYPE html>
@@ -55,7 +52,7 @@ include('include/process-dri.php');
                                     <div class="Fields-Table-Row Free">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
-                                            <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                            <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom;?>" required />
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +60,7 @@ include('include/process-dri.php');
                                     <div class="Fields-Table-Row Free">
                                         <label for="tel" class="FormField-Label">Mon n° de téléphone</label>
                                         <div class="FormField">
-                                            <input type="tel" name="tel" id="tel" class="FormField-Input" value="<?= $tel ?>" required />
+                                            <input type="tel" name="tel" id="tel" class="FormField-Input" value="<?= $tel;?>" required />
                                         </div>
                                     </div>
                                 </div>
@@ -120,12 +117,12 @@ include('include/process-dri.php');
             </div>
         </section>
         <?php include('include/footer_reassurance.php');?>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

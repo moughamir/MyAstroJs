@@ -501,7 +501,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
             </div>
             <div class="widget-content clearfix">
                 <a href="http://[()ROOT_URL()]/voyance-sans-cb">
-                    <img src="../images_voyance/banniere/audiotel.gif" />
+                    <img src="../images_voyance/banniere/audiotel.jpg" />
                 </a>
             </div>
         </aside>
