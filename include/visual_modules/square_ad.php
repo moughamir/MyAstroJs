@@ -3,7 +3,7 @@
         <h4>Voyance gratuite</h4>
     </div>
     <div class="widget-content clearfix">
-        <a href="http://<?= ROOT_URL ?>/voyance-gratuite">
+        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-gratuite">
             <?php getSquareAd();?>
         </a>
     </div>

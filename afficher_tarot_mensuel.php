@@ -19,7 +19,7 @@ session_start();
                            <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Tarot mensuel</h4></li>
                                     </ul>
                                 </div>
@@ -1028,7 +1028,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1044,7 +1044,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1063,7 +1063,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1080,7 +1080,7 @@ echo $echo;
  <br><h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous pourrez avoir les grandes tendances annuelles et les énergies qui meuvent votre propre vie. Demander votre horoscope 2013 avec MyAstro qui a déjà eu de grands résultats est chose facile et jusqu'à un certain point gratis. Profitez-en! </h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1099,7 +1099,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1116,7 +1116,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -1135,7 +1135,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -1151,7 +1151,7 @@ echo $echo;
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

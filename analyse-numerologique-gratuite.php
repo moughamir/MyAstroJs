@@ -23,8 +23,8 @@ $vt=$_GET["vt"];
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://<?= ROOT_URL ?>/analyse-numerologique-gratuite-numerologue" class="active">Analyse numérologique gratuite numerologue</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/analyse-numerologique-gratuite-numerologue" class="active">Analyse numérologique gratuite numerologue</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Analyse numérologique gratuite</h4></li>
                                     </ul>
                                 </div>

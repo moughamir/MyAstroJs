@@ -237,7 +237,7 @@ $voyants = array(
 ?>
                                     <div class="voyant voyant-<?= $data['sexe'] ?>">
                                         <div class="pic">
-                                            <img src="http://<?= ROOT_URL ?>/images/voyants/<?= $safeName?>.png" />
+                                            <img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/voyants/<?= $safeName?>.png" />
                                         </div>
                                         <h4 class="seername"><?= ucfirst($name) ?></h4>
                                         <div class="ribbon-wrapper">
@@ -251,7 +251,7 @@ $voyants = array(
                                             <div class="ribbon-back-left"></div>
                                             <div class="ribbon-back-right"></div>
                                         </div>
-                                        <a href="http://<?= ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>" class="seeDetails">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>" class="seeDetails">
                                             Voir la fiche
                                         </a>
                                         <div class="price">

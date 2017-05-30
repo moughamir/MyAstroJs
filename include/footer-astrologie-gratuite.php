@@ -5,12 +5,12 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="btn-theme">Compatibilité amoureuse féminine</a>
-      <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine" class="btn-theme">Compatibilité amoureuse masculine</a>
-      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="btn-theme">Portrait astrologique féminin</a>
-      <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin" class="btn-theme">Portrait astrologique masculin</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="btn-theme">Votre personnalité astrologique</a>
-	  <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="btn-theme">Astrologie gratuite</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-feminine" class="btn-theme">Compatibilité amoureuse féminine</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-masculine" class="btn-theme">Compatibilité amoureuse masculine</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-feminin" class="btn-theme">Portrait astrologique féminin</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-masculin" class="btn-theme">Portrait astrologique masculin</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique" class="btn-theme">Votre personnalité astrologique</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/astrologie-gratuite" class="btn-theme">Astrologie gratuite</a>
     </td>
   </tr>
 </table>

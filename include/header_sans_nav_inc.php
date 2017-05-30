@@ -104,18 +104,18 @@
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
-                        <a href="http://<?= ROOT_URL ?>">
+                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>">
                             <img  itemprop="logo" src="/images/logo-V3.png"  alt="Voyance gratuite Myastro.fr" width="240" height="90" />
                         </a>
                     </div>
                     <div class="adv-600 pull-right visible-desktop">
-                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
+                        <?php if ($_SERVER['PHP_SELF'] == '/voyance-par-telephone-2.php') { ?><img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/bannieres/bandeau-numero-2.jpg" alt="Nous contacter au 04 37 45 45 32" style="margin-right:10px" width="340" height="90"/> <?php } else{?>
 
-                        <img src="http://<?= ROOT_URL ?>/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
+                        <img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
                        <?php } ?>
-                        <!--<a href="http://<?= ROOT_URL ?>/voyance-par-telephone"><img src="http://<?= ROOT_URL ?>/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
+                        <!--<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-telephone"><img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/bannieres/homepage-header-H.png" alt="Voyant de la semaine" width="340" height="90"/></a>-->
                         
-                        <a href="http://<?= ROOT_URL ?>/forfait-saphir"><img src="http://<?= ROOT_URL ?>/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
+                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/forfait-saphir"><img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
                     </div>
                 </div>
                  <?php if ($_SERVER['PHP_SELF'] == '/index.php') { ?><h1 style="background:transparent;color:#000">Votre voyance MyAstro : découvrez de quoi sera fait demain</h1> <?php } ?>

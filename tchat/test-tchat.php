@@ -102,8 +102,8 @@ $page_title = 'Tarot gratuit amour: apprenez-en plus sur votre futur avec Myastr
 <!--	<div class="container-fluid">
 		<div class="row">
 			<div class="advert">
-				<img src="http://<?= ROOT_URL ?>/images/preloader.gif" class="advert-offline" width="340">
-				<img src="http://<?= ROOT_URL ?>/images/tchat/<?= $tchat->getImageName() ?>.png" class="hidden advert-online">
+				<img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/preloader.gif" class="advert-offline" width="340">
+				<img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/tchat/<?= $tchat->getImageName() ?>.png" class="hidden advert-online">
 			</div>
 			<div class="overlay">
 				<div class="alert alert-info"><img src="loader-overlay.gif" class="loader" /> Connexion au serveur en cours ...</div>

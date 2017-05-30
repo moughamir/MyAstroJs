@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-belier" class="btn-theme">Votre personnalité astrologique Bélier</a>
-      <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-taureau" class="btn-theme">Votre personnalité astrologique Taureau</a>
-      <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-gemeaux" class="btn-theme">Votre personnalité astrologique Gémeaux</a>
-      <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-cancer" class="btn-theme">Votre personnalité astrologique Cancer</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-lion" class="btn-theme">Votre personnalité astrologique Lion</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-vierge" class="btn-theme">Votre personnalité astrologique Vierge</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-balance" class="btn-theme">Votre personnalité astrologique Balance</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-scorpion" class="btn-theme">Votre personnalité astrologique Scorpion</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-sagittaire" class="btn-theme">Votre personnalité astrologique Sagittaire</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-capricorne" class="btn-theme">Votre personnalité astrologique Capricorne</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-verseau" class="btn-theme">Votre personnalité astrologique Verseau</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique-poissons" class="btn-theme">Votre personnalité astrologique Poissons</a>
-	  <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="btn-theme">Votre personnalité astrologique</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-belier" class="btn-theme">Votre personnalité astrologique Bélier</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-taureau" class="btn-theme">Votre personnalité astrologique Taureau</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-gemeaux" class="btn-theme">Votre personnalité astrologique Gémeaux</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-cancer" class="btn-theme">Votre personnalité astrologique Cancer</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-lion" class="btn-theme">Votre personnalité astrologique Lion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-vierge" class="btn-theme">Votre personnalité astrologique Vierge</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-balance" class="btn-theme">Votre personnalité astrologique Balance</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-scorpion" class="btn-theme">Votre personnalité astrologique Scorpion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-sagittaire" class="btn-theme">Votre personnalité astrologique Sagittaire</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-capricorne" class="btn-theme">Votre personnalité astrologique Capricorne</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-verseau" class="btn-theme">Votre personnalité astrologique Verseau</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique-poissons" class="btn-theme">Votre personnalité astrologique Poissons</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique" class="btn-theme">Votre personnalité astrologique</a>
     </td>
   </tr>
 </table>

@@ -489,7 +489,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
                         <p>Vous vous posez des questions sur votre couple, sur son avenir et la compatibilité que vous avez ensemble ? Il est souvent difficile de pouvoir répondre à ces questions seul. C’est pourquoi le service de voyance gratuite Myastro est une solution simple et rapide. Vous pourrez ainsi exprimer toutes les inquiétudes que vous avez, vous pourrez libérer vos doutes et envisager votre avenir plus sereinement.</p>
                     </div>
                     <div class="text-center">
-                        <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
+                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
                     </div>
                 </div>
             </div>

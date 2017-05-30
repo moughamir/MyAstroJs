@@ -123,7 +123,7 @@ $voyants = array(
                                         <td>
                                             <div class="voyant voyant-<?= $data['sexe'] ?>">
                                                 <div class="pic">
-                                                    <a href="http://<?= ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>"><img src="http://<?= ROOT_URL ?>/images/voyants/<?= $safeName?>.png" /><a>
+                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-telephone-<?= $safeName?>"><img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/voyants/<?= $safeName?>.png" /><a>
                                                 </div>
                                                 <h4></h4>-->
                                                 <div class="ribbon-wrapper">

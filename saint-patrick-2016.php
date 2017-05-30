@@ -17,8 +17,8 @@
         
         <meta property="og:title" content="Mini jeu de la Saint Patrick" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://<?= ROOT_URL ?>/saint-patrick-2016" />
-        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/<?= $page ?>/SaintPatrick-og.jpg" />
+        <meta property="og:url" content="<?= PROTOCOL.'://'.ROOT_URL ?>/saint-patrick-2016" />
+        <meta property="og:image" content="<?= PROTOCOL.'://'.ROOT_URL ?>/images_landing/<?= $page ?>/SaintPatrick-og.jpg" />
         <meta property="og:description" content="Allez-vous avoir de la chance en 2016 ? Jouez et recevez votre étude personnalisée !" />
         <meta property="og:locale" content="fr_FR" />
     

@@ -56,7 +56,7 @@
             <table border="0" cellpadding="10" cellspacing="0" width="100%">
                 <tr>
                     <td valign="top" class="leftColumnContent">
-                        <img src="http://<?= ROOT_URL ?>/yyadmin/images/logo.png" />
+                        <img src="<?= PROTOCOL.'://'.ROOT_URL ?>/yyadmin/images/logo.png" />
                     </td>
                 </tr>
             </table>
