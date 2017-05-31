@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Styles Should be After Script -->
-    <link rel="stylesheet" href="http://[()ROOT_URL()]/style.css" />
-<link href="http://[()ROOT_URL()]/css/tel.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="[()ROOT_URL()]/css/myastro.css" />
+    <link href="[()ROOT_URL()]/css/tel.css" type="text/css" rel="stylesheet">
     <link id="cssThemeColor" rel="stylesheet" href="" />
 
     <!--[if IE 7]>
@@ -54,12 +54,12 @@
 }
 </script>
 	
-	<link rel="shortcut icon" href="http://[()ROOT_URL()]/favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="http://[()ROOT_URL()]/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="http://[()ROOT_URL()]/css/style.css" />
+	<link rel="shortcut icon" href="[()ROOT_URL()]/favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="[()ROOT_URL()]/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="[()ROOT_URL()]/css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
 		<noscript>
-			<link rel="stylesheet" type="text/css" href="http://[()ROOT_URL()]/css/noscript.css" />
+			<link rel="stylesheet" type="text/css" href="[()ROOT_URL()]/css/noscript.css" />
 		</noscript>
 	
 	
@@ -83,13 +83,13 @@
 
                             <ul class="nav">
 
-                                <li> <a href="http://[()ROOT_URL()]/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
+                                <li> <a href="[()ROOT_URL()]/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
                                 <li class="divider-vertical"></li>
 
-                                <li> <a href="http://[()ROOT_URL()]/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
+                                <li> <a href="[()ROOT_URL()]/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
                                 <li class="divider-vertical"></li>
 
-                                <li><a href="http://[()ROOT_URL()]/conditions-generale" rel="nofollow">Conditions générales</a></li>
+                                <li><a href="[()ROOT_URL()]/conditions-generale" rel="nofollow">Conditions générales</a></li>
                                 <li class="divider-vertical"></li>
 
                                 
@@ -264,10 +264,10 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                                                 <div class="row-fluid">
                                                     <ul class="span7 terms-conditions clearfix">
 
-                                                        <li><a href="http://[()ROOT_URL()]/conditions-generale" rel="nofollow">Conditions générale.</a></li>
-                                                        <li><a href="http://[()ROOT_URL()]/plan-du-site" rel="nofollow">Plan du site</a></li>
-                                                        <li><a href="http://[()ROOT_URL()]/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
-                                                        <li><a href="http://[()ROOT_URL()]/partenaires">Partenaires</a></li>
+                                                        <li><a href="[()ROOT_URL()]/conditions-generale" rel="nofollow">Conditions générale.</a></li>
+                                                        <li><a href="[()ROOT_URL()]/plan-du-site" rel="nofollow">Plan du site</a></li>
+                                                        <li><a href="[()ROOT_URL()]/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
+                                                        <li><a href="[()ROOT_URL()]/partenaires">Partenaires</a></li>
 
 
                                                     </ul>
@@ -311,8 +311,8 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                     </div>
 
                     <div class="adv-600 pull-right visible-desktop">
-                        <img src="http://[()ROOT_URL()]/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
-                        <a href="http://[()ROOT_URL()]/forfait-saphir"><img src="http://[()ROOT_URL()]/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
+                        <img src="[()ROOT_URL()]/images/bannieres/bandeau-numero.jpg" alt="Nous contacter au 04 82 53 71 59 " style="margin-right:10px" width="340" height="90"/>
+                        <a href="[()ROOT_URL()]/forfait-saphir"><img src="[()ROOT_URL()]/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
                     </div>
                 </div>
             </div>
@@ -339,7 +339,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancHomePages" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="http://[()ROOT_URL()]/index"><i class="icon-home"></i></a>
+                                    data-target="#" href="[()ROOT_URL()]/index"><i class="icon-home"></i></a>
                             </li>
 
                             <li class="divider-vertical"></li>
@@ -347,16 +347,16 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a6" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="index" href="http://[()ROOT_URL()]/voyance-gratuite" >Voyance gratuite<i class="caret"></i></a>
+                                    data-target="index" href="[()ROOT_URL()]/voyance-gratuite" >Voyance gratuite<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://[()ROOT_URL()]/voyance-par-sms" >Voyance par SMS</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-sans-cb" >Voyance sans CB</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-tarot" >Voyance Tarot</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-gratuite-mail" >Voyance gratuite par mail</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-discount" >Voyance discount</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-en-ligne-web" >Voyance en ligne</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/voyance-par-chat" >Voyance par chat</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-par-sms" >Voyance par SMS</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-sans-cb" >Voyance sans CB</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-tarot" >Voyance Tarot</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-gratuite-mail" >Voyance gratuite par mail</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-discount" >Voyance discount</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-en-ligne-web" >Voyance en ligne</a></li>
+                                    <li><a href="[()ROOT_URL()]/voyance-par-chat" >Voyance par chat</a></li>
                                 </ul>
 
                             </li>
@@ -365,13 +365,13 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="A1" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="http://[()ROOT_URL()]/horoscope-gratuit">Horoscope Gratuit<i class="caret"></i></a>
+                                    data-target="#" href="[()ROOT_URL()]/horoscope-gratuit">Horoscope Gratuit<i class="caret"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-2015">Horoscope 2014</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-du-jour">Horoscope du jour</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-du-mois">Horoscope du mois</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-de-l-amour">Horoscope de l'amour</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-2015">Horoscope 2014</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-du-jour">Horoscope du jour</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-de-la-semaine">Horoscope de la semaine</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-du-mois">Horoscope du mois</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-de-l-amour">Horoscope de l'amour</a></li>
                                     
                                 </ul>
                             </li>
@@ -381,14 +381,14 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="ancPostFormats" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="#" href="http://[()ROOT_URL()]/astrologie-gratuite" >Astrologie Gratuite<i class="caret"></i></a>
+                                    data-target="#" href="[()ROOT_URL()]/astrologie-gratuite" >Astrologie Gratuite<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://[()ROOT_URL()]/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
+                                    <li><a href="[()ROOT_URL()]/compatibilite-amoureuse-feminine" >Compatibilite amoureuse féminine</a></li>
+                                    <li><a href="[()ROOT_URL()]/compatibilite-amoureuse-masculine" >Compatibilite amoureuse masculine</a></li>
+                                    <li><a href="[()ROOT_URL()]/portrait-astrologique-feminin" >Portrait astrologique féminin</a></li>
+                                    <li><a href="[()ROOT_URL()]/portrait-astrologique-masculin" >Portrait astrologique masculin</a></li>
+                                    <li><a href="[()ROOT_URL()]/votre-personnalite-astrologique" >Votre personnalité astrologique</a></li>
                                     
                                 </ul>
 
@@ -399,13 +399,13 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown  active" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a5" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="tarot-gratuit" href="http://[()ROOT_URL()]/tarot-gratuit" >Tarot Gratuit<i class="caret"></i></a>
+                                    data-target="tarot-gratuit" href="[()ROOT_URL()]/tarot-gratuit" >Tarot Gratuit<i class="caret"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://[()ROOT_URL()]/tarot-de-l-amour" >Tarot de l'amour</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/tarot-quotidien" >Tarot quotidien</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/tarot-mensuel" >Tarot mensuel</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/tarot-de-couple" >Tarot de couple</a></li> 
+                                    <li><a href="[()ROOT_URL()]/tarot-de-l-amour" >Tarot de l'amour</a></li>
+                                    <li><a href="[()ROOT_URL()]/tarot-quotidien" >Tarot quotidien</a></li>
+                                    <li><a href="[()ROOT_URL()]/tarot-hebdomadaire" >Tarot hebdomadaire</a></li>
+                                    <li><a href="[()ROOT_URL()]/tarot-mensuel" >Tarot mensuel</a></li>
+                                    <li><a href="[()ROOT_URL()]/tarot-de-couple" >Tarot de couple</a></li> 
                                 </ul>
                             </li>
 
@@ -414,26 +414,26 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <li class="dropdown" role="menu" aria-labelledby="dLabel">
                                 <a class="dropdown-toggle" id="a4" role="button"
                                     data-hover="dropdown" data-delay="200"
-                                    data-target="numerologie-gratuite" href="http://[()ROOT_URL()]/numerologie-gratuite" >Numérologie Gratuite<i class="caret"></i></a>
+                                    data-target="numerologie-gratuite" href="[()ROOT_URL()]/numerologie-gratuite" >Numérologie Gratuite<i class="caret"></i></a>
 
                                 <ul class="dropdown-menu">
-                                    <li><a href="http://[()ROOT_URL()]/horoscope-2015" >Numéroscope 2014</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/personnalite-numerologique" >Personnalité numérologique</a></li>
-                                    <li><a href="http://[()ROOT_URL()]/etapes-de-la-vie" >Etapes de la vie</a></li>
+                                    <li><a href="[()ROOT_URL()]/horoscope-2015" >Numéroscope 2014</a></li>
+                                    <li><a href="[()ROOT_URL()]/compatibilite-amoureuse-pour-les-femmes" >Compatibilité amoureuse (pour les femmes)</a></li>
+                                    <li><a href="[()ROOT_URL()]/compatibilite-amoureuse-pour-les-hommes" >Compatibilité amoureuse (pour les hommes)</a></li>
+                                    <li><a href="[()ROOT_URL()]/personnalite-numerologique" >Personnalité numérologique</a></li>
+                                    <li><a href="[()ROOT_URL()]/etapes-de-la-vie" >Etapes de la vie</a></li>
                                 </ul>
                             </li>
                             
                             <li class="divider-vertical"></li>
                             
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="voyance-par-telephone" href="http://[()ROOT_URL()]/voyance-par-telephone" >Voyance par téléphone</a>
+                                <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="voyance-par-telephone" href="[()ROOT_URL()]/voyance-par-telephone" >Voyance par téléphone</a>
                             </li>
                             
                             <li class="divider-vertical"></li>
                             <li class="dropdown " role="menu" aria-labelledby="dLabel">
-                                <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forfaits" href="http://[()ROOT_URL()]/forfaits" >Forfaits</a>
+                                <a class="dropdown-toggle" role="button" data-hover="dropdown" data-delay="200" data-target="forfaits" href="[()ROOT_URL()]/forfaits" >Forfaits</a>
                             </li>
                             <li class="divider-vertical"></li>
                         </ul>
@@ -461,7 +461,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://[()ROOT_URL()]/index"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://[()ROOT_URL()]/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><h4 class="h4"><a href="[()ROOT_URL()]/index"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="[()ROOT_URL()]/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Tarot de l'amour</h4></li>
                                     </ul>
                                 </div>
@@ -490,14 +490,14 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
             </div>
             <div class="widget-content clearfix">
                 <ul class="widget-sponsor experts-handler">
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-georges" class="experts experts-georges "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-linda" class="experts experts-linda "></a></li>
-                    <li><a href="http://[()ROOT_URL()]/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-caroline" class="experts experts-caroline "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-christophe" class="experts experts-christophe "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-cecile" class="experts experts-cecile "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-georges" class="experts experts-georges "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-kathy" class="experts experts-kathy "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-laurent" class="experts experts-laurent "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-linda" class="experts experts-linda "></a></li>
+                    <li><a href="[()ROOT_URL()]/voyance-par-telephone-viktor" class="experts experts-viktor "></a></li>';
                 </ul>
             </div>
         </aside>
@@ -507,7 +507,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                 <h4>Voyance sans carte bancaire</h4>
             </div>
             <div class="widget-content clearfix">
-                <a href="http://[()ROOT_URL()]/voyance-sans-cb">
+                <a href="[()ROOT_URL()]/voyance-sans-cb">
                     <img src="../images_voyance/banniere/audiotel.jpg" />
                 </a>
             </div>
@@ -535,7 +535,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
                         
 						<div class="thumb-effect">
                                         <div class="mask"></div>
-                                        <img src="http://[()ROOT_URL()]/images_voyance/signes/[()sign_text_m()].png">[()sign_text()]
+                                        <img src="[()ROOT_URL()]/images_voyance/signes/[()sign_text_m()].png">[()sign_text()]
                         </div>
 </div>                    
 
@@ -668,7 +668,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Avec l'astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -685,7 +685,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Entre signes, la compatibilité amoureuse n'est pas toujours évidente. Quelles seront vos affinités avecl'homme de vos rêves et votre couple peut-il marcher. Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite?</h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -705,7 +705,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope du jour gratuit vous permet de savoir quotidiennement sur le plan professionnel, sentimental et financier. C'est une information précieuse pour pouvoir aborder votre journée en toute confiance et sans aucun doute.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/horoscope-du-jour" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/horoscope-du-jour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -723,7 +723,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Quelles sont les tendances planétaires qui vous sont réservées pour cette année 2013? Avec l'horoscope 2013 gratuit, ne vous laissez plus surprendre. La fin de cette année n'aura plus aucun secret pour vous et vous pourrez la terminer tranquillement</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/horoscope-2013" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/horoscope-2013" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -743,7 +743,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous avez l'impression de mal vous connaître et ne savez pas comment réagir face à certaines personnes ou situations Découvrez votre personnalité astrologique gratuitement sur Myastro et apprenez à vous connaître avec les astres.</h6>                                                                        
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -761,7 +761,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre profil astrologique féminin gratuit vous aidera à découvrir des facettes de votre personnalité que vous ne soupçonniez même pas. Ayez toutes les informations qui se chachent dans les astres à votre disposition.</h6>                                                                        
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -781,7 +781,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre partenaire et vous passez quelques fois des moments difficiles? Les disputes sont parfois longues et vous semblent très fréquentes? Avec la compatibilité amoureuse gratuite, sachez enfin pourquoi et que faire pour redresser la situation.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -798,7 +798,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous convoitez une femme qui hante vos pensées mais ne savez pas si votre relation est possible? Avec la compatibilité amoureuse, découvrez s'il vous est possible de faire le pas et de vous engager dans une relation amoureuse avec elle.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://[()ROOT_URL()]/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="[()ROOT_URL()]/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -843,8 +843,8 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://[()ROOT_URL()]/voyance-par-telephone">
-                                            <img src="http://[()ROOT_URL()]/images/bannieres/voyant-skyscraper/caroline-voyante.png" alt="voyance par tel" />
+										<a href="[()ROOT_URL()]/voyance-par-telephone">
+                                            <img src="[()ROOT_URL()]/images/bannieres/voyant-skyscraper/caroline-voyante.png" alt="voyance par tel" />
 										</a>
 									</div>
 
@@ -886,7 +886,7 @@ font-weight: 400;width:78%;" id="Message" name="message" placeholder="Message" r
 																				
 																			</div>
 
-																			<a href="http://[()ROOT_URL()]/voyance-par-sms" class="more" title=""></a>
+																			<a href="[()ROOT_URL()]/voyance-par-sms" class="more" title=""></a>
 																		</div>
 																	</article>
 																</li>
@@ -1360,17 +1360,17 @@ line-height: 27px;text-align:center;">Les Tags</h4>
 								
 								
 									
-								<a href="http://[()ROOT_URL()]/tarot-de-couple" class="btn-theme">Tarot de couple</a>
-								<a href="http://[()ROOT_URL()]/tarot-de-l-amour" class="btn-theme">Tarot de l'amour</a>
-								<a href="http://[()ROOT_URL()]/tarot-gratuit" class="btn-theme">Tarot grauit</a>
-								<a href="http://[()ROOT_URL()]/tarot-hebdomadaire" class="btn-theme">Tarot hebdomadaire</a>
-								<a href="http://[()ROOT_URL()]/tarot-mensuel" class="btn-theme">Tarot mensuel</a>
-								<a href="http://[()ROOT_URL()]/tarot-quotidien" class="btn-theme">Tarot quotidien</a>								
+								<a href="[()ROOT_URL()]/tarot-de-couple" class="btn-theme">Tarot de couple</a>
+								<a href="[()ROOT_URL()]/tarot-de-l-amour" class="btn-theme">Tarot de l'amour</a>
+								<a href="[()ROOT_URL()]/tarot-gratuit" class="btn-theme">Tarot grauit</a>
+								<a href="[()ROOT_URL()]/tarot-hebdomadaire" class="btn-theme">Tarot hebdomadaire</a>
+								<a href="[()ROOT_URL()]/tarot-mensuel" class="btn-theme">Tarot mensuel</a>
+								<a href="[()ROOT_URL()]/tarot-quotidien" class="btn-theme">Tarot quotidien</a>								
 							<br>							
-								<a href="http://[()ROOT_URL()]/forum/" title="Forum Voyance" class="btn-theme">La communauté</a><br>
+								<a href="[()ROOT_URL()]/forum/" title="Forum Voyance" class="btn-theme">La communauté</a><br>
 		<a href="https://www.facebook.com/pages/Myastro/437290166297323" title="Facebook" class="btn-theme">Facebook</a><br>	 
 		<a href="https://twitter.com/MYASTRO1" title="Twitter" class="btn-theme">Twitter</a><br>
-		<a href="http://[()ROOT_URL()]/contact"  class="btn-theme">Nous contacter</a><br>
+		<a href="[()ROOT_URL()]/contact"  class="btn-theme">Nous contacter</a><br>
         <a href="partenaires" title="Partenaires" class="btn-theme">Nos partenaires</a>
                              
 							</div> 
@@ -1388,10 +1388,10 @@ line-height: 27px;text-align:center;">Les Tags</h4>
                     <nav class="span6 ">
                         <h4 class="hidden">Liens Copyright</h4>
                         <ul class="copyright-links">
-                           <li><a href="http://[()ROOT_URL()]/plan-du-site" rel="nofollow">Plan du site</a></li>
-                            <li><a href="http://[()ROOT_URL()]/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
+                           <li><a href="[()ROOT_URL()]/plan-du-site" rel="nofollow">Plan du site</a></li>
+                            <li><a href="[()ROOT_URL()]/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
                             
-                            <li><a href="http://[()ROOT_URL()]/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
+                            <li><a href="[()ROOT_URL()]/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
                         </ul>
                     </nav>
 

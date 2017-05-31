@@ -65,9 +65,10 @@
                                             }
                                         </script>
                                         <form name="tarot" action="tarotdelamour/tarot_amour.php" method="post" onsubmit="return check_prenom()">
-                                            <br><label for="date">Votre prénom&nbsp;</label>
-                                            <input style="width:97%;" type="text" name="prenom" size=20 maxlength=40 /><br>
-                                            <label for="date">Votre signe &nbsp;</label>
+                                            <br>
+                                            <label for="prenom">Votre prénom</label>
+                                            <input style="width:97%;" type="text" id="prenom" name="prenom" size=20 maxlength=40 /><br>
+                                            <label for="date">Votre signe</label>
                                             <select name="signe">
                                                 <option value="1">Bélier</option>
                                                 <option value="2">Taureau</option>
