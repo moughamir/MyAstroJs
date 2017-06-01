@@ -4,7 +4,7 @@
     ini_set('max_execution_time', 0);
     include('lib.php');
     
-    $xml1 = read_horoscope_rss3('http://www.asiaflash.com/horoscope/rss_mensuel_amoureux_balance.xml');
+    $xml1 = read_horoscope_rss3('https://www.asiaflash.com/horoscope/rss_mensuel_amoureux_balance.xml');
     $ac_result = array();
     foreach($xml1['desc'] as $s_cle => $s_value){
         switch($s_cle){

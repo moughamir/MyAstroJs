@@ -75,7 +75,7 @@
 ini_set('max_execution_time', 0);
 include('lib.php');
 
- $xml1 = read_horoscope_rss2('http://www.asiaflash.com/horoscope/rss_horoscope_mensuel_complet_lion.xml');
+ $xml1 = read_horoscope_rss2('https://www.asiaflash.com/horoscope/rss_horoscope_mensuel_complet_lion.xml');
 
  
   foreach ($xml1['desc'] as $s_cle=>$s_value)
