@@ -1,55 +1,27 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
-<head>
-    <title>Tarot mensuel : tous les mois, des tirages de cartes</title>
+<html lang="fr">
+    <head>
+        <title>Tarot mensuel : tous les mois, des tirages de cartes</title>
 	<meta name="description" content="Le Tarot est une technique de longue date qui permet d'interpréter des cartes tirées pour votre vie et pour répondre à vos questionnements." />
-<?php include('include/header_inc.php'); ?>
 
-
-    <div class="container-fluid" itemscope >
-
-        <!-- Main Content -->
-        <div class="row-fluid">
-
-                        <div class="article-content">
-                           <header>
-                                <div itemscope >
-                                    <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
-                                        <li>Tarot mensuel</h4></li>
-                                    </ul>
-                                </div>
-					<div class="cat-widget-title">
-                        
-                            <h1 itemprop="headline">Tarot mensuel</h1>
-                        
-                    </div>
-
-    </br>                         
-
-                            </header>
-
-                            <span class="clearfix"></span>
-
- <div class="row-fluid">
-       <!-- Right sidebar -->
-							<?php include('include/bloc-droit-secondaire.php'); ?>	
-				
-            <!-- main content -->
-            <div class="span6 main-content">
-
-               
-
-                <!-- Slider -->
-                <section class="pic-slider">
-                    <h2 class="hidden">Slider images</h2>
-
-                  
-				   <!---------------- Début Iframe tirage tarot ---->
+        <?php include('include/header_inc.php');?>
+    
+        <div class="container-fluid" itemscope >
+            <!-- Main Content -->
+            <div class="row-fluid">
+                <div class="article-content">
+                    <header>
+                        <h1 itemprop="headline">Tarot mensuel</h1>
+                    </header>
+                    <span class="clearfix"></span>
+                    <div class="row-fluid">
+                        <!-- Left sidebar -->
+                        <?php include('include/bloc-droit-secondaire.php');?>
+                        <!-- Main content -->
+                        <div class="span6 main-content">
+                            <!-- Slider -->
+                            <section class="pic-slider">
+                                <!---------------- Début Iframe tirage tarot ---->
 <?php
 
 //require('header.php');
@@ -989,27 +961,19 @@ $echo=$header.'<div class="wrapper">
 echo $echo;
 
 
-?> <!---------------- fin Iframe tirage tarot ---->
-           </section>    
-            </div>
-                </section>
-
-               
-
-                <!-- Horizontal Categories -->
-                <section class="cat-widget h-cat-1">
-                    <div class="cat-widget-title">
-                        
-<h3>Tarot mensuel</h3>
-                       
-                    </div>
-
-                    <div class="cat-widget-content">
-                        
-
+?>
+                                <!---------------- fin Iframe tirage tarot ---->
+                            </section>
+                        </div>
+                    </section>
+                    <!-- Horizontal Categories -->
+                    <section class="cat-widget h-cat-1">
+                        <div class="cat-widget-title">
+                            <h3>Tarot mensuel</h3>
+                        </div>
+                        <div class="cat-widget-content">
                          <div class="row-fluid cat-horiz">
                             <div class="cat-horiz-divider"></div>
-
                             <div class="related-posts clearfix">
                                 <div class="row-fluid modern-items-list">
                                     <div id="h_cat_slider1" class="flexslider">
@@ -1153,47 +1117,23 @@ echo $echo;
 
                                                                     <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
-
                                                             </article>
                                                         </div>
                                                     </li>
-
-													 
-													  </ul>
+                                                </ul>
                                             </li>
-
-                                            </ul>
+                                        </ul>
                                     </div>
-
-								
-								</div>
+                                </div>
                             </div>
-
                         </div>
-               </section>
-
-               
-                
-
-
-               
-            </div>
-
-
-			
-                            							<!-- Left sidebar -->
-							<?php include('include/bloc-gauche-secondaire.php'); ?>
+                    </section>
 </div>
-
-        
-
-    </div>
-                      
-                        </div>
-
+                        <!-- Right sidebar -->
+                        <?php include('include/bloc-gauche-secondaire.php');?>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-	
-   
-
-    <?php include('include/footer_inc_tarot.php'); ?>
+            
+        <?php include('include/footer_inc_tarot.php');?>
