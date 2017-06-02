@@ -49,15 +49,15 @@
                                     <li data-target="#carousel-homepage" data-slide-to="1"></li>
                                     <li data-target="#carousel-homepage" data-slide-to="2"></li>
                                     <li data-target="#carousel-homepage" data-slide-to="3"></li>
-                                    <li data-target="#carousel-homepage" data-slide-to="4"></li>
+                                    <!--<li data-target="#carousel-homepage" data-slide-to="4"></li>-->
                                 </ol>
                                 <div class="carousel-inner">
-                                    <div class="item active">
+<!--                                    <div class="item active">
                                         <a href="http://<?= ROOT_URL ?>/horoscope-<?= date('Y');?>">
                                             <img src="images/bannieres/horoscopes/horoscope-2015.png" alt="horoscope-2016" />
                                         </a>
-                                    </div>
-                                    <div class="item">
+                                    </div>-->
+                                    <div class="item active">
                                         <a href="http://<?= ROOT_URL ?>/horoscope-du-jour">
                                             <img src="images/bannieres/horoscopes/horoscope-du-jour.jpg" alt="horoscope-du-jour" />
                                         </a>

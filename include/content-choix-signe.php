@@ -30,10 +30,7 @@
             <?php foreach($cs_signes as $code => $nom){ ?>
             <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="<?= $nom ?>" title="<?= $nom ?>">
                 <a href="http://<?= ROOT_URL.'/'.$cs_url.'-'.$code ?>">
-                    <div class="thumb-effect">
-                        <div class="mask"></div>
-                        <img src="images_voyance/signes/<?= $code ?>.png" />
-                    </div>
+                    <img src="images_voyance/signes/<?= $code ?>.png" class="thumb-effect" />
                 </a>
             </li>
             <?php } ?>

@@ -109,10 +109,10 @@
                 <div class="navbar navbar-inverse">
                     <div class="navbar-inner">
                         <div class="container-fluid">
-                            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#divNav1">
                                 <i class="icon-reorder"></i>
                             </button>
-                            <div class="nav-collapse collapse">
+                            <div id="divNav1" class="nav-collapse collapse">
                                 <!--<a class="brand" href="#">Serpentsoft</a>-->
                                 <ul class="nav">
                                     <li><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
@@ -259,9 +259,7 @@
                         <a href="http://<?= ROOT_URL ?>/forfait-saphir"><img src="http://<?= ROOT_URL ?>/images/bannieres/voyance-forfaits.png" alt="Voyant de la semaine" width="340" height="90"/></a>
                     </div>
                 </div>
-                <?php if ($_SERVER['PHP_SELF'] == '/index.php') { ?>
-                <h1 style="background:transparent;color:#000">Votre voyance MyAstro : découvrez de quoi sera fait demain</h1> 
-                <?php } ?>
+                <h1 style="background:transparent;color:#000">Votre voyance MyAstro : découvrez de quoi sera fait demain</h1>
             </div>
         </div>
     </header>

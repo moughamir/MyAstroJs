@@ -63,14 +63,18 @@ $menu = array(
             [ 'url' => 'etapes-de-la-vie',                        'txt' => 'Étapes de la vie' ],
         ]
     ],
-    'voyance-par-telephone' => [
-        'url' => 'voyance-par-telephone',
-        'txt' => 'Voyance par téléphone'
+    'voyance-par-tchat' => [
+        'url' => 'myastro-tchat-n',
+        'txt' => 'Voyance par tchat'
     ],
-    'forfaits' => [
-        'url' => 'forfaits',
-        'txt' => 'Forfaits'
-    ],
+//    'voyance-par-telephone' => [
+//        'url' => 'voyance-par-telephone',
+//        'txt' => 'Voyance par téléphone'
+//    ],
+//    'forfaits' => [
+//        'url' => 'forfaits',
+//        'txt' => 'Forfaits'
+//    ],
 );
 ?>
 <nav class="container-fluid navbar-main enable-fixed">
