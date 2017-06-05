@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
     <head>
-        <title>Horoscope gratuit en ligne : consultation en ligne | Myastro.fr</title>
+        <title>Horoscope gratuit : consultation en ligne | Myastro</title>
 	<meta name="description" content="Myastro vous permet de consulter un horoscope fiable de manière gratuite. Anticipez votre journée, votre mois ou votre année grâce à ce service." />
         
         <script src="js/jquery-1.11.js"></script>
@@ -49,15 +49,15 @@
                                     <li data-target="#carousel-homepage" data-slide-to="1"></li>
                                     <li data-target="#carousel-homepage" data-slide-to="2"></li>
                                     <li data-target="#carousel-homepage" data-slide-to="3"></li>
-                                    <li data-target="#carousel-homepage" data-slide-to="4"></li>
+                                    <!--<li data-target="#carousel-homepage" data-slide-to="4"></li>-->
                                 </ol>
                                 <div class="carousel-inner">
-                                    <div class="item active">
+<!--                                    <div class="item active">
                                         <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-<?= date('Y');?>">
                                             <img src="images/bannieres/horoscopes/horoscope-2015.png" alt="horoscope-2016" />
                                         </a>
-                                    </div>
-                                    <div class="item">
+                                    </div>-->
+                                    <div class="item active">
                                         <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour">
                                             <img src="images/bannieres/horoscopes/horoscope-du-jour.jpg" alt="horoscope-du-jour" />
                                         </a>

@@ -2,14 +2,97 @@
 $rose_fonce: #E51E85;
 $rose_clair: #EE4BA4;
 
-/* Font Awesome */
+/* --- FONT --- */
 
+/* Open Sans */
 @font-face {
-    font-family: 'OpenSansSemibold';
-    src: url(../framework/fonts/OpenSans-Semibold-webfont.eot);
-    src: url(../framework/fonts/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'), url(../framework/fonts/OpenSans-Semibold-webfont.woff) format('woff'), url(../framework/fonts/OpenSans-Semibold-webfont.ttf) format('truetype'), url(../framework/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold) format('svg');
-    font-weight: 400;
-    font-style: normal
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/fonts/Open Sans/opensans-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('/fonts/Open Sans/opensans-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* Open Sans Italic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('/fonts/Open Sans/opensans-i-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('/fonts/Open Sans/opensans-i-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* Open Sans Semibold */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('/fonts/Open Sans/opensans-sb-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('/fonts/Open Sans/opensans-sb-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* Open Sans Semibold Italic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url('/fonts/Open Sans/opensans-sbi-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url('/fonts/Open Sans/opensans-sbi-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* Open Sans Bold */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/fonts/Open Sans/opensans-b-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/fonts/Open Sans/opensans-b-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* Open Sans Bold Italic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('/fonts/Open Sans/opensans-bi-latinext.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('/fonts/Open Sans/opensans-bi-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 header { margin-bottom: 20px;}
@@ -2467,10 +2550,9 @@ table th[class*="span"],
 .dropdown-menu>.active>a:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #0081c2;
+    background-color: #E42683;
     background-repeat: repeat-x;
     outline: 0;
-    background-image: linear-gradient(to bottom, #08c, #0077b3);
 }
 .dropdown-menu>.disabled>a,
 .dropdown-menu>.disabled>a:hover,
@@ -3804,6 +3886,21 @@ input[type="submit"].btn.btn-mini {
     display: block;
     float: left;
     margin: 0 10px 0 0
+}
+.navbar-main .nav {
+    display: flex;
+    float: none;
+    margin-bottom: 0;
+    justify-content: space-around;
+    height: 60px;
+}
+@media all and (max-width: 980px){
+    .navbar-main .nav {
+        display: block;
+        float: left;
+        margin: 0 10px 0 0;
+        height: auto;
+    }
 }
 .navbar .nav.pull-right {
     float: right;
@@ -7895,59 +7992,13 @@ ul.modern-tabs .btn-theme.active,
 .navbar-main .dropdown-menu {
     border-color: rgb(49, 49, 49);
 }
-.navbar-main .dropdown-menu,
-.navbar-main .navbar .nav li.dropdown.open > .dropdown-toggle {
-    background: rgb(69, 72, 77);
-    /* Old browsers */
-    
-    background: -moz-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    /* FF3.6+ */
-    
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(69, 72, 77, 1)), color-stop(100%, rgba(0, 0, 0, 1)));
-    /* Chrome,Safari4+ */
-    
-    background: -webkit-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    /* Chrome10+,Safari5.1+ */
-    
-    background: -o-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    /* Opera 11.10+ */
-    
-    background: -ms-linear-gradient(top, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    /* IE10+ */
-    
-    background: linear-gradient(to bottom, rgba(69, 72, 77, 1) 0%, rgba(0, 0, 0, 1) 100%);
-    /* W3C */
+.navbar-main .navbar .nav li.dropdown.active > .dropdown-toggle {
+    background: #E42683;
 }
-.navbar-main .navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar-main .dropdown-menu,
+.navbar-main .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar-main .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-    background: rgb(251, 131, 250);
-    /* Old browsers */
-    
-    background: -moz-linear-gradient(top, rgba(251, 131, 250, 1) 0%, rgba(228, 38, 131, 1) 100%);
-    /* FF3.6+ */
-    
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(251, 131, 250, 1)), color-stop(100%, rgba(228, 38, 131, 1)));
-    /* Chrome,Safari4+ */
-    
-    background: -webkit-linear-gradient(top, rgba(251, 131, 250, 1) 0%, rgba(228, 38, 131, 1) 100%);
-    /* Chrome10+,Safari5.1+ */
-    
-    background: -o-linear-gradient(top, rgba(251, 131, 250, 1) 0%, rgba(228, 38, 131, 1) 100%);
-    /* Opera 11.10+ */
-    
-    background: -ms-linear-gradient(top, rgba(251, 131, 250, 1) 0%, rgba(228, 38, 131, 1) 100%);
-    /* IE10+ */
-    
-    background: linear-gradient(to bottom, rgba(251, 131, 250, 1) 0%, rgba(228, 38, 131, 1) 100%);
-    /* W3C */
-    
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb83fa', endColorstr='#e93cec', GradientType=0);
-    /* IE6-9 */
-    
-    background-color: #00adff;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background: #222222;
 }
 .navbar-main .navbar .navbar-inner .nav > li > .dropdown-menu:after {
     border-bottom: 5px solid transparent;
@@ -7955,28 +8006,24 @@ ul.modern-tabs .btn-theme.active,
 .navbar-main .navbar .navbar-inner .nav > li > .dropdown-menu:before {
     border-bottom: none;
 }
-.navbar-main .navbar .nav > .active > a,
+/*.navbar-main .navbar .nav > .active > a,
 .navbar-main .navbar .nav > li > a:focus,
 .navbar-main .navbar .nav > li > a:hover,
 .navbar-main .navbar .nav > li > i:focus,
 .navbar-main .navbar .nav > li > i:hover,
 .navbar-main .navbar .dropdown .caret:hover,
-.navbar-main .navbar .nav > .active > a,
-.navbar-main .navbar .nav > .active > a:hover,
-.navbar-main .navbar .nav > .active > a:focus,
-.navbar-main .dropdown-menu > li > a:hover,
-.navbar-main .dropdown-menu > li > a:focus,
-.navbar-main .dropdown-menu > li:hover > a,
-.navbar-main .dropdown-menu > li:hover > a,
+.navbar-main .dropdown-menu > .dropdown.active > a:hover,
+.navbar-main .dropdown-menu > .dropdown.active > a:focus,
+.navbar-main .dropdown-menu > .dropdown > a:hover,
+.navbar-main .dropdown-menu > .dropdown > a:focus,
+.navbar-main .dropdown-menu > .dropdown:hover > a,
 .navbar-main .dropdown-submenu:hover > a,
 .navbar-main .dropdown-submenu:focus > a {
-    background: rgba(0, 0, 0, 0.25);
-    background-color: rgba(0, 0, 0, 0.25);
     color: #fff;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+}*/
 .navbar-main .dropdown-menu > li {
     border-bottom: 1px solid #585858;
 }
@@ -9582,7 +9629,7 @@ div.dark_square #pp_full_res .pp_inline {
     padding-left: 10px
 }
 .top-menu-2 .about-company .title>h3 {
-    font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
+    font-family: 'Open Sans', Arial, Sans-Serif;
     font-weight: 600;
     font-size: 15px;
     display: inline-block;
@@ -10937,13 +10984,13 @@ i:focus,
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background: rgb(30, 87, 153);
-    background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+    background: #237FCC;
+/*    background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(50%, rgba(41, 137, 216, 1)), color-stop(51%, rgba(32, 124, 202, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
     background: -webkit-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
     background: -o-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
     background: -ms-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
-    background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+    background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);*/
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
 }
 .navbar-main .navbar .navbar-inner {
@@ -11225,7 +11272,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
+    font-family: 'Open Sans', Arial, Sans-Serif;
     font-weight: 400;
     font-size: 13px;
 }
@@ -11244,7 +11291,7 @@ h6 {
 .navbar-main .navbar .nav>li>a,
 .twitter-ticker-widget .widget-inner>.title h4,
 .widget .widget-title>h4 {
-    font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
+    font-family: 'Open Sans', Arial, Sans-Serif;
     font-weight: 600;
 }
 .article-content h1 {
@@ -11341,6 +11388,10 @@ a.thumbnail:hover {
     filter: alpha(opacity=0);
     -moz-opacity: 0;
     -khtml-opacity: 0;
+}
+img.thumb-effect:hover {
+    -webkit-filter: drop-shadow(0px 0px 4px #777);
+    filter: drop-shadow(0px 0px 4px #777);
 }
 .thumb-effect:hover .mask {
     background: url(../images/shine-70.png) right top no-repeat rgba(0, 0, 0, .15);
@@ -11529,7 +11580,7 @@ ul.carousel-nav li:hover>a {
 h1 {
     font-size: 17px!important;
     text-align: center;
-    font-family: 'Open Sans', OpenSansSemibold, Arial, Sans-Serif;
+    font-family: 'Open Sans', Arial, Sans-Serif;
     font-weight: 600;
     color: #fff;
     margin: 0;
@@ -12069,8 +12120,8 @@ ul.social-colored li {
     margin-right: 3px;
 }
 .navbar-banner {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 24px;
+    padding-bottom: 0;
     margin: 0;
 }
 .navbar-banner .logo-240 {
@@ -12108,7 +12159,7 @@ ul.social-colored li {
     padding: 0;
     border-bottom: 5px solid #00adff;
     margin-bottom: -30px;
-    background-color: rgba(0, 0, 0, .45);
+    background-color: #237FCC;
 }
 .navbar-main.navbar-fixed-top .navbar {
     max-width: 1240px;
@@ -12183,7 +12234,7 @@ ul.social-colored li {
     -webkit-box-shadow: 0;
     -moz-box-shadow: 0;
     box-shadow: 0;
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
     padding: 4px 0;
     margin: 0;
@@ -15998,7 +16049,7 @@ div.jp-video-360p {
 }
 .navbar-main .navbar .nav > li > a,
 .navbar-main .dropdown-menu > li > a {
-    padding: 20px 9px;
+    padding: 20px 16px;
 }
 .img-discount img {
     width: 300px;
@@ -16320,14 +16371,14 @@ div.jp-video-360p {
 .top-menu-2 .about-company .title .title-contact {
     color: #dadada;
     display: inline-block;
-    font-family: "Open Sans", OpenSansSemibold, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 25px;
     margin: 10px 0 0;
 }
 .widget-title .h4 {
-    font-family: "Open Sans", OpenSansSemibold, Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     font-weight: 600;
     color: #292929;
     font-size: 17px !important;
