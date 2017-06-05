@@ -4,7 +4,7 @@ include('lib.php');
 
 for ($i=0,$n=count($A_SIGNE);$i<$n;$i++)
 {
-  $xml1 = read_horoscope_rss('http://www.asiaflash.com/horoscope/rss_horojour_'.$A_SIGNE[$i].'.xml');
+  $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_horojour_'.$A_SIGNE[$i].'.xml');
 
 $s_contenu = '<tr>
             <td height="25" valign="top" width="650">

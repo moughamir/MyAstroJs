@@ -4,7 +4,7 @@
     ini_set('max_execution_time', 0);
     include('lib.php');
     
-    $xml1 = read_horoscope_rss2('http://www.asiaflash.com/horoscope/rss_hebdotay_complet_poissons.xml');
+    $xml1 = read_horoscope_rss2('https://www.asiaflash.com/horoscope/rss_hebdotay_complet_poissons.xml');
     $ac_result = array();
     $nb_item = count($xml1['desc']);
     $i = 1;

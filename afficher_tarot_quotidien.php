@@ -91,13 +91,13 @@ function RequestCouple($prenom,$card_n)
 		'ID'=>'1637045146',
 		'sequence'=>5,
 		'submit' => "" );
-		$result=http_fetch_url_get('http://www.asiaflash.com/tarot/'.$url);
-		$result=http_fetch_url('http://www.asiaflash.com/tarot/'.$page,$doo);
+		$result=http_fetch_url_get('https://www.asiaflash.com/tarot/'.$url);
+		$result=http_fetch_url('https://www.asiaflash.com/tarot/'.$page,$doo);
 		print_r($result);
 		die();
 	}
 	else
-		$result=http_fetch_url_get('http://www.asiaflash.com/tarot/'.$url);
+		$result=http_fetch_url_get('https://www.asiaflash.com/tarot/'.$url);
 	$result=explode('<a href="tarot_couple.php?ID=',$result);
 	// if($card_n==1)
 	// {
@@ -147,7 +147,7 @@ function RequestReponseCouple()
 	global $page;
 	if(!isset($id))
 		$id=$_SESSION['id'];
-	$url='http://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
+	$url='https://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
 	$result=http_fetch_url_get($url);
 	$result2=explode('.gif" alt="',$result);
 	$result2=explode('"',$result2[1]);
@@ -183,7 +183,7 @@ function RequestReponseHebdo($seq)
 	global $page;
 	if(!isset($id))
 		$id=$_SESSION['id'];
-	$url='http://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
+	$url='https://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
 	$result=http_fetch_url_get($url);
 	$result2=explode('.gif" alt="',$result);
 	$result2=explode('"',$result2[1]);
@@ -204,7 +204,7 @@ function RequestMens($prenom,$card_n)
 	if($card_n==5)
 		$nn=999;
 	$url= $page.'?ID='.$id.'&nn='.$nn.'&sequence='.$card_n.'';
-	$result=http_fetch_url_get('http://www.asiaflash.com/tarot/'.$url);
+	$result=http_fetch_url_get('https://www.asiaflash.com/tarot/'.$url);
 	
 	$result=explode("
 <table align=\"center\">
@@ -249,7 +249,7 @@ function RequestHebdo($prenom,$card_n)
 	if($card_n==5)
 		$nn=999;
 	$url= $page.'?ID='.$id.'&nn='.$nn.'&sequence='.$card_n.'';
-	$result=http_fetch_url_get('http://www.asiaflash.com/tarot/'.$url);
+	$result=http_fetch_url_get('https://www.asiaflash.com/tarot/'.$url);
 	
 	$result=explode("
 <table align=\"center\">
@@ -364,7 +364,7 @@ function RequestQuot($prenom='Nico',$card_n=true)
 	if(($card_n===true) || ($card_n==0))
 	{
 		global $page;//tarot.php
-		$result=http_fetch_url('http://www.asiaflash.com/tarot/'.$page,$doo);
+		$result=http_fetch_url('https://www.asiaflash.com/tarot/'.$page,$doo);
 
 		$exp1=explode('<a href="'.$page.'?ID=',$result);
 		$exp2=explode('&',$exp1[1]);
@@ -386,12 +386,12 @@ function RequestQuot($prenom='Nico',$card_n=true)
 		if($seq==5)
 			$nn=999;
 		$url= $page.'?ID='.$id.'&nn='.$nn.'&sequence='.$seq.'#0';
-		$result=http_fetch_url_get('http://www.asiaflash.com/tarot/'.$url);
+		$result=http_fetch_url_get('https://www.asiaflash.com/tarot/'.$url);
 		// print_r($result);
 		// die();
 		//print_r($result);
 		//die();
-		//echo'http://www.asiaflash.com/tarot/'.$url;
+		//echo'https://www.asiaflash.com/tarot/'.$url;
 		// die();
 		$result=explode("<table align=\"center\">
 <tr>
@@ -501,7 +501,7 @@ function RequestReponseQuot($seq)
 	global $page;
 	if(!isset($id))
 		$id=$_SESSION['id'];
-	$url='http://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
+	$url='https://www.asiaflash.com/tarot/'.$page.'?ID='.$id.'&step='.$seq.'&nn=999#0';
 	$result=http_fetch_url_get($url);
 	$result1=explode('<font class="textenormal">',$result);
 	$result1=explode('</font>',$result1[1]);
