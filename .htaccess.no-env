@@ -1,5 +1,6 @@
 # Configuration
-SetEnv  MYASTRO_ROOT_URL  "http://myastro.dev"
+SetEnv  MYASTRO_PROTOCOL  "http"
+SetEnv  MYASTRO_ROOT_URL  "myastro.dev"
 SetEnv  MYASTRO_DB_LOGIN  root
 SetEnv  MYASTRO_DB_PASS   ""
 SetEnv  MYASTRO_DB_NAME   myastro
@@ -28,7 +29,11 @@ Options +FollowSymlinks
 Options -Multiviews
 
 # Réécriture d'URL
-RewriteEngine on
+RewriteEngine On
+
+# Force le https
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 RewriteRule ^tarotdelamour/([a-z0-9-]+)$ tarotdelamour/$1.php [L]
 RewriteRule ^tarotdelamour/tarot_amour-(\w+)-(\d+)$ tarotdelamour/tarot_amour.php?ID=$1&sequence=$2

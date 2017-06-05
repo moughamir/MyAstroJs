@@ -83,7 +83,7 @@ $menu = array(
                 <div id="divNav2" class="nav-collapse collapse clearfix">
                     <ul class="nav" role="menu">
                         <li class="dropdown <?= $path == 'index' ? 'active' : '';?>" role="menuitem">
-                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://<?= ROOT_URL ?>/"><i class="icon-home"></i></a>
+                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="icon-home"></i></a>
                         </li>
 <?php
     $c = 0;

@@ -43,27 +43,27 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-feminine">
                                         <img src="images/bannieres/astrologique/compatibilite_femme.jpg" alt="compatibilité_femme" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-masculine">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-masculine">
                                         <img src="images/bannieres/astrologique/compatibilite_homme.jpg" alt="compatibilite-amoureuse-masculine" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-feminin">
                                         <img src="images/bannieres/astrologique/protrait_femme.jpg" alt="protrait_femme"> :
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-masculin">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-masculin">
                                         <img src="images/bannieres/astrologique/protrait_homme.jpg" alt="protrait_homme" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique">
                                         <img src="images/bannieres/astrologique/personnalite_astro.jpg" alt="personnalite_astro" />
                                     </a>
                                 </div>

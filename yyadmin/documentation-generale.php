@@ -32,7 +32,7 @@
             <li class="list-group-item">bdd.php : il s'agit la de la class d'accès à <a href="http://codex.wordpress.org/Class_Reference/wpdb">la BDD de Wordpress</a>. N'ayant pas une structure correcte (voir plus loin chapitre BDD ), il m'était impossible d'installer un ORM ( propel, doctrine ). Cette solution était donc la plus simple et la plus rapide.</li>
             <li class="list-group-item">Compteur.class.php : Assez complexe à expliquer, cette classe gère des découpage de la base. Un compteur est incrémenté à chaque inscription d'utilisateur afin de lui attribué un "groupe" lors de l'envoie des données à smartFocus.</li>
             <li class="list-group-item">Tracker.class.php : voir plus loin ( chapitre tracker ).</li>
-            <li class="list-group-item">SmartFocus.class.php : <a href="http://<?= ROOT_URL ?>/yyadmin/documentation-smartfocus.php"> voir ici </a></li>
+            <li class="list-group-item">SmartFocus.class.php : <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/yyadmin/documentation-smartfocus.php"> voir ici </a></li>
     </ul>
     <p> Il est donc maintenant inclue dans la plupart des fichiers du site.</p>
 
@@ -131,7 +131,7 @@
     <p>Il existe aussi un système de rapport par mail. Cependant, il n'est pas terminé à l'heure ou j'écris ces lignes et nécessietera quoi qu'il en soit une action humaine. Il se situe dans <code>yyadmin/stats-hebdo.php</code> et fait la relation entre le rapport adwords et les statistiques du site. Le rapport d'adwords ne pouvant pas être utilisé autrement que par un export ( interdiction dans les CGU d'utiliser l'API de manière automatique ). Pour compléter ce rapport il faudrait : ajouter une ligne totaux et générer le tout dans un fichier .xls envoyé par mail. Gl Hf.</p>
 
     <h2>Interface d'admin : </h2>
-    <p>A mon arrivée, cette interface ne possédait que des pages <a href="http://<?= ROOT_URL ?>/yyadmin/nouveaux.php">comme celle-ci</a>, et ne servait qu'a connaitre les inscrits et MAJ utilisateur. De plus elle ne possédait qu'un seul utilisateur inscrit en dur dans la page login.php</p>
+    <p>A mon arrivée, cette interface ne possédait que des pages <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/yyadmin/nouveaux.php">comme celle-ci</a>, et ne servait qu'a connaitre les inscrits et MAJ utilisateur. De plus elle ne possédait qu'un seul utilisateur inscrit en dur dans la page login.php</p>
     <p>Aujourd'hui, tout a changé. La base de l'administration de situe dans <code>/yyadmin/inc/config.php</code>, ce fichier contient ( principalement ) les groupes d'utilisateurs ainsi que les pages auxquels ils ont accès. Ce n'est certainement pas la manière optimale de gérer une admin, mais encore une fois, c'est fait avec les moyens du bord et dans un temps relativement limité.</p>
     <p>Il se compose sous la forme d'un tableau associatif à 2 niveaux : <br />
             Niveau 1 : Groupe d'utilisateur => Rubrique du menu <br />
@@ -151,11 +151,11 @@
     <p>Tous les lundis matin, il faut générer le rapport de statistiques. Pour cela il faut : <br />
             - Télécharger le rapport adwords de J-9 à J-2. <br />
             - Le déposer sur le ftp dans <code>/yyadmin/media/adwords.csv</code>. J'insiste sur le <b>nom du rapport</b><br />
-        - Enfin : jouer le script <a href="http://<?= ROOT_URL ?>/yyadmin/stats-hebdo.php">http://www.myastro.fr/yyadmin/stats-hebdo.php</a></p>
+        - Enfin : jouer le script <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/yyadmin/stats-hebdo.php">http://www.myastro.fr/yyadmin/stats-hebdo.php</a></p>
     <h3>Git</h3>
     <p>Il existe un git installé avec gitlab. url : git.myastro.fr, user : git. Jamais eu le temps de commit dessus mais ça serait bien. Il faudra regénérer une clé privée très certainement.</p>
     <h3>Dit</h3>
-    <p>J'avais attaqué une refonte durant mon temps libre sur une <a href="http://<?= ROOT_URL ?>/images/flat.jpg">maquette que j'avais faite</a> sur l'url <a href="http://dit.myastro.fr">dit.myastro.fr</a>. La base technique est un <a href="doc.thelia.net">thélia 2.</a></p>
+    <p>J'avais attaqué une refonte durant mon temps libre sur une <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/images/flat.jpg">maquette que j'avais faite</a> sur l'url <a href="http://dit.myastro.fr">dit.myastro.fr</a>. La base technique est un <a href="doc.thelia.net">thélia 2.</a></p>
 <?php
     include('inc/footer.php');
 ?>

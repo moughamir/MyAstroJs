@@ -18,7 +18,7 @@
                                     <i class="bo-icon-exclamation-sign bo-icon-white"></i>0.50€ par envoi + prix d'un sms
                                 </div>
                             </div>
-                            <a href="http://<?= ROOT_URL ?>/voyance-par-sms" class="more" title=""></a>
+                            <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-sms" class="more" title=""></a>
                         </div></article>
                     </li></ul>
                 </li></ul>

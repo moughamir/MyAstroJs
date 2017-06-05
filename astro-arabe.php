@@ -11,7 +11,7 @@ function secure_formdata($n){
 }
 $get = array_map('secure_formdata', $_GET);
 $_SESSION['ab_email'] = isset($get['email']) ? $get['email'] : false;
-$_SESSION['ab_idkgestion'] = isset($get['idkgestion']) ? $get['idkgestion'] : false;
+$_SESSION['ab_idkgestion'] = isset($get['id']) ? $get['id'] : false;
 $_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
 ?>
 <!DOCTYPE html>
@@ -30,8 +30,8 @@ $_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
         <!-- Meta Facebook -->
         <meta property="og:title" content="Découvrez ce que l’avenir vous réserve avec l’astrologie arabe" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://<?= ROOT_URL ?>/astro-arabe" />
-        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/astro-arabe/fb-ban.jpg" />
+        <meta property="og:url" content="<?= PROTOCOL.'://'.ROOT_URL ?>/astro-arabe" />
+        <meta property="og:image" content="<?= PROTOCOL.'://'.ROOT_URL ?>/images_landing/astro-arabe/fb-ban.jpg" />
         <meta property="og:description" content="Entrez dans le monde de l’astrologie arabe et ses 12 signes en forme d’armes." />
         <meta property="og:locale" content="fr_FR" />
         

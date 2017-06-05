@@ -53,27 +53,27 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <a href="http://<?= ROOT_URL ?>/horoscope-<?= date('Y');?>">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-<?= date('Y');?>">
                                             <img src="images/bannieres/horoscopes/horoscope-2015.png" alt="horoscope-2016" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://<?= ROOT_URL ?>/horoscope-du-jour">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour">
                                             <img src="images/bannieres/horoscopes/horoscope-du-jour.jpg" alt="horoscope-du-jour" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine">
                                             <img src="images/bannieres/horoscopes/horoscope-de-la-semaine.jpg" alt="horoscope-de-la-semaine" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://<?= ROOT_URL ?>/horoscope-du-mois">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-mois">
                                             <img src="images/bannieres/horoscopes/horoscope-du-mois.jpg" alt="horoscope-du-mois" />
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour">
+                                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour">
                                             <img src="images/bannieres/horoscopes/horoscope-de-l-amour.jpg" alt="horoscope-de-l-amour" />
                                         </a>
                                     </div>

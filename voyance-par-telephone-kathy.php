@@ -82,8 +82,8 @@ if ($msg!=""){
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://<?= ROOT_URL ?>/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-telephone">Voyance par téléphone</a></li><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li>Voyance par téléphone <?= $prenom;?></h4></li>
                                     </ul>
                                 </div>
@@ -372,7 +372,7 @@ background-color: #D5D3D0;
                                                 </div>
 	</td>
   </tr>
-  <tr><td class="btn-voir-forfait" style="margin-left:172px;"><div class="bloc-vf"><br><a href="http://<?= ROOT_URL ?>/forfait-diamant"><h4>VOIR LES FORFAITS</h4></a></div></td></tr>
+  <tr><td class="btn-voir-forfait" style="margin-left:172px;"><div class="bloc-vf"><br><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/forfait-diamant"><h4>VOIR LES FORFAITS</h4></a></div></td></tr>
  </table>       
 
                                 </aside>
@@ -524,7 +524,7 @@ background-color: #D5D3D0;
 									</div>
 
 									<div class="widget-content clearfix">
-										<a href="http://<?= ROOT_URL ?>/voyance-par-telephone">
+										<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-par-telephone">
 											<img src="images_voyance/voy_tel_banner_voyants.gif">
 										</a>
 									</div>

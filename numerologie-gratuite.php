@@ -55,27 +55,27 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <a href="http://<?= ROOT_URL ?>/horoscope-2016">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-2016">
                                         <img src="images/bannieres/numerologie/numeroscope-2015.png" alt="numeroscope-2016" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes">
                                         <img src="images/bannieres/numerologie/compatibilite-femme.jpg" alt="compatibilite-femme" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes">
                                         <img src="images/bannieres/numerologie/compatibilite-homme.jpg" alt="compatibilite-homme" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/personnalite-numerologique">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/personnalite-numerologique">
                                         <img src="images/bannieres/numerologie/personalité-numerologique.jpg" alt="personalité-numerologique" />
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="http://<?= ROOT_URL ?>/etapes-de-la-vie">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/etapes-de-la-vie">
                                         <img src="images/bannieres/numerologie/etape-de-vie.jpg" alt="etape-de-vie" />
                                     </a>
                                 </div>
