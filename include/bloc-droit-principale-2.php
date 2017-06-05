@@ -1,30 +1,29 @@
 <?php 
     $path_parts = pathinfo($_SERVER['REQUEST_URI']);
     $path = $path_parts['filename'];
-    $pathf = $path_parts['dirname'];
+//    $pathf = $path_parts['dirname'];
     
-    if ($path == ''){ $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR'; $type = "jour";}
-    if ($path == 'index'){ $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR'; $type = "jour";}
-    if ($path == 'horoscope-gratuit'){ $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR'; $type = "jour";}
-    if ($path == 'astrologie-gratuite'){ $horoscope_type = 'de-la-semaine'; $typetext = 'HOROSCOPE DE LA SEMAINE'; $type = "semaine";}
-    if ($path == 'tarot-gratuit'){ $horoscope_type = 'de-l-amour'; $typetext = 'HOROSCOPE DE L’AMOUR'; $type = "amour";}
-    if ($path == 'numerologie-gratuite'){ $horoscope_type = 'du-mois'; $typetext = 'HOROSCOPE DU MOIS'; $type = "mois";}
-    else { $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR'; $type = "jour";}
+    if ($path == 'horoscope-gratuit'){ $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR';}
+    if ($path == 'astrologie-gratuite'){ $horoscope_type = 'de-la-semaine'; $typetext = 'HOROSCOPE DE LA SEMAINE';}
+    if ($path == 'tarot-gratuit'){ $horoscope_type = 'de-l-amour'; $typetext = 'HOROSCOPE DE L’AMOUR';}
+    if ($path == 'numerologie-gratuite'){ $horoscope_type = 'du-mois'; $typetext = 'HOROSCOPE DU MOIS';}
+    else { $horoscope_type = 'du-jour'; $typetext = 'HOROSCOPE DU JOUR';}
+    $signs_url = 'horoscope-'.$horoscope_type;
 
     $page_en_cours = $_SERVER['PHP_SELF'];
 ?>
 <section class="span270">
-    <!-- New In Pictures -->
+    <!-- Horoscope -->
     <aside class="widget w-pictures">
         <div class="widget-title">
             <h4><?= $typetext; ?></h4>
         </div>
-        <div class="widget-content clearfix thumbnails">
-            <?php echo getHoroscopeBlock($type); ?>
+        <div class="widget-content clearfix">
+            <?php include('visual_modules/signs_list.php');?>
         </div>
     </aside>
     
-    <!-- Sponsors (4x125 Adv.) -->
+    <!-- Voyants -->
     <aside class="widget w-sponsors">
         <div class="widget-title">
             <h4>Expert en ligne</h4>
@@ -36,7 +35,6 @@
     
     <!-- Voyance sans Carte Bancaire -->
     <aside class="widget w-adv" style="margin-bottom: 0px;">
-        <!-- /zone de texte -->
         <div <?php if($page_en_cours != "/index.php") {?>  style="display: none;"<?php } ?>>
             <div class="text-justify"><br/>
                 <p><span style="color:#000000;">De la voyance en amour à la numérologie, MyAstro vous propose plusieurs méthodes pour lire votre avenir ou décrire votre personnalité et celle d’un proche pour que, selon vos convictions, vous puissiez obtenir ce que vous êtes venu chercher. Et si vous souhaitez en savoir encore plus, nos services de voyance peuvent être complétés par des échanges téléphoniques avec des experts (voyants, mediums, tarologues, etc…). En discutant avec ces derniers et en appliquant leurs conseils dans votre quotidien, vous pourrez atteindre vos objectifs de vie. Au-delà de la voyance de qualité, pratique et accessible, MyAstro se présente donc comme un réel spécialiste de cet art divinatoire.</span></p>

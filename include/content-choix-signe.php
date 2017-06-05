@@ -1,19 +1,6 @@
 <?php
-    $cs_signes = array(
-        'taureau' => 'Taureau',
-        'capricorne' => 'Capricorne',
-        'gemeaux' => 'Gémeaux',
-        'verseau' => 'Verseau',
-        'belier' => 'Bélier',
-        'poissons' => 'Poissons',
-        'scorpion' => 'Scorpion',
-        'balance' => 'Balance',
-        'sagittaire' => 'Sagittaire',
-        'lion' => 'Lion',
-        'cancer' => 'Cancer',
-        'vierge' => 'Vierge'
-    );
     $cs_url = isset($cs_url) ? $cs_url : 'horoscope';
+    $signs_url = $cs_url;
     
     function getSignCode($nom){
         $nom = strtolower($nom); // en minuscules
@@ -26,18 +13,7 @@
         <h4>CHOISISSEZ VOTRE SIGNE ASTROLOGIQUE</h4>
     </div>
     <div class="widget-content clearfix thumbnails">
-        <ul class="posts-in-images clearfix">
-            <?php foreach($cs_signes as $code => $nom){ ?>
-            <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="<?= $nom ?>" title="<?= $nom ?>">
-                <a href="http://<?= ROOT_URL.'/'.$cs_url.'-'.$code ?>">
-                    <div class="thumb-effect">
-                        <div class="mask"></div>
-                        <img src="images_voyance/signes/<?= $code ?>.png" />
-                    </div>
-                </a>
-            </li>
-            <?php } ?>
-        </ul>
+        <?php include('visual_modules/signs_list.php');?>
     </div>
 </aside>
 <aside class="widget w-adv">
