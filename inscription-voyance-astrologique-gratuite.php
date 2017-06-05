@@ -311,10 +311,10 @@ if(isset($_POST['valider'])){
                     	<ul class="breadcrumb" itemprop="breadcrumb">
                         	<li>
                         		<h4 class="h4">
-                            	<a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i>
+                            	<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i>
                             </li> 
                             <li>
-                            	<a href="http://<?= ROOT_URL ?>/voyance-astrologique-gratuite" class="active">Voyance astrologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i>
+                            	<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-astrologique-gratuite" class="active">Voyance astrologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i>
                             </li>
                             <li>Inscription voyance astrologique gratuite</h4></li>
                         </ul>

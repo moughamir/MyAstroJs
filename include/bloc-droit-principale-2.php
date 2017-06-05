@@ -46,7 +46,7 @@
             <h4>Voyance sans carte bancaire</h4>
         </div>
         <div class="widget-content clearfix">
-            <a href="http://<?= ROOT_URL ?>/voyance-sans-cb">
+            <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-sans-cb">
                 <img src="images_voyance/banniere/audiotel.jpg" alt="Voyance sans carte bancaire"  width="271" height="362"/>
             </a>
         </div>

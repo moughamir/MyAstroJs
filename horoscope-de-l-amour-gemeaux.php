@@ -22,8 +22,8 @@
 										
 										<li>
 										
-                                           <h4 class="h4"> <a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li><a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" >Horoscope de l'amour</a></li></li><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope de l'amour Gémeaux</li></h4>
+                                           <h4 class="h4"> <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="horoscope-gratuit" >Horoscope gratuit</a><i class="icon-caret-right icon-fixed-width"></i><li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour" >Horoscope de l'amour</a></li></li><i class="icon-caret-right icon-fixed-width"></i><li>Horoscope de l'amour Gémeaux</li></h4>
 										
 										
 										
@@ -275,7 +275,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -292,7 +292,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -312,7 +312,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -330,7 +330,7 @@ else
 <h6 style="margin-top:20px;line-height:120%;text-align: justify;color:#ffffff;"></h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -349,7 +349,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/tarot-quotidien" class="more" ></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-quotidien" class="more" ></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -366,7 +366,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-hebdomadaire" class="more" ></a>
                                                                 </div>
 
                                                             </article>
@@ -385,7 +385,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/tarot-mensuel" class="more" ></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-mensuel" class="more" ></a>
                                                                 </div>
 
                                                             </article>
@@ -403,7 +403,7 @@ else
                                                                         
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour" class="more" ></a>
                                                                 </div>
 
                                                             </article>

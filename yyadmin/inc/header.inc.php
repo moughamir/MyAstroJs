@@ -84,7 +84,7 @@ $(document).ready(function(){
 
         
         <ul  id="nav" class="menu2">
-            <li><a href="http://<?= ROOT_URL ?>/yyadmin/"><i class="glyphicon glyphicon-home"></i></a></li>
+            <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/yyadmin/"><i class="glyphicon glyphicon-home"></i></a></li>
             
             <?php
                 $requestedfile = str_replace('/yyadmin/','',$_SERVER['REQUEST_URI']);

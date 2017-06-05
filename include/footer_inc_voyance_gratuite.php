@@ -26,7 +26,7 @@
         <div class="row-fluid">
             <nav class="span6 ">
                <!-- <h4 class="hidden">Liens Copyright-->
-               <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos</a> - <a href="http://<?= ROOT_URL ?>/politique-de-confidentialite"  rel="nofollow">Confidentialité</a> - <a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions</a></li>
+               <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos</a> - <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/politique-de-confidentialite"  rel="nofollow">Confidentialité</a> - <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions</a></li>
         </ul>
     </nav>
 

@@ -65,12 +65,12 @@
 
                             <ul class="nav">
 
-                                <li><a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow">Paiement sécurisé</a></li>
                                 <li class="divider-vertical"></li>
 
-                                <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Déontologie</a></li>
                                 <li class="divider-vertical"></li>
-                                <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a></li>
                                 <li class="divider-vertical"></li>
 
                                 
@@ -129,7 +129,7 @@
 
                                                         <li>
                                                             <strong>Email:</strong>
-                                                            <a href="http://<?= ROOT_URL ?>/contact">contact@myastro.fr</a>
+                                                            <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/contact">contact@myastro.fr</a>
                                                         </li>
 
                                                     </ul>
@@ -209,9 +209,9 @@
                                                 <div class="row-fluid">
                                                     <ul class="span7 terms-conditions clearfix">
 
-                                                        <li><a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générale.</a></li>
-                                                        <li><a href="http://<?= ROOT_URL ?>/plan-du-site" rel="nofollow">Plan du site</a></li>
-                                                        <li><a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
+                                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générale.</a></li>
+                                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/plan-du-site" rel="nofollow">Plan du site</a></li>
+                                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow">Charte de déontologie</a></li>
 
 
                                                     </ul>
@@ -244,7 +244,7 @@
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="logo-240 pull-left" itemscope itemtype="http://schema.org/Brand">
-                        <a href="http://<?= ROOT_URL ?>">
+                        <a href="<?= PROTOCOL.'://'.ROOT_URL ?>">
                             
 							<img  itemprop="logo" src="images_voyance/logo_myastro.png"  alt="Voyance Myastro.fr" /></a>
                     </div>
