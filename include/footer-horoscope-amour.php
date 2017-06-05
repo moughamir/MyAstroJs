@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-belier" class="btn-theme">Horoscope de l'amour Bélier</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-taureau" class="btn-theme">Horoscope de l'amour Taureau</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-gemeaux" class="btn-theme">Horoscope de l'amour Gémeaux</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-cancer" class="btn-theme">Horoscope de l'amour Cancer</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-lion" class="btn-theme">Horoscope de l'amour Lion</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-vierge" class="btn-theme">Horoscope de l'amour Vierge</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-balance" class="btn-theme">Horoscope de l'amour Balance</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-scorpion" class="btn-theme">Horoscope de l'amour Scorpion</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-sagittaire" class="btn-theme">Horoscope de l'amour Sagittaire</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-capricorne" class="btn-theme">Horoscope de l'amour Capricorne</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-verseau" class="btn-theme">Horoscope de l'amour Verseau</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour-poissons" class="btn-theme">Horoscope de l'amour Poissons</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="btn-theme">Horoscope de l'amour</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-belier" class="btn-theme">Horoscope de l'amour Bélier</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-taureau" class="btn-theme">Horoscope de l'amour Taureau</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-gemeaux" class="btn-theme">Horoscope de l'amour Gémeaux</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-cancer" class="btn-theme">Horoscope de l'amour Cancer</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-lion" class="btn-theme">Horoscope de l'amour Lion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-vierge" class="btn-theme">Horoscope de l'amour Vierge</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-balance" class="btn-theme">Horoscope de l'amour Balance</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-scorpion" class="btn-theme">Horoscope de l'amour Scorpion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-sagittaire" class="btn-theme">Horoscope de l'amour Sagittaire</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-capricorne" class="btn-theme">Horoscope de l'amour Capricorne</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-verseau" class="btn-theme">Horoscope de l'amour Verseau</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour-poissons" class="btn-theme">Horoscope de l'amour Poissons</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour" class="btn-theme">Horoscope de l'amour</a>
     </td>
   </tr>
 </table>

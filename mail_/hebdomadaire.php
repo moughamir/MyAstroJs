@@ -26,7 +26,7 @@ else
 {
 	$signe=$_GET['signe'];
 }
-$xml1 = read_horoscope_rss('http://www.asiaflash.com/horoscope/rss_hebdotay_complet_'.$signe.'.xml',2);
+$xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_hebdotay_complet_'.$signe.'.xml',2);
 // print_r($xml1);
 
 

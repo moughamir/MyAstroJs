@@ -3,11 +3,14 @@
 
 $annee = date('Y');
 global $asia_bottom;
-$asia_bottom = '<center> <a href="http://www.asiaflash.com/horoscope-'.$annee.'/" target="_blank"><font size="1">Horoscope '.$annee.'</font></a> | <a href="http://www.asiaflash.com/tarot/" target="_blank"><font size="1">Tarot gratuit</font></a> | <a href="http://www.asiaflash.com/ascendant/" target="_blank"><font size="1">Ascendant</font></a> <a href="http://www.asiaflash.com/voyance/" target="_blank"><font size="1">Voyance</font></a> | <a href="http://www.asiaflash.com/" target="_blank"><font size="1">Horoscope</font></a> | <a href="http://www.asiaflash.com/ajout/partenariat.shtml" target="_blank"><font size="1">@ AsiaFlash.com</font></a> </center>';
+$asia_bottom = '<center> <a href="https://www.asiaflash.com/horoscope-'.$annee.'/" target="_blank"><font size="1">Horoscope '.$annee.'</font></a> | <a href="https://www.asiaflash.com/tarot/" target="_blank"><font size="1">Tarot gratuit</font></a> | <a href="https://www.asiaflash.com/ascendant/" target="_blank"><font size="1">Ascendant</font></a> <a href="https://www.asiaflash.com/voyance/" target="_blank"><font size="1">Voyance</font></a> | <a href="https://www.asiaflash.com/" target="_blank"><font size="1">Horoscope</font></a> | <a href="https://www.asiaflash.com/ajout/partenariat.shtml" target="_blank"><font size="1">@ AsiaFlash.com</font></a> </center>';
 
 function curl($s_url, $i_timeout = 5){
+    
+    return file_get_contents($s_url);
+/*    
     $a_header = array(
-        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9;q=0.8",
         "Cache-Control: max-age=0",
         "Connection: keep-alive",
         "Keep-Alive: 300",
@@ -54,6 +57,7 @@ function curl($s_url, $i_timeout = 5){
     curl_close($r_curl);
     
     return $s_contenu;
+*/
 }
 
 function erreur($s_erreur){
@@ -145,7 +149,7 @@ function read_numerologie($num, $type = 0, $sexe = 'f'){
         3 => 'etapes_vie_numero'
     );
     
-    $fichier='http://www.asiaflash.com/horoscope/rss_'.str_replace('sexe', $sexes[$sexe], $urls[$type]).'_'.$num.'.xml';
+    $fichier='https://www.asiaflash.com/horoscope/rss_'.str_replace('sexe', $sexes[$sexe], $urls[$type]).'_'.$num.'.xml';
 
     $rss = lit_rss($fichier, ["title", "description"]);
     
@@ -190,7 +194,7 @@ function read_astrologie($signe, $sexe, $amour = 0){
         2 => 'personnalite_signe'
     ];
     
-    $fichier = 'http://www.asiaflash.com/horoscope/rss_'.$urls[$amour].$sexe.'_'.$signe.'.xml';
+    $fichier = 'https://www.asiaflash.com/horoscope/rss_'.$urls[$amour].$sexe.'_'.$signe.'.xml';
 
     $rss = lit_rss($fichier, array("title","description"));
     

@@ -16,7 +16,7 @@
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="http://<?= ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
+                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li><li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/tarot-gratuit">Tarot gratuit</a></li><i class="icon-caret-right icon-fixed-width"></i>
                                         <li>Tarot de l'amour</h4></li>
                                     </ul>
                                 </div>
@@ -140,7 +140,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Avec l'astrologie gratuite ayez une vision complète de ce que les astres vous réservent. Ne perdez plus de vue vos objectifs et gagnez en confiance en vous pour surmonter les étapes de votre vie avec un réel filet de sécurité.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/astrologie-gratuite" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -157,7 +157,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Entre signes, la compatibilité amoureuse n'est pas toujours évidente. Quelles seront vos affinités avecl'homme de vos rêves et votre couple peut-il marcher. Ayez la réponse à ces questions grâce à la compatibilité amoureuse féminine gratuite?</h6>                                                                      
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-feminine" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -177,7 +177,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre horoscope du jour gratuit vous permet de savoir quotidiennement sur le plan professionnel, sentimental et financier. C'est une information précieuse pour pouvoir aborder votre journée en toute confiance et sans aucun doute.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -195,7 +195,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Quelles sont les tendances planétaires qui vous sont réservées pour cette année 2013? Avec l'horoscope 2013 gratuit, ne vous laissez plus surprendre. La fin de cette année n'aura plus aucun secret pour vous et vous pourrez la terminer tranquillement</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-2015" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -215,7 +215,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous avez l'impression de mal vous connaître et ne savez pas comment réagir face à certaines personnes ou situations Découvrez votre personnalité astrologique gratuitement sur Myastro et apprenez à vous connaître avec les astres.</h6>                                                                        
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/votre-personnalite-astrologique" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -233,7 +233,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre profil astrologique féminin gratuit vous aidera à découvrir des facettes de votre personnalité que vous ne soupçonniez même pas. Ayez toutes les informations qui se chachent dans les astres à votre disposition.</h6>                                                                        
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/portrait-astrologique-feminin" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>
@@ -253,7 +253,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Votre partenaire et vous passez quelques fois des moments difficiles? Les disputes sont parfois longues et vous semblent très fréquentes? Avec la compatibilité amoureuse gratuite, sachez enfin pourquoi et que faire pour redresser la situation.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-femmes" class="more" title=""></a>
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -270,7 +270,7 @@ function check_prenom() {
 <h6 style="line-height:120%;margin-top:20px;text-align: justify;color:#ffffff;">Vous convoitez une femme qui hante vos pensées mais ne savez pas si votre relation est possible? Avec la compatibilité amoureuse, découvrez s'il vous est possible de faire le pas et de vous engager dans une relation amoureuse avec elle.</h6>                                                                       
                                                                     </div>
 
-                                                                    <a href="http://<?= ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
+                                                                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/compatibilite-amoureuse-pour-les-hommes" class="more" title=""></a>
                                                                 </div>
 
                                                             </article>

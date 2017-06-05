@@ -4,7 +4,7 @@
     ini_set('max_execution_time', 0);
     include('lib.php');
     
-    $xml1 = read_horoscope_rss('http://www.asiaflash.com/horoscope/rss_horojour_sagittaire.xml');
+    $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_horojour_sagittaire.xml');
     $ac_result = array();
     foreach ($xml1['desc'] as $s_cle => $s_value){
         if($s_cle === 'clin_d\'oeil'){

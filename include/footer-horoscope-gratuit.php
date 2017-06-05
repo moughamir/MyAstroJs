@@ -6,11 +6,11 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://<?= ROOT_URL ?>/horoscope-<?= $annee;?>" class="btn-theme">Horoscope <?= $annee;?></a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-du-jour" class="btn-theme">Horoscope du jour</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-l-amour" class="btn-theme">Horoscope de l’amour</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-<?= $annee;?>" class="btn-theme">Horoscope <?= $annee;?></a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour" class="btn-theme">Horoscope du jour</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-mois" class="btn-theme">Horoscope du mois</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-l-amour" class="btn-theme">Horoscope de l’amour</a>
     </td>
   </tr>
 </table>

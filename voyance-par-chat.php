@@ -70,7 +70,7 @@
                             <p>Aucun contact direct, pas question de timidité ni de gène, le <strong>chat voyance</strong> vous offre la possibilité d’avoir une consultation avec un professionnel de la voyance sans avoir à le rencontrer. L’échange est direct et crée une atmosphère privilégiée avec le voyant, permettant une meilleure analyse de votre situation et une étude plus poussée de vos incertitudes. De quoi vous fournir des réponses et des conseils personnalisés et complets sur les zones d’ombres que vous pouvez traverser.</p>
                         </div><br>
                         <div>
-                            <a href="http://<?= ROOT_URL ?>/voyance-gratuite">
+                            <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-gratuite">
                                 <img alt="voyance par tchat" src="images/bannieres/voyance-tchat.jpg" />
                             </a>
                         </div><br>

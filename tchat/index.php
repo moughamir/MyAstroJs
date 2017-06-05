@@ -129,9 +129,9 @@
             <div class="nav-content">
                 <div class="logo"></div>
                 <div class="links">
-                    <a href="http://<?= ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
-                    <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
-                    <a href="http://<?= ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </div>
             </div>
         </div>
@@ -198,10 +198,10 @@
                     </div>
                 </div>
                 <div class="advert">
-                    <img src="http://<?= ROOT_URL ?>/images/preloader.gif" class="advert-offline" />
+                    <img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/preloader.gif" class="advert-offline" />
                     <div class="advert-online hidden">
                         <h2>Vous Tchattez avec <?= ucfirst( $tchat->scenario[0]->seer_name ) ?></h2>
-                        <img src="http://<?= ROOT_URL ?>/images/tchat/new/<?= $tchat->getImageName() ?>.png" />
+                        <img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/tchat/new/<?= $tchat->getImageName() ?>.png" />
                     </div>
                 </div>
                 <div class="screen">

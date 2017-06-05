@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/infobulle.css" />
         <link rel="stylesheet" type="text/css" href="css/formulaire-top.css" />
             
-        <?php include('include/header_inc.php'); ?>
+        <?php include('include/header_inc.php');?>
 
         <div class="container-fluid" itemscope >
             <!-- Main Content -->
@@ -38,7 +38,7 @@
 
                     <div class="row-fluid">
                         <!-- Right sidebar -->
-                        <?php include('include/bloc-droit-secondaire-2.php'); ?>	
+                        <?php include('include/bloc-droit-secondaire-2.php');?>	
 
                         <!-- main content -->
                         <div class="span6 main-content">
