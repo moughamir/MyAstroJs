@@ -2,7 +2,7 @@
     ini_set('max_execution_time', 0);
     include('lib.php');
     
-    $xml1 = read_horoscope_rss2('http://www.asiaflash.com/horoscope/rss_hebdotay_complet_lion.xml');
+    $xml1 = read_horoscope_rss2('https://www.asiaflash.com/horoscope/rss_hebdotay_complet_lion.xml');
     $ac_result = array();
     foreach( $xml1['desc'] as $s_cle => $s_value ){
         if ($s_cle === 'citation_de_la_semaine'){

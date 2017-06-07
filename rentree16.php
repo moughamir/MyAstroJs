@@ -94,8 +94,8 @@ $questions = array(
         <!-- Meta Facebook -->
         <meta property="og:title" content="Faites le test pour savoir ce que Septembre vous réserve" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://<?= ROOT_URL ?>/rentree16" />
-        <meta property="og:image" content="http://<?= ROOT_URL ?>/images_landing/rentree16/fb-ban.jpg" />
+        <meta property="og:url" content="<?= PROTOCOL.'://'.ROOT_URL ?>/rentree16" />
+        <meta property="og:image" content="<?= PROTOCOL.'://'.ROOT_URL ?>/images_landing/rentree16/fb-ban.jpg" />
         <meta property="og:description" content=" Adieu Août, Septembre fait son apparition avec son lot de nouveautés, de défis et d’opportunités" />
         <meta property="og:locale" content="fr_FR" />
         

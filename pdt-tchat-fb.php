@@ -10,6 +10,7 @@ $support = "voyance";
 $site = "myastro.fr";
 $source = "facebook_adds";
 $dri = "pouvoir-des-trois/offre-gratuite";
+$dri2 = "pdt-tchat-dri";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
     ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Pouvoir des Trois - Amour'],
@@ -86,6 +87,7 @@ $assets = 'images_landing/pouvoir-des-trois';
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />

@@ -7,6 +7,7 @@
     Created on : 20 décembre 2016
     Author     : Mohamed Moughamir <moughamir@gmail.com>
 */
+$form = 'previsions-2017';
 include('include/init-affilbase.php');
 
 $pageName = "previsions-2017";

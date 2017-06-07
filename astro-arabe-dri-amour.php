@@ -1,12 +1,9 @@
 <?php
-/* 
-    --------------------------------------------------------------------
-    --   DRI POST-MAIL & POST-LANDING = astro-arabe-16 = AFFIL BASE   --
-    --------------------------------------------------------------------
-
-    Created on : 16 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * astro-arabe-dri-amour
+ * ---------------------
+ * Created on : 16 juin 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
 include('include/process-dri.php');
 ?>
 <!DOCTYPE html>
@@ -22,7 +19,7 @@ include('include/process-dri.php');
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/astro-arabe-16.css" />
+        <link rel="stylesheet" type="text/css" href="css/astro-arabe.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,7 +52,7 @@ include('include/process-dri.php');
                                     <div class="Fields-Table-Row Free">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
                                         <div class="FormField">
-                                            <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                            <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom;?>" required />
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +60,7 @@ include('include/process-dri.php');
                                     <div class="Fields-Table-Row Free">
                                         <label for="tel" class="FormField-Label">Mon n° de téléphone</label>
                                         <div class="FormField">
-                                            <input type="tel" name="tel" id="tel" class="FormField-Input" value="<?= $tel ?>" required />
+                                            <input type="tel" name="tel" id="tel" class="FormField-Input" value="<?= $tel;?>" required />
                                         </div>
                                     </div>
                                 </div>
@@ -119,37 +116,14 @@ include('include/process-dri.php');
                 </article>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <?php include('include/footer_reassurance.php');?>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
         
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Lobster|Ubuntu+Condensed" rel="stylesheet" type="text/css" />

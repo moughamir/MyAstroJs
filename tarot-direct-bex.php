@@ -1,12 +1,9 @@
 <?php
-/* 
-    -----------------------------------------------------
-    --   tarot-direct-bex = AFFIL BASE EXTERNE GLOBEX  --
-    -----------------------------------------------------
-
-    Created on : 13 MARS 2017
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
+/**
+ * tarot-direct-bex == BASE EXTERNE
+ * --------------------------------
+ * Created on : 13 mars 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
@@ -92,6 +89,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="base_externe" />
                                 <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
+                                <input type="hidden" name="dri2" value="tarot-direct-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

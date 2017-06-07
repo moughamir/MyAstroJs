@@ -31,7 +31,7 @@ include('include/process-dri.php');
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="DRI">
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"></span>
@@ -40,8 +40,8 @@ include('include/process-dri.php');
         </header>
         <section class="ContentBand">
             <div class="PageWrapper">
-                <div class="ContentBand-Column">
-                    <div class="TextContent">
+                <div class="ContentBand-Column Column-Tarot">
+                    <div class="DescText">
                         <p class="DescText-Title-Legend">
                             ALINE,<br />
                             Tarologue confirmée<br />
@@ -66,7 +66,7 @@ include('include/process-dri.php');
                     </div>
                 </div>
                 <div class="ContentBand-Column Column-Form">
-                    <article class="FormContainer DRI">
+                    <article class="FormContainer">
                         <div class="DRI-Intro">
                             <h1 class="DRI-Intro-Title">Faites-vous rappeler immédiatement</h1>
                             <h2 class="DRI-Intro-Text">Nos voyants répondent à vos questions</h2>
@@ -120,28 +120,9 @@ include('include/process-dri.php');
                 </div>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        
+        <?php include('include/footer_reassurance.php');?>
+        
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
         <!-- #### REMARKETINGS #### -->
@@ -151,6 +132,5 @@ include('include/process-dri.php');
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700|Ubuntu+Condensed" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

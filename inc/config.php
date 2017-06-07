@@ -20,7 +20,9 @@ define('TABLE_NOT_SENDED', 'ag_users');
  *                        PATHS                       *
  * ================================================== */
 
+$protocol = getenv('MYASTRO_PROTOCOL');
 $root_url = getenv('MYASTRO_ROOT_URL');
+define('PROTOCOL', $protocol);
 define('ROOT_URL', $root_url);
 define('URL', $root_url);
 define('ROOT', URL."/");

@@ -9,6 +9,10 @@
 */
 @import "knacss444/knacss";
 
+a, a:hover, a:visited {
+    color: inherit;
+}
+
 body {
     font-size: 1.3rem;
 }

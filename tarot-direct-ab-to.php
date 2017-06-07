@@ -7,11 +7,12 @@
     Created on : 13 septembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+$form = 'tarot-direct-ab-to';
 include('include/init-affilbase.php');
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
-// Paramètre formulaire
-$dri = "https://voyance-en-direct.tv/tarot-en-direct/saisie-cb?email=[EMAIL]";
+// Paramètres formulaire
+$dri = "tarot-en-direct/saisie-cb";
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -94,7 +95,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                                <input type="hidden" name="dri" value="<?= urlencode($dri) ?>" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

@@ -5,19 +5,19 @@ echo
 <table width="100%" border="0" cellpadding="2">
   <tr>
     <td>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-belier" class="btn-theme">Horoscope de la semaine Bélier</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-taureau" class="btn-theme">Horoscope de la semaine Taureau</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-gemeaux" class="btn-theme">Horoscope de la semaine Gémeaux</a>
-      <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-cancer" class="btn-theme">Horoscope de la semaine Cancer</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-lion" class="btn-theme">Horoscope de la semaine Lion</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-vierge" class="btn-theme">Horoscope de la semaine Vierge</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-balance" class="btn-theme">Horoscope de la semaine Balance</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-scorpion" class="btn-theme">Horoscope de la semaine Scorpion</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-sagittaire" class="btn-theme">Horoscope de la semaine Sagittaire</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-capricorne" class="btn-theme">Horoscope de la semaine Capricorne</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-verseau" class="btn-theme">Horoscope de la semaine Verseau</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine-poissons" class="btn-theme">Horoscope de la semaine Poissons</a>
-	  <a href="http://<?= ROOT_URL ?>/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-belier" class="btn-theme">Horoscope de la semaine Bélier</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-taureau" class="btn-theme">Horoscope de la semaine Taureau</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-gemeaux" class="btn-theme">Horoscope de la semaine Gémeaux</a>
+      <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-cancer" class="btn-theme">Horoscope de la semaine Cancer</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-lion" class="btn-theme">Horoscope de la semaine Lion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-vierge" class="btn-theme">Horoscope de la semaine Vierge</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-balance" class="btn-theme">Horoscope de la semaine Balance</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-scorpion" class="btn-theme">Horoscope de la semaine Scorpion</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-sagittaire" class="btn-theme">Horoscope de la semaine Sagittaire</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-capricorne" class="btn-theme">Horoscope de la semaine Capricorne</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-verseau" class="btn-theme">Horoscope de la semaine Verseau</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine-poissons" class="btn-theme">Horoscope de la semaine Poissons</a>
+	  <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-de-la-semaine" class="btn-theme">Horoscope de la semaine</a>
     </td>
   </tr>
 </table>

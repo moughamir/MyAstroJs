@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="css/infobulle.css" />
         <link rel="stylesheet" type="text/css" href="css/formulaire-top.css" />
 
-        <?php include('include/header_inc.php'); ?>
+        <?php include('include/header_inc.php');?>
 
         <div class="container-fluid" itemscope>
             <!-- Main Content -->
@@ -35,16 +35,15 @@
                     <span class="clearfix"></span>
                     
                     <div class="row-fluid">
-                        <!-- Right sidebar -->
+                        <!-- Left sidebar -->
                         <?php include('include/bloc-droit-secondaire-2.php'); ?>	
-
-                        <!-- main content -->
+                        <!-- Main content -->
                         <div class="span6 main-content">
                             <section class="cat-widget h-cat-1"> 
                                 <div class="cat-widget-title">
                                     <h3>CONSULTER VOTRE TAROT QUOTIDIEN GRATUIT</h3>
                                 </div>
-                                <form name="tarot" action="afficher_tarot_hebdomadaire.php" method="post" onsubmit="return check_prenom()">
+                                <form name="tarot" action="afficher_tarot_quotidien.php" method="post" onsubmit="return check_prenom()">
                                     <br/><label for="date">Votre prénom&nbsp;</label>
                                     <input style="width:97%;" type="text" name="prenom" size=20 maxlength=40 />
                                     <br/><label for="date">Votre signe &nbsp;</label>
@@ -80,21 +79,19 @@
                                 <p>Le tarot est le meilleur support divinatoire qui vous donnera des prédictions à l’échelle d’une journée. Les révélations de ce tarot apportent un grand soulagement et aident à mieux planifier sa journée de travail. Grâce au savoir-faire de nos cartomanciens, il est même possible d’aller au-delà des prédictions. L’analyse approfondie des cartes permettra à nos cartomanciens de vous prodiguer de merveilleux conseils. Grâce au tarot du jour travail, vous pourrez ainsi mieux gérer votre journée mais aussi à prendre des décisions justes. </p><br/>
                                 <p>Pour obtenir des conseils immédiats ou des prédictions sans attendre, il suffit de se tourner vers le tirage du tarot du jour en ligne. Cette option de consultation, basée sur internet, vous permet de réaliser votre tirage dans le calme et la discrétion. Chaque jour, au moment de la pause-café du matin ou pendant la pause-détente de l’après-midi, vous n’aurez qu’à consulter le tarot du jour gratuit pour obtenir des réponses précises à vos questions sentimentales ou professionnelles. Loin d’être une consultation anodine, le tirage des cartes révèle des informations capitales à votre réussite : rencontre, augmentation, promotion, rupture...</p>
                             </div><br/>
-                            
                             <!-- Horizontal Categories -->
                             <section class="cat-widget h-cat-1">
                                 <?php include('include/content-internal-pub-grid.php');?>
                             </section>
                         </div>
-                        
-                        <!-- Left sidebar -->
+                        <!-- Right sidebar -->
                         <?php include('include/bloc-gauche-secondaire-tarot.php');?>
                     </div>
                 </div>
             </div>
         </div>
 
-    <?php include('include/footer_inc_tarot.php'); ?>
+    <?php include('include/footer_inc_tarot.php');?>
 
 <script src="js/formValidator-.js"></script>
 <script src="js/infoBulle.js"></script>

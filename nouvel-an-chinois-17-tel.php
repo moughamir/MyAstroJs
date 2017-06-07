@@ -1,6 +1,6 @@
 <?php
+    $form = 'nouvel-an-chinois-17';
     include('include/init-affilbase.php');
-    session_start();
     $questions = array(
         'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
         'nac17-cheval'  => ['code'=>'nac17-cheval', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cheval"],
@@ -41,7 +41,7 @@
                             <input type="hidden" name="jour" value="<?= $_SESSION['jour'];?>" />
                             <input type="hidden" name="mois" value="<?= $_SESSION['mois'];?>" />
                             <input type="hidden" name="annee" value="<?= $_SESSION['annee'];?>" />
-                            <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
+                            <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" />
                             <input type="hidden" name="cguv" value="1" />
                             <input type="hidden" name="partenaires" value="1" />  
                             <!-- ############################################### -->

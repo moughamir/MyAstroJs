@@ -323,8 +323,8 @@ if(isset($_POST['valider'])){
                             <header>
                                 <div itemscope >
                                     <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="http://<?= ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li><a href="http://<?= ROOT_URL ?>/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
+                                        <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-numerologique-gratuite" class="active">Voyance numérologique gratuite</a><i class="icon-caret-right icon-fixed-width"></i></li>
                                         <li><a href="voyance-numerologique-gratuite-chiffres-<?= $vt;?>-<?= $chv;?>" class="active">Voyance numérologique gratuite chiffres</a><i class="icon-caret-right icon-fixed-width"></i></li> <li>Inscription voyance numérologique gratuite</h4></li>
                                     </ul>
                                 </div>

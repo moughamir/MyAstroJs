@@ -146,7 +146,7 @@
 			default :?>
 			<p> Vous avez demandé une analyse de tarots concernant votre avenir sur le site myastro.fr, cependant vous n'avez pas précisé quel domaine vous préoccupe.
 				Je vous invite donc à remplir à nouveau notre formulaire afin que l'on puisse vous apporter une analyse personnalisée. 
-				Pour cela cliquez sur le lien suivant et remplissez le formulaire sans oublier les cases à cocher : Demande d'analyse <a href="http://<?= ROOT_URL ?>/voyance-gratuite" >MyAstro</a><br><br>
+				Pour cela cliquez sur le lien suivant et remplissez le formulaire sans oublier les cases à cocher : Demande d'analyse <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/voyance-gratuite" >MyAstro</a><br><br>
 				Cécile<br><br>
 			</p>
 			<?php

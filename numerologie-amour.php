@@ -8,6 +8,7 @@
     Author     : Laurène Dourdin <2aurene@gmail.com>
                  Guillaume Deschamps <guillaumed.kgcom@gmail.com>
 */
+$form = 'numerologie-amour';
 include('include/init-affilbase.php');
 /* CREATION D'UN CHIFFRE ENTRE 1 ET 5 */
 $chiffre = rand(1, 5);

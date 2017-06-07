@@ -92,6 +92,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="base_externe" />
                                 <input type="hidden" name="dri" value="tarot-en-direct/offre-gratuite" />
+                                <input type="hidden" name="dri2" value="tarot-direct-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />  

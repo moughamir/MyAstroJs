@@ -1,12 +1,18 @@
 <?php
-/* 
-    -------------------------------------------
-    --   nouvel-an-chinois-17 = AFFIL BASE   --
-    -------------------------------------------
+/**
+ * nouvel-an-chinois-17 = AFFIL BASE
+ * ---------------------------------
+ * Created on : 11 janvier 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+session_start();
+function secure_formdata($n){
+    return htmlentities(strip_tags($n));
+}
+$get = array_map('secure_formdata', $_GET);
+$_SESSION['ab_email'] = isset($get['email']) ? $get['email'] : null;
+$_SESSION['ab_idkgestion'] = isset($get['id']) ? $get['id'] : null;
+$_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
 
-    Created on : 11 janvier 2017
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-*/
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
 ?>
 <!DOCTYPE html>

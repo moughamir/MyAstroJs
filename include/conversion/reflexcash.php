@@ -15,7 +15,11 @@ $urls_conversion = array(
     'tarot-direct-rc-tfd' => 'http://b2.a4trk.com/aff_lsr?offer_id=4523&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-tosu' => 'http://b2.a4trk.com/aff_lsr?offer_id=4527&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-tfsu' => 'http://b2.a4trk.com/aff_lsr?offer_id=4525&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
-    'tarot-et-amour-rc' => 'http://b2.a4trk.com/aff_lsr?offer_id=4507&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb'
+    'tarot-et-amour-rc' => 'http://b2.a4trk.com/aff_lsr?offer_id=4507&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'pdt-tchat-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8908&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'pdt-tchat-rc-cb' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8908&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'tarot-flash-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8960&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'tarot-flash-rc-cb' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8960&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
 );
 
 if($source == 'reflexcash' && isset($id_transaction)){

@@ -7,6 +7,7 @@
     Created on : 13 septembre 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
+$form = 'tarot-direct-ab-g';
 include('include/init-affilbase.php');
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
@@ -94,6 +95,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="tarot-direct-merci" />
+                                <input type="hidden" name="dri2" value="tarot-direct-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

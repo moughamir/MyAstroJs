@@ -24,14 +24,7 @@ $questions = array(
         <meta name="robots" content="noindex,nofollow" />
         
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        <!--
-        <meta property="og:title" content="Journée mondiale du soleil" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://www.myastro.fr/jour-du-soleil-16" />
-        <meta property="og:image" content="http://www.myastro.fr/images_landing/jour-du-soleil-16/fb-ban.jpg" />
-        <meta property="og:description" content="Allez-vous tirer la carte du soleil ? Jouez et recevez votre étude personnalisée !" />
-        <meta property="og:locale" content="fr_FR" />
--->
+        
         <link rel="stylesheet" type="text/css" href="css/automne-16.css" />
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -51,8 +44,8 @@ $questions = array(
                     <header class="ContentBand-ColumnHeader">
                         <h1 class="DescText-Title">Effectuez votre tirage en cliquant sur les cartes</h1>
                     </header>
-                    <article class="WidgetTarot" id="cards-container">
-                        <div class="WidgetTarot-Draw">
+                    <article class="WidgetTarot">
+                        <div class="WidgetTarot-Draw" id="cards-container">
                             <?php for($i=1;$i<=22;$i++){ ?>
                             <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
@@ -60,7 +53,7 @@ $questions = array(
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="WidgetTarot-Result">
+                        <div class="WidgetTarot-Result" id="cards-result">
                             <?php for($i=1;$i<=5;$i++){ ?>
                             <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
                             <?php } ?>
@@ -86,8 +79,8 @@ $questions = array(
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h2 class="FormContainer-Header">Remplissez vite le formulaire <br class="hidebloc"/> pour recevoir votre étude personnalisée !</h2>
                         <div class="FormContainer-Fields">
-                            <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
+                                <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="automne-16" />
                                 <input type="hidden" name="method" value="general-suscribe" />
@@ -182,28 +175,8 @@ $questions = array(
                 </div>
             </div>
         </section>
-        <footer class="SiteFooter">
-            <div class="PageWrapper">
-                <ul class="ReassuranceList">
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img star"></span>
-                        <span class="ReassuranceList-Item-Txt">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img lock"></span>
-                        <span class="ReassuranceList-Item-Txt">Consultations 100% <br/><strong>discrètes & anonymes</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img gift"></span>
-                        <span class="ReassuranceList-Item-Txt">Étude personnalisée <br/><strong>par mail sous 24h</strong></span>
-                    </li>
-                    <li class="ReassuranceList-Item">
-                        <span class="ReassuranceList-Item-Img trophy"></span>
-                        <span class="ReassuranceList-Item-Txt">My Astro leader <br/><strong>depuis 2007</strong></span>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+        
+        <?php include('include/footer_reassurance.php');?>
                 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
         
@@ -230,7 +203,5 @@ $questions = array(
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300|Ubuntu+Condensed|Dancing+Script:700" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />

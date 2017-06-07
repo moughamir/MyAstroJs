@@ -4,12 +4,14 @@
  * ----------------------
  * Created on : 03 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
+$form = 'pdt-tchat';
 include('include/init-affilbase.php');
 $pageName = "pdt-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $dri = "pouvoir-des-trois/offre-gratuite";
+$dri2 = "pdt-tchat-dri";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
     ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Pouvoir des Trois - Amour'],
@@ -88,6 +90,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

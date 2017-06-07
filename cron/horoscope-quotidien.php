@@ -4,7 +4,7 @@ include('lib.php');
 
 for ($i=0,$n=count($A_SIGNE);$i<$n;$i++)
 {
-  $xml1 = read_horoscope_rss('http://www.asiaflash.com/horoscope/rss_horojour_'.$A_SIGNE[$i].'.xml');
+  $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_horojour_'.$A_SIGNE[$i].'.xml');
 
 $s_contenu = '<tr>
             <td height="25" valign="top" width="650">
@@ -60,7 +60,7 @@ $s_contenu = '<tr>
   $s_contenu.= '</td></tr><tr><td height="31" valign="top" width="650"><table border="0" cellpadding="0" cellspacing="0" width="650"><tbody><tr>                   
                     <td align="left" valign="top" width="650"><a href="http://'.ROOT_URL.'/horoscope-du-jour-'.$lien_amour.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_13.jpg" alt="" style="display: block;" border="0" height="31" width="216"></a></td> 
                     <td align="left" valign="top" width="650"><a href="http://'.ROOT_URL.'/horoscope-du-jour-'.$lien_argent.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_14.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
-                                        <td align="left" valign="top" width="650"><a href="http://<?= ROOT_URL ?>/horoscope-du-jour-'.$lien_travail.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_15.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
+                                        <td align="left" valign="top" width="650"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/horoscope-du-jour-'.$lien_travail.'"><img src="http://'.ROOT_URL.'/images/mail/horoscope_jour/News-horoscope_15.jpg" alt="" style="display: block;" border="0" height="31" width="217"></a></td> 
                     </tr>
                 </tbody>
               </table>';
