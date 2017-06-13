@@ -7,7 +7,7 @@ $root_url = getenv('MYASTRO_ROOT_URL');
 
 define('PROTOCOL', $protocol);
 define('ROOT_URL', $root_url);
-define('S_PATH_CACHE', $_SERVER["DOCUMENT_ROOT"].'/cache');
+define('S_PATH_CACHE', '../cache');
 
 for($i=0, $n=count($A_SIGNE) ; $i<$n  ;$i++){
     $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_horojour_'.$A_SIGNE[$i].'.xml');

@@ -7,7 +7,7 @@ $root_url = getenv('MYASTRO_ROOT_URL');
 
 define('PROTOCOL', $protocol);
 define('ROOT_URL', $root_url);
-define('S_PATH_CACHE', $_SERVER["DOCUMENT_ROOT"].'/cache');
+define('S_PATH_CACHE', '../cache');
 
 for($i=0, $n=count($A_SIGNE) ; $i<$n ; $i++){
     $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_hebdotay_complet_'.$A_SIGNE[$i].'.xml',2);
@@ -58,7 +58,7 @@ for($i=0, $n=count($A_SIGNE) ; $i<$n ; $i++){
                             <td style="font-family: Arial,Helvetica,sans-serif; font-size: 12px; color: rgb(0, 0, 0); text-align: justify; padding-top: 2px;" align="left" height="80" valign="top" width="201"><p>'.$tra.'...</p></td>
                             <td height="80" width="19"></td>';
             $lien_travail = $A_SIGNE[$i];
-	}
+        }
     }
     $s_contenu .= '
                         </tr>
