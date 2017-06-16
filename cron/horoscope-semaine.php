@@ -2,12 +2,9 @@
 ini_set('max_execution_time', 0);
 include('lib.php');
 
-$protocol = getenv('MYASTRO_PROTOCOL');
-$root_url = getenv('MYASTRO_ROOT_URL');
-
-define('PROTOCOL', $protocol);
-define('ROOT_URL', $root_url);
-define('S_PATH_CACHE', '../cache');
+define('PROTOCOL', 'https');
+define('ROOT_URL', 'www.myastro.fr');
+define('S_PATH_CACHE', 'var/www/myastro/www/cache');
 
 for($i=0, $n=count($A_SIGNE) ; $i<$n ; $i++){
     $xml1 = read_horoscope_rss('https://www.asiaflash.com/horoscope/rss_hebdotay_complet_'.$A_SIGNE[$i].'.xml',2);
