@@ -1,0 +1,1150 @@
+/* ============================== [ ete-amour ] ===============================
+ *
+ * Created on : 16 juin 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@charset "UTF-8";
+
+@import "knacss501/knacss";
+
+/* Typographies */
+$txtbase: 'Arial', sans-serif;
+$handscripted: 'Pacifico', cursive;
+$title: 'Oswald', sans-serif;
+
+/* Images */
+$img_dir: '../images_landing/ete-amour/';
+$bg_plage: $img_dir + 'bg-plage.jpg';
+$img_logo: $img_dir + 'logo_MYASTRO.svg';
+$form_valid: $img_dir + 'form-valid.svg';
+$portrait_voyante: $img_dir + 'portrait-voyante.png';
+$bulle_phone: $img_dir + 'bulle-phone.svg';
+$bx_loader: $img_dir + 'bx_loader.gif';
+$controls: $img_dir + 'controls.png';
+$img_celib: $img_dir + 'celib.svg';
+$img_couple: $img_dir + 'couple.svg';
+$img_celib_rose: $img_dir + 'celib-rose.svg';
+$img_couple_rose: $img_dir + 'couple-rose.svg';
+$social_icons: $img_dir + 'ico_socials.svg';
+
+/* Couleurs */
+$white: #FFFFFF;
+$yellow: #FEDE03;
+$azure: #1A968C;
+$sand: #F7D7AB;
+$cyan: #07F8DE;
+
+/* ------------------------------- [ MIXINS ] ------------------------------- */
+
+@mixin clearfix(){
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin inline-list($margin, $padding){
+    display: flex;
+    justify-content: stretch;
+    list-style-type: none;
+    &, & li {
+        margin: $margin;
+        padding: $padding;
+    }
+}
+
+/* ----------------------------- [ TYPOGRAPHY ] ----------------------------- */
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ------------------------------- [ LAYOUT ] ------------------------------- */
+
+body {
+    background: $white url($bg_plage) top center fixed no-repeat;
+    background-size: cover;
+    border: 0;
+    color: $white;
+    padding-top: 2.2rem;
+}
+
+.PageWrapper {
+    width: 100%;
+    margin: 0rem auto 0;
+    padding: 0;
+}
+
+/* ------------------------------- [ HEADER ] ------------------------------- */
+
+.headerContainer {
+    display: flex;
+    justify-content: center;    
+}
+
+.SiteLogo {
+    background: transparent url($img_logo) center no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 105px;
+    margin: 1rem;
+    width: 105px;
+    span {
+        display: none;
+    }
+}
+
+.module_social {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    li {
+        margin:0 0.5rem;
+        a {
+            border: none;
+            display: block;
+            height: 2.4rem;
+            padding: 0;
+            width: 2.4rem;
+            span { display:none;}
+        }
+    }
+    #ico-fb {
+        background: transparent url($social_icons) 0% 0% no-repeat;
+        background-size: cover;
+    }
+    #ico-tw {
+        background: transparent url($social_icons) 33% 0%  no-repeat;
+        background-size: cover;
+    }
+    #ico-insta {
+        background: transparent url($social_icons) 66% 0% no-repeat;
+        background-size:cover;
+    }
+    #ico-bs {
+        background: transparent url($social_icons) 100% 0% no-repeat;
+        background-size: cover;
+    }
+}
+
+.DescText-Title {
+    border-bottom: 1px solid $sand;
+    border-top: 1px solid $sand;
+    margin: 0 6rem 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 70rem;
+}
+
+.titre1 {
+    color: $yellow; 
+    font-family: $title; 
+    font-size: 10rem;
+    text-transform: uppercase; 
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.85);
+}
+
+.titre2 {
+    color: $azure;
+    font-family: $handscripted; 
+    font-size: 9rem;
+    line-height: 90%;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.55);
+}
+
+/* -------------------------------- [ FORM ] -------------------------------- */
+
+@import "modules/_form";
+
+.FormContainer {
+    background: transparent;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.FormField {
+    border: none;
+    height: auto;
+    padding-top: 1rem;
+    &-Input { 
+        border: none;
+        border-radius: 2px;
+        &:focus, select:focus {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+label, .label, .FormField-Input {
+    text-transform: uppercase;  
+}
+
+.label {
+    color: $white;
+    font-size: 2rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.genre {
+    input { opacity: 0;}
+    label { 
+        background: $white;
+        color: $azure;
+        cursor: pointer;
+        opacity: 1;
+        padding: 1.5rem 2.5rem;
+        outline: 2px solid $white;
+        transition: all 0.2s ease-in;
+    }
+    input[type="radio"]:checked + label {
+        background: transparent;
+        color: $yellow;
+        outline: 2px solid $yellow;
+    }
+}
+
+.relationship-status {
+    input[type="radio"] { opacity: 0;}
+    label {
+        height: 20rem; 
+        margin-bottom: 1rem;
+        transition: background 0.2s ease-in;
+    }
+    label[for="sit-celib"] { 
+        background: transparent url($img_celib) center bottom no-repeat;
+        -webkit-background-size: 100% 49%;
+        cursor: pointer;
+        opacity: 1;
+        padding: 1.5rem 2.5rem;
+        transition: all 0.2s ease-in;
+    }
+    input:checked + label[for="sit-celib"] { 
+        background: transparent url($img_celib_rose) center bottom no-repeat;
+        -webkit-background-size: 100% 49%;   
+    }
+    
+    label[for="sit-couple"] { 
+        background: transparent url($img_couple) center center no-repeat;
+        -webkit-background-size: contain;
+        cursor: pointer;
+        opacity: 1;
+        padding: 1.5rem 2.5rem;
+        transition: all 0.2s ease-in;
+    }
+    input:checked + label[for="sit-couple"]{ 
+        background: transparent url($img_couple_rose) center center no-repeat; 
+        -webkit-background-size: contain;     
+    }    
+    
+    #sit-couple-prenom { opacity:0;}
+}
+
+input[type="radio"] {
+    cursor: pointer;   
+    display: inline-block;
+    height: 20px !important;
+    margin: 0 0.2rem;
+    margin-top: 0;
+    vertical-align: middle;
+    width: 20px !important;
+}
+
+.radio-custom {
+    margin: 1rem 0 0;
+    padding: 0;
+    li {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        p {
+            display: block;
+            height: 100%;
+        }
+    }
+    input { opacity: 0;}
+    label { /* IMAGE STYLES */
+        border: none;
+        cursor: pointer;
+        display: inline-block; 
+        height: 69px;
+        position: relative;
+        text-shadow: 0 0 0 $white;
+        transition: border 0.2s ease-in;
+        top:0;
+        width: 225px;
+    }
+    
+    @for $i from 1 through 4 {
+        $img_destination: $img_dir + 'desti-' + $i + '.jpg';
+        #img-radio-#{$i} {
+            background: transparent url($img_destination) center center no-repeat;
+        }
+    }
+    
+    input:checked + label {
+        border: 5px solid $white;
+	color: $white;
+    }
+}
+
+.mois {
+    input { opacity: 0;}
+    label { 
+        cursor:pointer;
+        opacity: 1;
+        padding:1.5rem 2.5rem;
+        font-size:5rem;
+        font-family: 'Lobster', cursive;
+        color:#f60951;
+        text-transform:lowercase;
+        text-transform:capitalize;
+        transition: all 0.2s ease-in;        
+    }
+    input[type="radio"]:checked + label {
+        text-shadow: 0px 0px 5px $white;
+        color: $cyan;
+    }
+}
+
+.FormContainer-Submit {
+    background: transparent;
+    border: 2px solid $yellow;
+    color: $yellow;
+    cursor: pointer;
+    font-family: $handscripted; 
+    font-size: 3rem;
+    padding: 1rem 4.5rem;
+    margin-top: 6rem;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    width: 30rem;
+    &:hover, &:focus {
+        color: $azure;
+        background-color: $yellow;
+    }
+}
+
+/* ---------------------------- [ FORM OVERLAY ] ---------------------------- */
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none;
+    display: none;
+    height: 100vh !important;
+    left: 0;
+    max-width: none;
+    top: 0;
+    position: fixed !important;
+    width: 100vw;
+    z-index: 100;
+
+    p.alert {
+        background: $white;
+        border: none;
+        color: $azure;
+        display: table-cell;
+        height: 25rem;
+        left: 50%;
+        margin: -12.5rem -20rem;
+        padding: 1rem;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        vertical-align: middle;
+        width: 40rem;
+
+        // TITRE DE LA MODALE
+        b {
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size:2rem;
+            width: 100%;
+        }
+
+        // BOUTON DE FERMETURE DE LA MODALE
+        br + i {
+            background: #ccc;
+            bottom: 1rem;
+            color: $white;
+            cursor: pointer;
+            display: inline-block;
+            left: 22%;
+            padding: 0.5rem 0.8rem;
+            position: absolute;
+            :after {
+                content: "fermer";
+                padding: 1rem;
+                text-transform: uppercase;
+                text-align: center;
+                width: 60%;
+            }
+        }
+    }
+}
+
+/* ------------------------------- [ SLIDER ] ------------------------------- */
+
+/*#slide-nav {
+    text-align:center;
+}
+.slide-nav {
+    @include inline-list(0.5rem 0.25rem ,0);
+}*/
+
+.bx-wrapper {
+    margin: 0 auto;
+    .bx-viewport {
+        background-color: transparent;
+        border: none;
+        box-shadow:none;
+        margin-top: 2rem !important;
+    }
+}
+
+.wrapper-input{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    width:50rem;
+    input[type="text"], input[type="email"]{
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+.bx-wrapper {
+    .bx-loading {
+        background: transparent url($bx_loader) center center no-repeat;
+    }
+    .bx-prev {
+        background: url($controls) no-repeat 0 -32px;
+        display: none;
+        left: 10px;
+    }
+    .bx-next {
+        background: url($controls) no-repeat -43px -32px;
+        right: 10px;
+    }
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    top: 0;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+    background: url($controls) -86px -11px no-repeat;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+    background: url($controls) -86px -44px no-repeat;
+}
+
+.bx-pager {  
+    border: none; 
+    height: 5rem; 
+    margin-top: -5rem; 
+    padding: 0;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: none;
+    border: 1px solid $white;
+    border-radius: 3rem;
+    color: $white;
+    font-size: 3rem;
+    height: 4.5rem;
+    text-decoration: none;
+    text-indent: 0;
+    width: 4.5rem;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: $white;
+    color: $azure;
+}
+/*
+#slider-nav {
+    ul{
+        display:flex;
+        justify-content: space-around;
+        list-style:none;
+        
+        a{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;  
+            text-transform:uppercase;
+            text-decoration:none;
+            i{
+               width:100%; 
+               text-align:center; 
+               font-size:2.5rem;
+            }
+        }
+
+    }
+}
+#slider-start{ 
+    position:absolute;
+    top:550px;
+    left:40%;
+    width: 30rem;
+    }
+#slider-start{
+    height:inherit;
+    margin:0 auto;
+    padding:1rem 1.2rem;
+    text-transform:lowercase;
+    text-transform:capitalize;
+    color:$yellow;
+    
+    &:hover{color:$azure}
+}
+
+/* ------------------------------- [ FOOTER ] ------------------------------- */
+
+.SiteCopyright {
+    color:$white;
+    margin-bottom: 1.5rem;
+    margin-top: 3.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/*
+/*
+.noMarginLeft {
+    margin-left:0;
+}
+.visible {
+    display:block;
+    opacity:1;
+}
+.hidden {
+    display:none;
+}
+.disabled{
+    opacity:0;
+}
+.vertical-align{    
+    display:table;
+    div{
+        display:table-cell;
+        vertical-align:middle;
+        /*display: inline-block*
+    }
+}
+
+.wrapper960{
+    max-width:96rem;
+    margin:0 auto;
+}
+
+.wrapper600{
+    max-width:60rem;
+    margin:0 auto;
+}
+
+.etapes-menu{
+    @include inline-list(0.5rem 0.25rem ,0);
+
+    li:active{
+        background:#ccc;
+    }
+}
+
+.text-shadow{
+    text-shadow:0 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+/***********************************************/
+/******************* PAGE TEL ******************/
+/***********************************************
+.FormContainer-Slogan{
+    color:#454545;
+    text-transform:uppercase;
+    font-family: 'Lato', sans-serif;
+    display:inline-block;
+    text-align:center;
+    background: transparent url($form_valid) top left no-repeat;
+    font-size: 2.25rem;
+    
+    
+    & + p{
+        font-family: 'lobster', sans-serif;
+        color:$yellow;
+        text-transform:capitalize;
+        display:inline-block;
+        border: 2px solid $yellow;
+        margin:1rem auto;
+        padding: 0.25rem 4rem;
+        text-align:center;
+        font-size: 3.25rem;
+        margin:2rem auto;
+    }
+   
+}
+.FormField-Info{
+    font-size:2.25rem;
+    color:$white;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+}
+
+
+
+/***********************************************/
+/********** PAGE DRI POST MAIL *****************/
+/***********************************************
+.ContentBand-Column{
+    margin:0 auto;
+    max-width: 96rem;
+    text-align: center;
+}
+
+.DRI-Form{
+    margin:0 auto;
+    max-width:96rem;
+    
+    input, select{
+        max-width: 40rem;
+        margin: 2rem auto;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+    }
+}
+.DescText-Content {
+    #portrait{
+        background:transparent url($portrait_voyante) top left no-repeat !important;
+        padding:6.5rem 0 0 13rem; 
+        text-align:left;
+        color:$white;
+        display:inline-block;
+        width: 100%;
+        max-width: 64rem;
+        span{font-family: 'lobster', sans-serif; font-size: 2rem;}    
+    }
+}
+
+.DescText-Content p + p {
+    font-family: 'lobster', sans-serif;
+    
+    color:$yellow;
+    text-transform:capitalize;
+    display:inline-block;
+    border: 2px solid $yellow;
+    margin:1rem auto;
+    padding: 0.25rem 4rem;
+    text-align:center;
+    font-size: 3.5rem;
+    margin:2rem auto;
+}
+h1.DRI-Intro-Title{
+    font-size:2.25rem;
+    color:$white;
+    text-transform:uppercase;
+    margin-bottom:1rem;
+    font-weight:normal;
+}
+
+.picto-tel-bulle{
+    width:10rem;
+    height:10rem;
+    background: transparent url($bulle_phone) 0% 0% no-repeat;
+    background-size:contain;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 70rem;
+}
+
+/* ------------- CONTROLEURS --------------------- *
+.outside{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    font-size:3rem;
+    
+    a{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width:10rem;
+        height:10rem;
+        color:$white;
+        
+        
+        text-transform: uppercase;
+        
+        i{
+            width:5rem;
+            height:5rem;
+            font-size:3rem;
+            border:1px solid transparent;
+            vertical-align:middle;
+            border-radius:5rem;
+            line-height:150%;
+            margin-bottom:0.5rem;
+            transition: border 0.2s ease-in;
+            
+            
+        }
+        
+        &:hover i{
+            border:1px solid $white;
+        }
+    }
+} 
+ 
+
+.bx-prev,
+.bx-next{
+    font-size:1.5rem;
+    color:$white;
+    text-decoration:none;
+}
+
+.bx-prev{
+    position:absolute;
+    top:50vh;
+    left:20vw;
+    //display:none !important;
+}
+.bx-next{
+    position:absolute;
+    top:50vh;
+    right:20vw;
+    
+    animation-name: btnAnimNext;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes btnAnimNext {
+        0% {transform: scale(1,1)}
+        50% {transform: scale(1.2,1.2)}
+        100% {transform: scale(1,1)}
+    }
+}
+
+/***********************************************/
+/****************** FORMULAIRE *****************/
+/***********************************************
+
+.anim-input{
+    animation-name: animInput;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+    @keyframes animInput {
+        0% {transform: scale(0.2,1); opacity:0}
+        100% {transform: scale(1, 1); opacity:1}
+    }
+}
+
+/***********************************************/
+/************ ILLUSTRATIONS ANIMÉES ************/
+/***********************************************
+.illustr{
+    display:block;
+    border:0px solid red;
+    
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}    
+
+#illustr-bouee{
+    width:198px; 
+    height:203px;
+    background: transparent url($img_dir + 'bouee.png') center center no-repeat;
+    position:absolute;
+    top:0;
+    right:20%;
+}
+.anim-bouee{
+    animation-name: boueeMove;
+    animation-duration: 3000ms;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+    //animation-direction: reverse;
+    
+    @keyframes boueeMove {
+        0% {transform:  translate(0px,10px)}
+        50% {transform:  translate(0px,0px);}
+        100% {transform:  translate(0px,10px)}
+    }
+}
+
+#illustr-hipo{
+    width:68px; 
+    height:165px;
+    background: transparent url($img_dir + 'hipo.png') center center no-repeat;
+    position:absolute;
+    top: 5rem;
+    right: 1rem;
+    
+    }
+.anim-hipo{
+    animation-name: hipoMove;
+    animation-duration: 3000ms;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode:forwards;
+    //animation-direction: reverse;
+    
+    @keyframes hipoMove {
+        0% {transform:  translate(0px,30px)  scale(1,1);}
+        25% {transform: translate(-250px,0px)  scale(1.1,1.1)}
+        50% {transform: translate(-500px,30px)  scale(1,1)}
+        75% {transform: translate(-750px,0px)  scale(1.1,1.1)}
+        100% {transform: translate(-1100px,30px)  scale(1,1)}
+    }
+}
+    
+#illustr-fish{
+    width:254px; 
+    height:128px;
+    background: transparent url($img_dir + 'fish.png') center center no-repeat;
+    position:absolute;
+    top: 2rem;
+    left: 0rem;
+    }
+    
+.anim-fish{
+    animation-name: fishMove;
+    animation-duration: 3000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+    //animation-direction: reverse;
+    
+    @keyframes fishMove {
+        0% {transform:  translate(0, 0) scale(1,1)}
+        50% {transform:   translate(50vw, 10vh) scale(1.1,1.1)}
+        100% {transform:  translate(80vw, 0)  scale(1,1)}
+    }
+}
+
+#illustr-lunettes{
+    width:150px; 
+    height:150px;
+    background: transparent url($img_dir + 'lunettes.png') center center no-repeat;
+    background-size:cover;
+    position:absolute;
+    top: 0rem;
+    left: 20rem;
+}
+.anim-lunettes{
+    animation-name: lunettes;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+    //animation-direction: reverse;
+    
+    @keyframes lunettes {
+        0% {transform:   translate(0, 0)}
+        100% {transform: translate(200px, 0)}
+    }
+}
+
+#illustr-shell{
+    width:131px; 
+    height:182px;
+    background: transparent url($img_dir + 'shell.png') center center no-repeat;
+    position:absolute;
+    top: 10rem;
+    left: 10vw;
+}
+.anim-shell{
+    animation-name: shell;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; 
+    //animation-direction: reverse;
+    
+    @keyframes shell {
+        0% {transform:   translate(0, 0); opacity:0.1 }
+        100% {transform: translate(40vw, 0); opacity:1}
+    }
+}
+
+#illustr-cocktail{
+    width:88px; 
+    height:311px;
+    background: transparent url($img_dir + 'cocktail.png') center center no-repeat;
+    position:absolute;
+    top: 0rem;
+    right: 30rem;
+}
+.anim-cocktail{
+    animation-name: cocktail;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards; 
+    //animation-direction: reverse;
+    
+    @keyframes  cocktail {
+        0% {transform:   translate(0, 0)}
+        100% {transform: translate(-100px, 0)}
+    }
+}
+
+#illustr-parasol{
+    width:294px; 
+    height:181px;
+    background: transparent url($img_dir + 'parasol.png') center center no-repeat;
+    position:absolute;
+    top: 5rem;
+    left: 35rem;
+}
+.anim-parasol{
+    animation-name: paraMove;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    //animation-direction: reverse;
+    
+    @keyframes paraMove {
+        0% {opacity:0.7}
+        50% {opacity:1}
+        100% {opacity:0.7}
+    }
+}
+
+#illustr-chaise{
+    width:176px; 
+    height:207px;
+    background: transparent url($img_dir + 'chaise.png') center center no-repeat;
+    position:absolute;
+    top: 28rem;
+    left: 11rem;
+}
+.anim-chaise{
+    animation-name: chaiseMove;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; 
+    //animation-direction: reverse;
+    
+    @keyframes chaiseMove{
+        0% {transform:   translate(0, 0)}
+        100% {transform:   translate(39vw, 0)}
+    }
+}
+
+
+/* MEDIA QUERIES *
+@include media('>large-screen') {
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .illustr{
+        display:block; 
+        border:0px solid red;
+    }
+    
+    #slider-start{
+        left: 35%; 
+    }
+    
+    /* ILUSTRATIONS *
+    #illustr-bouee{
+        right: 5%; 
+    }
+    #illustr-lunettes{
+        top: 15rem;
+    }
+    #illustr-cocktail {
+        top: 2rem;
+        right: 0rem;
+    }
+    #illustr-parasol {
+        top: 5rem;
+        left: 5rem;
+    }
+    .bx-prev,
+    .bx-next{
+        top: 70vh;
+    }
+    .bx-prev{
+        left: 10vw;
+    }
+    .bx-next{
+        right: 10vw;
+    }
+}
+
+
+@include media('>small-screen', '<medium-screen') {
+
+    .illustr{display:none}
+    
+    .DescText-Title {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 2rem;
+    }
+
+    .titre1 {
+        font-size: 8rem;
+        border:0px solid red;
+    }
+    
+    .titre2 {
+        font-size: 6rem;
+    }
+    
+    .SiteCopyright{
+        position:absolute;
+        bottom:1rem;    
+    }
+    
+    
+    #slider-start{
+        left: 30%; 
+    }
+    
+    .bx-prev, 
+    .bx-next {
+        top: 75vh;
+    }
+}
+
+@include media('<=small-screen') {
+    body{padding:0.5rem;}
+    
+    .illustr{display:none}
+
+    
+    .headerContainer{
+       flex-direction: column;
+       width:100%;
+    }
+    .SiteLogo{
+        width:100%; 
+        height: 50px;
+        text-align:center;
+    }
+    .DescText-Title{
+        width:100%; 
+        margin:0;
+        padding:0 0 0.75rem;
+    }
+    .titre1{font-size:5rem;}
+    .titre2{font-size:4rem;}
+    
+    /* FORMULAIRE *
+    form#form-container {
+        min-height: 35rem;
+    }
+    .FormContainer-Fields{
+       padding: 0;    
+    }
+    .wrapper-input{
+        width:100%;    
+    }
+    .bx-viewport{
+        width:100%;
+        left:0 !important;
+    }
+    .label{
+        text-align:center;
+        height:inherit; 
+    }
+    Input{
+        //@include clearfix;
+        display: block !important; 
+    }
+    .relationship-status label{
+        height: 5rem;
+    }
+    .radio-custom {
+        margin:0; padding:0;
+        border:0px solid red;
+        overflow: hidden;
+        li{
+            display:flex;
+            align-items: stretch;
+            flex-flow: row wrap-reverse;
+        }
+        .grid-2 *{
+            margin-left:0 !important;
+        }
+        
+    }
+    .radio-custom input{
+        position:absolute;
+        display:inline-block;
+        opacity:1;
+       
+    }
+    .radio-custom label{
+        display:none;
+    }
+    .radio-custom div{
+        width:30%;
+        margin:0;
+        padding-left:1rem;
+        text-align:center;
+    }
+    .radio-custom .label{
+        text-align:right;
+        width:70%;
+        margin:0;
+    }
+    .vertical-align {
+        width: 100%;
+    }
+    //.FormField-TableInputContainer-Cell{padding:0}
+    .mois{
+        display:flex;
+        flex-direction: column;  
+        label{
+            margin:0;
+            padding:0;
+            font-size: 5rem;
+        }
+        input{
+            position: absolute;
+        }
+    }
+
+    /* CONTROLES*
+    #slider-start{
+        top: 500px;
+        left: 9%;
+    }
+    .bx-prev, 
+    .bx-next{
+        top: 80vh;
+    } 
+    
+    .SiteCopyright{
+        //position:absolute;
+        //bottom:0.5rem;
+        margin:0 auto;
+        width:100%;
+    }
+}
+
+@include media('<=tiny-plus-screen') {  
+        display: none;
+
+}
+*/
