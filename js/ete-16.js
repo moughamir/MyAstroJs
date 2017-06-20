@@ -29,17 +29,18 @@ $(document).ready(function(){
             $(".bxslider li:not([class='bx-clone'])").eq(current).addClass('current');
             switch (current){
                 case 0:
+                    $('#slider-start').css('display','block');
                     break;
                 case 1:
                     $('#slider-start').css('display','none');
-                    $('.outside').css('opacity','1');
+                    $('.outside').css('display','flex');
                     $('.bx-next').removeClass('hidden');
                     $('.bx-next').addClass('flex-compa');
                     $('#illustr-hipo').addClass('anim-hipo');
                     break;
                 case 2:
                     $('#slider-start').css('display','none');
-                    $('.outside').css('opacity','1');
+                    $('.outside').css('display','flex');
                     $('#illustr-hipo').removeClass('anim-hipo');
                     $('#illustr-fish').addClass('anim-fish');
                     $('input[name=sexe]').change(function() {
@@ -51,7 +52,7 @@ $(document).ready(function(){
                     break;
                 case 3:
                     $('#slider-start').css('display','none');
-                    $('.outside').css('opacity','1');
+                    $('.outside').css('display','flex');
                     $('#bx-prev').css('display','flex');
                     $('#illustr-fish').removeClass('anim-fish');
                     $('#illustr-lunettes').addClass('anim-lunettes');
@@ -59,14 +60,14 @@ $(document).ready(function(){
                 case 4:
                     $('#slider-start').css('display','none');
                     $('#bx-prev').css('display','flex');
-                    $('.outside').css('opacity','1');
+                    $('.outside').css('display','flex');
                     $('#illustr-lunettes').removeClass('anim-lunettes');
                     $('#illustr-shell').addClass('anim-shell');
                     break;
                 case 5:
                     $('#slider-start').css('display','none');
                     $('#bx-prev').css('display','flex');
-                    $('.outside').css('opacity','1');
+                    $('.outside').css('display','flex');
                     $('#illustr-shell').removeClass('anim-shell');
                     $('#illustr-cocktail').addClass('anim-cocktail');
                     break;
@@ -75,7 +76,7 @@ $(document).ready(function(){
                     $('#bx-prev').css('display','flex');
                     $('#illustr-cocktail').removeClass('anim-cocktail');
                     $('#illustr-parasol').addClass('anim-parasol');
-                    $('.outside').css('opacity','0');
+                    $('.outside').css('display','none');
                     $('input[name=destination]').change(function() {
                         slider.goToSlide(7);
                     });
@@ -85,7 +86,7 @@ $(document).ready(function(){
                     break;
                 case 7:
                     $('#slider-start').css('display','none');
-                    $('.outside').css('opacity','0');
+                    $('.outside').css('display','none');
                     $('#illustr-parasol').removeClass('anim-parasol');
                     $('#illustr-chaise').addClass('anim-chaise');
                     break;
@@ -109,6 +110,10 @@ $(document).ready(function(){
 //    });
     
     /* LABEL DES BOUTONS RADIO*/
+    $('#sit-couple').change(function() {
+        $('#son_prenom').focus();
+        $('html,body').animate({scrollTop: $('#son_prenom').offset().top}, 500);
+    });
     $('input[name=theme_id]').change(function() {
         if (this.value == 'ete16_question_2') {
             //console.log("celib");

@@ -1,13 +1,12 @@
 <?php
 /**
- * ete-amour == AFFILBASE
- * ----------------------
- * Created on : 16 juin 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * ete-amour-rak == BASE EXTERNE
+ * -----------------------------
+ * Created on : 20 juin 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$form = 'ete-amour';
-include('include/init-affilbase.php');
 
-$url = $form;
+$url = 'ete-amour-rak';
+$source = 'base_externe';
 $method = 'general-suscribe';
 $support = 'voyance';
 $site = 'myastro.fr';
@@ -72,7 +71,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <input type="hidden" name="method" value="<?= $method;?>" />
                             <input type="hidden" name="site" value="<?= $site;?>" />
                             <input type="hidden" name="affiliation" value="<?= $source;?>" />
-                            <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                             <input type="hidden" name="dri" value="<?= $dri;?>" />
                             <!-- ########## autres champs pré-remplis ########## -->
                             <input type="hidden" name="cguv" value="1" />

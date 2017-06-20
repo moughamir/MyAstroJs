@@ -83,6 +83,7 @@ $img_couple_rose : $img_dir + 'couple-rose.svg';
 $jaune : #fede03;
 $azur : #1a968c;
 $sable : #f7d7ab;
+$rose: #E72D4B;
 
 body{
     background: #fff url($bg_plage) top center fixed no-repeat;
@@ -95,7 +96,7 @@ a, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: none;
 }
-
+.ContentBand { margin-top: 3rem;}
 .PageWrapper {
     width: 100%;
     //max-width: 1200px;
@@ -233,25 +234,23 @@ a, a:visited, a:hover, a:active {
 
 }
 
-.btn,
-.FormContainer-Submit{
-    border:2px solid $jaune;
-    padding:1rem 4.5rem;
+.btn, .FormContainer-Submit {
+    border: 2px solid $jaune;
+    padding: 1rem 2rem;
     font-family: 'Pacifico', cursive; 
-    font-size:3rem;
-    color:$jaune;
-    margin-top:6rem;
+    font-size: 3rem;
+    color: $jaune;
+    margin-top: 6rem;
     width: 30rem;
-    text-decoration:none;
-    cursor:pointer;
+    text-decoration: none;
+    cursor: pointer;
     transition: all 0.2s ease-in;
-    background:transparent;
-    
-    
-    &:hover,
-    &:focus{
-        color:$azur;
-        background-color:$jaune;
+    text-align: center;
+    background: transparent;
+    max-width: 100%;
+    &:hover, &:focus {
+        color: $azur;
+        background-color: $jaune;
     }
 }
 
@@ -270,21 +269,17 @@ a, a:visited, a:hover, a:active {
     text-align:center;
     background: transparent url($form_valide) top left no-repeat;
     font-size: 2.25rem;
-    
-    
-    & + p{
-        font-family: 'lobster', sans-serif;
-        color:$jaune;
-        text-transform:capitalize;
-        display:inline-block;
-        border: 2px solid $jaune;
-        margin:1rem auto;
-        padding: 0.25rem 4rem;
-        text-align:center;
-        font-size: 3.25rem;
-        margin:2rem auto;
-    }
-   
+}
+.DRI-Slogan {
+    border: 2px solid $jaune;
+    color: $jaune;
+    display: inline-block;
+    font-family: 'lobster', sans-serif;
+    font-size: 3.25rem;
+    margin: 2rem auto !important;
+    padding: 0.25rem 4rem;
+    text-align: center;
+    text-transform: capitalize;
 }
 .FormField-Info{
     font-size:2.25rem;
@@ -307,15 +302,25 @@ button.FormContainer-Submit {
     text-align: center;
 }
 
-.DRI-Form{
-    margin:0 auto;
-    max-width:96rem;
-    
-    input, select{
+.DRI-Form {
+    margin: 0 auto;
+    max-width: 96rem;
+    .FormField { margin-bottom: 0;}
+    input, select {
         max-width: 40rem;
-        margin: 2rem auto;
+        margin: auto;
         font-size: 2rem;
-        padding: 1rem 2rem;
+    }
+}
+.DRI-Sent {
+    color: #fff;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    strong {
+        color: #fede03;
+        font-weight: normal;
     }
 }
 .DescText-Content {
@@ -463,7 +468,7 @@ h1.DRI-Intro-Title{
 }
 #slider-start{ 
     position:absolute;
-    top:550px;
+    top: 500px;
     left:40%;
     width: 30rem;
     }
@@ -494,9 +499,6 @@ h1.DRI-Intro-Title{
 .bx-wrapper .bx-pager.bx-default-pager a.active {
     background: #fff;
     color:$azur;
-}
-.bx-viewport{  
-    margin-top:2rem !important;
 }
 .bx-pager{  
     height:5rem; 
@@ -582,32 +584,26 @@ h1.DRI-Intro-Title{
 /***********************************************/
 /****************** FORMULAIRE *****************/
 /***********************************************/
-$height:auto;
 
-.FormField{
+.FormField {
+    border: none;
+    height: auto;
     padding-top: 1rem;
-    height:$height;
-    border:0px solid;
-}
-.FormField-Input{ 
-    border:0px solid red; 
-    border-radius:2px; 
-    
-    &:focus,
-    select:focus{
-        box-shadow:0px 0px 10px rgba(0, 0, 0, 0.5);
+    &-Input{ 
+        color: #454545;
+        border: none;
+        border-radius: 2px;
+        &:focus, select:focus {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
     }
 }
-label,
-.label,
-.FormField-Input{
-    text-transform:uppercase;  
-}
-.label{
-    color:#fff;
-    margin-bottom:1rem;
-    font-size:2rem;
+label, .label, .FormField-Input { text-transform: uppercase;}
+.label {
+    color: #fff;
+    font-size: 2rem;
     height: 5rem;
+    margin-bottom: 1rem;
 }
 
 /* ------------------ BOUTS RADIO --------------------- */
@@ -634,47 +630,33 @@ label,
     }
 }
 
-.relationship-status{
-    input[type="radio"]{ 
-        opacity: 0;
-    }
-
-    label{
-        height:20rem; 
-        margin-bottom:1rem;
-        transition: background 0.2s ease-in;
-    }
-    
-    label[for="sit-celib"]{ 
-        cursor:pointer;
+.relationship-status {
+    input[type="radio"] { opacity: 0;}
+    input[type="radio"] + label {
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        -webkit-background-size: contain;
+        cursor: pointer;
+        height: 20rem;
+        margin-bottom: 1rem;
         opacity: 1;
-        padding:1.5rem 2.5rem;
+        padding: 1.5rem 2.5rem;
         transition: all 0.2s ease-in;
-        background: transparent url($img_celib) center bottom no-repeat;
-        -webkit-background-size: 100% 49%;              
     }
-    
-    label[for="sit-couple"]{ 
-        cursor:pointer;
-        opacity: 1;
-        padding:1.5rem 2.5rem;
-        transition: all 0.2s ease-in;
-        background: transparent url($img_couple) center center no-repeat;
-        -webkit-background-size:contain;
+    label[for="sit-celib"] { 
+        background-image: url($img_celib);
     }
-    
-    input:checked + label[for="sit-celib"]{ 
-        background: transparent url($img_celib_rose) center bottom no-repeat;
-        -webkit-background-size: 100% 49%;   
+    label[for="sit-couple"] {
+        background-image: url($img_couple);
     }
-    
-    input:checked + label[for="sit-couple"]{ 
-        background: transparent url($img_couple_rose) center center no-repeat; 
-        -webkit-background-size:contain;     
-    }    
-    
-    #sit-couple-prenom{
-        opacity:0;
+    input[type="radio"]:checked + label[for="sit-celib"] { 
+        background-image: url($img_celib_rose);
+        + .label { color: $rose;}
+    }
+    input[type="radio"]:checked + label[for="sit-couple"]{ 
+        background-image: url($img_couple_rose);
+        + .label { color: $rose;}
     }
 }
 
@@ -1002,7 +984,7 @@ input[type="radio"] {
         /*font-family:$font3;*/
 
         // TITRE DE LA MODALE
-        b{
+        b {
             margin-bottom: 1rem;
             display: inline-block;
             font-size:2rem;
@@ -1010,24 +992,19 @@ input[type="radio"] {
         }
 
         // BOUTON DE FERMETURE DE LA MODALE
-        br + i{
-            padding: 0.5rem 0.8rem;
+        br + i {
+            padding: 0.5rem 1rem;
             background: #ccc;
             color:#fff;
             cursor: pointer;
             display: inline-block;
             position: absolute;
             bottom: 1rem;
-            left: 22%;
-
-            :after{
-                content:"fermer";
-                text-transform:uppercase;
-                text-align: center;
-                width: 60%;
-                padding: 1rem;
-            }
-
+            left: 50%;
+            font-weight: bold;
+            font-style: normal;
+            transform: translateX(-50%);
+            white-space: nowrap;
         }
     }
 }
@@ -1075,12 +1052,7 @@ and (orientation : landscape) {
     .bx-next{
         right: 10vw;
     }
-    .SiteCopyright{
-        /*position:absolute;
-        bottom:1rem;    */
-    }
 }
-
 
 @include media('>small-screen', '<medium-screen') {
 
@@ -1118,125 +1090,111 @@ and (orientation : landscape) {
 }
 
 @include media('<=small-screen') {
-    body{padding:0.5rem;}
+    body{ padding: 0.5rem;}
+    .ContentBand { margin-top: 0;}
+    .PageWrapper {
+        padding: 0 2rem;
+        padding-top: 1rem;
+    }
+    .illustr { display: none;}
     
-    .illustr{display:none}
-
-    
-    .headerContainer{
+    .headerContainer {
        flex-direction: column;
-       width:100%;
+       width: 100%;
     }
-    .SiteLogo{
-        width:100%; 
-        height: 50px;
-        text-align:center;
+    .SiteLogo {
+        height: 68px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 100%; 
     }
-    .DescText-Title{
-        width:100%; 
-        margin:0;
-        padding:0 0 0.75rem;
-    }
-    .titre1{font-size:5rem;}
-    .titre2{font-size:4rem;}
-    
-    /* FORMULAIRE */
-    form#form-container {
-        min-height: 35rem;
-    }
-    .FormContainer-Fields{
-       padding: 0;    
-    }
-    .wrapper-input{
-        width:100%;    
-    }
-    .bx-viewport{
-        width:100%;
-        left:0 !important;
-    }
-    .label{
-        text-align:center;
-        height:inherit; 
-    }
-    Input{
-        //@include clearfix;
-        display: block !important; 
-    }
-    .relationship-status label{
-        height: 5rem;
-    }
-    .radio-custom {
-        margin:0; padding:0;
-        border:0px solid red;
-        overflow: hidden;
-        li{
-            display:flex;
-            align-items: stretch;
-            flex-flow: row wrap-reverse;
-        }
-        .grid-2 *{
-            margin-left:0 !important;
-        }
-        
-        /*p{width:90%; text-align:right}
-        div{width:10%; text-align:center}*/
-    }
-    .radio-custom input{
-        position:absolute;
-        display:inline-block;
-        opacity:1;
-       
-    }
-    .radio-custom label{
-        display:none;
-    }
-    .radio-custom div{
-        width:30%;
-        margin:0;
-        padding-left:1rem;
-        text-align:center;
-    }
-    .radio-custom .label{
-        text-align:right;
-        width:70%;
-        margin:0;
-    }
-    .vertical-align {
+    .DescText-Title {
+        margin: 0;
+        padding: 0 0 1.5rem;
         width: 100%;
     }
-    //.FormField-TableInputContainer-Cell{padding:0}
-    .mois{
-        display:flex;
+    .titre1{ font-size: 4.7rem;}
+    .titre2{ font-size: 4rem;}
+    .module_social { padding-left: 0;}
+    /* FORMULAIRE */
+    form#form-container { min-height: 35rem;}
+    .FormContainer-Slogan, .FormField-Info { font-size: 1.8rem;}
+    .DRI-Slogan{
+        font-size: 2.5rem;
+        padding: 0.25rem 2rem;
+    }
+    .FormContainer-Fields { padding: 0;}
+    .btn, .FormContainer-Submit { margin-top: 3rem;}
+    .wrapper-input { width:100%;}
+    .bx-viewport {
+        left: 0 !important;
+        width: 100%;
+    }
+    .label {
+        height: inherit;
+        text-align: center;
+    }
+    .label.pbl { padding-bottom: 0;}
+    .intro .label, .birthday .label { font-size: 1.8rem;}
+    .genre {
+        input { display: none !important;}
+        label { padding: 0.8rem 1.6rem;}
+    }
+    .relationship-status {
+        .FormField-Label.label { display: none;}
+        input[type="radio"] { display: none;}
+        input[type="radio"] + label { height: 5rem;}
+    }
+    .destination {
+        .label {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+        .radio-custom {
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
+            li {
+                display: inline-block;
+                padding: 0 0.5rem;
+                width: 48%;
+            }
+            .grid-2 { margin-left: 0 !important;}
+            .label { display: none;}
+            div {
+                margin: 0;
+                width: 100%;
+            }
+            input { display: none;}
+            label { width: 100%;}
+        }
+    }
+    .vertical-align { width: 100%;}
+    .mois {
+        display: flex;
         flex-direction: column;  
-        label{
-            margin:0;
-            padding:0;
+        label {
             font-size: 5rem;
+            margin: 0;
+            padding: 0;
         }
-        input{
-            position: absolute;
-        }
+        input { position: absolute;}
     }
-
-    /* CONTROLES*/
-    #slider-start{
-        top: 500px;
+    #slider-start {
         left: 9%;
+        top: 500px;
     }
-    .bx-prev, 
-    .bx-next{
+    .bx-prev, .bx-next {
+        position: fixed;
         top: 80vh;
-    } 
-    
-    .SiteCopyright{
-        //position:absolute;
-        //bottom:0.5rem;
-        margin:0 auto;
-        width:100%;
     }
+    
+    .DRI-Sent { font-size: 1.8rem;}
+    
+    .SiteCopyright { display: none;}
 }
 
-@include media('<=tiny-plus-screen') {  
-        display: none;
-
+@include media('<=tiny-plus-screen'){  
+    display: none;
 }
