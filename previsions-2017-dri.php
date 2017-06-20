@@ -72,11 +72,10 @@ include('include/process-dri.php');
                     <form action="" method="post" class="Primary-Form">
                         <div class="FormContainer-Fields Fields-Table">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="prenom" value="<?= $prenom ?>" />
+                            <input type="hidden" name="prenom" value="<?= $prenom;?>" />
                             <div class="Fields-Table-Row">
                                 <div class="FormField input-email">
-                                    <input id="tel" type="tel" name="tel" class="FormField-Input"
-                                           value="<?= $tel ?>" placeholder="Mon numéro de téléphone" required/>
+                                    <input id="tel" type="tel" name="tel" class="FormField-Input" value="<?= $tel;?>" placeholder="Mon numéro de téléphone" required />
                                 </div>
                             </div>
                         </div>
