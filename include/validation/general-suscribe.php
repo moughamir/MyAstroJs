@@ -14,11 +14,11 @@ $retour = array();
 $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
-    'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?email=[EMAIL]', 'cookie' => false ],
-    'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?email=[EMAIL]', 'cookie' => false ],
+    'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
+    'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
@@ -513,6 +513,7 @@ if(empty($err)){
     }
 
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
+    $redirect_url = preg_replace('#\[IDKGESTION\]#', $kgestion_id, $redirect_url );
 
     $retour[$redirect_method] = $redirect_url;
 

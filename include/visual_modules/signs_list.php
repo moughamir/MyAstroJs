@@ -18,7 +18,7 @@
 <ul class="posts-in-images clearfix">
     <?php foreach($signs as $code => $nom){ ?>
     <li rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="<?= $nom ?>" title="<?= $nom ?>">
-        <a href="http://<?= ROOT_URL.'/'.$url.'-'.$code ?>">
+        <a href="<?= PROTOCOL.'://'.ROOT_URL.'/'.$signs_url.'-'.$code ?>">
             <img src="images_voyance/signes/<?= $code ?>.png" alt="<?= $nom ?>" class="thumb-effect" />
         </a>
     </li>
