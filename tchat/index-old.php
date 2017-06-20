@@ -67,7 +67,7 @@ include('../include/header.php');
 	<div class="container-fluid">
 		<div class="row">
 			<div class="advert">
-				<img src="http://<?= ROOT_URL ?>/images/preloader.gif" class="advert-offline" width="340">
+				<img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/preloader.gif" class="advert-offline" width="340">
 				<form action="" id="rappel" class="hidden advert-online form-rappel">
 						<div class="col-lg-6" style="margin-left:8px;">
 							<div class="input-group">
@@ -86,7 +86,7 @@ include('../include/header.php');
 							 <input type="hidden" name="objet" id="objet" value="" />'
 					?>
 				</form>
-				<img src="http://<?= ROOT_URL ?>/images/tchat/<?= $tchat->getImageName() ?>.png" class="hidden advert-online">
+				<img src="<?= PROTOCOL.'://'.ROOT_URL ?>/images/tchat/<?= $tchat->getImageName() ?>.png" class="hidden advert-online">
 			</div>
 			<div class="overlay">
 				<div class="alert alert-info"><img src="loader-overlay.gif" class="loader" /> Connexion au serveur en cours ...</div>

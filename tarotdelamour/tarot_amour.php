@@ -813,7 +813,7 @@ function output_tirage($html_template)
     $f = implode("", @file($html_template));
 
    
-    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()ROOT_URL()]", PROTOCOL.'://'.ROOT_URL, $f);
     $f = str_replace("[()prenom()]", $prenom, $f);
     $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
     $f = str_replace("[()sign_text_m()]", strtolower($sign_tab[$signe]), $f);
@@ -965,7 +965,7 @@ function output_jour($html_template, $jour)
     
     $f = implode("", @file($html_template));
     
-    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()ROOT_URL()]", PROTOCOL.'://'.ROOT_URL, $f);
     $f = str_replace("[()prenom()]", $prenom, $f);
     $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
     $f = str_replace("[()sign_text_m()]", strtolower($sign_tab[$signe]), $f);
@@ -1036,7 +1036,7 @@ function output_end($html_template)
     
     $f = implode("", @file($html_template));
     
-    $f = str_replace("[()ROOT_URL()]", ROOT_URL, $f);
+    $f = str_replace("[()ROOT_URL()]", PROTOCOL.'://'.ROOT_URL, $f);
     $f = str_replace("[()prenom()]", $prenom, $f);
     $f = str_replace("[()sign_text()]", $sign_tab[$signe], $f);
     $f = str_replace("[()today_string()]", get_todaystring(), $f);

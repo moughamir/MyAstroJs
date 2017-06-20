@@ -63,14 +63,18 @@ $menu = array(
             [ 'url' => 'etapes-de-la-vie',                        'txt' => 'Étapes de la vie' ],
         ]
     ],
-    'voyance-par-telephone' => [
-        'url' => 'voyance-par-telephone',
-        'txt' => 'Voyance par téléphone'
+    'voyance-par-tchat' => [
+        'url' => 'myastro-tchat-n',
+        'txt' => 'Voyance par tchat'
     ],
-    'forfaits' => [
-        'url' => 'forfaits',
-        'txt' => 'Forfaits'
-    ],
+//    'voyance-par-telephone' => [
+//        'url' => 'voyance-par-telephone',
+//        'txt' => 'Voyance par téléphone'
+//    ],
+//    'forfaits' => [
+//        'url' => 'forfaits',
+//        'txt' => 'Forfaits'
+//    ],
 );
 ?>
 <nav class="container-fluid navbar-main enable-fixed">
@@ -83,7 +87,7 @@ $menu = array(
                 <div id="divNav2" class="nav-collapse collapse clearfix">
                     <ul class="nav" role="menu">
                         <li class="dropdown <?= $path == 'index' ? 'active' : '';?>" role="menuitem">
-                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="http://<?= ROOT_URL ?>/"><i class="icon-home"></i></a>
+                            <a class="dropdown-toggle" id="ancHomePages" role="button" data-hover="dropdown" data-delay="200" data-target="#" href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="icon-home"></i></a>
                         </li>
 <?php
     $c = 0;

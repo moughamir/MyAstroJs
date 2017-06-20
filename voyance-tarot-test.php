@@ -576,7 +576,7 @@ $tracker = new Tracker(new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST));
 
 				</div>
 				<div class="text-center">
-				    <a href="http://<?= ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
+				    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow">Conditions générales</a>
 				</div>
 			    </div>
 			    <!-- fin form -->

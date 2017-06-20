@@ -15,7 +15,7 @@ function secure_formdata($n){
 }
 $get = array_map('secure_formdata', $_GET);
 $email = isset($_SESSION['ab_email']) ? $_SESSION['ab_email'] : (isset($get['email']) ? $get['email'] : false);
-$idkgestion = isset($_SESSION['ab_idkgestion']) ? $_SESSION['ab_idkgestion'] : (isset($get['idkgestion']) ? $get['idkgestion'] : false);
+$idkgestion = isset($_SESSION['ab_idkgestion']) ? $_SESSION['ab_idkgestion'] : (isset($get['id']) ? $get['id'] : false);
 $form = isset($form) ? $form : 'MISSING';
 $request_url = isset($_SESSION['ab_request_url']) ? $_SESSION['ab_request_url'] : $_SERVER['REQUEST_URI'];
 $api_exec = 0;
@@ -36,6 +36,7 @@ if($idkgestion){
 $bdd->insert(
     'logs_affilbase',
     array(
+        'date' => date('Y-m-d H:i:s'),
         'email' => $email,
         'idkgestion' => $idkgestion,
         'form' => $form,

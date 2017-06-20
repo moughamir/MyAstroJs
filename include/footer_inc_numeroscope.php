@@ -15,7 +15,7 @@
                         <br>
                         <table width="100%" border="0" cellpadding="2"><tr>
                             <td>
-                                <a href="http://<?= ROOT_URL ?>/numeroscope-<?= $annee;?>" class="btn-theme">Numéroscope <?= $annee;?></a>
+                                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/numeroscope-<?= $annee;?>" class="btn-theme">Numéroscope <?= $annee;?></a>
                                 <?php for($i=1;$i<=9;$i++){ ?>
                                 <a href="http://<?= ROOT_URL.'/numeroscope-'.$annee.'-'.$i;?>" class="btn-theme">Numéroscope <?= $annee;?> chiffre <?= $i;?></a>
                                 <?php } ?>
@@ -31,9 +31,9 @@
                     <div class="row-fluid">
                         <nav class="span6 ">
                             <ul class="copyright-links">
-                                <li><a href="http://<?= ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
-                                <li><a href="http://<?= ROOT_URL ?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
-                                <li><a href="http://<?= ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
                             </ul>
                         </nav>
                         <div class="span6">
