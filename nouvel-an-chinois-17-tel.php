@@ -30,7 +30,8 @@
                         </div>
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
-                            <input type="hidden" name="source" value="nouvel-an-chinois-17" />
+                            <input type="hidden" name="source" value="<?= $url;?>" />
+                            <input type="hidden" name="regurl" value="<?= $form;?>" />
                             <input type="hidden" name="method" value="general-suscribe" />
                             <input type="hidden" name="site" value="myastro.fr" />
                             <input type="hidden" name="affiliation" value="<?= $source;?>" />

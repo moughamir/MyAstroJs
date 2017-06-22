@@ -58,7 +58,8 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                             <p class="alert alert-danger" style="display: none"></p>
                             <form class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="numerologie-amour" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="regurl" value="<?= $form;?>" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="voyance" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
