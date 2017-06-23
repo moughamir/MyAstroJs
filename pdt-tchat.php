@@ -6,7 +6,7 @@
  */
 $form = 'pdt-tchat';
 include('include/init-affilbase.php');
-$pageName = "pdt-tchat";
+$regurl = "pdt-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
@@ -83,7 +83,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="<?= $pageName;?>" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="regurl" value="<?= $regurl;?>" />
                                 <input type="hidden" name="method" value="<?= $method;?>" />
                                 <input type="hidden" name="support" value="<?= $support;?>" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />

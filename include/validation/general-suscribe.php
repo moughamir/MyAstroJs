@@ -39,6 +39,7 @@ $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
 $formurl_kgs = '';
+$regformurl_kgs = isset($param['regurl']) ? $param['regurl'] : '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 // ---- TRACKING REFLEX
@@ -63,6 +64,8 @@ if(!$formurl){
     if(!isset($formurl_kgs)){
         addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    } elseif(empty($regformurl_kgs)){
+        $regformurl_kgs = $formurl_kgs;
     }
 }
 
@@ -248,7 +251,8 @@ if(empty($err)){
         'myastroIp'         => $ip,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
-        'myastroUrl'        => $formurl_kgs,
+        'myastroUrlOrigin'  => $formurl_kgs,
+        'myastroUrlRegistration' => $regformurl_kgs,
         'myastroGclid'      => $gclid,
         'reflexAffilateId'  => $rc_affiliateid,
         'reflexSource'      => $rc_source
@@ -408,48 +412,6 @@ if(empty($err)){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
     }
-
-/* ========================================================================== *
- *                                 SMARTFOCUS                                 *
- * ========================================================================== *
-
-    if(!$trouve){
-        $dateJoin = $today_date_smf;
-    } else {
-        $dateJoin = substr($user->history, 0, 10);
-    }
-
-    $params = array(
-        'DATEJOIN'        => $dateJoin,
-        'DATEMODIF'       => $today_date_smf,
-        'SITE'            => $website,
-        'SOURCE'          => $source,
-        'URL'             => $formurl,
-        'CLIENTURN'       => $question['code'],
-        'EMVADMIN2'       => $horoscope > 0 ? 'true' : 'false',
-        'EMVADMIN3'       => $partenaires > 0 ? 'true' : 'false',
-        'DATEOFBIRTH'     => $dtn_smf,
-        'SIGNE'           => $signe,
-        'FIRSTNAME'       => $prenom,
-        'EMVCELLPHONE'    => intval($tel),
-        'NUMEROTELEPHONE' => $tel,
-        'TITLE'           => $sexe,
-        'CODE'            => base_convert($idindex, 10, 32),
-        'IDASTRO'         => base_convert($idindex, 10, 32),
-        'IDKGESTION'      => $kgestion_id,
-        'FIRSTNAME2'      => $conjoint_prenom,
-        'SIGNE_P2'        => $conjoint_signe,
-        'VOYANT'          => $voyant,
-        'VOYANT_CODE'     => getPsychicCode($voyant),
-        'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
-        'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
-        'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
-        'GROUPE_FLAG_30'  => $param['compteur']['flag30']
-    );
-
-    $sf_insert = $smartFocus->insert($email, $params);
-    $bdd->update($bdd->users, ['smart_focus_insert' => $sf_insert], ['internal_id' => $idindex]);
-    $compteur->process();
 
 /* ========================================================================== *
  *                              MISE EN SESSION                               *

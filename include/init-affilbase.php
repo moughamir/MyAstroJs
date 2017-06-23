@@ -22,6 +22,7 @@ $api_exec = 0;
 
 $source = 'affil_base';
 $gclid = '';
+$url = $form;
 
 if($idkgestion){
     $kgestion = new APIKGestion;
@@ -29,6 +30,7 @@ if($idkgestion){
     if($tracking_data){
         $api_exec = 1;
         $source = $tracking_data->source;
+        $url = $tracking_data->url;
         $gclid = isset($tracking_data->gclid) ? $tracking_data->gclid : '';
     }
 }

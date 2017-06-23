@@ -133,7 +133,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-flash-ab" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="regurl" value="<?= $form;?>" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />

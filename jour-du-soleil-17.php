@@ -6,7 +6,7 @@
  */
 $form = 'jour-du-soleil-17';
 include('include/init-affilbase.php');
-$url = $form;
+$regurl = $form;
 $method = 'general-suscribe';
 $website = 'myastro.fr';
 $dri = 'jour-du-soleil-17-tel';
@@ -86,6 +86,7 @@ $assets = 'images_landing/jour-du-soleil-17/';
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="regurl" value="<?= $regurl;?>" />
                                 <input type="hidden" name="method" value="<?= $method;?>" />
                                 <input type="hidden" name="site" value="<?= $website;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />

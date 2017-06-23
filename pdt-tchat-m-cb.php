@@ -7,7 +7,7 @@
 $form = 'pdt-tchat-m-cb';
 include('include/init-affilbase.php');
 $assets = 'images_landing/pouvoir-des-trois';
-$pageName = "pdt-tchat-m-cb";
+$regurl = $form;
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
@@ -48,7 +48,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 <div class="FormContainer">
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="<?= $pageName; ?>" />
+                    <input type="hidden" name="source" value="<?= $url; ?>" />
+                    <input type="hidden" name="regurl" value="<?= $regurl; ?>" />
                     <input type="hidden" name="method" value="<?= $method; ?>" />
                     <input type="hidden" name="support" value="<?= $support; ?>" />
                     <input type="hidden" name="site" value="<?= $site; ?>" />
