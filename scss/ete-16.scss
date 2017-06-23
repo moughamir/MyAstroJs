@@ -50,8 +50,10 @@ div.logo {
 
 @mixin inline-list($margin, $padding){
     list-style-type: none;
-    display:flex;
-    justify-content:stretch;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: stretch;
+    -webkit-justify-content: stretch;
     &, & li {
       margin: $margin;
       padding: $padding;
@@ -138,9 +140,11 @@ a, a:visited, a:hover, a:active {
 /******************* HEADER ********************/
 /***********************************************/
 .headerContainer{
-    display:flex;
+    display: flex;
+    display: -webkit-flex;
     //flex-direction: row;
-    justify-content: center;    
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
 .SiteLogo{
@@ -159,9 +163,11 @@ a, a:visited, a:hover, a:active {
 
 .module_social{    
     //@include inline-list(0.5rem 0.25rem , 0 0.5rem);
-    display:flex;
+    display: flex;
+    display: -webkit-flex;
     justify-content: space-around;
-    list-style:none;
+    -webkit-justify-content: space-around;
+    list-style: none;
     li {
         margin:0 0.5rem;
         a{
@@ -412,8 +418,11 @@ h1.DRI-Intro-Title{
     margin:0 auto;
     height:100%;
     display: flex; /* contexte sur le parent */
+    display: -webkit-flex;
     flex-direction: column; /* direction d'affichage verticale */
+    -webkit-flex-direction: column; /* direction d'affichage verticale */
     justify-content: center; /* alignement vertical */
+    -webkit-justify-content: center; /* alignement vertical */
     input[type="text"],input[type="email"]{
         width:80%;
         margin:0 auto;
@@ -447,14 +456,19 @@ h1.DRI-Intro-Title{
     
 #slider-nav {
     ul{
-        display:flex;
+        display: flex;
+        display: -webkit-flex;
         justify-content: space-around;
+        -webkit-justify-content: space-around;
         list-style:none;
         
         a{
-            display:flex;
+            display: flex;
+            display: -webkit-flex;
             flex-direction: column;
-            justify-content:center;  
+            -webkit-flex-direction: column;
+            justify-content: center;
+            -webkit-justify-content: center;
             text-transform:uppercase;
             text-decoration:none;
             i{
@@ -509,16 +523,23 @@ h1.DRI-Intro-Title{
 
 /* ------------- CONTROLEURS --------------------- */ 
 .outside{
-    display:flex;
+    display: flex;
+    display: -webkit-flex;
     flex-direction: row;
-    justify-content:center;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    -webkit-justify-content: center;
     font-size:3rem;
     
-    a{
-        display:flex;
+    a {
+        display: flex;
+        display: -webkit-flex;
         flex-direction: column;
-        justify-content:center;
-        align-items:center;
+        -webkit-flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
         width:10rem;
         height:10rem;
         color:#fff;
@@ -677,9 +698,12 @@ input[type="radio"] {
     padding:0;
     
     li{
-        display:flex;
+        display: flex;
+        display: -webkit-flex;
         justify-content:center;
-        align-items:center;
+        -webkit-justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
         
         p{display:block; height:100%}
     }
@@ -1100,6 +1124,7 @@ and (orientation : landscape) {
     
     .headerContainer {
        flex-direction: column;
+       -webkit-flex-direction: column;
        width: 100%;
     }
     .SiteLogo {
@@ -1173,7 +1198,9 @@ and (orientation : landscape) {
     .vertical-align { width: 100%;}
     .mois {
         display: flex;
+        display: -webkit-flex;
         flex-direction: column;  
+        -webkit-flex-direction: column;  
         label {
             font-size: 5rem;
             margin: 0;

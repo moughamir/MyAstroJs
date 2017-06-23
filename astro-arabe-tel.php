@@ -2,7 +2,7 @@
     $form = 'astro-arabe';
     include('include/init-affilbase.php');
     
-    $url = $form;
+    $regurl = $form;
     $method = 'general-suscribe';
     $website = 'myastro.fr';
     $dri = 'astro-arabe-dri';
@@ -37,6 +37,7 @@
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="source" value="<?= $url;?>" />
+                            <input type="hidden" name="regurl" value="<?= $regurl;?>" />
                             <input type="hidden" name="method" value="<?= $method;?>" />
                             <input type="hidden" name="site" value="<?= $website;?>" />
                             <input type="hidden" name="affiliation" value="<?= $source;?>" />

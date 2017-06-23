@@ -91,7 +91,8 @@ $questions = array(
                     <p class="alert alert-danger" style="display: none"></p>
                     <form id="form1" class="ajax">
                         <!-- ########## identification formulaire ########## -->
-                        <input type="hidden" name="source" value="oracle-amour-2" />
+                        <input type="hidden" name="source" value="<?= $url;?>" />
+                        <input type="hidden" name="regurl" value="<?= $form;?>" />
                         <input type="hidden" name="method" value="general-suscribe" />
                         <input type="hidden" name="support" value="tarot" />
                         <input type="hidden" name="site" value="myastro.fr" />

@@ -2,7 +2,7 @@
 $form = 'printemps-17';
 include('include/init-affilbase.php');
 $question = ['code' => 'printemps17_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2017'];
-$pageName = "printemps-17";
+$regurl = $form;
 $method = "general-suscribe";
 $support = "voyance";
 $site   = 'myastro.fr';
@@ -809,13 +809,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                   <div class="form-container overlay" id="form-overlay"></div>
                   <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
-                    <input type="hidden" name="source" value="<?= $pageName; ?>" />
-                    <input type="hidden" name="method" value="<?= $method ?>" />
-                    <input type="hidden" name="support" value="<?= $support; ?>" />
-                    <input type="hidden" name="site" value="<?= $site; ?>" />
+                    <input type="hidden" name="source" value="<?= $url;?>" />
+                    <input type="hidden" name="regurl" value="<?= $regurl;?>" />
+                    <input type="hidden" name="method" value="<?= $method;?>" />
+                    <input type="hidden" name="support" value="<?= $support;?>" />
+                    <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                     <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                    <input type="hidden" name="dri" value="<?= $pageDri; ?>" />
+                    <input type="hidden" name="dri" value="<?= $pageDri;?>" />
                     <!-- ########## autres champs pré-remplis ########## -->
                     <input type="hidden" name="tel_needed" value="1" />
                     <input type="hidden" name="cguv" value="1" />
