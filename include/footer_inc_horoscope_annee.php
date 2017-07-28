@@ -42,9 +42,9 @@
                     <div class="row-fluid">
                         <nav class="span6 ">
                             <ul class="copyright-links">
-                                <li><a href="http://<?= ROOT_URL;?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
-                                <li><a href="http://<?= ROOT_URL;?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
-                                <li><a href="http://<?= ROOT_URL;?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/a-propos-de-myastro" rel="nofollow">À propos de Myastro</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/politique-de-confidentialite" rel="nofollow">Politique de confidentialité</a></li>
+                                <li><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/mentions-legales" rel="nofollow">Mentions légales</a></li>
                             </ul>
                         </nav>
                         <div class="span6">
