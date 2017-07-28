@@ -1,47 +1,27 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
-<head>
-    <title>déontologie myastro</title>
+<html lang="fr">
+    <head>
+        <title>Charte de déontologie | MyAstro</title>
 	<meta name="description" content="L'ensemble de règles qui s'appliquent à l'exercice de myastro." />
-<?php include('include/header_inc.php'); ?>
-   
-
-
-<div class="container-fluid" itemscope >
-
-        <!-- Main Content -->
-        <div class="row-fluid">
-
-                        <div class="article-content">
-                            <header>
-                                <div itemscope >
-                                    <ul class="breadcrumb" itemprop="breadcrumb">
-                                        <li><h4 class="h4"><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/"><i class="bo-icon-home"></i>Home</a><i class="icon-caret-right icon-fixed-width"></i></li>
-                                        <li>Déontologie</h4></li>
-                                    </ul>
-                                </div>
-								<div class="cat-widget-title">
-									
-										<h1 itemprop="headline">Déontologie</h1>
-									
-								</div>
-                               
-								<div class="row-fluid social-share-footer">
-									<span class="share-icon icon-caret-right"></span>
-
-									<div class="share-icons">
-										<p itemprop="headline">L'ensemble de règles qui s'appliquent à l'exercice de myastro.</p>
-									</div>
-
-								</div>
-                             
-
-                            </header>
-
-                            <span class="clearfix"></span>
-
+        
+        <?php include('include/header_inc.php'); ?>
+    
+        <div class="container-fluid" itemscope>
+            <!-- Main Content -->
+            <div class="row-fluid">
+                <div class="article-content">
+                    <header>
+                        <h1 itemprop="headline">Déontologie</h1>
+                        <div class="row-fluid social-share-footer">
+                            <span class="share-icon icon-caret-right"></span>
+                            <div class="share-icons">
+                                <p itemprop="headline">L'ensemble de règles qui s'appliquent à l'exercice de myastro.</p>
+                            </div>
+                        </div>
+                    </header>
+                    <span class="clearfix"></span>
 <!-- ------------------------------- CONTENU ------------------------------- -->
-            <div style="margin-left:10px;">
+                    <div class="row-fluid">
 <h2 style="color:#DC4796; font-weight:bold; font-size:13px; text-align:left;">L'équipe de mediums et voyants auditifs My Astro s'engage à respecter avec rigueur la présente charte de déontologie
 :</h2>
 <h3>Article 1 – Sécurité</h3>
