@@ -14,11 +14,11 @@ $retour = array();
 $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
-    'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?email=[EMAIL]', 'cookie' => false ],
-    'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?email=[EMAIL]', 'cookie' => true ],
-    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?email=[EMAIL]', 'cookie' => false ],
+    'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
+    'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
@@ -39,6 +39,7 @@ $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
 $formurl_kgs = '';
+$regformurl_kgs = isset($param['regurl']) ? $param['regurl'] : '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 // ---- TRACKING REFLEX
@@ -63,6 +64,8 @@ if(!$formurl){
     if(!isset($formurl_kgs)){
         addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    } elseif(empty($regformurl_kgs)){
+        $regformurl_kgs = $formurl_kgs;
     }
 }
 
@@ -248,7 +251,8 @@ if(empty($err)){
         'myastroIp'         => $ip,
         'myastroWebsite'    => $website,
         'myastroSource'     => $source,
-        'myastroUrl'        => $formurl_kgs,
+        'myastroUrlOrigin'  => $formurl_kgs,
+        'myastroUrlRegistration' => $regformurl_kgs,
         'myastroGclid'      => $gclid,
         'reflexAffilateId'  => $rc_affiliateid,
         'reflexSource'      => $rc_source
@@ -410,48 +414,6 @@ if(empty($err)){
     }
 
 /* ========================================================================== *
- *                                 SMARTFOCUS                                 *
- * ========================================================================== *
-
-    if(!$trouve){
-        $dateJoin = $today_date_smf;
-    } else {
-        $dateJoin = substr($user->history, 0, 10);
-    }
-
-    $params = array(
-        'DATEJOIN'        => $dateJoin,
-        'DATEMODIF'       => $today_date_smf,
-        'SITE'            => $website,
-        'SOURCE'          => $source,
-        'URL'             => $formurl,
-        'CLIENTURN'       => $question['code'],
-        'EMVADMIN2'       => $horoscope > 0 ? 'true' : 'false',
-        'EMVADMIN3'       => $partenaires > 0 ? 'true' : 'false',
-        'DATEOFBIRTH'     => $dtn_smf,
-        'SIGNE'           => $signe,
-        'FIRSTNAME'       => $prenom,
-        'EMVCELLPHONE'    => intval($tel),
-        'NUMEROTELEPHONE' => $tel,
-        'TITLE'           => $sexe,
-        'CODE'            => base_convert($idindex, 10, 32),
-        'IDASTRO'         => base_convert($idindex, 10, 32),
-        'IDKGESTION'      => $kgestion_id,
-        'FIRSTNAME2'      => $conjoint_prenom,
-        'SIGNE_P2'        => $conjoint_signe,
-        'VOYANT'          => $voyant,
-        'VOYANT_CODE'     => getPsychicCode($voyant),
-        'GROUPE_FLAG_5'   => $param['compteur']['flag5'],
-        'GROUPE_FLAG_7'   => $param['compteur']['flag7'],
-        'GROUPE_FLAG_15'  => $param['compteur']['flag15'],
-        'GROUPE_FLAG_30'  => $param['compteur']['flag30']
-    );
-
-    $sf_insert = $smartFocus->insert($email, $params);
-    $bdd->update($bdd->users, ['smart_focus_insert' => $sf_insert], ['internal_id' => $idindex]);
-    $compteur->process();
-
-/* ========================================================================== *
  *                              MISE EN SESSION                               *
  * ========================================================================== */
 
@@ -513,6 +475,7 @@ if(empty($err)){
     }
 
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
+    $redirect_url = preg_replace('#\[IDKGESTION\]#', $kgestion_id, $redirect_url );
 
     $retour[$redirect_method] = $redirect_url;
 

@@ -6,7 +6,7 @@
  */
 $form = 'myastro-tchat';
 include('include/init-affilbase.php');
-$url = $form;
+$regurl = $form;
 $method = 'general-suscribe';
 $support = 'voyance';
 $site = 'myastro.fr';
@@ -47,6 +47,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 <form id="form-container" class="ajax">
                     <!-- ########## identification formulaire ########## -->
                     <input type="hidden" name="source" value="<?= $url;?>" />
+                    <input type="hidden" name="regurl" value="<?= $regurl;?>" />
                     <input type="hidden" name="method" value="<?= $method;?>" />
                     <input type="hidden" name="support" value="<?= $support;?>" />
                     <input type="hidden" name="site" value="<?= $site;?>" />

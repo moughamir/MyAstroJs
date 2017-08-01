@@ -53,9 +53,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="http://<?= ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
-                 --><a href="http://<?= ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="http://<?= ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
+                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
                 </nav>
             </div>
         </header>
@@ -133,7 +133,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-flash-ab" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="regurl" value="<?= $form;?>" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
