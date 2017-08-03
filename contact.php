@@ -1,4 +1,4 @@
-<?php
+<?php/*
 session_start(); 
 	$hote='localhost';
 	$uti='myastro';
@@ -45,7 +45,7 @@ if(($_POST['captcha']) && isset($_POST['message']) && isset($_POST['email'])  &&
 			}
 	
 }
-	
+	*/
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
