@@ -1,4 +1,6 @@
-<?php/*
+<?php
+    $nom = $prenom = $email = $tel = $sujet = $msg ='';
+/*
 session_start(); 
 	$hote='localhost';
 	$uti='myastro';
@@ -48,101 +50,54 @@ if(($_POST['captcha']) && isset($_POST['message']) && isset($_POST['email'])  &&
 	*/
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
-<head>
-    <title>contact</title>
-	<meta name="description" content="page 404 Myastro " />
-    <meta name="robots" content="noindex,nofollow">
- 
-<?php include('include/header_inc.php'); ?>
-   
-
-
-<div class="container-fluid" itemscope >
-<header>
-                                
-								<div class="cat-widget-title">
-									
-										<h1 itemprop="headline">Page de contact</h1>
-									
-								</div>
-                               
-	<br><br>							
-                             
- </header>
-        <!-- Main Content -->
-      <div class="row-fluid">
-	  
-	  
-                                                            
-								<h2><?= $message;?></h2><br>							
-															<form method="POST" action="contact" class="login-form">
-															<div class="input-prepend input-block-level">
-                                                                    <label>Nom:</label>
-                                                                    <input style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="nom" class="span10" type="name" placeholder="<?= $nom;?>" required="required" />
-                                                                </div>
-																
-										<div class="input-prepend input-block-level">
-                                                                    <label>Prénom:</label>
-                                                                    <input style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="prenom" class="span10" type="name" placeholder="<?= $prenom;?>" required="required" />
-                                                                </div>	
-
-<div class="input-prepend input-block-level">
-                                                                    <label>Téléphone:</label>
-                                                                    <input style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="phone" class="span10" type="phone" placeholder="<?= $phone;?>" required="required" />
-                                                                </div>											<div class="input-prepend input-block-level">
-                                                                    <label>Sujet:</label>
-                                                                    <input style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="sujet" class="span10" type="name" placeholder="<?= $sujet;?>" required="required" />
-                                                                </div>					
-															
-                                                                <div class="input-prepend input-block-level">
-                                                                    <label>Votre Email:</label>
-                                                                    <input style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:60%;"id="Email1" name="email" class="span10" type="email" value="<?= $mail;?>" required="required" />
-                                                                </div>
-																
-																
-																
-																
-																
-																<div class="input-prepend input-block-level">
-                                                                    									
-																	  <label>Message:</label>
-																	  
-                                                                    <textarea style="color:#ffffff;background-color: #1A1A1A;
-border: 1px solid #3D3D3D;font-size: 11px;
-font-weight: 400;width:59%;height:250px;" id="Message" name="message"  required="required" ><?= $message_mail;?></textarea>
-
-                                                                </div>
-                                                              
-
-   <div class="input-prepend input-block-level">
-                                                                    									
-																	  <label>Veuillez saisir les caractères figurant dans l'image ci-dessous.</label>
-																	  
-                                                                    <img src="captcha.php" /><br />
-					<input type="text" name="captcha" style="width:70px"/>
-
-                                                                </div>                                                             
-
-                                                                <button style="margin-left:50%;" type="submit" name="valider" class="btn-theme">Valider</button>
-                                                            </form>
-															
-														
-															
-															
-                                                        </div>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Formulaire de contact | MyAstro</title>
+        <meta name="robots" content="noindex,nofollow" />
+            
+        <?php include('include/header_inc.php');?>
     
-	
-   
-<?php include('include/footer_inc_index.php'); ?>
+        <div class="container-fluid">
+            <!-- Main Content -->
+            <header>
+                <h1 itemprop="headline">Page de contact</h1>
+            </header>
+            <div class="row-fluid">
+                <div>
+                    <form method="POST" action="contact">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" class="form-control" value="<?= $nom;?>" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" value="<?= $prenom;?>" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Téléphone</label>
+                            <input type="text" id="tel" name="tel" class="form-control" value="<?= $tel;?>" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" value="<?= $email;?>" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <input type="text" id="sujet" name="sujet" class="form-control" value="<?= $sujet;?>" required />
+                        </div>			
+                        <div class="form-group">
+                            <label for="msg">Message</label>
+                            <textarea id="msg" name="msg" class="form-control" required><?= $msg;?></textarea>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LezqysUAAAAABmZH8xdpdDB5vHX5oASsndrD_KL"></div>
+                        <button type="submit" name="valider" class="btn btn-primary">Valider</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+    
+	<?php include('include/footer_inc_index.php');?>
    
