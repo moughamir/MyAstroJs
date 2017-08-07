@@ -27,7 +27,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
         
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" type="text/css" href="css/numerologie-amour-stval.css" />
+        <link rel="stylesheet" type="text/css" href="css/numerologie-amour.min.css" />
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
