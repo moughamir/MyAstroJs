@@ -150,6 +150,28 @@ $(document).ready(function(){
                         document.location.replace(response.url);
                     }, redirect_delay);
                 }
+                if(response.hasOwnProperty('client_id')){
+
+                    $("#client_id").val(response.client_id);
+                    $(".next").trigger("click");
+
+                }
+                if(response.hasOwnProperty('rdv_added')){
+
+               var msg_done= '<p class="alert alert-success">\
+                <b><i class="fa fa-check"><img src="/images/success-spinner.gif" /></i>'+response.rdv_added+'</b></p>';
+
+                    if (!use_modal){
+                        form_overlay.html(msg_done);
+                        console.log("form_overlay.html");
+
+                    } else {
+                        $('#modal').html(msg_done);
+                        $('#modal').modal('show');
+
+                    }
+
+                }
                 if(response.hasOwnProperty('error')){
                     // Affichage des erreurs
                     var alert_form_errors = $(alert_error);

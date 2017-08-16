@@ -6,6 +6,7 @@
  */
 class APIKGestion {
     
+   // const BASE_URL = 'https://kgestion.dev.zol.fr/';
     const BASE_URL = 'https://kgestion.kg-com.fr/';
     const GET = 'GET';
     const POST = 'POST';
@@ -31,6 +32,9 @@ class APIKGestion {
         if(getenv('MYASTRO_CURL_NOSSL')){
             curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
         }
+
+        /////////////////////////////////////////////////////////////////////////
+
         curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl_connection, CURLOPT_FAILONERROR, true);
         
@@ -50,17 +54,37 @@ class APIKGestion {
 
         // close the connection
         curl_close($curl_connection);
+
+        if(strpos($url,'planningSelection') === false){
+            return json_decode($result);
+
+        }else{
+            return $result;
+
+        }
         
-        return json_decode($result);
     }
     
     public function insertUser($data)
     {
+        //$url = $this::BASE_URL.'app_dev.php/client/api/client';
         $url = $this::BASE_URL.'client/api/client';
-        
         return $this->request($this::POST, $url, $data);
     }
-    
+
+    public function insertOnlineRDV($data)
+    {
+        //$url = $this::BASE_URL.'app_dev.php/client/api/client/onlineRdv';
+        $url = $this::BASE_URL.'client/api/client/onlineRdv';
+        return $this->request($this::POST, $url, $data);
+    }
+
+    public function insertUserDRI($data)
+    {
+        //$url = $this::BASE_URL.'app_dev.php/client/api/client/dri';
+        $url = $this::BASE_URL.'client/api/client/dri';
+        return $this->request($this::POST, $url, $data);
+    }
     public function updateUser($id, $data)
     {
         $url = $this::BASE_URL.'client/api/client/'.$id;
@@ -80,5 +104,17 @@ class APIKGestion {
         $url = $this::BASE_URL.'client/api/client/tracking/'.$id;
         
         return $this->request($this::GET, $url);
+    }
+
+    public function getPlanningSelection($jour = null,$periode = null)
+    {
+        //$url = $this::BASE_URL."app_dev.php/client/api/client/planningSelection";
+        $url = $this::BASE_URL."client/api/client/planningSelection";
+        $data = array();
+        if(!is_null($jour) && !is_null($periode)){
+            $data = array("jour" => $jour ,"periode" => $periode);
+        }
+
+        return $this->request($this::POST, $url,$data);
     }
 }

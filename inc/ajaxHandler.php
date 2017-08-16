@@ -14,7 +14,7 @@ include(realpath('../include/tools.php'));
 $param = array();
 // On récupère les compteurs et on le stock. On fera l'update après être certain d'avoir validé le formulaire.
 $compteur = new compteur();
-$param['compteur'] = $compteur->get(); 
+$param['compteur'] = $compteur->get();
 
 if(isset($_POST) && $_POST['data'] != null){
     foreach(explode('&',urldecode($_POST['data'])) as $split) {
@@ -29,7 +29,7 @@ if(isset($_POST) && $_POST['data'] != null){
             $param[$split_e[0]] = $split_e[1];
         }
     }
-    
+
     switch($param['method']){
         case 'tarot-landing' :
             require_once(realpath('../include/validation/tarot-landing.php'));
@@ -73,14 +73,21 @@ if(isset($_POST) && $_POST['data'] != null){
         case 'general-suscribe' :
             require_once(realpath('../include/validation/general-suscribe.php'));
             break;
+        case 'client_web' :
+            require_once(realpath('../rdv_web/client_web.php'));
+            break;
+        case 'consultation_web' :
+            require_once(realpath('../rdv_web/consultation_web.php'));
+            break;
         default :
             die(json_encode('No method transmitted'));
             break;
     }
-    
-/* ========================================================================== * 
+
+/* ========================================================================== *
  *                                 REDIRECTION                                *
  * ========================================================================== */
+
     if(empty($err)){
         $dri = (isset($param['dri'])) ? $param['dri'] : false;
         $dri2 = (isset($param['dri2'])) ? $param['dri2'] : 'merci-voyance';
@@ -103,6 +110,7 @@ if(isset($_POST) && $_POST['data'] != null){
             $redirect_url = $dri2;
         }
 
+        //$redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
         $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
         die(json_encode(array('url' => $redirect_url)));
