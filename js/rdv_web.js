@@ -122,6 +122,15 @@ $(document).ready(function () {
 
     $("#planning_maj").on("click",function () {
 
+        alert_loading = '\
+            <p class="alert alert-warning">\
+                <b><i class="fa fa-refresh fa-spin"><img src="/images/warning-spinner.gif" /></i></b> \
+                Chargement ...\
+            </p>';
+
+        $('#modal').html(alert_loading);
+        $('#modal').modal('show');
+
         $.post("rdv_web/ajaxPlaning.php",
             {
                 jour : $("#form_jour").val(),
@@ -130,6 +139,8 @@ $(document).ready(function () {
 
             $(".row:last").html(data);
             $(".hidden").remove();
+            $('#modal').modal('hide');
+
 
         });
 
