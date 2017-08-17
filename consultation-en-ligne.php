@@ -177,8 +177,8 @@ $questions = array(
                 <label for="tel" class="FormField-Label">Téléphone</label>
                 <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
             </div>
-            <button name="next" class="submit action-button" value="Next" type="submit" >Etape suivante</button>
-            <button name="next" class="next action-button" value="Next" type="button" style="display: none">Etape suivante</button>
+            <button name="next" class="submit action-button" value="Next" type="submit" >Étape suivante</button>
+            <button name="next" class="next action-button" value="Next" type="button" style="display: none">Étape suivante</button>
         </fieldset>
     </form>
 
@@ -192,8 +192,8 @@ $questions = array(
             <?= $vue ?>
             </div>
 
-            <input type="button" name="previous" class="previous action-button" value="Precedent" />
-            <input type="button" name="next" class="nextSecond action-button" value="Etape suivante" >
+            <input type="button" name="previous" class="previous action-button" value="Précédent" />
+            <input type="button" name="next" class="nextSecond action-button" value="Étape suivante" >
         </fieldset>
         <fieldset style="display: none">
 
@@ -210,7 +210,7 @@ $questions = array(
             </div>
             <div class="FormField">
                 <label for="name" class="FormField-Label">Numéro de la carte</label>
-                <input type="text" id="carte_num" name="carte_num" class="FormField-Input" required placeholder="Numéro de la carte" />
+                <input type="text" id="carte_num" name="carte_num" class="FormField-Input js-check-luhn" required placeholder="Numéro de la carte" />
             </div>
             <div class="FormField">
                 <label for="name" class="FormField-Label">Expiration</label>
@@ -244,7 +244,7 @@ $questions = array(
                 <label for="name" class="FormField-Label">Cryptogramme de sécurité	</label>
                 <input type="text" id="crypto" name="crypto" class="FormField-Input" required placeholder="Cryptogramme de sécurité"/>
             </div>
-            <input type="button" name="previous" class="previousSecond action-button" value="Precedent" />
+            <input type="button" name="previous" class="previousSecond action-button" value="Précédent" />
             <input type="submit" name="submit" class="submit action-button" value="Valider" />
             <div class="secureImages">
                 <img src="../images/mastercard-visa.png" alt="Mastercard &amp; Visa">

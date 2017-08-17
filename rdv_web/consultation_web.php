@@ -29,14 +29,14 @@ $planning_horaire_selection = isset($param['planning_horaire_selection']) ? $par
  */
 
 if($carte_num == ''){
-    $err['carte_num'] = 'Numero de la carte bancaire obligatoire';
+    $err['carte_num_req'] = 'Numéro de la carte bancaire obligatoire';
 }
 if($carte_num != '' && !preg_match("$[0-9]{16}$", $carte_num)) {
-    $err['carte_num'] = 'Numero de la carte bancaire doit contenir 16 chiffres.';
+    $err['carte_num'] = 'Numéro de la carte bancaire doit contenir 16 chiffres.';
 }
 
 if($crypto == ''){
-    $err['crypto'] = 'cryptogramme de sécurité  obligatoire.';
+    $err['crypto_req'] = 'cryptogramme de sécurité  obligatoire.';
 }
 
 if($crypto != '' && !preg_match("$[0-9]{3}$", $crypto)){
@@ -44,16 +44,24 @@ if($crypto != '' && !preg_match("$[0-9]{3}$", $crypto)){
 }
 
 if($planning_horaire_selection == ''){
-    $err['planning_horaire_selection '] = 'Veuillez choisir l\'horaire de la consultation.';
+    $err['planning_horaire_selection'] = 'Veuillez choisir l\'horaire de la consultation.';
 }
 
 if($client_id == '0'){
     $err['client_id '] = 'Veuillez choisir l\'horaire de la consultation.';
 }
 
+if(is_null($expiration_mois) || $expiration_mois == ''){
+    $err['expiration_mois'] = 'le mois d\'expiration de la carte bancaire est obligatoire.';
+}
+
+if(is_null($expiration_annee) || $expiration_annee == '') {
+    $err['expiration_annee'] = 'l\'année d\'expiration de la carte bancaire est obligatoire.';
+}
+
 $current_date = new DateTime();
 if($current_date->format('Y') > $expiration_annee  || ($current_date->format('Y') == $expiration_annee && $current_date->format('m') > $expiration_mois)){
-    $err['expiration '] = 'la date d\'expiration de la carte bancaire est invalide.';
+    $err['expiration'] = 'la date d\'expiration de la carte bancaire est invalide.';
 }
 
 
