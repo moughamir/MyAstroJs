@@ -3,9 +3,10 @@ body {
     background-image: url(../images/bg/bg5.png);
 }
 
+
 .col-sm-6 .table{
     background: #fffefe;
-    color: #000000;
+    /*color: #000000;*/
 }
 
 #planning_selection .primary .indicateur {

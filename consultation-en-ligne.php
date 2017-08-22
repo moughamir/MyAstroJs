@@ -19,6 +19,7 @@ $questions = array(
     )
 );
 
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 ?>
 <!DOCTYPE html>
@@ -48,6 +49,7 @@ $questions = array(
         <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_5.ace-skins.min_12.css" type="text/css" rel="stylesheet" />
         <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_bootstrap-datetimepicker.min_13.css" type="text/css" rel="stylesheet" />
         <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_prettify_15.css" type="text/css" rel="stylesheet" />
+        <link href="<?= APIKGestion::BASE_URL ?>css/main_part_1_6.additionnals_1.css" type="text/css" rel="stylesheet" />
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -93,11 +95,13 @@ $questions = array(
             <input type="hidden" name="source" value="consultation-en-ligne" />
             <input type="hidden" name="method" value="client_web" />
             <input type="hidden" name="support" value="rdv-web" />
-            <input type="hidden" name="affiliation" value="Affil Base" />
+            <input type="hidden" name="affiliation" value="Adwords" /> <!--Affil Base-->
             <input type="hidden" name="dri" value="consultation_web" />
             <input type="hidden" name="redirect_method" value="reload_form" />
             <input type="hidden" name="cguv" value="1" />
             <input type="hidden" name="partenaires" value="1" />
+            <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+
             <div class="FormField">
                 <label for="name" class="FormField-Label">Prénom</label>
                 <input type="text" id="name" name="prenom" class="FormField-Input" required placeholder="Prénom"/>

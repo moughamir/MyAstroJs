@@ -237,7 +237,6 @@ $(document).ready(function () {
                 $(".hidden").remove();
                 $('#modal').modal('hide');
 
-
             },
         });
 
@@ -258,8 +257,8 @@ $(document).ready(function () {
 
     $("#planning_selection .primary .indicateur").each(function () {
 
-        $(this).parent().parent().css("background","#1871b9");
-        $(this).parent().parent().css("color","#fff");
+       /* $(this).parent().parent().css("background","#1871b9");
+        $(this).parent().parent().css("color","#fff");*/
 
     });
 
