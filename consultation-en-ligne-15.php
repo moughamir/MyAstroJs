@@ -19,8 +19,6 @@ $questions = array(
     )
 );
 
-$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
-
 ?>
 <!DOCTYPE html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
@@ -95,12 +93,12 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <input type="hidden" name="source" value="consultation-en-ligne" />
             <input type="hidden" name="method" value="client_web" />
             <input type="hidden" name="support" value="rdv-web" />
-            <input type="hidden" name="affiliation" value="Adwords" /> <!--Affil Base-->
+            <input type="hidden" name="affiliation" value="Reflex Cash" />
             <input type="hidden" name="dri" value="consultation_web" />
             <input type="hidden" name="redirect_method" value="reload_form" />
             <input type="hidden" name="cguv" value="1" />
             <input type="hidden" name="partenaires" value="1" />
-            <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+
 
             <div class="FormField">
                 <label for="name" class="FormField-Label">Prénom</label>
