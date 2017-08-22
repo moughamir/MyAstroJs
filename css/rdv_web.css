@@ -3,13 +3,22 @@ body {
     background-image: url(../images/bg/bg5.png);
 }
 
+.col-sm-6 .table{
+    background: #fffefe;
+    color: #000000;
+}
+
+#planning_selection .primary .indicateur {
+ /* color: #E51E85;*/
+}
+
 label.primary {
 
-    width: 100%;
+    width : 100%;
 
 }
 
-.datepicker{
+.datepicker {
     width: 20%;
 }
 .p-title {

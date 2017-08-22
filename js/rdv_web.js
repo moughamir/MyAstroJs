@@ -3,6 +3,96 @@
  */
 $(document).ready(function () {
 
+
+
+    /* -----------------------validtae CB -----------------------------*/
+
+    var luhnChk = (function (arr) {
+        return function (ccNum) {
+            var
+                len = ccNum.length,
+                bit = 1,
+                sum = 0,
+                val;
+
+            while (len) {
+                val = parseInt(ccNum.charAt(--len), 10);
+                sum += (bit ^= 1) ? arr[val] : val;
+            }
+
+            return sum && sum % 10 === 0;
+        };
+    }([0, 2, 4, 6, 8, 1, 3, 5, 7, 9]));
+
+    var prePaidChk = function (ccNum) {
+        if (!ccNum.length) {
+            return false;
+        }
+        var prePaid = [
+            "457737",
+            "554951",
+            "475742",
+            "530446",
+            "497010",
+            "538667",
+            "541275",
+            "531306",
+            "533935",
+            "531422",
+            "529565",
+            "533840",
+            "530558",
+            "554700",
+            "533900"
+        ];
+
+        return -1 !== $.inArray(ccNum.substr(0, 6), prePaid);
+    };
+
+    var luhnClean = function (string) {
+        return string.replace(/\D/g, '');
+    };
+
+    var luhnTimer = (function () {
+        var timer = null;
+        return function tmp($obj) {
+
+            if (null !== timer) {
+                clearTimeout(timer);
+                timer = null;
+            }
+            timer = setTimeout(function () {
+                var value = luhnClean($obj.val());
+                var $parent = $obj.parent();
+                var luhnResult = luhnChk(value);
+                var prePaidResult = prePaidChk(value);
+                var resultClass = luhnResult ? 'js-luhn-input-ok' : (prePaidResult ? 'js-luhn-input-fatal' : 'js-luhn-input-error');
+                $obj.parent().find('.js-luhn-text-error').remove();
+                $obj.parent().find('.js-luhn-text-fatal').remove();
+                $obj.removeClass('js-luhn-input-ok').removeClass('js-luhn-input-error').removeClass('js-luhn-input-fatal');
+                if (value.length) {
+                    if (!luhnResult) {
+                        $obj.parent().append('<div class="js-luhn-text-error">CB invalide !</div>');
+                    }
+                    if (prePaidResult) {
+                        $obj.parent().append('<div class="js-luhn-text-fatal">CB prépayé !!!</div>');
+                    }
+                    $obj.addClass(resultClass);
+                }
+            }, 500);
+        };
+    })();
+
+    $(document).on('keyup', '.js-check-luhn', function (ev) {
+        luhnTimer($(this));
+    });
+
+    /*--------------------------------------------end Validate CB -----------------*/
+
+
+    /* ---------------------------FORM MULTI STEP -----------------------------*/
+
+
     var current_fs, next_fs, previous_fs;
     var left, opacity, scale;
     var animating;
@@ -113,8 +203,10 @@ $(document).ready(function () {
         });
     });
 
+    /* ---------------------------FORM PLANNING RDV -----------------------------*/
 
-    $("#form_jour").change(function () {
+
+    $("#form_jour,#form_periode").change(function () {
 
         $("#planning_maj").trigger("click");
 
@@ -131,18 +223,43 @@ $(document).ready(function () {
         $('#modal').html(alert_loading);
         $('#modal').modal('show');
 
-        $.post("rdv_web/ajaxPlaning.php",
-            {
+        $.ajax({
+          type: "POST",
+          global: false,
+          url: "rdv_web/ajaxPlaning.php",
+          data:  {
                 jour : $("#form_jour").val(),
                 periode : $("#form_periode").val()
-            }).done(function (data) {
+          },
+          success: function (data) {
 
-            $(".row:last").html(data);
-            $(".hidden").remove();
-            $('#modal').modal('hide');
+                $(".row:last").html(data);
+                $(".hidden").remove();
+                $('#modal').modal('hide');
 
 
+            },
         });
+
+    });
+
+    /* --- Datepicker --- */
+
+    $('.date-picker').each(function () {
+        $(this).datepicker({
+            format            : "dd/mm/yyyy",
+            language          : "fr",
+            todayHighlight    : true,
+            startDate         : $(this).data('startdate'),
+            daysOfWeekDisabled: $(this).data('daysofweekdisabled')
+        });
+    });
+
+
+    $("#planning_selection .primary .indicateur").each(function () {
+
+        $(this).parent().parent().css("background","#1871b9");
+        $(this).parent().parent().css("color","#fff");
 
     });
 

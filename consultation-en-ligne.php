@@ -1,4 +1,5 @@
 <?php
+
 include(realpath('include/tools.php'));
 include(realpath('rdv_web/planning.php'));
 
@@ -199,8 +200,8 @@ $questions = array(
 
             <h2 class="fs-title">Coordonnées bancaires</h2>
             <h3 class="fs-subtitle"></h3>
-            <div class="FormField">
-                <label for="name" class="FormField-Label">Nom du propriétaire de la carte</label>
+            <label for="name" class="FormField-Label">Nom du propriétaire de la carte</label>
+            <div class="FormField-TableInputContainer">
                 <div class="FormField-TableInputContainer-Cell">
                     <input type="text" id="carte_prenom" name="carte_prenom" class="FormField-Input" required placeholder="Prenom" />
                 </div>
@@ -313,7 +314,6 @@ $questions = array(
     <script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_chosen.jquery.min_16.js"></script>
     <script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_jquery.dataTables.datetime_17.js"></script>
     <script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_jquery.easy-pie-chart.min_18.js"></script>
-    <script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_main_20.js"></script>
     <script src="js/rdv_web.js"></script>
 
 
