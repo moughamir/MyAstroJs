@@ -135,11 +135,24 @@ if (isset($param['question_code'])){
         'situation' => $mind
     );
 }
+
 /* ========================================================================== *
  *                           TRAITEMENT DU CONJOINT                           *
  * ========================================================================== */
 
 $conjoint_prenom  = $conjoint_dtn_bdd = $conjoint_dtn_smf = $conjoint_dtn_ses = $conjoint_signe = '';
+
+if($question['conjoint']){
+// Prénom ----------------------------------------------------------------------
+    $conjoint_prenom  = isset($param['conjoint']) ? $param['conjoint'] : '';
+    $test_prenom = trim($conjoint_prenom, ' ');
+    if(empty($test_prenom)){
+        $err['conjoint'] = 'Merci dʼindiquer le prénom de lʼêtre aimé.';
+    } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
+        $err['conjoint'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom de lʼêtre aimé.';
+    }
+    unset($test_prenom);
+}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                          *
