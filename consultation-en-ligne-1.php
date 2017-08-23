@@ -92,10 +92,10 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
         <fieldset >
             <h2 class="fs-title" >Remplissez Vos informations Personnelles!</h2>
             <input type="hidden" name="site" value="MyAstro" />
-            <input type="hidden" name="source" value="consultation-en-ligne" />
+            <input type="hidden" name="source" value="consultation-en-ligne-1" />
             <input type="hidden" name="method" value="client_web" />
             <input type="hidden" name="support" value="rdv-web" />
-            <input type="hidden" name="affiliation" value="Adwords" /> <!--Affil Base-->
+            <input type="hidden" name="affiliation" value="Adwords" />
             <input type="hidden" name="dri" value="consultation_web" />
             <input type="hidden" name="redirect_method" value="reload_form" />
             <input type="hidden" name="cguv" value="1" />
