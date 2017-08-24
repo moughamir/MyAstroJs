@@ -3,7 +3,9 @@ body {
     background-image: url(../images/bg/bg5.png);
 }
 
-
+#planning_selection .table{
+    margin-bottom: 30px!important;
+}
 .col-sm-6 .table{
     background: #fffefe;
     /*color: #000000;*/
