@@ -92,6 +92,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <input type="hidden" name="prenom" id="js-name" /><!-- rempli par pouvoir-des-trois.js -->
                                 <input type="hidden" name="question_code" id="js-question" /><!-- rempli par pouvoir-des-trois.js -->
