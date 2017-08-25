@@ -3,13 +3,14 @@
 
 $source     = $_SESSION['affiliation'];
 $formulaire = $_SESSION['source'];
-$email      = $_SESSION['email'];
+$email      = url_encode($_SESSION['email']);
+$trackid    = $_SESSION['goformedia_track'];
 $log_file   = 'logs-perso/conversion-'.$source.'.txt';
 
 $urls_conversion = array(
-    'tarot-flash-gf' => 'http://www.adv-sbpgreen-x.com/tag.php?type=lead&idc=8511&ref='.$email,
-    'pdt-tchat-gf' => 'http://www.adv-sbpgreen-x.com/tag.php?type=lead&idc=8510&ref='.$email,
-    'tarot-direct-gf' => 'http://www.adv-sbpgreen-x.com/tag.php?type=lead&idc=8509&ref='.$email,
+    'tarot-flash-gf' => 'http://www.adv-sbpgreen-x.com/tag_sponsorboost.php?type=lead&idc=8511&ref='.$email.'&track='.$trackid,
+    'pdt-tchat-gf' => 'http://www.adv-sbpgreen-x.com/tag_sponsorboost.php?type=lead&idc=8510&ref='.$email.'&track='.$trackid,
+    'tarot-direct-gf' => 'http://www.adv-sbpgreen-x.com/tag_sponsorboost.php?type=lead&idc=8509&ref='.$email.'&track='.$trackid,
 );
 
 if($source == 'goformedia' && isset($_SESSION['conversion']) && $_SESSION['conversion'] == 1){

@@ -4,6 +4,7 @@
  * -----------------------------
  * Created on : 03 août 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
@@ -14,7 +15,11 @@ $site = "myastro.fr";
 $source = "goformedia";
 $dri = "tarot-direct-merci";
 $dri2 = "tarot-direct-dri-tog";
+
 include('include/questions/tarot-direct.php');
+
+$_SESSION['goformedia_track'] = isset($_GET['track']) ? $_GET['track'] : '';
+
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
