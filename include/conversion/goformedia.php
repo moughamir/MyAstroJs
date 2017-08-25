@@ -3,7 +3,7 @@
 
 $source     = $_SESSION['affiliation'];
 $formulaire = $_SESSION['source'];
-$email      = url_encode($_SESSION['email']);
+$email      = urlencode($_SESSION['email']);
 $trackid    = $_SESSION['goformedia_track'];
 $log_file   = 'logs-perso/conversion-'.$source.'.txt';
 
