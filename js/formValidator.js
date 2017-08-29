@@ -52,6 +52,7 @@ $(document).ready(function(){
     // Soumission du formulaire
     $(document).on('submit', 'form.ajax', function(e){
         e.preventDefault();
+        var ll= 1;
         form = $(this);
         form_container = $('#form-container');
         form_overlay = $('#form-overlay');

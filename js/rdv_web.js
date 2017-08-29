@@ -138,7 +138,7 @@ $(document).ready(function () {
                 left = (now * 50)+"%";
                 opacity = 1 - now;
                 current_fs.css({'transform': 'scale('+scale+')'});
-                next_fs.css({'left': left, 'opacity': opacity});
+                next_fs.css({'left': '10%', 'opacity': opacity});
             },
             duration: 800,
             complete: function(){

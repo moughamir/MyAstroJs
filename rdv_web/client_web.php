@@ -82,7 +82,11 @@ if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\
 // Numéro de téléphone & Pays --------------------------------------------------
 $partenaires = isset($param['partenaires']) ? 1 : 0;
 $horoscope   = isset($param['horoscope']) && !empty($param['horoscope']) ? 1 : 0;
-$param["pays"] = "France";
+
+$cguv        = isset($param['cguv']) ? $param['cguv'] : false;
+if(!$cguv){
+    $err['cguv'] = 'Veuillez accepter les conditions générales';
+}
 list($tel, $pays) = form_phone($err, $param);
 
 // Question posée --------------------------------------------------------------
