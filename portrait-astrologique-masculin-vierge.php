@@ -73,7 +73,7 @@ ini_set('max_execution_time', 0);
 include('lib.php');
 
   $xml1 = read_astrologie('vierge', 'h' ,0);
- $xml1['description']=utf8_encode_array($xml1['description']);
+ //$xml1['description']=utf8_encode_array($xml1['description']);
   foreach ($xml1['description'] as $s_cle=>$s_value)
   {
  //echo $s_cle;
