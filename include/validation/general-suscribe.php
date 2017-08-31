@@ -487,6 +487,8 @@ if(empty($err)){
     if(isset($param['convertir'])){
         if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
+        } elseif($source == 'goformedia') {
+            include('../include/conversion/goformedia.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
