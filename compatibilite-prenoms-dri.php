@@ -1,11 +1,10 @@
 <?php
-/* 
-    ---------------------------------------------------------------
-    --      DRI POST-MAIL = COMPTABILITE-PRENOM = AFFIL BASE     --
-    ---------------------------------------------------------------
-    Created on : Feb 7th, 2017
-    Updated    : Feb 9th, 2017
-*/
+/**
+ * compatibilite-prenoms-dri
+ * -------------------------
+ * Created on : 7 février 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * Updated on : 28 août 2017 By Laurène Dourdin <2aurene@gmail.com>
+ */
 include('include/process-dri.php');
 ?>
 <!doctype html>
@@ -45,8 +44,8 @@ include('include/process-dri.php');
                         <img src="images_landing/saint-valentin-2017/left.jpg" alt="" class="promo-img" />
                         <img src="images_landing/saint-valentin-2017/right.jpg" alt="" class="promo-img" />
                     </article>
-                    <div id="photo" class="polaroid anim-photo1"></div>
-                    <article class="FormContainer"id="vm-anchor">
+                    <!--div id="photo" class="polaroid anim-photo1"></div-->
+                    <article class="FormContainer" id="vm-anchor">
                         <h2 class="FormContainer-Header">Vos prénoms sont-ils compatibles ?</h2>
                         <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <p class="DRI-Sent">
@@ -102,7 +101,8 @@ include('include/process-dri.php');
                                             </select>
                                         </div>
                                     </div>
-                                    <button class="FormContainer-Submit" type="submit" name="demande_rappel" >Rappel Gratuit</button>
+                                    <input type="text" name="antisp" value="" style="display: none" />
+                                    <button class="FormContainer-Submit" type="submit" name="demande_rappel">Rappel Gratuit</button>
                                 </section>
                             </form>
                             <?php } ?>

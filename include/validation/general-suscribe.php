@@ -20,6 +20,7 @@ $tchatabo_dri =  [
     'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
+    'quizz-rentree-result?chat=1' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
@@ -486,6 +487,8 @@ if(empty($err)){
     if(isset($param['convertir'])){
         if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
+        } elseif($source == 'goformedia') {
+            include('../include/conversion/goformedia.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
