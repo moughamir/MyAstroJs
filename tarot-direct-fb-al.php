@@ -1,25 +1,19 @@
 <?php
-/**
- * tarot-direct-gf == GOFORMEDIA
- * -----------------------------
- * Created on : 03 août 2017 By Laurène Dourdin <2aurene@gmail.com>
+/*
+ * tarot-direct-fb-al = FACEBOOK_ADDS
+ * ----------------------------------
+ * Created on : 7 septembre 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-session_start();
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-gf';
-$method = "general-suscribe";
-$support = "tarot";
-$site = "myastro.fr";
-$source = "goformedia";
-$dri = "tarot-direct-merci";
-$dri2 = "tarot-direct-dri-tog";
-
+$url = 'tarot-direct-fb-al';
+$method = 'general-suscribe';
+$site = 'myastro.fr';
+$source = 'facebook_adds';
+$dri = 'tarot-direct-merci';
+$dri2 = 'tarot-direct-dri-tog';
 include('include/questions/tarot-direct.php');
-
-$_SESSION['goformedia_track'] = isset($_GET['track']) ? $_GET['track'] : '';
-
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
@@ -74,10 +68,10 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <article class="ThemeChoice-List">
                         <?php foreach($questions as $optgroup => $options){ ?>
                             <?php foreach($options as $theme => $question){ ?>
-                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" id="theme_<?= $theme ?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : ''?> />
-                            <label for="theme_<?= $theme ?>" class="ThemeChoice-ListItem">
-                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup ?>"></span>
-                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'] ?></span>
+                            <input type="radio" name="question_code" value="<?= str_replace('"', "'", json_encode($question));?>" id="theme_<?= $theme;?>" class="ThemeChoice-ListItem-Input theme_id" required <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : '';?> />
+                            <label for="theme_<?= $theme;?>" class="ThemeChoice-ListItem">
+                                <span class="ThemeChoice-ListItem-Icon <?= $optgroup;?>"></span>
+                                <span class="ThemeChoice-ListItem-Label"><?= $question['text'];?></span>
                             </label>
                             <?php } ?>
                         <?php } ?>
@@ -97,7 +91,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="source" value="<?= $url;?>" />
                                 <input type="hidden" name="method" value="<?= $method;?>" />
-                                <input type="hidden" name="support" value="<?= $support;?>" />
+                                <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
@@ -105,7 +99,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
@@ -126,7 +119,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -135,15 +128,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <div class="FormField-TableInputContainer">
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select  class="FormField-Input" name="jour" required>
-                                                    <option value="" selected disabled>Jour</option>
+                                                    <option selected="selected" value="">Jour</option>
                                                     <?php for($i=1;$i<=31;$i++){ ?>
-                                                    <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
+                                                    <option value="<?= $i;?>"><?= sprintf('%02d', $i);?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select class="FormField-Input" name="mois" required>
-                                                    <option value="" selected disabled>Mois</option>
+                                                    <option value="" selected="selected">Mois</option>
                                                     <option value="01">Janv.</option>
                                                     <option value="02">Fev.</option>
                                                     <option value="03">Mars</option>
@@ -160,9 +153,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select class="FormField-Input" name="annee" required>
-                                                    <option value="" selected disabled>Année</option>
+                                                    <option selected="selected" value="">Année</option>
                                                     <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
-                                                    <option value="<?= $i ?>"><?= $i ?></option>
+                                                    <option value="<?= $i;?>"><?= $i;?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
@@ -178,7 +171,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
+                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email;?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -235,7 +228,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <div id="cards-container" class="ContentBand-Column">
                         <div class="WidgetTarot-Draw" >
                             <?php for($i=1;$i<=20;$i++){ ?>
-                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i ?>">
+                            <div class="WidgetTarot-Card notFlipped" data-card="<?= $i;?>">
                                 <div class="WidgetTarot-Card-Face front "></div>
                                 <div class="WidgetTarot-Card-Face back"></div>
                             </div>
@@ -251,7 +244,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
                             <div class="WidgetTarot-Result">
                                 <?php for($i=1;$i<=5;$i++){ ?>
-                                <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
+                                <div class="WidgetTarot-Card place" data-number="<?= $i;?>"></div>
                                 <?php } ?>
                             </div>
                         </div>
@@ -260,7 +253,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
             </section>
         </div>
 
-        <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
+        <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
 
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -278,11 +271,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
-              include('include/remarketing/facebook.php'); ?>
+              include('include/remarketing/facebook.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
