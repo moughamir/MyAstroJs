@@ -471,8 +471,8 @@ if(empty($err)){
         $redirect_url = $dri2;
     }
 
-    if(!preg_match('#^http.*#', $redirect_url)){
-        $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    if(!preg_match('#^'.PROTOCOL.'.*#', $redirect_url)){
+        $redirect_url = PROTOCOL.'://'.ROOT_URL.'/'.$redirect_url;
     }
 
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
@@ -487,7 +487,7 @@ if(empty($err)){
     if(isset($param['convertir'])){
         if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
-        } elseif($source == 'goformedia') {
+        } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
         } else {
             $retour = array();
