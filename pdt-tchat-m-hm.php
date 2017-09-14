@@ -26,7 +26,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, nofollow" />
-        <title>Pouvoir Des Trois -  5 minutes de tchat gratuit</title>
+        <title>Pouvoir Des Trois - 5 minutes de tchat gratuit</title>
         <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
         <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet" />

@@ -35,6 +35,7 @@
     include('include/conversion/adwords.php');
     include('include/conversion/facebook.php');
     include('include/conversion/taboola.php');
+    include('include/conversion/hamedia.php');
 ?>
         <script type="text/javascript">
             var url = "<?= $redirection;?>";
