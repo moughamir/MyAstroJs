@@ -1,12 +1,12 @@
 <?php
 /**
- * pdt-tchat-m-hm == HAMEDIA
- * -------------------------
- * Created on : 11 septembre 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * pdt-tchat-m-ac-hm == HAMEDIA
+ * ----------------------------
+ * Created on : 13 septembre 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
 session_start();
 
-$pageName = "pdt-tchat-m-hm";
+$pageName = "pdt-tchat-m-ac-hm";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
@@ -56,6 +56,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                     <input type="hidden" name="support" value="<?= $support;?>" />
                     <input type="hidden" name="site" value="<?= $site;?>" />
                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                    <input type="hidden" name="hamedia_save" value="<?= json_encode([10229]);?>" />
                     <input type="hidden" name="dri" value="<?= $dri;?>" />
                     <input type="hidden" name="dri" value="<?= $dri2;?>" />
                     <!-- ########## autres champs pré-remplis ######### -->

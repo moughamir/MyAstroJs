@@ -225,6 +225,29 @@ if($user){
         $reinscription = true;
     }
 }
+/* ========================================================================== *
+ *                           ENREGISTREMENT HAMEDIA                           *
+ * ========================================================================== */
+    
+if(empty($err)){
+    $hm_save = isset($param['hamedia_save']) ? $param['hamedia_save'] : null;
+    if(!empty($param['hamedia_save'])){
+        $hamedia = new APIHamedia;
+        $hm_savelists = json_decode($hm_save);
+        $post_data = array(
+            'email' => $email,
+            'firstname' => $prenom,
+            'lastname' => ' ',
+            'lifecycle' => 'lead',
+            'lists' => $hm_savelists
+        );
+        $hamedia_insert = $hamedia->insertUser($post_data);
+        if(!$hamedia_insert->success){
+            addFormLog($bdd, $page, 'ERROR', '[API HAMEDIA] Erreur insertion user > '.json_encode($hamedia_insert));
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        }
+    }
+}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                           *
@@ -301,7 +324,7 @@ if(empty($err)){
             $conversion = 2;
         }
     }
-
+    
 /* ========================================================================== *
  *                           ENREGISTREMENT MYASTRO                           *
  * ========================================================================== */
