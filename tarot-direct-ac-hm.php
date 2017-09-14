@@ -1,13 +1,13 @@
 <?php
 /**
- * tarot-direct-hm == HAMEDIA
- * --------------------------
- * Created on : 04 août 2017 By Laurène Dourdin <2aurene@gmail.com>
+ * tarot-direct-ac-hm == HAMEDIA
+ * -----------------------------
+ * Created on : 13 septembre 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-hm';
+$url = 'tarot-direct-ac-hm';
 $method = "general-suscribe";
 $support = "tarot";
 $site = "myastro.fr";
@@ -95,6 +95,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="<?= $support;?>" />
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="hamedia_save" value="<?= json_encode([10229]);?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
