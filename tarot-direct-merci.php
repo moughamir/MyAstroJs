@@ -102,7 +102,8 @@ if(isset($_SESSION['user_id'])){
 
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
-              include('include/conversion/facebook.php');?>
+              include('include/conversion/facebook.php');
+              include('include/conversion/hamedia.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->
