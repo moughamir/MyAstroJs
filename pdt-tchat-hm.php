@@ -90,6 +90,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
