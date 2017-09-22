@@ -103,7 +103,7 @@ $menu = array(
                         <li class="divider-vertical"></li>
                         <li class="dropdown <?= in_array($path, $tab_urls) ? 'active' : '';?>" role="menuitem">
                             <a class="dropdown-toggle" id="a<?= $c;?>" role="button" data-hover="dropdown" data-delay="200"
-                               href="http://<?= ROOT_URL.'/'.$menuItem['url'] ;?>">
+                               href="<?= PROTOCOL.'://'.ROOT_URL.'/'.$menuItem['url'] ;?>">
                                 <?= $menuItem['txt'];?>
                                 <?php if(isset($menuItem['items'])){?><i class="caret"></i><?php }?>
                             </a>
@@ -115,7 +115,7 @@ $menu = array(
             foreach($menuItem['items'] as $sousMenuItem){
 ?>
                                 <li <?= $path == $sousMenuItem['url'] ? 'class="dropdown active"' : '';?>>
-                                    <a href="http://<?= ROOT_URL.'/'.$sousMenuItem['url'];?>">
+                                    <a href="<?= PROTOCOL.'://'.ROOT_URL.'/'.$sousMenuItem['url'];?>">
                                         <?= $sousMenuItem['txt'];?>
                                     </a>
                                 </li>
