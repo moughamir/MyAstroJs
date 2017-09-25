@@ -512,6 +512,8 @@ if(empty($err)){
             include('../include/conversion/reflexcash.php');
         } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
+        } elseif($source == 'weedoit'){
+            include('../include/conversion/weedoit.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';

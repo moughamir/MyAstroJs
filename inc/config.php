@@ -42,11 +42,13 @@ define('ABSPATH', ROOT);
 define('WP_CONTENT_DIR', ABSPATH.'wp-content');
 define('WP_DEBUG', false);
 define('WP_DEBUG_DISPLAY', false);
-   
-    /*==================================================* 
-    *                       OTHERS                      *
-    *================================================== */
 
+/*==================================================* 
+ *                       OTHERS                     *
+ *================================================= */
+
+$mail_contact = getenv('MYASTRO_MAIL_CONTACT');
+define('MAIL_CONTACT', $mail_contact);
 
 $sexeMap["F?minin"]		= "femme";
 $sexeMap["Masculin"]	= "homme";
