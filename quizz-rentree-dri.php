@@ -50,7 +50,7 @@ $annee = date('Y');
                         <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <p class="DRI-Sent">
                             Merci, votre demande a bien été prise en compte.<br/>
-                            <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                            <strong>Un voyant vous recontactera dans quelques instants.</strong>
                         </p>                        
                         <?php } else { ?>
                             <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
