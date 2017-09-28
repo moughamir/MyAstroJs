@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     --------------------------------------
     --  Demande de Rappel Post Mailing  --
     --------------------------------------
@@ -14,10 +14,6 @@ require_once('inc/config.php');
 require_once('inc/bdd.php');
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
-
-function secure_formdata($n){
-    return htmlentities(strip_tags($n));
-}
 
 $form = array_map('secure_formdata', $_POST);
 $get  = array_map('secure_formdata', $_GET);
@@ -82,7 +78,7 @@ if(empty($user) && !empty($email_base)){ // user toujours non trouvé on recherc
     $user = $bdd->get_row($qry_ml);
 }
 // Pas trouvé pour myastro, idastro vide (= impossible de savoir si minisite), mais a l'id kgestion > recherche pour mini sites
-if(empty($user) && !$codeastro && !empty($idkgestion)){ 
+if(empty($user) && !$codeastro && !empty($idkgestion)){
     $base = $bdd->users_common;
     $objet = "MINISITES";
     $qry = 'SELECT * FROM '.$base.' as agu WHERE kgestion_id ='.$idkgestion;
@@ -100,7 +96,7 @@ if($user){
         $idastro = base_convert($user->internal_id, 10, 32);
     } else {
         $prenom  = $user->firstname;
-        $tel     = $user->phone; 
+        $tel     = $user->phone;
         $site    = $user->website;
         $idastro = base_convert($user->external_id, 10, 32);
     }
@@ -134,7 +130,7 @@ if($already_sent){
             'myastroSupport' => $support_kgs
         );
         $kgestion_dri = $kgestion->registerDRI($idkgestion, $DRIdata);
-        
+
         $retour = $kgestion_dri->success;
 
     } else {
@@ -155,7 +151,7 @@ if($already_sent){
             $url    = $tracking->stf_formurl_kgestion;
             $source = $tracking->stf_source_kgestion;
         }
-    
+
 /* ############################# ENVOI DU MAIL ############################## */
         $destinataire = getenv('MYASTRO_MAIL_DRI') ?: 'standard.kgcom@gmail.com';
         $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
@@ -236,11 +232,11 @@ if($already_sent){
 
         $retour = mail($destinataire, $sujet, $message, $headers);
     }
-    
+
 /* ######################### CODE D'ÉTAT DE LA DRI ########################## */
     if($retour){
         $state = 'MAIL_SENT';
-        $_SESSION['demanderappel'] = true;  
+        $_SESSION['demanderappel'] = true;
     } else {
         $state = 'MAIL_ERROR';
     }
