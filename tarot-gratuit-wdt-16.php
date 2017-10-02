@@ -72,8 +72,8 @@
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="affiliation" value="weedoit" />
                                 <input type="hidden" name="dri" value="tarot-gratuit-wdt-16-tel" />
-                                <input type="hidden" name="redirect_method" value="reload_form" />
                                 <!-- ########## autres champs pré-remplis ######### -->
+                                <input type="hidden" name="redirect_method" value="reload_form" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->

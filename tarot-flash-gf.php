@@ -4,6 +4,8 @@
  * ----------------------------
  * Created on : 03 août 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
+
 $url = 'tarot-flash-gf';
 $method = 'general-suscribe';
 $support = 'tarot';
@@ -29,6 +31,8 @@ $questions = array(
         [ 'code' => 'question_3', 'subject' => 'professionnel', 'text' => 'Vous cherchez un emploi' ],
     )
 );
+
+$_SESSION['goformedia_track'] = isset($_GET['track']) ? $_GET['track'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -143,10 +147,9 @@ $questions = array(
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ######### -->
-                                <input type="hidden" name="convertir" value="1" />
-                                <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '';?>" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="FormField">

@@ -4,6 +4,8 @@
  * --------------------------
  * Created on : 03 août 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
+
 $url = 'pdt-tchat-gf';
 $method = "general-suscribe";
 $support = "voyance";
@@ -17,6 +19,9 @@ $questions = array(
     ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Pouvoir des Trois - Argent'],
     ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Pouvoir des Trois - Travail']
 );
+
+$_SESSION['goformedia_track'] = isset($_GET['track']) ? $_GET['track'] : '';
+
 $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -92,6 +97,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <input type="hidden" name="prenom" id="js-name" /><!-- rempli par pouvoir-des-trois.js -->
                                 <input type="hidden" name="question_code" id="js-question" /><!-- rempli par pouvoir-des-trois.js -->

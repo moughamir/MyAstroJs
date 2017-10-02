@@ -82,7 +82,7 @@ CREATE TABLE `ag_users` (
   `dri_page` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `conversion_page` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `reflex_affiliate_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `reflex_source` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `reflex_source` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`internal_id`),
   UNIQUE KEY `id` (`id`),
   KEY `email` (`email`),

@@ -8,6 +8,7 @@ require_once(ROOT_PATH.'/lib/Compteur/Compteur.class.php'); // Counter used for 
 require_once(ROOT_PATH.'/lib/Tracker/Tracker.class.php'); // Tracking users for campains
 //require_once(ROOT_PATH.'/lib/SmartFocus/SmartFocus.class.php'); // Tracking users for campains
 require_once(ROOT_PATH.'/lib/APIKGestion/APIKGestion.class.php'); // API KGESTION
+require_once(ROOT_PATH.'/lib/APIHamedia/APIHamedia.class.php'); // API HAMEDIA
 //require_once(ROOT_PATH.'/sms/myastro-sms.php'); // sms campains
 
 session_start();
@@ -78,6 +79,86 @@ function form_phone(&$err, $param = array()){
     }
 
     return [$tel, $pays];
+}
+
+function secure_formdata($n){
+    return strip_tags($n);
+}
+
+function validate_mail($mail){
+    return preg_match('#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#', $mail);
+}
+
+function check_captcha($form){
+    $secret_key = '6LezqysUAAAAAKeeCRVonxcTAmfZ-S9ke3_OpcLB';
+    $captcha_form = $form['g-recaptcha-response'];
+    $remote_ip = $_SERVER['REMOTE_ADDR'];
+	
+    $api_url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$captcha_form.'&remoteip='.$remote_ip;
+
+    $decode = json_decode(file_get_contents($api_url), true);
+
+    return $decode['success'] == true;
+}
+
+function mail_line_feed($mail_to){
+    // On filtre les serveurs qui remplacent automatiquement le \n par \r\n
+    if(!preg_match('#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#', $mail_to))
+    { $line_feed = "\r\n"; }
+    else
+    { $line_feed = "\n";}
+    return $line_feed;
+}
+
+function send_mail($to, $from, $respond, $subject, $content, $head_pict, $from_name = ''){
+    // Définition du passage à la ligne
+    $line_feed = mail_line_feed($to);
+
+    //Déclaration des éléments du mail html
+    $html_head = '<html><head></head><body style="border: 1px solid #E9E9E9; margin: auto; margin-top: 10px; max-width: 600px"><font face="sans-serif" color="#656363">';
+    if($head_pict){
+        $html_head .= '<div style="text-align: center; padding-top: 10px;"><img src="'.PROTOCOL.'://'.ROOT_URL.'/images/mail-logo.jpg" alt="logo MyAstro" /></div>';
+    }
+    $html_head .= '<div style="max-width: 440px; margin: auto; padding-top: 20px; padding-bottom: 20px;">';
+    $html_foot = '</div></font><hr style="height: 40px; border: none; margin: 0; background-color: #22424D;" /></body></html>';
+
+    // Création des messages au format texte et au format HTML.
+    $content_txt = $content;
+    $content_html = nl2br(htmlspecialchars($content, ENT_QUOTES,'UTF-8'));
+    $content_html = preg_replace('#\-{10}(.+)\-{10}<br />(.+)\-{40}#sU', '<fieldset style="border: 1px solid #C1C1C1;"><legend><font color="#919191">$1</font></legend>$2</fieldset>', $content_html);
+    $content_html = preg_replace('#<br />\-{5,}<br />#', '<hr style="border: 1px dotted #656363;" />', $content_html);
+    $content_html = preg_replace('#http://[a-z0-9./-]+#', '<a href="$0">$0</a>', $content_html);
+    $content_html = preg_replace('#Code : ([a-z0-9]+)<br />#', '<p style="text-align: center"><font size="5" color="#319F83"><b>$1</b></font></p>', $content_html);
+    $content_html = $html_head.$content_html.$html_foot;
+
+    // Création de la frontière (boundary)
+    $boundary = '-----='.md5(rand());
+
+    // Ecriture du header de l'e-mail.
+    $header = 'From: "'.(isset($from_name) ? $from_name : $from).'" <'.$from.'>'.$line_feed;
+    $header.= 'Reply-to: "'.$respond.'" <'.$respond.'>'.$line_feed;
+    $header.= 'MIME-Version: 1.0'.$line_feed;
+    $header.= 'Content-Type: multipart/alternative;'.$line_feed.' boundary="'.$boundary.'"'.$line_feed;
+
+    // Création du message
+    // Ouverture boundary
+    $content = $line_feed.'--'.$boundary.$line_feed;
+    // Ajout du message au format texte.
+    $content.= 'Content-Type: text/plain; charset="utf-8"'.$line_feed;
+    $content.= 'Content-Transfer-Encoding: 8bit'.$line_feed;
+    $content.= $line_feed.$content_txt.$line_feed;
+    // boundary
+    $content.= $line_feed.'--'.$boundary.$line_feed;
+    // Ajout du message au format HTML.
+    $content.= 'Content-Type: text/html; charset="utf-8"'.$line_feed;
+    $content.= 'Content-Transfer-Encoding: 8bit'.$line_feed;
+    $content.= $line_feed.$content_html.$line_feed;
+    // Fermeture boundary
+    $content.= $line_feed.'--'.$boundary.'--'.$line_feed;
+    $content.= $line_feed.'--'.$boundary.'--'.$line_feed;
+
+    // Envoi de l'e-mail
+    return mail($to, $subject, $content, $header);
 }
 
 /*

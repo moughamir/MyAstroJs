@@ -20,6 +20,7 @@ $tchatabo_dri =  [
     'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
+    'quizz-rentree-result?chat=1' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
@@ -224,6 +225,29 @@ if($user){
         $reinscription = true;
     }
 }
+/* ========================================================================== *
+ *                           ENREGISTREMENT HAMEDIA                           *
+ * ========================================================================== */
+    
+if(empty($err)){
+    $hm_save = isset($param['hamedia_save']) ? $param['hamedia_save'] : null;
+    if(!empty($param['hamedia_save'])){
+        $hamedia = new APIHamedia;
+        $hm_savelists = json_decode($hm_save);
+        $post_data = array(
+            'email' => $email,
+            'firstname' => $prenom,
+            'lastname' => ' ',
+            'lifecycle' => 'lead',
+            'lists' => $hm_savelists
+        );
+        $hamedia_insert = $hamedia->insertUser($post_data);
+        if(!$hamedia_insert->success){
+            addFormLog($bdd, $page, 'ERROR', '[API HAMEDIA] Erreur insertion user > '.json_encode($hamedia_insert));
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        }
+    }
+}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                           *
@@ -300,7 +324,7 @@ if(empty($err)){
             $conversion = 2;
         }
     }
-
+    
 /* ========================================================================== *
  *                           ENREGISTREMENT MYASTRO                           *
  * ========================================================================== */
@@ -470,8 +494,8 @@ if(empty($err)){
         $redirect_url = $dri2;
     }
 
-    if(!preg_match('#^http.*#', $redirect_url)){
-        $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    if(!preg_match('#^'.PROTOCOL.'.*#', $redirect_url)){
+        $redirect_url = PROTOCOL.'://'.ROOT_URL.'/'.$redirect_url;
     }
 
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
@@ -486,6 +510,10 @@ if(empty($err)){
     if(isset($param['convertir'])){
         if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
+        } elseif($source == 'goformedia'){
+            include('../include/conversion/goformedia.php');
+        } elseif($source == 'weedoit'){
+            include('../include/conversion/weedoit.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
