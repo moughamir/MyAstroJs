@@ -27,7 +27,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
         <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
+        <link rel="stylesheet" type="text/css" href="css/tarot-direct-rentree.css" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,16 +100,21 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
-                                    <label class="FormField-Label">Vous êtes</label>
+                                    <label class="FormField-Label">Votre civilité</label>
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> une femme</label>
-                                                <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="Mme" id="sexe-mm" class="FormField-Input" />
+                                                <label for="sexe-f" class="FormField-Label ">Mme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
-                                                <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="Mlle" id="sexe-ml" class="FormField-Input" />
+
+                                                <label for="sexe-h" class="FormField-Label">Mlle</label>
+                                            </div>
+                                            <div class="FormField-TableInputContainer-Cell">
+                                                <input type="radio" name="sexe" value="Mr" id="sexe-h" class="FormField-Input" />
+                                                <label for="sexe-h" class="FormField-Label">Mr</label>
                                             </div>
                                         </div>
                                     </div>
@@ -117,7 +122,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Votre prénom</label>
                                     <div class="FormField">
-                                        <input type="text" id="name" name="prenom" class="FormField-Input" value="<?= $prenom ?>" required />
+                                        <input type="text" id="name" name="prenom" placeholder="mon prenom" class="FormField-Input" value="<?= $prenom ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -163,13 +168,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row sonprenom" style="display: none;">
                                     <label class="FormField-Label" for="son_prenom">Personne aimée</label>
                                     <div class="FormField">
-                                        <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" />
+                                        <input type="text" id="son_prenom" placeholder="son prenom uniquement" name="conjoint" class="FormField-Input" />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" value="<?= $email ?>" required />
+                                        <input id="email" type="email" placeholder="mon@email.com" name="email" class="FormField-Input" value="<?= $email ?>" required />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
@@ -178,39 +183,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
                                     <div class="FormField">
-                                        <input id="tel" type="tel" name="tel" class="FormField-Input" required />
+                                        <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="facultatif" />
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
                                     <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
                                 </div>
-                                <div class="Fields-Table-Row">
-                                    <label for="pays" class="FormField-Label">Votre pays</label>
-                                    <div class="FormField">
-                                        <select name="pays" id="pays" class="FormField-Input" required>
-                                            <option value="" selected>Votre Pays</option>
-                                            <option value="BE">Belgique</option>
-                                            <option value="CA">Canada</option>
-                                            <option value="LU">Luxembourg</option>
-                                            <option value="CH">Suisse</option>
-                                            <option value="FR" selected>France Métropolitaine</option>
-                                            <optgroup label="DOM-TOM">
-                                                <option value="MQ">Martinique</option>
-                                                <option value="GP">Guadeloupe</option>
-                                                <option value="GF">Guyane</option>
-                                                <option value="RE">La Réunion</option>
-                                                <option value="YT">Mayotte</option>
-                                                <option value="PM">St Pierre et Miquelon</option>
-                                                <option value="BL">St Barthélémy</option>
-                                                <option value="SM">St Martin</option>
-                                                <option value="WF">Wallis et Futunua</option>
-                                                <option value="PF">Polynésie Française</option>
-                                                <option value="NC">Nouvelle Calédonie</option>
-                                            </optgroup>
-                                            <option value="ZZ">Autre</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                <input type="radio" name="confidentielles"  id="confidentielles"  >Je souhaite que mes informations restent confidentielles<br>
+                                <input type="radio" name="partenaires" id="partenaires" >J'accepte de recevoir les offres des partenaires(conditions et desinscription)<br>
+
                             </div>
                             <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
                         </article>

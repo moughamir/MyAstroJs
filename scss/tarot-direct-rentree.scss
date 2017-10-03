@@ -1,0 +1,537 @@
+@charset "UTF-8";
+/* ============================ [ tarot-direct ] ===============================
+ *
+ * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@import "templates/s-landing-tarot-3";
+
+/* Typos */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
+
+/* Images */
+$img_dir : "../images_landing/tarot-direct-r17/";
+$bg  : $img_dir + "bckgd.png";
+$logo : $img_dir + "logo.png";
+$dos_carte : $img_dir + "carte-dos.png";
+$place_carte : $img_dir + "holder.png";
+$bg_fleche : $img_dir + "bg_fleche.png";
+$hexagone : $img_dir + "hexagone_bleu.png";
+$hexagone_hover : $img_dir + "hexagone_rose.png";
+$hexagone_active : $img_dir + "hexagone_turquoise.png";
+$listitem_leftcorner : $img_dir + "corner-left.png";
+$listitem_rightcorner : $img_dir + "corner-right.png";
+$icon_amour : $img_dir + "coeur_bleu.png";
+$icon_argent : $img_dir + "argent_bleu.png";
+$icon_travail : $img_dir + "travail_bleu.png";
+$icon_amour_hover : $img_dir + "coeur_rose.png";
+$icon_argent_hover : $img_dir + "argent_rose.png";
+$icon_travail_hover : $img_dir + "travail_rose.png";
+$icon_amour_active : $img_dir + "coeur_turquoise.png";
+$icon_argent_active : $img_dir + "argent_turquoise.png";
+$icon_travail_active : $img_dir + "travail_turquoise.png";
+$icon_tel: $img_dir + "tel.png";
+$offre_tchat : $img_dir + "offre-tchat.png";
+$offre_immediate : $img_dir + "offre-immediate.png";
+
+/* Palette */
+$grey: #454545;
+$bleu: #2E4980;
+$rose: #F57F9B;
+$turquoise: #fab532;
+$lightgrey: #C0C3C8;
+$bg-bleu: #EAEEF4;
+$bg-grey: #F9E8D5;
+$woman: $rose;
+$man: $bleu;
+$tchat-bg: #E8E8E8;
+$bg-red : #ee333f;
+
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $grey;
+    background-image: url($bg);
+}
+.ContentBand.Principal {
+    /*background-color: $bg-bleu;*/
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    
+    .ContentBand-ColumnHeader {
+        /*background-color: white;*/
+        box-shadow: 0 0 10px 1px $lightgrey;
+        font-size:2.5rem;
+    }
+}
+.ContentBand.Arrowed {
+    background-color: transparent;
+    /*background-image: url($bg-fleche);*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 127px;
+    .ContentBand-ColumnHeader { padding-top: 5rem;}
+}
+.ContentBand.Principal.Arrowed {
+    background-position: center 5rem;
+    .ContentBand-ColumnHeader { padding-top: 1rem;}
+}
+
+/* ------------------------------- [ ENTETE ] ------------------------------- */
+
+.SiteHeader {
+    position: relative;
+    z-index: 2;
+    background-color: $bleu;
+    color: $turquoise;
+    
+    &-Logo {
+        height: 100px;
+        background-color: transparent;
+        background-image: url($logo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &-Slogan1 {
+        font-family: 'Indie Flower';
+    }
+    &-Slogan2 {
+        font-weight: bold;
+        background-color: $turquoise;
+        color: $bleu;
+        
+        strong {
+            text-transform: uppercase;
+            color: white;
+            
+        }
+    }
+}
+
+.Title {
+    font-weight: bold;
+    color: $bleu;
+    
+    strong {
+        font-family: 'Lobster';
+        color: $turquoise;
+        font-weight: normal;
+        font-size: 3.5rem;
+    }
+}
+@media all and (max-width: 580px){
+    .Title {
+        font-size: 2.4rem !important;
+        strong { font-size: 3.8rem;}
+    }
+}
+@media all and (max-width: 420px){
+    .Title {
+        font-size: 2rem !important;
+        strong { font-size: 2.6rem;}
+    }
+}
+
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
+
+.PsychicChoice-Psychic {
+    &-VisualForm {
+        color: $bleu;
+    }
+    &-Picture {
+        position: relative;
+        display: inline-block;
+        width: 237px;
+        height: 205px;
+        background-color: transparent;
+        background-image: url($hexagone);
+    }
+    &-Input:checked + &-VisualForm {
+        color: $turquoise;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_active);
+            &:after {
+                content: "\f00c";
+                font-family: 'FontAwesome';
+                background-color: transparent;
+                color: $turquoise;
+            }
+        }
+    }
+    &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
+        color: $rose;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_hover);
+            &:after { color: $rose;}
+        }
+    }
+}
+
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
+
+.ThemeChoice-ListItem {
+    position: relative;
+    border-left: none;
+    border-right: none;
+    border-color: $lightgrey;
+    color: $bleu;
+    font-weight: bold;
+    
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        height: 100%;
+        width: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    &:before {
+        left: -2.4rem;
+        background-image: url($listitem_leftcorner);
+    }
+    &:after {
+        right: -2.4rem;
+        background-image: url($listitem_rightcorner);
+    }
+    
+    &-Icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        &.Amour { background-image: url($icon_amour);}
+        &.Argent { background-image: url($icon_argent);}
+        &.Travail { background-image: url($icon_travail);}
+    }
+    
+    &:hover, &:active, &:focus {
+        color: $rose;
+    }
+    &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
+        background-color: transparent;
+        &.Amour { background-image: url($icon_amour_hover);}
+        &.Argent { background-image: url($icon_argent_hover);}
+        &.Travail { background-image: url($icon_travail_hover);}
+    }
+    &-Input:checked + & {
+        color: $turquoise;
+        .ThemeChoice-ListItem-Icon {
+            background-color: transparent;
+            &.Amour { background-image: url($icon_amour_active);}
+            &.Argent { background-image: url($icon_argent_active);}
+            &.Travail { background-image: url($icon_travail_active);}
+        }
+    }
+}
+
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
+
+.WidgetTarot-Card {
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        border: none;
+        background: transparent url($dos_carte) center no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+        background-color: transparent;
+    }
+    
+    &.place {
+        background-color: transparent;
+        background-image: url($place_carte);
+        border-radius: 6px;
+    }
+}
+
+.WidgetTarot-ResultMsg {
+    font-weight: bold;
+    color: $bleu;
+}
+
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
+
+.Pop.Pop-Voyant {
+    background-color: transparent;
+    background-image: url($hexagone_active);
+}
+
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
+
+@import "modules_themes/tarot-direct-psychics";
+
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
+
+.FormContainer {
+    background-color: $bg-grey;
+}
+
+.FormField-Label {
+    font-weight: bold;
+}
+.FormField-Input {
+    border: none;
+    /*border-radius: 8px;*/
+    &.has-error {
+        box-shadow: 0 0 8px 1px #a94442 inset;
+    }
+}
+.FormContainer-Submit {
+    background-color: $bg_red;
+    color: #ffffff;
+    border:2px solid $bg_red;
+    transition: all 0.5s ease-in;
+    
+    &:hover{
+        color: $bg_red;
+        background-color:transparent;
+    }
+}
+
+.FormField-Label {
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $man;
+    }
+}
+
+.FormField-Info:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+@import "modules_themes/form-alert-bootstrap";
+
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
+
+.DRI-Promo {
+    font-weight: bold;
+    
+    &-Slogan {
+
+        &-Tel {
+            font-size: 2.8rem;
+            text-decoration: underline;
+            color: $turquoise;
+            
+            &:hover {
+                color: $bleu;
+            }
+            
+            &Icon {
+                background-image: url($icon_tel);
+            }
+        }
+        
+        &-CodePromo {
+            font-size: 2.8rem;
+            color: $turquoise;
+        }
+    }
+}
+
+/* -------------------------------- [ TCHAT ] ------------------------------- */
+
+.Tchat-Gratuit-Title {
+    color: $bleu;
+}
+.Tchat-Overlay {
+    border-radius: 10px;
+}
+.Tchat-Window {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px $lightgrey;
+    
+    &-Output {
+        background-color: $tchat-bg;
+        border-radius: 10px;
+    }
+    &-Input {
+        .FormField-Input {
+            border: 2px solid $lightgrey;
+            color: inherit;
+        }
+        .FormField.withAside .aside {
+            background-color: $bleu;
+            border: 2px solid $lightgrey;
+            border-radius: 8px;
+            color: $lightgrey;
+        }
+    }
+}
+
+.codeastro {
+    font-size: 1.6rem;
+    color: $turquoise;
+}
+
+.Tchat-Message-Person.F {
+    color: $rose;
+}
+.Tchat-Message-Person.M {
+    color: $bleu;
+}
+
+/* -------------------------------- [ DRI ] --------------------------------- */
+
+.DRI {
+    &-Slogan {
+        width: 80%;
+        margin: 3rem auto 0;
+        padding: 1rem;
+        border: 2px solid $turquoise;
+        text-align: center;
+        font-size: 2rem;
+        color: $turquoise;
+        hyphens: none;
+    }
+    
+    &-Sent {
+        text-align: center;
+    }
+    
+    &-Form {
+        & p {
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        &-Title {
+            padding: 1rem 0;
+            background-color: white;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            color: $bleu;
+            hyphens: none;
+
+            & strong {
+                font-weight: normal;
+                color: $turquoise;
+            }
+        }
+
+        &-Subtitle {
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            font-size: 2.8rem;
+            color: $rose;
+        }
+        
+        &Container {
+            margin-top: 2rem;
+        }
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
+    }
+}
+
+@media all and (max-width: 640px){
+   .DRI{
+        &-Slogan {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 510px){
+    .Tchat-Overlay {
+        border-radius: 0;
+    }
+    .Tchat-Window {
+        border-radius: 0;
+    }
+    .Tchat-Message {
+        padding: 0 1rem;
+    }
+}
+
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
+.Merci-Form {
+    background-color: $bleu;
+    background-image: url($offre_immediate);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+    text-align: center;
+    
+    .Merci-Title {
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        text-shadow: 0px 0px 10px black;
+        strong {
+            color: $turquoise;
+        }
+    }
+    
+    .Merci-Text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $rose;
+        hyphens: none;
+    }
+    
+    .FormContainer-Submit {
+        display: inline-block;
+        color: $bleu;
+        text-decoration: none;
+        border-color: white;
+        box-shadow: 0px 0px 10px white;
+        
+        &:hover {
+            border-color: $turquoise;
+            color: $turquoise;
+            box-shadow: none;
+        }
+    }
+}
+
+@media all and (max-width: 102.4rem){
+    .Merci-Form {
+        background-image: none;
+    }
+}
+@media all and (max-width: 400px){
+    .Merci-Title {
+        display: none;
+    }
+    .Merci-Text {
+        font-size: 1.7rem;
+    }
+}
+
+.Fields-Table-Row>.FormField-Label{
+    width: 45%;
+}
