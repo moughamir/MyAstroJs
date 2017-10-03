@@ -55,7 +55,6 @@ body {
     background-color: $bg-bleu;
     background-repeat: no-repeat;
     background-position: center bottom;
-    
     .ContentBand-ColumnHeader {
         background-color: white;
         box-shadow: 0 0 10px 1px $lightgrey;
@@ -80,8 +79,8 @@ body {
 .SiteHeader {
     position: relative;
     z-index: 2;
-    background-color: $bleu;
-    color: $turquoise;
+    background-color: yellow;
+    color: yellow;
     
     &-Logo {
         height: 100px;
