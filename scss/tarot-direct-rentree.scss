@@ -20,15 +20,15 @@ $hexagone_hover : $img_dir + "hexagone-p.png";
 $hexagone_active : $img_dir + "hexagone-p.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
-$icon_amour : $img_dir + "coeur_bleu.png";
-$icon_argent : $img_dir + "argent_bleu.png";
-$icon_travail : $img_dir + "travail_bleu.png";
-$icon_amour_hover : $img_dir + "coeur_rose.png";
-$icon_argent_hover : $img_dir + "argent_rose.png";
-$icon_travail_hover : $img_dir + "travail_rose.png";
-$icon_amour_active : $img_dir + "coeur_turquoise.png";
-$icon_argent_active : $img_dir + "argent_turquoise.png";
-$icon_travail_active : $img_dir + "travail_turquoise.png";
+$icon_amour : $img_dir + "coeur-p.png";
+$icon_argent : $img_dir + "argent-p.png";
+$icon_travail : $img_dir + "travail-p.png";
+$icon_amour_hover : $img_dir + "coeur-h.png";
+$icon_argent_hover : $img_dir + "argent-h.png";
+$icon_travail_hover : $img_dir + "travail-h.png";
+$icon_amour_active : $img_dir + "coeur-a.png";
+$icon_argent_active : $img_dir + "argent-a.png";
+$icon_travail_active : $img_dir + "travail-a.png";
 $icon_tel: $img_dir + "tel.png";
 $offre_tchat : $img_dir + "offre-tchat.png";
 $offre_immediate : $img_dir + "offre-immediate.png";
@@ -56,22 +56,21 @@ body {
     background-image: url($bg);
 }
 .ContentBand.Principal {
-    /*background-color: $bg-bleu;*/
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center;
     
     .ContentBand-ColumnHeader {
-        /*background-color: white;*/
-        box-shadow: 0 0 10px 1px $lightgrey;
         font-size:2.5rem;
     }
 }
 .ContentBand.Arrowed {
     background-color: transparent;
-    /*background-image: url($bg-fleche);*/
+    background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 127px;
+    position: relative;
+    top: 20px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
