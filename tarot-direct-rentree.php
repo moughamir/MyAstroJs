@@ -165,12 +165,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         </div>
                                     </div>
                                 </div>
-                                <div class="Fields-Table-Row sonprenom" style="display: none;">
-                                    <label class="FormField-Label" for="son_prenom">Personne aimée</label>
-                                    <div class="FormField">
-                                        <input type="text" id="son_prenom" placeholder="son prenom uniquement" name="conjoint" class="FormField-Input" />
-                                    </div>
-                                </div>
+
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label">Votre email</label>
                                     <div class="FormField">
@@ -180,6 +175,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <div class="Fields-Table-Row">
                                     <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
                                 </div>
+                                <div class="Fields-Table-Row " ><!--sonprenom-->
+                                    <label class="FormField-Label" for="son_prenom">Personne aimée</label>
+                                    <div class="FormField">
+                                        <input type="text" id="son_prenom" placeholder="son prenom uniquement" name="conjoint" class="FormField-Input" />
+                                    </div>
+                                </div>
                                 <div class="Fields-Table-Row">
                                     <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
                                     <div class="FormField">
@@ -187,7 +188,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                     </div>
                                 </div>
                                 <div class="Fields-Table-Row">
-                                    <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
+                                    <span class="FormField-Info2">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
                                 </div>
                                 <input type="radio" name="confidentielles"  id="confidentielles"  >Je souhaite que mes informations restent confidentielles<br>
                                 <input type="radio" name="partenaires" id="partenaires" >J'accepte de recevoir les offres des partenaires(conditions et desinscription)<br>

@@ -17,6 +17,14 @@ $psychics_bdd = array(
     'veronique' => [
         'name' => 'Véronique',
         'desc' => 'Bonjour à toutes et à tous. Je suis Véronique, médium et mamie à temps plein. Comme bon nombre de mes collègues présents sur ce site, j’ai découvert mon don très jeune et c’est après de nombreuses années de pratique que j’ai décidé de le mettre à disposition pour aider les autres. Je ne suis pas née avec Internet, loin de là, mais c’est ma nature curieuse et enjouée qui m’a permis de me mettre à la page et de me spécialiser dans la voyance par tchat, un support très pratique et agréable quand on commence à s’y habituer. Mes petits-enfants sont fiers d’avoir une mamie aussi impliquée sur Internet et je dois avouer moi aussi que je suis plutôt contente de moi. Concernant notre consultation, je vous promets de vous faire entrer dans mon monde afin d’en sortir épanoui et serein.'
+    ],
+    'dimitri' => [
+        'name' => 'Dimitri',
+        'desc' => 'J’ai découvert et je me suis familiarisé avec le tarot au cours d’un de mes voyages en Egypte. J’ai tout de suite été fasciné par ce support et j’ai très vite remarqué une certaine prédisposition chez moi. C’est d’ailleurs cette passion qui m’a poussé à toujours approfondir mes connaissances et peaufiner ma pratique. Aujourd’hui, quelque soit le domaine de votre vie qui vous pose soucis, je suis capable de faire parler mes cartes pour vous. Ne restez pas sans réponse à vos questions, la tranquillité et la sérénité sont autant d’ingrédients indispensables pour une vie pleine de plénitude et de réussite. Mes cartes ne vous donneront pas de recette miracle, mais seront autant de routes à suivre pour marcher vers le destin que vous vous souhaitez.'
+    ],
+    'margaux' => [
+        'name' => 'Margaux',
+        'desc' => 'Bonjour à toutes et à tous. Je suis Véronique, médium et mamie à temps plein. Comme bon nombre de mes collègues présents sur ce site, j’ai découvert mon don très jeune et c’est après de nombreuses années de pratique que j’ai décidé de le mettre à disposition pour aider les autres. Je ne suis pas née avec Internet, loin de là, mais c’est ma nature curieuse et enjouée qui m’a permis de me mettre à la page et de me spécialiser dans la voyance par tchat, un support très pratique et agréable quand on commence à s’y habituer. Mes petits-enfants sont fiers d’avoir une mamie aussi impliquée sur Internet et je dois avouer moi aussi que je suis plutôt contente de moi. Concernant notre consultation, je vous promets de vous faire entrer dans mon monde afin d’en sortir épanoui et serein.'
     ]
 );
 
@@ -24,6 +32,10 @@ $def_psychics = ['christelle', 'sonia'];
 
 if(date('Ymd') >= 20161226){
     $def_psychics = ['veronique', 'olivier'];
+}
+
+if($_SERVER['REQUEST_URI'] == '/tarot-direct-rentree.php' || $_SERVER['REQUEST_URI'] == '/tarot-direct-rentree'){
+    $def_psychics = ['margaux', 'dimitri'];
 }
 
 $psychics = isset($psychics) ? $psychics : $def_psychics;

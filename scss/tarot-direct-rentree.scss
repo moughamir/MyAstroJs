@@ -14,9 +14,9 @@ $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "carte-dos.png";
 $place_carte : $img_dir + "holder.png";
 $bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone : $img_dir + "hexagone_bleu.png";
-$hexagone_hover : $img_dir + "hexagone_rose.png";
-$hexagone_active : $img_dir + "hexagone_turquoise.png";
+$hexagone : $img_dir + "hexagone-a.png";
+$hexagone_hover : $img_dir + "hexagone-p.png";
+$hexagone_active : $img_dir + "hexagone-p.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
 $icon_amour : $img_dir + "coeur_bleu.png";
@@ -146,6 +146,7 @@ body {
         height: 205px;
         background-color: transparent;
         background-image: url($hexagone);
+        padding:7px;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
@@ -257,14 +258,15 @@ body {
 
 .WidgetTarot-ResultMsg {
     font-weight: bold;
-    color: $bleu;
+    font-size : 14px;
 }
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
-    background-image: url($hexagone_active);
+    background-image: url($hexagone);
+    padding:7px ;
 }
 
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
@@ -282,15 +284,36 @@ body {
 }
 .FormField-Input {
     border: none;
-    /*border-radius: 8px;*/
+    border-radius: 5px;
     &.has-error {
         box-shadow: 0 0 8px 1px #a94442 inset;
     }
 }
+
+
+select.FormField-Input {
+  background: #ffffff;
+}
+
+.Fields-Table-Row .FormField-Info{
+  padding-left: 45%;
+  font-size: 12px;
+  margin-top: 0px;
+}
+
+.Fields-Table-Row .FormField-Info2{
+  padding-left: 35%;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+
 .FormContainer-Submit {
     background-color: $bg_red;
     color: #ffffff;
     border:2px solid $bg_red;
+    min-width: initial;
+    font-size: 1.6rem;
     transition: all 0.5s ease-in;
     
     &:hover{
@@ -317,6 +340,17 @@ body {
     font-family: 'FontAwesome';
     font-weight: bold;
     padding-right: 0.5rem;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.FormField-Info2:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+    color: #ffffff;
+    font-size: 18px;
 }
 
 input[type="checkbox"], input[type="radio"] {
