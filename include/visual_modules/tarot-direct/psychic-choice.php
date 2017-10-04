@@ -24,13 +24,13 @@ $psychics_bdd = array(
     ],
     'margaux' => [
         'name' => 'Margaux',
-        'desc' => 'Bonjour à toutes et à tous. Je suis Véronique, médium et mamie à temps plein. Comme bon nombre de mes collègues présents sur ce site, j’ai découvert mon don très jeune et c’est après de nombreuses années de pratique que j’ai décidé de le mettre à disposition pour aider les autres. Je ne suis pas née avec Internet, loin de là, mais c’est ma nature curieuse et enjouée qui m’a permis de me mettre à la page et de me spécialiser dans la voyance par tchat, un support très pratique et agréable quand on commence à s’y habituer. Mes petits-enfants sont fiers d’avoir une mamie aussi impliquée sur Internet et je dois avouer moi aussi que je suis plutôt contente de moi. Concernant notre consultation, je vous promets de vous faire entrer dans mon monde afin d’en sortir épanoui et serein.'
+        'desc' => 'Bonjour à toutes et à tous. Je suis Margaux, médium et mamie à temps plein. Comme bon nombre de mes collègues présents sur ce site, j’ai découvert mon don très jeune et c’est après de nombreuses années de pratique que j’ai décidé de le mettre à disposition pour aider les autres. Je ne suis pas née avec Internet, loin de là, mais c’est ma nature curieuse et enjouée qui m’a permis de me mettre à la page et de me spécialiser dans la voyance par tchat, un support très pratique et agréable quand on commence à s’y habituer. Mes petits-enfants sont fiers d’avoir une mamie aussi impliquée sur Internet et je dois avouer moi aussi que je suis plutôt contente de moi. Concernant notre consultation, je vous promets de vous faire entrer dans mon monde afin d’en sortir épanoui et serein.'
     ]
 );
 
-$def_psychics = ['christelle', 'sonia'];
+$def_psychics = ['margaux', 'dimitri'];
 
-if(date('Ymd') >= 20161226){
+if(date('Ymd') >= 20171226){
     $def_psychics = ['veronique', 'olivier'];
 }
 

@@ -19,6 +19,10 @@ $styles = array(
         'css' => 'css/tarot-direct-amour.css',
         'dir' => 'images_landing/tarot-direct-amour/'
     ],
+    'rentree-17' => [
+        'css' => 'css/tarot-direct-rentree-17.css',
+        'dir' => 'images_landing/tarot-direct-rentree-17/'
+    ],
 );
 
 $j = date('j');

@@ -45,7 +45,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                 </div>
                 <div class="ContentBand-Column"><div class="SiteHeader-Logo"></div></div>
                 <div class="ContentBand-Column SiteHeader-Slogan2">
-                    Votre tirage <strong>en direct</strong><br>
+                    Votre tirage <strong>en live</strong><br>
                     en 2 minutes chrono !
                 </div>
             </div>

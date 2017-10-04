@@ -10,6 +10,7 @@
 /* Images */
 $img_dir : "../images_landing/tarot-direct-r17/";
 $bg  : $img_dir + "bckgd.png";
+$bgheader : $img_dir + "header.png";
 $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "carte-dos.png";
 $place_carte : $img_dir + "holder.png";
@@ -35,6 +36,8 @@ $offre_immediate : $img_dir + "offre-immediate.png";
 /* Palette */
 $grey: #454545;
 $bleu: #2E4980;
+$blanc: #fff;
+$red: #f00;
 $rose: #F57F9B;
 $turquoise: #fab532;
 $lightgrey: #C0C3C8;
@@ -81,8 +84,8 @@ body {
 .SiteHeader {
     position: relative;
     z-index: 2;
-    background-color: $bleu;
-    color: $turquoise;
+    background-image: url($bgheader);
+    color: $grey;
     
     &-Logo {
         height: 100px;
@@ -98,20 +101,20 @@ body {
     }
     &-Slogan2 {
         font-weight: bold;
-        background-color: $turquoise;
-        color: $bleu;
+        background-color: $blanc;
+        color: $turquoise;
         
         strong {
             text-transform: uppercase;
-            color: white;
-            
+            color: $bg-red;
+
         }
     }
 }
 
 .Title {
     font-weight: bold;
-    color: $bleu;
+    color: $bg-red;
     
     strong {
         font-family: 'Lobster';
@@ -137,7 +140,7 @@ body {
 
 .PsychicChoice-Psychic {
     &-VisualForm {
-        color: $bleu;
+        color: $bg-red;
     }
     &-Picture {
         position: relative;

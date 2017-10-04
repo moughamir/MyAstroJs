@@ -39,21 +39,21 @@ $veronique : $img_psy_dir + "veronique.png";
     background-image: url($veronique);
 }
 
-
-// Dimitrie
-$dimitri: $img_psy_dir + "dimitri.png";
+// Dimitri
+$dimitri : $img_psy_dir + "dimitri.png";
 .PsychicChoice-Psychic.Dimitri .PsychicChoice-Psychic-Photo {
     background-image: url($dimitri);
 }
-.Pop.Pop-Voyant.Dimitri .Pop-Voyant-Photo{
+.Pop.Pop-Voyant.Olivier .Pop-Voyant-Photo{
     background-image: url($dimitri);
 }
 
-// margaux
+// Margaux
 $margaux : $img_psy_dir + "margaux.png";
 .PsychicChoice-Psychic.Margaux .PsychicChoice-Psychic-Photo {
     background-image: url($margaux);
 }
 .Pop.Pop-Voyant.Margaux .Pop-Voyant-Photo{
     background-image: url($margaux);
+
 }
