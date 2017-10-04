@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
 
 /* Images */
-$img_dir : "../images_landing/tarot-direct-r17/";
+$img_dir : "../images_landing/tarot-direct-rentree/";
 $bg  : $img_dir + "bckgd.png";
 $bgheader : $img_dir + "header.png";
 $logo : $img_dir + "logo.png";
@@ -295,7 +295,7 @@ body {
 
 
 select.FormField-Input {
-  background: #ffffff;
+  background: $blanc;
 }
 
 .Fields-Table-Row .FormField-Info{
@@ -313,7 +313,7 @@ select.FormField-Input {
 
 .FormContainer-Submit {
     background-color: $bg_red;
-    color: #ffffff;
+    color: $blanc;
     border:2px solid $bg_red;
     min-width: initial;
     font-size: 1.6rem;
@@ -343,7 +343,7 @@ select.FormField-Input {
     font-family: 'FontAwesome';
     font-weight: bold;
     padding-right: 0.5rem;
-    color: #ffffff;
+    color: $blanc;
     font-size: 18px;
 }
 
@@ -352,7 +352,7 @@ select.FormField-Input {
     font-family: 'FontAwesome';
     font-weight: bold;
     padding-right: 0.5rem;
-    color: #ffffff;
+    color: $blanc;
     font-size: 18px;
 }
 
@@ -440,37 +440,37 @@ input[type="checkbox"], input[type="radio"] {
     &-Slogan {
         width: 80%;
         margin: 3rem auto 0;
-        padding: 1rem;
-        border: 2px solid $turquoise;
+        padding: 0.5rem;
+        border: 2px solid $bg-red;
         text-align: center;
         font-size: 2rem;
-        color: $turquoise;
+        color: $bg-red;
         hyphens: none;
     }
-    
+
     &-Sent {
         text-align: center;
     }
-    
+
     &-Form {
         & p {
             margin: 1rem 0;
             text-align: center;
             font-size: 1.8rem;
         }
-        
+
         &-Title {
             padding: 1rem 0;
             background-color: white;
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            color: $bleu;
+            color: $blanc;
             hyphens: none;
 
             & strong {
                 font-weight: normal;
-                color: $turquoise;
+                color: $bg-red;
             }
         }
 
@@ -479,18 +479,24 @@ input[type="checkbox"], input[type="radio"] {
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            font-size: 2.8rem;
-            color: $rose;
+            font-size: 2.4rem;
+            color: $bg-red;
+            padding: 5px;
+            background: $blanc;
         }
-        
+
         &Container {
             margin-top: 2rem;
         }
     }
-    
+
     .FormContainer-Submit.btn-rose{
         text-transform: uppercase;
     }
+}
+
+.DRI-Form .FormContainer {
+  padding: 0px;
 }
 
 @media all and (max-width: 640px){
@@ -516,38 +522,47 @@ input[type="checkbox"], input[type="radio"] {
 /* ----------------------------- [ PAGE MERCI ] ----------------------------- */
 
 .Merci-Form {
-    background-color: $bleu;
+    background-color: $bg-grey;
     background-image: url($offre_immediate);
     background-repeat: no-repeat;
     background-position: 20px 60px;
     text-align: center;
-    
+
     .Merci-Title {
         text-transform: uppercase;
         font-family: 'Raleway';
-        text-shadow: 0px 0px 10px black;
+        font-size: 15px;
+        width: 84%;
+        text-align: right;
         strong {
-            color: $turquoise;
+            color: $bg-red;
         }
     }
-    
+
+    .Merci-Topic {
+      font-style: italic;
+      font-weight: bold;
+      width: 64%;
+    }
+    .Merci-Offre {
+      float: left;
+    }
+
     .Merci-Text {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        color: $rose;
+        color: $bg-red;
         hyphens: none;
     }
-    
+
     .FormContainer-Submit {
         display: inline-block;
-        color: $bleu;
+        color: $blanc;
         text-decoration: none;
-        border-color: white;
-        box-shadow: 0px 0px 10px white;
-        
+        border: 3px solid $blanc;
         &:hover {
-            border-color: $turquoise;
-            color: $turquoise;
+            border-color: $blanc;
+            color: $blanc;
             box-shadow: none;
         }
     }

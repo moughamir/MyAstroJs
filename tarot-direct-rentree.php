@@ -27,7 +27,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
         <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct-rentree.css" />
+        <link rel="stylesheet" type="text/css" href="<?= $css;?>" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,13 +86,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-a" />
+                                <input type="hidden" name="source" value="tarot-direct-rentree" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
                                 <input type="hidden" name="affiliation" value="adwords" />
-                                <input type="hidden" name="dri" value="tarot-direct-merci" />
-                                <input type="hidden" name="dri2" value="tarot-direct-dri-tog" />
+                                <input type="hidden" name="dri" value="tarot-direct-rentree-merci" />
+                                <input type="hidden" name="dri2" value="tarot-direct-rentree-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
@@ -189,6 +189,33 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
                                 <div class="Fields-Table-Row">
                                     <span class="FormField-Info2">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
+                                </div>
+                                <div class="Fields-Table-Row">
+                                <label for="pays" class="FormField-Label">Votre pays</label>
+                                <div class="FormField">
+                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                        <option value="" selected>Votre Pays</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="CH">Suisse</option>
+                                        <option value="FR" selected>France Métropolitaine</option>
+                                        <optgroup label="DOM-TOM">
+                                            <option value="MQ">Martinique</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GF">Guyane</option>
+                                            <option value="RE">La Réunion</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="PM">St Pierre et Miquelon</option>
+                                            <option value="BL">St Barthélémy</option>
+                                            <option value="SM">St Martin</option>
+                                            <option value="WF">Wallis et Futunua</option>
+                                            <option value="PF">Polynésie Française</option>
+                                            <option value="NC">Nouvelle Calédonie</option>
+                                        </optgroup>
+                                        <option value="ZZ">Autre</option>
+                                    </select>
+                                 </div>
                                 </div>
                                 <input type="radio" name="confidentielles"  id="confidentielles"  >Je souhaite que mes informations restent confidentielles<br>
                                 <input type="radio" name="partenaires" id="partenaires" >J'accepte de recevoir les offres des partenaires(conditions et desinscription)<br>
