@@ -2,7 +2,7 @@
 /* ============================ [ tarot-direct ] ===============================
  */
 /* 
-        -----------------------------------------<
+        -----------------------------------------
         --            structure landing tarot rentree          --
         -----------------------------------------
 
@@ -2498,8 +2498,6 @@ body {
   background-image: url("../images_landing/tarot-direct-rentree/holder.png");
   border-radius: 6px; }
 
-.WidgetTarot-Result {
-  margin-bottom: 0; }
 .WidgetTarot-Result .WidgetTarot-ResultMsg {
   font-weight: bold;
   font-size: 14px;

@@ -72,8 +72,6 @@ body {
     background-position: center top;
     min-height: 127px;
     position: relative;
-    /*top: -64px;*/
-    /*z-index: -10;*/
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -262,10 +260,7 @@ body {
 }
 
 
-
 .WidgetTarot-Result {
-
-    margin-bottom: 0;
 
     .WidgetTarot-ResultMsg {
         font-weight: bold;
@@ -273,6 +268,7 @@ body {
         margin-bottom: 2em;
     }
 }
+
 
 .WidgetTarot {
     position: relative;
