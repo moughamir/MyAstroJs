@@ -57,6 +57,8 @@ body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
     background-image: url($bg);
+    background-size: 100% 120%;
+
 }
 .ContentBand.Principal {
     background-repeat: no-repeat;
@@ -73,7 +75,6 @@ body {
     background-position: center top;
     min-height: 127px;
     position: relative;
-    top: 20px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -265,10 +266,7 @@ body {
 }
 
 
-
 .WidgetTarot-Result {
-
-    margin-bottom: 0;
 
     .WidgetTarot-ResultMsg {
         font-weight: bold;
@@ -276,6 +274,13 @@ body {
         margin-bottom: 2em;
     }
 }
+
+
+.WidgetTarot {
+    position: relative;
+    top:63px;
+}
+
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
