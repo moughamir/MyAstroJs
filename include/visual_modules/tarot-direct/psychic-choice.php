@@ -28,9 +28,9 @@ $psychics_bdd = array(
     ]
 );
 
-$def_psychics = ['margaux', 'dimitri'];
+$def_psychics = ['sonia', 'christelle'];
 
-if(date('Ymd') >= 20171226){
+if(date('Ymd') >= 20161226){
     $def_psychics = ['veronique', 'olivier'];
 }
 
