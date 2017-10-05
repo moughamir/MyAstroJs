@@ -54,6 +54,8 @@ body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
     background-image: url($bg);
+    background-size: 100% 120%;
+
 }
 .ContentBand.Principal {
     background-repeat: no-repeat;
@@ -70,7 +72,8 @@ body {
     background-position: center top;
     min-height: 127px;
     position: relative;
-    top: 20px;
+    /*top: -64px;*/
+    /*z-index: -10;*/
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -262,6 +265,12 @@ body {
     font-weight: bold;
     font-size : 14px;
 }
+
+.WidgetTarot {
+    position: relative;
+    top:63px;
+}
+
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
