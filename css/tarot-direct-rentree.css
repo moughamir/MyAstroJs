@@ -2,7 +2,7 @@
 /* ============================ [ tarot-direct ] ===============================
  */
 /* 
-        -----------------------------------------
+        -----------------------------------------<
         --            structure landing tarot rentree          --
         -----------------------------------------
 
@@ -1938,9 +1938,9 @@ body {
   z-index: 3; }
 
 .Pop.Pop-Voyant {
-  width: 150px;
-  height: 131px;
-  left: -160px;
+  width: 170px;
+  height: 151px;
+  left: -180px;
   top: 20px;
   background-position: center;
   background-repeat: no-repeat;
@@ -2348,9 +2348,7 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   min-height: 127px;
-  position: relative;
-  /*top: -64px;*/
-  /*z-index: -10;*/ }
+  position: relative; }
 .ContentBand.Arrowed .ContentBand-ColumnHeader {
   padding-top: 5rem; }
 
@@ -2500,9 +2498,12 @@ body {
   background-image: url("../images_landing/tarot-direct-rentree/holder.png");
   border-radius: 6px; }
 
-.WidgetTarot-ResultMsg {
+.WidgetTarot-Result {
+  margin-bottom: 0; }
+.WidgetTarot-Result .WidgetTarot-ResultMsg {
   font-weight: bold;
-  font-size: 14px; }
+  font-size: 14px;
+  margin-bottom: 2em; }
 
 .WidgetTarot {
   position: relative;
@@ -2568,15 +2569,16 @@ body {
 select.FormField-Input {
   background: #fff; }
 
-.Fields-Table-Row .FormField-Info {
-  padding-left: 45%;
+.FormField-Info, .FormField-Info2 {
   font-size: 12px;
-  margin-top: 0px; }
+  position: relative;
+  top: -5px; }
 
-.Fields-Table-Row .FormField-Info2 {
-  padding-left: 35%;
-  font-size: 12px;
-  margin-top: 12px; }
+.FormField-Info {
+  padding-left: 45%; }
+
+.FormField-Info2 {
+  padding-left: 35%; }
 
 .FormContainer-Submit {
   background-color: #ee333f;
@@ -2614,9 +2616,44 @@ select.FormField-Input {
   color: #fff;
   font-size: 18px; }
 
-input[type="checkbox"], input[type="radio"] {
-  width: 20px !important;
-  height: 20px !important; }
+.FormContainer-Fields [type="radio"]:checked, .FormContainer-Fields [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px; }
+.FormContainer-Fields [type="radio"]:checked + label, .FormContainer-Fields [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block; }
+.FormContainer-Fields [type="radio"]:checked + label:before, .FormContainer-Fields [type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff; }
+.FormContainer-Fields [type="radio"]:checked + label:after, .FormContainer-Fields [type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #777;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+.FormContainer-Fields [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+.FormContainer-Fields [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
 
 /* ---------------- coloration bootstrap des alert formulaire --------------- */
 .alert {
@@ -2689,7 +2726,7 @@ input[type="checkbox"], input[type="radio"] {
 
 /* -------------------------------- [ DRI ] --------------------------------- */
 .DRI-Slogan {
-  width: 80%;
+  width: 60%;
   margin: 3rem auto 0;
   padding: 0.5rem;
   border: 2px solid #ee333f;
@@ -2699,6 +2736,8 @@ input[type="checkbox"], input[type="radio"] {
   hyphens: none; }
 .DRI-Sent {
   text-align: center; }
+.DRI-Form {
+  padding: 0px; }
 .DRI-Form p {
   margin: 1rem 0;
   text-align: center;
@@ -2709,7 +2748,7 @@ input[type="checkbox"], input[type="radio"] {
   text-align: center;
   font-family: 'Lobster';
   font-weight: normal;
-  color: #fff;
+  /*color: $blanc;*/
   hyphens: none; }
 .DRI-Form-Title strong {
   font-weight: normal;
@@ -2730,6 +2769,9 @@ input[type="checkbox"], input[type="radio"] {
 
 .DRI-Form .FormContainer {
   padding: 0px; }
+.DRI-Form .FormContainer-Submit {
+  position: relative;
+  top: 20px; }
 
 @media all and (max-width: 640px) {
   .DRI-Slogan {

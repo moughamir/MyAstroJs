@@ -261,9 +261,17 @@ body {
     }
 }
 
-.WidgetTarot-ResultMsg {
-    font-weight: bold;
-    font-size : 14px;
+
+
+.WidgetTarot-Result {
+
+    margin-bottom: 0;
+
+    .WidgetTarot-ResultMsg {
+        font-weight: bold;
+        font-size : 14px;
+        margin-bottom: 2em;
+    }
 }
 
 .WidgetTarot {
@@ -306,17 +314,20 @@ select.FormField-Input {
   background: $blanc;
 }
 
-.Fields-Table-Row .FormField-Info{
-  padding-left: 45%;
+ .FormField-Info , .FormField-Info2{
   font-size: 12px;
-  margin-top: 0px;
-}
+  position: relative;
+  top:-5px;
+  }
 
-.Fields-Table-Row .FormField-Info2{
+ .FormField-Info {
+    padding-left: 45%;
+
+ }
+
+ .FormField-Info2{
   padding-left: 35%;
-  font-size: 12px;
-  margin-top: 12px;
-}
+ }
 
 
 .FormContainer-Submit {
@@ -364,11 +375,59 @@ select.FormField-Input {
     font-size: 18px;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    width: 20px !important;
-    height: 20px !important;
-}
 
+.FormContainer-Fields {
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+   {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #777;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 @import "modules_themes/form-alert-bootstrap";
 
 /* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
@@ -446,7 +505,7 @@ input[type="checkbox"], input[type="radio"] {
 
 .DRI {
     &-Slogan {
-        width: 80%;
+        width: 60%;
         margin: 3rem auto 0;
         padding: 0.5rem;
         border: 2px solid $bg-red;
@@ -461,6 +520,7 @@ input[type="checkbox"], input[type="radio"] {
     }
 
     &-Form {
+        padding: 0px;
         & p {
             margin: 1rem 0;
             text-align: center;
@@ -473,7 +533,7 @@ input[type="checkbox"], input[type="radio"] {
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            color: $blanc;
+            /*color: $blanc;*/
             hyphens: none;
 
             & strong {
@@ -495,6 +555,7 @@ input[type="checkbox"], input[type="radio"] {
 
         &Container {
             margin-top: 2rem;
+
         }
     }
 
@@ -504,7 +565,11 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .DRI-Form .FormContainer {
-  padding: 0px;
+    padding: 0px;
+    &-Submit {
+        position: relative;
+        top: 20px;
+    }
 }
 
 @media all and (max-width: 640px){

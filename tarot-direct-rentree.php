@@ -105,12 +105,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="radio" name="sexe" value="Mme" id="sexe-mm" class="FormField-Input" />
-                                                <label for="sexe-f" class="FormField-Label ">Mme</label>
+                                                <label for="sexe-mm" class="FormField-Label ">Mme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="radio" name="sexe" value="Mlle" id="sexe-ml" class="FormField-Input" />
 
-                                                <label for="sexe-h" class="FormField-Label">Mlle</label>
+                                                <label for="sexe-ml" class="FormField-Label">Mlle</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="radio" name="sexe" value="Mr" id="sexe-h" class="FormField-Input" />
@@ -172,9 +172,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <input id="email" type="email" placeholder="mon@email.com" name="email" class="FormField-Input" value="<?= $email ?>" required />
                                     </div>
                                 </div>
-                                <div class="Fields-Table-Row">
                                     <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span>
-                                </div>
                                 <div class="Fields-Table-Row " ><!--sonprenom-->
                                     <label class="FormField-Label" for="son_prenom">Personne aimée</label>
                                     <div class="FormField">
@@ -187,9 +185,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="facultatif" />
                                     </div>
                                 </div>
-                                <div class="Fields-Table-Row">
                                     <span class="FormField-Info2">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>
-                                </div>
                                 <div class="Fields-Table-Row">
                                 <label for="pays" class="FormField-Label">Votre pays</label>
                                 <div class="FormField">
@@ -217,11 +213,15 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                     </select>
                                  </div>
                                 </div>
-                                <input type="radio" name="confidentielles"  id="confidentielles"  >Je souhaite que mes informations restent confidentielles<br>
-                                <input type="radio" name="partenaires" id="partenaires" >J'accepte de recevoir les offres des partenaires(conditions et desinscription)<br>
 
-                            </div>
-                            <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
+                                <div class="FormField radio">
+                                    <input type="radio" name="confidentielles"  id="confidentielles"  >
+                                    <label for="confidentielles" class="cguv">Je souhaite que mes informations restent confidentielles</label><br>
+                                    <input type="radio" name="partenaires" id="partenaires" >
+                                    <label for="partenaires" class="cguv">J'accepte de recevoir les offres des partenaires(conditions et desinscription)</label>
+                                </div>
+
+                                <button class="FormContainer-Submit" type="submit" name="valider">Lancer lʼinterprétation</button>
                         </article>
                     </div>
                 </div>
