@@ -15,9 +15,9 @@ $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "carte-dos.png";
 $place_carte : $img_dir + "holder.png";
 $bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone : $img_dir + "hexagone-a.png";
-$hexagone_hover : $img_dir + "hexagone-p.png";
-$hexagone_active : $img_dir + "hexagone-p.png";
+$hexagone : $img_dir + "hexagone-p.png";
+$hexagone_hover : $img_dir + "hexagone-a.png";
+$hexagone_active : $img_dir + "hexagone-a.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
 $icon_amour : $img_dir + "coeur-p.png";
@@ -47,6 +47,9 @@ $woman: $rose;
 $man: $bleu;
 $tchat-bg: #E8E8E8;
 $bg-red : #ee333f;
+//
+$primary: $bg-red;
+$secondary: $turquoise;
 
 /* ----------------------------- [ STRUCTURE ] ------------------------------ */
 
@@ -140,7 +143,7 @@ body {
 
 .PsychicChoice-Psychic {
     &-VisualForm {
-        color: $bg-red;
+        color: $primary;
     }
     &-Picture {
         position: relative;
@@ -165,11 +168,11 @@ body {
         }
     }
     &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
-        color: $rose;
+        color: $secondary;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
             background-image: url($hexagone_hover);
-            &:after { color: $rose;}
+            &:after { color: $secondary;}
         }
     }
 }
@@ -181,7 +184,7 @@ body {
     border-left: none;
     border-right: none;
     border-color: $lightgrey;
-    color: $bleu;
+    color: $grey;
     font-weight: bold;
     
     &:before, &:after {
@@ -214,8 +217,11 @@ body {
         &.Travail { background-image: url($icon_travail);}
     }
     
-    &:hover, &:active, &:focus {
-        color: $rose;
+    &:hover, &:focus {
+        color: $secondary;
+    }
+    &:active{
+        color: $primary;
     }
     &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
         background-color: transparent;
@@ -224,7 +230,7 @@ body {
         &.Travail { background-image: url($icon_travail_hover);}
     }
     &-Input:checked + & {
-        color: $turquoise;
+        color: $primary;
         .ThemeChoice-ListItem-Icon {
             background-color: transparent;
             &.Amour { background-image: url($icon_amour_active);}
@@ -280,7 +286,7 @@ body {
 
 .Pop.Pop-Voyant {
     background-color: transparent;
-    background-image: url($hexagone);
+    background-image: url($hexagone_active);
     padding:7px ;
 }
 
