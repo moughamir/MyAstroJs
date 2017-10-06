@@ -30,7 +30,7 @@ if(isset($_SESSION['user_id'])){
 
         <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct-rentree.css" />
+        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
