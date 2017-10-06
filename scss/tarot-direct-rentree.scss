@@ -276,10 +276,46 @@ body {
 }
 
 
-.WidgetTarot {
+.WidgetTarot .Arrowed {
     position: relative;
     top:63px;
 }
+
+.WidgetTarot .Principal {
+    position: relative;
+    top:-10px;
+    height: 600px;
+}
+
+section.Tarot + .Arrowed {
+    top:-249px;
+}
+
+section[style].Tarot + .Arrowed {
+    top:63px!important;
+    bottom: 0px!important;
+}
+
+.FormMerci + .Arrowed {
+    position: relative;
+    top: 100px;
+}
+
+.FormMerci + .Arrowed + .SiteCopyright{
+
+    top:60px!important;
+}
+
+.FormDRI + .Arrowed {
+    position: relative;
+    top: 50px;
+}
+
+.FormDRI + .Arrowed + .SiteCopyright{
+
+    top:60px!important;
+}
+
 
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
