@@ -9,7 +9,7 @@
 
 /* Images */
 $img_dir : "../images_landing/tarot-direct-rentree/";
-$bg  : $img_dir + "bckgd.png";
+$bg  : $img_dir + "bckgd.jpg";
 $bgheader : $img_dir + "header.png";
 $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "carte-dos.png";
@@ -56,16 +56,20 @@ $secondary: $turquoise;
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
-    background-image: url($bg);
-    background-size: 100% 120%;
+    background: url($bg) fixed bottom center;
+    background-size: cover;
 
 }
 .ContentBand.Principal {
+    background-color: #fff;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
     
     .ContentBand-ColumnHeader {
+        background: url($bgheader);
+        box-shadow: 0 0 10px 1px $lightgrey;
         font-size:2.5rem;
+        margin-top: -1px;
     }
 }
 .ContentBand.Arrowed {
@@ -74,7 +78,6 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 127px;
-    position: relative;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
 .ContentBand.Principal.Arrowed {
@@ -87,7 +90,7 @@ body {
 .SiteHeader {
     position: relative;
     z-index: 2;
-    background-image: url($bgheader);
+    background: #fbd4b7;
     color: $grey;
     
     &-Logo {
@@ -152,7 +155,7 @@ body {
         height: 205px;
         background-color: transparent;
         background-image: url($hexagone);
-        padding:7px;
+        padding: 7px;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
@@ -315,7 +318,6 @@ section[style].Tarot + .Arrowed {
 
     top:60px!important;
 }
-
 
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
@@ -614,7 +616,6 @@ select.FormField-Input {
         top: 20px;
     }
 }
-
 @media all and (max-width: 640px){
    .DRI{
         &-Slogan {
