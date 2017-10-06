@@ -60,7 +60,7 @@ if(isset($_SESSION['user_id'])){
             </div>
         </header>
 <!-- ------------------------------ FORMULAIRE ----------------------------- -->
-        <section class="ContentBand Form Principal" id="scn-form">
+        <section class="ContentBand Form Principal FormMerci" id="scn-form">
             <header class="ContentBand-ColumnHeader Title">- Pour poursuivre <strong>cliquez sur le bouton</strong> ci-dessous -</header>
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">

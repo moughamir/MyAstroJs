@@ -86,7 +86,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="tarot-direct-rentree" />
+                                <input type="hidden" name="source" value="tarot-direct-rentree-a" />
                                 <input type="hidden" name="method" value="general-suscribe" />
                                 <input type="hidden" name="support" value="tarot" />
                                 <input type="hidden" name="site" value="myastro.fr" />
@@ -94,7 +94,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="dri" value="tarot-direct-rentree-merci" />
                                 <input type="hidden" name="dri2" value="tarot-direct-rentree-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="tel_needed" value="1" />
+                                <input type="hidden" name="tel_needed" value="0" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '' ?>" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
@@ -104,16 +104,16 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <input type="radio" name="sexe" value="Mme" id="sexe-mm" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="femme" id="sexe-mm" class="FormField-Input" />
                                                 <label for="sexe-mm" class="FormField-Label ">Mme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <input type="radio" name="sexe" value="Mlle" id="sexe-ml" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="femme" id="sexe-ml" class="FormField-Input" />
 
                                                 <label for="sexe-ml" class="FormField-Label">Mlle</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <input type="radio" name="sexe" value="Mr" id="sexe-h" class="FormField-Input" />
+                                                <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
                                                 <label for="sexe-h" class="FormField-Label">Mr</label>
                                             </div>
                                         </div>

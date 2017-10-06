@@ -586,6 +586,14 @@ select.FormField-Input {
     .Tchat-Message {
         padding: 0 1rem;
     }
+
+    .FormField-Info {
+        padding-left: 0px;
+    }
+
+    .FormField-Info2{
+        padding-left: 0px;
+    }
 }
 
 /* ----------------------------- [ PAGE MERCI ] ----------------------------- */
@@ -637,6 +645,16 @@ select.FormField-Input {
     }
 }
 
+.FormMerci {
+
+    .Title {
+
+        background: #fff;
+        border-bottom: 3px solid rgba(153, 153, 153, 0.42);
+
+    }
+ }
+
 @media all and (max-width: 102.4rem){
     .Merci-Form {
         background-image: none;
@@ -648,6 +666,14 @@ select.FormField-Input {
     }
     .Merci-Text {
         font-size: 1.7rem;
+    }
+
+    .FormField-Info {
+        padding-left: 0px;
+    }
+
+    .FormField-Info2{
+        padding-left: 0px;
     }
 }
 
