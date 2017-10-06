@@ -313,7 +313,12 @@ body {
 
 
 select.FormField-Input {
-  background: $blanc;
+    background: url(../images_landing/tarot-direct-rentree/select.png) no-repeat right #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    padding: 10.5px;
 }
 
  .FormField-Info , .FormField-Info2{
