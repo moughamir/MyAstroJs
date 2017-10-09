@@ -62,8 +62,6 @@ body {
 }
 .ContentBand.Principal {
     background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: center bottom;
     
     .ContentBand-ColumnHeader {
         background: url($bgheader);
@@ -73,10 +71,7 @@ body {
     }
 }
 .ContentBand.Arrowed {
-    background-color: transparent;
-    background-image: url($bg-fleche);
-    background-repeat: no-repeat;
-    background-position: center top;
+    background: transparent url($bg-fleche) no-repeat center top;
     min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
@@ -95,10 +90,7 @@ body {
     
     &-Logo {
         height: 100px;
-        background-color: transparent;
-        background-image: url($logo);
-        background-position: center;
-        background-repeat: no-repeat;
+        background: transparent url($logo) center no-repeat;
         background-size: contain;
     }
     
@@ -153,9 +145,9 @@ body {
         display: inline-block;
         width: 237px;
         height: 205px;
-        background-color: transparent;
-        background-image: url($hexagone);
+        background: transparent url($hexagone) no-repeat -1px;
         padding: 7px;
+        background-position: -1px center;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
@@ -277,48 +269,6 @@ body {
         margin-bottom: 2em;
     }
 }
-
-/*
-.WidgetTarot .Arrowed {
-    position: relative;
-    top:63px;
-}
-
-.WidgetTarot .Principal {
-    position: relative;
-    top:-10px;
-    height: 600px;
-}
-
-section.Tarot + .Arrowed {
-    top:-249px;
-}
-
-section[style].Tarot + .Arrowed {
-    top:63px!important;
-    bottom: 0px!important;
-}
-
-.FormMerci + .Arrowed {
-    position: relative;
-    top: 100px;
-}
-
-.FormMerci + .Arrowed + .SiteCopyright {
-
-    top:60px!important;
-}
-
-.FormDRI + .Arrowed {
-    position: relative;
-    top: 50px;
-}
-
-.FormDRI + .Arrowed + .SiteCopyright{
-
-    top:60px!important;
-}
-
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
