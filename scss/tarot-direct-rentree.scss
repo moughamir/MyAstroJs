@@ -278,7 +278,7 @@ body {
     }
 }
 
-
+/*
 .WidgetTarot .Arrowed {
     position: relative;
     top:63px;
@@ -567,18 +567,20 @@ select.FormField-Input {
     &-Form {
         padding: 0px;
         & p {
-            margin: 1rem 0;
+            margin: 2rem 1rem;
             text-align: center;
             font-size: 1.8rem;
         }
-
+        .Fields-Table {
+            padding-top: 40px;
+        }
         &-Title {
             padding: 1rem 0;
             background-color: white;
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            /*color: $blanc;*/
+            color: $red;
             hyphens: none;
 
             & strong {
@@ -607,8 +609,13 @@ select.FormField-Input {
     .FormContainer-Submit.btn-rose{
         text-transform: uppercase;
     }
+
+
 }
 
+.FormContainer-Fields {
+    padding-right: 40px !important;
+}
 .DRI-Form .FormContainer {
     padding: 0px;
     &-Submit {
