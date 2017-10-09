@@ -10,10 +10,10 @@
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-rentree-fb';
+$url = 'tarot-direct-rentree-wdt';
 $method = 'general-suscribe';
 $site = 'myastro.fr';
-$source = 'facebook_adds';
+$source = "weedoit";
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
