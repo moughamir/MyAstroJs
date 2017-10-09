@@ -34,7 +34,7 @@ if(date('Ymd') >= 20161226){
     $def_psychics = ['veronique', 'olivier'];
 }
 
-if($_SERVER['REQUEST_URI'] == '/tarot-direct-rentree.php' || $_SERVER['REQUEST_URI'] == '/tarot-direct-rentree'){
+if(strpos($_SERVER['REQUEST_URI'],'/tarot-direct-rentree') !== false){
     $def_psychics = ['margaux', 'dimitri'];
 }
 
