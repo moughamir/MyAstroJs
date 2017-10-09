@@ -146,6 +146,7 @@ body {
         width: 237px;
         height: 205px;
         background: transparent url($hexagone) no-repeat -1px;
+        background-size: contain;
         padding: 7px;
     }
     &-Input:checked + &-VisualForm {
