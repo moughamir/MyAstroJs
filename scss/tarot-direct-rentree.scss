@@ -147,7 +147,6 @@ body {
         height: 205px;
         background: transparent url($hexagone) no-repeat -1px;
         padding: 7px;
-        background-position: -1px center;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
