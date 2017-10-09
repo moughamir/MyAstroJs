@@ -603,6 +603,9 @@ select.FormField-Input {
         &Container {
             margin-top: 2rem;
 
+            .FormField-Input {
+                width: 70%;
+            }
         }
     }
 
@@ -616,6 +619,8 @@ select.FormField-Input {
 .FormContainer-Fields {
     padding-right: 40px !important;
 }
+
+
 .DRI-Form .FormContainer {
     padding: 0px;
     &-Submit {
