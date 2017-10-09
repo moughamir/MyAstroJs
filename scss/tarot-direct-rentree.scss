@@ -278,46 +278,50 @@ body {
     }
 }
 
-/*
-.WidgetTarot .Arrowed {
-    position: relative;
-    top:63px;
-}
+/***********************dynamiser the position of the carte*********************/
 
 .WidgetTarot .Principal {
     position: relative;
-    top:-10px;
     height: 600px;
 }
 
 section.Tarot + .Arrowed {
-    top:-249px;
+
+    .WidgetTarot-Result {
+        margin-top:-100px;
+    }
+
+    .WidgetTarot-ResultMsg {
+        position: relative;
+        top : -100px;
+    }
+
 }
 
 section[style].Tarot + .Arrowed {
-    top:63px!important;
-    bottom: 0px!important;
+
+    .WidgetTarot-ResultMsg {
+        margin-top: 100px;
+    }
+
+    .WidgetTarot-Result {
+        position: relative;
+        top : 110px;
+    }
 }
 
-.FormMerci + .Arrowed {
-    position: relative;
-    top: 100px;
+section[style].Tarot + .Arrowed + .SiteCopyright {
+    top : 140px!important;
 }
 
-.FormMerci + .Arrowed + .SiteCopyright {
-
-    top:60px!important;
+.FormMerci + .Arrowed .WidgetTarot-Result {
+    margin-top: 120px;
 }
 
-.FormDRI + .Arrowed {
-    position: relative;
-    top: 50px;
+.FormDRI + .Arrowed .WidgetTarot-Result {
+    margin-top: 120px;
 }
 
-.FormDRI + .Arrowed + .SiteCopyright{
-
-    top:60px!important;
-}
 
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
@@ -382,7 +386,7 @@ select.FormField-Input {
     min-width: initial;
     font-size: 1.6rem;
     transition: all 0.5s ease-in;
-    
+
     &:hover{
         color: $bg_red;
         background-color:transparent;
@@ -479,23 +483,23 @@ select.FormField-Input {
 
 .DRI-Promo {
     font-weight: bold;
-    
+
     &-Slogan {
 
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
             color: $turquoise;
-            
+
             &:hover {
                 color: $bleu;
             }
-            
+
             &Icon {
                 background-image: url($icon_tel);
             }
         }
-        
+
         &-CodePromo {
             font-size: 2.8rem;
             color: $turquoise;
@@ -515,7 +519,7 @@ select.FormField-Input {
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px $lightgrey;
-    
+
     &-Output {
         background-color: $tchat-bg;
         border-radius: 10px;
