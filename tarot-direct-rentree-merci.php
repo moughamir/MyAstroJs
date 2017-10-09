@@ -19,7 +19,7 @@ $voyant = isset($_SESSION['voyant']) ? $_SESSION['voyant'] : false;
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
 
 if(isset($_SESSION['user_id'])){
-    $bdd->update($bdd->users, ['dri_page' => 'tarot-direct-merci'], ['internal_id' => $_SESSION['user_id']]);
+    $bdd->update($bdd->users, ['dri_page' => 'tarot-direct-rentree-merci'], ['internal_id' => $_SESSION['user_id']]);
 }
 ?>
 <!DOCTYPE html>
