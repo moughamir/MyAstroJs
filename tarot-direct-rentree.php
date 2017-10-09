@@ -215,8 +215,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </div>
 
                                 <div class="FormField radio">
-                                    <input type="radio" name="confidentielles"  id="confidentielles"  >
-                                    <label for="confidentielles" class="cguv">Je souhaite que mes informations restent confidentielles</label><br>
+                                    <input type="radio" name="cguv"  id="cguv"  >
+                                    <label for="cguv" class="cguv">J'ai lu et j'accepte les conditions générales</label><br>
                                     <input type="radio" name="partenaires" id="partenaires" >
                                     <label for="partenaires" class="cguv">J'accepte de recevoir les offres des partenaires(conditions et desinscription)</label>
                                 </div>
