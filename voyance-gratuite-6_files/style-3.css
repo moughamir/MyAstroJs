@@ -167,7 +167,7 @@ h1 {
     }
 
     .widget .inp-txt input, .widget .inp-txt textarea {
-        width:279px;
+        width:220px;
     }
 
     .widget .daten {
@@ -175,7 +175,7 @@ h1 {
     }
 
     .widget #form-w .btn_button {
-        width: 290px;
+        width: 250px;
         font-size: 17px;
     }
 
