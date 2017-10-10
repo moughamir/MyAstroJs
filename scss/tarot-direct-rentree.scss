@@ -147,7 +147,7 @@ body {
         height: 205px;
         background: transparent url($hexagone) no-repeat -1px;
         background-size: contain;
-        padding: 7px;
+        padding: 4px;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
@@ -294,6 +294,7 @@ section[style].Tarot + .Arrowed {
 
     .WidgetTarot-ResultMsg {
         margin-top: 100px;
+        top : -10px;
     }
 
     .WidgetTarot-Result {
@@ -321,9 +322,28 @@ section[style].Tarot + .Arrowed + .SiteCopyright {
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
-    padding:7px!important; ;
+    padding:4px!important;
 }
 
+@media (max-width: 680px){
+.Pop.Pop-Voyant {
+    left: 50%!important;
+    top: -60px!important;
+    margin-left: -60px!important;
+}
+    .ContentBand.Arrowed {
+        min-height: auto!important;
+    }
+
+    .FormContainer {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .PsychicChoice-Psychic-Picture {
+        background-position-x: -1px;
+    }
+}
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
 @import "modules_themes/tarot-direct-psychics";
