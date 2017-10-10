@@ -738,6 +738,13 @@ select.FormField-Input {
     }
  }
 
+.FormMerci + .Arrowed .WidgetTarot-ResultMsg {
+    margin-top: 80px;
+}
+
+.FormDRI + .Arrowed .WidgetTarot-ResultMsg {
+    margin-top: 80px;
+}
 @media all and (max-width: 102.4rem){
     .Merci-Form {
         background-image: none;
