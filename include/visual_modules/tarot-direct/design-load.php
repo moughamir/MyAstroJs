@@ -42,11 +42,8 @@ if($force_design && isset($styles[$_GET['css']])){
         $select_style = 'default';
     }
 }
-//if(($_SERVER['REQUEST_URI'] == '/tarot-direct-rentree.php' || $_SERVER['REQUEST_URI'] == '/tarot-direct-rentree') || ($_SERVER['REQUEST_URI'] == '/tarot-direct-rentree-merci.php' || $_SERVER['REQUEST_URI'] == '/tarot-direct-rentree-merci')){
 if(strpos($_SERVER['REQUEST_URI'],'/tarot-direct-rentree') !== false){
-
     $select_style = 'rentree-17';
-
 }
 
 
