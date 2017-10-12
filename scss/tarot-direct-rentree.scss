@@ -1,34 +1,34 @@
 @charset "UTF-8";
 /* ============================ [ tarot-direct ] ===============================
- *
- * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
  */
-@import "templates/s-landing-tarot-3";
+@import "templates/s-landing-tarot-rentree";
 
 /* Typos */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
 
 /* Images */
-$img_dir : "../images_landing/tarot-direct/";
+$img_dir : "../images_landing/tarot-direct-rentree/";
+$bg  : $img_dir + "bckgd.jpg";
+$bgheader : $img_dir + "header.png";
 $logo : $img_dir + "logo.png";
-$dos_carte : $img_dir + "cardback.png";
-$place_carte : $img_dir + "cardplace.png";
+$dos_carte : $img_dir + "carte-dos.png";
+$place_carte : $img_dir + "holder.png";
 $bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone : $img_dir + "hexagone_bleu.png";
-$hexagone_hover : $img_dir + "hexagone_rose.png";
-$hexagone_active : $img_dir + "hexagone_turquoise.png";
+$hexagone : $img_dir + "hexagone-p.png";
+$hexagone_hover : $img_dir + "hexagone-a.png";
+$hexagone_active : $img_dir + "hexagone-a.png";
 $listitem_leftcorner : $img_dir + "corner-left.png";
 $listitem_rightcorner : $img_dir + "corner-right.png";
-$icon_amour : $img_dir + "coeur_bleu.png";
-$icon_argent : $img_dir + "argent_bleu.png";
-$icon_travail : $img_dir + "travail_bleu.png";
-$icon_amour_hover : $img_dir + "coeur_rose.png";
-$icon_argent_hover : $img_dir + "argent_rose.png";
-$icon_travail_hover : $img_dir + "travail_rose.png";
-$icon_amour_active : $img_dir + "coeur_turquoise.png";
-$icon_argent_active : $img_dir + "argent_turquoise.png";
-$icon_travail_active : $img_dir + "travail_turquoise.png";
+$icon_amour : $img_dir + "coeur-p.png";
+$icon_argent : $img_dir + "argent-p.png";
+$icon_travail : $img_dir + "travail-p.png";
+$icon_amour_hover : $img_dir + "coeur-h.png";
+$icon_argent_hover : $img_dir + "argent-h.png";
+$icon_travail_hover : $img_dir + "travail-h.png";
+$icon_amour_active : $img_dir + "coeur-a.png";
+$icon_argent_active : $img_dir + "argent-a.png";
+$icon_travail_active : $img_dir + "travail-a.png";
 $icon_tel: $img_dir + "tel.png";
 $offre_tchat : $img_dir + "offre-tchat.png";
 $offre_immediate : $img_dir + "offre-immediate.png";
@@ -36,36 +36,42 @@ $offre_immediate : $img_dir + "offre-immediate.png";
 /* Palette */
 $grey: #454545;
 $bleu: #2E4980;
+$blanc: #fff;
+$red: #f00;
 $rose: #F57F9B;
-$turquoise: #1BEBDA;
+$turquoise: #fab532;
 $lightgrey: #C0C3C8;
 $bg-bleu: #EAEEF4;
-$bg-grey: #616161;
+$bg-grey: #F9E8D5;
 $woman: $rose;
 $man: $bleu;
 $tchat-bg: #E8E8E8;
+$bg-red : #ee333f;
+//
+$primary: $bg-red;
+$secondary: $turquoise;
 
 /* ----------------------------- [ STRUCTURE ] ------------------------------ */
 
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
+    background: url($bg) fixed bottom center;
+    background-size: cover;
+
 }
 .ContentBand.Principal {
-    background-color: $bg-bleu;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    background-color: #fff;
+    
     .ContentBand-ColumnHeader {
-        background-color: white;
+        background: url($bgheader);
         box-shadow: 0 0 10px 1px $lightgrey;
         font-size:2.5rem;
+        margin-top: -1px;
     }
 }
 .ContentBand.Arrowed {
-    background-color: transparent;
-    background-image: url($bg-fleche);
-    background-repeat: no-repeat;
-    background-position: center top;
+    background: transparent url($bg-fleche) no-repeat center top;
     min-height: 127px;
     .ContentBand-ColumnHeader { padding-top: 5rem;}
 }
@@ -79,15 +85,12 @@ body {
 .SiteHeader {
     position: relative;
     z-index: 2;
-    background-color: $bleu;
-    color: $turquoise;
+    background: #fbd4b7;
+    color: $grey;
     
     &-Logo {
         height: 100px;
-        background-color: transparent;
-        background-image: url($logo);
-        background-position: center;
-        background-repeat: no-repeat;
+        background: transparent url($logo) center no-repeat;
         background-size: contain;
     }
     
@@ -96,20 +99,20 @@ body {
     }
     &-Slogan2 {
         font-weight: bold;
-        background-color: $turquoise;
-        color: $bleu;
+        background-color: $blanc;
+        color: $turquoise;
         
         strong {
             text-transform: uppercase;
-            color: white;
-            
+            color: $bg-red;
+
         }
     }
 }
 
 .Title {
     font-weight: bold;
-    color: $bleu;
+    color: $bg-red;
     
     strong {
         font-family: 'Lobster';
@@ -135,15 +138,16 @@ body {
 
 .PsychicChoice-Psychic {
     &-VisualForm {
-        color: $bleu;
+        color: $primary;
     }
     &-Picture {
         position: relative;
         display: inline-block;
         width: 237px;
         height: 205px;
-        background-color: transparent;
-        background-image: url($hexagone);
+        background: transparent url($hexagone) no-repeat -1px;
+        background-size: contain;
+        padding: 4px;
     }
     &-Input:checked + &-VisualForm {
         color: $turquoise;
@@ -159,11 +163,11 @@ body {
         }
     }
     &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
-        color: $rose;
+        color: $secondary;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
             background-image: url($hexagone_hover);
-            &:after { color: $rose;}
+            &:after { color: $secondary;}
         }
     }
 }
@@ -175,7 +179,7 @@ body {
     border-left: none;
     border-right: none;
     border-color: $lightgrey;
-    color: $bleu;
+    color: $grey;
     font-weight: bold;
     
     &:before, &:after {
@@ -208,8 +212,11 @@ body {
         &.Travail { background-image: url($icon_travail);}
     }
     
-    &:hover, &:active, &:focus {
-        color: $rose;
+    &:hover, &:focus {
+        color: $secondary;
+    }
+    &:active{
+        color: $primary;
     }
     &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
         background-color: transparent;
@@ -218,7 +225,7 @@ body {
         &.Travail { background-image: url($icon_travail_hover);}
     }
     &-Input:checked + & {
-        color: $turquoise;
+        color: $primary;
         .ThemeChoice-ListItem-Icon {
             background-color: transparent;
             &.Amour { background-image: url($icon_amour_active);}
@@ -253,18 +260,97 @@ body {
     }
 }
 
-.WidgetTarot-ResultMsg {
-    font-weight: bold;
-    color: $bleu;
+
+.WidgetTarot-Result {
+
+    .WidgetTarot-ResultMsg {
+        font-weight: bold;
+        font-size : 14px;
+        margin-bottom: 2em;
+    }
 }
+
+/***********************dynamiser the position of the carte*********************/
+
+.WidgetTarot .Principal {
+    position: relative;
+    height: 600px;
+}
+
+section.Tarot + .Arrowed {
+
+    .WidgetTarot-Result {
+        margin-top:-100px;
+    }
+
+    .WidgetTarot-ResultMsg {
+        position: relative;
+        top : -100px;
+    }
+
+}
+
+section[style].Tarot + .Arrowed {
+
+    .WidgetTarot-ResultMsg {
+        margin-top: 100px;
+        top : -10px;
+    }
+
+    .WidgetTarot-Result {
+        position: relative;
+        top : 110px;
+    }
+}
+
+section[style].Tarot + .Arrowed + .SiteCopyright {
+    top : 140px!important;
+}
+
+.FormMerci + .Arrowed .WidgetTarot-Result {
+    margin-top: 120px;
+}
+
+.FormDRI + .Arrowed .WidgetTarot-Result {
+    margin-top: 120px;
+}
+
+
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
 
 .Pop.Pop-Voyant {
     background-color: transparent;
     background-image: url($hexagone_active);
+    padding:4px!important;
 }
 
+@media (max-width: 680px){
+.Pop.Pop-Voyant {
+    left: 50%!important;
+    top: -60px!important;
+    margin-left: -60px!important;
+}
+    .ContentBand.Arrowed {
+        min-height: auto!important;
+    }
+
+    .FormContainer {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .PsychicChoice-Psychic-Picture {
+        background-position-x: -1px;
+    }
+
+    .WidgetTarot-Card {
+        width: 80px;
+        height: 143px;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+}
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
 @import "modules_themes/tarot-direct-psychics";
@@ -273,7 +359,6 @@ body {
 
 .FormContainer {
     background-color: $bg-grey;
-    color: white;
 }
 
 .FormField-Label {
@@ -281,19 +366,48 @@ body {
 }
 .FormField-Input {
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     &.has-error {
         box-shadow: 0 0 8px 1px #a94442 inset;
     }
 }
+
+
+select.FormField-Input {
+    background: url(../images_landing/tarot-direct-rentree/select.png) no-repeat right #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    padding: 10.5px;
+}
+
+ .FormField-Info , .FormField-Info2{
+  font-size: 12px;
+  position: relative;
+  top:-5px;
+  }
+
+ .FormField-Info {
+    padding-left: 45%;
+
+ }
+
+ .FormField-Info2{
+  padding-left: 35%;
+ }
+
+
 .FormContainer-Submit {
-    background-color: $turquoise;
-    color: $grey;
-    border:2px solid $turquoise;
+    background-color: $bg_red;
+    color: $blanc;
+    border:2px solid $bg_red;
+    min-width: initial;
+    font-size: 1.6rem;
     transition: all 0.5s ease-in;
-    
+
     &:hover{
-        color: $turquoise; 
+        color: $bg_red;
         background-color:transparent;
     }
 }
@@ -316,36 +430,95 @@ body {
     font-family: 'FontAwesome';
     font-weight: bold;
     padding-right: 0.5rem;
+    color: $blanc;
+    font-size: 18px;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    width: 20px !important;
-    height: 20px !important;
+.FormField-Info2:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+    color: $blanc;
+    font-size: 18px;
 }
 
+
+.FormContainer-Fields {
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+   {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #777;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 @import "modules_themes/form-alert-bootstrap";
 
 /* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
-    
+
     &-Slogan {
 
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
             color: $turquoise;
-            
+
             &:hover {
                 color: $bleu;
             }
-            
+
             &Icon {
                 background-image: url($icon_tel);
             }
         }
-        
+
         &-CodePromo {
             font-size: 2.8rem;
             color: $turquoise;
@@ -365,7 +538,7 @@ input[type="checkbox"], input[type="radio"] {
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px $lightgrey;
-    
+
     &-Output {
         background-color: $tchat-bg;
         border-radius: 10px;
@@ -400,39 +573,42 @@ input[type="checkbox"], input[type="radio"] {
 
 .DRI {
     &-Slogan {
-        width: 80%;
+        width: 60%;
         margin: 3rem auto 0;
-        padding: 1rem;
-        border: 2px solid $turquoise;
+        padding: 0.5rem;
+        border: 2px solid $bg-red;
         text-align: center;
         font-size: 2rem;
-        color: $turquoise;
+        color: $bg-red;
         hyphens: none;
     }
-    
+
     &-Sent {
         text-align: center;
     }
-    
+
     &-Form {
+        padding: 0px;
         & p {
-            margin: 1rem 0;
+            margin: 2rem 1rem;
             text-align: center;
             font-size: 1.8rem;
         }
-        
+        .Fields-Table {
+            padding-top: 40px;
+        }
         &-Title {
             padding: 1rem 0;
             background-color: white;
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            color: $bleu;
+            color: $red;
             hyphens: none;
 
             & strong {
                 font-weight: normal;
-                color: $turquoise;
+                color: $bg-red;
             }
         }
 
@@ -441,20 +617,40 @@ input[type="checkbox"], input[type="radio"] {
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            font-size: 2.8rem;
-            color: $rose;
+            font-size: 2.4rem;
+            color: $bg-red;
+            padding: 5px;
+            background: $blanc;
         }
-        
+
         &Container {
             margin-top: 2rem;
+
+            .FormField-Input {
+                width: 70%;
+            }
         }
     }
-    
+
     .FormContainer-Submit.btn-rose{
         text-transform: uppercase;
     }
+
+
 }
 
+.FormContainer-Fields {
+    padding-right: 40px !important;
+}
+
+
+.DRI-Form .FormContainer {
+    padding: 0px;
+    &-Submit {
+        position: relative;
+        top: 20px;
+    }
+}
 @media all and (max-width: 640px){
    .DRI{
         &-Slogan {
@@ -473,48 +669,82 @@ input[type="checkbox"], input[type="radio"] {
     .Tchat-Message {
         padding: 0 1rem;
     }
+
+    .FormField-Info {
+        padding-left: 0px;
+    }
+
+    .FormField-Info2{
+        padding-left: 0px;
+    }
 }
 
 /* ----------------------------- [ PAGE MERCI ] ----------------------------- */
 
 .Merci-Form {
-    background-color: $bleu;
+    background-color: $bg-grey;
     background-image: url($offre_immediate);
     background-repeat: no-repeat;
     background-position: 20px 60px;
     text-align: center;
-    
+
     .Merci-Title {
         text-transform: uppercase;
         font-family: 'Raleway';
-        text-shadow: 0px 0px 10px black;
+        font-size: 15px;
+        width: 84%;
+        text-align: right;
         strong {
-            color: $turquoise;
+            color: $bg-red;
         }
     }
-    
+
+    .Merci-Topic {
+      font-style: italic;
+      font-weight: bold;
+      width: 64%;
+    }
+    .Merci-Offre {
+      float: left;
+    }
+
     .Merci-Text {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
-        color: $rose;
+        color: $bg-red;
         hyphens: none;
     }
-    
+
     .FormContainer-Submit {
         display: inline-block;
-        color: $bleu;
+        color: $blanc;
         text-decoration: none;
-        border-color: white;
-        box-shadow: 0px 0px 10px white;
-        
+        border: 3px solid $blanc;
         &:hover {
-            border-color: $turquoise;
-            color: $turquoise;
+            border-color: $blanc;
+            color: $blanc;
             box-shadow: none;
         }
     }
 }
 
+.FormMerci {
+
+    .Title {
+
+        background: #fff;
+        border-bottom: 3px solid rgba(153, 153, 153, 0.42);
+
+    }
+ }
+
+.FormMerci + .Arrowed .WidgetTarot-ResultMsg {
+    margin-top: 80px;
+}
+
+.FormDRI + .Arrowed .WidgetTarot-ResultMsg {
+    margin-top: 80px;
+}
 @media all and (max-width: 102.4rem){
     .Merci-Form {
         background-image: none;
@@ -527,4 +757,16 @@ input[type="checkbox"], input[type="radio"] {
     .Merci-Text {
         font-size: 1.7rem;
     }
+
+    .FormField-Info {
+        padding-left: 0px;
+    }
+
+    .FormField-Info2{
+        padding-left: 0px;
+    }
+}
+
+.Fields-Table-Row>.FormField-Label{
+    width: 45%;
 }

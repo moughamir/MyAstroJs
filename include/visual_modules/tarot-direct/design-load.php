@@ -19,6 +19,10 @@ $styles = array(
         'css' => 'css/tarot-direct-amour.css',
         'dir' => 'images_landing/tarot-direct-amour/'
     ],
+    'rentree-17' => [
+        'css' => 'css/tarot-direct-rentree.css',
+        'dir' => 'images_landing/tarot-direct-rentree/'
+    ],
 );
 
 $j = date('j');
@@ -38,6 +42,10 @@ if($force_design && isset($styles[$_GET['css']])){
         $select_style = 'default';
     }
 }
+if(strpos($_SERVER['REQUEST_URI'],'/tarot-direct-rentree') !== false){
+    $select_style = 'rentree-17';
+}
+
 
 $pict_path = $styles[$select_style]['dir'];
 $css = $styles[$select_style]['css'];
