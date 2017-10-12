@@ -31,7 +31,7 @@ $icon_argent_active : $img_dir + "argent-a.png";
 $icon_travail_active : $img_dir + "travail-a.png";
 $icon_tel: $img_dir + "tel.png";
 $offre_tchat : $img_dir + "offre-tchat.png";
-$offre_immediate : $img_dir + "offre-immediate.png";
+$offre_immediate : $img_dir + "offre-i.png";
 
 /* Palette */
 $grey: #454545;
@@ -357,6 +357,10 @@ section[style].Tarot + .Arrowed + .SiteCopyright {
     }
 
     .FormMerci .ContentBand-ColumnHeader {
+        display: none;
+    }
+
+    .HeaderMerci{
         display: none;
     }
 

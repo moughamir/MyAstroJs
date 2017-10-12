@@ -46,7 +46,7 @@ if(isset($_SESSION['user_id'])){
         <![endif]-->
     </head>
     <body>
-        <header class="ContentBand ThreeCols SiteHeader">
+        <header class="ContentBand ThreeCols SiteHeader HeaderMerci">
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column SiteHeader-Slogan1">
                     Tirage de tarot gratuit<br>
