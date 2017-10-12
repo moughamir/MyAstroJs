@@ -275,6 +275,7 @@ body {
 .WidgetTarot .Principal {
     position: relative;
     height: 600px;
+    cursor: default!important;
 }
 
 section.Tarot + .Arrowed {
@@ -350,6 +351,19 @@ section[style].Tarot + .Arrowed + .SiteCopyright {
         margin-left: -16px;
         margin-right: -16px;
     }
+
+    .FormMerci .Pop.Pop-Voyant {
+        display: none;
+    }
+
+    .FormMerci .ContentBand-ColumnHeader {
+        display: none;
+    }
+
+    .FormDRI .Pop.Pop-Voyant {
+        display: none;
+    }
+
 }
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
