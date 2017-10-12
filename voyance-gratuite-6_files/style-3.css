@@ -34,7 +34,7 @@
     background-image: none;
     margin-top: 18px;
     max-width: 370px;
-    margin-left: auto;
+    margin-left: 8%;
     margin-right: auto;
 }
 
@@ -126,7 +126,7 @@ input, button, select,textarea {
 
 .vy-title {
     height: 44px;
-    margin-left: auto;
+    margin-left: 8%;
     margin-right: auto;
     padding: 11px;
     text-align: center;
@@ -167,7 +167,7 @@ h1 {
     }
 
     .widget .inp-txt input, .widget .inp-txt textarea {
-        width:279px;
+        width:220px;
     }
 
     .widget .daten {
@@ -175,7 +175,7 @@ h1 {
     }
 
     .widget #form-w .btn_button {
-        width: 290px;
+        width: 250px;
         font-size: 17px;
     }
 
