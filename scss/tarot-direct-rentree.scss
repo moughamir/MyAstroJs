@@ -31,7 +31,7 @@ $icon_argent_active : $img_dir + "argent-a.png";
 $icon_travail_active : $img_dir + "travail-a.png";
 $icon_tel: $img_dir + "tel.png";
 $offre_tchat : $img_dir + "offre-tchat.png";
-$offre_immediate : $img_dir + "offre-immediate.png";
+$offre_immediate : $img_dir + "offre-i.png";
 
 /* Palette */
 $grey: #454545;
@@ -275,6 +275,7 @@ body {
 .WidgetTarot .Principal {
     position: relative;
     height: 600px;
+    cursor: default!important;
 }
 
 section.Tarot + .Arrowed {
@@ -350,6 +351,28 @@ section[style].Tarot + .Arrowed + .SiteCopyright {
         margin-left: -16px;
         margin-right: -16px;
     }
+
+    .FormMerci  {
+
+        .Pop.Pop-Voyant, .ContentBand-ColumnHeader {
+            display: none;
+        }
+
+        .FormContainer {
+            width: 100%;
+            margin-top: 0px;
+        }
+    }
+
+
+    .HeaderMerci{
+        display: none;
+    }
+
+    .FormDRI .Pop.Pop-Voyant {
+        display: none;
+    }
+
 }
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
