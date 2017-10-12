@@ -9,9 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Styles Should be After Script -->
-    
-    <link rel="stylesheet" href="[()ROOT_URL()]/css/myastro.css" />
-    <link href="[()ROOT_URL()]/css/tel.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="http://[()ROOT_URL()]/css/myastro.css" />
+    <link href="http://[()ROOT_URL()]/css/tel.css" type="text/css" rel="stylesheet">
     <link id="cssThemeColor" rel="stylesheet" href="" />
 
     <!--[if IE 7]>
