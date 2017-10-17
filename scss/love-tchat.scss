@@ -150,6 +150,12 @@ ul {
     font-size: 2.5rem;
     margin: 0;
     padding: 5px;
+    @include respond-to("mobile") {
+      font-size: 1.7rem;
+    }
+  }
+  @include respond-to("mobile") {
+    margin: 0;
   }
 }
 
@@ -298,6 +304,9 @@ ul {
 .curved {
   font-family: $lobster;
   font-size: 3rem;
+  @include respond-to("mobile"){
+    font-size: 2.3rem;
+  }
 }
 .highlight{
   &-primary {
@@ -307,6 +316,9 @@ ul {
     color: $highlight-secondary;
     font-family: $indieFlower;
     font-size: 3.5rem;
+    @include respond-to("mobile"){
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -455,6 +467,11 @@ footer {
     transition: all 300ms ease;
     box-shadow: -2px -1px 3px -1px #454545;
   }
+  @include respond-to("mobile")
+  {
+    display: block;
+    margin: 2px auto;
+  }
 }
 
 .result {
@@ -468,12 +485,17 @@ footer {
 
 .promo {
   background: transparent url($promo) center no-repeat;
-  -webkit-background-size: contain;
   background-size: contain;
   width: 200px;
   height: 200px;
   display: table-cell;
   margin: 5px;
+  @include respond-to("mobile") {
+    display: block;
+    width: 148px;
+    height: 148px;
+    margin: 3px auto;
+  }
 }
 
 .hidden {
@@ -481,8 +503,8 @@ footer {
 }
 
 .circlet{
-  width: 172px;
-  height: 172px;
+  width: 72px;
+  height: 72px;
   background: $accent;
   opacity: .53;
   border-radius: 50%;
@@ -490,18 +512,18 @@ footer {
     justify-content: center;
     align-items: center;
     img {
-      width: 72px;
-      height: 72px;
+      width: 48px;
+      height: 48px;
     }
     &:nth-child(1){
-      margin-right: -12px;
+      margin-right: -6px;
     }
     &:nth-child(2){
-      margin-left: -12px;
+      margin-left: -6px;
     }
   &-container{
     width: 100%;
-    height: 250px;
+    height: 74px;
     text-align: center;
   }
 }
@@ -533,10 +555,13 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @include respond-to("mobile"){
+      display: block;
+    }
   }
   .post-test p {
     padding: 0 3px;
-    text-align: justify;
+    text-align: center;
     font-size: 1.5rem;
     width: 100%;
   }

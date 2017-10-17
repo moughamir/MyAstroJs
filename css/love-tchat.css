@@ -2189,6 +2189,12 @@ ul {
     font-size: 2.5rem;
     margin: 0;
     padding: 5px; }
+    @media screen and (max-width: 544px) {
+      .title h1 {
+        font-size: 1.7rem; } }
+  @media screen and (max-width: 544px) {
+    .title {
+      margin: 0; } }
 
 .content {
   position: relative;
@@ -2247,7 +2253,7 @@ ul {
   animation: rotate 900ms 2 both linear;
   transform-origin: center 150px; }
 
-.fadein, .preload {
+.fadein {
   animation: fadeIn 1500ms 1.5s both ease-in; }
 
 .fade {
@@ -2298,6 +2304,9 @@ ul {
 .curved {
   font-family: "Lobster", cursive;
   font-size: 3rem; }
+  @media screen and (max-width: 544px) {
+    .curved {
+      font-size: 2.3rem; } }
 
 .highlight-primary {
   color: #ea285f; }
@@ -2305,6 +2314,9 @@ ul {
   color: #a5d2d9;
   font-family: "Indie Flower", cursive;
   font-size: 3.5rem; }
+  @media screen and (max-width: 544px) {
+    .highlight-secondary {
+      font-size: 2.5rem; } }
 
 .form {
   display: block;
@@ -2422,6 +2434,10 @@ footer {
     text-shadow: -2px 1px 0px #454545;
     transition: all 300ms ease;
     box-shadow: -2px -1px 3px -1px #454545; }
+  @media screen and (max-width: 544px) {
+    .read-more {
+      display: block;
+      margin: 2px auto; } }
 
 .result {
   max-width: 40rem;
@@ -2433,38 +2449,24 @@ footer {
 
 .promo {
   background: transparent url("/images_landing/love-tchat/offre.png") center no-repeat;
-  -webkit-background-size: contain;
   background-size: contain;
   width: 200px;
   height: 200px;
   display: table-cell;
   margin: 5px; }
+  @media screen and (max-width: 544px) {
+    .promo {
+      display: block;
+      width: 148px;
+      height: 148px;
+      margin: 3px auto; } }
 
 .hidden {
   display: none; }
 
-.preload {
-  background: url("/images_landing/love-tchat/pbc.png") no-repeat center;
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.tri {
-  width: 250px;
-  height: 250px;
-  background: url("/images_landing/love-tchat/tri.png") no-repeat center;
-  background-size: cover;
-  filter: drop-shadow(1px 2px 1px black); }
-
 .circlet {
-  width: 172px;
-  height: 172px;
+  width: 72px;
+  height: 72px;
   background: #ea285f;
   opacity: .53;
   border-radius: 50%;
@@ -2472,15 +2474,15 @@ footer {
   justify-content: center;
   align-items: center; }
   .circlet img {
-    width: 72px;
-    height: 72px; }
+    width: 48px;
+    height: 48px; }
   .circlet:nth-child(1) {
-    margin-right: -12px; }
+    margin-right: -6px; }
   .circlet:nth-child(2) {
-    margin-left: -12px; }
+    margin-left: -6px; }
   .circlet-container {
     width: 100%;
-    height: 250px;
+    height: 74px;
     text-align: center; }
 
 @media screen and (max-width: 900px) {
@@ -2508,11 +2510,15 @@ footer {
     display: table;
     justify-content: center;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column; } }
+  @media screen and (max-width: 900px) and (max-width: 544px) {
+    .final-step {
+      display: block; } }
 
+@media screen and (max-width: 900px) {
   .post-test p {
     padding: 0 3px;
-    text-align: justify;
+    text-align: center;
     font-size: 1.5rem;
     width: 100%; }
 
