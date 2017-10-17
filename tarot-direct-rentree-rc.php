@@ -1,11 +1,8 @@
 <?php
 /*
     ----------------------------------
-    --   tarot-direct-a = ADWORDS   --
+    --   tarot-direct-rentree-rc = reflexcash   --
     ----------------------------------
-
-    Created on : 07 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
