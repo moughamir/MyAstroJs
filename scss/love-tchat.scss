@@ -5,20 +5,25 @@
 $assets: '/images_landing/love-tchat/';
 $promo: $assets+"offre.png";
 // scheme
-$primary: #0c0f2f; 
+$primary: #0c0f2f;
 $secondary: #a5d2d9;
 $accent: #ea285f;
+$driForm-bg: #fff;
 /* sidebar element hover, btn, Psychic name, highlight */
+
 $highlight-primary: $accent;
-$highlight-secondary: $secondary; 
+$highlight-secondary: $secondary;
 $primary-txt: #ffffff;
 //$secondary: #505050;
 $secondary-hvr: #9a9898;
 $icons: #454545;
 // fonts
-$lobster: 'Lobster', cursive;
-$indieFlower: 'Indie Flower', cursive;
-$openSans: 'Open Sans', sans-serif;
+$lobster: 'Lobster',
+cursive;
+$indieFlower: 'Indie Flower',
+cursive;
+$openSans: 'Open Sans',
+sans-serif;
 // Typo
 h1,
 h2,
@@ -38,8 +43,7 @@ html {
 
 body {
   padding: 0;
-  font-family: $openSans;
-  //font-weight: 400;
+  font-family: $openSans; //font-weight: 400;
   //color: #1f1f1f;
   color: #fff;
 }
@@ -76,6 +80,8 @@ body {
   min-height: 60rem;
   @include respond-to("mobile") {
     min-height: initial;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -86,8 +92,7 @@ body {
   >section {
     display: block;
     text-align: center;
-    margin: 10px auto;
-    //background: rgba(255, 0, 0, 0.1);;
+    margin: 10px auto; //background: rgba(255, 0, 0, 0.1);;
     padding: 10px 0;
   }
 }
@@ -106,13 +111,11 @@ body {
   display: flex;
   overflow: hidden;
   min-height: 300px;
-  width: 100%;
-  //background: rgba(255, 0, 0, 0.1);
+  width: 100%; //background: rgba(255, 0, 0, 0.1);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 /*
 .header {
@@ -183,7 +186,6 @@ ul {
     size: 2.9rem;
     family: $openSans;
     weight: 600;
-    
   }
   text-align: center;
   word-wrap: unset;
@@ -225,6 +227,26 @@ ul {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
     transition: box-shadow .4s ease-out;
   }
+  &-primary {
+    background: $accent;
+    color: #ffffff;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    border-width: 0;
+    border-color: transparent;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    max-width: 33rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    &:hover {
+      color: #ffffff;
+    }
+  }
 }
 
 .rotate {
@@ -243,10 +265,8 @@ ul {
 .expander {
   position: absolute;
   width: 150%;
-  height: 150%;
-  //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
-  pointer-events: none;
-  //opacity: 0;
+  height: 150%; //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+  pointer-events: none; //opacity: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.26);
   -webkit-transform: scale(0);
@@ -301,14 +321,16 @@ ul {
   margin-top: 15px;
   text-shadow: 1px 1px #454545;
 }
+
 .curved {
   font-family: $lobster;
   font-size: 3rem;
-  @include respond-to("mobile"){
+  @include respond-to("mobile") {
     font-size: 2.3rem;
   }
 }
-.highlight{
+
+.highlight {
   &-primary {
     color: $highlight-primary;
   }
@@ -316,7 +338,7 @@ ul {
     color: $highlight-secondary;
     font-family: $indieFlower;
     font-size: 3.5rem;
-    @include respond-to("mobile"){
+    @include respond-to("mobile") {
       font-size: 2.5rem;
     }
   }
@@ -346,9 +368,14 @@ ul {
   margin: 1.8rem 0;
   color: black;
 }
-
+.mf {
+  .Merci-Form {
+    background: transparentize($driForm-bg, .75);
+  }
+}
 .FormContainer-Submit {
   @extend .btn;
+  padding: 1rem 2rem;
 }
 
 .FormField-Label {
@@ -411,7 +438,6 @@ ul {
   box-shadow: 0 0 6px -1px $primary;
 }
 
-
 /*.FormField-Input {
   background: #bc91cd;
   border: none;
@@ -434,10 +460,10 @@ footer {
   bottom: 0;
   margin-top: 2rem;
   color: #ffffff;
-  a{
+  a {
     text-decoration: none;
     color: #ffffff;
-    &:hover{
+    &:hover {
       text-decoration: none;
       color: darken(#ffffff, 15%);
     }
@@ -467,8 +493,7 @@ footer {
     transition: all 300ms ease;
     box-shadow: -2px -1px 3px -1px #454545;
   }
-  @include respond-to("mobile")
-  {
+  @include respond-to("mobile") {
     display: block;
     margin: 2px auto;
   }
@@ -502,32 +527,76 @@ footer {
   display: none;
 }
 
-.circlet{
+.circlet {
   width: 72px;
   height: 72px;
   background: $accent;
   opacity: .53;
   border-radius: 50%;
   display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 48px;
-      height: 48px;
-    }
-    &:nth-child(1){
-      margin-right: -6px;
-    }
-    &:nth-child(2){
-      margin-left: -6px;
-    }
-  &-container{
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+  &:nth-child(1) {
+    margin-right: -6px;
+  }
+  &:nth-child(2) {
+    margin-left: -6px;
+  }
+  &-container {
     width: 100%;
     height: 74px;
     text-align: center;
   }
 }
 
+.icon {
+  &-tchat{
+    position: relative;
+    &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url($assets + 'tchat.png') no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    left: 33px;
+  }
+  }
+  &-phone::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url($assets + 'phone.png') no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    left: 64px;
+  }
+}
+
+.isolated{
+  background: transparentize($driForm-bg, .75);
+  padding: 20px;
+  position: relative;
+  @include respond-to("mobile"){
+    padding: 5px;
+  }
+  
+  &:nth-child(1){
+      margin: 0 0 15px 0;
+      @include respond-to("mobile"){
+        margin: 0;
+      }
+  }
+}
+.underline{
+  text-decoration: underline;
+}
 // MQ
 @media screen and (max-width: 900px) {
   /*.main {
@@ -555,7 +624,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @include respond-to("mobile"){
+    @include respond-to("mobile") {
       display: block;
     }
   }
@@ -583,14 +652,23 @@ footer {
 .Merci,
 .DRI {
   &-Form {
-    background-color: rgba(172, 150, 165, 0.72);
+    background: transparent;
     box-shadow: 0px 2px 15px -5px #212121;
-    max-width: 60rem;
+    max-width: 80rem;
+    @include respond-to("mobile"){
+      padding: 0;
+      margin: 0;
+    }
+    &Container{
+      padding: 0 0 25px 0;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
     select#pays {
       width: 280px;
     }
     &--header {
-      background: $primary;
+      background: $accent;
       height: 50px;
       display: flex;
       justify-content: center;
@@ -653,13 +731,14 @@ footer {
 
 .DRI {
   &-Slogan {
-    color: $primary;
-    border: 1px solid $primary;
+    color: $accent;
+    border: none;
+    background: $secondary;
     padding: 5px;
-    max-width: 320px;
+    max-width: 45rem;
     margin: 0 auto;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     text-align: center;
     @include respond-to("mobile") {
       font-size: 1.4rem;
@@ -676,7 +755,7 @@ footer {
       }
     }
     &-Title {
-      background-color: #fff;
+      background-color: $secondary;
       color: $primary;
       text-align: center;
       line-height: initial;
@@ -686,7 +765,7 @@ footer {
       }
     }
     &-Subtitle {
-      color: $primary;
+      color: $secondary;
       font-size: 1.8rem;
       text-align: center;
     }
@@ -730,6 +809,7 @@ footer {
   .mf {
     .fullview {
       min-height: initial;
+      
     }
     .FormContainer {
       width: 100vw;
