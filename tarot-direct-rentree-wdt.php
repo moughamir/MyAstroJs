@@ -14,7 +14,7 @@ $url = 'tarot-direct-rentree-wdt';
 $method = 'general-suscribe';
 $site = 'myastro.fr';
 $source = "weedoit";
-include('include/questions/tarot-direct.php');
+include('include/questions/tarot-direct-rentree.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
