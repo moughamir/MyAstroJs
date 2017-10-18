@@ -2126,7 +2126,9 @@ body {
   min-height: 60rem; }
   @media screen and (max-width: 544px) {
     .fullview {
-      min-height: initial; } }
+      min-height: initial;
+      padding: 0;
+      margin: 0; } }
 
 .main {
   background: url("/images_landing/love-tchat/background.jpg") no-repeat center fixed;
@@ -2248,6 +2250,24 @@ ul {
   .btn:hover, .FormContainer-Submit:hover {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     transition: box-shadow .4s ease-out; }
+  .btn-primary {
+    background: #ea285f;
+    color: #ffffff;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    border-width: 0;
+    border-color: transparent;
+    border-radius: 2px;
+    margin: 0 auto;
+    display: block;
+    max-width: 33rem;
+    text-align: center;
+    padding: 1rem 2rem; }
+    .btn-primary:hover {
+      color: #ffffff; }
 
 .rotate {
   animation: rotate 900ms 2 both linear;
@@ -2337,6 +2357,9 @@ ul {
   background: transparent;
   margin: 1.8rem 0;
   color: black; }
+
+.FormContainer-Submit {
+  padding: 1rem 2rem; }
 
 .FormField-Label {
   color: #ffffff; }
@@ -2485,6 +2508,43 @@ footer {
     height: 74px;
     text-align: center; }
 
+.icon-tchat {
+  position: relative; }
+  .icon-tchat::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url("/images_landing/love-tchat/tchat.png") no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    left: 33px; }
+.icon-phone::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: url("/images_landing/love-tchat/phone.png") no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  left: 64px; }
+
+.isolated {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  position: relative; }
+  @media screen and (max-width: 544px) {
+    .isolated {
+      padding: 5px; } }
+  .isolated:nth-child(1) {
+    margin: 0 0 15px 0; }
+    @media screen and (max-width: 544px) {
+      .isolated:nth-child(1) {
+        margin: 0; } }
+
+.underline {
+  text-decoration: underline; }
+
 @media screen and (max-width: 900px) {
   /*.main {
     background-size: 150px, 240px, cover;
@@ -2535,9 +2595,19 @@ footer {
 
 .Merci-Form,
 .DRI-Form {
-  background-color: rgba(172, 150, 165, 0.72);
+  background: transparent;
   box-shadow: 0px 2px 15px -5px #212121;
-  max-width: 60rem; }
+  max-width: 80rem; }
+  @media screen and (max-width: 544px) {
+    .Merci-Form,
+    .DRI-Form {
+      padding: 0;
+      margin: 0; } }
+  .Merci-FormContainer,
+  .DRI-FormContainer {
+    padding: 0 0 25px 0;
+    max-width: 50rem;
+    margin: 0 auto; }
   .Merci-Form select#pays,
   .DRI-Form select#pays {
     width: 280px; }
@@ -2597,13 +2667,14 @@ footer {
     border-color: #ff8787; }
 
 .DRI-Slogan {
-  color: #0c0f2f;
-  border: 1px solid #0c0f2f;
+  color: #ea285f;
+  border: none;
+  background: #a5d2d9;
   padding: 5px;
-  max-width: 320px;
+  max-width: 45rem;
   margin: 0 auto;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   text-align: center; }
   @media screen and (max-width: 544px) {
     .DRI-Slogan {
@@ -2617,7 +2688,7 @@ footer {
     .DRI-Form .FormContainer-Submit {
       bottom: -38px; } }
 .DRI-Form-Title {
-  background-color: #fff;
+  background-color: #a5d2d9;
   color: #0c0f2f;
   text-align: center;
   line-height: initial;
@@ -2626,7 +2697,7 @@ footer {
     .DRI-Form-Title {
       font-size: 1.5rem; } }
 .DRI-Form-Subtitle {
-  color: #0c0f2f;
+  color: #a5d2d9;
   font-size: 1.8rem;
   text-align: center; }
 .DRI-Form .FormField-Label {
