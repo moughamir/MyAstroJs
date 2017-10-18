@@ -368,7 +368,11 @@ ul {
   margin: 1.8rem 0;
   color: black;
 }
-
+.mf {
+  .Merci-Form {
+    background: transparentize($driForm-bg, .75);
+  }
+}
 .FormContainer-Submit {
   @extend .btn;
   padding: 1rem 2rem;
@@ -664,7 +668,7 @@ footer {
       width: 280px;
     }
     &--header {
-      background: $primary;
+      background: $accent;
       height: 50px;
       display: flex;
       justify-content: center;

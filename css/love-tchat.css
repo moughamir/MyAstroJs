@@ -2358,6 +2358,9 @@ ul {
   margin: 1.8rem 0;
   color: black; }
 
+.mf .Merci-Form {
+  background: rgba(255, 255, 255, 0.25); }
+
 .FormContainer-Submit {
   padding: 1rem 2rem; }
 
@@ -2613,7 +2616,7 @@ footer {
     width: 280px; }
   .Merci-Form--header,
   .DRI-Form--header {
-    background: #0c0f2f;
+    background: #ea285f;
     height: 50px;
     display: flex;
     justify-content: center;
