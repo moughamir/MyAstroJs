@@ -1,10 +1,4 @@
 <?php
-/**
- * pouvoir-des-trois == AFFILBASE
- * 
- * Created on : Feb 13th, 2017
- * Author     : Mohamed Moughamir <hello@omnizya.com>
- */
 $form = 'lma-tchat-m';
 include('include/init-affilbase.php');
 $assets = 'images_landing/love-tchat';

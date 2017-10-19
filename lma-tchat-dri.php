@@ -1,9 +1,4 @@
 <?php
-/**
- * pdt-tchat-dri
- * ---------------------
- * Created on : 5 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
- */
 include("include/process-dri.php");
 $assets = 'images_landing/love-tchat';
 ?>

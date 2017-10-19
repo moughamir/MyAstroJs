@@ -1,10 +1,5 @@
 <?php
-/**
- * pdt-tchat-a == ADWORDS
- * ----------------------
- * Created on : 11 Octobre 2017 By Mohamed Moughamir <hello@omnizya.com>
- */
-$pageName = "love-tchat";
+$pageName = "love-tchat-a";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
