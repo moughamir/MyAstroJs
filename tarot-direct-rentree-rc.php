@@ -1,22 +1,24 @@
 <?php
 /*
     ----------------------------------
-    --   tarot-direct-a = ADWORDS   --
+    --   tarot-direct-rentree-rc = reflexcash   --
     ----------------------------------
-
-    Created on : 07 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-rentree-fb';
+$url = 'tarot-direct-rentree-rc';
 $method = 'general-suscribe';
 $site = 'myastro.fr';
-$source = 'facebook_adds';
+$source = "reflexcash";
 include('include/questions/tarot-direct-rentree.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
