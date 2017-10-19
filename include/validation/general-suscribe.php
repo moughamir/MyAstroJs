@@ -244,7 +244,7 @@ if(empty($err)){
         $hamedia_insert = $hamedia->insertUser($post_data);
         if(!$hamedia_insert->success){
             addFormLog($bdd, $page, 'ERROR', '[API HAMEDIA] Erreur insertion user > '.json_encode($hamedia_insert));
-            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.ERREUR API HAMEDIA';
         }
     }
 }
