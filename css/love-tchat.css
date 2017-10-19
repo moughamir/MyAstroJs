@@ -2119,7 +2119,8 @@ body {
   background-size: contain; }
 
 .ContentBand {
-  margin-top: 0; }
+  margin-top: 0;
+  min-height: calc(100vh - 286px); }
 
 .fullview {
   align-items: center;
@@ -2491,25 +2492,42 @@ footer {
   display: none; }
 
 .circlet {
-  width: 72px;
-  height: 72px;
+  width: 172px;
+  height: 172px;
   background: #ea285f;
   opacity: .53;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 544px) {
+    .circlet {
+      width: 72px;
+      height: 72px; } }
   .circlet img {
-    width: 48px;
-    height: 48px; }
+    width: 80px;
+    height: 80px; }
+    @media screen and (max-width: 544px) {
+      .circlet img {
+        width: 48px;
+        height: 48px; } }
   .circlet:nth-child(1) {
-    margin-right: -6px; }
+    margin-right: -16px; }
+    @media screen and (max-width: 544px) {
+      .circlet:nth-child(1) {
+        margin-right: -6px; } }
   .circlet:nth-child(2) {
-    margin-left: -6px; }
+    margin-left: -16px; }
+    @media screen and (max-width: 544px) {
+      .circlet:nth-child(2) {
+        margin-left: -6px; } }
   .circlet-container {
     width: 100%;
-    height: 74px;
+    height: 174px;
     text-align: center; }
+    @media screen and (max-width: 544px) {
+      .circlet-container {
+        height: 74px; } }
 
 .icon-tchat {
   position: relative; }
@@ -2742,5 +2760,28 @@ footer {
     margin: 0; }
   .mf .Fields-Table-Row {
     padding: 0 3px; } }
+@keyframes rightToLeft {
+  from {
+    transform: translateX(-100vw); }
+  to {
+    transform: translateX(0); } }
+@keyframes leftToRight {
+  from {
+    transform: translateX(100vw); }
+  to {
+    transform: translateX(0); } }
+@media screen and (min-width: 1000px) {
+  .animate {
+    display: block; }
+    .animate-rtl {
+      animation: rightToLeft 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both; }
+    .animate-ltr {
+      animation: leftToRight 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) both; }
+    .animate-delayed-a {
+      animation-delay: 1.3s; }
+    .animate-delayed-b {
+      animation-delay: 2.5s; }
+    .animate-delayed-c {
+      animation-delay: 3.3s; } }
 
 /*# sourceMappingURL=love-tchat.css.map */

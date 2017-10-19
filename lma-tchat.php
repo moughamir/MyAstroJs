@@ -51,18 +51,31 @@ $assets = 'images_landing/love-tchat';
             </div>
             <div class="PageWrapper">
                 <section class="section post-test">
-                    <p>Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
-                    <span class="highlight-primary curved">Découvrer votre avenir amoureux</span><br/>
-                    <span class="highlight-primary">3 min</span> pour savoir<br>
-                    <span class="highlight-secondary">et c'est gratuit !</span>
+                    
+                        <p>
+                        <span class="animate animate-ltr">Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
+                    </span>
+                    <span class="animate animate-rtl">
+                        <span class="highlight-primary curved">Découvrer votre avenir amoureux</span><br/>
+                    </span>
+                    <span class="animate animate-ltr animate-delayed-a">
+                        <span class="highlight-primary">3 min</span> pour savoir<br>
+                    </span>
+                    <span class="animate animate-rtl animate-delayed-a">
+                        <span class="highlight-secondary">et c'est gratuit !</span>
+                    </span>
                     </p>
                     <div class="form">
-                        <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
-                        <button class="btn start">Commencer</button>
+                        <span class="animate animate-ltr animate-delayed-b">
+                            <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
+                        </span>
+                        <span class="animate animate-rtl animate-delayed-b">
+                            <button class="btn start">Commencer</button>
+                        </span>
                     </div>
                     <div class="circlet-container">
-                        <div class="circlet"><img src="<?= $assets?>/venus.svg"/></div>
-                        <div class="circlet"><img src="<?= $assets?>/mars.svg"/></div>
+                        <div class="circlet animate-ltr animate-delayed-c"><img src="<?= $assets?>/venus.svg"/></div>
+                        <div class="circlet animate-rtl animate-delayed-c"><img src="<?= $assets?>/mars.svg"/></div>
                     </div>
                 </section>
                 <section class="section content hidden">
