@@ -4,7 +4,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "adwords";
-$dri = "love-myastro/offre-gratuite";
+$dri = "pouvoir-des-trois/offre-gratuite";
 $dri2 = "love-tchat-dri";
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js

@@ -6,7 +6,7 @@ $regurl = $form;
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$dri = "love-tchat/offre-gratuite";
+$dri = "pouvoir-des-trois/offre-gratuite";
 $dri2 = "lma-tchat-dri";
 $question = ['code' => 'lma_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Love MyAstro Mini Formulaire'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
