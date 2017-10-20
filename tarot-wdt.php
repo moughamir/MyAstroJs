@@ -241,7 +241,7 @@
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="js/tarot-draw.js"></script>
+        <script src="js/tarot-draw-o.js"></script>
         <script src="js/formValidator.js"></script>
         
         <!-- #### REMARKETINGS #### -->
