@@ -90,7 +90,7 @@ $(document).ready(function() {
         nameRe = /[a-zA-Z]+(?:(?:\. |[' ])[a-zA-Z]+)*$/,
         errorMsg = '\
             <div class="alert alert-warning">\
-                Veuillez corriger votre saisie.\
+                Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.\
             </div>',
         q = 0;
 
