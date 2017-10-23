@@ -92,6 +92,10 @@ $(document).ready(function() {
             <div class="alert alert-warning">\
                 Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom.\
             </div>',
+        requiredMsg = '\
+            <div class="alert alert-warning">\
+                Veuillez saisir votre prénom.\
+            </div>',
         q = 0;
 
     /**
@@ -101,9 +105,13 @@ $(document).ready(function() {
         // get value of input field and store it (optimized)
         name = $(name_input_selector).val();
         if (!nameRe.test(name)) {
-            console.log('Invalid name.');
+            if(name.length == 0) {
+                $('.helper').html(requiredMsg).fadeIn();
+            }else{
+                $('.helper').html(errorMsg).fadeIn();
+
+            }
             
-            $('.helper').html(errorMsg).fadeIn();
             setTimeout(function(){
                 $('.helper').fadeOut();
             }, 2500);
