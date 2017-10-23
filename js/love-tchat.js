@@ -91,20 +91,9 @@ $(document).ready(function() {
         errorMsg = '\
             <div class="alert alert-warning">\
                 Veuillez corriger votre saisie.\
-            </div>';
-    var q = 0;
-    /**
-        setTimeout(function(){
-            $('.tri').fadeIn(500, function() {
-                $(this).removeClass('hidden');
-                $(this).addClass('rotate');
-                $(".tri").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
-                    $(this).hide();
-                    $('.post-test').removeClass('hidden').addClass('fade');
-                });
-            });
-        }, 3300);
-    */
+            </div>',
+        q = 0;
+
     /**
      * loadQuiz function
      */
