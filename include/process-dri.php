@@ -117,6 +117,8 @@ if(isset($form['demande_rappel'])){
 /* ######################## TRAITEMENT DRI KGESTION ######################### */
 $state = "";
 $retour = false;
+$directCall = false;
+unset($_SESSION['directCall']);
 
 if($already_sent){
     $state = 'MAIL_ALREADY_SENT';
@@ -127,11 +129,13 @@ if($already_sent){
             'phone'     => $tel,
             'country'   => $pays,
             'myastroPromoCode' => !$code_promo ? '' : $code_promo,
-            'myastroSupport' => $support_kgs
+            'myastroSupport' => $support_kgs,
+            'directCall' => 1
         );
         $kgestion_dri = $kgestion->registerDRI($idkgestion, $DRIdata);
 
         $retour = $kgestion_dri->success;
+        $directCall = !empty($kgestion_dri->directCall) ? $kgestion_dri->directCall : false;
 
     } else {
 /* ######################## REQUÊTE DONNÉES TRACKING ######################## */
@@ -237,6 +241,9 @@ if($already_sent){
     if($retour){
         $state = 'MAIL_SENT';
         $_SESSION['demanderappel'] = true;
+        if($directCall) {
+            $_SESSION['directCall'] = true;
+        }
     } else {
         $state = 'MAIL_ERROR';
     }
