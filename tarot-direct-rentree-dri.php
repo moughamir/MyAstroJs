@@ -75,7 +75,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                             <?php } else { ?>
                             <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
                             <form method="post" class="DRI-FormContainer">
-                                <input type="hidden" name="directCall" value="1" />
+<!--                                <input type="hidden" name="directCall" value="1" />-->
                                 <div class="DRI-Form FormContainer-Fields">
                                     <p>Nos voyants répondent à vos questions</p>
                                     <div class="Fields-Table-Row">
