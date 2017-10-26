@@ -194,7 +194,7 @@ body {
 @media all and (max-width: 680px) {
     .Fields-Table-Row > .FormField-Label {
         display: block;
-        width: 100%;
+        width: 100%!important;
         text-align: left;
     }
     .Fields-Table-Row.gender > .FormField-Label {
