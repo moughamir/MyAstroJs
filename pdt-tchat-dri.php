@@ -37,11 +37,17 @@ $assets = 'images_landing/pouvoir-des-trois';
             <div class="PageWrapper fullview">
                 <article class="FormContainer DRI-Form">
                     <div class="Fields-Table">
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-                        <p class="DRI-Sent">
-                            Merci, votre demande de rappel a bien été prise en compte.<br/>
-                            <strong>Un voyant vous recontactera dans quelques instants.</strong>
-                        </p>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <p class="DRI-Sent">
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
                         <?php } else { ?>
                             <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
                         <p class="alert alert-danger">
