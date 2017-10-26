@@ -30,6 +30,8 @@ $codeastro  = isset($get['id']) && !empty($get['id']) ? $get['id'] : false;
 $idkgestion = isset($get['idkgestion']) && !empty($get['idkgestion']) ? $get['idkgestion'] : false;
 $code_promo = isset($get['camp']) && !empty($get['camp']) ? $get['camp'] : false;
 $email_base = isset($get['email']) && !empty($get['email']) ? $get['email'] : false;
+$makeDirectCall = isset($form['directCall']) && !empty($form['directCall']) ? $form['directCall'] : false;
+
 
 /* ################### INITIALISATION DONNÉES DRI MAILING ################### */
 $site        = "My Astro";
@@ -129,9 +131,11 @@ if($already_sent){
             'phone'     => $tel,
             'country'   => $pays,
             'myastroPromoCode' => !$code_promo ? '' : $code_promo,
-            'myastroSupport' => $support_kgs,
-            'directCall' => 1
+            'myastroSupport' => $support_kgs
         );
+        if($makeDirectCall) {
+            $DRIdata['directCall'] = 1;
+        }
         $kgestion_dri = $kgestion->registerDRI($idkgestion, $DRIdata);
 
         $retour = $kgestion_dri->success;
