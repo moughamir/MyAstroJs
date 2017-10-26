@@ -2129,8 +2129,9 @@ input[type="checkbox"], input[type="radio"] {
   background-size: contain;
   position: absolute;
   top: 10rem;
-  left: -5rem;
-  opacity: 0; }
+  left: -10rem;
+  opacity: 0;
+  z-index: -1; }
 
 #photo2 {
   background: url("../images_landing/numerologie-amour/pola1.png") center no-repeat;
