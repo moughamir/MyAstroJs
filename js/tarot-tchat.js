@@ -8,8 +8,7 @@
  */
 $(document).ready(function() {
     // we can use Ajax call here and get questions from database 
-    var holder = $('.result'),
-        name, section = $('.section'),
+    var name, section = $('.section'),
         name_input_selector = 'input[name="js-name"]',
         question_value = "",
         trt_deckNbCards = 20,
@@ -24,10 +23,28 @@ $(document).ready(function() {
             <div class="alert alert-warning">\
                 Veuillez saisir votre prénom.\
             </div>',
-        trt_minSize = 600;
+        
+        textRotation = [{
+            rel: 'a',
+            text: 'Les lames du tarot sont réputées pour être bavardes et votre tirage m’a permis de soulever de nombreux points concernant votre avenir sentimental.<br/> J’aimerais en discuter avec vous afin de vous aider à éclaircir tous ces points qui vous tracassent et vous apporter mes réponses...'
+        }, {
+            rel: 'b',
+            text: 'En analysant votre tirage, je ressens votre volonté d’aller de l’avant et d’enfin mettre un terme à tous vos blocages pour enfin avancer dans votre vie.<br/> Je peux vous rassurer sur un point <b>{{FIRSTNAME}}</b> : les cartes vont dans le sens de votre envie et laissent présager une issue plus que favorable. Il faudrait que l’on puisse en parler calmement <b>{{FIRSTNAME}}</b>, j’ai encore beaucoup de chose à vous révéler...'
+        }, {
+            rel: 'c',
+            text: 'Les cartes montrent bien à quel point cette situation vous pèse. Tout cela vous affecte et a même des conséquences sur votre vie de tous les jours. Votre tirage met très clairement en avant votre difficulté à passer outre cette histoire, et à penser à autre chose, se qui occupe votre esprit une bonne partie de vos journées. Ensemble nous allons identifier toutes les réponses à vos blocages...'
+        }],
+        //firstName = '{{FIRSTNAME}}',
+        q = 0;
     /**
      * loadQuiz function
      */
+    function capitalize(str) {
+        return str.replace(/\w\S*/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    }
+
     function startSession() {
         if (!nameRe.test(name)) {
             if (name.length == 0) {
@@ -47,6 +64,11 @@ $(document).ready(function() {
             trt_lock = false;
             $('.WidgetTarot').detach().prependTo('.draw');
             $('.Tarot-Result').show();
+            qPrepare(q);
+            section.eq(0).fadeOut(300, function() {
+                section.eq(1).removeClass('hidden').addClass('fade');
+                q++;
+            });
         }
         return false;
     }
@@ -75,7 +97,7 @@ $(document).ready(function() {
         return false;
     });
 
-    function qPrepare(q) {
+    function qPrepare() {
         var cardsDrow;
         if (cardsDrow == true) {
             section.eq(1).addClass('hidden');
@@ -85,4 +107,16 @@ $(document).ready(function() {
             return false;
         }
     }
+    $(document).on('trt_completed_event', function() {
+        let pick = _.random(0, 2);
+        let re = new RegExp("{{FIRSTNAME}}", "gi");
+        var result = textRotation[pick].text;
+        result = result.replace(re, function() {
+            return capitalize(name);
+        });
+        setTimeout(function() {
+            $('.question').text('Votre tirage');
+            $('.session-result').html(result);
+        }, 600);
+    });
 });

@@ -63,7 +63,6 @@ $assets = 'images_landing/tarot-tchat';
                 <div class="ContentBand-Table">
                     <div id="cards-result" class="ContentBand-Column">
                         <div class="WidgetTarot-Result" >
-                            <div class="WidgetTarot-ResultMsg">Votre tirage transmis à <span class="getFormValue" data-method="html" data-ref-form="voyant"></span></div>
                             <div class="WidgetTarot-Result">
                                 <?php for($i=1;$i<=5;$i++){ ?>
                                 <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
@@ -73,6 +72,7 @@ $assets = 'images_landing/tarot-tchat';
                     </div>
                 </div>
             </section>
+            <article class="session-result"></article>
         </div>
                     <div class="form">
                         <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
