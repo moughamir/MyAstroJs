@@ -100,7 +100,7 @@ $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
                                 <input type="hidden" name="dri" value="tarot-direct-rentree-merci" />
                                 <input type="hidden" name="dri2" value="tarot-direct-rentree-dri-tog" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="tel_needed" value="0" />
+                                <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
@@ -187,7 +187,7 @@ $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="tel" class="FormField-Label">Votre numéro de téléphone</label>
                                     <div class="FormField">
-                                        <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="facultatif" />
+                                        <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="mon téléphone" />
                                     </div>
                                 </div>
                                     <span class="FormField-Info2">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span>

@@ -1,19 +1,17 @@
 <?php
 /*
     ----------------------------------
-    --   tarot-direct-a = ADWORDS   --
+    --   tarot-direct = MAILLING   --
     ----------------------------------
 
-    Created on : 07 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-rentree-wdt';
+$form = $url =  'tarot-direct-rentree';
+include('include/init-affilbase.php');
 $method = 'general-suscribe';
 $site = 'myastro.fr';
-$source = "weedoit";
 include('include/questions/tarot-direct-rentree.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
