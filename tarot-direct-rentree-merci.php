@@ -72,7 +72,7 @@ if(isset($_SESSION['user_id'])){
                         <img src="<?= $pict_path ?>5-min.png" alt="5 minutes gratuites" />
                         <p class="Merci-Topic"> Amour, travail, argent ...</p>
                         <h2 class="Merci-Title">Toutes vos réponses en <strong>un simple clic</strong> !</h2>
-                        <p class="Merci-Text">Pour profiter immédiatement des 5 minutes de Tchat GRATUITES <br/>Cliquez ici sur le boutton ci-dessous</p>
+                        <p class="Merci-Text">Pour profiter immédiatement des 5 minutes de Tchat GRATUITES <br/>Cliquez ici sur le bouton ci-dessous</p>
                         <a href="https://voyance-en-direct.tv/tarot-rentree/offre-gratuite?email=<?= $email ?>" class="FormContainer-Submit">Je lance le TCHAT</a>
                     </article>
                 </div>
