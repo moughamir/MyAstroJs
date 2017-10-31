@@ -6,8 +6,8 @@
 //
 $assets: '/images_landing/tarot-tchat/';
 $promo: $assets+"offre.png";
-$dos_carte : $assets+"cardback.png";
-$place_carte : $assets+"cardplace.png";
+$dos_carte: $assets+"cardback.png";
+$place_carte: $assets+"cardplace.png";
 // scheme
 $primary: #0c0f2f;
 $secondary: #a5d2d9;
@@ -47,8 +47,7 @@ html {
 
 body {
   padding: 0;
-  font-family: $openSans; //font-weight: 400;
-  //color: #1f1f1f;
+  font-family: $openSans;
   color: #fff;
   min-height: 100vh;
 }
@@ -67,7 +66,7 @@ body {
 
 .Site {
   &Header {
-    background: #60491e url($assets + 'header-bg.png') no-repeat center;
+    background: url($assets + 'slone.png') no-repeat 15% center, url($assets + 'header-bg.png') no-repeat center;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
     &::after {
       content: '';
@@ -87,6 +86,9 @@ body {
 
 .ContentBand {
   margin: .8rem 0;
+  @include respond-to("mobile") {
+    margin: 0;
+  }
 }
 
 .fullview {
@@ -106,7 +108,7 @@ body {
   >section {
     display: block;
     text-align: center;
-    margin: 10px auto; //background: rgba(255, 0, 0, 0.1);;
+    margin: 10px auto;
     padding: 10px 0;
   }
 }
@@ -125,29 +127,12 @@ body {
   display: flex;
   overflow: hidden;
   min-height: 300px;
-  width: 100%; //background: rgba(255, 0, 0, 0.1);
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/*
-.header {
-  background: $primary url($assets + 'header.png') no-repeat center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  z-index: 2;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.19);
-  height: 120px;
-  position: relative;
-  &-content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-*/
 
 ul {
   margin: 0;
@@ -170,7 +155,8 @@ ul {
     font-weight: normal;
     padding: 5px;
     @include respond-to("mobile") {
-      font-size: 1.7rem;
+      font-size: 1.9rem;
+      padding: 0;
     }
   }
   @include respond-to("mobile") {
@@ -185,7 +171,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .choice {
@@ -218,9 +204,9 @@ ul {
 
 // components
 .btn {
-  background: #976f40 linear-gradient( 90deg, rgb(151,111,64) 0%, rgb(255,203,133) 35%, rgb(151,111,64) 76%, rgb(203,153,102) 100%);
-  &:hover{
-    background: #976f40 linear-gradient( 90deg, rgb(151,111,64) 0%, rgb(255,203,133) 10%, rgb(151,111,64) 90%, rgb(203,153,102) 100%);
+  background: #976f40 linear-gradient( 90deg, rgb(151, 111, 64) 0%, rgb(255, 203, 133) 35%, rgb(151, 111, 64) 76%, rgb(203, 153, 102) 100%);
+  &:hover {
+    background: #976f40 linear-gradient( 90deg, rgb(151, 111, 64) 0%, rgb(255, 203, 133) 10%, rgb(151, 111, 64) 90%, rgb(203, 153, 102) 100%);
   }
   color: #000;
   padding: 5px 12px;
@@ -246,7 +232,7 @@ ul {
   &-primary {
     background: $accent;
     color: #ffffff;
-    padding: 5px 12px;
+    padding: 3px 12px;
     cursor: pointer;
     font-family: inherit;
     font-size: 20px;
@@ -281,8 +267,8 @@ ul {
 .expander {
   position: absolute;
   width: 150%;
-  height: 150%; //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
-  pointer-events: none; //opacity: 0;
+  height: 150%;
+  pointer-events: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.26);
   -webkit-transform: scale(0);
@@ -393,7 +379,7 @@ ul {
 
 .FormContainer-Submit {
   @extend .btn;
-  padding: 1rem 2rem;
+  margin-top: 0;
 }
 
 .FormField-Label {
@@ -438,18 +424,6 @@ ul {
   }
 }
 
-.ico {
-  display: inline-block;
-  @include square(20px);
-  background: no-repeat center;
-  background-size: contain;
-  &-man {
-    background-image: url($assets + "ico-man.svg");
-  }
-  &-woman {
-    background-image: url($assets + "ico-woman.svg");
-  }
-}
 
 .FormField-Info {
   border: none;
@@ -457,19 +431,6 @@ ul {
   box-shadow: 0 0 6px -1px $primary;
 }
 
-/*.FormField-Input {
-  background: #bc91cd;
-  border: none;
-  box-shadow: inset 1px 2px 3px 0px rgba(0, 0, 0, 0.89);
-  max-width: 530px;
-  width: 300px;
-  height: 38px;
-  padding: 0 10px;
-  border-radius: 2px;
-  &:focus {
-    outline: none;
-  }
-}*/
 
 footer {
   font-family: $openSans;
@@ -486,35 +447,6 @@ footer {
       text-decoration: none;
       color: darken(#ffffff, 15%);
     }
-  }
-}
-
-.read-more {
-  //display: block;
-  display: none;
-  text-decoration: none;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-  text-shadow: 1px 1px #454545;
-  padding: 5px;
-  padding: 5px 15px;
-  border: 2px solid;
-  border-radius: 2px;
-  width: 200px;
-  margin: 0 auto;
-  box-shadow: 1px 1px 3px -1px #454545;
-  &:hover,
-  &:active {
-    cursor: pointer;
-    color: #fff;
-    text-shadow: -2px 1px 0px #454545;
-    transition: all 300ms ease;
-    box-shadow: -2px -1px 3px -1px #454545;
-  }
-  @include respond-to("mobile") {
-    display: block;
-    margin: 2px auto;
   }
 }
 
@@ -544,50 +476,13 @@ footer {
 
 .hidden {
   display: none;
+  &-sm {
+    @include respond-to("mobile") {
+      display: none;
+    }
+  }
 }
 
-.circlet {
-  width: 172px;
-  height: 172px;
-  @include respond-to("mobile") {
-    width: 72px;
-    height: 72px;
-  }
-  background: $accent;
-  opacity: .53;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 80px;
-    height: 80px;
-    @include respond-to("mobile") {
-      width: 48px;
-      height: 48px;
-    }
-  }
-  &:nth-child(1) {
-    margin-right: -16px;
-    @include respond-to("mobile") {
-      margin-right: -6px;
-    }
-  }
-  &:nth-child(2) {
-    margin-left: -16px;
-    @include respond-to("mobile") {
-      margin-left: -6px;
-    }
-  }
-  &-container {
-    width: 100%;
-    height: 174px;
-    @include respond-to("mobile") {
-      height: 74px;
-    }
-    text-align: center;
-  }
-}
 
 .icon {
   &-tchat {
@@ -615,20 +510,6 @@ footer {
   }
 }
 
-.isolated {
-  background: transparentize($driForm-bg, .75);
-  padding: 20px;
-  position: relative;
-  @include respond-to("mobile") {
-    padding: 5px;
-  }
-  &:nth-child(1) {
-    margin: 0 0 15px 0;
-    @include respond-to("mobile") {
-      margin: 0;
-    }
-  }
-}
 
 .underline {
   text-decoration: underline;
@@ -636,22 +517,12 @@ footer {
 
 // MQ
 @media screen and (max-width: 900px) {
-  /*.main {
-    background-size: 150px, 240px, cover;
-    background-position: 0 100px, right bottom, center;
-  }*/
   .question {
     font-size: 1.6rem;
     text-shadow: 0px 0px 1px #3c3c3c;
     text-align: center;
   }
-  .choice {
-    width: 100vw;
-    height: 80px;
-    display: flex;
-    font-size: 2.3rem;
-    margin: 3px 0;
-  }
+
   .FormContainer-Submit {
     font-size: 1.8rem;
   }
@@ -701,8 +572,15 @@ footer {
       max-width: 50rem;
       margin: 0 auto;
     }
-    select#pays {
-      width: 280px;
+    .btn {
+      display: block;
+      margin: 10px auto;
+      font-size: medium;
+      width: 298px;
+      @include respond-to("mobile") {
+        width: 100%;
+        margin-top: 5px;
+      }
     }
     &--header {
       background: $accent;
@@ -788,7 +666,7 @@ footer {
       left: 50%;
       transform: translateX(-50%);
       @include respond-to("mobile") {
-        bottom: -38px;
+        width: 100%;
       }
     }
     &-Title {
@@ -814,13 +692,6 @@ footer {
           content: ' : ';
         }
       }
-      &-Input {
-        border-radius: 5px;
-        background: #fff;
-        font-family: "Open Sans";
-        font-weight: 600;
-        color: #454545;
-      }
     }
     p {
       color: #fff;
@@ -838,6 +709,52 @@ footer {
     strong {
       color: $primary;
       font-weight: normal;
+    }
+  }
+}
+
+input#tel {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.offer {
+  display: flex;
+  @include respond-to("mobile") {
+    flex-direction: column;
+    margin: 10px 5px;
+  }
+  &-c {
+    width: 100%;
+  }
+  .btn {
+    @include respond-to("mobile") {
+      width: 100%;
+      margin: 3px auto;
+    }
+  }
+  div {
+    display: block;
+    margin: 0 auto;
+  }
+  &-tel {
+    background: url($assets + "10min-tel.png") no-repeat center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    @include respond-to("mobile") {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &-tchat {
+    background: url($assets + "5min-tchat.png") no-repeat center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    @include respond-to("mobile") {
+      width: 100px;
+      height: 100px;
     }
   }
 }
@@ -884,67 +801,103 @@ footer {
   }
 }
 
-
-
-
 .ContentBand.Principal {
-    background-color: #ff;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    .ContentBand-ColumnHeader {
-        background-color: white;
-        box-shadow: 0 0 10px 1px #000;
-        font-size:2.5rem;
-    }
+  background-color: #ff;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  .ContentBand-ColumnHeader {
+    background-color: white;
+    box-shadow: 0 0 10px 1px #000;
+    font-size: 2.5rem;
+  }
 }
+
 .ContentBand.Arrowed {
-    background-color: transparent;
-    
-    background-repeat: no-repeat;
-    background-position: center top;
-    min-height: 127px;
-    .ContentBand-ColumnHeader { padding-top: 5rem;}
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 127px;
+  .ContentBand-ColumnHeader {
+    padding-top: 5rem;
+  }
 }
+
 .ContentBand.Principal.Arrowed {
-    background-position: center 5rem;
-    .ContentBand-ColumnHeader { padding-top: 1rem;}
+  background-position: center 5rem;
+  .ContentBand-ColumnHeader {
+    padding-top: 1rem;
+  }
 }
-
-
-
-
-
-
-
-
 
 .WidgetTarot-Card {
-    
-    &.notFlipped {
-        background-color: transparent;
+  &.notFlipped {
+    background-color: transparent;
+  }
+  &-Face.front {
+    border: none;
+    background: transparent url($dos_carte) center no-repeat;
+    background-size: cover;
+  }
+  &-Face.back {
+    border: none;
+    background-color: transparent;
+  }
+  &.place {
+    background-color: transparent;
+    background-image: url($place_carte);
+    border-radius: 6px;
+    z-index: -1;
+    @include respond-to("mobile") {
+      margin: 0;
+      width: 58px;
+      height: 100px;
     }
-    
-    &-Face.front {
-        border: none;
-        background: transparent url($dos_carte) center no-repeat;
-        background-size: cover;
-    }
-    &-Face.back {
-        border: none;
-        background-color: transparent;
-    }
-    
-    &.place {
-        background-color: transparent;
-        background-image: url($place_carte);
-        border-radius: 6px;
-    }
+  }
 }
 
 .WidgetTarot-ResultMsg {
-    font-weight: bold;
-    color: #fff;
+  font-weight: bold;
+  color: #fff;
 }
-.WidgetTarot-Draw{
+
+.Tarot-Result {
+  @include respond-to("mobile") {
+    height: 110px;
+  }
+}
+
+.WidgetTarot-Draw {
   margin: 0;
+  @include respond-to("mobile") {
+    min-height: 140px;
+  }
+}
+
+.miniform {
+  &-text {
+    @include respond-to("mobile") {
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .FormContainer {
+    @include respond-to("mobile") {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.session-result {
+  padding: 15px;
+  text-align: left;
+  font-size: 1.5rem;
+  width: 60rem;
+  @include respond-to("mobile") {
+    width: 100%;
+  }
+  background: rgba(0, 0, 0, 0.45);
+  margin: 0 auto;
+  line-height: 1.9;
 }

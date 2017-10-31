@@ -23,16 +23,15 @@ $(document).ready(function() {
             <div class="alert alert-warning">\
                 Veuillez saisir votre prénom.\
             </div>',
-        
         textRotation = [{
             rel: 'a',
-            text: 'Les lames du tarot sont réputées pour être bavardes et votre tirage m’a permis de soulever de nombreux points concernant votre avenir sentimental.<br/> J’aimerais en discuter avec vous afin de vous aider à éclaircir tous ces points qui vous tracassent et vous apporter mes réponses...'
+            text: 'Les lames du tarot sont réputées pour être bavardes et votre tirage m’a permis de soulever de nombreux points concernant votre avenir sentimental.<br> J’aimerais en discuter avec vous afin de vous aider à éclaircir tous ces points qui vous tracassent et vous apporter mes réponses...'
         }, {
             rel: 'b',
-            text: 'En analysant votre tirage, je ressens votre volonté d’aller de l’avant et d’enfin mettre un terme à tous vos blocages pour enfin avancer dans votre vie.<br/> Je peux vous rassurer sur un point <b>{{FIRSTNAME}}</b> : les cartes vont dans le sens de votre envie et laissent présager une issue plus que favorable. Il faudrait que l’on puisse en parler calmement <b>{{FIRSTNAME}}</b>, j’ai encore beaucoup de chose à vous révéler...'
+            text: 'En analysant votre tirage, je ressens votre volonté d’aller de l’avant et d’enfin mettre un terme à tous vos blocages pour enfin avancer dans votre vie.<br> Je peux vous rassurer sur un point <b>{{FIRSTNAME}}</b> : les cartes vont dans le sens de votre envie et laissent présager une issue plus que favorable.<br>Il faudrait que l’on puisse en parler calmement <b>{{FIRSTNAME}}</b>, j’ai encore beaucoup de chose à vous révéler...'
         }, {
             rel: 'c',
-            text: 'Les cartes montrent bien à quel point cette situation vous pèse. Tout cela vous affecte et a même des conséquences sur votre vie de tous les jours. Votre tirage met très clairement en avant votre difficulté à passer outre cette histoire, et à penser à autre chose, se qui occupe votre esprit une bonne partie de vos journées. Ensemble nous allons identifier toutes les réponses à vos blocages...'
+            text: 'Les cartes montrent bien à quel point cette situation vous pèse.<br> Tout cela vous affecte et a même des conséquences sur votre vie de tous les jours.<br> Votre tirage met très clairement en avant votre difficulté à passer outre cette histoire, et à penser à autre chose, se qui occupe votre esprit une bonne partie de vos journées. Ensemble nous allons identifier toutes les réponses à vos blocages...'
         }],
         //firstName = '{{FIRSTNAME}}',
         q = 0;
@@ -62,7 +61,7 @@ $(document).ready(function() {
             name = $(name_input_selector).val();
             trt_forceDrawFirst = true;
             trt_lock = false;
-            $('.WidgetTarot').detach().prependTo('.draw');
+            $('.WidgetTarot').removeClass('hidden-sm').detach().prependTo('.draw');
             $('.Tarot-Result').show();
             qPrepare(q);
             section.eq(0).fadeOut(300, function() {
@@ -115,8 +114,10 @@ $(document).ready(function() {
             return capitalize(name);
         });
         setTimeout(function() {
+            $('.WidgetTarot-Result').removeClass('hidden-sm');
             $('.question').text('Votre tirage');
-            $('.session-result').html(result);
+            $('.session-result').removeClass('hidden').html(result);
+            $('.miniform').removeClass('hidden');
         }, 600);
     });
 });
