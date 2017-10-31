@@ -561,7 +561,6 @@ footer {
 .DRI {
   &-Form {
     background: transparent;
-    box-shadow: 0px 2px 15px -5px #212121;
     max-width: 80rem;
     @include respond-to("mobile") {
       padding: 0;
