@@ -107,12 +107,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> une femme</label>
                                                 <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                                <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> une femme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
                                                 <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
+                                                <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
                                             </div>
                                         </div>
                                     </div>
