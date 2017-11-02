@@ -8,9 +8,9 @@
  */
 $(document).ready(function() {
     // we can use Ajax call here and get questions from database 
-    var name, section = $('.section'),
+    var name,
+        section = $('.section'),
         name_input_selector = 'input[name="js-name"]',
-        question_value = "",
         trt_deckNbCards = 20,
         trt_forceDrawFirst = false,
         trt_scrollOnComplete = false,
@@ -59,6 +59,7 @@ $(document).ready(function() {
         }
         else {
             name = $(name_input_selector).val();
+            $('#js-name').val(name);
             trt_forceDrawFirst = true;
             trt_lock = false;
             $('.WidgetTarot').removeClass('hidden-sm').detach().prependTo('.draw');
@@ -101,8 +102,6 @@ $(document).ready(function() {
         if (cardsDrow == true) {
             section.eq(1).addClass('hidden');
             section.eq(2).removeClass('hidden').addClass('fade');
-            $('#js-question').val(question_value);
-            $('#js-name').val(name);
             return false;
         }
     }

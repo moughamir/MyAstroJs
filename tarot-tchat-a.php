@@ -4,8 +4,8 @@ $method = 'general-suscribe';
 $support = 'tarot';
 $site = 'myastro.fr';
 $source = 'adwords';
-$dri = 'voyance-par-tchat/offre-gratuite';
-$dri2 = 'tarot-tchat-dri';
+//$dri = 'voyance-par-tchat/offre-gratuite';
+$dri = 'tarot-tchat-dri';
 $assets = 'images_landing/tarot-tchat';
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 ?>
@@ -88,15 +88,15 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                     <input type="hidden" name="site" value="<?= $site;?>" />
                                     <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                     <input type="hidden" name="dri" value="<?= $dri;?>" />
-                                    <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                     <!-- ########## autres champs pré-remplis ########## -->
                                     <input type="hidden" name="convertir" value="1" />
-                                    <input type="hidden" name="tel_needed" value="1" />
+                                    <input type="hidden" name="tel_needed" value="0" />
                                     <input type="hidden" name="cguv" value="1" />
                                     <input type="hidden" name="partenaires" value="1" />
                                     <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                     <input type="hidden" name="prenom" id="js-name" />
-                                    <input type="hidden" name="question_code" id="js-question" />
+                                    <input type="hidden" name="question_code" id="js-question" value="tarot-tchat"/>
+                                    <input type="hidden" name="optional_birthdate" value="1" />
                                     <!-- ############################################### -->
                                     <div class="Fields-Table-Row">
                                         <div class="FormField">
