@@ -1,5 +1,13 @@
 <?php
+$url = $pageName= 'tarot-tchat-a';
+$method = 'general-suscribe';
+$support = 'tarot';
+$site = 'myastro.fr';
+$source = 'adwords';
+$dri = 'voyance-par-tchat/offre-gratuite';
+$dri2 = 'tarot-tchat-dri';
 $assets = 'images_landing/tarot-tchat';
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 ?>
     <!DOCTYPE html>
     <html lang="fr">
