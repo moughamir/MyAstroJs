@@ -2129,9 +2129,8 @@ input[type="checkbox"], input[type="radio"] {
   background-size: contain;
   position: absolute;
   top: 10rem;
-  left: -10rem;
-  opacity: 0;
-  z-index: -1; }
+  left: -5rem;
+  opacity: 0; }
 
 #photo2 {
   background: url("../images_landing/numerologie-amour/pola1.png") center no-repeat;
@@ -2343,4 +2342,4 @@ input[type="checkbox"], input[type="radio"] {
     background-position: top left;
     background-size: auto 75%; } }
 
-/*# sourceMappingURL=numerologie-amour.min.css.map */
+/*# sourceMappingURL=numerologie-amour.css.map */

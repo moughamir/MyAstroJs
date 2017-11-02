@@ -19,9 +19,9 @@ $img_dir : "../images_landing/numerologie-amour/";
 $color1 : #225b70; // pour les labels alternés 
 $color2 : #f05882; // rose pour les boutons et "femme"
 $color3 : #0ae9d1; // turquoise pour "homme"
-$color4 : #28b1d3; // bleu clair pictos reassurance
+$color4 : #f81948; // bleu clair pictos reassurance
 $color5 : #ffffff; // background blanc reassurance
-$color6 : #f94f43; // orange pour boutons et liens 
+$color6 : #f81948; // orange pour boutons et liens 
 
 $font1: 'Amatic SC', cursive; //titre-princip1
 $font2: 'Cookie', cursive; //titre-princip1
@@ -49,11 +49,11 @@ body {
 }
 
 .bg1{
-    background: $bg url($img_dir+"bg1.jpg") no-repeat center top fixed;
+    background: $bg url($img_dir+"background.jpg") no-repeat center top fixed;
     background-size: cover;
 }
 .bg2{
-    background: $bg url($img_dir+"bg2.jpg") no-repeat center top fixed;
+    background: $bg url($img_dir+"background-dri.jpg") no-repeat center top fixed;
     background-size: cover;
 }
 
@@ -243,9 +243,6 @@ button{
 }
 
 
-.blueLabel{
-    color:$color1 !important;
-}
 
 .FormField-Label {
     text-transform: uppercase;
@@ -363,16 +360,17 @@ input[type="checkbox"], input[type="radio"] {
     border:0px solid red;
 }
 #photo1{
-    background: url($img_dir+"pola1.png") center no-repeat;
+    background: url($img_dir+"pola2.png") center no-repeat;
     background-size: contain;
     position: absolute;
     top:10rem;
-    left:-5rem;
+    left:-10rem;
     opacity: 0;
+    z-index: -1;
    
 }
 #photo2{
-    background: url($img_dir+"pola2.png") center no-repeat;
+    background: url($img_dir+"pola1.png") center no-repeat;
     background-size: contain;
     position: absolute;
     top: 25rem;
@@ -409,6 +407,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* ************** FOOTER *************** */
+.SiteCopyright a {
+  text-decoration: none;
+  color: #fff;
+}
 .ReassuranceList {
     background-color: $color5;
     color: $color4;
