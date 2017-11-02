@@ -100,6 +100,11 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                     <!-- ############################################### -->
                                     <div class="Fields-Table-Row">
                                         <div class="FormField">
+                                            <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required />
+                                        </div>
+                                    </div>
+                                    <div class="Fields-Table-Row">
+                                        <div class="FormField">
                                             <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
                                         </div>
                                         <button class="FormContainer-Submit" type="submit" name="valider">Envoyer</button>

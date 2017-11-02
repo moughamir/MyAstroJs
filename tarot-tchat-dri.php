@@ -34,7 +34,11 @@ $assets = 'images_landing/tarot-tchat';
                 <section class="section">
                     <div class="FormContainer DRI-Form">
                         <div class="FormContainer-Field">
-                            <div class="Fields-Table-Row" <div class="FormField"> <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required /> </div>
+                            <div class="Fields-Table-Row">
+                                <div class="FormField">
+                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required />
+                                </div>
+                            </div>
                         </div>
                         <div class="offer">
                             <div class="offer-c">
