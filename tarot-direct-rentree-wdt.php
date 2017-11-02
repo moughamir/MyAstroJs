@@ -103,21 +103,16 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
-                                    <label class="FormField-Label">Votre civilité</label>
+                                    <label class="FormField-Label">Vous êtes</label>
                                     <div class="FormField radio">
                                         <div class="FormField-TableInputContainer fixed-2-col gender">
                                             <div class="FormField-TableInputContainer-Cell">
-                                                <input type="radio" name="sexe" value="femme" id="sexe-mm" class="FormField-Input" />
-                                                <label for="sexe-mm" class="FormField-Label ">Mme</label>
-                                            </div>
-                                            <div class="FormField-TableInputContainer-Cell">
-                                                <input type="radio" name="sexe" value="femme" id="sexe-ml" class="FormField-Input" />
-
-                                                <label for="sexe-ml" class="FormField-Label">Mlle</label>
+                                                <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                                                <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span> une femme</label>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
-                                                <label for="sexe-h" class="FormField-Label">Mr</label>
+                                                <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
                                             </div>
                                         </div>
                                     </div>
