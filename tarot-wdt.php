@@ -22,7 +22,7 @@
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
+        <link rel="icon" type="image/png" href="images_landing/tarot-sable/favicon.png" />
         
         <link rel="stylesheet" type="text/css" href="css/tarot-sable.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
