@@ -706,11 +706,6 @@ footer {
   }
 }
 
-input#tel {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .offer {
   display: flex;
   @include respond-to("mobile") {
@@ -879,10 +874,6 @@ input#tel {
       margin: 0;
       padding: 0;
     }
-  }
-  input#tel {
-    width: 310px;
-    margin: 5px 0;
   }
 }
 
