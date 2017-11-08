@@ -10,7 +10,7 @@
 $(document).ready(function() {
     // we can use Ajax call here and get questions from database 
     var quiz = [{
-        "question": "Quel est pour vous la couleur de l'amour?",
+        "question": "Quelle est pour vous la couleur de l'amour?",
         "choices": [{
             "rel": "rouge",
             "textColor": "#ffffff",
@@ -28,53 +28,53 @@ $(document).ready(function() {
             "text": "Orange<br/>le désir"
         }]
     }, {
-        "question": "Coté caractère vous êtes plutôt :",
+        "question": "Côté caractère vous êtes plutôt :",
         "choices": [{
             "color": "#832fa4",
             "textColor": "#ffffff",
-            "text": "dévoué(e)"
+            "text": "Dévoué(e)"
         }, {
             "color": "#ea285f",
             "textColor": "#ffffff",
-            "text": "curieux(se)"
+            "text": "Curieux(se)"
         }, {
             "color": "#19568d",
             "textColor": "#ffffff",
-            "text": "jaloux(se)"
+            "text": "Jaloux(se)"
         }]
     }, {
         "question": "Ce qui vous plait le plus :",
         "choices": [{
             "color": "#19568d",
             "textColor": "#ffffff",
-            "text": "l'aventure"
+            "text": "L'aventure"
         }, {
             "color": "#832fa4",
             "textColor": "#ffffff",
-            "text": "la passion"
+            "text": "La passion"
         }, {
             "color": "#ea285f",
             "textColor": "#ffffff",
-            "text": "la stabilité"
+            "text": "La stabilité"
         }]
     }, {
-        "question": "En couple vous series plutôt :",
+        "question": "En couple vous seriez plutôt :",
         "choices": [{
             "color": "#ea285f",
             "textColor": "#ffffff",
-            "text": "jamais l'un sans l'autre"
+            "text": "Jamais l'un sans l'autre"
         }, {
             "color": "#19568d",
             "textColor": "#ffffff",
-            "text": "indépendant"
+            "text": "Indépendant"
         }, {
             "color": "#832fa4",
             "textColor": "#ffffff",
-            "text": "complice"
+            "text": "Complice"
         }]
     }],
     result = {
-      "passion": "Brûlant, dévorant, irrésistible, l'amour passion est un sentiment unique qui bouleverse tout sur son passage.<br/>Il nous tombe dessus, un beau jour, il est très difficile à controler car c'est un sentiment qui nous envahit... ",
+      "passion": "Brûlant, dévorant, irrésistible, l'amour passion est un sentiment unique qui bouleverse tout sur son passage.<br/>Il nous tombe dessus, un beau jour, il est très difficile à contrôler car c'est un sentiment qui nous envahit... ",
       "purety": "L'amour pureté est un amour profond qui vient de l’intérieur, il atteint la profondeur de votre âme, il vous connecte à l'autre. C'est Aimer l'autre entièrement, sans aucune condition, malgré tout ce qui pourrait nous déranger. Un amour complet et absolu...",
       "desire": "Mystérieux, aléatoire, et imprévisible.<br/>Le désir est plus fort que nous, c'est un sentiment qui nous échappe et que l'on associe souvent au désir physique: à l'attirance .<br/>Ce désir comble une bonne partie de vos rêves,... "
     },

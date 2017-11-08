@@ -22,7 +22,7 @@ $assets = 'images_landing/love-tchat';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, nofollow" />
-        <title>Love MyAstro</title>
+        <title>Love MyAstro | Découvrez votre avenir amoureux</title>
         <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
         <link rel="stylesheet" href="css/love-tchat.css" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Open+Sans:400,600" rel="stylesheet">
@@ -51,7 +51,7 @@ $assets = 'images_landing/love-tchat';
                         <span class="animate animate-ltr">Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
                     </span>
                     <span class="animate animate-rtl">
-                        <span class="highlight-primary curved">Découvrer votre avenir amoureux</span><br/>
+                        <span class="highlight-primary curved">Découvrez votre avenir amoureux</span><br/>
                     </span>
                     <span class="animate animate-ltr animate-delayed-a">
                         <span class="highlight-primary">3 min</span> pour savoir<br>
