@@ -72,6 +72,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <article class="session-result hidden"></article>
                 </div>
                 <div class="form">
+                    <div class="helper"></div>
                     <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
                     <button class="btn start">Tirez les cartes</button>
                 </div>
@@ -105,9 +106,9 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label hidden">Votre email</label>
                                     <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required /> </div>
+                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
+                                    </div>
                                 </div>
-                                <div class="Fields-Table-Row"> <span class="FormField-Info">Vous recevrez votre interprétation à cette adresse</span> </div>
                                 <div class="Fields-Table-Row">
                                     <label for="pays" class="FormField-Label">Votre pays </label>
                                     <select name="pays" id="pays" class="FormField-Input" required>
@@ -136,7 +137,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <div class="Fields-Table-Row">
                                     <label for="tel" class="FormField-Label hidden">Votre numéro de téléphone</label>
                                     <div class="FormField">
-                                        <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="Votre Téléphone" required /> </div>
+                                        <input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="Votre Téléphone" required />
+                                    </div>
                                 </div>
                                 <div class="Fields-Table-Row"> <span class="FormField-Info">Un SMS vous sera envoyé lorsque lʼinterprétation sera prête</span> </div>
                                 <div class="Fields-Table-Row">

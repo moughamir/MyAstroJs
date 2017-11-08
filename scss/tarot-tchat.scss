@@ -706,6 +706,12 @@ footer {
   }
 }
 
+.helper {
+  color: #454545;
+}
+optgroup {
+  color: #fff;
+}
 .offer {
   display: flex;
   @include respond-to("mobile") {
