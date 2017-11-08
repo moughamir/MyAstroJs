@@ -2,7 +2,7 @@
 /* global _*/
 /**
  * @Author    : Mohamed Moughamir <hello@omnizya.com>
- * @Version   : 0.2b
+ * @Version   : 0.2.1
  * @Licence   : GPL v3
  * @Copyright : KGcom <https://kg-com.fr/>
  */
@@ -81,7 +81,7 @@ $(document).ready(function() {
     questions = {
         'passion': "{'code':'lma17_question1','subject':'Passion','text':'Love MyAstro - Passion'}",
         'purety': "{'code':'lma17_question2','subject':'Pureté','text':'Love MyAstro - Pureté'}",
-        'desire': "{'code':'lma17_question2','subject':'Désir','text':'Love MyAstro - Désir'}"
+        'desire': "{'code':'lma17_question3','subject':'Désir','text':'Love MyAstro - Désir'}"
     },
     choice = $('.choice'),
     holder = $('.result'),
@@ -90,18 +90,6 @@ $(document).ready(function() {
     question_value = "";
 
     var q = 0;
-/**
-    setTimeout(function(){
-        $('.tri').fadeIn(500, function() {
-            $(this).removeClass('hidden');
-            $(this).addClass('rotate');
-            $(".tri").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
-                $(this).hide();
-                $('.post-test').removeClass('hidden').addClass('fade');
-            });
-        });
-    }, 3300);
-*/
     /**
      * loadQuiz function
      */
