@@ -1,4 +1,4 @@
-/* 
+/*
     ------------------------------------
     --     Module de tirage tarot     --
     ------------------------------------
@@ -21,9 +21,9 @@ function shuffle(array){
     }
     return array;
 }
-    
+
 $(document).ready(function(){
-    
+
     cardsPath = (typeof cardsPath !== "undefined") ? cardsPath : 'tarot/cartes/original-grand/';
     trt_deckNbCards = (typeof trt_deckNbCards !== "undefined") ? trt_deckNbCards : 12;
     nbCardsToDraw = (typeof nbCardsToDraw !== "undefined") ? nbCardsToDraw : 5;
@@ -32,16 +32,17 @@ $(document).ready(function(){
     trt_lock = (typeof trt_lock !== "undefined") ? trt_lock : false;
     trt_scrollOnComplete = (typeof trt_scrollOnComplete !== "undefined") ? trt_scrollOnComplete : true;
     trt_minSize = (typeof trt_minSize !== "undefined") ? trt_minSize : 610;
-    
+
     var cardsCounter = 0;
     var alreadyPicked = [];
     alwaysDraw = shuffle(alwaysDraw);
     var alwaysDraw_event = false;
-    
+
     /* -- animation survol des cartes verso -- */
     $('#cards-container .notFlipped').hover(
         function(e) {
             if (cardsCounter <= nbCardsToDraw - 1 && !trt_lock) {
+                $(this).css({cursor:''});
                 e.preventDefault();
                 // Called when the mouse enters the element
                 if ($(this).hasClass('notFlipped')){
@@ -54,6 +55,7 @@ $(document).ready(function(){
         },
         function(e) {
             if (cardsCounter <= nbCardsToDraw - 1 && !trt_lock) {
+                $(this).css({cursor:''});
                 e.preventDefault();
                 // Called when the mouse leaves the element
                 if ($(this).hasClass('notFlipped')) {
@@ -65,7 +67,7 @@ $(document).ready(function(){
             }
         }
     );
-    
+
     if ($(window).width() <= trt_minSize) {
         $('.toShuffle').removeClass('toShuffle');
     } else {
@@ -93,7 +95,7 @@ $(document).ready(function(){
             });
         });
     }
-    
+
     // -- sélection de carte --
     $(document).on('click', '#cards-container .notFlipped', function(e){
         if(!trt_lock){
@@ -139,7 +141,7 @@ $(document).ready(function(){
             setTimeout(function(){
                 // indique le résultat quand la carte est retournée
                 card.attr('data-result', cardNumber);
-                // evenement alwaysDraw                    
+                // evenement alwaysDraw
                 if(alwaysDraw_event){
                     $(document).trigger('trt_alwaysDraw');
                     alwaysDraw_event = false;
@@ -156,7 +158,7 @@ $(document).ready(function(){
                     // la carte reste sur place
                     card.animate({top: '0px'}, 250);
                 }
-                
+
                 setTimeout(function(){
                     // remplace l'image de la carte retournée
                     $('.WidgetTarot-Result .place[data-number="' + currCardCounter + '"]').css({'background-image': 'url('+ cardsPath + cardNumber +'.png)', 'background-color':'transparent'});
@@ -168,13 +170,13 @@ $(document).ready(function(){
                         }
                     }
                 }, 1000);
-                
+
             }, 500); // 0.5s le temps que la transition de retournement de la carte se termine
         }
-        
+
         return false;
     });
-    
+
     // -- Replace les cartes retournées au redimensionnement --
     $(window).resize(function() {
         if ($(window).width() > trt_minSize) {
@@ -186,7 +188,7 @@ $(document).ready(function(){
             };
         }
     });
-        
+
     // -- Protection formulaire --
     if(trt_forceDrawFirst){
         $('form').on('keypress focus click change', function(e){

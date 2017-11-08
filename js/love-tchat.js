@@ -6,7 +6,6 @@
  * @Licence   : GPL v3
  * @Copyright : KGcom <https://kg-com.fr/>
  */
-
 $(document).ready(function() {
     // we can use Ajax call here and get questions from database 
     var quiz = [{
@@ -96,31 +95,38 @@ $(document).ready(function() {
     function loadQuiz() {
         // get value of input field and store it (optimized)
         name = $(name_input_selector).val();
-        if(name.length > 0){
+        if (!nameRe.test(name)) {
+            if(name.length == 0) {
+                $('.helper').html(requiredMsg).fadeIn();
+            }else{
+                $('.helper').html(errorMsg).fadeIn();
+
+            }
+            
+            setTimeout(function(){
+                $('.helper').fadeOut();
+            }, 2500);
+            $(name_input_selector).focus();
+        }
+        else {
             qPrepare(q);
-            section.eq(0).fadeOut(300, function(){
+            section.eq(0).fadeOut(300, function() {
                 section.eq(1).removeClass('hidden').addClass('fade');
                 q++;
             });
-        } else {
-            alert('Veuillez remplir votre prénom.');
-            $(name_input_selector).focus();
         }
         return false;
     }
-    
     // event listen to click on button.start element
-    $('.start').on('click', function(){
+    $('.start').on('click', function() {
         loadQuiz();
     });
-    
     // when user write their name and press ENTER key '13'
-    $(name_input_selector).keypress(function(e){
-        if (e.which == 13){
+    $(name_input_selector).keypress(function(e) {
+        if (e.which == 13) {
             loadQuiz();
         }
     });
-
     /**
      * listen to user first choice, and populate .result element with
      * corresponding value.
@@ -128,9 +134,9 @@ $(document).ready(function() {
      * 
      * @see qPrepare()
      */
-    choice.on('click', function(){
+    choice.on('click', function() {
         var d = $(this).data();
-        if (typeof d !== typeof undefined && d !== false){
+        if (typeof d !== typeof undefined && d !== false) {
             // Element has this attribute
             if ($(this).data('option') == "rouge") {
                 holder.html(result.passion);
@@ -145,50 +151,50 @@ $(document).ready(function() {
                 question_value = questions.desire;
             }
             qPrepare(q);
-        } else {
+        }
+        else {
             console.info('False');
             qPrepare(q);
         }
         q++;
     });
-
     //scroll animation
-    $('.read-more').on('click', function(){
+    $('.read-more').on('click', function() {
         $('html, body').animate({
             scrollTop: $('.FormContainer').offset().top
         }, 800);
         return false;
     });
 
-    function qPrepare(q){
+    function qPrepare(q) {
         var duration = 150;
-        if(q <= 3){
+        if (q <= 3) {
             var question = quiz[q].question;
             var choices = quiz[q].choices;
-            $('.question').fadeOut(duration, function(){
+            $('.question').fadeOut(duration, function() {
                 $(this).text(question).fadeIn(duration);
             });
-            choice.each(function(elmIndex){
-                $(this).fadeOut(duration, function(){
+            choice.each(function(elmIndex) {
+                $(this).fadeOut(duration, function() {
                     $(this).html(choices[elmIndex].text).css({
                         'background-color': choices[elmIndex].color,
                         'color': choices[elmIndex].textColor
                     }).fadeIn(duration);
                 });
-                if (_.hasIn(choices[elmIndex], 'rel')){
+                if (_.hasIn(choices[elmIndex], 'rel')) {
                     $(this).data('option', choices[elmIndex].rel);
-                } else {
+                }
+                else {
                     $(this).data('option', null);
                 }
             });
-
             return false;
-        } else {
+        }
+        else {
             section.eq(1).addClass('hidden');
             section.eq(2).removeClass('hidden').addClass('fade');
             $('#js-question').val(question_value);
             $('#js-name').val(name);
-
             return false;
         }
     }

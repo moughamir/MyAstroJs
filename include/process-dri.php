@@ -30,6 +30,8 @@ $codeastro  = isset($get['id']) && !empty($get['id']) ? $get['id'] : false;
 $idkgestion = isset($get['idkgestion']) && !empty($get['idkgestion']) ? $get['idkgestion'] : false;
 $code_promo = isset($get['camp']) && !empty($get['camp']) ? $get['camp'] : false;
 $email_base = isset($get['email']) && !empty($get['email']) ? $get['email'] : false;
+$makeDirectCall = isset($form['directCall']) && !empty($form['directCall']) ? $form['directCall'] : false;
+
 
 /* ################### INITIALISATION DONNÉES DRI MAILING ################### */
 $site        = "My Astro";
@@ -117,6 +119,8 @@ if(isset($form['demande_rappel'])){
 /* ######################## TRAITEMENT DRI KGESTION ######################### */
 $state = "";
 $retour = false;
+$directCall = false;
+unset($_SESSION['directCall']);
 
 if($already_sent){
     $state = 'MAIL_ALREADY_SENT';
@@ -129,9 +133,13 @@ if($already_sent){
             'myastroPromoCode' => !$code_promo ? '' : $code_promo,
             'myastroSupport' => $support_kgs
         );
+        if($makeDirectCall) {
+            $DRIdata['directCall'] = 1;
+        }
         $kgestion_dri = $kgestion->registerDRI($idkgestion, $DRIdata);
 
         $retour = $kgestion_dri->success;
+        $directCall = !empty($kgestion_dri->directCall) ? $kgestion_dri->directCall : false;
 
     } else {
 /* ######################## REQUÊTE DONNÉES TRACKING ######################## */
@@ -237,6 +245,9 @@ if($already_sent){
     if($retour){
         $state = 'MAIL_SENT';
         $_SESSION['demanderappel'] = true;
+        if($directCall) {
+            $_SESSION['directCall'] = true;
+        }
     } else {
         $state = 'MAIL_ERROR';
     }

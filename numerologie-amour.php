@@ -83,7 +83,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                                     </div>
                                 </div>
                                 <div class="FormField">
-                                    <label for="name" class="FormField-Label blueLabel">Prénom</label>
+                                    <label for="name" class="FormField-Label ">Prénom</label>
                                     <input type="text" id="name" name="prenom" class="FormField-Input" required />
                                 </div>
                                 <div class="FormField">
@@ -125,7 +125,7 @@ $question = ['code'=>'NA_chiffre'.$chiffre, 'subject'=>'signe', 'text'=>'Numéro
                                     </div>
                                 </div>
                                 <div class="FormField sonprenom show">
-                                    <label for="son_prenom" class="FormField-Label blueLabel">Son prénom</label>
+                                    <label for="son_prenom" class="FormField-Label ">Son prénom</label>
                                     <input type="text" id="son_prenom" name="conjoint" class="FormField-Input" required />
                                 </div>
                                 <div class="FormField">

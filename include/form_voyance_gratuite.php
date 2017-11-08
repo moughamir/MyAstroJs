@@ -1,6 +1,6 @@
 				    <div class="formulaire-voyance-g">
 					<div class="widget-title vy-title">
-					    <h4>Votre voyance gratuite de 2016</h4>
+					    <h4>Votre voyance gratuite de 2017</h4>
 					</div>           
 					<div class="widget w-adv">
 					    <div id="form-w" class="widget-content clearfix">
