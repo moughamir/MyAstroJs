@@ -4,7 +4,7 @@ $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "adwords";
-$dri = "pouvoir-des-trois/offre-gratuite";
+$dri = "love-myastro/offre-gratuite";
 $dri2 = "love-tchat-dri";
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
@@ -41,9 +41,6 @@ $assets = 'images_landing/love-tchat';
             <h1>Allez-vous être heureux en AMOUR ?</h1>
         </div>
         <main class="ContentBand">
-            <div class="preload-dsktp hidden">
-                <span class="tri hidden"></span>
-            </div>
             <div class="PageWrapper">
                 <section class="section post-test">
                     
@@ -61,6 +58,7 @@ $assets = 'images_landing/love-tchat';
                     </span>
                     </p>
                     <div class="form">
+                        <div class="helper"></div>
                         <span class="animate animate-ltr animate-delayed-b">
                             <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
                         </span>
