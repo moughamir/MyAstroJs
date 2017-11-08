@@ -81,7 +81,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                 <h2 class="question">Sélectionnez 5 cartes</h2>
                 <div class="draw"> </div>
                 <section class="miniform hidden">
-                    <h2 class="miniform-text">Nous allons envoyer la suite de cette<br> interprétation dés demain par email:</h2>
+                    <h2 class="miniform-text">Nous allons vous envoyer la suite de cette<br> interprétation dés demain par email:</h2>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
                             <div class="FormContainer-Fields Fields-Table">
