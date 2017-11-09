@@ -1,5 +1,5 @@
 <?php
-$form = 'lma-tchat-m';
+$form = 'love-tchat-m';
 include('include/init-affilbase.php');
 $assets = 'images_landing/love-tchat';
 $regurl = $form;
