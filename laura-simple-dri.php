@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     --------------------------------------------------------
     --      DRI POST-MAIL = LAURA-SIMPLE = AFFIL BASE     --
     --------------------------------------------------------
@@ -16,22 +16,22 @@ include('include/process-dri.php');
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
     <title>MyAstro - Laura 2016</title>
-    
+
     <meta name="robots" content="noindex,nofollow" />
-    
+
     <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
     <link rel="stylesheet" type="text/css" href="css/laura-simple.min.css">
-       
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-          
+
 </head>
 
 <body>
@@ -52,7 +52,7 @@ include('include/process-dri.php');
                             </div>
                         </article>
                     </div>
-                    
+
                     <div class="faq">
                         <h3>Comment ça marche&nbsp;?</h3>
                         <ul>
@@ -86,13 +86,20 @@ include('include/process-dri.php');
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
-                            <form method="post">                                
+                            <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>
@@ -123,7 +130,7 @@ include('include/process-dri.php');
                                         <option value="ZZ">Autre</option>
                                     </select>
                                 </div>
-                                
+
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
                                 <button class="FormContainer-Submit btn-rose" type="submit" name="demande_rappel" >Rappel Gratuit</button>
@@ -131,18 +138,18 @@ include('include/process-dri.php');
                             <?php } ?>
                         </div>
                     </article>
-                    
+
                 </div>
             </div>
         </section>
         <?php include('include/footer_reassurance.php'); ?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </body>
-<link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
+<link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
 </html>

@@ -31,7 +31,13 @@ $assets = 'images_landing/love-tchat';
             <div class="PageWrapper fullview">
                 <article class="FormContainer DRI-Form">
                     <div class="Fields-Table">
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else  if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <p class="DRI-Sent">
                             Merci, votre demande de rappel a bien été prise en compte.<br/>
                             <strong>Un voyant vous recontactera dans quelques instants.</strong>
@@ -50,13 +56,14 @@ $assets = 'images_landing/love-tchat';
                             Vous avez déjà bénéficié de l’offre :<br>
                             <strong>« <span class="underline">5 minutes de tchat gratuit</span> »</strong>
                         </h2>
-                        
+
                         <a class="btn-primary cap icon-tchat">Tchat immédiate</a>
                         </div>
                         <div class="isolated">
                         <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                         <p><strong>Nos voyants répondent à vos questions</strong></p>
                         <form class="DRI-FormContainer" method="post">
+                            <input type="hidden" value="1" name="directCall">
                             <div class="FormContainer-Fields">
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Mon prénom</label>

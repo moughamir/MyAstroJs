@@ -12,15 +12,15 @@ include('include/process-dri.php');
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Ce que vous révèle votre signe astrologique arabe</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/astro-arabe.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -41,13 +41,20 @@ include('include/process-dri.php');
                     <div class="FormContainer-Wrapper"><div><!-- display table > table-cell pour vertical-align: bottom -->
                         <div class="DRI-Slogan">Profitez d’une consultation<br>privée pour 1€ seulement</div>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="Fields-Table">
                                     <div class="Fields-Table-Row Free">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
@@ -118,7 +125,7 @@ include('include/process-dri.php');
         </section>
         <?php include('include/footer_reassurance.php');?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

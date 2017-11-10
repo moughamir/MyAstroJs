@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     --------------------------------------------------------------------------
     --   DRI POST-MAIL & POST-LANDING = nouvel-an-chinois-17 = AFFIL BASE   --
     --------------------------------------------------------------------------
@@ -16,15 +16,15 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>2017 L’année du Coq !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/nouvel-an-chinois-17.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -46,7 +46,13 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 <article class="FormContainer" id="vm-anchor">
                     <div class="FormContainer-Wrapper">
                         <div class="DRI-Slogan">Profitez d’une consultation<br>privée pour 1€ seulement</div>
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <p class="DRI-Sent">
                             Merci, votre demande a bien<br/> été prise en compte.<br/><br/>
                             <strong>Un voyant vous recontactera<br/> dans quelques instants</strong>.
@@ -54,6 +60,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                         <?php } else { ?>
                         <div class="FormContainer-Fields">
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="Fields-Table">
                                     <div class="Fields-Table-Row Free">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
