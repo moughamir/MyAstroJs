@@ -13,15 +13,15 @@ $assets = 'images_landing/jour-du-soleil-17/';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Journée Mondiale du Soleil | Myastro</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="<?= $assets;?>favicon.png" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/jour-du-soleil-17.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -73,13 +73,20 @@ $assets = 'images_landing/jour-du-soleil-17/';
                         </div>
                         <h1 class="DRI-Slogan">Vos 10 premières minutes gratuites !</h1>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants.</strong>
                                 </p>
                             <?php } else { ?>
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
                                 </div>
@@ -120,11 +127,11 @@ $assets = 'images_landing/jour-du-soleil-17/';
                 </div>
             </div>
         </section>
-        
+
         <?php include('include/footer_reassurance.php');?>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

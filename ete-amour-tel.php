@@ -42,7 +42,13 @@ include('include/process-dri.php');
                 <article class="FormContainer">
                     <div class="FormContainer overlay" id="form-overlay"></div>
                     <div class="FormContainer-Fields">
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="DRI-Sent">
                             Merci, votre demande a bien été prise en compte.<br/>
                             <strong>Un-e voyant-e vous recontactera dans quelques instants.</strong>
@@ -50,6 +56,7 @@ include('include/process-dri.php');
                         <?php } else { ?>
                         <form action="" method="post" id="form-container">
                             <!-- ########## identification formulaire ########## -->
+                            <input type="hidden" value="1" name="directCall">
                             <input type="hidden" name="save_tel" value="1" />
                             <input type="hidden" name="prenom" value="<?= $prenom;?>" />
                             <input type="text" name="antisp" value="" style="display: none" />
@@ -106,7 +113,7 @@ include('include/process-dri.php');
         <div class="outside txtcenter">
             <span id="slider-prev"></span>
             <span id="slider-next"></span>
-        </div> 
+        </div>
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
 

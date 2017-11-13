@@ -41,7 +41,13 @@ include('include/process-dri.php');
             <div class="PageWrapper">
                 <div class="ContentBand-Column Form">
                     <article class="FormContainer ">
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="DRI-Sent">
                                 Merci, votre demande a bien été prise en compte.<br/>
                                 <strong>Un-e voyant-e vous recontactera dans quelques instants</strong>.
@@ -51,6 +57,7 @@ include('include/process-dri.php');
                         <p class="FormField-Info txtcenter">Inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden" />et nous vous rappelons tout de suite !</p>
                         <div class="DRI-Form FormContainer-Fields">
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
 
@@ -97,9 +104,9 @@ include('include/process-dri.php');
                 </div>
             </div>
         </section>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
