@@ -9,7 +9,7 @@
         <meta name="description" content="My Astro : Voyance gratuite par chat - Obtenez des réponses immédiates à toutes vos questions. Voyance gratuite par chat." />
         <meta name="robots" content="noindex,nofollow" />
         <meta name="viewport" content="width=device-width" />
-        
+
         <link rel="stylesheet" href="sstyle_landing.css" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media="all" />
     </head>
@@ -17,12 +17,12 @@
     <body class="voyance-telephone-1">
         <div class="top-nav">
             <div class="nav-content"><div class="links">
-                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
+                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
             </div></div>
         </div>
-        
+
         <div class="main">
             <div class="left-part">
                 <div class="logo">
@@ -64,7 +64,13 @@
                     </div>
                      <div class="widget-content clearfix">
                         <div class="visible-part form-part form-part-one">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="message_envoye">
                                 Merci, votre demande a bien été prise en compte.<br/>
                                 <strong>Un voyant vous recontactera dans quelques instants.</strong>
@@ -72,6 +78,7 @@
                             <?php } else { ?>
                             <div class="alert alert-danger" style="display: none"></div>
                             <form action="" method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <input type="text" name="antisp" value="" style="display:none" />
                                 <input type="hidden" name="source" value="<?php echo $source; ?>" />
                                 <input type="hidden" name="gclid" value="<?php echo $gclid; ?>" />
@@ -119,7 +126,7 @@
             <div class="bloc-middle-bg"></div>
         </div>
         <div class="clear"></div>
-        
+
         <div class="subfooter">
             <ul>
                 <li class="first">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></li>
@@ -135,7 +142,7 @@
         <div class="footer">
             <?php include('include/footer_copyright.php'); ?>
         </div>
-        
+
         <!-- REMARKETING -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php'); ?>

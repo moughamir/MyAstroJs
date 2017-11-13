@@ -62,7 +62,13 @@ include('include/process-dri.php');
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <h1 class="DRI-Slogan"><span>Vos 10 premières minutes gratuites !</span></h1>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
@@ -77,6 +83,7 @@ include('include/process-dri.php');
                             </p>
                                 <?php } ?>
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"  value="<?= $tel ?>" required />
                                 </div>

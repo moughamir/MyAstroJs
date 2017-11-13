@@ -63,7 +63,13 @@
                     </div>
                     <div class="widget-content clearfix">
                         <div class="visible-part form-part form-part-one">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="message_envoye">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="message_envoye">
                                 Merci, votre demande a bien été prise en compte.<br/>
                                 <strong>Un voyant vous recontactera dans quelques instants.</strong>
@@ -71,6 +77,7 @@
                             <?php } else { ?>
                             <div class="alert alert-danger" style="display: none"></div>
                             <form action="" method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <input type="text" name="antisp" value="" style="display:none" />
                                 <input type="hidden" name="source" value="<?php echo $source; ?>" />
                                 <input type="hidden" name="gclid" value="<?php echo $gclid; ?>" />

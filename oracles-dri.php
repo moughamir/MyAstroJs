@@ -47,10 +47,16 @@ include('include/process-dri.php');
         </header>
         <section class="ContentBand">
             <div class="PageWrapper">
-                <div class="PageWrapper-bg">   
+                <div class="PageWrapper-bg">
                     <article class="FormContainer DRI">
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants.</strong>
@@ -65,6 +71,7 @@ include('include/process-dri.php');
                                 </p>
                                 <?php } ?>
                                 <form method="post">
+                                    <input type="hidden" value="1" name="directCall">
                                     <div class="FormField">
                                         <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
                                     </div>
@@ -105,28 +112,28 @@ include('include/process-dri.php');
                 </div>
             </div>
         </section>
-        
+
         <section class="oracles">
             <ul class="oracles-grid grid-4-tiny-1-small-2-medium-4">
                 <li><a href="http://www.oracle-gratuit.fr/oracle-de-lamour" target="_blank"><span>Oracle de lʼamour</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-des-anges" target="_blank"><span>Oracle des anges</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-chinois" target="_blank"><span>Oracle chinois</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-belline" target="_blank"><span>Oracle de belline</span></a></li>
-                
+
                 <li><a href="http://www.oracle-gratuit.fr/oracle-de-la-lune" target="_blank"><span>Oracle de la lune</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-ge" target="_blank"><span>Oracle gé</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-des-heures" target="_blank"><span>Oracle des heures</span></a></li>
                 <li><a href="http://www.oracle-gratuit.fr/oracle-de-la-triade" target="_blank"><span>Oracle de le triade</span></a></li>
-            </ul>        
+            </ul>
         </section>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php');?>
     </body>
 </html>
-<link href="https://fonts.googleapis.com/css?family=Raleway:500|Courgette" rel="stylesheet" type="text/css"/>        
+<link href="https://fonts.googleapis.com/css?family=Raleway:500|Courgette" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
