@@ -33,7 +33,6 @@ $(document).ready(function() {
             rel: 'c',
             text: 'Les cartes montrent bien à quel point cette situation vous pèse.<br> Tout cela vous affecte et a même des conséquences sur votre vie de tous les jours.<br> Votre tirage met très clairement en avant votre difficulté à passer outre cette histoire, et à penser à autre chose, se qui occupe votre esprit une bonne partie de vos journées. Ensemble nous allons identifier toutes les réponses à vos blocages...'
         }],
-        //firstName = '{{FIRSTNAME}}',
         q = 0;
     /**
      * loadQuiz function
@@ -45,6 +44,7 @@ $(document).ready(function() {
     }
 
     function startSession() {
+        name = $(name_input_selector).val();
         if (!nameRe.test(name)) {
             if (name.length == 0) {
                 $('.helper').html(requiredMsg).fadeIn();
