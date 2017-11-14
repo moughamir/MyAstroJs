@@ -32,25 +32,46 @@ $assets = 'images_landing/tarot-tchat';
         <main class="ContentBand">
             <div class="PageWrapper">
                 <section class="section">
+                    <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                        <p class="DRI-Sent">
+                            APPEL EN COURS ....<br/>
+                            Merci, votre demande de rappel a bien été prise en compte.<br/>
+                            <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                        </p>
+                    <?php } else  if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <div class="DRI-Form FormContainer-Fields">
+                            <p class="DRI-Sent">
+                                Merci, votre demande a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants</strong>.
+                            </p>
+                        </div>
+                    <?php } else { ?>
+                    <form method="post" class="DRI-FormContainer">
+
                     <div class="FormContainer DRI-Form">
                         <div class="FormContainer-Field">
                             <div class="Fields-Table-Row">
                                 <div class="FormField">
+                                    <input type="hidden" id="name" name="prenom"  value="<?= $prenom ?>" />
+                                    <input type="hidden" id="pays" name="pays"  value="<?= $pays ?>"  />
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required />
                                 </div>
                             </div>
                         </div>
                         <div class="offer">
                             <div class="offer-c">
-                                <button class="btn">Rappel gratuit</button>
+                                <input type="submit" class="btn" name="demande_rappel">Rappel gratuit</input>
                                 <div class="offer-tel"></div>
                             </div>
                             <div class="offer-c">
-                                <button class="btn start">Commencer le Tchat Gratuit</button>
+                                <a href="https://voyance-en-direct.tv/myastro/offre-gratuite?email=" class="btn">Commencer le Tchat Gratuit</a>
                                 <div class="offer-tchat"></div>
                             </div>
                         </div>
                     </div>
+                   </form>
+
+                <?php } ?>
                 </section>
             </div>
             </div>
