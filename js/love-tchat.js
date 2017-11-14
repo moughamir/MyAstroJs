@@ -170,6 +170,7 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $('.FormContainer').offset().top
         }, 800);
+        $(this).hide();
         return false;
     });
 

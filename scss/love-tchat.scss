@@ -51,6 +51,9 @@ body {
 
 .FormContainer {
   max-width: 60rem;
+  @include respond-to("mobile") {
+    padding: 1.5rem .8rem 1.8rem .8rem;
+  }
 }
 
 .PageWrapper {
@@ -91,8 +94,6 @@ body {
   background: url($assets + 'background.jpg') no-repeat center fixed;
   background-size: cover;
   position: relative;
-  
-  
   >section {
     display: block;
     text-align: center;
@@ -731,6 +732,7 @@ footer {
   transform: translate(-50%, -100%);
   position: absolute;
 }
+
 .helper {
   color: #454545;
 }
