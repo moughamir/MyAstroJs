@@ -38,6 +38,7 @@ $today_date_smf = date('m/d/Y');
 $id_rdm  = uuid();
 $ip      = $_SERVER['REMOTE_ADDR'];
 $page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
+$serverName    = $_SERVER["REQUEST_SCHEME"]."://".$_SERVER['SERVER_NAME'];
 $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
@@ -68,7 +69,13 @@ if(!$formurl){
         addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     } elseif(empty($regformurl_kgs)){
-        $regformurl_kgs = $formurl_kgs;
+        $urlReg = str_replace($serverName.'/', "", $page);
+        $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$urlReg.'"';
+        $regformurl_kgs = $bdd->get_var($tracking_qry);
+        if(!isset($regformurl_kgs)){
+            addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        }
     }
 }
 
@@ -230,7 +237,7 @@ if($user){
 /* ========================================================================== *
  *                           ENREGISTREMENT HAMEDIA                           *
  * ========================================================================== */
-    
+
 if(empty($err)){
     $hm_save = isset($param['hamedia_save']) ? $param['hamedia_save'] : null;
     if(!empty($param['hamedia_save'])){
