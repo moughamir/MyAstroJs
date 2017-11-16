@@ -14,6 +14,7 @@ $retour = array();
 $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
+    'tarot-tchat/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'tarot-rentree/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-rentree/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
@@ -267,10 +268,10 @@ if(empty($err)){
         'spouseSign'        => $conjoint_signe,
         'spouseBirthday'    => $conjoint_dtn_bdd,
         'questionDate'      => $today_date_bdd,
-        'questionSubject'   => $question['subject'],
-        'questionCode'      => $question['code'],
-        'questionText'      => $question['text'],
-        'questionContent'   => $question['content'],
+        'questionSubject'   => isset($question['subject']) ? $question['subject'] : '',
+        'questionCode'      => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
+        'questionText'      => isset($question['text']) ? $question['text'] : '',
+        'questionContent'   => isset($question['content']) ? $question['content'] : '',
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,
@@ -345,8 +346,8 @@ if(empty($err)){
             'email'                   => $email,
             'questionDate'            => $today_date_bdd,
             'question_date'           => $today_datetime_bdd,
-            'questionSujet'           => $question['subject'],
-            'questionContent'         => $question['code'],
+            'questionSujet'           => isset($question['subject']) ? $question['subject'] : '',
+            'questionContent'         => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
             'horoscope'               => $horoscope,
             'signe2'                  => $conjoint_signe,
             'partenaires'             => $partenaires,
@@ -383,8 +384,8 @@ if(empty($err)){
             'questionDate'            => $today_date_bdd,
             'questionDate_before'     => $user->questionDate,
             'question_date'           => $today_datetime_bdd,
-            'questionSujet'           => $question['subject'],
-            'questionContent'         => $question['code'],
+            'questionSujet'           => isset($question['subject']) ? $question['subject'] : '',
+            'questionContent'         => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
             'dateNaissance'           => $dtn_bdd,
             'date_naissance_conjoint' => $conjoint_dtn_bdd,
             'tel'                     => $tel,
@@ -451,13 +452,13 @@ if(empty($err)){
     $_SESSION['sexe']           = $sexe;
     $_SESSION['cards']          = $cards_draw;
     $_SESSION['phone']          = $tel;
-    $_SESSION['question']       = $question['code'];
+    $_SESSION['question']       = isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
     $_SESSION['birthdateJoint'] = $conjoint_dtn_bdd;
     $_SESSION['user_id']        = $idindex;
     $_SESSION['kgestion_id']    = $kgestion_id;
     $_SESSION['pays']           = $pays;
-    $_SESSION['trigger']        = $question['code'];
+    $_SESSION['trigger']        = isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '';
     $_SESSION['gclid']          = $gclid;
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
