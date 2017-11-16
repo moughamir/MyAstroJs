@@ -202,6 +202,10 @@ ul {
 }
 
 // components
+a.btn {
+  margin-left:20px!important;
+}
+
 .btn {
   background: #976f40 linear-gradient( 90deg, rgb(151, 111, 64) 0%, rgb(255, 203, 133) 35%, rgb(151, 111, 64) 76%, rgb(203, 153, 102) 100%);
   &:hover {
@@ -217,7 +221,6 @@ ul {
     size: 20px;
     weight: bold;
   }
-  margin-left:20px!important;
   border: 5px outset #976f40;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .18),
   0 1px 5px 0 rgba(0, 0, 0, .15);
