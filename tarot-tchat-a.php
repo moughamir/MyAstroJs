@@ -94,14 +94,14 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="convertir" value="0" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="prenom" id="js-name" />
                                 <input type="hidden" name="question_code"  value="tarot-par-tchat" />
-                                <input type="hidden" name="optional_birthdate" value="0" />
+                                <input type="hidden" name="optional_birthdate" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label hidden">Votre email</label>
