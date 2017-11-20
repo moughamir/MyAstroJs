@@ -43,11 +43,13 @@ if(isset($_SESSION['user_id'])){
             <div class="PageWrapper">
                 <section class="section">
                     <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
-                        <p class="DRI-Sent">
-                            APPEL EN COURS ....<br/>
-                            Merci, votre demande de rappel a bien été prise en compte.<br/>
-                            <strong>Un voyant vous recontactera dans quelques instants.</strong>
-                        </p>
+                        <div class="DRI-Form FormContainer-Fields">
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        </div>
                     <?php } else  if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <div class="DRI-Form FormContainer-Fields">
                             <p class="DRI-Sent">
@@ -57,7 +59,7 @@ if(isset($_SESSION['user_id'])){
                         </div>
                     <?php } else { ?>
                     <form method="post" class="DRI-FormContainer">
-
+                    <input type="hidden" value="1" name="directCall">
                     <div class="FormContainer DRI-Form">
                         <div class="FormContainer-Field">
                             <div class="Fields-Table-Row">
