@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     -----------------------------------------------
     --   offre-exceptionnelle-dri = AFFIL-BASE   --
     -----------------------------------------------
@@ -15,18 +15,18 @@ include('include/process-dri.php');
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Occasion spéciale = Offre spéciale !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/offre-exceptionnelle-dri.css" />
         <!-- Slider assets -->
 	<link rel="stylesheet" type="text/css" href="/images_landing/offre-exceptionnelle-dri/slider-engine/style.css" />
 	<script type="text/javascript" src="/images_landing/offre-exceptionnelle-dri/slider-engine/jquery.js"></script>
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -77,7 +77,13 @@ include('include/process-dri.php');
                 </div>
                 <article class="FormContainer">
                     <div class="Fields-Table">
-                        <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                        <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                            <p class="DRI-Sent">
+                                APPEL EN COURS ....<br/>
+                                Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                            </p>
+                        <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                         <div class="DRI-Form FormContainer-Fields">
                             <p class="DRI-Sent">
                                 Merci, votre demande a bien été prise en compte.<br/>
@@ -86,6 +92,7 @@ include('include/process-dri.php');
                         </div>
                         <?php } else { ?>
                         <form method="post" class="DRI-FormContainer">
+                            <input type="hidden" value="1" name="directCall">
                             <div class="DRI-Form FormContainer-Fields">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
@@ -127,7 +134,7 @@ include('include/process-dri.php');
                 </article>
             </div>
         </section>
-        
+
         <footer class="SiteFooter">
             <div class="PageWrapper">
                 <ul class="ReassuranceList">
@@ -150,18 +157,18 @@ include('include/process-dri.php');
                 </ul>
             </div>
         </footer>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- Slider assets -->
 	<script type="text/javascript" src="/images_landing/offre-exceptionnelle-dri/slider-engine/wowslider.js"></script>
 	<script type="text/javascript" src="/images_landing/offre-exceptionnelle-dri/slider-engine/script.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
-        
+
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

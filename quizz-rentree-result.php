@@ -30,15 +30,15 @@ switch ($result) {
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>My Astro - C’est la rentrée ! Venez tester votre moral</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/rentree16.min.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -53,7 +53,7 @@ switch ($result) {
                 <h1 class="PageLogo bgHeader"><span>C’est la rentrée</span><span>Venez tester votre moral</span></h1>
                 <?php include('include/bloc-socials.php'); ?>
             </header>
-            
+
             <section class="ContentBand">
                 <article class="FormContainer">
                     <div class="FormContainer overlay" id="form-overlay"></div>
@@ -66,11 +66,17 @@ switch ($result) {
                         <p class="FormField-Info">Cliquez ici pour profiter immédiatement de 5 minutes de Tchat GRATUITES avec le voyant de votre choix</p>
                         <a href="<?= $url;?>" class="FormContainer-Submit btn">Je lance le TCHAT</a>
                         <?php } else { ?>
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <p class="DRI-Sent">
                                 Merci, votre demande de rappel a bien été prise en compte.<br/>
                                 <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                            </p>                        
+                            </p>
                             <?php } else { ?>
                                 <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
                         <p class="alert alert-danger">
@@ -83,6 +89,7 @@ switch ($result) {
                         <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement ?</p>
                         <p class="FormField-Info">Inscrivez votre numéro de téléphone ci-dessous<br class="small-hidden"/> et nous vous rappelons tout de suite !</p>
                         <form method="post">
+                            <input type="hidden" value="1" name="directCall">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="save_tel" value="1" />
                             <input type="hidden" name="tel_needed" value="1" />
@@ -128,13 +135,13 @@ switch ($result) {
                             <?php } ?>
                         <?php } ?>
                     </div>
-                </article>  
+                </article>
             </section>
-            
+
             <footer><p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p></footer>
-            
+
         </div><!-- fin de .PageWrapper -->
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
