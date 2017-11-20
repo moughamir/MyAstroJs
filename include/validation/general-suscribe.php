@@ -20,6 +20,7 @@ $tchatabo_dri =  [
     'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'love-myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/love-myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
     'quizz-rentree-result?chat=1' => ['cookie' => true],
@@ -59,7 +60,7 @@ if(!$source){
 }
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
-    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.Url du formulaire manquant';
 } else {
     // Recherche de l'url kgestion
     $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl.'"';

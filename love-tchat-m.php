@@ -1,13 +1,13 @@
 <?php
-$form = 'lma-tchat-m';
+$form = 'love-tchat-m';
 include('include/init-affilbase.php');
 $assets = 'images_landing/love-tchat';
 $regurl = $form;
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$dri = "pouvoir-des-trois/offre-gratuite";
-$dri2 = "lma-tchat-dri";
+$dri = "love-myastro/offre-gratuite";
+$dri2 = "love-tchat-dri";
 $question = ['code' => 'lma_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat Love MyAstro Mini Formulaire'];
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
