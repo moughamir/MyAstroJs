@@ -60,7 +60,7 @@ $assets = 'images_landing/tarot-tchat';
                         </div>
                         <div class="offer">
                             <div class="offer-c">
-                                <input type="submit" class="btn" name="demande_rappel">Rappel gratuit</input>
+                                <input type="submit" class="btn" value="Rappel gratuit" name="demande_rappel"/>
                                 <div class="offer-tel"></div>
                             </div>
                             <div class="offer-c">
