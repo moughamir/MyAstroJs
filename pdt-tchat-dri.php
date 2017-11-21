@@ -68,6 +68,7 @@ $assets = 'images_landing/pouvoir-des-trois';
                         <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                         <p><strong>Nos voyants répondent à vos questions</strong></p>
                         <form class="DRI-FormContainer" method="post">
+                            <input type="hidden" value="1" name="directCall">
                             <div class="FormContainer-Fields">
                                 <div class="Fields-Table-Row">
                                     <label for="name" class="FormField-Label">Mon prénom</label>

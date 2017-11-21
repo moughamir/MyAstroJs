@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------------
     --   previsions-2017-dri = AFFIL BASE   --
     ------------------------------------------
@@ -63,13 +63,20 @@ include('include/process-dri.php');
               <div class="img-center">
                 <img src="images_landing/previsions-2017/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free" />
               </div>
-              <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                  <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                      <p class="DRI-Sent" style="text-align: center;font-size: 1.8rem;">
+                          APPEL EN COURS ....<br/>
+                          Merci, votre demande de rappel a bien été prise en compte.<br/>
+                          <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                      </p>
+                  <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                     <p class="DRI-Sent" style="text-align: center;font-size: 1.8rem;">
                         Merci, votre demande a bien été prise en compte.<br/>
                         <strong>Un voyant vous recontactera dans quelques instants.</strong>
                     </p>
                 <?php } else { ?>
                     <form action="" method="post" class="Primary-Form">
+                        <input type="hidden" value="1" name="directCall">
                         <div class="FormContainer-Fields Fields-Table">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="prenom" value="<?= $prenom;?>" />

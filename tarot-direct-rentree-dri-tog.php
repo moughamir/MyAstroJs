@@ -87,6 +87,7 @@ if(isset($_SESSION['user_id'])){
                             <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                             <p><strong>Nos voyants répondent à vos questions</strong></p>
                             <form class="DRI-FormContainer" method="post">
+                                <input type="hidden" value="1" name="directCall">
 <!--                                <input type="hidden" name="directCall" value="1" />-->
                                 <div class="FormContainer-Fields">
                                     <div class="Fields-Table-Row">

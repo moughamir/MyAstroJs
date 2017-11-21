@@ -62,7 +62,7 @@ $assets = 'images_landing/love-tchat';
                                 <label for="name" class="FormField-Label">Mon prénom</label>
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
-                                </div>
+                             </div>
                             </div>
                             <div class="Fields-Table-Row">
                                 <label for="tel" class="FormField-Label">Mon numéro de téléphone</label>
