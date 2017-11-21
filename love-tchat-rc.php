@@ -13,7 +13,7 @@ $questions = array(
     ['code' => 'lma17_question3', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Désir']
 );
 $assets = 'images_landing/love-tchat';
-
+session_start();
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
 $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
