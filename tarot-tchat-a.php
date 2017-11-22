@@ -5,6 +5,7 @@ $support = 'tarot';
 $site = 'myastro.fr';
 $source = 'adwords';
 $dri = 'tarot-tchat-dri';
+$dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 ?>
@@ -92,6 +93,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />

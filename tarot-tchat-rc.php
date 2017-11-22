@@ -5,7 +5,13 @@ $support = 'tarot';
 $site = 'myastro.fr';
 $source = "reflexcash";
 $dri = 'tarot-tchat-dri';
+$dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
+
+session_start();
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -91,6 +97,8 @@ $assets = 'images_landing/tarot-tchat';
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
+
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />
