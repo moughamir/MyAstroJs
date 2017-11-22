@@ -5,6 +5,7 @@ $support = 'tarot';
 $site = 'myastro.fr';
 $source = "weedoit";
 $dri = 'tarot-tchat-dri';
+$dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
 ?>
 <!DOCTYPE html>
@@ -91,6 +92,7 @@ $assets = 'images_landing/tarot-tchat';
                                 <input type="hidden" name="site" value="<?= $site;?>" />
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />
