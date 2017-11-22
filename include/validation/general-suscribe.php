@@ -23,6 +23,7 @@ $tchatabo_dri =  [
     'love-myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/love-myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
+    'tarot-direct-rentree-merci' => ['cookie' => true],
     'quizz-rentree-result?chat=1' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
