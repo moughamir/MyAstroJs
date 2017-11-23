@@ -10,10 +10,10 @@
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-rentree-wdt';
+$url = 'tarot-direct-rentree-hm';
 $method = 'general-suscribe';
 $site = 'myastro.fr';
-$source = "weedoit";
+$source = "hamedia";
 include('include/questions/tarot-direct-rentree.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
@@ -102,7 +102,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <input type="hidden" name="convertir" value="1" />
-
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
@@ -115,6 +114,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
                                                 <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span> un homme</label>
+
                                             </div>
                                         </div>
                                     </div>

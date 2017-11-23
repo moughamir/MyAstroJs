@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------------------------------
     --      DRI POST-MAIL = LUCAS-SIMPLE = AFFIL BASE     --
     ------------------------------------------------------------
@@ -50,7 +50,7 @@ include('include/process-dri.php');
                             </div>
                         </article>
                     </div>
-                    
+
                     <div class="faq">
                         <h3>Comment ça marche&nbsp;?</h3>
                         <ul>
@@ -84,13 +84,20 @@ include('include/process-dri.php');
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
                             <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom ?>" required />
                                 </div>
@@ -128,18 +135,18 @@ include('include/process-dri.php');
                             <?php } ?>
                         </div>
                     </article>
-                    
+
                 </div>
             </div>
         </section>
         <?php include('include/footer_reassurance.php'); ?>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
     </body>
-    <link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Courgette|Ubuntu+Condensed|Open+Sans:300,700,400,400italic,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
 </html>

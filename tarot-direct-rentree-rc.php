@@ -15,6 +15,7 @@ include('include/questions/tarot-direct-rentree.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 
+session_start();
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
 $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
@@ -103,6 +104,7 @@ $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">
                                     <label class="FormField-Label">Vous êtes</label>
