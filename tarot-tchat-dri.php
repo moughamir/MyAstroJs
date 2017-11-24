@@ -5,8 +5,6 @@ $assets = 'images_landing/tarot-tchat';
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 
-$user_id = isset($_SESSION['user_id'])? $_SESSION['user_id'] : '';
-
 $pays = isset($_SESSION['pays'])? $_SESSION['pays'] : '';
 $birthdate = isset($_SESSION['birthdate']) ? $_SESSION['birthdate'] : '';
 $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
