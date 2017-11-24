@@ -80,7 +80,7 @@ if(isset($_SESSION['user_id'])){
                                 <div class="offer-tel"></div>
                             </div>
                             <div class="offer-c">
-                                <a href="https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?id=<?= $user_id ?>" class="btn">Commencer le Tchat Gratuit</a>
+                                <a href="https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?email=<?= $email ?>" class="btn">Commencer le Tchat Gratuit</a>
                                 <div class="offer-tchat"></div>
                             </div>
                         </div>
