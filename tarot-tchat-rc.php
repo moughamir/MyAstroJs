@@ -1,13 +1,17 @@
 <?php
-$url = $pageName= 'tarot-tchat-a';
+$url = $pageName= 'tarot-tchat-rc';
 $method = 'general-suscribe';
 $support = 'tarot';
 $site = 'myastro.fr';
-$source = 'adwords';
+$source = "reflexcash";
 $dri = 'tarot-tchat-dri';
 $dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
-$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+
+session_start();
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -94,12 +98,12 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
+
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="prenom" id="js-name" />
                                 <input type="hidden" name="question_code"  value="tarot-par-tchat" />
                                 <input type="hidden" name="optional_birthdate" value="1" />
