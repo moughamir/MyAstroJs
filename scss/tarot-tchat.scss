@@ -123,7 +123,6 @@ body {
 }
 
 .section {
-  margin-top: 3rem;
   display: flex;
   overflow: hidden;
   min-height: 300px;
@@ -315,6 +314,7 @@ a.btn {
 .post-test {
   p {
     padding: 15px;
+    margin: 1.5rem auto;
     text-align: center;
     font-size: 1.5rem;
     width: 530px;
@@ -384,10 +384,15 @@ a.btn {
 .FormContainer-Submit {
   @extend .btn;
   margin-top: 0;
+  @include respond-to("mobile") {
+    margin-top: 16px;
+  }
 }
 
 .FormField-Label {
   color: #ffffff;
+  display: table-row !important;
+  text-align: left !important;
 }
 
 .FormField-Input {
@@ -558,6 +563,7 @@ footer {
 
 .Merci,
 .DRI {
+  
   &-Form {
     background: transparent;
     max-width: 80rem;
@@ -565,16 +571,28 @@ footer {
       padding: 0;
       margin: 0;
     }
+    .offer {
+      margin-left: 0px!important;
+    }
     &Container {
       padding: 0 0 25px 0;
       max-width: 50rem;
       margin: 0 auto;
     }
+    &-Title, &-Subtitle {
+      background: #ffffff!important;
+      color: #000!important;
+    }
+    #tel{
+    max-width: 32rem;
+    margin: 0 auto;
+  }
     .btn {
       display: block;
-      margin: 10px auto;
-      font-size: medium;
-      width: 298px;
+      width: 227px;
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 10px;
       @include respond-to("mobile") {
         width: 100%;
         margin-top: 5px;
@@ -719,6 +737,7 @@ optgroup {
 }
 .offer {
   display: flex;
+  margin-left: -28px;
   @include respond-to("mobile") {
     flex-direction: column;
     margin: 10px 5px;
@@ -739,8 +758,8 @@ optgroup {
   &-tel {
     background: url($assets + "10min-tel.png") no-repeat center;
     background-size: cover;
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     @include respond-to("mobile") {
       width: 100px;
       height: 100px;
@@ -749,8 +768,8 @@ optgroup {
   &-tchat {
     background: url($assets + "5min-tchat.png") no-repeat center;
     background-size: cover;
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     @include respond-to("mobile") {
       width: 100px;
       height: 100px;

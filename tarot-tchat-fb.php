@@ -1,13 +1,12 @@
 <?php
-$url = $pageName= 'tarot-tchat-a';
+$url = $pageName= 'tarot-tchat-fb';
 $method = 'general-suscribe';
 $support = 'tarot';
 $site = 'myastro.fr';
-$source = 'adwords';
+$source = "facebook_adds";
 $dri = 'tarot-tchat-dri';
 $dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
-$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -99,7 +98,6 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="prenom" id="js-name" />
                                 <input type="hidden" name="question_code"  value="tarot-par-tchat" />
                                 <input type="hidden" name="optional_birthdate" value="1" />
