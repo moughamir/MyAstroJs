@@ -4,6 +4,7 @@ $assets = 'images_landing/tarot-tchat';
 
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
+$kgestion_id = isset($_SESSION['kgestion_id'])? $_SESSION['kgestion_id'] : '';
 
 $pays = isset($_SESSION['pays'])? $_SESSION['pays'] : '';
 $birthdate = isset($_SESSION['birthdate']) ? $_SESSION['birthdate'] : '';
@@ -78,7 +79,7 @@ if(isset($_SESSION['user_id'])){
                                 <div class="offer-tel"></div>
                             </div>
                             <div class="offer-c">
-                                <a href="https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?email=<?= $email ?>" class="btn">Commencer le Tchat Gratuit</a>
+                                <a href="https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?id=<?= $kgestion_id ?>" class="btn">Commencer le Tchat Gratuit</a>
                                 <div class="offer-tchat"></div>
                             </div>
                         </div>
