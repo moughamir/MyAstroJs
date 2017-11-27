@@ -13,6 +13,9 @@ $questions = array(
     ['code' => 'lma17_question3', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Désir']
 );
 $assets = 'images_landing/love-tchat';
+
+session_start();
+$_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
