@@ -15,6 +15,8 @@ $method = 'general-suscribe';
 $site = 'myastro.fr';
 $source = "weedoit";
 include('include/questions/tarot-direct-rentree.php');
+session_start();
+$_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>

@@ -7,6 +7,9 @@ $source = "weedoit";
 $dri = 'tarot-tchat-dri';
 $dri2 = 'tarot-tchat-dri-tog';
 $assets = 'images_landing/tarot-tchat';
+
+session_start();
+$_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
