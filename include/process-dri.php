@@ -142,103 +142,118 @@ if($already_sent){
         $directCall = !empty($kgestion_dri->directCall) ? $kgestion_dri->directCall : false;
 
     } else {
-/* ######################## REQUÊTE DONNÉES TRACKING ######################## */
-        $tracking = null;
-        if($code_promo){
-            $code_promo_decode = explode('-', $code_promo);
-            $code_campagne = $code_promo_decode[0];
-            $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_codepromo ="'.$code_campagne.'"';
-            $tracking = $bdd->get_row($tracking_qry);
+        $DRIdata = array(
+            'firstName' => $prenom,
+            'phone'     => $tel,
+            'country'   => $pays,
+            'myastroPromoCode' => !$code_promo ? '' : $code_promo,
+            'myastroSupport' => $support_kgs
+        );
+        if($makeDirectCall) {
+            $DRIdata['directCall'] = 1;
         }
-        if(!$tracking && isset($source_myastro)){
-            $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$source_myastro.'"';
-            $tracking = $bdd->get_row($tracking_qry);
-        }
+        $kgestion_dri = $kgestion->insertDRI($DRIdata);
 
-        if($tracking){
-            $url    = $tracking->stf_formurl_kgestion;
-            $source = $tracking->stf_source_kgestion;
-        }
+        $retour = $kgestion_dri->success;
+        $directCall = !empty($kgestion_dri->directCall) ? $kgestion_dri->directCall : false;
 
-/* ############################# ENVOI DU MAIL ############################## */
-        $destinataire = getenv('MYASTRO_MAIL_DRI') ?: 'standard.kgcom@gmail.com';
-        $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
-        $email        = 'contact@myastro.fr';
-
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-Type: text/html; charset=utf-8'."\r\n";
-        $headers .= 'From: Myastro - Demande de rappel  <'.$email.'>'."\r\n";
-        $headers .= 'Reply-To: '.$email."\r\n";
-
-        $message = '
-            <table>
-                <tr>
-                    <td>ID Astro : </td>
-                    <td>'.$idastro.'</td>
-                </tr>
-                <tr>
-                    <td>Prénom : </td>
-                    <td>'.$prenom.'</td>
-                </tr>
-                <tr>
-                    <td>Téléphone : </td>
-                    <td>'.$tel.'</td>
-                </tr>
-                <tr>
-                    <td>Pays : </td>
-                    <td>'.$form['pays'].'</td>
-                </tr>
-                <tr>
-                    <td>Email : </td>
-                    <td>'.$email_user.'</td>
-                </tr>
-                <tr>
-                    <td>Site : </td>
-                    <td>'.$site.'</td>
-                </tr>
-                <tr>
-                    <td>Source : </td>
-                    <td>'.$source.'</td>
-                </tr>
-                <tr>
-                    <td>Url : </td>
-                    <td>'.$url.'</td>
-                </tr>';
-
-        if(!empty($gclid) && ($source != "Naturel")){
-            $message .= '
-                <tr>
-                    <td>Gclid : </td>
-                    <td>'.$gclid.'</td>
-                </tr>';
-        }
-
-        $message .= '
-                <tr>
-                    <td>Support : </td>
-                    <td>'.$support_obj.'</td>
-                </tr>';
-
-        if(!empty($voyant)){
-            $message .= '
-                <tr>
-                    <td>Voyant : </td>
-                    <td>'.$voyant.'</td>
-                </tr>';
-        }
-
-        if(isset($code_promo) && !empty($code_promo)){
-            $message .= '
-                <tr>
-                    <td>Code promo : </td>
-                    <td>'.$code_promo.'</td>
-                </tr>';
-        }
-
-        $message .= '
-            </table>';
-
-        $retour = mail($destinataire, $sujet, $message, $headers);
+///* ######################## REQUÊTE DONNÉES TRACKING ######################## */
+//        $tracking = null;
+//        if($code_promo){
+//            $code_promo_decode = explode('-', $code_promo);
+//            $code_campagne = $code_promo_decode[0];
+//            $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_codepromo ="'.$code_campagne.'"';
+//            $tracking = $bdd->get_row($tracking_qry);
+//        }
+//        if(!$tracking && isset($source_myastro)){
+//            $tracking_qry = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$source_myastro.'"';
+//            $tracking = $bdd->get_row($tracking_qry);
+//        }
+//
+//        if($tracking){
+//            $url    = $tracking->stf_formurl_kgestion;
+//            $source = $tracking->stf_source_kgestion;
+//        }
+//
+///* ############################# ENVOI DU MAIL ############################## */
+//        $destinataire = getenv('MYASTRO_MAIL_DRI') ?: 'standard.kgcom@gmail.com';
+//        $sujet        = utf8_decode('['.$objet.' - '.$support_obj.'] - '.htmlentities(strip_tags($prenom)).' - '.uniqid());
+//        $email        = 'contact@myastro.fr';
+//
+//        $headers  = 'MIME-Version: 1.0' . "\r\n";
+//        $headers .= 'Content-Type: text/html; charset=utf-8'."\r\n";
+//        $headers .= 'From: Myastro - Demande de rappel  <'.$email.'>'."\r\n";
+//        $headers .= 'Reply-To: '.$email."\r\n";
+//
+//        $message = '
+//            <table>
+//                <tr>
+//                    <td>ID Astro : </td>
+//                    <td>'.$idastro.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Prénom : </td>
+//                    <td>'.$prenom.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Téléphone : </td>
+//                    <td>'.$tel.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Pays : </td>
+//                    <td>'.$form['pays'].'</td>
+//                </tr>
+//                <tr>
+//                    <td>Email : </td>
+//                    <td>'.$email_user.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Site : </td>
+//                    <td>'.$site.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Source : </td>
+//                    <td>'.$source.'</td>
+//                </tr>
+//                <tr>
+//                    <td>Url : </td>
+//                    <td>'.$url.'</td>
+//                </tr>';
+//
+//        if(!empty($gclid) && ($source != "Naturel")){
+//            $message .= '
+//                <tr>
+//                    <td>Gclid : </td>
+//                    <td>'.$gclid.'</td>
+//                </tr>';
+//        }
+//
+//        $message .= '
+//                <tr>
+//                    <td>Support : </td>
+//                    <td>'.$support_obj.'</td>
+//                </tr>';
+//
+//        if(!empty($voyant)){
+//            $message .= '
+//                <tr>
+//                    <td>Voyant : </td>
+//                    <td>'.$voyant.'</td>
+//                </tr>';
+//        }
+//
+//        if(isset($code_promo) && !empty($code_promo)){
+//            $message .= '
+//                <tr>
+//                    <td>Code promo : </td>
+//                    <td>'.$code_promo.'</td>
+//                </tr>';
+//        }
+//
+//        $message .= '
+//            </table>';
+//
+//        $retour = mail($destinataire, $sujet, $message, $headers);
     }
 
 /* ######################### CODE D'ÉTAT DE LA DRI ########################## */
