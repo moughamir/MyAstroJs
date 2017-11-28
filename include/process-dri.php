@@ -31,6 +31,8 @@ $idkgestion = isset($get['idkgestion']) && !empty($get['idkgestion']) ? $get['id
 $code_promo = isset($get['camp']) && !empty($get['camp']) ? $get['camp'] : false;
 $email_base = isset($get['email']) && !empty($get['email']) ? $get['email'] : false;
 $makeDirectCall = isset($form['directCall']) && !empty($form['directCall']) ? $form['directCall'] : false;
+$page    = explode("?", $_SERVER['REQUEST_URI'])[0];
+$urlReg = str_replace('/', "", $page);
 
 
 /* ################### INITIALISATION DONNÉES DRI MAILING ################### */
@@ -142,12 +144,26 @@ if($already_sent){
         $directCall = !empty($kgestion_dri->directCall) ? $kgestion_dri->directCall : false;
 
     } else {
+        $tracking2 = null;
+        if(isset($urlReg)){
+            $tracking_qry2 = 'SELECT * FROM source_to_formurl WHERE stf_source_myastro ="'.$urlReg.'"';
+            $tracking2 = $bdd->get_row($tracking_qry2);
+        }
+        $source = $url = "";
+        if($tracking2){
+            $url    = str_replace(' ', '_',strtolower($tracking2->stf_formurl_kgestion));
+            $source = str_replace(' ', '_',strtolower($tracking2->stf_source_kgestion));
+        }
         $DRIdata = array(
             'firstName' => $prenom,
             'phone'     => $tel,
             'country'   => $pays,
             'myastroPromoCode' => !$code_promo ? '' : $code_promo,
-            'myastroSupport' => $support_kgs
+            'myastroSupport' => $support_kgs,
+            'myastroWebsite'    => 'myastro.fr',
+            'myastroSource'     => $source,
+            'myastroUrlOrigin'  => $url,
+            'myastroUrlRegistration' => $url,
         );
         if($makeDirectCall) {
             $DRIdata['directCall'] = 1;
