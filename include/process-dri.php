@@ -111,6 +111,9 @@ if($user){
 
 /* ######################## TRAITEMENT DU FORMULAIRE ######################## */
 $dri_ready = false;
+if(empty($_POST) && in_array($urlReg, array('love-tchat-hm-dri', 'pdt-tchat-hm-dri', 'tarot-direct-rentree-hm-dri'))) {
+    unset($_SESSION['demanderappel']);
+}
 $already_sent = isset($_SESSION['demanderappel']);
 if(isset($form['demande_rappel'])){
     $prenom = form_firstname($err, $form);
