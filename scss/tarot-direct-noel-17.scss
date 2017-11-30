@@ -323,6 +323,14 @@ input[type="checkbox"], input[type="radio"] {
     height: 20px !important;
 }
 
+select.FormField-Input {
+    background: url(../images_landing/tarot-direct-rentree/select.png) no-repeat right #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    padding: 10.5px;
+}
 @import "modules_themes/form-alert-bootstrap";
 
 /* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
