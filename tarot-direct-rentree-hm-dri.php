@@ -56,7 +56,6 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
             <div class="PageWrapper ContentBand-Table">
                 <div class="ContentBand-Column">
                     <article class="FormContainer DRI-Form">
-                        <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
                             <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
