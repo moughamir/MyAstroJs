@@ -32,7 +32,9 @@ $force_design = isset($_GET['css']);
 if($force_design && isset($styles[$_GET['css']])){
     $select_style = $_GET['css'];
 } else {
-    if($m == 11 && $j <= 30){ // Du 1er au 25 décembre inclus
+    if($m == 12 && $j <= 30){ // Du 1er au 25 décembre inclus
+        $select_style = 'noel';
+    } elseif($m == 1 && $j <= 15) {
         $select_style = 'noel';
     } elseif($m == 1 || $m == 12) { // Le reste du mois de décembre et le mois de janvier
         $select_style = 'nouvel-an';
