@@ -46,17 +46,10 @@ $assets = 'images_landing/love-tchat';
                     </p>
                 <?php } ?>
                 <div class="isolated">
-                    <h2 class="DRI-Form-Title">
-                        Vous avez déjà bénéficié de l’offre :<br>
-                        <strong>« <span class="underline">5 minutes de tchat gratuit</span> »</strong>
-                    </h2>
-
-                    <a class="btn-primary cap icon-tchat" href="https://voyance-en-direct.tv/love-myastro/">Tchat immédiat</a>
-                </div>
-                <div class="isolated">
                     <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                     <p><strong>Nos voyants répondent à vos questions</strong></p>
                     <form class="DRI-FormContainer" method="post">
+                        <input type="hidden" value="1" name="directCall">
                         <div class="FormContainer-Fields">
                             <div class="Fields-Table-Row">
                                 <label for="name" class="FormField-Label">Mon prénom</label>
