@@ -98,6 +98,9 @@ if(isset($_SESSION['user_id'])){
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
 
+        <!--Pixel Affiliation -->
+        <?php include_once('include/pixels/gpbl.php');?>
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

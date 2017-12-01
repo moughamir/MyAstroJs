@@ -31,6 +31,9 @@
             Vous allez être redirigé.
         </p>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!--Pixel Affiliation -->
+        <?php include_once('include/pixels/gpbl.php');?>
+
 <?php
     include('include/conversion/adwords.php');
     include('include/conversion/facebook.php');
