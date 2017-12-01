@@ -9,7 +9,7 @@ $styles = array(
     ],
     'noel' => [
         'css' => 'css/tarot-direct-noel.css',
-        'dir' => 'images_landing/tarot-direct-noel/'
+        'dir' => 'images_landing/tarot-direct-noel/17/'
     ],
     'nouvel-an' => [
         'css' => 'css/tarot-direct-nouvel-an.css',
@@ -32,7 +32,9 @@ $force_design = isset($_GET['css']);
 if($force_design && isset($styles[$_GET['css']])){
     $select_style = $_GET['css'];
 } else {
-    if($m == 12 && $j <= 25){ // Du 1er au 25 décembre inclus
+    if($m == 12 && $j <= 30){ // Du 1er au 25 décembre inclus
+        $select_style = 'noel';
+    } elseif($m == 1 && $j <= 15) {
         $select_style = 'noel';
     } elseif($m == 1 || $m == 12) { // Le reste du mois de décembre et le mois de janvier
         $select_style = 'nouvel-an';
