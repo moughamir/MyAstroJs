@@ -11,15 +11,16 @@
 }
 
 #main_container fieldset {
-    background: #1871b9;color: white;
+    background: #22424d;color: white;
     border: 0 none;
     border-radius: 3px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
     padding: 15px 20px;
     box-sizing: border-box;
-    margin: 0 10%;
+    margin: 0 5%;
     /*stacking fieldsets above each other*/
     position: absolute;
+    width: 100%;
 }
 /*Hide all except first fieldset*/
 /*#main_container fieldset:not(:first-of-type) {*/
@@ -29,28 +30,21 @@
 
 /*buttons*/
 #main_container .action-button {
-    width: 120px;
-    background: #E51E85;
+    width: 60px;
+    background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
     font-weight: bold;
     color: white;
     border: 0 none;
-    border-radius: 1px;
     cursor: pointer;
-    padding: 10px 5px;
-    /*margin: 10px 5px;*/
+    padding: 20px;
 }
 
-#main_container .action-button:hover, #main_container .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #1871b9;
-}
 
 /*headings*/
 .fs-title {
     font-size: 16px;
-    text-transform: uppercase;
     margin-bottom: 20px;
     color: #ffffff;
-    text-decoration: underline;
 }
 .fs-subtitle {
     font-weight: normal;
@@ -168,7 +162,7 @@ body.consultation-en-ligne .right-part{
 
 body.consultation-en-ligne{
     /*background: url('../images_landing/bg-landing-voyance-gratuite.jpg') no-repeat center top #fff;*/
-    background: url('../images_landing/bg-consultatione-en-ligne1.jpg') repeat center top #fff;
+    background: url('../images_landing/bg-consultatione-en-ligne1.png') repeat center top #fff;
     margin: 0;
 }
 
@@ -177,7 +171,6 @@ body.consultation-en-ligne .main{
     margin: 0 auto;
     width:100%;
     font-family: open sans;
-    background: url("../images_landing/femme.png") no-repeat center 164px; transparent;
     clear: both;
     min-height: 635px;
 }
@@ -209,25 +202,22 @@ body.consultation-en-ligne .left-part{
     max-width: 680px;
     width: 100%;
     float: left;
-    background: url("../images_landing/bg-argu.png") no-repeat bottom center transparent;
     padding-bottom: 35px;
 }
 
 
 body.consultation-en-ligne .left-part h1{
     font-weight:200;
-    color: #196bb3;
+    color: #b83d56;
     font-size: 25px;
-    text-transform: uppercase;
     text-align: center;
 }
 
 
 body.consultation-en-ligne .left-part h2{
     font-weight:200;
-    color: #196bb3;
+    color: #b83d56;
     font-size: 24px;
-    text-transform: uppercase;
     margin-top: 145px;
     margin-bottom: 50px;
 }
@@ -235,7 +225,6 @@ body.consultation-en-ligne .left-part h2{
 
 body.consultation-en-ligne .left-part .content{
     text-align: justify;width:100%;font-size: 13px;color: #808080;
-    max-width: 320px;
 }
 
 
@@ -271,6 +260,7 @@ body.consultation-en-ligne .right-part{
     margin-top: 40px;
     font-family: open sans;
     position: relative;
+    margin-right: 80px;
 }
 body.consultation-en-ligne .right-part #form-overlay {
     position: absolute;
@@ -315,14 +305,14 @@ body.consultation-en-ligne .right-part span.h4{
 
 
 body.consultation-en-ligne .subfooter{
-    background-color: #196bb3;
-    background: -moz-linear-gradient(top,  #196bb3 0%, #165c9a 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#196bb3), color-stop(100%,#165c9a));
-    background: -webkit-linear-gradient(top,  #196bb3 0%,#165c9a 100%);
-    background: -o-linear-gradient(top,  #196bb3 0%,#165c9a 100%);
-    background: -ms-linear-gradient(top,  #196bb3 0%,#165c9a 100%);
-    background: linear-gradient(to bottom,  #196bb3 0%,#165c9a 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196bb3', endColorstr='#165c9a',GradientType=0 );
+    background-color: #b83d56;
+    background: -moz-linear-gradient(top,  #b83d56 0%, #165c9a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b83d56), color-stop(100%,#165c9a));
+    background: -webkit-linear-gradient(top,  #b83d56 0%,#165c9a 100%);
+    background: -o-linear-gradient(top,  #b83d56 0%,#165c9a 100%);
+    background: -ms-linear-gradient(top,  #b83d56 0%,#165c9a 100%);
+    background: linear-gradient(to bottom,  #b83d56 0%,#165c9a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b83d56', endColorstr='#165c9a',GradientType=0 );
     display: block;
     width: 100%;
     font-family: open sans;
@@ -725,4 +715,65 @@ input[type="checkbox"], input[type="radio"] {
     color: #31708f;
     background-color: #d9edf7;
     border-color: #bce8f1
+}
+
+.icon-liste li span{
+    padding-left: 10px;
+    display: block;
+    margin: 10px;
+}
+
+li.icone-cray{
+    list-style-image: url(../images_landing/rdv/icon-cray.png);
+}
+li.icone-screen{
+    list-style-image: url(../images_landing/rdv/icon-screen.png);
+}
+li.icone-payment{
+    list-style-image: url(../images_landing/rdv/icon-payment.png);
+}
+li.icone-hand{
+    list-style-image: url(../images_landing/rdv/icon-hand.png);
+}
+li.icone-recommanded{
+    list-style-image: url(../images_landing/rdv/stars.png);
+}li.icone-consultation{
+    list-style-image: url(../images_landing/rdv/consultation.png);
+}
+li.icone-consultation span {
+    margin-top: -10px;
+}
+
+p.choice-planning {
+    background: #b83d56;
+    padding: 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: larger;
+    margin-left: 66px;
+}
+
+.widget .time {
+    background: url(../images_landing/rdv/time.png) 0 0 no-repeat;
+    height:66px;
+}
+
+.header {
+    background: url(../images_landing/rdv/header.png) 0 0 no-repeat;
+    height: 240px;
+    width: 100%;
+}
+
+.header-contentt {
+    margin-left: 20%;
+    display: table;
+}
+.header-contentt-cell {
+    display: table-cell;
+    font-weight: bold;
+    width: 100%;
+}
+.header-contentt-cell2 {
+    margin-left: 20%;
+
 }
