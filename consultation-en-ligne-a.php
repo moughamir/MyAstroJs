@@ -133,6 +133,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="hidden" name="dri" value="consultation_web"/>
                     <input type="hidden" name="redirect_method" value="reload_form"/>
                     <input type="hidden" name="gclid" value="<?= $gclid; ?>"/>
+                    <input type="hidden" name="cguv" value="1"/>
 
 
                     <div class="FormField radio">
@@ -260,17 +261,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             </select>
                         </div>
                     </div>
-                    <!--
-                    <div class="cguv">
-                        <label class="checkbox">
-                            <input type="checkbox" name="cguv" required checked>J'ai lu et j'accepte les conditions
-                            générales.
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" name="partenaires" checked> J'accepte de recevoir les offres des
-                            partenaires.
-                        </label>
-                    </div> -->
+
                     <button name="next" class="submit action-button" value="Next" type="submit">Suivant</button>
                     <button name="next" class="next action-button" value="Next" type="button" style="display: none">
                         Suivant
