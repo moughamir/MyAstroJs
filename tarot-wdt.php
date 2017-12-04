@@ -3,7 +3,6 @@
     -------------------------------------
     --    tarot-wdt = AFFIL3 WEEDOIT   --
     -------------------------------------
-
     Created on : 06 avril 2016
     Author     : Laurène Dourdin <2aurene@gmail.com>
 */
@@ -19,11 +18,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
-	<title>Tarot gratuit : amour et destin à chaque tirage gratuit | MyAstro</title>
+	    <title>Tarot gratuit : amour et destin à chaque tirage gratuit | MyAstro</title>
         
         <meta name="robots" content="noindex,nofollow" />
         
-        <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
+        <link rel="icon" type="image/png" href="images_landing/tarot-sable/favicon.png" />
         
         <link rel="stylesheet" type="text/css" href="css/tarot-sable.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -242,7 +241,7 @@
         
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="js/tarot-draw.js"></script>
+        <script src="js/tarot-draw-o.js"></script>
         <script src="js/formValidator.js"></script>
         
         <!-- #### REMARKETINGS #### -->

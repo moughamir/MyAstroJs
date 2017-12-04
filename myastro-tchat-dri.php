@@ -2,7 +2,7 @@
 /**
  * myastro-tchat-dri
  * -----------------
- * Created on : 05 avril 2017 By Mohamed Moughamir <hello@omnizya.com> 
+ * Created on : 05 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
  */
 include('include/process-dri.php');
 ?>
@@ -34,11 +34,17 @@ include('include/process-dri.php');
         <main class="ContentBand">
             <div class="PageWrapper fullview">
                 <article class="DRI-Form">
-                    <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                    <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                        <p class="message">
+                            APPEL EN COURS ....<br/>
+                            Merci, votre demande de rappel a bien été prise en compte.<br/>
+                            <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                        </p>
+                    <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                     <p class="message">
                         Merci, votre demande a bien été prise en compte.<br/>
                         <strong class="highlight">Un voyant vous recontactera dans quelques instants.</strong>
-                    </p>                        
+                    </p>
                     <?php } else { ?>
                         <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
                     <p class="alert alert-danger">
@@ -59,6 +65,7 @@ include('include/process-dri.php');
                     <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                     <p><strong>Nos voyants répondent à vos questions.</strong></p>
                     <form class="DRI-FormContainer" method="post">
+                        <input type="hidden" value="1" name="directCall">
                         <div class="FormContainer-Fields">
                             <div class="Fields-Table-Row"> <label for="name" class="FormField-Label">Mon prénom</label>
                                 <div class="FormField"> <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required /> </div>

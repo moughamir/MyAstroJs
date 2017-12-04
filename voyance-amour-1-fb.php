@@ -1,18 +1,26 @@
 <?php
 /**
  * voyance-amour-1-fb == FACEBOOK ADDS
- * ---------------------------------
+ * -----------------------------------
  * Created on : 04 avril 2016 By Laurène Dourdin <2aurene@gmail.com>
  * Updated on : 10 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$page = 'voyance-amour-1-fb';
+// Paramètres design
 $button = 'Accéder au tchat';
+$assets = 'images_landing/voyance-amour/';
+// Paramètre formulaire
+$url = 'voyance-amour-1-fb';
+$method = 'general-suscribe';
+$site = 'myastro.fr';
+$source = 'facebook_adds';
+$dri = 'myastro/offre-gratuite';
+$dri2 = 'myastro-tchat-dri';
 $questions = array(
     'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : En couple', 'conjoint' => true],
     'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Séparés', 'conjoint' => true],
     'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Amants', 'conjoint' => true],
 );
-$assets = 'images_landing/voyance-amour/';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -91,16 +99,17 @@ $assets = 'images_landing/voyance-amour/';
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="voyance-gratuite-fb2" />
-                                <input type="hidden" name="method" value="general-suscribe" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
                                 <input type="hidden" name="support" value="voyance" />
-                                <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="facebook_adds" />
-                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
-                                <input type="hidden" name="dri2" value="myastro-tchat-dri" />
+                                <input type="hidden" name="site" value="<?= $site;?>" />
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
+                                <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="convertir" value="1" />
                                 <!-- ############################################### -->
                                 <div class="FormField">
@@ -182,6 +191,36 @@ $assets = 'images_landing/voyance-amour/';
                                     <label for="email" class="FormField-Label">E-mail</label>
                                     <input id="email" type="email" name="email" class="FormField-Input" required />
                                     <span class="FormField-Info" style="margin-top: -10rem;">Une étude personnalisée vous sera envoyée à cette adresse</span>
+                                </div>
+                                <div class="FormField">
+                                    <label for="tel" class="FormField-Label">Téléphone</label>
+                                    <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required />
+                                    <span class="FormField-Info">Vous serez rappelé par le voyant à ce numéro</span>
+                                </div>
+                                <div class="FormField">
+                                    <label for="pays" class="FormField-Label">Votre pays </label>
+                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                        <option value="" selected>Votre Pays</option>
+                                        <option value="BE">Belgique</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="CH">Suisse</option>
+                                        <option value="FR" selected>France Métropolitaine</option>
+                                        <optgroup label="DOM-TOM">
+                                            <option value="MQ">Martinique</option>
+                                            <option value="GP">Guadeloupe</option>
+                                            <option value="GF">Guyane</option>
+                                            <option value="RE">La Réunion</option>
+                                            <option value="YT">Mayotte</option>
+                                            <option value="PM">St Pierre et Miquelon</option>
+                                            <option value="BL">St Barthélémy</option>
+                                            <option value="SM">St Martin</option>
+                                            <option value="WF">Wallis et Futunua</option>
+                                            <option value="PF">Polynésie Française</option>
+                                            <option value="NC">Nouvelle Calédonie</option>
+                                        </optgroup>
+                                        <option value="ZZ">Autre</option>
+                                    </select>
                                 </div>
                                 <button class="FormContainer-Submit" type="submit" name="valider"><?= $button;?></button>
                             </form>

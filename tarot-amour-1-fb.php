@@ -5,14 +5,21 @@
  * Created on : 01 avril 2016 By Laurène Dourdin <2aurene@gmail.com>
  * Updated on : 07 avril 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-$page = 'tarot-amour-1-fb';
-$button = 'Accéder au tchat';
-$questions = array(
-    'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : En couple', 'conjoint' => true],
-    'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Séparés', 'conjoint' => true],
-    'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Tarot de lʼamour : Amants', 'conjoint' => true],
-);
+// Paramètres design
+$button = 'Accéder au tchat';
 $assets = 'images_landing/tarot-amour/';
+// Paramètre formulaire
+$url = 'myastro-tarot-fb2';
+$method = 'general-suscribe';
+$site = 'myastro.fr';
+$source = 'facebook_adds';
+$dri = 'myastro/offre-gratuite';
+$dri2 = 'myastro-tchat-dri';
+$questions = array(
+    'encouple' => ['code'=>'question_2', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : En couple', 'conjoint' => true],
+    'separes' => ['code'=>'question_11', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Séparés', 'conjoint' => true],
+    'amants' => ['code'=>'question_24', 'subject'=>'sentimental', 'text'=>'Voyance de lʼamour : Amants', 'conjoint' => true],
+);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -118,13 +125,13 @@ $assets = 'images_landing/tarot-amour/';
                             <p class="alert alert-danger" style="display: none"></p>
                             <form id="form-container" class="ajax">
                                 <!-- ########## identification formulaire ########## -->
-                                <input type="hidden" name="source" value="myastro-tarot-fb2" />
-                                <input type="hidden" name="method" value="general-suscribe" />
+                                <input type="hidden" name="source" value="<?= $url;?>" />
+                                <input type="hidden" name="method" value="<?= $method;?>" />
                                 <input type="hidden" name="support" value="tarot" />
-                                <input type="hidden" name="site" value="myastro.fr" />
-                                <input type="hidden" name="affiliation" value="facebook_adds" />
-                                <input type="hidden" name="dri" value="myastro/offre-gratuite" />
-                                <input type="hidden" name="dri2" value="myastro-tchat-dri" />
+                                <input type="hidden" name="site" value="<?= $site;?>" />
+                                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+                                <input type="hidden" name="dri" value="<?= $dri;?>" />
+                                <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ######### -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="convertir" value="1" />

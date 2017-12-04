@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------------------------------
     --      DRI POST-MAIL = LOVE-MYASTRO-DRI = AFFIL BASE     --
     ------------------------------------------------------------
@@ -18,13 +18,13 @@ include('include/process-dri.php');
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Votre avenir sentimental | MyAstro</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-    
+
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
         <link rel="stylesheet" type="text/css" href="css/love-myastro.min.css">
-       
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -50,7 +50,7 @@ include('include/process-dri.php');
                             </div>
                         </article>
                     </div>
-                    
+
                     <div class="faq">
                         <h3>Comment ça marche ?</h3>
                         <ul>
@@ -84,13 +84,20 @@ include('include/process-dri.php');
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
                         <div class="DRI-Form FormContainer-Fields">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
-                            <form method="post">                                
+                            <form method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormField">
                                     <input type="text" id="name" name="prenom" placeholder="Mon Prénom" class="FormField-Input" value="<?= $prenom;?>" required />
                                 </div>

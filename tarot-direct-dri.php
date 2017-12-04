@@ -59,7 +59,13 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                         <div class="Pop Pop-Voyant getFormValue  <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                             <div class="DRI-Form FormContainer-Fields">
                                 <p class="DRI-Sent">
                                     Merci, votre demande a bien été prise en compte.<br/>
@@ -69,6 +75,7 @@ $draw = isset($_SESSION['cards'])? $_SESSION['cards'] : false;
                             <?php } else { ?>
                             <h2 class="DRI-Form-Title">Faites-vous rappeler immédiatement, n’attendez pas !</h2>
                             <form method="post" class="DRI-FormContainer">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="DRI-Form FormContainer-Fields">
                                     <p>Nos voyants répondent à vos questions</p>
                                     <div class="Fields-Table-Row">

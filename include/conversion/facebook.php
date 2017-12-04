@@ -26,7 +26,7 @@ if(isset($_SESSION['conversion']) && $_SESSION['conversion'] >= 1 and $_SESSION[
     fbq('track', 'CompleteRegistration');
 </script>
 <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=313112278889346&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=313112278889346&ev=CompleteRegistration&noscript=1" />
 </noscript>
 <!-- End Facebook Pixel Code -->
 <?php

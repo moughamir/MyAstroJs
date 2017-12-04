@@ -10,9 +10,6 @@ require_once('inc/bdd.php');
 
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 
-function secure_formdata($n){
-    return htmlentities(strip_tags($n));
-}
 $get = array_map('secure_formdata', $_GET);
 $email = isset($_SESSION['ab_email']) ? $_SESSION['ab_email'] : (isset($get['email']) ? $get['email'] : false);
 $idkgestion = isset($_SESSION['ab_idkgestion']) ? $_SESSION['ab_idkgestion'] : (isset($get['id']) ? $get['id'] : false);

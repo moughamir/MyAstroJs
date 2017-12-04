@@ -98,7 +98,14 @@ class APIKGestion {
         
         return $this->request($this::PATCH, $url, $data);
     }
-    
+
+    public function insertDRI($data)
+    {
+        $url = $this::BASE_URL.'client/api/client/dri';
+
+        return $this->request($this::POST, $url, $data);
+    }
+
     public function getTracking($id)
     {
         $url = $this::BASE_URL.'client/api/client/tracking/'.$id;

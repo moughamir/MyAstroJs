@@ -13,7 +13,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
 ?>
 <!DOCTYPE html>
 <html ng-app="myAstro" prefix="og: http://ogp.me/ns#" lang="fr">
-  
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -88,7 +88,13 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                     <h2 class="form--subtitle">Allez-vous avoir de la chance en 2017 ?</h2>
                   </header>
                   <article class="form-content">
-                    <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                    <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                      <p class="DRI-Sent">
+                        APPEL EN COURS ....<br/>
+                        Merci, votre demande de rappel a bien été prise en compte.<br/>
+                        <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                      </p>
+                    <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                       <p class="DRI-Sent">
                         Merci, votre demande a bien été prise en compte.<br/><br/>
                         <strong>Un voyant vous recontactera dans quelques instants</strong>.
@@ -211,7 +217,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         <p class="attribute">Copyright &copy; 2017 | My Astro</p>
       </div>
     </footer>
-    
+
     <!-- MODAL -->
     <div class="modal-popup">
       <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
@@ -231,8 +237,15 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               </p>
             <?php } ?>
           <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
+            <input type="hidden" value="1" name="directCall">
             <div class="container-90">
-                <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+              <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                <p class="DRI-Sent">
+                  APPEL EN COURS ....<br/>
+                  Merci, votre demande de rappel a bien été prise en compte.<br/>
+                  <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                </p>
+              <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
           	  <p class="DRI-Sent">
                     Merci, votre demande a bien été prise en compte.<br/>
                     <strong>Un voyant vous recontactera dans quelques instants</strong>.

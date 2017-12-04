@@ -95,6 +95,9 @@ if(isset($_SESSION['user_id'])){
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php');?></p>
 
+        <!--Pixel Affiliation -->
+        <?php include_once('include/pixels/gpbl.php');?>
+        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
@@ -102,7 +105,8 @@ if(isset($_SESSION['user_id'])){
 
         <!-- #### CONVERSION #### -->
         <?php include('include/conversion/adwords.php');
-              include('include/conversion/facebook.php');?>
+              include('include/conversion/facebook.php');
+              include('include/conversion/hamedia.php');?>
     </body>
 </html>
 <!-- ### Ressources CSS à charger en dernier ### -->

@@ -14,12 +14,18 @@ $retour = array();
 $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
+    'tarot-tchat-dri' => ['cookie' => true],
+    'tarot-tchat/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'tarot-rentree/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-rentree/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'love-myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/love-myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'tarot-direct-merci' => ['cookie' => true],
+    'tarot-direct-rentree-merci' => ['cookie' => true],
+    'quizz-rentree-result?chat=1' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
@@ -35,6 +41,7 @@ $today_date_smf = date('m/d/Y');
 $id_rdm  = uuid();
 $ip      = $_SERVER['REMOTE_ADDR'];
 $page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
+$serverName    = parse_url($page, PHP_URL_SCHEME)."://".$_SERVER['SERVER_NAME'];
 $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl = isset($param['source']) ? $param['source'] : false;
@@ -56,7 +63,7 @@ if(!$source){
 }
 if(!$formurl){
     addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
-    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.Url du formulaire manquant';
 } else {
     // Recherche de l'url kgestion
     $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl.'"';
@@ -65,7 +72,13 @@ if(!$formurl){
         addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
     } elseif(empty($regformurl_kgs)){
-        $regformurl_kgs = $formurl_kgs;
+        $urlReg = str_replace($serverName.'/', "", $page);
+        $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$urlReg.'"';
+        $regformurl_kgs = $bdd->get_var($tracking_qry);
+        if(!isset($regformurl_kgs)){
+            addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        }
     }
 }
 
@@ -224,6 +237,29 @@ if($user){
         $reinscription = true;
     }
 }
+/* ========================================================================== *
+ *                           ENREGISTREMENT HAMEDIA                           *
+ * ========================================================================== */
+
+if(empty($err)){
+    $hm_save = isset($param['hamedia_save']) ? $param['hamedia_save'] : null;
+    if(!empty($param['hamedia_save'])){
+        $hamedia = new APIHamedia;
+        $hm_savelists = json_decode($hm_save);
+        $post_data = array(
+            'email' => $email,
+            'firstname' => $prenom,
+            'lastname' => ' ',
+            'lifecycle' => 'lead',
+            'lists' => $hm_savelists
+        );
+        $hamedia_insert = $hamedia->insertUser($post_data);
+        if(!$hamedia_insert->success){
+            addFormLog($bdd, $page, 'ERROR', '[API HAMEDIA] Erreur insertion user > '.json_encode($hamedia_insert));
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.ERREUR API HAMEDIA';
+        }
+    }
+}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                           *
@@ -242,10 +278,10 @@ if(empty($err)){
         'spouseSign'        => $conjoint_signe,
         'spouseBirthday'    => $conjoint_dtn_bdd,
         'questionDate'      => $today_date_bdd,
-        'questionSubject'   => $question['subject'],
-        'questionCode'      => $question['code'],
-        'questionText'      => $question['text'],
-        'questionContent'   => $question['content'],
+        'questionSubject'   => isset($question['subject']) ? $question['subject'] : '',
+        'questionCode'      => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
+        'questionText'      => isset($question['text']) ? $question['text'] : '',
+        'questionContent'   => isset($question['content']) ? $question['content'] : '',
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,
@@ -300,7 +336,7 @@ if(empty($err)){
             $conversion = 2;
         }
     }
-
+    
 /* ========================================================================== *
  *                           ENREGISTREMENT MYASTRO                           *
  * ========================================================================== */
@@ -320,8 +356,8 @@ if(empty($err)){
             'email'                   => $email,
             'questionDate'            => $today_date_bdd,
             'question_date'           => $today_datetime_bdd,
-            'questionSujet'           => $question['subject'],
-            'questionContent'         => $question['code'],
+            'questionSujet'           => isset($question['subject']) ? $question['subject'] : '',
+            'questionContent'         => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
             'horoscope'               => $horoscope,
             'signe2'                  => $conjoint_signe,
             'partenaires'             => $partenaires,
@@ -358,8 +394,8 @@ if(empty($err)){
             'questionDate'            => $today_date_bdd,
             'questionDate_before'     => $user->questionDate,
             'question_date'           => $today_datetime_bdd,
-            'questionSujet'           => $question['subject'],
-            'questionContent'         => $question['code'],
+            'questionSujet'           => isset($question['subject']) ? $question['subject'] : '',
+            'questionContent'         => isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ,
             'dateNaissance'           => $dtn_bdd,
             'date_naissance_conjoint' => $conjoint_dtn_bdd,
             'tel'                     => $tel,
@@ -426,13 +462,13 @@ if(empty($err)){
     $_SESSION['sexe']           = $sexe;
     $_SESSION['cards']          = $cards_draw;
     $_SESSION['phone']          = $tel;
-    $_SESSION['question']       = $question['code'];
+    $_SESSION['question']       = isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '' ;
     $_SESSION['firstnameJoint'] = $conjoint_prenom;
     $_SESSION['birthdateJoint'] = $conjoint_dtn_bdd;
     $_SESSION['user_id']        = $idindex;
     $_SESSION['kgestion_id']    = $kgestion_id;
     $_SESSION['pays']           = $pays;
-    $_SESSION['trigger']        = $question['code'];
+    $_SESSION['trigger']        = isset($question['code']) ? $question['code'] : isset($param['question_code']) ? $param['question_code'] : '';
     $_SESSION['gclid']          = $gclid;
     $_SESSION['source']         = $formurl;
     $_SESSION['affiliation']    = $source;
@@ -470,8 +506,8 @@ if(empty($err)){
         $redirect_url = $dri2;
     }
 
-    if(!preg_match('#^http.*#', $redirect_url)){
-        $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
+    if(!preg_match('#^'.PROTOCOL.'.*#', $redirect_url)){
+        $redirect_url = PROTOCOL.'://'.ROOT_URL.'/'.$redirect_url;
     }
 
     $redirect_url = preg_replace('#\[EMAIL\]#', $email, $redirect_url );
@@ -486,6 +522,10 @@ if(empty($err)){
     if(isset($param['convertir'])){
         if($source == 'reflexcash'){
             include('../include/conversion/reflexcash.php');
+        } elseif($source == 'goformedia'){
+            include('../include/conversion/goformedia.php');
+        } elseif($source == 'weedoit'){
+            include('../include/conversion/weedoit.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';

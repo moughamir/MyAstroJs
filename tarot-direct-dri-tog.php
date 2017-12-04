@@ -62,7 +62,13 @@ if(isset($_SESSION['user_id'])){
                         <div class="Pop Pop-Voyant getFormValue <?= $voyant ?>" data-ref-form="voyant" data-method="class"><span class="Pop-Voyant-Photo"></span></div>
                         <div class="FormContainer overlay" id="form-overlay"></div>
                         <div class="Fields-Table">
-                            <?php if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
+                            <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
+                                <p class="DRI-Sent">
+                                    APPEL EN COURS ....<br/>
+                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                                </p>
+                            <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <div class="DRI-Form FormContainer-Fields">
                                     <p class="DRI-Sent">
                                         Merci, votre demande de rappel a bien été prise en compte.<br/>
@@ -81,6 +87,7 @@ if(isset($_SESSION['user_id'])){
                             <h3 class="DRI-Form-Subtitle">Faites-vous rappeler gratuitement en remplissant le formulaire :</h3>
                             <p><strong>Nos voyants répondent à vos questions</strong></p>
                             <form class="DRI-FormContainer" method="post">
+                                <input type="hidden" value="1" name="directCall">
                                 <div class="FormContainer-Fields">
                                     <div class="Fields-Table-Row">
                                         <label for="name" class="FormField-Label">Mon prénom</label>
@@ -153,6 +160,9 @@ if(isset($_SESSION['user_id'])){
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
 
+        <!--Pixel Affiliation -->
+        <?php include_once('include/pixels/gpbl.php');?>
+        
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

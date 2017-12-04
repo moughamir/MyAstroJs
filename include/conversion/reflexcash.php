@@ -8,6 +8,9 @@ $email          = $_SESSION['email'];
 $log_file       = 'logs-perso/conversion-'.$source.'.txt';
 
 $urls_conversion = array(
+    'tarot-tchat-rc' => ' http://ads.reflexcash.com/aff_lsr?offer_id=12720&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'love-tchat-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=12700&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'tarot-direct-rentree-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-to' => 'http://b2.a4trk.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-g' => 'http://b2.a4trk.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-tf' => 'http://b2.a4trk.com/aff_lsr?offer_id=4507&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',

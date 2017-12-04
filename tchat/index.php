@@ -93,9 +93,9 @@
         
         <link rel="icon" type="image/png" href="../logo_myastro_32x32.jpg" />
         
-        <link rel="stylesheet" href="http://www.myastro.fr/sstyle_landing.css" />
-        <link href='http://www.myastro.fr/tchat/style.css' rel='stylesheet' type='text/css' />
-        <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media=all />
+        <link rel="stylesheet" type="text/css" href="../sstyle_landing.css" />
+        <link rel="stylesheet" type="text/css" href="../tchat/style.css" />
+        <link rel=stylesheet href="//fonts.googleapis.com/css?family=Open+Sans:300,600,700" type="text/css" media=all />
         <?php // ($_SERVER['REMOTE_ADDR']=='90.80.230.107'){// ?>
         <?php if ($user['source']=='saint-patrick-2016'){ ?>
             <link rel=stylesheet href="themes/saint-patrick-2016/style.css" type="text/css" media=all />
@@ -305,4 +305,4 @@
     </div>
     </noscript>
 
-<script src="http://www.myastro.fr/js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>

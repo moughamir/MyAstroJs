@@ -19,7 +19,7 @@
         <div class="container-fluid" itemscope>
             <!-- Main Content -->
             <div class="row-fluid">
-                <div class="article-content">
+                <div class="article-content"> -
                     <header>
                         <h1 itemprop="headline">Compatibilité amoureuse pour les femmes : Chiffre 1</h1>
                         <div class="row-fluid social-share-footer">

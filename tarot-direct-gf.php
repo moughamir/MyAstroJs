@@ -4,6 +4,7 @@
  * -----------------------------
  * Created on : 03 août 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
+session_start();
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
@@ -14,7 +15,11 @@ $site = "myastro.fr";
 $source = "goformedia";
 $dri = "tarot-direct-merci";
 $dri2 = "tarot-direct-dri-tog";
+
 include('include/questions/tarot-direct.php');
+
+$_SESSION['goformedia_track'] = isset($_GET['track']) ? $_GET['track'] : '';
+
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
@@ -29,9 +34,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
         <meta name="robots" content="noindex,nofollow" />
 
-        <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
+        <link rel="icon" type="image/png" href="<?= $pict_path;?>favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
+        <link rel="stylesheet" type="text/css" href="<?= $css;?>" />
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,6 +105,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
+                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row gender">

@@ -9,7 +9,7 @@ $styles = array(
     ],
     'noel' => [
         'css' => 'css/tarot-direct-noel.css',
-        'dir' => 'images_landing/tarot-direct-noel/'
+        'dir' => 'images_landing/tarot-direct-noel/17/'
     ],
     'nouvel-an' => [
         'css' => 'css/tarot-direct-nouvel-an.css',
@@ -18,6 +18,10 @@ $styles = array(
     'amour' => [
         'css' => 'css/tarot-direct-amour.css',
         'dir' => 'images_landing/tarot-direct-amour/'
+    ],
+    'rentree-17' => [
+        'css' => 'css/tarot-direct-rentree.css',
+        'dir' => 'images_landing/tarot-direct-rentree/'
     ],
 );
 
@@ -28,7 +32,9 @@ $force_design = isset($_GET['css']);
 if($force_design && isset($styles[$_GET['css']])){
     $select_style = $_GET['css'];
 } else {
-    if($m == 12 && $j <= 25){ // Du 1er au 25 décembre inclus
+    if($m == 12 && $j <= 30){ // Du 1er au 25 décembre inclus
+        $select_style = 'noel';
+    } elseif($m == 1 && $j <= 15) {
         $select_style = 'noel';
     } elseif($m == 1 || $m == 12) { // Le reste du mois de décembre et le mois de janvier
         $select_style = 'nouvel-an';
@@ -38,6 +44,10 @@ if($force_design && isset($styles[$_GET['css']])){
         $select_style = 'default';
     }
 }
+if(strpos($_SERVER['REQUEST_URI'],'/tarot-direct-rentree') !== false){
+    $select_style = 'rentree-17';
+}
+
 
 $pict_path = $styles[$select_style]['dir'];
 $css = $styles[$select_style]['css'];
