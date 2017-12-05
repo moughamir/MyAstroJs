@@ -52,32 +52,27 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 </head>
 <body class="consultation-en-ligne">
+<div class="main-header">
+<div class="header ">
+
+
+    <div  class="header-content" >
+        <img src="images_landing/rdv/logo-r.png" alt=""/>
+        <span class="header-txt">
+                    Amour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travail
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments  </span>
+        <span class="header-txt" style="margin-top: -20px;">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
+        <ul>
+            <li class="icone-recommanded"><span>Site 100% recommandé </span>
+                <p>
+            <li class="icone-consultation"><span>Consultation en ligne</span></li>
+        </ul>
+    </div>
+</div>
+</div>
 <div class="main">
 
-    <div class="header">
-
-        <div class="header-contentt">
-            <div class="header-content">
-                <div class="logo header-contentt-cell">
-                    <img src="images_landing/rdv/logo-r.png" alt=""/>
-                </div>
-                <div class="header-contentt-cell">
-                    <div class="header-contentt-cell2">Amour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travail
-                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments
-                    </div>
-                </div>
-            </div>
-            <div class="header-contentt">
-                <ul>
-                    <li class="icone-recommanded"><span>Site 100% recommandé </span>
-                        <p>
-                    <li class="icone-consultation"><span>Consultation en ligne</span></li>
-                </ul>
-            </div>
-        </div>
-
-
-    </div>
     <div class="left-part">
 
         <div class="content">
@@ -85,11 +80,11 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <img src="images_landing/rdv/promo.png">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <ul class="icon-liste">
                     <li class="icone-cray">
                         <span>Je remplis le <br/>formulaire</span>
@@ -116,10 +111,9 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
         <aside id="main_container" class="widget">
             <!-- progressbar -->
             <div class="time">
-                <p class="choice-planning"> Je choisie mon Rendez vous quand je veux</p>
+                <p class="title-filled"> Je choisie mon Rendez vous quand je veux</p>
             </div>
-            <ul id="progressbar" style="visibility: hidden">
-            </ul>
+
             <form class="ajax">
 
                 <fieldset>
@@ -133,6 +127,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="hidden" name="redirect_method" value="reload_form"/>
                     <input type="hidden" name="gclid" value="<?= $gclid; ?>"/>
                     <input type="hidden" name="cguv" value="1"/>
+                    <input type="hidden" name="pays" value="FR"/>
 
 
                     <div class="FormField radio">
@@ -228,38 +223,6 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                         <label class="FormField-Label" for="son_prenom">Son prénom</label>
                         <input type="text" id="son_prenom" name="conjoint" class="FormField-Input"/>
                     </div>
-                    <div class="FormField">
-                        <div class="FormField-TableInputContainer-Cell">
-
-                            <label for="pays" class="FormField-Label">Votre pays </label>
-                        </div>
-
-                        <div class="FormField-TableInputContainer-Cell">
-
-                            <select class="FormField-Input" name="pays" id="pays" required="">
-                                <option value="" selected="selected">Votre Pays</option>
-                                <option value="BE">Belgique</option>
-                                <option value="CA">Canada</option>
-                                <option value="LU">Luxembourg</option>
-                                <option value="CH">Suisse</option>
-                                <option value="FR" selected>France Métropolitaine</option>
-                                <optgroup label="DOM-TOM">
-                                    <option value="MQ">Martinique</option>
-                                    <option value="GP">Guadeloupe</option>
-                                    <option value="GF">Guyane</option>
-                                    <option value="RE">La Réunion</option>
-                                    <option value="YT">Mayotte</option>
-                                    <option value="PM">St Pierre et Miquelon</option>
-                                    <option value="BL">St Barthélémy</option>
-                                    <option value="SM">St Martin</option>
-                                    <option value="WF">Wallis et Futunua</option>
-                                    <option value="PF">Polynésie Française</option>
-                                    <option value="NC">Nouvelle Calédonie</option>
-                                </optgroup>
-                                <option value="ZZ">Autre</option>
-                            </select>
-                        </div>
-                    </div>
 
                     <button name="next" class="submit action-button" value="Next" type="submit">Suivant</button>
                     <button name="next" class="next action-button" value="Next" type="button" style="display: none">
@@ -279,7 +242,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     </div>
 
                     <input type="button" name="previous" class="previous action-button" value="Précédent"/>
-                    <input type="button" name="next" class="nextSecond action-button" value="Étape suivante">
+                    <input type="button" name="next" class="nextSecond action-button" value="Suivant">
                 </fieldset>
                 <fieldset style="display: none">
 
@@ -357,7 +320,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 </div>
 
 
-<div class="avis main" style="margin-top: 50px">
+<div class="avis " style="">
 
     <div class="splash-content">
 
@@ -377,7 +340,23 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <img src="images_landing/rdv/bulle-2.png"  alt=""/>
     <img src="images_landing/rdv/bulle-3.png" alt=""/>
 
-    <p class="choice-planning" style="width: 110px;"> Avis Clients </p>
+    <div  class="avis" >
+        <p class="title-filled"> Avis Clients </p>
+       <table >
+        <tr >
+            <td > <img src="images_landing/rdv/Ellipse.png"   alt=""/>
+                Marine F. Le 03/11/2017 à 23h56</td>
+            <td bgcolor="white"><img src="images_landing/rdv/stars.png" ></td>
+            <td bgcolor="white">Très pratique, un site rapide et de confiance,  Merci à Paule de m'avoir écouté je me sens bien mieux et j'ai beaucoup plus de confiance en moi maintenant je recommande à toutes les personnes qui .. </td>
+        </tr>
+        <tr>
+            <td > <img src="images_landing/rdv/Ellipse.png"   alt=""/>
+                Sandra L. Le 21/10/2017 à 19h32 </td>
+            <td bgcolor="white"><img src="images_landing/rdv/stars.png" ></td>
+            <td bgcolor="white" >J’étais un peu perdu et on m’a recommandé ce site, c’est rapide</td>
+        </tr>
+    </table>
+    </div>
 
 </div>
 
@@ -395,7 +374,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 </div>
 -->
 <div class="footer">
-    <?php //include('include/footer_copyright.php'); ?>
+    <?php include('include/footer_copyright.php'); ?>
 </div>
 
 <!-- ### Ressources CSS à charger en dernier ### -->
