@@ -32,7 +32,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-    <title>Voyance en ligne : des médiums à votre écoute | MyAstro</title>
+    <title>Consultation en ligne : des médiums à votre écoute | MyAstro</title>
     <meta name="robots" content="noindex,nofollow"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width">
@@ -42,8 +42,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
     <!--------------------assets kgestion for displaying planning ----------------------------------------->
 
-    <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_2.font-awesome.min_2.css" type="text/css"
-          rel="stylesheet"/>
+
     <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_3.datepicker_5.css" type="text/css" rel="stylesheet"/>
     <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_bootstrap-datetimepicker.min_13.css" type="text/css"
           rel="stylesheet"/>
@@ -345,16 +344,43 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     </div>
                 </fieldset>
             </form>
-        </
-        .div>
+        </div>
+
+
     </div>
     </aside>
 
-    <div class="clear"></div>
 </div>
 </div>
-<div class="clear"></div>
+
+
 </div>
+
+
+<div class="avis main" style="margin-top: 50px">
+
+    <div class="splash-content">
+
+        <div class="splash-msg">
+            <div class="info-img" >
+            <img src="images_landing/rdv/info.png"   alt=""/>
+            </div>
+            <span class="text-rot">
+                    <span class="textItem">L’horaire c’est vous qui décidez !</span>
+                    <span class="textItem">Nous sommes là pour vous guider, et vous soutenir !</span>
+                    <span class="textItem">Des experts à votre écoute où que vous soyez</span>
+                    <span class="textItem">En toute confiance et confidentialité</span>
+                </span>
+        </div>
+    </div>
+    <img src="images_landing/rdv/bulle-1.png"   alt=""/>
+    <img src="images_landing/rdv/bulle-2.png"  alt=""/>
+    <img src="images_landing/rdv/bulle-3.png" alt=""/>
+
+    <p class="choice-planning" style="width: 110px;"> Avis Clients </p>
+
+</div>
+
 
 <!--
 <div class="subfooter">
@@ -383,6 +409,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     var google_custom_params = window.google_tag_params;
     var google_remarketing_only = true;
     /* ]]> */
+
+
 </script>
 <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>

@@ -777,3 +777,43 @@ p.choice-planning {
     margin-left: 20%;
 
 }
+
+.avis img {
+    margin-left: 50px;
+}
+
+/** animate text **/
+
+
+.splash-content {
+    margin: 0 auto;
+    max-width: 745px;
+    padding-top: 15%;
+}
+
+.splash-msg {
+    color: #000;
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    bottom: 40px;
+    left : 60px
+}
+
+.textItem
+{
+    position:absolute;
+    display:none;
+    padding-left:15px;
+}
+.textItem.current
+{
+    display:inline-block;
+}
+
+.info-img {
+
+    margin-left: 60px;
+    margin-bottom: 10px;
+}

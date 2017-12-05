@@ -262,5 +262,35 @@ $(document).ready(function () {
 
     });
 
+
+    setupRotator();
+
 });
+
+function setupRotator()
+{
+    if(jQuery('.textItem').length > 1)
+    {
+        jQuery('.textItem:first').addClass('current').slideDown(500);
+        setInterval('textRotate()', 1000);
+    }
+}
+
+function textRotate(){
+    var current = jQuery('.text-rot > .current');
+    console.log(current);
+    if(current.next().length == 0)
+    {
+        console.log("current next 0");
+        current.removeClass('current').slideUp(100);
+        jQuery('.textItem:first').addClass('current').slideDown(500);
+    }
+    else
+    {
+        console.log("current next 1");
+        current.removeClass('current').slideUp(100);
+        current.next().addClass('current').slideDown(500);
+    }
+}
+
 
