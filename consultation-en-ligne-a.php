@@ -53,23 +53,23 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 </head>
 <body class="consultation-en-ligne">
 <div class="main-header">
-<div class="header ">
+    <div class="header ">
 
 
-    <div  class="header-content" >
-        <img src="images_landing/rdv/logo-r.png" alt=""/>
-        <span class="header-txt">
+        <div class="header-content">
+            <img src="images_landing/rdv/logo-r.png" alt=""/>
+            <span class="header-txt">
                     Amour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travail
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments  </span>
-        <span class="header-txt" style="margin-top: -20px;">
+            <span class="header-txt" style="margin-top: -20px;">
               &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
-        <ul>
-            <li class="icone-recommanded"><span>Site 100% recommandé </span>
-                <p>
-            <li class="icone-consultation"><span>Consultation en ligne</span></li>
-        </ul>
+            <ul>
+                <li class="icone-recommanded"><span>Site 100% recommandé </span>
+                    <p>
+                <li class="icone-consultation"><span>Consultation en ligne</span></li>
+            </ul>
+        </div>
     </div>
-</div>
 </div>
 <div class="main">
 
@@ -79,15 +79,15 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <h1>Très simple et rapide où que vous soyez !</h1>
         </div>
 
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-6">
-                <img src="images_landing/rdv/promo.png">
+        <div class="FormField">
+            <div class="FormField-TableInputContainer-Cell">
+                <img class="img-promo" src="images_landing/rdv/promo.png">
             </div>
 
-            <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="FormField-TableInputContainer-Cell">
                 <ul class="icon-liste">
                     <li class="icone-cray">
-                        <span>Je remplis le <br/>formulaire</span>
+                        <span>Je remplis le formulaire</span>
                     </li>
                     <li class="icone-hand">
                         <span>je choisis mon RDV</span>
@@ -109,11 +109,9 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 
         <aside id="main_container" class="widget">
-            <!-- progressbar -->
             <div class="time">
-                <p class="title-filled"> Je choisie mon Rendez vous quand je veux</p>
+                <p class="title-filled"> Je choisis mon rendez-vous quand je veux</p>
             </div>
-
             <form class="ajax">
 
                 <fieldset>
@@ -128,102 +126,83 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="hidden" name="gclid" value="<?= $gclid; ?>"/>
                     <input type="hidden" name="cguv" value="1"/>
                     <input type="hidden" name="pays" value="FR"/>
+                    <input type="hidden" name="question_code" value=""/>
 
 
                     <div class="FormField radio">
                         <div class="FormField-TableInputContainer fixed-2-col gender">
                             <div class="FormField-TableInputContainer-Cell">
                                 <label for="sexe-f" class="FormField-Label "><span class="ico-woman fa fa-venus"></span>
-                                    Femme</label>
+                                    une femme</label>
                                 <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input"/>
                             </div>
                             <div class="FormField-TableInputContainer-Cell">
                                 <label for="sexe-h" class="FormField-Label"><span class="ico-man fa fa-mars"></span>
-                                    Homme</label>
+                                    un homme</label>
                                 <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input"/>
                             </div>
                         </div>
                     </div>
                     <div class="FormField">
                         <div class="FormField-TableInputContainer-Cell">
-
-                        <label for="name" class="FormField-Label">Prénom</label>
-                        <input type="text" id="name" name="prenom" class="FormField-Input" required
-                               placeholder="Prénom"/>
-                    </div>
+                            <label for="name" class="FormField-Label">Prénom</label>
+                            <input type="text" id="name" name="prenom" class="FormField-Input" required
+                                   placeholder="Prénom"/>
+                        </div>
                         <div class="FormField-TableInputContainer-Cell">
-                        <label class="FormField-Label">Date de naissance</label>
-                        <div class="FormField-TableInputContainer">
-                            <div class="FormField-TableInputContainer-Cell">
-                                <select class="FormField-Input" name="jour">
-                                    <option value="" selected disabled>Jour</option>
-                                    <?php for ($i = 1; $i <= 31; $i++) { ?>
-                                        <option value="<?= $i ?>"> <?= sprintf('%02d', $i) ?></option>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                            <div class="FormField-TableInputContainer-Cell">
-                                <select class="FormField-Input" name="mois">
-                                    <option value="" selected disabled>Mois</option>
-                                    <option value="01">Janv.</option>
-                                    <option value="02">Fev.</option>
-                                    <option value="03">Mars</option>
-                                    <option value="04">Avr.</option>
-                                    <option value="05">Mai</option>
-                                    <option value="06">Juin</option>
-                                    <option value="07">Juil.</option>
-                                    <option value="08">Aout</option>
-                                    <option value="09">Sept.</option>
-                                    <option value="10">Oct.</option>
-                                    <option value="11">Nov.</option>
-                                    <option value="12">Dec.</option>
-                                </select>
-                            </div>
-                            <div class="FormField-TableInputContainer-Cell">
-                                <select class="FormField-Input" name="annee">
-                                    <option selected="selected" value="">Année</option>
-                                    <?php for ($i = date('Y') - 18; $i >= 1900; $i--) { ?>
-                                        <option value="<?= $i ?>"><?= $i ?></option>
-                                    <?php } ?>
-                                </select>
+                            <label class="FormField-Label">Date de naissance</label>
+                            <div class="FormField-TableInputContainer">
+                                <div class="FormField-TableInputContainer-Cell">
+                                    <select class="FormField-Input" name="jour">
+                                        <option value="" selected disabled>Jour</option>
+                                        <?php for ($i = 1; $i <= 31; $i++) { ?>
+                                            <option value="<?= $i ?>"> <?= sprintf('%02d', $i) ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="FormField-TableInputContainer-Cell">
+                                    <select class="FormField-Input" name="mois">
+                                        <option value="" selected disabled>Mois</option>
+                                        <option value="01">Janv.</option>
+                                        <option value="02">Fev.</option>
+                                        <option value="03">Mars</option>
+                                        <option value="04">Avr.</option>
+                                        <option value="05">Mai</option>
+                                        <option value="06">Juin</option>
+                                        <option value="07">Juil.</option>
+                                        <option value="08">Aout</option>
+                                        <option value="09">Sept.</option>
+                                        <option value="10">Oct.</option>
+                                        <option value="11">Nov.</option>
+                                        <option value="12">Dec.</option>
+                                    </select>
+                                </div>
+                                <div class="FormField-TableInputContainer-Cell">
+                                    <select class="FormField-Input" name="annee">
+                                        <option selected="selected" value="">Année</option>
+                                        <?php for ($i = date('Y') - 18; $i >= 1900; $i--) { ?>
+                                            <option value="<?= $i ?>"><?= $i ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
 
                     <div class="FormField">
                         <div class="FormField-TableInputContainer-Cell">
 
-                        <label for="email" class="FormField-Label">E-mail</label>
-                        <input id="email" type="email" name="email" class="FormField-Input" required
-                               placeholder="E-mail"/>
-                    </div>
+                            <label for="email" class="FormField-Label">E-mail</label>
+                            <input id="email" type="email" name="email" class="FormField-Input" required
+                                   placeholder="E-mail"/>
+                        </div>
                         <div class="FormField-TableInputContainer-Cell">
-                        <label for="tel" class="FormField-Label">Téléphone</label>
-                        <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input"
-                               required/>
+                            <label for="tel" class="FormField-Label">Téléphone</label>
+                            <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone"
+                                   class="FormField-Input"
+                                   required/>
+                        </div>
                     </div>
-                    </div>
-                    <div class="FormField">
-                        <label class="FormField-Label" for="theme_id">Votre question</label>
-                        <input type="hidden" name="question_code" value=""/>
-                        <select class="FormField-Input" name="question_code" id="theme_id">
-                            <option value="" selected disabled>Thème de la question</option>
-                            <?php foreach ($questions as $optgroup => $options) { ?>
-                                <optgroup label="<?= $optgroup ?>">
-                                    <?php foreach ($options as $question) { ?>
-                                        <option value="<?= str_replace('"', "'",
-                                            json_encode($question)) ?>" <?= isset($question['conjoint']) && $question['conjoint'] ? 'data-need-spouse="1"' : '' ?>><?= $question['text'] ?></option>
-                                    <?php } ?>
-                                </optgroup>
-                            <?php } ?>
-                        </select>
-                    </div>
-                    <div class="FormField sonprenom" style="display: none;">
-                        <label class="FormField-Label" for="son_prenom">Son prénom</label>
-                        <input type="text" id="son_prenom" name="conjoint" class="FormField-Input"/>
-                    </div>
-
                     <button name="next" class="submit action-button" value="Next" type="submit">Suivant</button>
                     <button name="next" class="next action-button" value="Next" type="button" style="display: none">
                         Suivant
@@ -234,7 +213,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <form class="ajax">
                 <fieldset style="display: none" class="planning">
 
-                    <h2 class="fs-title">Horaires Consultation</h2>
+                    <h2 class="fs-title">Je choisis mon RDV</h2>
                     <input type="hidden" name="method" value="consultation_web"/>
                     <input type="hidden" name="client_id" id="client_id" value="0"/>
                     <div id="planning_selection">
@@ -259,13 +238,15 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                    placeholder="Nom"/>
                         </div>
                     </div>
-                    <div class="FormField">
-                        <label for="name" class="FormField-Label">Numéro de la carte</label>
-                        <input type="text" id="carte_num" name="carte_num" class="FormField-Input js-check-luhn"
-                               required placeholder="Numéro de la carte"/>
-                    </div>
-                    <div class="FormField">
-                        <label for="name" class="FormField-Label">Expiration</label>
+                    <div class="FormField-TableInputContainer">
+                        <div class="FormField-TableInputContainer-Cell">
+
+                            <label for="name" class="FormField-Label">Numéro de la carte</label>
+                            <input type="text" id="carte_num" name="carte_num" class="FormField-Input js-check-luhn"
+                                   required placeholder="Numéro de la carte"/>
+                        </div>
+                    <div class="FormField-TableInputContainer-Cell">
+                        <label for="name" class="FormField-Label">Expire Le :</label>
                         <div class="FormField-TableInputContainer-Cell">
                             <select class="FormField-Input" name="expiration_mois">
                                 <option value="" selected disabled>Mois</option>
@@ -292,26 +273,34 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             </select>
                         </div>
                     </div>
-                    <div class="FormField">
-                        <label for="name" class="FormField-Label">Cryptogramme de sécurité </label>
-                        <input type="text" id="crypto" name="crypto" class="FormField-Input" required
-                               placeholder="Cryptogramme de sécurité"/>
+                    </div>
+
+                    <div class="FormField-TableInputContainer">
+                        <div class="FormField-TableInputContainer-Cell">
+                            <label for="name" class="FormField-Label">Cryptogramme de sécurité </label>
+                            <input type="text" id="crypto" name="crypto" class="FormField-Input" required/>
+                            <img class="img-crypto" src="../images_landing/rdv/crypto.png" >
+
+                        </div>
+                        <div class="FormField-TableInputContainer-Cell">
+                            <label for="name" class="FormField-Label"> &nbsp;&nbsp;</label>
+
+                            <div class="secureImages">
+                                <img src="../images/mastercard-visa.png" alt="Mastercard &amp; Visa">
+                                <img src="../images/hipay-secure.png" alt="Hipay">
+                            </div>
+                        </div>
                     </div>
                     <input type="button" name="previous" class="previousSecond action-button" value="Précédent"/>
                     <input type="submit" name="submit" class="submit action-button" value="Valider"/>
-                    <div class="secureImages">
-                        <img src="../images/mastercard-visa.png" alt="Mastercard &amp; Visa">
-                        <img src="../images/secure-verified.png" alt="Site vérifié">
-                        <img src="../images/secure-100pc.png" alt="100% sécurisé">
-                        <img src="../images/hipay-secure.png" alt="Hipay">
-                    </div>
+
                 </fieldset>
             </form>
-        </div>
-
-
     </div>
-    </aside>
+
+
+</div>
+</aside>
 
 </div>
 </div>
@@ -325,8 +314,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <div class="splash-content">
 
         <div class="splash-msg">
-            <div class="info-img" >
-            <img src="images_landing/rdv/info.png"   alt=""/>
+            <div class="info-img">
+                <img src="images_landing/rdv/info.png" alt=""/>
             </div>
             <span class="text-rot">
                     <span class="textItem">L’horaire c’est vous qui décidez !</span>
@@ -336,43 +325,36 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                 </span>
         </div>
     </div>
-    <img src="images_landing/rdv/bulle-1.png"   alt=""/>
-    <img src="images_landing/rdv/bulle-2.png"  alt=""/>
+    <img src="images_landing/rdv/bulle-1.png" alt=""/>
+    <img src="images_landing/rdv/bulle-2.png" alt=""/>
     <img src="images_landing/rdv/bulle-3.png" alt=""/>
 
-    <div  class="avis" >
+    <div class="avis">
         <p class="title-filled"> Avis Clients </p>
-       <table >
-        <tr >
-            <td > <img src="images_landing/rdv/Ellipse.png"   alt=""/>
-                Marine F. Le 03/11/2017 à 23h56</td>
-            <td bgcolor="white"><img src="images_landing/rdv/stars.png" ></td>
-            <td bgcolor="white">Très pratique, un site rapide et de confiance,  Merci à Paule de m'avoir écouté je me sens bien mieux et j'ai beaucoup plus de confiance en moi maintenant je recommande à toutes les personnes qui .. </td>
-        </tr>
-        <tr>
-            <td > <img src="images_landing/rdv/Ellipse.png"   alt=""/>
-                Sandra L. Le 21/10/2017 à 19h32 </td>
-            <td bgcolor="white"><img src="images_landing/rdv/stars.png" ></td>
-            <td bgcolor="white" >J’étais un peu perdu et on m’a recommandé ce site, c’est rapide</td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <td><img src="images_landing/rdv/Ellipse.png" alt=""/>
+                    Marine F. Le 03/11/2017 à 23h56
+                </td>
+                <td bgcolor="white"><img src="images_landing/rdv/stars.png"></td>
+                <td bgcolor="white">Très pratique, un site rapide et de confiance, Merci à Paule de m'avoir écouté je me
+                    sens bien mieux et j'ai beaucoup plus de confiance en moi maintenant je recommande à toutes les
+                    personnes qui ..
+                </td>
+            </tr>
+            <tr>
+                <td><img src="images_landing/rdv/Ellipse.png" alt=""/>
+                    Sandra L. Le 21/10/2017 à 19h32
+                </td>
+                <td bgcolor="white"><img src="images_landing/rdv/stars.png"></td>
+                <td bgcolor="white">J’étais un peu perdu et on m’a recommandé ce site, c’est rapide</td>
+            </tr>
+        </table>
     </div>
 
 </div>
 
 
-<!--
-<div class="subfooter">
-    <ul>
-        <li class="first">Voyant <strong>sérieux reconnus</strong> <br/> pour leur <strong>savoir faire</strong></li>
-        <li class="second">Consultations 100% <br/><strong>discrètes & anonymes</strong></li>
-        <li class="third">Étude personnalisée <br/><strong>par mail sous 24h</strong></li>
-        <li class="fourth">My Astro leader <br/><strong>depuis 2007</strong></li>
-        <div class="clear"></div>
-    </ul>
-    <div class="clear"></div>
-</div>
--->
 <div class="footer">
     <?php include('include/footer_copyright.php'); ?>
 </div>

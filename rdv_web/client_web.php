@@ -89,74 +89,6 @@ if(!$cguv){
 }
 list($tel, $pays) = form_phone($err, $param);
 
-// Question posée --------------------------------------------------------------
-if (isset($param['question_code'])){
-    // Nouveau champs de question avec texte de la question (value json)
-    if(!empty($param['question_code'])){
-        $question = json_decode(str_replace("'", '"', $param['question_code']), true);
-        if($question == 'AMOUR-CONJOINT'){
-            // En fonction de si le conjoint est rempli, soit amour, soit avour avec P2
-            $questions = array(
-                'question_1' => [ 'code' => 'question_1', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - célibataire', 'conjoint' => false ],
-                'question_2' => [ 'code' => 'question_2', 'subject' => 'sentimental', 'text' => 'Mon avenir sentimental - en couple', 'conjoint' => true ],
-            );
-            $code = (isset($param['conjoint']) && !empty($param['conjoint'])) ? 'question_2' : 'question_1';
-            $question = $questions[$code];
-        } else {
-            $question['conjoint'] = isset($question['conjoint']) ? $question['conjoint'] : false;
-        }
-        $question['content'] = isset($param['question_content']) ? $param['question_content'] : null;
-    } else {
-        $err['question_code'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
-    }
-} else {
-    // Anciens champs de question
-    $question['code']    = isset($param['theme_id']) && !empty($param['theme_id']) ? $param['theme_id'] : false;
-    $question['subject'] = 'sentimental';
-    $question['content'] = isset($param['question']) && !empty($param['question']) ? $param['question'] : null;
-
-    if ($question['code'] == 'question_3' || $question['code'] == 'question_4'){
-        $question['subject'] = 'professionel';
-    }
-    if($question['code'] == 'question_73'){
-        $question['subject'] = 'financier';
-    }
-
-    $question['text'] = '';
-
-    // Tableau comprenant les questions qui nécessitent les infos du conjoint.
-    $questionConjoint = array('question_2', 'question_24', 'question_11', 'printemps16_amour');
-    $question['conjoint'] = in_array($question['code'], $questionConjoint);
-
-    if(!$question['code']){
-        $err['theme_id'] = 'Veuillez choisir votre question : Quel est le sujet de vos tourments ?';
-    }
-
-    $mind = isset($param['mind']) && !empty($param['mind']) ? $param['mind'] : false;
-    $user_responses = array(
-        'choix'     => $question['code'],
-        'question'  => $question['content'],
-        'situation' => $mind
-    );
-}
-
-/* ========================================================================== *
- *                           TRAITEMENT DU CONJOINT                           *
- * ========================================================================== */
-
-$conjoint_prenom  = $conjoint_dtn_bdd = $conjoint_dtn_smf = $conjoint_dtn_ses = $conjoint_signe = '';
-
-if($question['conjoint']){
-// Prénom ----------------------------------------------------------------------
-    $conjoint_prenom  = isset($param['conjoint']) ? $param['conjoint'] : '';
-    $test_prenom = trim($conjoint_prenom, ' ');
-    if(empty($test_prenom)){
-        $err['conjoint'] = 'Merci dʼindiquer le prénom de lʼêtre aimé.';
-    } elseif(!preg_match("#^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ[:blank:]-]{1,75})$#", $prenom)){
-        $err['conjoint'] = 'Les chiffres et caractères spéciaux ne sont pas autorisés pour le prénom de lʼêtre aimé.';
-    }
-    unset($test_prenom);
-}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                          *
@@ -172,14 +104,8 @@ if(empty($err)){
         'sign'              => $signe,
         'phone'             => $tel,
         'country'           => $pays,
-        'spouseName'        => $conjoint_prenom,
-        'spouseSign'        => $conjoint_signe,
-        'spouseBirthday'    => $conjoint_dtn_bdd,
         'questionDate'      => $today_date_bdd,
-        'questionSubject'   => $question['subject'],
-        'questionCode'      => $question['code'],
-        'questionText'      => $question['text'],
-        'questionContent'   => $question['content'],
+        'questionCode'      => $param['question_code'],
         'isOptinNewsletter' => $horoscope,
         'isOptinPartner'    => $partenaires,
         'myastroIp'         => $ip,

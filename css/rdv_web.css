@@ -30,16 +30,16 @@
 
 /*buttons*/
 #main_container .action-button {
-    width: 60px;
     background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
     font-weight: bold;
     color: white;
     border: 0 none;
     cursor: pointer;
     padding: 20px;
+    background-position-x: 40px;
 }
 
-#main_container .previous {
+#main_container .previous, #main_container .previousSecond {
     background: url(../images_landing/rdv/prev.png) transparent 0 0 no-repeat;
 }
 
@@ -47,7 +47,7 @@
 
 /*headings*/
 .fs-title {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -144,7 +144,6 @@ td label.default{
 .secureImages {
     clear: right;
     text-align: right;
-    padding: 20px 0 0;
 }
 
 .subfooter{
@@ -173,7 +172,7 @@ body.consultation-en-ligne .main{
     width:100%;
     font-family: open sans;
     clear: both;
-    min-height: 635px;
+    min-height: 450px;
 }
 
 body.consultation-en-ligne .top-nav{
@@ -203,7 +202,8 @@ body.consultation-en-ligne .left-part{
     max-width: 680px;
     width: 100%;
     float: left;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
+    margin-left: 5%;
 }
 
 
@@ -212,6 +212,8 @@ body.consultation-en-ligne .left-part h1{
     color: #b83d56;
     font-size: 25px;
     text-align: center;
+    width: 75%;
+    margin-bottom: 25px
 }
 
 
@@ -271,10 +273,6 @@ body.consultation-en-ligne .right-part .pop{
     margin-top: -30px;
     margin-left: -100px;
     background: #E51E85 none repeat scroll 0% 0%;
-}
-
-body.consultation-en-ligne .right-part form{
-    padding: 0 45px;
 }
 
 
@@ -450,12 +448,22 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 550px) {
 
+    .main-header {
+        /*width: 155%!important;*/
+    }
     .header {
         background: #FFF url("../images_landing/rdv/bg-vm.png") no-repeat  center top !important;
         height: 240px;
-        width: 130%!important;
+        background-size: contain;
     }
 
+    #main_container fieldset {
+        width: 130%;
+        margin-left: 0%!important;
+    }
+    .img-promo {
+        margin-left: 0%!important;
+    }
     .main {
         display: flex;
         flex-direction: column-reverse;
@@ -467,7 +475,7 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
     .right-part {
         position: relative;
-        top: -140px;
+        top: -70px;
     }
 
     .left-part {
@@ -514,25 +522,7 @@ body.consultation-en-ligne .left-part .content .txt-content {
     input,select,textarea{font-size: 16px;}
 
 }
-@media (max-width: 375px) {
-    .header {
-        background: #FFF url("../images_landing/rdv/bg-vm.png") no-repeat  center top !important;
-    }
-    body.consultation-en-ligne .right-part .widget input{
-        max-width: 97%;
-    }
-}
-@media (max-width: 320px) {
-    body.consultation-en-ligne .right-part .widget {
-        width: 97%;
-        padding: 3%;
-        margin-right: 0;
-    }
-    body.consultation-en-ligne .subfooter ul {
-        max-width: 94%;
-        padding-left: 0;
-    }
-}
+
 
 
 /*****************************************************************************************************************/
@@ -567,9 +557,11 @@ input[type=checkbox].ace, input[type=radio].ace {
 
 .FormField-Label {
     display: block;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     font-family: inherit;
-    font-size: 1.6rem
+    font-size: 1.6rem;
+    text-align: left;
+    font-weight: normal;
 }
 
 .FormField-Input {
@@ -649,20 +641,17 @@ select.FormField-Input {
     z-index: 1
 }
 
-.FormField-Label {
-    text-transform: uppercase
-}
 
 .FormField-Label .ico-woman {
     font-size: 1.9rem;
     font-weight: bold;
-    color: #F3AAB4
+    color: #F3AAB4;
 }
 
 .FormField-Label .ico-man {
     font-size: 1.9rem;
     font-weight: bold;
-    color: #3BDBE6
+    color: #3BDBE6;
 }
 
 .FormField-Input {
@@ -720,9 +709,12 @@ input[type="checkbox"], input[type="radio"] {
 /************************ICON Style**************************************************/
 
 .icon-liste li span{
-    padding-left: 10px;
+    padding-left: 5px;
     display: block;
-    margin: 10px;
+    margin: 20px;
+    position: relative;
+    top: -100px;
+    left: 20px;
 }
 
 li.icone-cray{
@@ -753,11 +745,15 @@ p.title-filled {
     color: #fff;
     font-size: larger;
     margin-left: 66px;
+    width: 87%;
 }
 
 .widget .time {
     background: url(../images_landing/rdv/time.png) 0 0 no-repeat;
     height:66px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px
 }
 
 .header {
@@ -784,7 +780,6 @@ p.title-filled {
 .avis {
     max-width: 1120px;
     margin:10px auto;
-    margin-top: 50px
 }
 
 .avis p {
@@ -839,4 +834,22 @@ p.title-filled {
     margin: 0 auto;
     width: 100%;
     clear: both;
+}
+
+li span {
+    position: relative;
+    bottom: 10px;
+}
+
+.img-promo {
+    margin-left: 10%;
+}
+
+#crypto {
+    width: 40%;
+}
+
+.img-crypto {
+    position: relative;
+    top:-40px;
 }
