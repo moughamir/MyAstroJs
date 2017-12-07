@@ -264,7 +264,7 @@ if(empty($err)){
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION                           *
  * ========================================================================== */
-
+$newKgestion = false;
 if(empty($err)){
     $post_data = array(
         'email'             => $email,
@@ -315,7 +315,45 @@ if(empty($err)){
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
             $kgestion_id = $kgestion_insert->id;
+            $newKgestion = $kgestion_insert->new;
         }
+    }
+}
+/* ========================================================================== *
+ *                       RECHERCHE PROSPECT SUR KGESTION                       *
+ * ========================================================================== */
+$repousse = $doublon = $affiliation = 0;
+if($newKgestion) {
+    $searchAffiliation = $kgestion->searchProspectAffiliation($kgestion_id);
+    if($searchAffiliation && $searchAffiliation->doublon > 0){
+        $doublon = 1;
+    }
+    if($searchAffiliation && $searchAffiliation->repousse > 0){
+        $repousse = 1;
+    }
+
+    if($repousse == 0 && $doublon == 0) {
+        $affiliation = 0;
+    }
+    if($repousse == 0 && $doublon == 1) {
+        $affiliation = 1;
+    }
+    if($repousse == 1 && $doublon == 0) {
+        $affiliation = 10;
+    }
+    if($repousse == 1 && $doublon == 1) {
+        $affiliation = 11;
+    }
+
+    $post_data = array(
+        'email'             => $email,
+        'firstName'         => $prenom,
+        'affiliation'       => $affiliation
+    );
+
+    $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
+    if (!$kgestion_update->success){
+        addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' on reinscription > '.json_encode($kgestion_update));
     }
 }
 
@@ -325,18 +363,17 @@ if(empty($err)){
 
 if(empty($err)){
     $conversion = 1;
-    if (!$trouve){ // Nouveau prospect
-        $conversion = 2;
-    } else { // Existe déjà
-        // inscrits il y a plus d'1 mois ?
-        $date_derniere_inscription = date_create_from_format('Y-m-d', $user->questionDate);
-        $date_validite = $date_derniere_inscription->add(new DateInterval('P1M'));
-        $date_jour = new DateTime;
-        if($date_jour->format('Ymd') > $date_validite->format('Ymd')){
+    if($newKgestion) {
+        if ($affiliation == 0){ // Nouveau prospect
             $conversion = 2;
+        } else { // Existe déjà
+            $conversion = 0;
         }
+    } else {
+        $conversion = 0;
     }
-    
+
+
 /* ========================================================================== *
  *                           ENREGISTREMENT MYASTRO                           *
  * ========================================================================== */
@@ -417,7 +454,7 @@ if(empty($err)){
             ['internal_id' => $idindex]
         );
     }
-    
+
     if(!$result){
         addFormLog($bdd, $page, 'ERROR', '[BDD MYASTRO] Erreur > '.$bdd->last_error);
         $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';

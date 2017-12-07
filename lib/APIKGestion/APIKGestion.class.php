@@ -85,7 +85,14 @@ class APIKGestion {
     public function getTracking($id)
     {
         $url = $this::BASE_URL.'client/api/client/tracking/'.$id;
-        
+
+        return $this->request($this::GET, $url);
+    }
+
+    public function searchProspectAffiliation($id)
+    {
+        $url = $this::BASE_URL.'client/api/client/prospect/affiliation/'.$id;
+
         return $this->request($this::GET, $url);
     }
 }
