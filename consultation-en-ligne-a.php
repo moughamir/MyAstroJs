@@ -55,7 +55,6 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 <div class="main-header">
     <div class="header ">
 
-
         <div class="header-content">
             <img src="images_landing/rdv/logo-r.png" alt=""/>
             <span class="header-txt">
@@ -71,36 +70,37 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
         </div>
     </div>
 </div>
+
 <div class="main">
 
     <div class="left-part">
 
         <div class="content">
             <h1>Très simple et rapide où que vous soyez !</h1>
+            <div class="FormField">
+                <div class="FormField-TableInputContainer-Cell">
+                    <img class="img-promo" src="images_landing/rdv/promo.png">
+                </div>
+
+                <div class="FormField-TableInputContainer-Cell">
+                    <ul class="icon-liste">
+                        <li class="icone-cray">
+                            <span>Je remplis le formulaire</span>
+                        </li>
+                        <li class="icone-hand">
+                            <span>je choisis mon RDV</span>
+                        </li>
+                        <li class="icone-screen">
+                            <span>Je reserve en ligne</span>
+                        </li>
+                        <li class="icone-payment">
+                            <span> Le paiment est sécurisé</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="FormField">
-            <div class="FormField-TableInputContainer-Cell">
-                <img class="img-promo" src="images_landing/rdv/promo.png">
-            </div>
-
-            <div class="FormField-TableInputContainer-Cell">
-                <ul class="icon-liste">
-                    <li class="icone-cray">
-                        <span>Je remplis le formulaire</span>
-                    </li>
-                    <li class="icone-hand">
-                        <span>je choisis mon RDV</span>
-                    </li>
-                    <li class="icone-screen">
-                        <span>Je reserve en ligne</span>
-                    </li>
-                    <li class="icone-payment">
-                        <span> Le paiment est sécurisé</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
 
     </div>
 
@@ -115,7 +115,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <form class="ajax">
 
                 <fieldset>
-                    <h2 class="fs-title"> Informations Personnelles! </h2>
+                    <h2 class="fs-title"> Informations personnelles!<span style="padding-bottom: 15px"></h2>
                     <input type="hidden" name="site" value="MyAstro"/>
                     <input type="hidden" name="source" value="consultation-en-ligne-1"/>
                     <input type="hidden" name="method" value="client_web"/>
@@ -245,41 +245,41 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             <input type="text" id="carte_num" name="carte_num" class="FormField-Input js-check-luhn"
                                    required placeholder="Numéro de la carte"/>
                         </div>
-                    <div class="FormField-TableInputContainer-Cell">
-                        <label for="name" class="FormField-Label">Expire Le :</label>
                         <div class="FormField-TableInputContainer-Cell">
-                            <select class="FormField-Input" name="expiration_mois">
-                                <option value="" selected disabled>Mois</option>
-                                <option value="01">Janv.</option>
-                                <option value="02">Fev.</option>
-                                <option value="03">Mars</option>
-                                <option value="04">Avr.</option>
-                                <option value="05">Mai</option>
-                                <option value="06">Juin</option>
-                                <option value="07">Juil.</option>
-                                <option value="08">Aout</option>
-                                <option value="09">Sept.</option>
-                                <option value="10">Oct.</option>
-                                <option value="11">Nov.</option>
-                                <option value="12">Dec.</option>
-                            </select>
+                            <label for="name" class="FormField-Label">Expire Le :</label>
+                            <div class="FormField-TableInputContainer-Cell">
+                                <select class="FormField-Input" name="expiration_mois">
+                                    <option value="" selected disabled>Mois</option>
+                                    <option value="01">Janv.</option>
+                                    <option value="02">Fev.</option>
+                                    <option value="03">Mars</option>
+                                    <option value="04">Avr.</option>
+                                    <option value="05">Mai</option>
+                                    <option value="06">Juin</option>
+                                    <option value="07">Juil.</option>
+                                    <option value="08">Aout</option>
+                                    <option value="09">Sept.</option>
+                                    <option value="10">Oct.</option>
+                                    <option value="11">Nov.</option>
+                                    <option value="12">Dec.</option>
+                                </select>
+                            </div>
+                            <div class="FormField-TableInputContainer-Cell">
+                                <select class="FormField-Input" name="expiration_annee">
+                                    <option value="" selected disabled>Année</option>
+                                    <?php for ($i = 2017; $i <= 2027; $i++) { ?>
+                                        <option value="<?= $i ?>"> <?= $i ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                         </div>
-                        <div class="FormField-TableInputContainer-Cell">
-                            <select class="FormField-Input" name="expiration_annee">
-                                <option value="" selected disabled>Année</option>
-                                <?php for ($i = 2017; $i <= 2027; $i++) { ?>
-                                    <option value="<?= $i ?>"> <?= $i ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
                     </div>
 
                     <div class="FormField-TableInputContainer">
                         <div class="FormField-TableInputContainer-Cell">
                             <label for="name" class="FormField-Label">Cryptogramme de sécurité </label>
                             <input type="text" id="crypto" name="crypto" class="FormField-Input" required/>
-                            <img class="img-crypto" src="../images_landing/rdv/crypto.png" >
+                            <img class="img-crypto" src="../images_landing/rdv/crypto.png">
 
                         </div>
                         <div class="FormField-TableInputContainer-Cell">
@@ -309,7 +309,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 </div>
 
 
-<div class="avis " style="">
+<div class="avis">
 
     <div class="splash-content">
 
@@ -318,42 +318,55 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                 <img src="images_landing/rdv/info.png" alt=""/>
             </div>
             <span class="text-rot">
-                    <span class="textItem">L’horaire c’est vous qui décidez !</span>
-                    <span class="textItem">Nous sommes là pour vous guider, et vous soutenir !</span>
-                    <span class="textItem">Des experts à votre écoute où que vous soyez</span>
-                    <span class="textItem">En toute confiance et confidentialité</span>
-                </span>
+                            <span class="textItem">L’horaire c’est vous qui décidez !</span>
+                            <span class="textItem">Nous sommes là pour vous guider, et vous soutenir !</span>
+                            <span class="textItem">Des experts à votre écoute où que vous soyez</span>
+                            <span class="textItem">En toute confiance et confidentialité</span>
+                        </span>
         </div>
     </div>
-    <img src="images_landing/rdv/bulle-1.png" alt=""/>
-    <img src="images_landing/rdv/bulle-2.png" alt=""/>
-    <img src="images_landing/rdv/bulle-3.png" alt=""/>
+    <div class="img-bulle">
+        <img src="images_landing/rdv/bulle-1.png" alt=""/>
+        <img src="images_landing/rdv/bulle-2.png" alt=""/>
+        <img src="images_landing/rdv/bulle-3.png" alt=""/>
 
-    <div class="avis">
-        <p class="title-filled"> Avis Clients </p>
-        <table>
-            <tr>
-                <td><img src="images_landing/rdv/Ellipse.png" alt=""/>
-                    Marine F. Le 03/11/2017 à 23h56
-                </td>
-                <td bgcolor="white"><img src="images_landing/rdv/stars.png"></td>
-                <td bgcolor="white">Très pratique, un site rapide et de confiance, Merci à Paule de m'avoir écouté je me
-                    sens bien mieux et j'ai beaucoup plus de confiance en moi maintenant je recommande à toutes les
-                    personnes qui ..
-                </td>
-            </tr>
-            <tr>
-                <td><img src="images_landing/rdv/Ellipse.png" alt=""/>
-                    Sandra L. Le 21/10/2017 à 19h32
-                </td>
-                <td bgcolor="white"><img src="images_landing/rdv/stars.png"></td>
-                <td bgcolor="white">J’étais un peu perdu et on m’a recommandé ce site, c’est rapide</td>
-            </tr>
-        </table>
     </div>
-
 </div>
 
+<div class="avis">
+    <p class="title-filled"> Avis Clients </p>
+    <table class="avis-custmer">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td><img class="img-custmer" src="images_landing/rdv/Ellipse.png" alt=""/></td>
+                        <td> Marine F. Le 03/11/2017 à 23h56</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="white fleche"><img class="img-custmer" src="images_landing/rdv/stars.png"></td>
+            <td class="white">Très pratique, un site rapide et de confiance, Merci à Paule de m'avoir écouté je me
+                sens bien mieux et j'ai beaucoup plus de confiance en moi maintenant je recommande à toutes les
+                personnes qui ..
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td><img class="img-custmer" src="images_landing/rdv/Ellipse.png" alt=""/></td>
+                        <td> Sandra L. Le 21/10/2017 à 19h32</td>
+                    </tr>
+                </table>
+            </td>
+            <td class="white fleche"><img class="img-custmer" src="images_landing/rdv/stars.png"></td>
+            <td class="white">J’étais un peu perdu et on m’a recommandé ce site, c’est rapide. je voulais vous dire
+                MERCI car vous m'avez bien aidé, je me sens vraiment apa-isée
+            </td>
+        </tr>
+    </table>
+</div>
 
 <div class="footer">
     <?php include('include/footer_copyright.php'); ?>
