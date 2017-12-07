@@ -163,7 +163,8 @@ if(isset($_SESSION['user_id'])){
 
         <!--Pixel Affiliation -->
         <?php include_once('include/pixels/gpbl.php');?>
-        
+        <?php include_once('include/pixels/adgomedia.php');?>
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
