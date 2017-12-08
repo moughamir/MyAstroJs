@@ -5,7 +5,7 @@ include("include/tracking-mail.php");
  * idcpart = identifiant de compte weedoit
  * reqid = variable ajoutée par Weedoit dans l'URL de la landing
  * idr = paramètre unique qui représente le numéro de transaction, l’identifiant du lead sur votre base.
- */ 
+ */
 $affiliation = $_SESSION['affiliation'];
 $formulaire = $_SESSION['source'];
 $email = $_SESSION['email'];
@@ -18,6 +18,8 @@ if($_SESSION['conversion']==2 && isset($_SESSION['weedoitreqid'])){
     file_put_contents("logs-perso/conversion-".$affiliation.".txt", date("[d/m/Y H:i:s]")." - INFO - Le mail ".$email." existe déjà, le pixel de conversion n'a pas été chargé. Formulaire d'origine : ".$formulaire."\r\n", FILE_APPEND);
 }
 ?>
+
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
     <head>
@@ -39,9 +41,9 @@ if($_SESSION['conversion']==2 && isset($_SESSION['weedoitreqid'])){
     <body class="voyance-telephone-1 dri-3 dri-5">
         <div class="top-nav">
             <div class="nav-content"><div class="links">
-                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | 
-                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | 
-                s<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> |
+                <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> |
+                s<a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
             </div></div>
         </div>
         <div class="main">
@@ -135,7 +137,7 @@ if($_SESSION['conversion']==2 && isset($_SESSION['weedoitreqid'])){
                         </aside>
                     </div>
                     <div class="row row-voyant">
-                        <div class="voyant-membre voyant-merci-voyance">  
+                        <div class="voyant-membre voyant-merci-voyance">
                             <div class="cols4 mg-right"><img src="images_landing/voyants/laura.png" alt="" width="178" height="128" />L<span>aura</span><br/></div>
                             <div class="cols4 mg-right"><img src="images_landing/voyants/pierre.png" alt="" width="178" height="128" />P<span>ierre</span><br/></div>
                             <div class="cols4 mg-right"><img src="images_landing/voyants/claude.png" alt="" width="178" height="128" />C<span>laude</span><br/></div>
@@ -163,11 +165,11 @@ if($_SESSION['conversion']==2 && isset($_SESSION['weedoitreqid'])){
 
         <!-- #### SCRIPTS #### -->
         <script src="js/required.js"></script>
-        
+
         <!-- #### TRACKINGS #### -->
         <?php include('include/remarketing/vps.php');
               include('include/remarketing/analytics.php');
               include('include/remarketing/facebook.php'); ?>
-        
+
     </body>
 </html>

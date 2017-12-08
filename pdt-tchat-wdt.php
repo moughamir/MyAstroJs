@@ -26,6 +26,7 @@ $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>

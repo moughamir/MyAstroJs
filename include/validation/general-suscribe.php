@@ -50,8 +50,8 @@ $regformurl_kgs = isset($param['regurl']) ? $param['regurl'] : '';
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 // ---- TRACKING REFLEX
-$rc_affiliateid = isset($_SESSION['reflexcash_affiliateid']) ? $_SESSION['reflexcash_affiliateid'] : '';
-$rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_source'] : '';
+$rc_affiliateid = isset($_SESSION['reflexcash_affiliateid']) ? $_SESSION['reflexcash_affiliateid'] : (isset($_SESSION['affiliate_id']) ? $_SESSION['affiliate_id']:'');
+$rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_source'] : (isset($_SESSION['affiliate_tracker']) ? $_SESSION['affiliate_tracker']:'');
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');

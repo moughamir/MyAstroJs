@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     -------------------------------------
     --    tarot-wdt = AFFIL3 WEEDOIT   --
     -------------------------------------
@@ -11,19 +11,20 @@
     require_once(realpath('include/tools.php'));
     $_SESSION['weedoitreqid'] = $_GET['reqid'];
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
 	    <title>Tarot gratuit : amour et destin à chaque tirage gratuit | MyAstro</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="images_landing/tarot-sable/favicon.png" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/tarot-sable.css" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,9 +37,9 @@
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL ?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!--
                  --><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                 --><a href="<?= PROTOCOL.'://'.ROOT_URL ?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </nav>
             </div>
         </header>
@@ -190,7 +191,7 @@
                                             <option value="question_24">Vous en aimez un(e) autre</option>
                                             <option value="question_11">Il/Elle vous a quitté</option>
                                         </optgroup>
-                                        <optgroup label="Argent">                          
+                                        <optgroup label="Argent">
                                             <option value="question_73">Vous attendez un investissement</option>
                                         </optgroup>
                                         <optgroup label="Travail">
@@ -238,12 +239,12 @@
             </div>
         </footer>
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw-o.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
