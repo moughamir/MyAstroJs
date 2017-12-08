@@ -11,6 +11,7 @@ $assets = 'images_landing/tarot-tchat';
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
 

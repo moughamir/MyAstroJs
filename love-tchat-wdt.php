@@ -17,6 +17,7 @@ $assets = 'images_landing/love-tchat';
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -45,7 +46,7 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
         <main class="ContentBand">
             <div class="PageWrapper">
                 <section class="section post-test">
-                    
+
                         <p>
                         <span class="animate animate-ltr">Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
                     </span>
@@ -89,7 +90,7 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
-                           
+
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
