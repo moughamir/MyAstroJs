@@ -20,6 +20,7 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>

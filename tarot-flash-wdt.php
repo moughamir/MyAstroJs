@@ -31,6 +31,7 @@ $questions = array(
     )
 );
 ?>
+<?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -56,9 +57,9 @@ $questions = array(
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="<?= PROTOCOL.'://'.ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!--
                  --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </nav>
             </div>
         </header>
