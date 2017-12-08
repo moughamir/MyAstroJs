@@ -269,24 +269,24 @@ $(document).ready(function () {
 
 function setupRotator()
 {
-    if(jQuery('.textItem').length > 1)
+    if($('.textItem').length > 1)
     {
-        jQuery('.textItem:first').addClass('current').slideDown(500);
+        $('.textItem:first').addClass('current').hide().slideDown(500);
         setInterval('textRotate()', 1000);
     }
 }
 
 function textRotate(){
-    var current = jQuery('.text-rot > .current');
+    var current = $('.text-rot > .current');
     if(current.next().length == 0)
     {
         current.removeClass('current').slideUp(100);
-        jQuery('.textItem:first').addClass('current').slideDown(500);
+        $('.textItem:first').addClass('current').slideDown(500);
     }
     else
     {
         current.removeClass('current').slideUp(100);
-        current.next().addClass('current').slideDown(500);
+        current.next().addClass('current').hide().slideDown(500);
     }
 }
 

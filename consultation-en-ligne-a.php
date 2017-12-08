@@ -56,13 +56,14 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <div class="header ">
 
         <div class="header-content">
-            <img src="images_landing/rdv/logo-r.png" alt=""/>
+            <a href="www.myastro.fr">
+            <img src="images_landing/rdv/logo-r.png" alt=""/></a>
             <span class="header-txt">
                     Amour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travail
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments  </span>
             <span class="header-txt" style="margin-top: -20px;">
               &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
-            <ul>
+            <ul class="header-list">
                 <li class="icone-recommanded"><span>Site 100% recommandé </span>
                     <p>
                 <li class="icone-consultation"><span>Consultation en ligne</span></li>
@@ -114,8 +115,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             </div>
             <form class="ajax">
 
-                <fieldset>
-                    <h2 class="fs-title"> Informations personnelles!<span style="padding-bottom: 15px"></h2>
+                <fieldset style="display: none">
+                    <h2 class="fs-title"> Informations personnelles!</h2>
                     <input type="hidden" name="site" value="MyAstro"/>
                     <input type="hidden" name="source" value="consultation-en-ligne-1"/>
                     <input type="hidden" name="method" value="client_web"/>
@@ -154,7 +155,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             <div class="FormField-TableInputContainer">
                                 <div class="FormField-TableInputContainer-Cell">
                                     <select class="FormField-Input" name="jour">
-                                        <option value="" selected disabled>Jour</option>
+                                        <option value="" selected disabled></option>
                                         <?php for ($i = 1; $i <= 31; $i++) { ?>
                                             <option value="<?= $i ?>"> <?= sprintf('%02d', $i) ?></option>
                                         <?php } ?>
@@ -162,7 +163,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 </div>
                                 <div class="FormField-TableInputContainer-Cell">
                                     <select class="FormField-Input" name="mois">
-                                        <option value="" selected disabled>Mois</option>
+                                        <option value="" selected disabled></option>
                                         <option value="01">Janv.</option>
                                         <option value="02">Fev.</option>
                                         <option value="03">Mars</option>
@@ -179,7 +180,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                 </div>
                                 <div class="FormField-TableInputContainer-Cell">
                                     <select class="FormField-Input" name="annee">
-                                        <option selected="selected" value="">Année</option>
+                                        <option selected="selected" value=""></option>
                                         <?php for ($i = date('Y') - 18; $i >= 1900; $i--) { ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>
                                         <?php } ?>
@@ -211,7 +212,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             </form>
 
             <form class="ajax">
-                <fieldset style="display: none" class="planning">
+                <fieldset  class="planning">
 
                     <h2 class="fs-title">Je choisis mon RDV</h2>
                     <input type="hidden" name="method" value="consultation_web"/>
