@@ -452,6 +452,31 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 550px) {
 
+    p.title-filled {
+        font-size: 1.1em!important;
+    }
+    .header-list {
+        margin-top: 15px;
+    }
+
+    li.icone-recommanded span {
+        top: 18px;
+        left: -26px;
+    }
+
+    li.icone-consultation span {
+        top: 15px;
+        left: 20px;
+    }
+    li.icone-recommanded span::before {
+        left: -10px!important;
+        top: -28px!important;
+    }
+
+    li.icone-consultation span::before {
+        left: -47px!important;
+    }
+
     .fs-title::before, .fs-title::after {
         content: url(../images_landing/rdv/line-m.png);
     }
@@ -786,22 +811,30 @@ li.icone-hand span::before {
 }
 
 li.icone-recommanded {
-    list-style-image: url(../images_landing/rdv/stars.png);
+    list-style :none;
 }
-/*
-li.icone-recommanded span::before {
+
+li.icone-recommanded span::before{
     content: url(../images_landing/rdv/stars.png);
     position: absolute;
-    left: -40px;
+    left: -115px;
     top: -5px;
-}*/
+}
+
+li.icone-consultation span::before {
+
+    content: url(../images_landing/rdv/consultation.png);
+    position: absolute;
+    left: -50px;
+    top: -8px;
+}
 
 li.icone-consultation {
-    list-style-image: url(../images_landing/rdv/consultation.png);
+    list-style :none;
 }
 
 li.icone-consultation span {
-    margin-top: -10px;
+    top: 10px;
 }
 
 p.title-filled {
@@ -840,6 +873,7 @@ p.title-filled {
     font-size: 15pt;
     margin-left: 20%;
     max-width: 300px;
+    margin-top: -20px;
 }
 
 .header-content {
@@ -910,7 +944,7 @@ p.title-filled {
 
 li span {
     position: relative;
-    bottom: 10px;
+   /* bottom: 10px;*/
 }
 
 .img-promo {

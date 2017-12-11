@@ -61,7 +61,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <span class="header-txt">
                     Amour &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Travail
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments  </span>
-            <span class="header-txt" style="margin-top: -20px;">
+            <span class="header-txt" >
               &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
             <ul class="header-list">
                 <li class="icone-recommanded"><span>Site 100% recommandé </span>
