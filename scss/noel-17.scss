@@ -50,6 +50,7 @@ body {
 
 .Container {
     background-color: $block-bg;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 630px){
@@ -310,9 +311,6 @@ body {
 
 .Form {
     background: url($noel_aside2) no-repeat top left;
-    label{
-        font-weight: 600;
-    }
 }
 
 .FormContainer {
