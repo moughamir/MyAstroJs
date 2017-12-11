@@ -5,7 +5,7 @@
  * Date: 10/08/17
  * Time: 04:14 م
  */
-
+header('Content-type: text/html');
 
 $kgestion = new APIKGestion;
 

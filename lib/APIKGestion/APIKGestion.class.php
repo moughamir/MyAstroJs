@@ -122,6 +122,6 @@ class APIKGestion {
             $data = array("jour" => $jour ,"periode" => $periode);
         }
 
-        return $this->request($this::POST, $url,$data);
+        return $this->request($this::GET, $url,$data);
     }
 }

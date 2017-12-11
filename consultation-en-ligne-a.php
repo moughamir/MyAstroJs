@@ -1,6 +1,6 @@
 <?php
 require_once(realpath('include/tools.php'));
-include(realpath('rdv_web/planning.php'));
+require_once(realpath('rdv_web/planning.php'));
 
 $questions = array(
     'Amour' => array(
@@ -40,15 +40,15 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <link rel="stylesheet" href="./voyance-gratuite-6_files/bootstrap.min.css">
     <?php include('include/header_inc_landing.php'); ?>
 
-    <!--------------------assets kgestion for displaying planning ----------------------------------------->
+    <!--------------------assets  for displaying planning ----------------------------------------->
 
 
-    <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_3.datepicker_5.css" type="text/css" rel="stylesheet"/>
-    <link href="<?= APIKGestion::BASE_URL ?>css/assets_part_1_bootstrap-datetimepicker.min_13.css" type="text/css"
+    <link href="rdv_web/css/datepicker_5.css" type="text/css" rel="stylesheet"/>
+    <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css"
           rel="stylesheet"/>
-    <link href="<?= APIKGestion::BASE_URL ?>css/main_part_1_6.additionnals_1.css" type="text/css" rel="stylesheet"/>
+    <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
 
-    <!-----------------------end assets kgestion--------------------------------------------------------------------->
+    <!-----------------------end assets --------------------------------------------------------------------->
 
 </head>
 <body class="consultation-en-ligne">
@@ -405,10 +405,10 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 <!-- js scripts kgestion for displaying planning -->
 <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_8.moment_9.js"></script>
-<script type="text/javascript" src="<?= APIKGestion::BASE_URL ?>js/main_part_1_bootstrap-datepicker.min_12.js"></script>
+<script type="text/javascript" src="rdv_web/js/moment_9.js"></script>
+<script type="text/javascript" src="rdv_web/js/bootstrap-datepicker.min_12.js"></script>
 <script type="text/javascript"
-        src="<?= APIKGestion::BASE_URL ?>js/main_part_1_bootstrap-datepicker.translatefr_13.js"></script>
+        src="rdv_web/js/bootstrap-datepicker.translatefr_13.js"></script>
 
 </body>
 </html>
