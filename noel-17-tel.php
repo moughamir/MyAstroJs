@@ -70,13 +70,21 @@
                                 <!-- ########## identification formulaire ########## -->
                                 <input type="hidden" name="save_tel" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
-                                <input type="hidden" name="prenom" value="<?= $prenom ?>" />
                                 <!-- ############################################### -->
+                                <div class="FormField">
+                                    <input type="text" class="FormField-Input" name="prenom" placeholder="Mon prénom" value="<?= $prenom ?>" />
+                                </div>
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
                                 </div>
                                 <div class="FormField">
-                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                    <div class="FormField-TableInputContainer">
+                                        <div class="FormField-TableInputContainer-Cell">
+                                            <label>Votre pays</label>
+                                        </div>
+
+                                        <div class="FormField-TableInputContainer-Cell">
+                                        <select name="pays" id="pays" class="FormField-Input" required>
                                         <option value="" selected>Votre Pays</option>
                                         <option value="BE">Belgique</option>
                                         <option value="CA">Canada</option>
@@ -98,6 +106,8 @@
                                         </optgroup>
                                         <option value="ZZ">Autre</option>
                                     </select>
+                                </div>
+                                </div>
                                 </div>
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />

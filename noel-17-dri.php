@@ -72,7 +72,13 @@
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
                                 </div>
                                 <div class="FormField">
-                                    <select name="pays" id="pays" class="FormField-Input" required>
+                                    <div class="FormField">
+                                        <div class="FormField-TableInputContainer">
+                                            <div class="FormField-TableInputContainer-Cell">
+                                                <label>Votre pays</label>
+                                            </div>
+                                        <div class="FormField-TableInputContainer-Cell">
+                                       <select name="pays" id="pays" class="FormField-Input" required>
                                         <option value="" selected>Votre Pays</option>
                                         <option value="BE">Belgique</option>
                                         <option value="CA">Canada</option>
@@ -94,6 +100,8 @@
                                         </optgroup>
                                         <option value="ZZ">Autre</option>
                                     </select>
+                                </div>
+                                </div>
                                 </div>
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
