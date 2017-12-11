@@ -37,7 +37,7 @@ $how_form : $img_dir + 'form.png';
 $how_phone : $img_dir + 'allo.png';
 /* Palette */
 $txt : #FCFBFB;
-$block-bg : rgba(134, 168, 189, 0.62);
+$block-bg : rgba(134, 168, 189, 0.72);
 $primary: #cf3bed;
 $logo-color: #fff;
 body {
@@ -193,7 +193,17 @@ body {
         }
     }
 }
-
+.twitchy{
+    animation: twitchy 600ms ease 5 both;
+}
+@keyframes twitchy{
+    0%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(1);
+    }
+}
 /* ------------------------------ PRÉSENTATION ------------------------------ */
 
 .Text {
@@ -300,6 +310,9 @@ body {
 
 .Form {
     background: url($noel_aside2) no-repeat top left;
+    label{
+        font-weight: 600;
+    }
 }
 
 .FormContainer {
