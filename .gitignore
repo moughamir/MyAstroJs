@@ -16,3 +16,4 @@ yyadmin/.htaccess
 desktop.ini
 Thumbs.db
 .htpasswd
+.php_cs.cache
