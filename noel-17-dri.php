@@ -65,7 +65,9 @@
                             </p>
                                 <?php } ?>
                             <div class="FormContainer-Fields">
-                                <input type="hidden" name="prenom" value="<?= $prenom ?>" />
+                                <div class="FormField">
+                                    <input type="text" class="FormField-Input" name="prenom" placeholder="Mon prénom" value="<?= $prenom ?>" />
+                                </div>
                                 <div class="FormField">
                                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required />
                                 </div>
@@ -76,7 +78,7 @@
                                         <option value="CA">Canada</option>
                                         <option value="LU">Luxembourg</option>
                                         <option value="CH">Suisse</option>
-                                        <option value="FR" selected>France Métropolitaine</option>
+                                        <option value="FR">France Métropolitaine</option>
                                         <optgroup label="DOM-TOM">
                                             <option value="MQ">Martinique</option>
                                             <option value="GP">Guadeloupe</option>
