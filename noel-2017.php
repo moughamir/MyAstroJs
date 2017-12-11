@@ -109,7 +109,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="site" value="myastro.fr"/>
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="gclid" value="<?= $gclid;?>" />
-                                <input type="hidden" name="dri" value="noel-17-tel"/>
+                                <input type="hidden" name="dri" value="noel-2017-tel"/>
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <input type="hidden" name="cguv" value="1" />
