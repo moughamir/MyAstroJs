@@ -1,10 +1,10 @@
 <?php
-$form = 'noel-17';
+$form = 'noel-2017';
 include('include/init-affilbase.php');
 
 $cards_dir = 'tarot/cartes/original-grand/';
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
-$question = ['code'=>'tarot_noel16', 'subject'=>'evenement', 'text'=>'Tarot de Noël 2017'];
+$question = ['code'=>'tarot_noel17', 'subject'=>'evenement', 'text'=>'Tarot de Noël 2017'];
 
 // Form Vars
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
