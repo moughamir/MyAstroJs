@@ -273,6 +273,7 @@ function setupRotator()
     {
         $('.textItem:first').addClass('current').hide().slideDown(500);
         setInterval('textRotate()', 1000);
+        setInterval('imgAnim()', 1000);
     }
 }
 
@@ -282,6 +283,20 @@ function textRotate(){
     {
         current.removeClass('current').slideUp(100);
         $('.textItem:first').addClass('current').slideDown(500);
+    }
+    else
+    {
+        current.removeClass('current').slideUp(100);
+        current.next().addClass('current').hide().slideDown(500);
+    }
+}
+
+function imgAnim(){
+    var current = $('.img-rot > .current');
+    if(current.next().length == 0)
+    {
+        current.removeClass('current').slideUp(100);
+        $('.imgItem:first').addClass('current').slideDown(500);
     }
     else
     {

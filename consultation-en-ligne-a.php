@@ -66,8 +66,13 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <ul class="header-list">
                 <li class="icone-recommanded"><span>Site 100% recommandé </span>
                     <p>
-                <li class="icone-consultation"><span>Consultation en ligne</span></li>
+                <li class="icone-consultation"><span>Consultation par telephone</span></li>
             </ul>
+        </div>
+    </div>
+    <div class="menu-rdv" >
+        <div class="menu-content" >
+        <a href="#"> <span class="active">PRENDRE RDV EN LIGNE</span></a> <a href="#"><span>TCHAT EN LIGNE</span></a> <a href="#"><span>TIRAGE DE TAROT</span></a>
         </div>
     </div>
 </div>
@@ -80,7 +85,17 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <h1>Très simple et rapide où que vous soyez !</h1>
             <div class="FormField">
                 <div class="FormField-TableInputContainer-Cell">
-                    <img class="img-promo" src="images_landing/rdv/promo.png">
+                    <img class="img-promo" src="images_landing/rdv/promo_2.png">
+
+                    <div class="img-rot euro">
+
+                     <span class="imgItem">
+                      <img src="images_landing/rdv/euro-bis.png">  </span>
+                      <span class="imgItem">
+                      <img src="images_landing/rdv/euro-bis-2.png">
+                      </span>
+
+                     </div>
                 </div>
 
                 <div class="FormField-TableInputContainer-Cell">
@@ -225,7 +240,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="button" name="next" class="nextSecond action-button" value="Suivant">
                 </fieldset>
                 <fieldset style="display: none">
-
+                    <p class="euro-min">1 EURO POUR 10 MINUTES</p>
                     <h2 class="fs-title">Coordonnées bancaires</h2>
                     <h3 class="fs-subtitle"></h3>
                     <label for="name" class="FormField-Label">Nom du propriétaire de la carte</label>
@@ -323,7 +338,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             <span class="textItem">Nous sommes là pour vous guider, et vous soutenir !</span>
                             <span class="textItem">Des experts à votre écoute où que vous soyez</span>
                             <span class="textItem">En toute confiance et confidentialité</span>
-                        </span>
+            </span>
         </div>
     </div>
     <div class="img-bulle">
