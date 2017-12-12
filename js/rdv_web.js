@@ -110,7 +110,7 @@ $(document).ready(function () {
         current_fs.animate({opacity: 0}, {
             step: function(now, mx) {
                 scale = 1 - (1 - now) * 0.2;
-                left = (now * 50)+"%";
+                left = 0+"%";
                 opacity = 1 - now;
                 current_fs.css({'transform': 'scale('+scale+')'});
                 next_fs.css({'left': left, 'opacity': opacity});
@@ -135,10 +135,10 @@ $(document).ready(function () {
         current_fs.animate({opacity: 0}, {
             step: function(now, mx) {
                 scale = 1 - (1 - now) * 0.2;
-                left = (now * 50)+"%";
+                left = 0+"%";
                 opacity = 1 - now;
                 current_fs.css({'transform': 'scale('+scale+')'});
-                next_fs.css({'left': '10%', 'opacity': opacity});
+                next_fs.css({'left': left, 'opacity': opacity});
             },
             duration: 800,
             complete: function(){
@@ -162,7 +162,7 @@ $(document).ready(function () {
         current_fs.animate({opacity: 0}, {
             step: function(now, mx) {
                 scale = 0.8 + (1 - now) * 0.2;
-                left = ((1-now) * 50)+"%";
+                left = 0+"%";
                 opacity = 1 - now;
                 current_fs.css({'left': left});
                 previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
@@ -189,7 +189,7 @@ $(document).ready(function () {
         current_fs.animate({opacity: 0}, {
             step: function(now, mx) {
                 scale = 0.8 + (1 - now) * 0.2;
-                left = ((1-now) * 50)+"%";
+                left = 0+"%";
                 opacity = 1 - now;
                 current_fs.css({'left': left});
                 previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
@@ -304,5 +304,6 @@ function imgAnim(){
         current.next().addClass('current').hide().slideDown(500);
     }
 }
+
 
 

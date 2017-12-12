@@ -357,7 +357,7 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 }
 
-@media (max-width: 980px) {
+@media (max-width: 991px) {
 
     body.consultation-en-ligne .main {
         background: none;
@@ -441,8 +441,12 @@ body.consultation-en-ligne .left-part .content .txt-content {
         max-width: 85px !important;
         margin-left: 10px !important;
     }
+
     .icon-liste li {
         top:0px!important;
+    }
+    .menuh-content {
+        width: 53%!important;
     }
 
 }
@@ -454,17 +458,88 @@ body.consultation-en-ligne .left-part .content .txt-content {
         margin-left: 10px !important;
     }
 
+    p.title-filled {
+        font-size: 0.9em!important;
+    }
+
+    .menuh-content {
+        width: 60%!important;
+    }
 }
 
-@media (max-width: 650px) and (min-width: 400px) {
+@media (max-width: 767px) and (min-width: 550px) {
+
+    .avis img {
+        max-width: 170px !important;
+        margin-left: 10px !important;
+    }
+
+    .img-promo {
+        max-width: 220px !important;
+    }
+
+    body.consultation-en-ligne .left-part h1 {
+        font-size: 2.3em!important;
+    }
+
+    .menuh-content {
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 400px) {
 
     .avis img {
         max-width: 120px !important;
         margin-left: 10px !important;;
     }
+
+    .img-promo {
+        max-width: 160px !important;
+    }
+
+    .menuh-content {
+        width: 70%!important;
+    }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 767px) {
+
+    .menuh-content {
+        background: #b83d56!important;
+    }
+    .header-btn {
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 80px;
+        display: block!important;
+    }
+
+    .header-btn .btn-filled {
+        background: #b83d56;
+        padding: 5px;
+        border-radius: 20px;
+        color: #fff;
+        width: 70px;
+    }
+
+    .menu-vm {
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    .menu-vm a {
+        color: #fff;
+    }
+
+    .menuh-content .close{
+        font-size: 7em!important;
+        color: #ffffff!important;
+    }
+
+    .info-img img {
+      max-width: 25px!important;
+     }
 
     .menu-rdv {
         display: none;
@@ -532,9 +607,6 @@ body.consultation-en-ligne .left-part .content .txt-content {
         white-space: normal !important;;
     }
 
-    .img-promo {
-        max-width: 160px !important;
-    }
 
     .imgItem img{
         max-width: 30px!important;
@@ -1068,7 +1140,7 @@ select.form-control {
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
 
- border: 1px solid #22424d!important;
+ border: 1px solid #8babab!important;
 }
 
 /***************************MENU *************************************/
@@ -1108,8 +1180,16 @@ select.form-control {
 }
 
 .euro {
-
     position: relative;
     top: -8em;
     left: -1em;
 }
+
+
+/***********************MENU MOBILE *************************/
+
+.header-btn {
+
+    display: none;
+}
+

@@ -37,7 +37,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/rdv_web.css"/>
-    <link rel="stylesheet" href="./voyance-gratuite-6_files/bootstrap.min.css">
+    <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
     <?php include('include/header_inc_landing.php'); ?>
 
     <!--------------------assets  for displaying planning ----------------------------------------->
@@ -69,10 +69,17 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                 <li class="icone-consultation"><span>Consultation par telephone</span></li>
             </ul>
         </div>
+        <div class="header-btn">
+        <button  type="button" class="btn-filled" data-toggle="modal" data-target="#menuModal"></button>
+        <button  type="button" class="btn-filled" data-toggle="modal" data-target="#menuModal"></button>
+        <button  type="button" class="btn-filled" data-toggle="modal" data-target="#menuModal"></button>
+        </div>
     </div>
     <div class="menu-rdv" >
         <div class="menu-content" >
-        <a href="#"> <span class="active">PRENDRE RDV EN LIGNE</span></a> <a href="#"><span>TCHAT EN LIGNE</span></a> <a href="#"><span>TIRAGE DE TAROT</span></a>
+        <a href="#"> <span class="active">PRENDRE RDV EN LIGNE</span></a>
+        <a href="#"><span>TCHAT EN LIGNE</span></a>
+        <a href="#"><span>TIRAGE DE TAROT</span></a>
         </div>
     </div>
 </div>
@@ -227,7 +234,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             </form>
 
             <form class="ajax">
-                <fieldset style="display: none" class="planning">
+                <fieldset style="display: none" class="planning" id="planning">
 
                     <h2 class="fs-title">Je choisis mon RDV</h2>
                     <input type="hidden" name="method" value="consultation_web"/>
@@ -388,6 +395,28 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <?php include('include/footer_copyright.php'); ?>
 </div>
 
+<div id="menuModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content menuh-content" >
+            <div class="modal-header-menu">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="menu-vm-content" >
+                    <div class="menu-vm" ><a href="#"> <span >PRENDRE RDV EN LIGNE</span></a></div>
+                    <hr>
+                    <div class="menu-vm"><a href="#"><span>TCHAT EN LIGNE</span></a></div>
+                    <hr>
+                    <div class="menu-vm" > <a href="#"><span>TIRAGE DE TAROT</span></a></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
 <!-- ### Ressources CSS à charger en dernier ### -->
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 <!-- New Remarketing tags -->
