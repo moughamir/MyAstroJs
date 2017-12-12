@@ -194,16 +194,12 @@ body {
         }
     }
 }
-.twitchy{
-    animation: twitchy 600ms ease 5 both;
-}
-@keyframes twitchy{
-    0%{
-        @include opacity(0);
-    }
-    100%{
-        @include opacity(1);
-    }
+.twitchy {
+   @include shake();
+        &:hover {
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+        } 
 }
 /* ------------------------------ PRÉSENTATION ------------------------------ */
 
