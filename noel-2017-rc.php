@@ -1,6 +1,6 @@
 <?php
-$form = 'noel-2017';
-include('include/init-affilbase.php');
+$form = $url= 'noel-2017-rc';
+$source = "reflexcash";
 
 $cards_dir = 'tarot/cartes/original-grand/';
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'interpretation', 'leader', 'paiement-secure' ];
@@ -9,6 +9,11 @@ $question = ['code'=>'tarot_noel17', 'subject'=>'evenement', 'text'=>'Tarot de N
 // Form Vars
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+
+session_start();
+$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -108,8 +113,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="support" value="tarot"/>
                                 <input type="hidden" name="site" value="myastro.fr"/>
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
-                                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                 <input type="hidden" name="dri" value="noel-2017-tel"/>
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <input type="hidden" name="cguv" value="1" />
