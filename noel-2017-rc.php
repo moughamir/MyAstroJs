@@ -56,7 +56,7 @@ $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
                     <p class="Text-Title">Noël…</p>
                     <p class="Text-Subtitle">La fête, des cadeaux, la convivialité…</p>
                     <p class="Text-Content">Noël, c’est surtout le mois de Décembre, le dernier mois de 2017, le mois qui clôture votre année ! Plus que quelques jours, quelques heures, une ultime occasion qui s’offre à vous pour donner à 2018 la saveur que vous souhaitez.</p>
-                    <p class="Text-Content Italic">Que vont vous réserver les derniers instants de 2018 ? Que va-t- il se passer pour vous en cette fin d’année ? Comment bien débuter 2018 ? Que faire pour que cette nouvelle année soit meilleure que la précédente ?</p>
+                    <p class="Text-Content Italic">Que vont vous réserver les derniers instants de 2017 ? Que va-t- il se passer pour vous en cette fin d’année ? Comment bien débuter 2018 ? Que faire pour que cette nouvelle année soit meilleure que la précédente ?</p>
                     <p class="Text-Subtitle">Profitez du <strong>Tarot de Noël</strong> pour avoir toutes vos réponses, tirez les cartes ci-après :</p>
                     <button class="Button Text-Button" id="cta-scn-text">Je tire les cartes</button>
                 </section>
