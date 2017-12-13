@@ -449,6 +449,14 @@ body.consultation-en-ligne .left-part .content .txt-content {
         width: 53%!important;
     }
 
+    .info-img img {
+        margin-top: 50px;
+    }
+
+    .header-btn {
+        top:-10px!important;
+    }
+
 }
 
 @media (max-width: 430px) and (min-width: 340px) {
