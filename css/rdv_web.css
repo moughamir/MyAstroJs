@@ -1,4 +1,6 @@
 /*form styles*/
+
+
 #main_container {
     margin: 5px auto;
     text-align: center;
@@ -170,9 +172,9 @@ body.consultation-en-ligne .right-part {
 }
 
 body.consultation-en-ligne {
-    /*background: url('../images_landing/bg-landing-voyance-gratuite.jpg') no-repeat center top #fff;*/
-    background: url('../images_landing/rdv/bg-consultatione-en-ligne.png') no-repeat center top #fff;
+    background: url('../images_landing/rdv/bg-consultatione-en-ligne.jpg') no-repeat center top #fff;
     margin: 0;
+    font-family: "Open Sans" ;
 }
 
 body.consultation-en-ligne .main {
@@ -359,6 +361,10 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 991px) {
 
+    .header-txt {
+        font-size: 13pt!important;
+    }
+
     body.consultation-en-ligne .main {
         background: none;
     }
@@ -412,8 +418,11 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 780px) {
 
+    li.icone-consultation span {
+        left:50px;
+    }
     .header-txt {
-       display: none;
+        font-size: 11pt!important;
     }
 
     .icon-liste li span {
@@ -429,7 +438,7 @@ body.consultation-en-ligne .left-part .content .txt-content {
     }
 
     .header-content {
-        max-width: 400px !important;
+        max-width: 450px !important;
     }
 
 
@@ -477,9 +486,11 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 767px) and (min-width: 550px) {
 
+
     .avis img {
         max-width: 170px !important;
-        margin-left: 10px !important;
+        margin-left: 20px !important;
+        margin-top: 50px;
     }
 
     .img-promo {
@@ -513,6 +524,13 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
 @media (max-width: 767px) {
 
+    .textItem {
+        margin-left: 10%;
+     }
+
+    .header-txt {
+        display: none;
+    }
     .menuh-content {
         background: #b83d56!important;
     }
@@ -541,8 +559,9 @@ body.consultation-en-ligne .left-part .content .txt-content {
     }
 
     .menuh-content .close{
-        font-size: 7em!important;
+        font-size: 10em!important;
         color: #ffffff!important;
+        margin-top: -24px;
     }
 
     .info-img img {
@@ -566,12 +585,12 @@ body.consultation-en-ligne .left-part .content .txt-content {
 
     li.icone-recommanded span {
         top: 18px;
-        left: -26px!important;
+        left: 0px!important;
     }
 
     li.icone-consultation span {
-        top: 15px;
-        left: 20px;
+        top: 19px;
+        left: 40px;
         float: none!important;
     }
     li.icone-recommanded span::before {
@@ -942,7 +961,7 @@ li.icone-consultation {
 
 li.icone-recommanded span {
     top: 25px;
-    left:4em;
+    left:7em;
 }
 
 li.icone-consultation span {
@@ -982,8 +1001,8 @@ p.title-filled {
 }
 
 .header-txt {
-    font-family: Courgette-Reg;
-    font-size: 15pt;
+    font-family: Courgette;
+    font-size: 14pt;
     margin-left: 20%;
     max-width: 300px;
     margin-top: -20px;
@@ -1198,6 +1217,10 @@ select.form-control {
 
 .header-btn {
 
-    display: none;
+   display: none;
 }
 
+.menuh-content .modal-header {
+  padding: 0px!important;
+  border-bottom: none!important;
+}

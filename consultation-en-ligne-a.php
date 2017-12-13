@@ -38,10 +38,10 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/rdv_web.css"/>
     <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
     <?php include('include/header_inc_landing.php'); ?>
 
     <!--------------------assets  for displaying planning ----------------------------------------->
-
 
     <link href="rdv_web/css/datepicker_5.css" type="text/css" rel="stylesheet"/>
     <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css"
@@ -63,9 +63,9 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                         &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Sentiments  </span>
             <span class="header-txt" >
               &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
-            <ul class="header-list">
-                <li class="icone-recommanded"><span>Site 100% recommandé </span>
-                    <p>
+
+            <p class="header-list">
+                <li class="icone-recommanded"><span>Site 100% recommandé </span><p>
                 <li class="icone-consultation"><span>Consultation par telephone</span></li>
             </ul>
         </div>
@@ -385,7 +385,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             </td>
             <td class="white fleche"><img class="img-custmer" src="images_landing/rdv/stars.png"></td>
             <td class="white">J’étais un peu perdu et on m’a recommandé ce site, c’est rapide. je voulais vous dire
-                MERCI car vous m'avez bien aidé, je me sens vraiment apa-isée
+                MERCI car vous m'avez bien aidé, je me sens vraiment apaisée
             </td>
         </tr>
     </table>
@@ -400,10 +400,11 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
         <!-- Modal content-->
         <div class="modal-content menuh-content" >
-            <div class="modal-header-menu">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-header">
             </div>
             <div class="modal-body">
+                <a id="close-btn" href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
+
                 <div class="menu-vm-content" >
                     <div class="menu-vm" ><a href="#"> <span >PRENDRE RDV EN LIGNE</span></a></div>
                     <hr>

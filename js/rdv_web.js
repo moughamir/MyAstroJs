@@ -255,15 +255,12 @@ $(document).ready(function () {
     });
 
 
-    $("#planning_selection .primary .indicateur").each(function () {
-
-       /* $(this).parent().parent().css("background","#1871b9");
-        $(this).parent().parent().css("color","#fff");*/
-
-    });
-
 
     setupRotator();
+
+    $("#close-btn").click(function () {
+        $("#menuModal").modal("hide");
+    });
 
 });
 
