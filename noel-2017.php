@@ -87,7 +87,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                         <div class="WidgetTarot-Card place" data-number="<?= $i ?>"></div>
                         <?php } ?>
                     </article>
-                    <button class="Button Tarot-Button" id="cta-scn-tarot">Voir mon interprétation</button>
+                    <button class="Button Tarot-Button twitchy" id="cta-scn-tarot">Voir mon interprétation</button>
                 </section>
 <!-- ----------------------------- FORMULAIRE ------------------------------ -->
                 <section class="Form" id="scn-form" style="display: none;">
