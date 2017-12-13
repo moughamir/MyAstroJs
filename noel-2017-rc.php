@@ -114,6 +114,7 @@ $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
                                 <input type="hidden" name="site" value="myastro.fr"/>
                                 <input type="hidden" name="affiliation" value="<?= $source;?>" />
                                 <input type="hidden" name="dri" value="noel-2017-tel"/>
+                                <input type="hidden" name="convertir" value="1" />
                                 <!-- ########## autres champs pré-remplis ########## -->
                                 <input type="hidden" name="question_code" value="<?= str_replace('"', "'", json_encode($question)) ?>" />
                                 <input type="hidden" name="cguv" value="1" />
