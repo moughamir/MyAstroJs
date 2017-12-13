@@ -1,5 +1,17 @@
 @charset "UTF-8";
+// Pallete
+$primary: #f90e45;
+$grey: #454545;
+$headline: #fff;
+// Font Face
+$ff-primary:'Oswald', sans-serif;
+$ff-secondary: 'Open Sans', sans-serif;
+//
 $assets: '/images_landing/grande-voyance/18/';
+//
+html{
+  font-size: 16px;
+}
 body {
   background: #784e69 url($assets + 'bg.jpg') no-repeat top center;
   background-size: cover;
@@ -37,13 +49,31 @@ body {
 
 .page {
   &-header {
+    font-family: $ff-primary;
     grid-area: header;
     .title{
       text-align: center;
+      color: $primary;
+      font-size: 3.188rem;
+      margin: 0;
+    }
+    .headline{
+      color: $headline;
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
     }
   }
 }
-
+.article{
+  &-container{
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 7;
+  }
+}
 .scroll {
   display: block;
   background: url($assets + 'scroll.png') center no-repeat;
