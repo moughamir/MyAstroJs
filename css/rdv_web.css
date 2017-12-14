@@ -994,7 +994,7 @@ p.title-filled {
 }
 
 .header {
-    background: url(../images_landing/rdv/header.png) 0 0 no-repeat;
+    background: url(../images_landing/rdv/header.png) 15px 0 no-repeat;
     height: 240px;
     width: 100%;
     background-size: contain
@@ -1017,7 +1017,7 @@ p.title-filled {
 
 .avis {
     max-width: 1120px;
-    margin: 0px auto;
+    margin: 50px auto;
 }
 
 .avis p {
@@ -1027,7 +1027,8 @@ p.title-filled {
 }
 
 .avis img {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
+    margin-left: 2em;
     max-width: 300px;
 }
 
@@ -1049,11 +1050,16 @@ p.title-filled {
     left: 20%;
 }
 
-.textItem,.imgItem {
+.textItem {
     position: absolute;
     display: none;
     padding-left: 15px;
 
+}
+
+.imgItem {
+    position: absolute;
+    padding-left: 15px;
 }
 
 .textItem.current,.imgItem.current {
@@ -1068,7 +1074,7 @@ p.title-filled {
 }
 
 .main-header {
-    max-width: 1224px;
+    max-width: 1271px;
     margin: 0 auto;
     width: 100%;
     clear: both;
@@ -1175,10 +1181,34 @@ select.form-control {
 .menu-rdv {
     background: #b83d56;
     padding: 10px;
+    margin-top: -8px;
 }
 
 .menu-content {
-    margin-left: 20%
+  text-align: center;
+}
+
+.menu-content a#tchat-online ,.menu-content a#tarot ,.menu-vm a{
+    color: #ffffff!important;
+}
+
+.menu-content a:hover,.menu-content a:active{
+    text-decoration: none!important;
+}
+
+.menu-vm a:hover,.menu-vm a:active {
+    text-decoration: none!important;
+    font-weight: bold!important;
+}
+
+.menu-content a#tchat-online:hover  span,.menu-content a#tchat-online:active span {
+    color: #ffffff!important;
+    text-decoration: none!important;
+}
+
+.menu-content a#tarot:hover span,.menu-content a#tarot:active span{
+    color: #ffffff!important;
+    text-decoration: none!important;
 }
 
 .menu-content span {
@@ -1195,7 +1225,7 @@ select.form-control {
 }
 
 .header-list {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .euro-min {
@@ -1208,7 +1238,7 @@ select.form-control {
 
 .euro {
     position: relative;
-    top: -8em;
+    top: -7em;
     left: -1em;
 }
 
@@ -1223,4 +1253,12 @@ select.form-control {
 .menuh-content .modal-header {
   padding: 0px!important;
   border-bottom: none!important;
+}
+
+/*********************SLIDER  *****/
+
+.splash-msg .flexslider {
+    background: none!important;
+    border: none!important;
+    margin: 0!important;
 }

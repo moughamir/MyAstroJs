@@ -47,13 +47,14 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css"
           rel="stylesheet"/>
     <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.4/flexslider.min.css" type="text/css" rel="stylesheet"/>
 
     <!-----------------------end assets --------------------------------------------------------------------->
 
 </head>
 <body class="consultation-en-ligne">
 <div class="main-header">
-    <div class="header ">
+    <div class="header">
 
         <div class="header-content">
             <a href="www.myastro.fr">
@@ -64,7 +65,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <span class="header-txt" >
               &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Famille &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Argent </span>
 
-            <p class="header-list">
+            <ul class="header-list">
                 <li class="icone-recommanded"><span>Site 100% recommandé </span><p>
                 <li class="icone-consultation"><span>Consultation par telephone</span></li>
             </ul>
@@ -78,8 +79,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <div class="menu-rdv" >
         <div class="menu-content" >
         <a href="#"> <span class="active">PRENDRE RDV EN LIGNE</span></a>
-        <a href="#"><span>TCHAT EN LIGNE</span></a>
-        <a href="#"><span>TIRAGE DE TAROT</span></a>
+        <a href="#" id="tchat-online"><span>TCHAT EN LIGNE</span></a>
+        <a href="#" id="tarot"><span>TIRAGE DE TAROT</span></a>
         </div>
     </div>
 </div>
@@ -97,11 +98,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <div class="img-rot euro">
 
                      <span class="imgItem">
-                      <img src="images_landing/rdv/euro-bis.png">  </span>
-                      <span class="imgItem">
-                      <img src="images_landing/rdv/euro-bis-2.png">
-                      </span>
-
+                       <img src="images_landing/rdv/piece-de-monnaie.gif">
+                     </span>
                      </div>
                 </div>
 
@@ -334,18 +332,20 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 <div class="avis">
 
-    <div class="splash-content">
+   <div class="splash-content">
 
         <div class="splash-msg">
             <div class="info-img">
                 <img src="images_landing/rdv/info.png" alt=""/>
             </div>
-            <span class="text-rot">
-                            <span class="textItem">L’horaire c’est vous qui décidez !</span>
-                            <span class="textItem">Nous sommes là pour vous guider, et vous soutenir !</span>
-                            <span class="textItem">Des experts à votre écoute où que vous soyez</span>
-                            <span class="textItem">En toute confiance et confidentialité</span>
-            </span>
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><span >L’horaire c’est vous qui décidez !</span></li>
+                    <li><span >Nous sommes là pour vous guider, et vous soutenir !</span></li>
+                    <li> <span >Des experts à votre écoute où que vous soyez</span></li>
+                    <li><span >En toute confiance et confidentialité</span></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="img-bulle">
@@ -406,11 +406,11 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                 <a id="close-btn" href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
 
                 <div class="menu-vm-content" >
-                    <div class="menu-vm" ><a href="#"> <span >PRENDRE RDV EN LIGNE</span></a></div>
+                    <div class="menu-vm" class="active"><a href="#"> <span >PRENDRE RDV EN LIGNE</span></a></div>
                     <hr>
-                    <div class="menu-vm"><a href="#"><span>TCHAT EN LIGNE</span></a></div>
+                    <div class="menu-vm" ><a id="tchat-online" href="#"><span>TCHAT EN LIGNE</span></a></div>
                     <hr>
-                    <div class="menu-vm" > <a href="#"><span>TIRAGE DE TAROT</span></a></div>
+                    <div class="menu-vm" > <a id="tarot" href="#"><span>TIRAGE DE TAROT</span></a></div>
                 </div>
             </div>
 
@@ -446,6 +446,8 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 <script src="js/formValidator.js"></script>
 <!-- jQuery easing plugin -->
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.4/jquery.flexslider-min.js"></script>
+
 <script src="js/rdv_web.js"></script>
 
 <!-- js scripts kgestion for displaying planning -->

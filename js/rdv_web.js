@@ -254,53 +254,21 @@ $(document).ready(function () {
         });
     });
 
+    $('.flexslider').flexslider({
+        animation: "slide",
+        directionNav: false,
+        controlNav: false,
+    });
 
-
-    setupRotator();
+    $("#tchat-online,#tarot").on("click",function () {
+     $(this).find("span").addClass("active").css("text-decoration","none");
+    });
 
     $("#close-btn").click(function () {
         $("#menuModal").modal("hide");
     });
 
 });
-
-function setupRotator()
-{
-    if($('.textItem').length > 1)
-    {
-        $('.textItem:first').addClass('current').hide().slideDown(500);
-        setInterval('textRotate()', 1000);
-        setInterval('imgAnim()', 1000);
-    }
-}
-
-function textRotate(){
-    var current = $('.text-rot > .current');
-    if(current.next().length == 0)
-    {
-        current.removeClass('current').slideUp(100);
-        $('.textItem:first').addClass('current').slideDown(500);
-    }
-    else
-    {
-        current.removeClass('current').slideUp(100);
-        current.next().addClass('current').hide().slideDown(500);
-    }
-}
-
-function imgAnim(){
-    var current = $('.img-rot > .current');
-    if(current.next().length == 0)
-    {
-        current.removeClass('current').slideUp(100);
-        $('.imgItem:first').addClass('current').slideDown(500);
-    }
-    else
-    {
-        current.removeClass('current').slideUp(100);
-        current.next().addClass('current').hide().slideDown(500);
-    }
-}
 
 
 
