@@ -93,14 +93,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <h1>Très simple et rapide où que vous soyez !</h1>
             <div class="FormField">
                 <div class="FormField-TableInputContainer-Cell">
-                    <img class="img-promo" src="images_landing/rdv/promo_2.png">
-
-                    <div class="img-rot euro">
-
-                     <span class="imgItem">
-                       <img src="images_landing/rdv/piece-de-monnaie.gif">
-                     </span>
-                     </div>
+                    <img class="img-promo" src="images_landing/rdv/piece-de-monnaie.gif">
                 </div>
 
                 <div class="FormField-TableInputContainer-Cell">

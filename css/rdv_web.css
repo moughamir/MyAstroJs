@@ -700,9 +700,6 @@ body.consultation-en-ligne .left-part .content .txt-content {
         max-width: 100%!important;
 
     }
-    .info-img {
-        margin-left: 9em!important;
-    }
 
 }
 
@@ -1047,7 +1044,7 @@ p.title-filled {
     line-height: 1.5;
     position: relative;
     bottom: 40px;
-    left: 20%;
+    text-align: center;
 }
 
 .textItem {
@@ -1069,7 +1066,7 @@ p.title-filled {
 
 .info-img {
 
-    margin-left: 6em;
+    /*margin-left: 6em;*/
     margin-bottom: 10px;
 }
 
