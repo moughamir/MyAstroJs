@@ -110,7 +110,6 @@ if(isset($_POST) && $_POST['data'] != null){
             $redirect_url = $dri2;
         }
 
-        //$redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
         $redirect_url = 'http://'.ROOT_URL.'/'.$redirect_url;
 
         die(json_encode(array('url' => $redirect_url)));

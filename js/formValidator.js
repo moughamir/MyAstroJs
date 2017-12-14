@@ -164,8 +164,6 @@ $(document).ready(function(){
 
                     if (!use_modal){
                         form_overlay.html(msg_done);
-                        console.log("form_overlay.html");
-
                     } else {
                         $('#modal').html(msg_done);
                         $('#modal').modal('show');

@@ -6,7 +6,6 @@
  */
 class APIKGestion {
     
-   // const BASE_URL = 'https://kgestion.dev.zol.fr/';
     const BASE_URL = 'https://kgestion.kg-com.fr/';
     const GET = 'GET';
     const POST = 'POST';
@@ -67,21 +66,18 @@ class APIKGestion {
     
     public function insertUser($data)
     {
-        //$url = $this::BASE_URL.'app_dev.php/client/api/client';
         $url = $this::BASE_URL.'client/api/client';
         return $this->request($this::POST, $url, $data);
     }
 
     public function insertOnlineRDV($data)
     {
-        //$url = $this::BASE_URL.'app_dev.php/client/api/client/onlineRdv';
         $url = $this::BASE_URL.'client/api/client/onlineRdv';
         return $this->request($this::POST, $url, $data);
     }
 
     public function insertUserDRI($data)
     {
-        //$url = $this::BASE_URL.'app_dev.php/client/api/client/dri';
         $url = $this::BASE_URL.'client/api/client/dri';
         return $this->request($this::POST, $url, $data);
     }
@@ -115,7 +111,6 @@ class APIKGestion {
 
     public function getPlanningSelection($jour = null,$periode = null)
     {
-        //$url = $this::BASE_URL."app_dev.php/client/api/client/planningSelection";
         $url = $this::BASE_URL."client/api/client/planningSelection";
         $data = array();
         if(!is_null($jour) && !is_null($periode)){
