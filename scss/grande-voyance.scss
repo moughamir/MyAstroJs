@@ -3,9 +3,11 @@
 $primary: #f90e45;
 $grey: #454545;
 $headline: #fff;
+$cta-color: $headline;
 // Font Face
 $ff-primary:'Oswald', sans-serif;
 $ff-secondary: 'Open Sans', sans-serif;
+$ff-additional: 'Lobster', cursive;
 //
 $assets: '/images_landing/grande-voyance/18/';
 //
@@ -32,12 +34,12 @@ body {
   grid-template: repeat(8, 1fr) / repeat(3, 1fr);
   grid-template-areas:
   'header header header'
+  'header header header'
   'content content content'
   'content content content'
   'content content content'
   'content content content'
-  'content content content'
-  'content content content'
+  'footer footer footer'
   'footer footer footer';
 }
 
@@ -51,6 +53,9 @@ body {
   &-header {
     font-family: $ff-primary;
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     .title{
       text-align: center;
       color: $primary;
@@ -65,16 +70,62 @@ body {
       margin: 0;
     }
   }
+  &-article{
+    background: #fff;
+    display: block;
+    grid-row: 2;
+    grid-column: 2;
+    padding: 1rem;
+    position: relative;
+  }
 }
 .article{
   &-container{
-    grid-column-start: 1;
-    grid-row-start: 3;
-    grid-column-end: 4;
-    grid-row-end: 7;
+    display: grid;
+    grid-area: 3/1/7/4;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-gap: .8rem;
+  }
+  &-more{
+    background: $primary;
+    color: $cta-color;
+    font-size: 1.2rem;
+    font-family: $ff-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 1;
+      &-container{
+        display: grid;
+        grid-row: 3;
+        grid-column: 2;
+        grid-template: repeat(4, 1fr)/repeat(3, 1fr);
+      }
+    }
+  &-aside{
+    background: url($assets + "taureau.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    color: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: -28%;
+    top: -5pc;
+    z-index: -2;
+    h3{
+      font-family: $ff-additional;
+      font-size: 2.2rem;
+    }
   }
 }
 .scroll {
+  &-container{
+    display: grid;
+    grid-area: footer;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
   display: block;
   background: url($assets + 'scroll.png') center no-repeat;
   background-size: cover;
@@ -82,7 +133,7 @@ body {
   width: 50px;
   height: 50px;
   margin: 0 auto;
-  grid-area: footer;
+  grid-area: 3/2;
   filter: drop-shadow(0 0 1px #3c3c3c);
   animation: bounce 5s ease-in-out infinite;
 }
