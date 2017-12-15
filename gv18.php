@@ -16,7 +16,7 @@
       </header>
       <div class="article-container">
         <article class="page-article" id="intro">
-          <aside class="article-aside">
+          <aside class="article-aside astro-taurus">
             <h3>Taurus</h3>
           </aside>
           <h3 class="article-headline">Intro</h3>
@@ -34,9 +34,19 @@
       <div class="scroll-container">
         <div class="scroll"></div>
       </div>
-      
     </section>
     <section class="fullview">
+      <div class="article-container">
+        <article class="page-article" id="love">
+          <aside class="article-aside"><h3>Amour</h3></aside>
+          <h3 class="article-headline">En couple</h3>
+          <p class="article-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+          magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+          quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+          ut aliquip ex ea commodo consequat.</p>
+        </article>
+      </div>
       <div class="scroll-container">
         <div class="scroll"></div>
       </div>
