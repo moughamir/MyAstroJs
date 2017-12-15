@@ -37,7 +37,7 @@ $how_form : $img_dir + 'form.png';
 $how_phone : $img_dir + 'allo.png';
 /* Palette */
 $txt : #FCFBFB;
-$block-bg : rgba(134, 168, 189, 0.62);
+$block-bg : rgba(134, 168, 189, 0.72);
 $primary: #cf3bed;
 $logo-color: #fff;
 body {
@@ -50,6 +50,7 @@ body {
 
 .Container {
     background-color: $block-bg;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 630px){
@@ -193,7 +194,13 @@ body {
         }
     }
 }
-
+.twitchy {
+   @include shake();
+        &:hover {
+            -webkit-animation-play-state: paused;
+                    animation-play-state: paused;
+        } 
+}
 /* ------------------------------ PRÉSENTATION ------------------------------ */
 
 .Text {
