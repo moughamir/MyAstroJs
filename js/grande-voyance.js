@@ -120,9 +120,9 @@ function writeContent(target) {
   // autres
   $('#conseils').children('p').html(contentObj.reading.addon.ourAdv);
   $('#objectifs').children('p').html(contentObj.reading.addon.yourObj);
-  setTimeout(function(){
-      $('.loading').fadeOut(1300, "linear");
-    }, 700);
+  setTimeout(function() {
+    $('.loading').fadeOut(1300, "linear");
+  }, 700);
 }
 
 function __init__() {
@@ -130,12 +130,13 @@ function __init__() {
     // Parse JSON string into object
     zodiac = JSON.parse(response);
     writeContent(targetContent);
-    
+
   });
 }
 //$('#title').text(zodiac[targetContent]);
 var carousel = $('.mo-container'),
-dragStart, dragEnd, slideWidth = 306, threshold;
+  dragStart, dragEnd, slideWidth = 306,
+  threshold;
 
 function shiftSlide(direction) {
   if (carousel.hasClass('transition')) return;
@@ -143,25 +144,29 @@ function shiftSlide(direction) {
   //drag&drop
   $('document').off('mouseup');
   carousel.off('mousemove')
-  .addClass('transition')
-  .css('transform', 'translateX('+ (direction* slideWidth)+ 'px');
+    .addClass('transition')
+    .css('transform', 'translateX(' + (direction * slideWidth) + 'px');
   setTimeout(function() {
-    if(direction === 1){
+    if (direction === 1) {
       $('.mo-block:first').before($('.mo-block:last'));
-    } else if (direction === -1 ){
+    }
+    else if (direction === -1) {
       $('.mo-block:last').after($('.mo-block:first'));
     }
     carousel.removeClass('transition');
-		carousel.css('transform','translateX(0px)'); 
+    carousel.css('transform', 'translateX(0px)');
   }, 700);
 }
-$('#next').click(function(){
+$('#next').click(function() {
   shiftSlide(-1);
 });
-$('#prev').click(function(){
+$('#prev').click(function() {
   shiftSlide(1);
 });
 //
+$('a').click(function() {
+  window.location.href = 'gv18-dri?p=' + targetContent;
+});
 scrollBtn.on("click", function() {
   gotoNext(target);
   target++;

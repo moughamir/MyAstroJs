@@ -171,8 +171,10 @@ body {
       }
     }
     .article-wrapper {
-      width: 100vw;
+      @include respond-to('mobile'){
+        width: 100vw;
       padding: 0;
+      }
     }
     .scroll-container {
       @include respond-to('mobile') {
