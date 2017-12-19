@@ -357,6 +357,11 @@ body.consultation-en-ligne .left-part .content .txt-content {
         max-width: 250px !important;;
     }
 
+
+    .icon-liste {
+        margin-left: 0em!important;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -756,6 +761,9 @@ select.FormField-Input {
     box-shadow: none !important;
     color: #858585;
     background-color: #ffffff;
+    padding-right: 0em!important;
+    padding-left: 0em!important;
+    width: 110%;
 }
 
 .FormField-Input.radio {
@@ -1189,7 +1197,7 @@ select.form-control {
     color: #ffffff!important;
 }
 
-.menu-content a:hover,.menu-content a:active{
+.menu-content a:hover,.menu-content a:active {
     text-decoration: none!important;
 }
 
@@ -1217,6 +1225,7 @@ select.form-control {
 .menu-content a,.menu-content a:active{
    text-decoration: none;
 }
+
 .menu-content span.active {
     color: #ffffff;
 }
@@ -1258,4 +1267,9 @@ select.form-control {
     background: none!important;
     border: none!important;
     margin: 0!important;
+}
+
+
+.icon-liste {
+    margin-left: 4em;
 }

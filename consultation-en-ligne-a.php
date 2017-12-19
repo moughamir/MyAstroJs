@@ -126,7 +126,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <div class="time">
                 <p class="title-filled"> Je choisis mon rendez-vous quand je veux</p>
             </div>
-            <form class="ajax">
+            <form class="ajax"  >
 
                 <fieldset >
                     <h2 class="fs-title"> Informations personnelles!</h2>
@@ -237,7 +237,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="button" name="previous" class="previous action-button" value="Précédent"/>
                     <input type="button" name="next" class="nextSecond action-button" value="Suivant">
                 </fieldset>
-                <fieldset style="display: none">
+                <fieldset id="form_cb" style="display: none">
                     <p class="euro-min">1 EURO POUR 10 MINUTES</p>
                     <h2 class="fs-title">Coordonnées bancaires</h2>
                     <h3 class="fs-subtitle"></h3>

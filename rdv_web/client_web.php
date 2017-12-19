@@ -61,6 +61,9 @@ $dtn_m = isset($param['mois'])  && !empty($param['mois'])  ? $param['mois']  : f
 $dtn_a = isset($param['annee']) && !empty($param['annee']) ? $param['annee'] : false;
 $signe = '';
 
+if($sexe == null) {
+    $err['sexe'] = 'Merci dʼindiquer votre sexe.';
+}
 if($need_birthdate){
     if($dtn_j && $dtn_m && $dtn_a){
         $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
