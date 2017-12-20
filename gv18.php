@@ -16,8 +16,8 @@
       </header>
       <div class="article-container">
         <article class="page-article" id="intro">
-          <aside class="article-aside astro-taurus">
-            <h3>Taurus</h3>
+          <aside class="article-aside">
+            <h3 id="title">Taurus</h3>
           </aside>
           <h3 class="article-headline">Intro</h3>
           <p class="article-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
