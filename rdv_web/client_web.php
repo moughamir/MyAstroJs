@@ -3,6 +3,7 @@
 /* ========================================================================== *
  *                               INITIALISATION                               *
  * ========================================================================== */
+
 $bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
 
@@ -15,6 +16,24 @@ $today_date_bdd = date('Y-m-d');
 $today_datetime_bdd = date('Y-m-d H:i:s');
 $today_date_smf = date('m/d/Y');
 
+
+if (!isset($_COOKIE['consultation_1'])) {
+    setcookie('consultation_1', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_2'])) {
+    setcookie('consultation_2', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_3'])) {
+    setcookie('consultation_3', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_4'])) {
+    setcookie('consultation_4', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif(!isset($_COOKIE['consultation_5'])) {
+    setcookie('consultation_5', '1', time() + 6*24*3600, null, null, false, true);
+} else {
+    $err['sys'] = 'vous avez déjà profité 5 fois de l\'offre 10 minutes.';
+}
 /* ========================================================================== *
  *                     TRAITEMENT DES DONNÉES DE TRACKING                     *
  * ========================================================================== */
