@@ -160,15 +160,14 @@ $(document).ready(function () {
                 if (response.hasOwnProperty('rdv_added')) {
 
                     var msg_done = '<p class="alert alert-success">\
-                <b><i class="fa fa-check"><img src="/images/success-spinner.gif" /></i>' + response.rdv_added + '</b></p>';
+                <b><i class="fa fa-check">' + response.rdv_added + '</b></p>';
 
                     if (!use_modal) {
                         form_overlay.html(msg_done);
                     } else {
                         $('#modal').html(msg_done);
                         $('#modal').modal('show');
-                        $('#form_cb').html("<h1> Merci pour votre confiance </h1>");
-
+                        $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera dans quelques instants</strong> </h3>");
                     }
 
                 }
