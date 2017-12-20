@@ -88,7 +88,7 @@ if(empty($err)){
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
             $kgestion_id = $kgestion_insert->id;
-            die(json_encode(array('rdv_added' => "Consultation ajoutée . Vous allez être appelé par l'un de nos conseiller pour avoir plus de détail")));
+            die(json_encode(array('rdv_added' => $kgestion_insert->message)));
 
         }
 
