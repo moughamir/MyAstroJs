@@ -1,0 +1,841 @@
+[{
+  "_id": "bel",
+  "name": "Bélier",
+  "reading": {
+    "intro": "Année riche en rebondissements, année de tous les défis, bélier armez-vous de vos plus belles armes car vous allez vivre une très belle année et vous vaincrez tous vos combats. Je vous souhaite d’être heureux, d’être comblé et de vous entourer de ces belles personnes qui font votre bonheur.",
+    "love": {
+      "single": "Une rencontre inattendue entrainant une relation ardente vous attend ! Gardez cette prédilection à l’esprit soyez attentif(ve), vous risquerez de laisser passer la perle rare.",
+      "couple": "Montrez à votre moitié que vous pouvez être différent(e) de tout ce qu’il (elle) imagine et pense de vous. N’ayez pas peur de montrer vos défauts et vos torts, soyez vous-même !"
+    },
+    "social": {
+      "familly": "Une rencontre inattendue entrainant une relation ardente vous attend ! Gardez cette prédilection à l’esprit soyez attentif(ve), vous risquerez de laisser passer la perle rare.",
+      "freindship": "De nature pas très discrète, vous êtes du genre à vous dévoiler et à témoigner vos sentiments et vos marques d’affection à vos amis (es) et ce, au su et au vu de tout le monde. Vous aimez que le monde sache que vous êtes là pour  vos ami(es) et qu’il voit ce que vous faites et entreprenez pour ces derniers (es) et cette année n’échappera pas à la règle. "
+    },
+    "pro": "Cette année, le signe Bélier verra quelques changements rapides dans leur travail. Votre travail acharné donnera les résultats souhaités, peut-être un peu tar, mais la promotion est en vue. Les voyages d'affaires sont également possibles cette année. Méfiez-vous d’un collègue qui peut essayer de voler la reconnaissance que vous méritez.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Vous verrez clair dans vos projets et missions! En Janvier chers Béliers, vous aurez donc la possibilité de vous prévenir du danger et par la même occasion votre entourage. Alors! Gardez l’œil ouvert!"
+    }, {
+      "name": "Février",
+      "text": "Votre intelligence sera votre porte-bonheur ce mois-ci. On dit souvent que vous réfléchissez trop et que ça en devient lourd mais contrairement à ce qu’on pense cette intelligence vous sortira de beaucoup de situations et vous en évitera même certaines."
+    }, {
+      "name": "Mars",
+      "text": "Votre ambition va vous emmener à des places où vous n'avez jamais rêvées d’être. En commençant le 1er et continuant tout le mois, vous devriez suivre votre instinct et écouter cette petite voix qui vous dit ce que vous voulez vraiment, Une grande promotion vous attend."
+    }, {
+      "name": "Avril",
+      "text": "En ce mois d’avril il sera question pour vous de vous surpasser. Le temps n’est plus à la rigolade et vous devez vous servir de votre énergie débordante pour atteindre vos objectifs."
+    }, {
+      "name": "Mai",
+      "text": "Chargés de responsabilité? Eh bien, prenez quelques minutes, sortez, asseyez-vous au soleil et fermez les yeux. Respirez, mieux, non? Votre énergie sera au top et vos instincts sont bons."
+    }, {
+      "name": "Juin",
+      "text": "Passez tous vos moments libres au soleil. Faites le plein en vitamine D, même seulement vingt minutes le temps de votre pose déjeuner pourrait être tout ce dont vous avez besoin."
+    }, {
+      "name": "Juillet",
+      "text": "Les mentalités ne changeront pas de sitôt mais il faut faire avec et vous l’avez bien compris. Vous essayez de jongler avec la vie c’est-à-dire que vous êtes consciente que vous avez un potentiel et une vision de la vie qui n’est pas commune mais vous essayez de respecter le niveau des autres car c’est le niveau de l’époque dans laquelle vous vous trouver."
+    }, {
+      "name": "Août",
+      "text": "Le mois des amours est là pour vous. C’est les vacances et le beau temps vous rend beau (belle) profitez-en et sortez, l’amour est de votre coté ce mois-ci."
+    }, {
+      "name": "Septembre",
+      "text": "Profitez de vos vacances pour vous retrouver avec la nature car elle au moins ne vous jugera point. Elle vous aidera plutôt à mieux vous retrouver,  et vous sentir à l’aise."
+    }, {
+      "name": "Octobre",
+      "text": "Il n'y a rien de tel que les feuilles d'automne changeant de couleur pour annoncer le mot «romance», alors octobre va être votre mois romantique. Il va commencer à faire froid : attraper sa main gardez la près de vous!"
+    }, {
+      "name": "Novembre",
+      "text": "Votre vie d'affaires prospère, vos amitiés fleurissent, vos attachements émotionnels vous sont de plus en plus chers. Plus vous êtes capable de vous mettre à la place des autres au travail, que ce soit votre patron, votre client ou de votre partenaire commercial, plus vous serez capable de deviner ce dont ils ont besoin, et cela va faire démarrer votre vie professionnelle et fera avancer votre carrière ce mois-ci."
+    }, {
+      "name": "Décembre",
+      "text": "Lorsque l'hiver s'installe et que vous commencez à ressentir le froid, vous pourriez avoir des pensées et des émotions profondes. Laissez-vous guider par votre instinct."
+    }],
+    "number": {
+      "luckyNumber": "9",
+      "text": "Le chiffre 9 est le chiffre de l'Amour. Vous serez capables de réaliser tout ce qui est idéal pour vous pendant 2018, Vous êtes passionnés et vous aurez besoin de contrôler vos impulsions."
+    },
+    "dates": [{
+      "when": "1er Avril",
+      "what": "Pour ce dimanche de Pâques rapprochez- vous de vos proches, resserrez vos liens et lancez une bonne continuité pour cette année 2018."
+    }, {
+      "when": "15 Août",
+      "what": "En ce jour d’assomption prenez le temps de vous retrouver entre amis ils auront besoin de vous, amusez- vous !"
+    }, {
+      "when": "31 décembre",
+      "what": "à l’approche de 2019 c’est le moment de refaire le point sur votre vie en 2018. Une petite rétrospective de tout ce qui s’est passé en bien ou en mal dans votre vie et dans votre entourage."
+    }],
+    "addon": {
+      "ourAdv": "Soyez un peu plus discrète que d’habitude. Je sais que vous faites des efforts mais faites encore plus d’efforts sans vous empêcher de vivre.",
+      "yourObj": "Faire preuve de moins d’autorité doit être votre objectif principal cette année. Et laissez-vous un peu aller."
+    }
+  }
+}, {
+  "_id": "tau",
+  "name": "Taureau",
+  "reading": {
+    "intro": "Vous flirterez avec l’amour tout au long de cette année et vous aurez l’impression de vivre sur un nuage. Ce sentiment d’apaisement, d’amour, et de joie;  vous le sentirez plus présent que jamais. Cette année c’est votre année, l’année de tous les défis oui et l’année de toutes les découvertes.",
+    "love": {
+      "single": "Tenez bon vous y êtes presque ! D’un mois à l’autre l’âme sœur frappera à votre porte.",
+      "couple": "La stabilité est bien quand elle est partagée. Vous devrez prendre des décisions difficiles sinon vous risquerez de vous retrouver plus bas que terre car, votre si votre partenaire partage vos préoccupations pour le moment il ne les supportera pas toute la vie."
+    },
+    "social": {
+      "familly": "En 2018, les Taureaux peuvent faire face à des problèmes familiaux. Des arguments peuvent surgir entre vous et les membres de votre famille concernant les finances et les problèmes professionnels. Assurez-vous de communiquer votre point de vue avec votre famille et essayez de leur faire comprendre votre vision des choses.",
+      "freindship": "Certains de vos amis (es) vous feront des coups bas et vous n’en reviendrez pas. Seulement, vous aurez du mal à les démasquer et au moment ou vous saurez qui ils sont ils auront déjà fait de bons dégâts dans votre vie. Je vous conseille donc d’être très vigilants désormais et ce, pour toute l’année."
+    },
+    "pro": "Votre intuition et votre persévérance seront votre plus grand atout pour faire de gros changements dans votre vie active. Quelques problèmes professionnels sont à prévoir, mais ils peuvent être facilement pris en charge. Ne commencez pas de nouveau projet si vous n'êtes pas sûr à cent pour cent de son succès.",
+    "months": [{
+      "name": "Janvier",
+      "text": "N’ayez pas peur de l’inconnu et surtout n’ayez pas peur de faire des erreurs. Ce mois-ci vous comprendrez que la vie est faite de choix mais que parfois ne pas prendre les bonnes décisions peut servir à notre vie future. Alors foncez !"
+    }, {
+      "name": "Février",
+      "text": "Gardez votre simplicité elle vous aidera à vous intégrer facilement dans votre nouveau boulot."
+    }, {
+      "name": "Mars",
+      "text": "Il y a des mois plus difficile que d’autres. C'est tellement frustrant! Pourquoi ne pas utiliser cela comme une occasion pour respirer profondément, et rester au calme. Vous verrez que  les choses semblent soudainement beaucoup moins compliquées !"
+    }, {
+      "name": "Avril",
+      "text": "Lâchez prise et faites semblant de ne pas savoir ce que vous voulez afin de donner l’impression à votre moitié de vous apprendre quelque chose ou du moins qu’il croit qu’il vous a aidé à évoluer dans un aspect de votre vie."
+    }, {
+      "name": "Mai",
+      "text": "Ce mois est le bon moment pour vous recentrer sur vous même, Pourquoi? Parce que si vous maitrisez ce que vous ressentez, il vous sera facile de ressentir ce que vous voulez, sortez, allez nager si vous le pouvez. "
+    }, {
+      "name": "Juin",
+      "text": "Il  peut parfois être difficile de séparer les peurs infondées d'une saine paranoïa, et il sera difficile de rester prudent pendant ce moment. Rappelez-vous que vous êtes seulement paranoïaque si quelque chose ne se passe pas, faites-vous confiance !"
+    }, {
+      "name": "Juillet",
+      "text": "Si votre conjoint n’arrive pas à vous faire faire des choses différentes une fois dans l’année c’est que le problème vient de vous. Changez un peu votre quotidien."
+    }, {
+      "name": "Août",
+      "text": "Vous aurez l'occasion de travailler bien plus librement, d'appliquer vos idées personnelles. Saisissez l'opportunité de rassembler vos initiatives pour être plus efficace."
+    }, {
+      "name": "Septembre",
+      "text": "Vous dissiperez un malentendu. C'est le moment de mettre cartes sur table, en toute honnêteté. Vous aurez une occasion en or de vous expliquer et de mettre les choses au clair."
+    }, {
+      "name": "Octobre",
+      "text": "C’est la fin d’été début de l’automne, le back to work ! Si vous avez besoin (ou voulez juste) faire un changement de carrière, vos proches sont vos meilleures ressources. Ils vous connaissent et ils auront des idées surprenantes."
+    }, {
+      "name": "Novembre",
+      "text": "Quelle est la meilleure façon pour vous de bien commencer le mois de novembre ? Les astres voient un délicieux repas en compagnie de chers amis."
+    }, {
+      "name": "Décembre",
+      "text": "Le mois commence très fort, une promotion est prévue pour vous, que de bonnes nouvelles. C’est votre hiver ! Un conseil : essayer de voyager pendant les fêtes. !"
+    }],
+    "number": {
+      "luckyNumber": "5",
+      "text": "le numéro 5 est un chiffre expressif de famille et de relations. L'énergie que le chiffre 5 représente est les relations, mais pas n'importe quelles relations. Les relations avec une tendance à exprimer un sentiment de liberté. "
+    },
+    "dates": [{
+      "when": "25 mars",
+      "what": "Tous vos pics de personnalités seront au rendez-vous. Vous vous sentirez puissant, alors profitez-en."
+    }, {
+      "when": "12 juillet",
+      "what": "L’amour va frapper très fort, ce 12 juillet. Prêtez attention à vos relations et pourquoi pas à un inconnu…"
+    }, {
+      "when": "2 novembre",
+      "what": "Même si vous n'êtes pas en grande forme votre moral remonte, ce n'est pas le moment de vous laisser aller."
+    }],
+    "addon": {
+      "ourAdv": "Vous serez très entreprenant et déborderez d'initiatives. Mais surtout n'essayez pas de brûler les étapes : réfléchissez bien avant de prendre une décision.",
+      "yourObj": "Votre objectif était de laisser une de vos faiblesses derrière vous, je vous annonce qu’en 2018 elle ne doit plus être une résolution mais un objectif atteint."
+    }
+  }
+}, {
+  "_id": "gem",
+  "name": "Gémeau",
+  "reading": {
+    "intro": "Place à vos priorités. Vous avez trop souvent fait passer le bonheur des autres avant les vôtres. Cette année vous ferez les choses bien, vous vous placerez dans le juste milieu et vous n’aurez pas peur de faire ce que vous semblez bon pour VOUS aussi!",
+    "love": {
+      "single": "Les amours vont arriver cette année c’est promis. La patience paye, et 2018 vous le rendra bien. Cette année va être un tournant dans votre vie sentimentale, fini les amourettes place au Grand amour !",
+      "couple": "Les contraires s’attirent et je vous conseille de vivement vous mettre avec une personne qui possède vos qualités et bien plus. Vous serez le couple de l’année et bien sûr le couple sur lequel votre entourage prendra exemple."
+    },
+    "social": {
+      "familly": "C'est une bonne année pour passer du bon temps avec votre famille. Vous êtes né(e) avec de nombreux avantages. Vous êtes compréhensif(ve), attentionné(e) et compatissant(e). Essayer de vous en servir pour mener une vie familiale saine.",
+      "freindship": "Les amis (es) fidèles ne sont pas toujours les vrais. Certains de vos amis (es) cette année retourneront  leur veste. Méfiez vous de certaines personnes, et soyez prudent ! Ne vous fêtes pas avoir."
+    },
+    "pro": "2018 sera une bonne année en termes de carrière pour vous. Les étoiles indiquent de bons débuts dans la première moitié de l'année, néanmoins, des efforts doivent être faits pour maintenir l'élan et faire avancer les choses de manière rationnelle.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Gémeaux faites attention car vous risquerez de vous laisser dépasser par vos défauts. Prenez les bonnes décisions et soyez très réfléchis. Vous risquerez de raté une chose bien pour votre vie durant cette période."
+    }, {
+      "name": "Février",
+      "text": "Gémeaux faites attention car vous risquerez de vous laisser dépasser par vos défauts. Prenez les bonnes décisions et soyez très réfléchis. Vous risquerez de raté une chose bien pour votre vie durant cette période."
+    }, {
+      "name": "Mars",
+      "text": "Vous voulez chouchouter vos amis mais vous manquez d'idées. Un peu d'originalité permet des échanges plus fructueux voire des dialogues approfondis. Sortez un peu de chez vous, vous trouverez surement des bonne idées."
+    }, {
+      "name": "Avril",
+      "text": "Vous vous demandez peut-être comment régler une situation conflictuelle entre deux amis ou avec l’aimé. Vous trouverez la solution, n’ayez crainte. Au travail, vous aimeriez tellement être mieux rémunéré. Patience, cela se produira très bientôt."
+    }, {
+      "name": "Mai",
+      "text": "Le programme sera chargé. Faites confiance à votre intuition, votre perception des gens et des situations n'aura jamais été si aiguisée."
+    }, {
+      "name": "Juin",
+      "text": "Vous ferez de cette période un moment où vous pourrez mener de grands projets vers la réalisation."
+    }, {
+      "name": "Juillet",
+      "text": "Votre sens de la communication sera mis à rude épreuve en ce mois, car vous allez rencontrer des personnes particulières avec un sens de l’humour très spécial. Prenez sur vous !"
+    }, {
+      "name": "Août",
+      "text": "En fin de mois, vous partagez une grande complicité avec votre moitié. Vous pourriez même abuser de la situation."
+    }, {
+      "name": "Septembre",
+      "text": "Un trait de caractère qui est difficile à gérer par moment. Vous avez du mal à dire au revoir aux vacances et cela se répercute sur votre humeur."
+    }, {
+      "name": "Octobre",
+      "text": "Si vous vous sentez dépassé par la masse de travail n'hésitez pas à déléguer certaines tâches. Vous ne devriez avoir aucun mal à trouver de l'aide autour de vous."
+    }, {
+      "name": "Novembre",
+      "text": "En cours de mois vos nerfs seront à vif ... Vous tenterez par tous les moyens d'obtenir gain de cause. Vous serez peut-être obligé de mettre de l'eau dans votre vin afin d'apaiser les tensions qui ne manqueront pas d'apparaitre dans vos échanges.  "
+    }, {
+      "name": "Décembre",
+      "text": "Plus les jours passeront, plus vous aurez la tête aux festivités qui s'annoncent et moins à votre travail. Pourtant vous devrez garder  votre concentration afin d'éviter de faire des erreurs. "
+    }],
+    "number": {
+      "luckyNumber": "8",
+      "text": "C’est le numéro du succès personnel. En d'autres termes, cette année vous êtes le seul moteur de votre succès. Personne ne devrait faire obstacle à votre succès. Par conséquent, vous devez être concentré"
+    },
+    "dates": [{
+      "when": "22 avril",
+      "what": "Je vous conseille de prendre du temps pour vous et de vous retrouver dans un univers naturel, frais pour vous aérer l’esprit et mieux réfléchir."
+    }, {
+      "when": "20 mai",
+      "what": "Attention, l’amour sera à votre porte ! Soyez patient aujourd’hui, des surprises vont pointer le bout de leur nez !"
+    }, {
+      "when": "21 Novembre",
+      "what": "Vous ne pourrez pas tout contrôler alors laissez vous aller, acceptez l'imprévu, et vous serez agréablement surpris du résultat. "
+    }],
+    "addon": {
+      "ourAdv": "Vous allez devoir faire un effort pour venir à bout des tâches qui vous incombent et tenir fermement la barre afin de garder votre frêle esquif en haut de la vague.",
+      "yourObj": "Il faut vous détendre car les défis, les situations de stress et les imprévus seront au rendez-vous.<br>Pourquoi ne pas essayer le Yoga ou la marche."
+    }
+  }
+}, {
+  "_id": "can",
+  "name": "Cancer",
+  "reading": {
+    "intro": "Cette année 2018 sera à aborder avec délicatesse. Elle sera pleine de bons aspects pour vous en mettant l’accent sur des secteurs clés de votre quotidien. Votre générosité sera à l’origine d’une belle opportunité dans le courant de l’année. ",
+    "love": {
+      "single": "Votre imagination vous joue parfois des tours mais cette fois elle a bien raison. Les signaux qu’elle vous envoie sont bien ceux de l’amour, alors écoutez votre cœur, c’est la bonne personne.",
+      "couple": "Votre vie amoureuse ne sera pas dénuée de passion et vous procurera des émotions fortes. Pourtant, vous ne perdrez pas la tête pour autant : vous saurez rester raisonnable."
+    },
+    "social": {
+      "familly": "Réfléchissez à deux fois avant de prendre une décision importante concernant  votre famille. Si les choses tournent mal, vous vous sentirez coupable tout au long de l'année. Soyez prêt à trouver des solutions à vos problèmes.",
+      "freindship": "L’amitié est comme une fleur qu’il ne faut pas laissé faner au risque ne même plus avoir de racines. Cette année vous apprendrez à entretenir vos relations et à en faire des priorités."
+    },
+    "pro": "Professionnellement, 2018 peut ne va pas commencer sur une bonne note pour vous les Cancer. Mais au fur et à mesure que l'année avance, tout va rentrer dans l’ordre. Et vous aurez certainement une opportunité de nouvelle carrière.",
+    "months": [{
+      "name": "Janvier",
+      "text": "C’est le moment de garder votre esprit tenace ce mois-ci. Vous aurez la réponse à ce qui vous semblait déjà lointain à force d’attente. N’ayez pas peur ce n’était tout simplement pas le bon moment."
+    }, {
+      "name": "Février",
+      "text": "En février votre patron fera en sorte que vous soyez récompensé pour  votre travail. Si vous envisagiez de quitter votre job, demandez-vous  si cela vaut la peine de rester un peu plus longtemps et observez ce qui vous attend."
+    }, {
+      "name": "Mars",
+      "text": "Les étoiles voient  un début de mars merveilleux, que des bonnes nouvelles ! Et ce n’est pas tout, quelqu'un se manifestera pour les partager avec vous. "
+    }, {
+      "name": "Avril",
+      "text": "Quand nous faisons des promesses, nous nous devons de les tenir. <br>Vous aurez donc de précieux atouts pour réussir dans tout ce que vous entreprenez."
+    }, {
+      "name": "Mai",
+      "text": "Les quinze premiers jours seront plutôt calmes. Il faut dire que vous serez peut-être un peu trop exigeant en ce qui concerne vos critères amoureux et il y aura un décalage entre vos désirs et la réalité."
+    }, {
+      "name": "Juin",
+      "text": "Happy Birthday Cancer, à ceux d'entre vous qui sont nés en juillet, bienvenue à l'un des mois les plus farfelus que j'ai jamais vu pour vous. Vos ambitions et vos idéaux se déplacent lentement et progressivement vers un nouvel objectif, sur beaucoup de choses. C'est une période de renaissance."
+    }, {
+      "name": "Juillet",
+      "text": "En cours de ce mois vous aurez à faire à des désagréments,  ce qui mettra vos nerfs à rude épreuve. Certains attendraient patiemment, mais pas vous. Vous allez prendre le taureau par les cornes !"
+    }, {
+      "name": "Août",
+      "text": "La puissance de votre astre solaire vous empêche de résister à ce sentiment qu’est l’amour. Vous allez être en couple ce mois et comme je l’ai dit vous ne pourrez pas résister alors préparez-vous car si vous ne l’êtes pas vous devrez faire avec."
+    }, {
+      "name": "Septembre",
+      "text": "Votre générosité sera à l’origine d’une belle opportunité dans le courant de ce mois de septembre. Une opportunité qui vous vaudra une chance en or que vous ne devez pas rater."
+    }, {
+      "name": "Octobre",
+      "text": "Octobre sera marqué par les améliorations, et ce dans tous les domaines, notamment amoureux et professionnels. Les progrès seront lents et certaines influences ne vous aideront pas à avancer aussi vite que vous le souhaiteriez."
+    }, {
+      "name": "Novembre",
+      "text": "Novembre est pour vous source d'un beau tonus plutôt agréable : faites du sport. Invitez un(e) ami(e) à vous accompagner. Faites des efforts !"
+    }, {
+      "name": "Décembre",
+      "text": "Des ondes positives et fabuleuses vous entourent, des nouvelles formidables couplées à quelques belles journées vous mettront dans une ambiance chaleureuse. Faites tout ce que vous pouvez pour maintenir une atmosphère paisible autour vous."
+    }],
+    "number": {
+      "luckyNumber": "4",
+      "text": "Le chiffre 4 résonne avec créativité. Vous allez être dans tous vos états lorsque vous allez voir tout ce que vous êtes capable de faire de vos dix doigts. Alors lancez-vous, n’ayez pas peur !"
+    },
+    "dates": [{
+      "when": "8 mai",
+      "what": "Vous apprécierez la nature et ce qu’elle offre et vous qui aviez du mal avec les petites bêtes vous comprendrez l’utilité de chacun de ces êtres."
+    }, {
+      "when": "18 novembre",
+      "what": "jour brumaire pour vous et il faudrait penser à vous mettre à l’abri car vous aurez l’impression que tout vous tombe dessus mais il faudra être fort."
+    }, {
+      "when": "13 février ",
+      "what": "prenez ce jour pour réfléchir et voir dans quelles conditions vous pourrez vous faire plaisir. Vous êtes à la veille de la St valentin et les petites attentions devraient commencer durant cette semaine."
+    }],
+    "addon": {
+      "ourAdv": "2018 vous laisse les coudées franches pour réussir tout ce que vous souhaitez. Un seul petit bémol : une seule petite erreur de votre part va néanmoins avoir de grosses conséquences. Donc garder de l’assurance.",
+      "yourObj": "2018 vous laisse les coudées franches pour réussir tout ce que vous souhaitez. Un seul petit bémol : une seule petite erreur de votre part va néanmoins avoir de grosses conséquences. Donc garder de l’assurance."
+    }
+  }
+}, {
+  "_id": "lio",
+  "name": "Lion",
+  "reading": {
+    "intro": "Cette année 2018 sera à aborder avec délicatesse. Elle sera pleine de bons aspects pour vous en mettant l’accent sur des secteurs clés de votre quotidien. Votre générosité sera à l’origine d’une belle opportunité dans le courant de l’année.",
+    "love": {
+      "single": "Vous ne croyez plus en l’amour. Cette année vous persuadera du contraire car vous connaîtrez l’amour, le véritable et vous aurez l’impression d’être sur un nuage. Tout vient à point qui peut attendre.",
+      "couple": "Cette année vous sera très favorable. Ne soyez donc pas trop timide et allez de l'avant, c'est peut-être la chance de sauver votre couple, d’avancer dans votre vie sentimentale."
+    },
+    "social": {
+      "familly": "Votre famille appréciera les changements. Au début de l’année, vous pourriez être déçu par des événements qui se produisent autour de vous. Vous avez juste besoin de vous accrocher et d'avoir de la patience.",
+      "freindship": "Cette année vous ferez la rencontre d’une personne et vous aurez la chance de la trouver au bon moment, le début d’une nouvelle amitié. Vous verrez vos habitudes changées."
+    },
+    "pro": "Il est conseillé de maintenir une relation cordiale sur le lieu de travail afin d'éviter les conflits inutiles. Le tact et la diplomatie sont les clés du succès sur le lieu de travail. La patience et la sérénité seront utiles.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Il est conseillé de maintenir une relation cordiale sur le lieu de travail afin d'éviter les conflits inutiles. Le tact et la diplomatie sont les clés du succès sur le lieu de travail. La patience et la sérénité seront utiles."
+    }, {
+      "name": "Février",
+      "text": "Apprenez à vos proches le pouvoir de la fidélité. Montrez leur que la fidélité paie toujours car l’univers récompense toujours les bonne personnes"
+    }, {
+      "name": "Mars",
+      "text": "Apprenez à vos proches le pouvoir de la fidélité. Montrez leur que la fidélité paie toujours car l’univers récompense toujours les bonne personnes"
+    }, {
+      "name": "Avril",
+      "text": "Vous savez vous mettre en valeur et ainsi attirez l’attention mais attention, tous les regards ne sont pas bons. Je vous conseille de ne pas en faire trop."
+    }, {
+      "name": "Mai",
+      "text": "En mai, vous allez êtres pleins d'idées  vous pourriez vraiment vous impressionner malgré le fait que vous êtes un public difficile! Récompensez-vous, puis retournez au travail."
+    }, {
+      "name": "Juin",
+      "text": "Si le calme régnait ces dernières semaines, attendez-vous à ce que le rythme s'accélère et que vous couriez avec lui comme un participant au marathon. Peu importe votre signe astrologique, car l'énergie globale est plus  intense que d'habitude ce mois-ci."
+    }, {
+      "name": "Juillet",
+      "text": "Ce caractère dominateur est une bonne chose. Cependant avec votre famille et surtout les plus petits pensez à tempérer. Ne faites pas en sorte que ce respect se transforme en peur."
+    }, {
+      "name": "Août",
+      "text": "En août la chaleur et les vacances vous mettent de bonnes humeurs. Profitez pour faire le plein d’énergie. Le bonheur c’est contagieux alors allez-y contaminez tout le monde !!"
+    }, {
+      "name": "Septembre",
+      "text": "Prendre ses responsabilités, c’est bien. Déléguer certaines tâches à ses proches collègues, c’est bien aussi. Vous serez plus agréable, moins stressé pour cette rentrée. Faites de même dans votre famille partagez les taches. "
+    }, {
+      "name": "Octobre",
+      "text": "Votre mois commencera avec un grand succès, c'est comme si quelqu'un avait décidé de vous faire une grande fête surprise. Il y a des cadeaux, il y a des amis, que des choses positives. "
+    }, {
+      "name": "Novembre",
+      "text": "Les étoiles vous recommandent de ne pas vous endormir sur vos lauriers! La chance joue les prolongations et un nouveau prétendant vous gâte. Il semble lire en vous comme dans un livre ouvert et décèle tout ce qui vous plaît."
+    }, {
+      "name": "Décembre",
+      "text": "Prenez le temps d’étudier les possibilités qui s’offrent à vous. Un peu de travail vous emmènera sur un long chemin vers votre objectif. Gardez confiance en vous !"
+    }],
+    "number": {
+      "luckyNumber": "1",
+      "text": "Le chiffre 1 est le plus intuitif de tous les chiffres. Il est instinctif, charismatique, et dynamique. Il vous suivra tout au long de cette année pensez y bien, il vous apportera beaucoup !"
+    },
+    "dates": [{
+      "when": "2 Février",
+      "what": "Ne jouez plus au petit chef. Vous verrez que l'ambiance du foyer en sera bien plus légère et joyeuse."
+    }, {
+      "when": "29 Mars",
+      "what": "Un jour particulier pour vous car vous serez très chanceux (se). L’argent pourrait vous faire tourner la tête ce 29 mars ! "
+    }, {
+      "when": "25 Décembre",
+      "what": "C’est noël, une journée de partage en famille. Mais pas que, c’est une date clé pour vous, une grande surprise vous attend ce jour."
+    }],
+    "addon": {
+      "ourAdv": "Trouver un équilibre entre votre vie sociale et votre vie privée sera votre défi de 2018. Mais il faudra faire la part des choses. Prudence et rigueur seront vos maitres mots.",
+      "yourObj": "Votre générosité sera à l’origine d’une belle opportunité dans le courant de l’année. Une opportunité qui vous vaudra une chance en or que vous ne devez pas rater. Mais prudence car cette chance ne tombera pas du ciel sans vos efforts."
+    }
+  }
+}, {
+  "_id": "vie",
+  "name": "Vierge",
+  "reading": {
+    "intro": "L’équilibre sera fondamental pour réussir votre année 2018. Vous devrez trouver la balance parfaite entre tous les domaines de votre quotidien. L’avenir s’annonce sous les meilleurs auspices en amour, mais le secteur professionnel et financier viendra ternir cette belle impression. ",
+    "love": {
+      "single": "Cette rencontre se fasse sur votre lieu de travail ou au sein de votre cercle relationnel. Elle commencera sur le mode de l'amitié, du flirt, et c'est au fil des jours et des rencontres que vous pourrez y voir plus clair.",
+      "couple": "Cessez de vous poser des questions concernant couple ; vous vous êtes choisi c’est pour une bonne raison. Si vous ne vous voyez que vos bons côtés respectif, les mauvais côtés ne se feront plus ressentir et d’autres disparaitront."
+    },
+    "social": {
+      "familly": "Tout tournera autour de votre capacité à trouver le juste milieu entre vos actions et leurs conséquences. Vous devrez conjuguer vos désirs et vos besoins personnels avec les personnes qui vous entourent.",
+      "freindship": "Afin de ne perdre ni du temps ni de l'argent et ni votre énergie, je vous conseille de ne pas agir en solo et de ne pas hésiter à demander un coup de mains à vos proches qui ne vous refuseront pas leur aide."
+    },
+    "pro": "Afin de ne perdre ni du temps ni de l'argent et ni votre énergie, je vous conseille de ne pas agir en solo et de ne pas hésiter à demander un coup de mains à vos proches qui ne vous refuseront pas leur aide.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Un mois béni s’offre à vous ne la ratez pas. Il vous suffit de faire le tri dans votre vie et le bon. Profitez de vos amis et de votre famille, voyagez, aller les voir ! Bougez-vous !"
+    }, {
+      "name": "Février",
+      "text": "Quelqu’un fera son entrée dans votre vie mais je vous conseille de rester consciencieuse avant d’avoir la certitude de ses intentions. Il voudra vous faire croire dès le départ que ses intentions sont réelles mais je vous fais confiance pour vous assurer de la véracité de ses propos."
+    }, {
+      "name": "Mars",
+      "text": "Soyez libre, soyez cool. Sérieusement! Aller au yoga ou à la piscine, ça vous aidera. Parlez à vos amis, ils ont vos meilleurs intérêts à cœur. Parlez à certains experts aussi peut certainement vous faire du bien."
+    }, {
+      "name": "Avril",
+      "text": "Attention à ne pas vous éparpiller en entreprenant trop de choses à la fois. C'est vrai que les évènements n'évolueront pas rapidement et vous aurez souvent l'impression que rien ne bouge."
+    }, {
+      "name": "Mai",
+      "text": "Pleins feux sur votre vie amoureuse en mai. C’est en vous concentrant sur ce secteur que vous trouverez toute la confiance, l’amour et le bonheur dont vous avez besoin."
+    }, {
+      "name": "Juin",
+      "text": "Libérez-vous de tout ce qui tourne dans votre tête, ce mois-ci est le bon moment pour vous de comprendre ce que vous appréciez vraiment en vous-même et dans votre vie. Cela vous aidera à avancer."
+    }, {
+      "name": "Juillet",
+      "text": "Vous devez à tout prix profiter de ces chances et de ces influences qui toucheront notamment votre vie amoureuse. Vous aurez donc des décisions importantes à prendre en Juillet. "
+    }, {
+      "name": "Août",
+      "text": "Vous ne manquerez pas d'énergie mais c'est votre moral qui sera en dents de scie. Pas tout le temps, fort heureusement, mais la moindre contrariété risque de vous miner. Prenez du recul !"
+    }, {
+      "name": "Septembre",
+      "text": "Révélation sur révélation ! Vous allez vous découvrir une nouvelle qualité et une nouvelle passion en rapport avec la vie de réseaux sociaux. Vous trouverez épaules en qui vous confier de façon anonyme et cela vous fera le plus grand bien."
+    }, {
+      "name": "Octobre",
+      "text": "Sortez et profitez de ces derniers beaux jours. Vous êtes au bon endroit pour rencontrer quelqu'un de spécial si vous êtes célibataire. Ne laissez pas un peu de stress au travail impacter votre humeur romantique.  "
+    }, {
+      "name": "Novembre",
+      "text": "En novembre coté carrière, vous ferez votre possible pour partager vos idées et vous concevrez mal que vos collaborateurs n'aillent pas au même rythme que vous."
+    }, {
+      "name": "Décembre",
+      "text": "La préparation des fêtes risque de vous épuiser si vous ne faites pas attention. N'essayez pas de tout faire tout seul. Les fêtes de fin d'année sont un moment de partage."
+    }],
+    "number": {
+      "luckyNumber": "7",
+      "text": "Le chiffre 7 est un chiffre chercheur de vérité. Son objectif est consacré aux enquêtes dans l’inconnu, et à trouver des réponses aux mystères de la vie."
+    },
+    "dates": [{
+      "when": "7 Janvier",
+      "what": "Vous pouvez allez à la montagne loin de tout. Cela vous apaisera et vous pourrez entamer l’année correctement car vous serez requinquer. "
+    }, {
+      "when": "25 Mars",
+      "what": "L’amour pointe le bout de son nez ce 25 mars attention aux yeux. Retenez bien cette date car c’est le début d’une longue romance."
+    }, {
+      "when": "19 Août",
+      "what": "Une surprise vous attend peut être des vacances, un voyage mais quelques chose de particulier. Profitez car ça ne se représentera pas de sitôt."
+    }],
+    "addon": {
+      "ourAdv": "Vous êtes une perle, la plus belle de toute et vous aspirerez à la perfection si seulement pour preniez la peine de croire en vous. Un monde merveilleux est à votre porté et il faut que vous preniez le temps de le voir. ",
+      "yourObj": "Vous devez apprendre à vous familiarisez avec le monde qui vous entoure. Vous avez beaucoup d’opportunités il vous suffit de juste vous ouvrir un petit peu."
+    }
+  }
+}, {
+  "_id": "bal",
+  "name": "Balance",
+  "reading": {
+    "intro": "2018 n’a pas prévu que des choses positives pour vous, en prenant soin de placer plusieurs problèmes de taille sur votre route. Vos relations avec les personnes de votre entourage occuperont le devant de la scène durant toute l’année, et ce dans tous les domaines de votre quotidien.",
+    "love": {
+      "single": "Ne jouez pas sur plusieurs tableaux sinon vous risquerez de vraiment rester célibataire. A jouer avec le feu on fini par se bruler... Et n’oubliez pas de ne pas faire ce que vous n’aimeriez pas que l’on vous fasse. ",
+      "couple": "Ne jouez pas au petit chef et laissez lui assumer de vraies responsabilités sans garder constamment un oeil sur ce que votre moitié fait. Vous verrez que l'ambiance du foyer en sera bien plus légère et joyeuse. L'harmonie règnera pour le plus grand plaisir de chacun."
+    },
+    "social": {
+      "familly": "En 2018 nous vous suggérons d'éviter tout désaccord avec les membres de la famille. Les relations harmonieuses sont prédites à travers les étoiles, avec l'ajout de nouveaux bébés aux familles. Ces événements marqueront la joie et le bonheur  au sein de votre famille.",
+      "freindship": "Une chose est sûre il vous aime mais il ne sera jamais votre amant. Témoignez lui votre affection mais n’en faite pas trop, car il serait dommage de perdre son amitié. Apprenez à rester à votre place."
+    },
+    "pro": "Le domaine professionnel réalisera des changements significatifs plus que jamais en ce nouvel an. Il y aura beaucoup de changements positifs dans votre vie active. La bonne foi et la persévérance vous permettront de lutter contre tout obstacle.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Vous prendrez et résoudrez les problèmes avec beaucoup de tact. Rien de bien étonnant puisque ce sont vos traits de caractères. La particularité pour vous cette année se fera sentir au niveau de vos proches. "
+    }, {
+      "name": "Février",
+      "text": "Vous serez en très bonne santé tout au long de votre année car vous faites tout pour vous nourrir et vous hydrater convenablement. Vos amis suivront votre exemple et verront cet aspect de leur vie évoluer dans le bon sens."
+    }, {
+      "name": "Mars",
+      "text": "En ce mois de mars il sera question pour vous de vous surpasser. Le temps n’est plus à la rigolade et vous devez vous servir de votre énergie débordante pour atteindre vos objectifs."
+    }, {
+      "name": "Avril",
+      "text": "Il y a des mois plus difficile que d’autres. C'est tellement frustrant! Pourquoi ne pas utiliser cela comme une occasion pour respirer profondément, et rester au calme. Vous verrez que  les choses semblent soudainement beaucoup moins compliquées !"
+    }, {
+      "name": "Mai",
+      "text": "Vous dissiperez un malentendu. C'est le moment de mettre cartes sur table, en toute honnêteté. Vous aurez une occasion en or de vous expliquer et de mettre les choses au clair."
+    }, {
+      "name": "Juin",
+      "text": "Ce mois vous arrêterez de vous chercher et vous trouverez la voie. Une voie que vous suivrez durant un long moment, après tout dépend de votre conception de longueur."
+    }, {
+      "name": "Juillet",
+      "text": "En fin de mois, vous partagez une grande complicité avec votre moitié. Vous pourriez même abuser de la situation."
+    }, {
+      "name": "Août",
+      "text": "Les quinze premiers jours seront plutôt calmes. Il faut dire que vous serez peut-être un peu trop exigeant en ce qui concerne vos critères amoureux et il y aura un décalage entre vos désirs et la réalité."
+    }, {
+      "name": "Septembre",
+      "text": "Septembre sera marqué par les améliorations, et ce dans tous les domaines, notamment amoureux et professionnels. Les progrès seront lents et certaines influences ne vous aideront pas à avancer aussi vite que vous le souhaiteriez."
+    }, {
+      "name": "Octobre",
+      "text": "Vous vous demandez peut-être comment régler une situation conflictuelle entre deux amis ou avec l’aimé. Vous trouverez la solution, n’ayez crainte. Au travail, vous aimeriez tellement être mieux rémunéré. Patience, cela se produira très bientôt."
+    }, {
+      "name": "Novembre",
+      "text": "C’est le moment de garder votre esprit tenace ce mois-ci. Vous aurez la réponse à ce qui vous semblait déjà lointain à force d’attente. N’ayez pas peur ce n’était tout simplement pas le bon moment."
+    }, {
+      "name": "Décembre",
+      "text": "Faites tout ce que vous pouvez pour maintenir une atmosphère paisible autour vous. Vous devez prendre un peu de recul et consacrer un peu de temps pour le repos et la détente."
+    }],
+    "number": {
+      "luckyNumber": "2",
+      "text": "Ce chiffre vous incite à être déterminé pour réussir. 2018 sera une année réussie si vous êtes déterminé et prêt à réussir. Cependant, vous devez disposer d'un ensemble d’objectifs réalisables. Soyez cohérent dans la mise en œuvre de ces objectifs."
+    },
+    "dates": [{
+      "when": "12 Semptebre",
+      "what": "Très bonne journée en perspective, surtout au travail une opportunité va vous tendre les bras le tout dans une bonne ambiance."
+    }, {
+      "when": "1er Novembre ",
+      "what": "Un jour particulier car vous allez revoir une vieille connaissance peut être de votre enfance ou de vos études, mais vous en serez troublé."
+    }, {
+      "when": "6 Novembre",
+      "what": "En amour ne soyez pas trop timide et allez de l'avant, c'est peut-être la chance de votre vie."
+    }],
+    "addon": {
+      "ourAdv": "Concentrez-vous davantage sur vous au lieu de vous concentrer sur les besoins et les souhaits des autres. Il est essentiel de comprendre la réalité qui vous entoure certes mais il faut aussi que vous vous occupiez de vous.",
+      "yourObj": "Essayez la positive attitude ! Avez-vous remarqué qu'un \"rien\" suffit pour débloquer une situation ? Alors place à la bonne humeur et à la détente autant en famille qu’au travail."
+    }
+  }
+}, {
+  "_id": "sco",
+  "name": "Scorpion",
+  "reading": {
+    "intro": "Essayez la positive attitude ! Avez-vous remarqué qu'un \"rien\" suffit pour débloquer une situation ? Alors place à la bonne humeur et à la détente autant en famille qu’au travail.",
+    "love": {
+      "single": "Une très forte attirance pour lui (elle) s’annonce. Vous ne saurez l’expliquer mais vous ressentirez constamment le besoin d’être en sa présence. Ceci dit essayer de vous contrôler quand même car il peut vous briser en se lassant de votre présence incessante.",
+      "couple": "Des perturbations risquent de parasiter votre vie de couple. Tout devrait rentrer dans l'ordre avec un peu de patience. Vous serez à nouveau sur la même longueur d'onde et vous pourrez vous consacrer au bonheur. Profitez-en pleinement."
+    },
+    "social": {
+      "familly": "Une vie ambiante et socialement active pour le signe Scorpion. En 2018, on suggère un fort accent sur la vie sociale, essayez d’être présent au maximum. Profitez de vos proches avant qu’il ne soit trop tard.",
+      "freindship": "L’amitié est comme une fleur qu’il ne faut pas laissé faner au risque ne même plus avoir de racines. Cette année vous apprendrez à entretenir vos relations et à en faire des priorités."
+    },
+    "pro": "Vous allez passer par des obstacles dans votre vie professionnelle. Rester calme, détendu et concentrer sur son travail. Veillez à rester modeste dans les relations au travail afin d'éviter les conflits avec vos collègues.",
+    "months": [{
+      "name": "Janvier",
+      "text": "En janvier, vous allez êtres pleins d'idées  vous pourriez vraiment vous impressionner malgré le fait que vous êtes un public difficile! Récompensez-vous, puis retournez au travail."
+    }, {
+      "name": "Février",
+      "text": "Votre mois commencera avec un grand succès, c'est comme si quelqu'un avait décidé de vous faire une grande fête surprise. Il y a des cadeaux, il y a des amis, que des choses positives."
+    }, {
+      "name": "Mars",
+      "text": "Votre générosité sera à l’origine d’une belle opportunité dans le courant de ce mois de septembre. Une opportunité qui vous vaudra une chance en or que vous ne devez pas rater."
+    }, {
+      "name": "Avril",
+      "text": "Quand nous faisons des promesses, nous nous devons de les tenir.<br/>Vous aurez donc de précieux atouts pour réussir dans tout ce que vous entreprenez."
+    }, {
+      "name": "Mai",
+      "text": "Vous savez vous mettre en valeur et ainsi attirez l’attention mais attention, tous les regards ne sont pas bons. Je vous conseille de ne pas en faire trop."
+    }, {
+      "name": "Juin",
+      "text": "Une conversation très profonde vous fera penser aux choses que vous avez toujours  voulu faire (écrire un roman, composer une poésie, trouver une relation vraiment significative avec quelqu'un?) mais que vous avez négligé depuis longtemps. Maintenant que c'est de nouveau sur votre radar, vous pouvez dés maintenant l’accomplir, Ou au moins commencer."
+    }, {
+      "name": "Juillet",
+      "text": "Restez proche de votre porte bonheur car vous allez avoir besoin de coup de chance pour certaines étapes cette année. Vous allez-vous retrouver dans des postures ou il vous faudra un coup de bol pour prendre la bonne décision."
+    }, {
+      "name": "Août",
+      "text": "Faites vos valises et prenez des vacances dans l’année car il est temps pour vous de vous détendre et bien faire les choses à votre retour."
+    }, {
+      "name": "Septembre",
+      "text": "Apprenez à faire la part des choses et vous verrez que votre vie sera beaucoup plus facile et d’ailleurs très simple. Vous ne pouvez pas accepter tout le monde et être partout à la fois vous allez saturer à un moment."
+    }, {
+      "name": "Octobre",
+      "text": "Octobre sera marqué par les améliorations, et ce dans tous les domaines, notamment amoureux et professionnels. Les progrès seront lents et certaines influences ne vous aideront pas à avancer aussi vite que vous le souhaiteriez."
+    }, {
+      "name": "Novembre",
+      "text": "Vous voulez chouchouter vos amis mais vous manquez d'idées. Un peu d'originalité permet des échanges plus fructueux voire des dialogues approfondis. Sortez un peu de chez vous, vous trouverez surement des bonne idées."
+    }, {
+      "name": "Décembre",
+      "text": "Il  peut parfois être difficile de séparer les peurs infondées d'une saine paranoïa, et il sera difficile de rester prudent pendant ce moment. Rappelez-vous que vous êtes seulement paranoïaque si quelque chose ne se passe pas, faites-vous confiance !"
+    }],
+    "number": {
+      "luckyNumber": "1",
+      "text": "Le chiffre 1 est le plus intuitif de tous les chiffres. Il est instinctif, charismatique, et dynamique. Il vous suivra tout au long de cette année pensez y bien, il vous apportera beaucoup !"
+    },
+    "dates": [{
+      "when": "8 Mai",
+      "what": "Vous apprécierez la nature et ce qu’elle offre et vous qui aviez du mal avec les petites bêtes vous comprendrez l’utilité de chacun de ces êtres."
+    }, {
+      "when": "18 Novembre",
+      "what": "Jour brumaire pour vous et il faudrait penser à vous mettre à l’abri car vous aurez l’impression que tout vous tombe dessus mais il faudra être fort."
+    }, {
+      "when": "13 Février",
+      "what": "Prenez ce jour pour réfléchir et voir dans quelles conditions vous pourrez vous faire plaisir. Vous êtes à la veille de la St valentin et les petites attentions devraient commencer durant cette semaine."
+    }],
+    "addon": {
+      "ourAdv": "Assurez-vous de justifier vos actions et demandes avec de bonnes raisons si vous souhaitez, mettre les gens de votre côté! Exprimer vos talents et vos désirs libérer vos énergies créatives.",
+      "yourObj": "Il faut vous détendre car les défis, les situations de stress et les imprévus seront au rendez-vous.<br/>Pourquoi ne pas essayer le Yoga ou la marche pour atteindre vos objectifs."
+    }
+  }
+}, {
+  "_id": "sag",
+  "name": "Sagittaire",
+  "reading": {
+    "intro": "Le climat astral sera globalement facile pour vous en 2018. Plus questions des soucis de ces dernières années, 2018 vous laisse les coudées franches pour réussir tout ce que vous souhaitez. Un seul petit bémol : une seule petite erreur de votre part va néanmoins avoir de grosses conséquences. Pour être réparée, cette erreur devra être prise au sérieux, sans quoi elle pourra bien venir tenir cette belle année 2018 qui vous est promise.",
+    "love": {
+      "single": "Tout va bien ! Restez vous-même votre bonne humeur sera contagieuse et l'ambiance au sein du foyer sera gaie et festive. Attention à ne pas faire passer vos états d'âme sur votre entourage surtout sur votre conjoint.",
+      "couple": "Il faut du temps pour être en couple, de la patience et beaucoup de compromis. Vous n’êtes pas prêt cette année à traverser toutes ses étapes donc profiter au maximum de vos moments de répit afin de ne rien regretter."
+    },
+    "social": {
+      "familly": "Au sein de votre famille pendant la nouvelle année, vous serez témoins de beaucoup de changements. Restez prudents envers ceux qui tentent de vous influencer tout au long de l'année. Cela serait bénéfique pour éviter les conflits non désirés entre les membres de votre famille.",
+      "freindship": "Rien à signaler pour vous ! Vous vous êtes construit et consolidé votre petit monde et aucune tentation externe ne peut briser ces relations que vous avez mis du temps à construire. Elles sont construites aves des bases et des fondements solides."
+    },
+    "pro": "2018 semble être une très bonne année pour les Sagittaires. Vous allez exceller dans votre carrière professionnelle. Laissez vos performances parler pour attirer l'attention des supérieurs. ",
+    "months": [{
+      "name": "Janvier",
+      "text": "Soyez toujours enthousiaste, optimiste, accueillant(e), chaleureux(e) et surtout avenant(e). Vous ne pouvez d’ailleurs pas changer ces traits de caractères car ce serait changer complètement de personnalité."
+    }, {
+      "name": "Février",
+      "text": "Certes vous serez doté d'une belle énergie mais si vous ne voulez pas finir sur les genoux et épuiser le quota de patience de votre entourage je vous conseille fortement de mettre un bémol à toute cette agitation. "
+    }, {
+      "name": "Mars",
+      "text": "Vous voulez avancer sur un projet mais votre partenaire veut attendre de voir comment les choses évoluent. Prenez du recul et étudiez bien les choses avec lui avant partir tête baissée. "
+    }, {
+      "name": "Avril",
+      "text": "Ne soyez pas trop opportuniste. Apprenez à faire la part des choses et apprenez à voir plus loin que votre intérêt. Le mois d’avril vous réserve quelques surprises."
+    }, {
+      "name": "Mai",
+      "text": "Le printemps est là. Le mois de mai annonce de bons moments entre amis à l’extérieur profitez pleinement de ces moments et rendez les inoubliables !"
+    }, {
+      "name": "Juin",
+      "text": "Passez tous vos moments libres au soleil. Faites le plein en vitamine D, même seulement vingt minutes le temps de votre pose déjeuner pourrait être tout ce dont vous avez besoin."
+    }, {
+      "name": "Juillet",
+      "text": "Prenez les choses au second degré car avec votre élément (le feu) vous avez tendance à exploser pour un rien et aller vraiment très loin dans vos réactions."
+    }, {
+      "name": "Août",
+      "text": "Votre compatibilité avec certains autres signes astrologiques vous rend un peu plus serein par rapport à votre vie sociale. Ou peut être est ce l’amour qui arrive ?"
+    }, {
+      "name": "Septembre",
+      "text": "Profitez de vos vacances pour vous retrouver avec la nature car elle au moins ne vous jugera point. Elle vous aidera plutôt à mieux vous retrouver,  et vous sentir à l’aise."
+    }, {
+      "name": "Octobre",
+      "text": "Au fur et à mesure que votre mois avance, vous remarquerez probablement beaucoup de sourires dirigés vers vous. Souriez en retour! Et soyez heureux pour toutes ces bonnes vibrations."
+    }, {
+      "name": "Novembre",
+      "text": "Ce début de mois de novembre vous allez vous remettre en question,  vous fixer des objectifs et des plans d’actions pour finir votre année en beauté. Quelle bonne idée !"
+    }, {
+      "name": "Décembre",
+      "text": "Profitez de cette période de fêtes en famille. Rapprochez-vous de vos amis, et dites vous que ces moments sont assez rares finalement alors profitez pleinement."
+    }],
+    "number": {
+      "luckyNumber": "8",
+      "text": "Le chiffre 8 est le chiffre de l'Amour. Vous serez capable de réaliser tout ce qui est idéal pour vous pendant 2018."
+    },
+    "dates": [{
+      "when": "1er Avril",
+      "what": "Pour ce dimanche de Pâques rapprochez- vous de vos proches, resserrez vos liens et lancez une bonne continuité pour cette année 2018."
+    }, {
+      "when": "15 Août",
+      "what": "En ce jour d’assomption prenez le temps de vous retrouver entre amis ils auront besoin de vous, amusez- vous !"
+    }, {
+      "when": "31 Décembre",
+      "what": "à l’approche de 2019 c’est le moment de refaire le point sur votre vie en 2018. Une petite rétrospective de tout ce qui s’est passé en bien ou en mal dans votre vie et dans votre entourage."
+    }],
+    "addon": {
+      "ourAdv": "Vous serez très entreprenant et déborderez d'initiatives. Mais surtout n'essayez pas de brûler les étapes : réfléchissez bien avant de prendre une décision.",
+      "yourObj": "Votre objectif était de laisser une de vos faiblesses derrière vous, je vous annonce qu’en 2018 elle ne doit plus être une résolution mais un objectif atteint."
+    }
+  }
+}, {
+  "_id": "cap",
+  "name": "Capricorne",
+  "reading": {
+    "intro": "2018  sera une année pleine de défis pour vous ! Osez, car votre audace fera la différence. Vous serez là où on ne vous attendait pas et cet effet de surprise sera votre principal atout. Pas d'obstacles en vue, négociez, cherchez des accords, faites des concessions. Cette année est idéale pour entreprendre.",
+    "love": {
+      "single": "Vous croyez au grand amour mais vous êtes passif. Vos critères sont extrêmement exigeants, ne cherchez pas à cocher une liste de critères chez vos rencontres, concentrez vous sur le feeling, le reste suivra.",
+      "couple": "Le quotidien vous pèsera. Vous ressentirez le besoin de vous élevez vers de nouveaux horizons mais la peur du vide et de l’inconnu vous empêcheront de faire des choix décisifs. Pourquoi ne pas apporter du renouveau au sein de votre relation ?"
+    },
+    "social": {
+      "familly": "La famille est votre véritable trésor. Il est temps de cesser vouloir leur approbation pour tout ce que vous décidez. Ayez confiance en vos choix, votre famille vous a donné toutes les clefs. Acceptez que les erreurs sont inévitables et qu'elles font avancer.",
+      "freindship": "Vous allez traverser une période de crise, vous aurez alors tendance à vous renfermer sur vous même. Laissez vos amis être présents pour vous. Vous avez peu d'amis mais ils vous prouveront qu'ils sont de qualité."
+    },
+    "pro": "En 2018, vous aurez le sentiment que les possibilités de changements sont limitées. A partir de Mars, les choses s’accélèrent. Vous vivrez de très beaux succès.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Vous ferez preuve d'impatience et manquerez de patience. Il faudra accepter que d'autres aient de meilleures suggestions que les vôtres. La concurrence fait partie du jeu et il faudra vous en servir comme d'un moteur."
+    }, {
+      "name": "Février",
+      "text": "Vous vivrez des moments délicats au sein du couple. Vous serez affaibli momentanément. Il est important d'exprimer votre ressenti sans attendre d'avoir accumulé la rancœur."
+    }, {
+      "name": "Mars",
+      "text": "Vous aurez le sentiment d'être à votre place, que les choses évoluent enfin comme vous l'aviez espéré."
+    }, {
+      "name": "Avril",
+      "text": "Par peur que cette période positive prenne fin, vous marcherez sur des œufs. Cessez d'être dans la croyance que quelque chose de négatif risque de venir mettre un terme à une période agréable."
+    }, {
+      "name": "Mai",
+      "text": "Vous aurez envie de dépaysement et il serait intéressant dès ce mois ci de réserver pour la destination qui vous fait rêver depuis tant d'années."
+    }, {
+      "name": "Juin",
+      "text": "Vous avez envie de trouver un sens à certaines de vos questions, vous serez en quête. Il serait intéressant de vous engagez dans une cause qui vous tient à cœur. Vous êtes une personne susceptible d'apporter beaucoup de joie, ne vous en privez pas."
+    }, {
+      "name": "Juillet",
+      "text": "Vous aurez le sentiment d'être en décalage avec les personnes de votre entourage. Recentrez vous quelques temps, accordez vous du temps pour vous. Cela vous fera le plus grand bien."
+    }, {
+      "name": "Août",
+      "text": "Le mois d'Aout sera relativement calme. Ca sera la période propice pour développer un projet créatif."
+    }, {
+      "name": "Septembre",
+      "text": "Vous aurez une opportunité professionnelle mais par peur de l'inconnu vous hésiterez. Pesez le pour et le contre mais vos peurs ne sont pas des éléments suffisants."
+    }, {
+      "name": "Octobre",
+      "text": "Soyez sur vos gardes, vous aurez tendance à attirés des personnes envieuses. Vous serez plus négatif que d'ordinaire. Ne remettez pas tout en questions pour autant."
+    }, {
+      "name": "Novembre",
+      "text": "Vous serez obligé d'assumer d'importantes responsabilités familiales. Le fardeau vous paraîtra bien lourd à porter mais tout s'arrangera ensuite."
+    }, {
+      "name": "Décembre",
+      "text": "Votre travail et votre implication seront reconnus à leur juste valeur. Il est temps de demander une augmentation de salaire."
+    }],
+    "number": {
+      "luckyNumber": "22",
+      "text": "L'année 2018 sera une année de défis, vous surmonterez les difficultés avec un calme olympien et une assurance déconcertante."
+    },
+    "dates": [{
+      "when": "11 Mars",
+      "what": "Prenez le temps d'observer le monde qui vous entoure. Ce sont les rencontres parfois éphémères du quotidien qui l'enrichissent."
+    }, {
+      "when": "12 Septembre",
+      "what": "Vous attirerez l'attention notamment au travail. Vous serez mis en avant plus que d'ordinaire. Profitez-en pour prouver que vous êtes à la hauteur."
+    }, {
+      "when": "24 Octobre",
+      "what": "Des personnes qui vous sont chères vous surprendront."
+    }],
+    "addon": {
+      "ourAdv": "Il est temps de ne plus avoir peur : Cessez de remettre à demain les projets qui vous tiennent à cœur. Vivez comme si demain n'aurait peur être jamais lieu. Vous avez tendance à remettre les choses à plus tard mais cela vous fait passer à coté d'un tas de belles expériences.",
+      "yourObj": "Vous connaitrez une évolution sur le plan financier. Servez vous de cela pour permettre à des projets de se concrétiser. Entourez vous, le bonheur vaut la peine d'être vécu que quand il est partagé. "
+    }
+  }
+}, {
+  "_id": "ver",
+  "name": "Verseau",
+  "reading": {
+    "intro": "Vous connaitrez une évolution sur le plan financier. Servez vous de cela pour permettre à des projets de se concrétiser. Entourez vous, le bonheur vaut la peine d'être vécu que quand il est partagé.",
+    "love": {
+      "single": "Vous êtes de nature attachante mais vous vous dévalorisez en permanence sous votre apparente confiance en vous. Vous débuterez une histoire en la pensant frivole, vous vous ferez prendre à votre propre jeu car de cette histoire de profonds sentiments naitront.",
+      "couple": "Votre conjoint et vous traverserez quelques difficultés, rassurez vous ça ne sera que passager."
+    },
+    "social": {
+      "familly": "Vous renouerez des liens plus forts avec un membre de votre famille de qui vous vous étiez éloigné. Votre famille est très fier de vous et vous le dira, leurs mots vous galvaniseront et vous pousseront à vous dépasser.",
+      "freindship": "Vous êtes très fidèle en amitié et serez très présent pour vos amis. Attention à vous ménager afin de ne pas être vidé de votre énergie."
+    },
+    "pro": "Vous êtes très fidèle en amitié et serez très présent pour vos amis. Attention à vous ménager afin de ne pas être vidé de votre énergie.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Vous ferez preuve d'une apparente décontraction face à tous les défis que vous devrez relever. Vous assurerez à la perfection les challenges qui se présenteront à vous. Attention à ce que votre ambition ne soit pas mal interprétée."
+    }, {
+      "name": "Février",
+      "text": "Vous vous jetterez à corps perdu dans un nouveau projet qui vous tient à cœur. Les débuts seront difficiles mais accrochez vous à vos rêves, vous en surprendrez plus d'un."
+    }, {
+      "name": "Mars",
+      "text": "Les esprits s'échaufferont, mettez de l'eau dans votre vin. Il est important de savoir faire des compromis surtout au niveau professionnel."
+    }, {
+      "name": "Avril",
+      "text": "Vous vous mettrez une pression permanente. C'est votre mode de fonctionnement mais apprenez à faire confiance pour pouvoir relâcher un petit peu la pression."
+    }, {
+      "name": "Mai",
+      "text": "Le mois de Mai sera le mois des bonnes nouvelles, vous serez comme porté. Tout s'enchainera sans difficulté."
+    }, {
+      "name": "Juin",
+      "text": "Le mois de Juin sera rude après la fluidité du moi de Mai. Vous aurez le sentiment que les choses avancent lentement et vous sentirez impuissant. Accrochez vous, soyez patient. Il faudra attendre la fin du mois de Juin pour que les choses se dénouent."
+    }, {
+      "name": "Juillet",
+      "text": "Vous aurez plaisir à recevoir vos amis et votre famille autour d'un bon diner. Vous multiplierez les activités en groupe, ça sera source de beaucoup de bonheur."
+    }, {
+      "name": "Août",
+      "text": "Votre plan astral est compatible avec 3 signes. Vos chances de rencontres amoureuses seront très élevées au cours de l'été."
+    }, {
+      "name": "Septembre",
+      "text": "Vous serez d'un optimisme à toute épreuve. La rentrée sera riche en rebondissements pour vous, rien ne pourra vous arrêter."
+    }, {
+      "name": "Octobre",
+      "text": "Vous ressentirez le besoin de vous éloigner de votre quotidien, de prendre de la distance et de vous ressourcer. Malheureusement, vous n'en aurez pas l'occasion. Le mois d'Octobre sera très difficile pour vous. Réconfortez-vous, le meilleur reste à venir."
+    }, {
+      "name": "Novembre",
+      "text": "Une opportunité très intéressante se présentera à vous très prochainement. A vouloir être partout à la fois, vous risquez de vous dispersez. Recentrez vous sur les projets qui vous tiennent les plus à cœur."
+    }, {
+      "name": "Décembre",
+      "text": "Depuis des mois, vous attirez les regards de cette personne que vous voyez quotidiennement sans même la remarquer. Il semblerait que Décembre vous permette d'ouvrir le dialogue. Cette personne pourrait devenir une des personnes essentielle à votre équilibre, ne passez pas à coté pour des préoccupations du quotidien."
+    }],
+    "number": {
+      "luckyNumber": "6",
+      "text": "Depuis des mois, vous attirez les regards de cette personne que vous voyez quotidiennement sans même la remarquer. Il semblerait que Décembre vous permette d'ouvrir le dialogue. Cette personne pourrait devenir une des personnes essentielle à votre équilibre, ne passez pas à coté pour des préoccupations du quotidien."
+    },
+    "dates": [{
+      "when": "16 Avril",
+      "what": "Sur le plan professionnel, c'est le bon jour pour obtenir ce que vous attendiez depuis des mois. Une meilleure opportunité ne se présentera pas avant des mois. "
+    }, {
+      "when": "12 Août",
+      "what": "Vous recevrez une attention qui vous touchera infiniment."
+    }, {
+      "when": "7 Octobre",
+      "what": "Des personnes proches vous annonceront une bonne nouvelle."
+    }],
+    "addon": {
+      "ourAdv": "Vous adopterez une nouvelle façon de vivre : Vous serez hyperactif et préoccupé par le fait de ne louper aucune occasion. Votre comportement risque d'en agacer plus d'un. Ne soyez pas excessif et apprenez à vous tempérer afin d'apprendre à savourer les moments d'accalmie qui sont importants pour tout équilibre.",
+      "yourObj": "Soyez moins individualiste surtout dans l’ère dans laquelle nous vivons. Vous aurez un rôle de leader, n'hésitez donc pas à initier des sorties, à proposer des choses à vos amis comme à votre famille. "
+    }
+  }
+}, {
+  "_id": "poi",
+  "name": "Poisson",
+  "reading": {
+    "intro": "L’année 2018 sera l’année de tous les changements pour vous. Préparez-vous à vivre des bouleversements tant au niveau professionnel que dans le cadre de votre vie privée. Vous qui aviez envie de renouveau, vous vivrez une des années les plus riches de votre existence.",
+    "love": {
+      "single": "Vos anciennes relations sont aujourd’hui derrière vous mais par peur de souffrir vous avez érigé une barrière tout autour de vous. Il est temps d’accepter qu’on puisse s’intéresser à vous en toute bienveillance et qu’une nouvelle histoire ne sera pas nécessairement synonyme d’échec.",
+      "couple": "Cet hiver notamment les habitudes de couple prendront peu à peu la forme d’une routine quelque peu lassante. Prenez le temps de vous redécouvrir, osez de nouvelles activités en duo pour renforcer votre complicité. C’est en sortant de votre zone de confort, que vous vous sentirez vivants. Vos sentiments s’en verront renforcés. "
+    },
+    "social": {
+      "familly": "Votre vie professionnelle sera très exigeante et vous aurez par période très peu de temps à accorder à votre entourage. Vous aurez même parfois du mal à vous libérer pour des évènements familiaux majeurs. Ne culpabilisez pas, et prenez le parti de privilégier de rares moments en famille qui soient de qualité durant lesquels vous vivrez ce moment de partage pleinement.  ",
+      "freindship": "Vos amis se sentiront délaissés, vous aurez tendance à interpréter leurs mots comme des reproches. Ne pensez pas négativement : Ils vous aiment et souhaiteront vous voir plus souvent. Vous croulerez sous les invitations au Printemps-Eté 2018."
+    },
+    "pro": "La première moitié de l'année sera délicate pour le signe du Poissons. Votre carrière vous demandera énormément d’implication, vous récolterez les fruits de ces mois de dur labeur à l’automne. N’hésitez pas à faire preuve d’esprit d’initiatives, celles-ci seront très bien reçues par vos collaborateurs.",
+    "months": [{
+      "name": "Janvier",
+      "text": "Reconnu comme fort face à l’adversité et fier, vous aurez du mal à admettre avoir besoin d’aide. Vous apprendrez parfois à vos dépends, qu’on va plus vite seul mais qu’en équipe, on va plus loin. "
+    }, {
+      "name": "Février",
+      "text": "Tant au niveau personnel que professionnel, il est temps de faire de la communication le maître mot de vos relations. Vous apprendrez à exprimer vos attentes plus clairement, et arrêterez d’attendre qu’on lise dans vos pensées."
+    }, {
+      "name": "Mars",
+      "text": "Votre sommeil risque d’être agité notamment les deux premières semaines du mois. Vos rêves vous troubleront et seront parfois source de questionnement. Votre inconscient s’exprimera dans vos rêves, il faudra vous ménager et prendre du temps pour vous."
+    }, {
+      "name": "Avril",
+      "text": "Vous allez devoir prendre une importante décision, qui donnera l’impulsion à la suite de votre année. Ayez confiance en votre capacité d’analyse, votre choix sera valable. Vous êtes capables de grandes choses !"
+    }, {
+      "name": "Mai",
+      "text": "Le début du mois va être une période propice au repos. Vous serez très entouré, vous vous sentirez ressourcé et prêt à vous lancez dans de nouveaux projets."
+    }, {
+      "name": "Juin",
+      "text": "Vous vivrez à cent à l’heure et les moments d’échange ne seront pas votre priorité alors qu’ils sont le sel de la vie. Revoyez d’urgence vos priorités au risque de foncer droit dans le mur."
+    }, {
+      "name": "Juillet",
+      "text": "Une des plus belles rencontres de votre année aura lieu, soyez alerte ; Vous ne devez surtout pas passer à côté.  Cette rencontre pourra se transformer en amitié solide."
+    }, {
+      "name": "Août",
+      "text": "Des vacances vous feront un bien fou. Elles seront l’occasion de renouer avec vos sensations corporelles. Vous attirerez beaucoup les regards, preuve que votre charme se développe quand vous êtes en phase avec vous-même."
+    }, {
+      "name": "Septembre",
+      "text": "Votre sensibilité sera exacerbée, vous serez spectateur d’évènements marquants. Votre compassion et votre sens de la formule seront de véritables atouts très appréciés."
+    }, {
+      "name": "Octobre",
+      "text": "Vous devriez surveiller votre alimentation afin de limiter une éventuelle prise de poids. Vous êtes plus sédentaire ces dernières semaines. Reprendre une activité physique vous ferait le plus grand bien, autant physiquement que moralement."
+    }, {
+      "name": "Novembre",
+      "text": "Vous êtes contrarié sans trop savoir pourquoi. Des inquiétudes financières viendront s’ajouter. Prenez du recul, c’est en analysant les choses d’un œil neuf et de manière la plus calme possible, que les solutions vous paraitront évidentes."
+    }, {
+      "name": "Décembre",
+      "text": "Toujours plus exigeant avec vous-même, vous ferez le bilan un peu en avance de l’année venant de s’écouler. Vous vous projetterez déjà dans les mois à venir ce qui est révélateur de votre fonctionnement : Vous ne profitez pas de l’instant présent et voyez toujours plus loin. Votre ambition est une qualité, n’en faites pas un frein. Apprenez à savourer chaque instant et à vous féliciter de tout ce que vous aurez accompli avec succès durant l’année 2018."
+    }],
+    "number": {
+      "luckyNumber": "1",
+      "text": "Le chiffre 1 est votre chiffre chance. Cela signifie que l’année 2018 sera l’année des renouveaux pour vous. En termes astral, cela signifie une renaissance, de nouvelles expérimentations. Votre curiosité sera satisfaite. "
+    },
+    "dates": [{
+      "when": "13 Février",
+      "what": "Votre situation amoureuse vous fera douter, vous remettrez tout en questions ou à contrario enfouirez tous vos doutes. Faites face à la réalité et vous verrez que rien n’est dramatique. "
+    }, {
+      "when": "7 Avril",
+      "what": "Vous devriez sortir danser, ou boire un verre ; vous passerez une soirée mémorable qui vous réserve bien des surprises. "
+    }, {
+      "when": "19 Mai",
+      "what": "Vous recevrez des invités ou serez invité, vous ferez une rencontre déterminante."
+    }],
+    "addon": {
+      "ourAdv": "Vous êtes quelqu’un qui a besoin de planifier pour se rassurer mais cela ne tempère finalement que peu vos angoisses. C’est en apprenant à lâcher prise que vous allez véritablement commencer à vivre et profiter de chaque instant. ",
+      "yourObj": "On a tendance à confondre votre gentillesse avec de la faiblesse. Vous n’aimez pas prendre part aux conflits, votre pacifisme sera un bel atout. Vous qui semblez être un modèle d’équilibre en toutes circonstances, c’est en vous livrant davantage sur vos émotions que vous vous révélerez sous un nouveau jour."
+    }
+  }
+}]
