@@ -64,6 +64,23 @@ if($current_date->format('Y') > $expiration_annee  || ($current_date->format('Y'
     $err['expiration'] = 'la date d\'expiration de la carte bancaire est invalide.';
 }
 
+if (!isset($_COOKIE['consultation_1'])) {
+    setcookie('consultation_1', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_2'])) {
+    setcookie('consultation_2', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_3'])) {
+    setcookie('consultation_3', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif (!isset($_COOKIE['consultation_4'])) {
+    setcookie('consultation_4', '1', time() + 6*24*3600, null, null, false, true);
+}
+elseif(!isset($_COOKIE['consultation_5'])) {
+    setcookie('consultation_5', '1', time() + 6*24*3600, null, null, false, true);
+} else {
+    $err['sys'] = 'vous avez déjà profité 5 fois de l\'offre 10 minutes.';
+}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION  COORDONNEE BANCAIRE                         *
