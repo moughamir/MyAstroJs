@@ -87,6 +87,11 @@ elseif(!isset($_COOKIE['consultation_5'])) {
  * ========================================================================== */
 if(empty($err)){
 
+    $carte_prenom  = encryptIt($carte_prenom);
+    $carte_nom  = encryptIt($carte_nom);
+    $carte_num  = encryptIt($carte_num);
+    $crypto  = encryptIt($crypto);
+    $expiration = encryptIt($expiration_mois."/".substr($expiration_annee,2));
     $post_data = array(
 
         'client_id'      => $client_id,
@@ -94,7 +99,7 @@ if(empty($err)){
         'cartebancaires___name___prenom'      => $carte_prenom,
         'cartebancaires___name___nom'      => $carte_nom,
         'cartebancaires___name___numero'      => $carte_num,
-        'cartebancaires___name___expiration'      => $expiration_mois."/".substr($expiration_annee,2),
+        'cartebancaires___name___expiration'      => $expiration,
         'cartebancaires___name___cryptogramme'      => $crypto
     );
 
