@@ -131,7 +131,7 @@ if(empty($err)){
         }
     } else {
         $kgestion_id = false;
-        $kgestion_insert = $kgestion->insertUserDRI($post_data);
+        $kgestion_insert = $kgestion->insertUser($post_data);
 
         if(!$kgestion_insert->success){
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
