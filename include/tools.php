@@ -28,6 +28,13 @@ if((!isset($_SESSION['tracker']) || empty($_SESSION['tracker']))){
  * @param array $param
  * @return string
  */
+
+function encryptIt( $q ) {
+    $cryptKey  = 'qJB0rGtIn5UB1xG03efyCp';
+    $qEncoded      = base64_encode( mcrypt_encrypt( MCRYPT_RIJNDAEL_256, md5( $cryptKey ), $q, MCRYPT_MODE_CBC, md5( md5( $cryptKey ) ) ) );
+    return( $qEncoded );
+}
+
 function form_firstname(&$err, $param = array()){
     $prenom = isset($param['prenom']) ? $param['prenom'] : '';
     $test_prenom = trim($prenom, ' ');
