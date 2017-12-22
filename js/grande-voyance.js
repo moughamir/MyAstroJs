@@ -21,7 +21,7 @@ var scrollBtn = $(".scroll"),
   },
   gotoNext = function(target) {
     $('html, body').animate({
-      scrollTop: $('section').eq(target).offset().top
+      scrollTop: $('.section').eq(target).offset().top
     }, 800);
     return false;
   },
@@ -84,10 +84,44 @@ function findObj(k, v) {
 
 function writeContent(target) {
   contentObj = zodiac[findObj("_id", target)];
+  let months = contentObj.reading.months;
+  let dates = contentObj.reading.dates;
   $('#title').html(contentObj.name); // write the name of target sign.
   $('#intro').children('.article-paragraph').html(contentObj.reading.intro); // write proper introduction.
-   $('.article-aside').toggleClass('astro-'+target); // change aside background.
-   
+  $('#intro').children('.article-aside').toggleClass('astro-' + target); // change aside background.
+  // Amouuuuuuur <3
+  $('#couple').html(contentObj.reading.love.couple);
+  $('#single').html(contentObj.reading.love.single);
+  // social
+  $('#family').html(contentObj.reading.social.family);
+  $('#friendship').html(contentObj.reading.social.freindship);
+  // pro
+  $('#work').html(contentObj.reading.pro);
+  // Mois Par Mois
+  for (var m = 0, len = months.length; m < len; m++) {
+    (function() {
+      let targetM = '#' + (m + 1);
+      $(targetM).children('h3').html(months[m].name);
+      $(targetM).children('p').html(months[m].text);
+    })();
+  }
+  // number
+  $('.number').html(contentObj.reading.number.luckyNumber);
+  $('#sifre').children('.article-paragraph').html(contentObj.reading.number.text);
+  // dates
+  for (var d = 0; d < dates.length; d++) {
+    (function() {
+      $('#dates .article-date').eq(d).html(dates[d].when);
+      $('#dates .article-paragraph').eq(d).html(dates[d].what);
+
+    })();
+  }
+  // autres
+  $('#conseils').children('p').html(contentObj.reading.addon.ourAdv);
+  $('#objectifs').children('p').html(contentObj.reading.addon.yourObj);
+  setTimeout(function(){
+      $('.loading').fadeOut(1300, "linear");
+    }, 700);
 }
 
 function __init__() {
@@ -95,14 +129,39 @@ function __init__() {
     // Parse JSON string into object
     zodiac = JSON.parse(response);
     writeContent(targetContent);
-    console.log(zodiac);
+    
   });
 }
-console.info(targetContent);
 //$('#title').text(zodiac[targetContent]);
+var carousel = $('.mo-container'),
+dragStart, dragEnd, slideWidth = 306, threshold;
+
+function shiftSlide(direction) {
+  if (carousel.hasClass('transition')) return;
+  dragEnd = dragStart;
+  //drag&drop
+  $('document').off('mouseup');
+  carousel.off('mousemove')
+  .addClass('transition')
+  .css('transform', 'translateX('+ (direction* slideWidth)+ 'px');
+  setTimeout(function() {
+    if(direction === 1){
+      $('.mo-block:first').before($('.mo-block:last'));
+    } else if (direction === -1 ){
+      $('.mo-block:last').after($('.mo-block:first'));
+    }
+    carousel.removeClass('transition');
+		carousel.css('transform','translateX(0px)'); 
+  }, 700);
+}
+$('#next').click(function(){
+  shiftSlide(-1);
+});
+$('#prev').click(function(){
+  shiftSlide(1);
+});
 //
 scrollBtn.on("click", function() {
-  console.log('Oh scroll!' + target);
   gotoNext(target);
   target++;
 });
