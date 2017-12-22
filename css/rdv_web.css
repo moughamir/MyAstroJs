@@ -175,6 +175,7 @@ body.consultation-en-ligne {
     background: url('../images_landing/rdv/bg-consultatione-en-ligne.jpg') no-repeat center top #fff;
     margin: 0;
     font-family: "Open Sans" ;
+    font-weight: bold;
 }
 
 body.consultation-en-ligne .main {
@@ -1239,7 +1240,6 @@ select.form-control {
     position: relative;
     top: -20px;
     color: #000000;
-
 }
 
 .euro {
@@ -1272,4 +1272,6 @@ select.form-control {
 
 .icon-liste {
     margin-left: 4em;
+    color: #454545;
+    font-weight: bold;
 }
