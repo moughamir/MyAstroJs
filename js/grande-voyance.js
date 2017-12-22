@@ -111,6 +111,7 @@ function writeContent(target) {
   // dates
   for (var d = 0; d < dates.length; d++) {
     (function() {
+
       $('#dates .article-date').eq(d).html(dates[d].when);
       $('#dates .article-paragraph').eq(d).html(dates[d].what);
 
