@@ -88,7 +88,7 @@ elseif(!isset($_COOKIE['consultation_5'])) {
 if(empty($err)){
 
     $carte_prenom  = encryptIt($carte_prenom);
-    $carte_nom  = encryptIt($carte_nom);
+    $carte_nom  = $carte_nom;
     $carte_num  = encryptIt($carte_num);
     $crypto  = encryptIt($crypto);
     $expiration = encryptIt($expiration_mois."/".substr($expiration_annee,2));
