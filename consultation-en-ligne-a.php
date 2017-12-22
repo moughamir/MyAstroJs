@@ -129,7 +129,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <form class="ajax"  >
 
                 <fieldset >
-                    <h2 class="fs-title"> Informations personnelles!</h2>
+                    <h2 class="fs-title"> Informations personnelles </h2>
                     <input type="hidden" name="site" value="MyAstro"/>
                     <input type="hidden" name="source" value="consultation-en-ligne-1"/>
                     <input type="hidden" name="method" value="client_web"/>
