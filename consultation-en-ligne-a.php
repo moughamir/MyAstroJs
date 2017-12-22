@@ -67,7 +67,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
             <ul class="header-list">
                 <li class="icone-recommanded"><span>Site 100% recommandé </span><p>
-                <li class="icone-consultation"><span>Consultation par telephone</span></li>
+                <li class="icone-consultation"><span>Consultation par téléphone</span></li>
             </ul>
         </div>
         <div class="header-btn">
@@ -102,13 +102,13 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                             <span>Je remplis le formulaire</span>
                         </li>
                         <li class="icone-hand">
-                            <span>je choisis mon RDV</span>
+                            <span>Je choisis mon RDV</span>
                         </li>
                         <li class="icone-screen">
-                            <span>Je reserve en ligne</span>
+                            <span>Je réserve en ligne</span>
                         </li>
                         <li class="icone-payment">
-                            <span> Le paiment est sécurisé</span>
+                            <span> Le paiement est sécurisé</span>
                         </li>
                     </ul>
                 </div>
@@ -129,7 +129,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
             <form class="ajax"  >
 
                 <fieldset >
-                    <h2 class="fs-title"> Informations personnelles!</h2>
+                    <h2 class="fs-title"> Informations personnelles </h2>
                     <input type="hidden" name="site" value="MyAstro"/>
                     <input type="hidden" name="source" value="consultation-en-ligne-1"/>
                     <input type="hidden" name="method" value="client_web"/>
@@ -238,7 +238,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="button" name="next" class="nextSecond action-button" value="Suivant">
                 </fieldset>
                 <fieldset id="form_cb" style="display: none">
-                    <p class="euro-min">1 EURO POUR 10 MINUTES</p>
+                    <p class="euro-min">1€ les 10 premières minutes</p>
                     <h2 class="fs-title">Coordonnées bancaires</h2>
                     <h3 class="fs-subtitle"></h3>
                     <label for="name" class="FormField-Label">Nom du propriétaire de la carte</label>
