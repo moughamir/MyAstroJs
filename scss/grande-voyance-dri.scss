@@ -95,6 +95,7 @@ body {
   background: transparent;
   position: relative;
   overflow: inherit;
+  padding: 1.5rem;
   @include respond-to('mobile') {
     padding: 0;
     margin: 0;
@@ -178,10 +179,11 @@ select {
   height: 190px;
   border-radius: 50%;
   position: absolute;
-  bottom: 16px;
-  left: -113px;
+  bottom: -43px;
+  left: -149px;
   background: url($assets + "psych.png") no-repeat center;
   background-size: contain;
+  z-index: -1;
   &::before {
     content: 'Gaëlle';
     display: block;
@@ -224,7 +226,22 @@ select {
     background: url($assets + 'offre.png') no-repeat center;
     background-size: contain;
     right: -20px;
-    top: 62px;
+    top: 34px;
+    z-index: 1;
+    @include respond-to('mobile') {
+      width: 128px;
+      top: 3px;
+      right: 0;
+    }
+  }
+  &-fivemin {
+    width: 200px;
+    height: 170px;
+    position: absolute;
+    background: url($assets + 'fivemin.png') no-repeat center;
+    background-size: contain;
+    right: -20px;
+    top: 34px;
     z-index: 1;
     @include respond-to('mobile') {
       width: 128px;

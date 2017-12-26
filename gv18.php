@@ -3,14 +3,15 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>La Grande Voyance 2018 - MyAstro</title>
-    <link rel="stylesheet" href="css/grande-voyance.css" type="text/css" />
-    <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet" /> </head>
+    <link rel="stylesheet" href="css/grande-voyance.css" type="text/css" /> </head>
 
   <body class="no-js" id="gvApp">
-    <div class="loading"></div>
+    <div class="loading">
+      <div id="zodiac-container" class="zodiac"></div>
+    </div>
     <section class="section section-intro">
       <header class="page-header">
         <div class="title-container">
@@ -28,11 +29,10 @@
               <h3 class="article-headline">Intro</h3>
               <p class="article-paragraph">{{intro}}</p>
             </article>
-            
             <div class="article-more-container">
-              <a href="#">
-              <div class="article-more">En savoir plus</div>
-            </a>
+              <a href="#" class="dri-cta">
+                <div class="article-more">En savoir plus</div>
+              </a>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
             <article class="page-article love-s">
               <h3 class="article-headline">Célib</h3>
               <p class="article-paragraph" id="single">{{singleParagraph}}</p>
-              <div class="article-more"><a href="">En savoir plus</a></div>
+              <div class="article-more"><a href="#" class="dri-cta">En savoir plus</a></div>
             </article>
           </div>
         </div>
@@ -79,7 +79,7 @@
               <article class="page-article">
                 <h3 class="article-headline">Amitié</h3>
                 <p class="article-paragraph" id="friendship">{{socialFri}}</p>
-                <div class="article-more"><a href="">En savoir plus</a></div>
+                <div class="article-more"><a href="#" class="dri-cta">En savoir plus</a></div>
               </article>
             </div>
           </div>
@@ -100,7 +100,7 @@
             <article class="page-article">
               <h3 class="article-headline">Travail</h3>
               <p class="article-paragraph" id="work">{{workParagraph}}</p>
-              <div class="article-more"><a href="">Je veux en savoir plus</a></div>
+              <div class="article-more"><a href="#" class="dri-cta">Je veux en savoir plus</a></div>
             </article>
           </div>
         </div>
@@ -205,7 +205,7 @@
             <article class="page-article" id="sifre">
               <aside class="article-aside"> <span class="number">{{luckyNumber}}</span> </aside>
               <p class="article-paragraph">luckyNumberText</p>
-              <div class="article-more"><a href="">Pour en savoir plus</a></div>
+              <div class="article-more"><a href="#" class="dri-cta">Pour en savoir plus</a></div>
             </article>
           </div>
         </div>
@@ -215,14 +215,12 @@
       </div>
     </section>
     <section class="section section-dates">
-      <header class="page-header">
-       
-      </header>
+      <header class="page-header"> </header>
       <main class="article-wrapper">
         <div class="article-container">
           <div class="article" id="dates">
             <div class="section-dates-wrapper">
-               <h3><span class="huge">V</span>os dates clés</h3>
+              <h3><span class="huge">V</span>os dates clés</h3>
               <article class="page-article">
                 <h4 class="article-date">{{when}}</h4>
                 <p class="article-paragraph">{{what}}</p>
@@ -254,20 +252,22 @@
           <header class="article-header headline headline-adv">Nos conseils</header>
           <article class="section-addon-content" id="conseils">
             <p>{{advices}}</p>
-            <div class="article-more"><a href="">Conseils personnalisés</a></div>
+            <div class="article-more"><a href="#" class="dri-cta">Conseils personnalisés</a></div>
           </article>
         </div>
         <div class="article-container addon">
           <header class="article-header headline headline-obj">Vos objectifs</header>
           <article class="section-addon-content" id="objectifs">
             <p>{{objectives}}</p>
-            <div class="article-more"><a href="">Comment atteindre mes objesctifs ?</a></div>
+            <div class="article-more"><a href="#" class="dri-cta">Comment atteindre mes objesctifs ?</a></div>
           </article>
         </div>
       </main>
     </section>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="js/formValidator.js"></script>
     <script type="text/javascript" src="js/grande-voyance.js"></script>
-  </body>
+    <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet" /> </body>
 
 </html>

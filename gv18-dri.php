@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>La Grande Voyance 2018 - MyAstro</title>
     <link rel="stylesheet" href="css/grande-voyance-dri.css" type="text/css" />
-    <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet" />
     </head>
     <body class="dri">
       <section class="PageWrapper">
@@ -87,5 +86,9 @@
           <div class="psychic"></div>
         </article>
       </section>
+      
+    <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet" />
+    
+        <script src="js/formValidator.js"></script>
     </body>
 </html>
