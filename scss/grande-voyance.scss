@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+.rdv {
+  background-image: url($assets + 'bg-dri.jpg');
+}
+
 .typo {
   &-headline {
     font-family: $ff-additional;
