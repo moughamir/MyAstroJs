@@ -1,0 +1,1078 @@
+@charset "UTF-8";
+/* ============================ [ tarot-direct ] ===============================
+ *
+ * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
+ */
+@import "templates/s-landing-tarot-3";
+
+/* Typos */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
+
+/* Images */
+$img_dir : "../images_landing/tarot-direct/";
+$logo : $img_dir + "logo.png";
+$dos_carte : $img_dir + "cardback.png";
+$place_carte : $img_dir + "cardplace.png";
+$bg_fleche : $img_dir + "bg_fleche.png";
+$hexagone : $img_dir + "hexagone_bleu.png";
+$hexagone_hover : $img_dir + "hexagone_rose.png";
+$hexagone_active : $img_dir + "hexagone_turquoise.png";
+$listitem_leftcorner : $img_dir + "corner-left.png";
+$listitem_rightcorner : $img_dir + "corner-right.png";
+$icon_amour : $img_dir + "coeur_bleu.png";
+$icon_argent : $img_dir + "argent_bleu.png";
+$icon_travail : $img_dir + "travail_bleu.png";
+$icon_amour_hover : $img_dir + "coeur_rose.png";
+$icon_argent_hover : $img_dir + "argent_rose.png";
+$icon_travail_hover : $img_dir + "travail_rose.png";
+$icon_amour_active : $img_dir + "coeur_turquoise.png";
+$icon_argent_active : $img_dir + "argent_turquoise.png";
+$icon_travail_active : $img_dir + "travail_turquoise.png";
+$icon_tel: $img_dir + "tel.png";
+$offre_tchat : $img_dir + "offre-tchat.png";
+$offre_immediate : $img_dir + "offre-immediate.png";
+
+/* Palette */
+$grey: #454545;
+$bleu: #2E4980;
+$rose: #F57F9B;
+$turquoise: #1BEBDA;
+$lightgrey: #C0C3C8;
+$bg-bleu: #EAEEF4;
+$bg-grey: #616161;
+$woman: $rose;
+$man: $bleu;
+$tchat-bg: #E8E8E8;
+
+/* ----------------------------- [ STRUCTURE ] ------------------------------ */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: $grey;
+}
+.ContentBand.Principal {
+    background-color: $bg-bleu;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    .ContentBand-ColumnHeader {
+        background-color: white;
+        box-shadow: 0 0 10px 1px $lightgrey;
+        font-size:2.5rem;
+    }
+}
+.ContentBand.Arrowed {
+    background-color: transparent;
+    background-image: url($bg-fleche);
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 127px;
+    .ContentBand-ColumnHeader { padding-top: 5rem;}
+}
+.ContentBand.Principal.Arrowed {
+    background-position: center 5rem;
+    .ContentBand-ColumnHeader { padding-top: 1rem;}
+}
+
+/* ------------------------------- [ ENTETE ] ------------------------------- */
+
+.SiteHeader {
+    position: relative;
+    z-index: 2;
+    background-color: $bleu;
+    color: $turquoise;
+    
+    &-Logo {
+        height: 100px;
+        background-color: transparent;
+        background-image: url($logo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    &-Slogan1 {
+        font-family: 'Indie Flower';
+    }
+    &-Slogan2 {
+        font-weight: bold;
+        background-color: $turquoise;
+        color: $bleu;
+        
+        strong {
+            text-transform: uppercase;
+            color: white;
+            
+        }
+    }
+}
+
+.Title {
+    font-weight: bold;
+    color: $bleu;
+    
+    strong {
+        font-family: 'Lobster';
+        color: $turquoise;
+        font-weight: normal;
+        font-size: 3.5rem;
+    }
+}
+
+.euro-min {
+    color: $turquoise;
+    font-size: 2rem;
+}
+@media all and (max-width: 580px){
+    .Title {
+        font-size: 2.4rem !important;
+    }
+}
+@media all and (max-width: 420px){
+    .Title {
+        font-size: 1.7rem !important;
+        strong { font-size: 2.6rem;}
+    }
+}
+
+/* -------------------------- [ CHOIX DU VOYANT ] --------------------------- */
+
+.PsychicChoice-Psychic {
+    &-VisualForm {
+        color: $bleu;
+    }
+    &-Picture {
+        position: relative;
+        display: inline-block;
+        width: 237px;
+        height: 205px;
+        background-color: transparent;
+        background-image: url($hexagone);
+    }
+    &-Input:checked + &-VisualForm {
+        color: $turquoise;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_active);
+            &:after {
+                content: "\f00c";
+                font-family: 'FontAwesome';
+                background-color: transparent;
+                color: $turquoise;
+            }
+        }
+    }
+    &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
+        color: $rose;
+        .PsychicChoice-Psychic-Picture {
+            background-color: transparent;
+            background-image: url($hexagone_hover);
+            &:after { color: $rose;}
+        }
+    }
+}
+
+/* ------------------------ [ CHOIX DE LA QUESTION ] ------------------------ */
+
+.ThemeChoice-ListItem {
+    position: relative;
+    border-left: none;
+    border-right: none;
+    border-color: $lightgrey;
+    color: $bleu;
+    font-weight: bold;
+    
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        height: 100%;
+        width: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    &:before {
+        left: -2.4rem;
+        background-image: url($listitem_leftcorner);
+    }
+    &:after {
+        right: -2.4rem;
+        background-image: url($listitem_rightcorner);
+    }
+    
+    &-Icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+        &.Amour { background-image: url($icon_amour);}
+        &.Argent { background-image: url($icon_argent);}
+        &.Travail { background-image: url($icon_travail);}
+    }
+    
+    &:hover, &:active, &:focus {
+        color: $rose;
+    }
+    &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
+        background-color: transparent;
+        &.Amour { background-image: url($icon_amour_hover);}
+        &.Argent { background-image: url($icon_argent_hover);}
+        &.Travail { background-image: url($icon_travail_hover);}
+    }
+    &-Input:checked + & {
+        color: $turquoise;
+        .ThemeChoice-ListItem-Icon {
+            background-color: transparent;
+            &.Amour { background-image: url($icon_amour_active);}
+            &.Argent { background-image: url($icon_argent_active);}
+            &.Travail { background-image: url($icon_travail_active);}
+        }
+    }
+}
+
+/* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
+
+.WidgetTarot-Card {
+    
+    &.notFlipped {
+        background-color: transparent;
+    }
+    
+    &-Face.front {
+        border: none;
+        background: transparent url($dos_carte) center no-repeat;
+        background-size: cover;
+    }
+    &-Face.back {
+        border: none;
+        background-color: transparent;
+    }
+    
+    &.place {
+        background-color: transparent;
+        background-image: url($place_carte);
+        border-radius: 6px;
+    }
+}
+
+.WidgetTarot-ResultMsg {
+    font-weight: bold;
+    color: $bleu;
+}
+
+/* ----------------------------- [ POP VOYANT ] ----------------------------- */
+
+.Pop.Pop-Voyant {
+    background-color: transparent;
+    background-image: url($hexagone_active);
+    left: -90px!important;
+    top: 0px!important;
+}
+
+/* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
+
+@import "modules_themes/tarot-direct-psychics";
+
+/* ----------------------------- [ FORMULAIRE ] ----------------------------- */
+
+.FormContainer {
+    color: white;
+    background-color: transparent!important;
+}
+
+.FormField-Label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.FormField-Input {
+    border: none;
+    &.has-error {
+        box-shadow: 0 0 8px 1px #a94442 inset;
+    }
+}
+.FormContainer-Submit {
+    background-color: $turquoise;
+    color: $grey;
+    border:2px solid $turquoise;
+    transition: all 0.5s ease-in;
+    
+    &:hover{
+        color: $turquoise; 
+        background-color:transparent;
+    }
+}
+
+.carte_name {
+    margin-left: 3rem;
+}
+.FormField-Label {
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $man;
+    }
+}
+
+.FormField-Info:before {
+    content: "\f0da";
+    font-family: 'FontAwesome';
+    font-weight: bold;
+    padding-right: 0.5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+#main_container {
+    margin: 5px auto;
+    text-align: center;
+    position: relative;
+    height: auto;
+    /*width: 50%;*/
+}
+
+ #form_tarot {
+    background: #616161;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin: 0 5%;
+    width: 100%;
+    padding-bottom: 70px!important;
+    /*stacking fieldsets above each other
+    position: absolute;*/
+}
+
+#main_container fieldset {
+
+    position: absolute;
+}
+
+#main_container fieldset {
+
+    /*stacking fieldsets above each other*/
+    min-width: 447px;
+}
+
+/*Hide all except first fieldset*/
+/*#main_container fieldset:not(:first-of-type) {*/
+#main_container fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*buttons*/
+#main_container .action-button {
+    background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    padding: 20px;
+    background-position-x: 40px;
+}
+
+#main_container .previous, #main_container .previousSecond {
+    background: url(../images_landing/rdv/prev.png) transparent 0 0 no-repeat;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+.col-sm-6 .table {
+    background: #fffefe;
+    /*color: #000000;*/
+}
+
+label.primary {
+    width: 100%;
+}
+
+.datepicker {
+    width: 12%;
+}
+
+.p-title {
+    color: #1871b9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+    color: #505050;
+}
+
+td label.default {
+    width: 100%;
+}
+
+#form_jour {
+    padding: 0px !important;
+}
+
+.secureImages {
+    clear: right;
+    text-align: left;
+    margin-right: 20px;
+}
+
+
+
+input[type=checkbox].ace, input[type=radio].ace {
+    opacity: 0;
+    position: absolute;
+    z-index: 12;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+
+.FormField {
+    display: block;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.FormField-mg {
+
+    margin-left: 6rem;
+}
+
+
+select.FormField-Input {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: #858585;
+    background-color: #ffffff;
+    padding-right: 0em!important;
+    padding-left: 0em!important;
+    width: 110%;
+}
+
+.FormField-Input.radio {
+    display: inline-block
+}
+
+.FormField-TableInputContainer {
+    display: table;
+    width: 100%;
+    margin: auto
+}
+
+.FormField-TableInputContainer-Cell {
+    display: table-cell;
+    padding-right: 1rem;
+    text-align: center;
+    white-space: nowrap
+}
+
+.FormField-TableInputContainer-Cell:last-child {
+    padding-right: 0
+}
+
+.FormField-TableInputContainer.gender {
+    max-width: 300px
+}
+
+.FormField-TableInputContainer.relationship-status {
+    max-width: 400px;
+}
+
+.FormField.radio .FormField-Label, .FormField.radio .FormField-Input {
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+    vertical-align: middle;
+    margin: 0 0.2rem
+}
+
+.FormField-Info {
+    display: block;
+    position: absolute;
+    margin-top: -3.7rem;
+    padding: 0.8rem 1.4rem;
+    background-color: white;
+    border: 1px solid;
+    transition: all 0.25s;
+    opacity: 0;
+    z-index: -1
+}
+
+.FormField-Input:focus + .FormField-Info {
+    margin-top: -8rem;
+    opacity: 1;
+    z-index: 1
+}
+
+.FormField-Label .ico-woman {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #F3AAB4;
+}
+
+.FormField-Label .ico-man {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #3BDBE6;
+}
+
+.FormField-Input {
+    border: none
+}
+
+.FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+    outline-width: 0;
+    box-shadow: 0 0 6px -1px #050120;
+    border-color: transparent
+}
+
+.FormField-Info {
+    border: none;
+    color: #050120;
+    box-shadow: 0 0 6px -1px #050120
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important
+}
+
+
+@import "modules_themes/form-alert-bootstrap";
+
+/* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
+
+.DRI-Promo {
+    font-weight: bold;
+    
+    &-Slogan {
+
+        &-Tel {
+            font-size: 2.8rem;
+            text-decoration: underline;
+            color: $turquoise;
+            
+            &:hover {
+                color: $bleu;
+            }
+            
+            &Icon {
+                background-image: url($icon_tel);
+            }
+        }
+        
+        &-CodePromo {
+            font-size: 2.8rem;
+            color: $turquoise;
+        }
+    }
+}
+
+/* -------------------------------- [ TCHAT ] ------------------------------- */
+
+.Tchat-Gratuit-Title {
+    color: $bleu;
+}
+.Tchat-Overlay {
+    border-radius: 10px;
+}
+.Tchat-Window {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px $lightgrey;
+    
+    &-Output {
+        background-color: $tchat-bg;
+        border-radius: 10px;
+    }
+    &-Input {
+        .FormField-Input {
+            border: 2px solid $lightgrey;
+            color: inherit;
+        }
+        .FormField.withAside .aside {
+            background-color: $bleu;
+            border: 2px solid $lightgrey;
+            border-radius: 8px;
+            color: $lightgrey;
+        }
+    }
+}
+
+.codeastro {
+    font-size: 1.6rem;
+    color: $turquoise;
+}
+
+.Tchat-Message-Person.F {
+    color: $rose;
+}
+.Tchat-Message-Person.M {
+    color: $bleu;
+}
+
+/* -------------------------------- [ DRI ] --------------------------------- */
+
+.DRI {
+    &-Slogan {
+        width: 80%;
+        margin: 3rem auto 0;
+        padding: 1rem;
+        border: 2px solid $turquoise;
+        text-align: center;
+        font-size: 2rem;
+        color: $turquoise;
+        hyphens: none;
+    }
+    
+    &-Sent {
+        text-align: center;
+    }
+    
+    &-Form {
+        & p {
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        
+        &-Title {
+            padding: 1rem 0;
+            background-color: white;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            color: $bleu;
+            hyphens: none;
+
+            & strong {
+                font-weight: normal;
+                color: $turquoise;
+            }
+        }
+
+        &-Subtitle {
+            margin: 1rem 0;
+            text-align: center;
+            font-family: 'Lobster';
+            font-weight: normal;
+            font-size: 2.8rem;
+            color: $rose;
+        }
+        
+        &Container {
+            margin-top: 2rem;
+        }
+    }
+    
+    .FormContainer-Submit.btn-rose{
+        text-transform: uppercase;
+    }
+}
+
+@media all and (max-width: 640px){
+   .DRI{
+        &-Slogan {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 510px){
+    .Tchat-Overlay {
+        border-radius: 0;
+    }
+    .Tchat-Window {
+        border-radius: 0;
+    }
+    .Tchat-Message {
+        padding: 0 1rem;
+    }
+}
+
+/* ----------------------------- [ PAGE MERCI ] ----------------------------- */
+
+.Merci-Form {
+    background-color: $bleu;
+    background-image: url($offre_immediate);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+    text-align: center;
+    
+    .Merci-Title {
+        text-transform: uppercase;
+        font-family: 'Raleway';
+        text-shadow: 0px 0px 10px black;
+        strong {
+            color: $turquoise;
+        }
+    }
+    
+    .Merci-Text {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $rose;
+        hyphens: none;
+    }
+    
+    .FormContainer-Submit {
+        display: inline-block;
+        color: $bleu;
+        text-decoration: none;
+        border-color: white;
+        box-shadow: 0px 0px 10px white;
+        
+        &:hover {
+            border-color: $turquoise;
+            color: $turquoise;
+            box-shadow: none;
+        }
+    }
+}
+
+@media all and (max-width: 102.4rem){
+    .Merci-Form {
+        background-image: none;
+    }
+}
+@media all and (max-width: 400px){
+    .Merci-Title {
+        display: none;
+    }
+    .Merci-Text {
+        font-size: 1.7rem;
+    }
+}
+
+
+/************************ICON Style**************************************************/
+
+.icon-liste li span {
+    display: block;
+    margin: 30px 0px;
+    font-size: 1.3em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.icon-liste li{
+
+    list-style: none;
+    position: relative;
+    top:10px;
+}
+
+li.icone-cray span::before {
+    /* list-style-image: url(../images_landing/rdv/icon-cray.png);*/
+    content: url(../images_landing/rdv/tarot/icon-cray.png);
+    position: absolute;
+    left:-35px;
+
+}
+
+li.icone-screen span::before {
+    content: url(../images_landing/rdv/tarot/icon-screen.png);
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
+
+li.icone-payment span::before {
+    content: url(../images_landing/rdv/tarot/icon-payment.png);
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
+
+li.icone-hand span::before {
+    content: url(../images_landing/rdv/tarot/icon-hand.png);
+    position: absolute;
+    left: -40px;
+    top: -5px;
+}
+
+
+li span {
+    position: relative;
+    /* bottom: 10px;*/
+}
+
+.img-promo {
+    margin-left: 10%;
+}
+
+#crypto {
+    width: 40%;
+}
+
+.img-crypto {
+    position: relative;
+    top: -40px;
+}
+
+
+.img-custmer {
+
+    margin-left: 15px !important;
+}
+
+.fleche {
+    position: relative;
+}
+
+.fleche::before {
+    content: "\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+    position: absolute;
+    left: -15px;
+}
+
+.icon-liste {
+    margin-left: 4em;
+    margin-right: 4em;
+    color: #ffffff;
+}
+
+form.ajax {
+    /*min-height: 438px;*/
+    margin-top: 40px;
+}
+
+/*************************** PLANNING SELECTION *******************/
+
+#planning_selection {
+
+     color: #333;
+
+    .primary {
+
+        border-color: $turquoise;
+
+        .indicateur:before {
+            border-color: $turquoise;
+        }
+
+        .indicateur {
+            background-color: $turquoise;
+        }
+    }
+
+    .indicateur {
+        line-height: 33px;
+        width: 25px!important;
+    }
+
+    .table {
+        margin-bottom: 30px !important;
+    }
+
+    input,  select, .btn {
+
+        border-radius: 0;
+    }
+
+    .indicateur:before {
+        margin-left: -42px!important;
+    }
+
+    label > * {
+        margin: 0px!important;
+    }
+
+    input:checked + .lbl + .indicateur {
+        background-color: $bleu;
+    }
+
+    input:checked + .lbl + .indicateur:before {
+        border-color:  $bleu;
+    }
+
+    .input-group {
+        width: 130%;
+    }
+
+    .input-group-addon {
+        border-radius: 0px!important;
+        background: url(../images_landing/rdv/calendar.png) -3px 0 no-repeat;
+        padding: 6px 15px 6px 15px!important;
+        background-color: #ffffff;
+    }
+
+    select.form-control {
+        padding: 8px 1px!important;
+    }
+
+    #planning_maj {
+
+        border: none;
+        background: #22424d;
+        color: #fff;
+        font-weight: bold;
+        background: url(../images_landing/rdv/refresh.png) 20px -5px no-repeat;
+        padding: 15px;
+    }
+
+    .lbl {
+        text-align: left!important;
+    }
+    .space {
+        display: none;
+    }
+
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+
+        border: 1px solid #8babab!important;
+    }
+
+    input:checked + .lbl {
+        color: $bleu ;
+    }
+
+}
+
+form.ajax {
+    position: relative;
+}
+
+.WidgetTarot-Draw, .WidgetTarot-Result {
+    margin-top: 4em;
+}
+
+#carte_nom {
+    width: 75%;
+}
+
+.main-content {
+
+    display: flex;
+    flex-direction: row;
+}
+
+
+#form_cb {
+
+    .action-button {
+
+        margin-top: -20px;
+    }
+
+    .FormField-mg {
+
+        margin-left: 3rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+    .FormContainer {
+        width: 108%;
+    }
+
+    #form_tarot {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #main_container fieldset {
+        min-width: 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #main_container fieldset {
+            min-width: 0;
+        }
+
+        .time-calendar {
+            max-width: 30px;
+        }
+
+        #planning_selection label {
+            padding-left: 0px;
+        }
+
+        .ContentBand.Principal .ContentBand-ColumnHeader {
+            font-size: 2rem;
+        }
+
+        #main_container fieldset {
+            position: static;
+        }
+
+        .FormContainer {
+            width: 100%;
+        }
+        .carte_name {
+          margin-left: 0;
+        }
+        .Pop.Pop-Voyant {
+            left: 50%!important;
+            top: -70px!important;
+            margin-left: -60px;
+        }
+
+        #form_tarot {
+            margin: 0;
+            padding: 0;
+        }
+
+        #planning_selection select.form-control {
+          width: 125%;
+         }
+
+        .img-euro {
+            margin-top: 40px;
+            max-width: 260px;
+        }
+
+        .WidgetTarot-ResultMsg {
+
+            font-size: 1.6rem;
+
+        }
+
+        .FormField-mg, #form_cb .FormField-mg {
+
+            margin-left: 0rem;
+        }
+
+
+    }
