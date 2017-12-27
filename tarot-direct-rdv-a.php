@@ -29,7 +29,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta name="robots" content="noindex,nofollow"/>
 
     <link rel="icon" type="image/png" href="images_landing/tarot-direct/favicon.png"/>
-
+   <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">-->
     <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
     <!--------------------assets  for displaying planning ----------------------------------------->
 

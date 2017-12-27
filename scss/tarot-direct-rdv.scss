@@ -110,6 +110,7 @@ body {
 .Title {
     font-weight: bold;
     color: $bleu;
+    font-family: 'Lobster';
     
     strong {
         font-family: 'Lobster';
@@ -390,10 +391,11 @@ input[type="checkbox"], input[type="radio"] {
 
 /*headings*/
 .fs-title {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: #ffffff;
     font-weight: bold;
+    font-family: 'Lobster', cursive;
 }
 
 
@@ -835,7 +837,7 @@ li span {
 
 .img-crypto {
     position: relative;
-    top: -40px;
+    top: -34px;
 }
 
 
@@ -992,6 +994,9 @@ form.ajax {
     }
 }
 
+.img-euro {
+    margin-top: 15px;
+}
 @media (min-width: 768px) and (max-width: 980px) {
 
     .FormContainer {
