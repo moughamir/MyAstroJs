@@ -167,7 +167,7 @@ $(document).ready(function () {
                     } else {
                         $('#modal').html(msg_done);
                         $('#modal').modal('show');
-                        $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera dans quelques instants</strong> </h3>");
+                        $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera</strong> </h3>");
                     }
 
                 }

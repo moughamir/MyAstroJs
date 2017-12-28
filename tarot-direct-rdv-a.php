@@ -123,12 +123,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </ul>
                             </div>
                             <div >
-                                <form class="ajax">
+                                <form class="ajax" >
                                     <fieldset style="margin-top: 40px;">
 
                                         <h2 class="fs-title"> Informations personnelles!</h2>
                                         <input type="hidden" name="site" value="MyAstro"/>
-                                        <input type="hidden" name="source" value="consultation-en-ligne-1"/>
+                                        <input type="hidden" name="source" value="tarot-direct-rdv-a"/>
                                         <input type="hidden" name="method" value="client_web"/>
                                         <input type="hidden" name="support" value="rdv-web"/>
                                         <input type="hidden" name="affiliation" value="Adwords"/>
@@ -230,7 +230,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
                                     </fieldset>
                                 </form>
-                                <form class="ajax">
+                                <form class="ajax" id="rdv_form">
                                     <fieldset style="display: none" class="planning" id="planning">
                                         <h2 class="fs-title">Je choisis mon RDV</h2>
                                         <input type="hidden" name="method" value="consultation_web"/>
@@ -322,7 +322,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         </div>
                                         <input type="button" name="previous" class="previousSecond action-button"
                                                value="Précédent"/>
-                                        <input type="submit" name="submit" class="submit action-button"
+                                        <input type="button" name="submit" id="valider" class="submit action-button"
                                                value="Valider"/>
 
                                     </fieldset>
@@ -387,8 +387,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     trt_scrollOnComplete = false;
     trt_minSize = 600;
 </script>
-<script src="js/tarot-direct-wizard.js"></script>
 <script src="js/formValidator.js"></script>
+<script src="js/tarot-direct-wizard.js"></script>
 
 <!-- jQuery easing plugin -->
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>

@@ -254,6 +254,11 @@ $(document).ready(function () {
         });
     });
 
+    $("#valider").on("click",function () {
+
+        $('#rdv_form').submit();
+
+    });
 
 
 });
