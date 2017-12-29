@@ -1,8 +1,9 @@
 /**
- * Created by sanadi on 11/08/17.
+ * Created by sanadi on 25/12/17.
+ * Author : Abderrahime SANADI <abdo.sanadi@gmail.com>
+
  */
 $(document).ready(function () {
-
 
 
     /* -----------------------validtae CB -----------------------------*/

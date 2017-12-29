@@ -1024,6 +1024,10 @@ form.ajax {
 
         #main_container fieldset {
             min-width: 0;
+            position: static;
+            padding: 0px;
+            margin: 0px;
+            margin-left: 5px;
         }
 
         .time-calendar {
@@ -1038,9 +1042,6 @@ form.ajax {
             font-size: 2rem;
         }
 
-        #main_container fieldset {
-            position: static;
-        }
 
         .FormContainer {
             width: 100%;
@@ -1057,6 +1058,11 @@ form.ajax {
         #form_tarot {
             margin: 0;
             padding: 0;
+        }
+
+        #planning_selection .row {
+            margin-right: 0;
+            margin-left: 0;
         }
 
         #planning_selection select.form-control {

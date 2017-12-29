@@ -1,11 +1,11 @@
 <?php
 /*
     ----------------------------------
-    --   tarot-direct-a = ADWORDS   --
+    --   tarot-direct-rdv-a = ADWORDS   --
     ----------------------------------
 
-    Created on : 07 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
+    Created on : 25 December 2017
+    Author     : Abderrahime SANADI <abdo.sanadi@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
