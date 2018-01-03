@@ -2,7 +2,7 @@
 require_once(realpath('include/tools.php'));
 require_once(realpath('rdv_web/planning.php'));
 
-$pageName = "rdv-love-tchat-a";
+$pageName = "rdv-love-myastro-a";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "adwords";
