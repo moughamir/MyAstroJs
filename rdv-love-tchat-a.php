@@ -1,19 +1,15 @@
 <?php
-$pageName = "love-tchat-a";
-$method = "general-suscribe";
+require_once(realpath('include/tools.php'));
+require_once(realpath('rdv_web/planning.php'));
+
+$pageName = "rdv-love-tchat-a";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "adwords";
-$dri = "love-myastro/offre-gratuite";
-$dri2 = "love-tchat-dri";
 $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
-// A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
-$questions = array(
-    ['code' => 'lma17_question1', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Passion'],
-    ['code' => 'lma17_question2', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Pureté'],
-    ['code' => 'lma17_question3', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Désir']
-);
+
 $assets = 'images_landing/love-tchat';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,7 +20,6 @@ $assets = 'images_landing/love-tchat';
         <meta name="robots" content="noindex, nofollow" />
         <title>Love MyAstro | Découvrez votre avenir amoureux</title>
         <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
-        <link rel="stylesheet" href="css/rdv-love-tchat.css" type="text/css" />
         <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">-->
         <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
         <!--------------------assets  for displaying planning ----------------------------------------->
@@ -33,10 +28,9 @@ $assets = 'images_landing/love-tchat';
         <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css"
               rel="stylesheet"/>
         <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
-        <link rel="stylesheet" type="text/css" href="css/tarot-direct-rdv.css"/>
-
-
         <!-----------------------end assets --------------------------------------------------------------------->
+
+        <link rel="stylesheet" href="css/rdv-love-tchat.css" type="text/css" />
 
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Open+Sans:400,600" rel="stylesheet">
         <!--[if lt IE 9]>
@@ -93,15 +87,16 @@ $assets = 'images_landing/love-tchat';
                     </ul>
                 </section>
                 <section class="section hidden">
-                    <article class="final-step">
-                         <div class="promo"></div>
-                        <p class="result"></p>
-                        <a href="#FormContainer" class="read-more">savoir la suite</a>
-                    </article>
+
                     <article class="FormContainer">
+                        <h3 class="form-header"> <img class="time-calendar" src="images_landing/rdv/love-tchat/time.png"><strong> Je prend mon
+                            rendez-vous en ligne!</strong></h3>
+                        <aside id="main_container" class="widget">
+                            <aside  id="form_love">
                         <div class="main-content" >
+
                             <div >
-                                <img class="img-euro" src="images_landing/rdv/tarot/euro.png">
+                                <img class="img-euro" src="images_landing/rdv/love-tchat/euro.png">
                                 <ul class="icon-liste">
                                     <li class="icone-cray">
                                         <span>Je remplis le formulaire</span>
@@ -119,19 +114,23 @@ $assets = 'images_landing/love-tchat';
                             </div>
                             <div >
                                 <form class="ajax" >
-                                    <fieldset style="margin-top: 40px;">
+                                    <fieldset >
 
                                         <h2 class="fs-title"> Informations personnelles!</h2>
                                         <input type="hidden" name="site" value="MyAstro"/>
-                                        <input type="hidden" name="source" value="tarot-direct-rdv-a"/>
+                                        <input type="hidden" name="source" value="<?= $pageName;?>"/>
                                         <input type="hidden" name="method" value="client_web"/>
                                         <input type="hidden" name="support" value="rdv-web"/>
-                                        <input type="hidden" name="affiliation" value="Adwords"/>
+                                        <input type="hidden" name="affiliation" value="<?= $source;?>"/>
                                         <input type="hidden" name="dri" value="consultation_web"/>
                                         <input type="hidden" name="redirect_method" value="reload_form"/>
-                                        <input type="hidden" name="cguv" value="1"/>
+                                        <input type="hidden" name="convertir" value="1" />
+                                        <input type="hidden" name="tel_needed" value="1" />
+                                        <input type="hidden" name="cguv" value="1" />
+                                        <input type="hidden" name="partenaires" value="1" />
+                                        <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                                         <input type="hidden" name="pays" value="FR"/>
-                                        <input type="hidden" name="question_code" value=""/>
+                                        <input type="hidden" name="question_code" value="rdv_web"/>
 
 
                                         <div class="FormField radio">
@@ -210,7 +209,7 @@ $assets = 'images_landing/love-tchat';
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <label for="tel" class="FormField-Label">Téléphone</label>
-                                                <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone"
+                                                <input type="tel" id="tel" name="tel" placeholder="Mon téléphone"
                                                        class="FormField-Input"
                                                        required/>
                                             </div>
@@ -317,12 +316,14 @@ $assets = 'images_landing/love-tchat';
                                         </div>
                                         <input type="button" name="previous" class="previousSecond action-button"
                                                value="Précédent"/>
-                                        <input type="button" name="submit" id="valider" class="submit action-button"
+                                        <input type="submit" name="submit" id="valider" class="submit action-button"
                                                value="Valider"/>
 
                                     </fieldset>
                                 </form>
+                             </div>
                             </div>
+                            </aside>
                         </div>
                     </article>
                 </section>
@@ -340,7 +341,7 @@ $assets = 'images_landing/love-tchat';
 
         <!-- jQuery easing plugin -->
         <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-        <script src="js/tarot-direct-rdv.js"></script>
+        <script src="js/rdv-love-tchat.js"></script>
 
         <!-- js scripts kgestion for displaying planning -->
         <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
@@ -348,6 +349,7 @@ $assets = 'images_landing/love-tchat';
         <script type="text/javascript" src="rdv_web/js/bootstrap-datepicker.min_12.js"></script>
         <script type="text/javascript"
                 src="rdv_web/js/bootstrap-datepicker.translatefr_13.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
         <!-- #### REMARKETINGS #### -->
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
