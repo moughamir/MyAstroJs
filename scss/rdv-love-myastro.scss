@@ -434,12 +434,6 @@ ul {
   @include square(20px);
   background: no-repeat center;
   background-size: contain;
-  &-man {
-    background-image: url($assets + "ico-man.svg");
-  }
-  &-woman {
-    background-image: url($assets + "ico-woman.svg");
-  }
 }
 
 .FormField-Info {
@@ -1370,9 +1364,6 @@ form.ajax {
     margin: 0px;
   }
 
-  #main_container fieldset {
-    min-width: 0;
-  }
 }
 
 .carte_name {
@@ -1436,7 +1427,8 @@ form.ajax {
 
   #planning_selection .row {
     margin-right: 0;
-    margin-left: 0;
+    margin-left: -20px;
+    width: 113%;
   }
 
   #planning_selection select.form-control {

@@ -155,6 +155,7 @@ $(document).ready(function () {
 
                     $("#client_id").val(response.client_id);
                     $(".next").trigger("click");
+                    $("#form-overlay").hide();
 
                 }
                 if (response.hasOwnProperty('rdv_added')) {

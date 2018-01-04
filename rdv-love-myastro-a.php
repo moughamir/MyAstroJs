@@ -30,7 +30,7 @@ $assets = 'images_landing/love-tchat';
         <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
         <!-----------------------end assets --------------------------------------------------------------------->
 
-        <link rel="stylesheet" href="css/rdv-love-tchat.css" type="text/css" />
+        <link rel="stylesheet" href="css/rdv-love-myastro.css" type="text/css" />
 
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Open+Sans:400,600" rel="stylesheet">
         <!--[if lt IE 9]>
@@ -341,7 +341,7 @@ $assets = 'images_landing/love-tchat';
 
         <!-- jQuery easing plugin -->
         <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-        <script src="js/rdv-love-tchat.js"></script>
+        <script src="js/rdv-love-myastro.js"></script>
 
         <!-- js scripts kgestion for displaying planning -->
         <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
