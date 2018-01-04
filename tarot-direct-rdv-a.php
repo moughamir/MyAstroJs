@@ -16,6 +16,8 @@ require_once(realpath('rdv_web/planning.php'));
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -137,6 +139,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <input type="hidden" name="cguv" value="1"/>
                                         <input type="hidden" name="pays" value="FR"/>
                                         <input type="hidden" name="question_code" value=""/>
+                                        <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+
 
 
                                         <div class="FormField radio">
