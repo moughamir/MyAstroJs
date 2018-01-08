@@ -27,7 +27,30 @@ $page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
 $website = isset($param['site']) ? $param['site'] : '';
 $source  = isset($param['affiliation']) ? $param['affiliation'] : false;
 $formurl_kgs = isset($param['source']) ? $param['source'] : false;
-$regformurl_kgs = $formurl_kgs;
+$regformurl_kgs = null;
+$page    = explode("?", $_SERVER['HTTP_REFERER'])[0];
+$serverName    = parse_url($page, PHP_URL_SCHEME)."://".$_SERVER['SERVER_NAME'];
+if(!$formurl_kgs){
+    addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
+    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.Url du formulaire manquant';
+} else {
+    // Recherche de l'url kgestion
+    $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$formurl_kgs.'"';
+    $formurl_kgs = $bdd->get_var($tracking_qry);
+    if(!isset($formurl_kgs)){
+        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    } elseif(empty($regformurl_kgs)){
+        $urlReg = str_replace($serverName.'/', "", $page);
+        $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="'.$urlReg.'"';
+        $regformurl_kgs = $bdd->get_var($tracking_qry);
+        if(!isset($regformurl_kgs)){
+            addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        }
+    }
+}
+
 $gclid   = isset($param['gclid']) ? $param['gclid'] : '';
 $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 // ---- TRACKING REFLEX
@@ -123,7 +146,10 @@ if(empty($err)){
         'reflexSource'      => $rc_source,
          );
 
-
+    echo "<pre>";
+    print_r($post_data);
+    echo "</pre>";
+    die();
     if($reinscription){
         $kgestion_id = $user->kgestion_id;
         $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
