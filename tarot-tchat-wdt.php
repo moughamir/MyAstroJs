@@ -44,6 +44,11 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
             <section class="section post-test">
                 <p>Il existe un proverbe qui dit que les cartes du tarot sont bavardes et ont toujours quelque chose à dire. Qu’ont-elles à vous révéler ? Amour, travail, argent, votre destinée se trouve au cœur des arcanes du tarot. Et si nos cartomanciens les faisaient parler pour vous…
                     <br/>Avec le Tchat plus besoin d’attendre, nos experts vous divulguent tous les secrets des cartes en un clin d’œil.</p>
+                <div class="form">
+                    <div class="helper"></div>
+                    <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
+                    <button class="btn start">Tirez les cartes</button>
+                </div>
                 <div class="WidgetTarot hidden-sm">
                     <section class="ContentBand Tarot" id="scn-tarot-draw">
                         <div class="ContentBand-Table">
@@ -73,11 +78,6 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
                         </div>
                     </section>
                     <article class="session-result hidden"></article>
-                </div>
-                <div class="form">
-                    <div class="helper"></div>
-                    <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
-                    <button class="btn start">Tirez les cartes</button>
                 </div>
             </section>
             <section class="section content hidden">

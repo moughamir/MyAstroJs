@@ -155,6 +155,7 @@ $(document).ready(function () {
 
                     $("#client_id").val(response.client_id);
                     $(".next").trigger("click");
+                    $("#form-overlay").hide();
 
                 }
                 if (response.hasOwnProperty('rdv_added')) {
@@ -167,7 +168,7 @@ $(document).ready(function () {
                     } else {
                         $('#modal').html(msg_done);
                         $('#modal').modal('show');
-                        $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera dans quelques instants</strong> </h3>");
+                        $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera</strong> </h3>");
                     }
 
                 }

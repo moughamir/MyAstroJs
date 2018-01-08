@@ -1,9 +1,8 @@
 /**
- * Created by sanadi on 25/12/17.
- * Author : Abderrahime SANADI <abdo.sanadi@gmail.com>
-
+ * Created by sanadi on 11/08/17.
  */
 $(document).ready(function () {
+
 
 
     /* -----------------------validtae CB -----------------------------*/
@@ -88,7 +87,7 @@ $(document).ready(function () {
         luhnTimer($(this));
     });
 
-    /*--------------------------------------------end Validate CB -----------------*/
+    /*------------------------------end Validate CB -----------------*/
 
 
     /* ---------------------------FORM MULTI STEP -----------------------------*/
@@ -103,10 +102,9 @@ $(document).ready(function () {
         animating = true;
 
         current_fs = $(this).parent();
-        next_fs = $(this).parent().next().children(":first");
+        next_fs = $(this).parent().parent().next().children(":first");
 
-        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
+        //next_fs.show();
         next_fs.show();
         current_fs.animate({opacity: 0}, {
             step: function(now, mx) {
@@ -130,7 +128,6 @@ $(document).ready(function () {
 
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
-        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
         next_fs.show();
         current_fs.animate({opacity: 0}, {
@@ -155,7 +152,7 @@ $(document).ready(function () {
         animating = true;
 
         current_fs = $(this).parent();
-        previous_fs = $(this).parent().parent().prev();
+        previous_fs = $(this).parent().parent().prev().children(":first");
 
         $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
@@ -255,11 +252,6 @@ $(document).ready(function () {
         });
     });
 
-    $("#valider").on("click",function () {
-
-        $('#rdv_form').submit();
-
-    });
 
 
 });

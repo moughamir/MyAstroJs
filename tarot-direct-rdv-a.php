@@ -1,11 +1,11 @@
 <?php
 /*
     ----------------------------------
-    --   tarot-direct-a = ADWORDS   --
+    --   tarot-direct-rdv-a = ADWORDS   --
     ----------------------------------
 
-    Created on : 07 juin 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
+    Created on : 25 December 2017
+    Author     : Abderrahime SANADI <abdo.sanadi@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
@@ -16,6 +16,8 @@ require_once(realpath('rdv_web/planning.php'));
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -123,12 +125,12 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 </ul>
                             </div>
                             <div >
-                                <form class="ajax">
+                                <form class="ajax" >
                                     <fieldset style="margin-top: 40px;">
 
                                         <h2 class="fs-title"> Informations personnelles!</h2>
                                         <input type="hidden" name="site" value="MyAstro"/>
-                                        <input type="hidden" name="source" value="consultation-en-ligne-1"/>
+                                        <input type="hidden" name="source" value="tarot-direct-rdv-a"/>
                                         <input type="hidden" name="method" value="client_web"/>
                                         <input type="hidden" name="support" value="rdv-web"/>
                                         <input type="hidden" name="affiliation" value="Adwords"/>
@@ -137,6 +139,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         <input type="hidden" name="cguv" value="1"/>
                                         <input type="hidden" name="pays" value="FR"/>
                                         <input type="hidden" name="question_code" value=""/>
+                                        <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+
 
 
                                         <div class="FormField radio">
@@ -230,7 +234,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
                                     </fieldset>
                                 </form>
-                                <form class="ajax">
+                                <form class="ajax" id="rdv_form">
                                     <fieldset style="display: none" class="planning" id="planning">
                                         <h2 class="fs-title">Je choisis mon RDV</h2>
                                         <input type="hidden" name="method" value="consultation_web"/>
@@ -322,7 +326,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         </div>
                                         <input type="button" name="previous" class="previousSecond action-button"
                                                value="Précédent"/>
-                                        <input type="submit" name="submit" class="submit action-button"
+                                        <input type="button" name="submit" id="valider" class="submit action-button"
                                                value="Valider"/>
 
                                     </fieldset>
@@ -387,8 +391,8 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     trt_scrollOnComplete = false;
     trt_minSize = 600;
 </script>
-<script src="js/tarot-direct-wizard.js"></script>
 <script src="js/formValidator.js"></script>
+<script src="js/tarot-direct-wizard.js"></script>
 
 <!-- jQuery easing plugin -->
 <script src="js/jquery.easing.min.js" type="text/javascript"></script>
