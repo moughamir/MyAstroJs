@@ -35,11 +35,6 @@ $assets = 'images_landing/love-tchat';
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Open+Sans:400,600" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
-        <style>
-            .datepicker {
-                color: black;
-            }
-        </style>
         <![endif]-->
     </head>
     <body class="main">
