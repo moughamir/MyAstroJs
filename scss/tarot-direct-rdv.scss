@@ -865,7 +865,7 @@ li span {
     color: #ffffff;
 }
 
-form.ajax {
+#rdv_form {
     /*min-height: 438px;*/
     margin-top: 40px;
 }
@@ -1008,9 +1008,6 @@ form.ajax {
         margin: 0px;
     }
 
-    #main_container fieldset {
-        min-width: 0;
-    }
 }
 
 
@@ -1047,7 +1044,7 @@ form.ajax {
             width: 100%;
         }
         .carte_name {
-          margin-left: 0;
+          margin-left: 2em;
         }
         .Pop.Pop-Voyant {
             left: 50%!important;
@@ -1061,6 +1058,7 @@ form.ajax {
         }
 
         #planning_selection .row {
+
             margin-right: 0;
             margin-left: 0;
         }
@@ -1082,7 +1080,7 @@ form.ajax {
 
         .FormField-mg, #form_cb .FormField-mg {
 
-            margin-left: 0rem;
+            margin-left: 1.5rem;
         }
 
 
