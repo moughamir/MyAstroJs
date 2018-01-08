@@ -137,6 +137,9 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                                         <input type="hidden" name="dri" value="consultation_web"/>
                                         <input type="hidden" name="redirect_method" value="reload_form"/>
                                         <input type="hidden" name="cguv" value="1"/>
+                                        <input type="hidden" name="convertir" value="1" />
+                                        <input type="hidden" name="tel_needed" value="1" />
+                                        <input type="hidden" name="partenaires" value="1" />
                                         <input type="hidden" name="pays" value="FR"/>
                                         <input type="hidden" name="question_code" value=""/>
                                         <input type="hidden" name="gclid" value="<?= $gclid;?>" />
