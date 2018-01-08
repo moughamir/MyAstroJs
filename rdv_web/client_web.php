@@ -146,10 +146,6 @@ if(empty($err)){
         'reflexSource'      => $rc_source,
          );
 
-    echo "<pre>";
-    print_r($post_data);
-    echo "</pre>";
-    die();
     if($reinscription){
         $kgestion_id = $user->kgestion_id;
         $kgestion_update = $kgestion->updateUser($kgestion_id, $post_data);
