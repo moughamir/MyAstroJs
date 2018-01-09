@@ -3,37 +3,37 @@
  *
  * Created on : 25 mai 2016 By Laurène Dourdin <2aurene@gmail.com>
  */
-@import "templates/s-landing-tarot-3";
 
+@import "templates/s-landing-tarot-3";
 /* Typos */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Lobster|Indie+Flower');
-
 /* Images */
-$img_dir : "../images_landing/tarot-direct/";
-$logo : $img_dir + "logo.png";
-$dos_carte : $img_dir + "cardback.png";
-$place_carte : $img_dir + "cardplace.png";
-$bg_fleche : $img_dir + "bg_fleche.png";
-$hexagone : $img_dir + "hexagone_bleu.png";
-$hexagone_hover : $img_dir + "hexagone_rose.png";
-$hexagone_active : $img_dir + "hexagone_turquoise.png";
-$listitem_leftcorner : $img_dir + "corner-left.png";
-$listitem_rightcorner : $img_dir + "corner-right.png";
-$icon_amour : $img_dir + "coeur_bleu.png";
-$icon_argent : $img_dir + "argent_bleu.png";
-$icon_travail : $img_dir + "travail_bleu.png";
-$icon_amour_hover : $img_dir + "coeur_rose.png";
-$icon_argent_hover : $img_dir + "argent_rose.png";
-$icon_travail_hover : $img_dir + "travail_rose.png";
-$icon_amour_active : $img_dir + "coeur_turquoise.png";
-$icon_argent_active : $img_dir + "argent_turquoise.png";
-$icon_travail_active : $img_dir + "travail_turquoise.png";
-$icon_tel: $img_dir + "tel.png";
-$offre_tchat : $img_dir + "offre-tchat.png";
-$offre_immediate : $img_dir + "offre-immediate.png";
 
+$img_dir: "../images_landing/tarot-direct/";
+$logo: $img_dir+"logo.png";
+$dos_carte: $img_dir+"cardback.png";
+$place_carte: $img_dir+"cardplace.png";
+$bg_fleche: $img_dir+"bg_fleche.png";
+$hexagone: $img_dir+"hexagone_bleu.png";
+$hexagone_hover: $img_dir+"hexagone_rose.png";
+$hexagone_active: $img_dir+"hexagone_turquoise.png";
+$listitem_leftcorner: $img_dir+"corner-left.png";
+$listitem_rightcorner: $img_dir+"corner-right.png";
+$icon_amour: $img_dir+"coeur_bleu.png";
+$icon_argent: $img_dir+"argent_bleu.png";
+$icon_travail: $img_dir+"travail_bleu.png";
+$icon_amour_hover: $img_dir+"coeur_rose.png";
+$icon_argent_hover: $img_dir+"argent_rose.png";
+$icon_travail_hover: $img_dir+"travail_rose.png";
+$icon_amour_active: $img_dir+"coeur_turquoise.png";
+$icon_argent_active: $img_dir+"argent_turquoise.png";
+$icon_travail_active: $img_dir+"travail_turquoise.png";
+$icon_tel: $img_dir+"tel.png";
+$offre_tchat: $img_dir+"offre-tchat.png";
+$offre_immediate: $img_dir+"offre-immediate.png";
 /* Palette */
+
 $grey: #454545;
 $bleu: #2E4980;
 $rose: #F57F9B;
@@ -44,13 +44,13 @@ $bg-grey: #616161;
 $woman: $rose;
 $man: $bleu;
 $tchat-bg: #E8E8E8;
-
 /* ----------------------------- [ STRUCTURE ] ------------------------------ */
 
 body {
     font-family: 'Raleway', sans-serif;
     color: $grey;
 }
+
 .ContentBand.Principal {
     background-color: $bg-bleu;
     background-repeat: no-repeat;
@@ -58,20 +58,26 @@ body {
     .ContentBand-ColumnHeader {
         background-color: white;
         box-shadow: 0 0 10px 1px $lightgrey;
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
 }
+
 .ContentBand.Arrowed {
     background-color: transparent;
     background-image: url($bg-fleche);
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 127px;
-    .ContentBand-ColumnHeader { padding-top: 5rem;}
+    .ContentBand-ColumnHeader {
+        padding-top: 5rem;
+    }
 }
+
 .ContentBand.Principal.Arrowed {
     background-position: center 5rem;
-    .ContentBand-ColumnHeader { padding-top: 1rem;}
+    .ContentBand-ColumnHeader {
+        padding-top: 1rem;
+    }
 }
 
 /* ------------------------------- [ ENTETE ] ------------------------------- */
@@ -81,7 +87,6 @@ body {
     z-index: 2;
     background-color: $bleu;
     color: $turquoise;
-    
     &-Logo {
         height: 100px;
         background-color: transparent;
@@ -90,7 +95,6 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    
     &-Slogan1 {
         font-family: 'Indie Flower';
     }
@@ -98,11 +102,9 @@ body {
         font-weight: bold;
         background-color: $turquoise;
         color: $bleu;
-        
         strong {
             text-transform: uppercase;
             color: white;
-            
         }
     }
 }
@@ -111,7 +113,6 @@ body {
     font-weight: bold;
     color: $bleu;
     font-family: 'Lobster';
-    
     strong {
         font-family: 'Lobster';
         color: $turquoise;
@@ -124,15 +125,19 @@ body {
     color: $turquoise;
     font-size: 2rem;
 }
-@media all and (max-width: 580px){
+
+@media all and (max-width: 580px) {
     .Title {
         font-size: 2.4rem !important;
     }
 }
-@media all and (max-width: 420px){
+
+@media all and (max-width: 420px) {
     .Title {
         font-size: 1.7rem !important;
-        strong { font-size: 2.6rem;}
+        strong {
+            font-size: 2.6rem;
+        }
     }
 }
 
@@ -150,7 +155,7 @@ body {
         background-color: transparent;
         background-image: url($hexagone);
     }
-    &-Input:checked + &-VisualForm {
+    &-Input:checked+&-VisualForm {
         color: $turquoise;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
@@ -163,12 +168,15 @@ body {
             }
         }
     }
-    &-VisualForm:hover, &-Input:checked + &-VisualForm:hover {
+    &-VisualForm:hover,
+    &-Input:checked+&-VisualForm:hover {
         color: $rose;
         .PsychicChoice-Psychic-Picture {
             background-color: transparent;
             background-image: url($hexagone_hover);
-            &:after { color: $rose;}
+            &:after {
+                color: $rose;
+            }
         }
     }
 }
@@ -182,8 +190,8 @@ body {
     border-color: $lightgrey;
     color: $bleu;
     font-weight: bold;
-    
-    &:before, &:after {
+    &:before,
+    &:after {
         content: "";
         position: absolute;
         top: 0;
@@ -201,34 +209,53 @@ body {
         right: -2.4rem;
         background-image: url($listitem_rightcorner);
     }
-    
     &-Icon {
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        
-        &.Amour { background-image: url($icon_amour);}
-        &.Argent { background-image: url($icon_argent);}
-        &.Travail { background-image: url($icon_travail);}
+        &.Amour {
+            background-image: url($icon_amour);
+        }
+        &.Argent {
+            background-image: url($icon_argent);
+        }
+        &.Travail {
+            background-image: url($icon_travail);
+        }
     }
-    
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
         color: $rose;
     }
-    &:hover &-Icon, &:active &-Icon, &:focus &-Icon {
+    &:hover &-Icon,
+    &:active &-Icon,
+    &:focus &-Icon {
         background-color: transparent;
-        &.Amour { background-image: url($icon_amour_hover);}
-        &.Argent { background-image: url($icon_argent_hover);}
-        &.Travail { background-image: url($icon_travail_hover);}
+        &.Amour {
+            background-image: url($icon_amour_hover);
+        }
+        &.Argent {
+            background-image: url($icon_argent_hover);
+        }
+        &.Travail {
+            background-image: url($icon_travail_hover);
+        }
     }
-    &-Input:checked + & {
+    &-Input:checked+& {
         color: $turquoise;
         .ThemeChoice-ListItem-Icon {
             background-color: transparent;
-            &.Amour { background-image: url($icon_amour_active);}
-            &.Argent { background-image: url($icon_argent_active);}
-            &.Travail { background-image: url($icon_travail_active);}
+            &.Amour {
+                background-image: url($icon_amour_active);
+            }
+            &.Argent {
+                background-image: url($icon_argent_active);
+            }
+            &.Travail {
+                background-image: url($icon_travail_active);
+            }
         }
     }
 }
@@ -236,11 +263,9 @@ body {
 /* ---------------------------- [ TIRAGE TAROT ] ---------------------------- */
 
 .WidgetTarot-Card {
-    
     &.notFlipped {
         background-color: transparent;
     }
-    
     &-Face.front {
         border: none;
         background: transparent url($dos_carte) center no-repeat;
@@ -250,7 +275,6 @@ body {
         border: none;
         background-color: transparent;
     }
-    
     &.place {
         background-color: transparent;
         background-image: url($place_carte);
@@ -275,7 +299,6 @@ body {
 /* --------------------------- [ PHOTOS VOYANTS ] ---------------------------- */
 
 @import "modules_themes/tarot-direct-psychics";
-
 /* ----------------------------- [ FORMULAIRE ] ----------------------------- */
 
 .FormContainer {
@@ -294,21 +317,22 @@ body {
         box-shadow: 0 0 8px 1px #a94442 inset;
     }
 }
+
 .FormContainer-Submit {
     background-color: $turquoise;
     color: $grey;
-    border:2px solid $turquoise;
+    border: 2px solid $turquoise;
     transition: all 0.5s ease-in;
-    
-    &:hover{
-        color: $turquoise; 
-        background-color:transparent;
+    &:hover {
+        color: $turquoise;
+        background-color: transparent;
     }
 }
 
 .carte_name {
     margin-left: 3rem;
 }
+
 .FormField-Label {
     .ico-woman {
         font-size: 1.9rem;
@@ -329,7 +353,8 @@ body {
     padding-right: 0.5rem;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     width: 20px !important;
     height: 20px !important;
 }
@@ -342,7 +367,7 @@ input[type="checkbox"], input[type="radio"] {
     /*width: 50%;*/
 }
 
- #form_tarot {
+#form_tarot {
     background: #616161;
     color: white;
     border: 0 none;
@@ -358,23 +383,24 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 #main_container fieldset {
-
     position: absolute;
 }
 
 #main_container fieldset {
-
     /*stacking fieldsets above each other*/
     min-width: 447px;
 }
 
 /*Hide all except first fieldset*/
+
 /*#main_container fieldset:not(:first-of-type) {*/
+
 #main_container fieldset:not(:first-of-type) {
     display: none;
 }
 
 /*buttons*/
+
 #main_container .action-button {
     background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
     font-weight: bold;
@@ -385,11 +411,13 @@ input[type="checkbox"], input[type="radio"] {
     background-position-x: 40px;
 }
 
-#main_container .previous, #main_container .previousSecond {
+#main_container .previous,
+#main_container .previousSecond {
     background: url(../images_landing/rdv/prev.png) transparent 0 0 no-repeat;
 }
 
 /*headings*/
+
 .fs-title {
     font-size: 22px;
     margin-bottom: 20px;
@@ -398,14 +426,12 @@ input[type="checkbox"], input[type="radio"] {
     font-family: 'Lobster', cursive;
 }
 
-
 .fs-subtitle {
     font-weight: normal;
     font-size: 13px;
     color: #666;
     margin-bottom: 20px;
 }
-
 
 .col-sm-6 .table {
     background: #fffefe;
@@ -426,7 +452,8 @@ label.primary {
     font-weight: bold;
 }
 
-.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
     color: #505050;
 }
 
@@ -444,9 +471,8 @@ td label.default {
     margin-right: 20px;
 }
 
-
-
-input[type=checkbox].ace, input[type=radio].ace {
+input[type=checkbox].ace,
+input[type=radio].ace {
     opacity: 0;
     position: absolute;
     z-index: 12;
@@ -455,8 +481,6 @@ input[type=checkbox].ace, input[type=radio].ace {
     cursor: pointer;
 }
 
-
-
 .FormField {
     display: block;
     position: relative;
@@ -464,10 +488,8 @@ input[type=checkbox].ace, input[type=radio].ace {
 }
 
 .FormField-mg {
-
     margin-left: 6rem;
 }
-
 
 select.FormField-Input {
     -webkit-box-shadow: none !important;
@@ -508,7 +530,8 @@ select.FormField-Input {
     max-width: 400px;
 }
 
-.FormField.radio .FormField-Label, .FormField.radio .FormField-Input {
+.FormField.radio .FormField-Label,
+.FormField.radio .FormField-Input {
     display: inline-block;
     width: auto;
     margin-top: 0;
@@ -528,7 +551,7 @@ select.FormField-Input {
     z-index: -1
 }
 
-.FormField-Input:focus + .FormField-Info {
+.FormField-Input:focus+.FormField-Info {
     margin-top: -8rem;
     opacity: 1;
     z-index: 1
@@ -550,7 +573,8 @@ select.FormField-Input {
     border: none
 }
 
-.FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+.FormField-Input:not([type=radio]):focus,
+.FormField-Input:not([type=radio]):focus:invalid {
     outline-width: 0;
     box-shadow: 0 0 6px -1px #050120;
     border-color: transparent
@@ -562,35 +586,29 @@ select.FormField-Input {
     box-shadow: 0 0 6px -1px #050120
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     width: 20px !important;
     height: 20px !important
 }
 
-
 @import "modules_themes/form-alert-bootstrap";
-
 /* --------------------- [ BANDEAU PROMOTIONNEL TCHAT ] --------------------- */
 
 .DRI-Promo {
     font-weight: bold;
-    
     &-Slogan {
-
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
             color: $turquoise;
-            
             &:hover {
                 color: $bleu;
             }
-            
             &Icon {
                 background-image: url($icon_tel);
             }
         }
-        
         &-CodePromo {
             font-size: 2.8rem;
             color: $turquoise;
@@ -603,14 +621,15 @@ input[type="checkbox"], input[type="radio"] {
 .Tchat-Gratuit-Title {
     color: $bleu;
 }
+
 .Tchat-Overlay {
     border-radius: 10px;
 }
+
 .Tchat-Window {
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px $lightgrey;
-    
     &-Output {
         background-color: $tchat-bg;
         border-radius: 10px;
@@ -637,6 +656,7 @@ input[type="checkbox"], input[type="radio"] {
 .Tchat-Message-Person.F {
     color: $rose;
 }
+
 .Tchat-Message-Person.M {
     color: $bleu;
 }
@@ -654,18 +674,15 @@ input[type="checkbox"], input[type="radio"] {
         color: $turquoise;
         hyphens: none;
     }
-    
     &-Sent {
         text-align: center;
     }
-    
     &-Form {
         & p {
             margin: 1rem 0;
             text-align: center;
             font-size: 1.8rem;
         }
-        
         &-Title {
             padding: 1rem 0;
             background-color: white;
@@ -674,13 +691,11 @@ input[type="checkbox"], input[type="radio"] {
             font-weight: normal;
             color: $bleu;
             hyphens: none;
-
             & strong {
                 font-weight: normal;
                 color: $turquoise;
             }
         }
-
         &-Subtitle {
             margin: 1rem 0;
             text-align: center;
@@ -689,26 +704,24 @@ input[type="checkbox"], input[type="radio"] {
             font-size: 2.8rem;
             color: $rose;
         }
-        
         &Container {
             margin-top: 2rem;
         }
     }
-    
-    .FormContainer-Submit.btn-rose{
+    .FormContainer-Submit.btn-rose {
         text-transform: uppercase;
     }
 }
 
-@media all and (max-width: 640px){
-   .DRI{
+@media all and (max-width: 640px) {
+    .DRI {
         &-Slogan {
             width: 100%;
         }
     }
 }
 
-@media all and (max-width: 510px){
+@media all and (max-width: 510px) {
     .Tchat-Overlay {
         border-radius: 0;
     }
@@ -728,7 +741,6 @@ input[type="checkbox"], input[type="radio"] {
     background-repeat: no-repeat;
     background-position: 20px 60px;
     text-align: center;
-    
     .Merci-Title {
         text-transform: uppercase;
         font-family: 'Raleway';
@@ -737,21 +749,18 @@ input[type="checkbox"], input[type="radio"] {
             color: $turquoise;
         }
     }
-    
     .Merci-Text {
         font-size: 2rem;
         font-weight: bold;
         color: $rose;
         hyphens: none;
     }
-    
     .FormContainer-Submit {
         display: inline-block;
         color: $bleu;
         text-decoration: none;
         border-color: white;
         box-shadow: 0px 0px 10px white;
-        
         &:hover {
             border-color: $turquoise;
             color: $turquoise;
@@ -760,12 +769,13 @@ input[type="checkbox"], input[type="radio"] {
     }
 }
 
-@media all and (max-width: 102.4rem){
+@media all and (max-width: 102.4rem) {
     .Merci-Form {
         background-image: none;
     }
 }
-@media all and (max-width: 400px){
+
+@media all and (max-width: 400px) {
     .Merci-Title {
         display: none;
     }
@@ -773,7 +783,6 @@ input[type="checkbox"], input[type="radio"] {
         font-size: 1.7rem;
     }
 }
-
 
 /************************ICON Style**************************************************/
 
@@ -785,19 +794,18 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: bold;
 }
 
-.icon-liste li{
-
+.icon-liste li {
     list-style: none;
     position: relative;
-    top:10px;
+    top: 10px;
 }
 
 li.icone-cray span::before {
     /* list-style-image: url(../images_landing/rdv/icon-cray.png);*/
     content: url(../images_landing/rdv/tarot/icon-cray.png);
     position: absolute;
-    left:-35px;
-
+    left: -35px;
+    top: -5px;
 }
 
 li.icone-screen span::before {
@@ -810,17 +818,16 @@ li.icone-screen span::before {
 li.icone-payment span::before {
     content: url(../images_landing/rdv/tarot/icon-payment.png);
     position: absolute;
-    left: -40px;
-    top: -5px;
+    left: -35px;
+    top: -8px;
 }
 
 li.icone-hand span::before {
     content: url(../images_landing/rdv/tarot/icon-hand.png);
     position: absolute;
     left: -40px;
-    top: -5px;
+    top: -10px;
 }
-
 
 li span {
     position: relative;
@@ -840,9 +847,7 @@ li span {
     top: -34px;
 }
 
-
 .img-custmer {
-
     margin-left: 15px !important;
 }
 
@@ -873,69 +878,53 @@ li span {
 /*************************** PLANNING SELECTION *******************/
 
 #planning_selection {
-
-     color: #333;
-
+    color: #333;
     .primary {
-
         border-color: $turquoise;
-
         .indicateur:before {
             border-color: $turquoise;
         }
-
         .indicateur {
             background-color: $turquoise;
         }
     }
-
     .indicateur {
         line-height: 33px;
         width: 25px!important;
     }
-
     .table {
         margin-bottom: 30px !important;
     }
-
-    input,  select, .btn {
-
+    input,
+    select,
+    .btn {
         border-radius: 0;
     }
-
     .indicateur:before {
         margin-left: -42px!important;
     }
-
-    label > * {
+    label>* {
         margin: 0px!important;
     }
-
-    input:checked + .lbl + .indicateur {
+    input:checked+.lbl+.indicateur {
         background-color: $bleu;
     }
-
-    input:checked + .lbl + .indicateur:before {
-        border-color:  $bleu;
+    input:checked+.lbl+.indicateur:before {
+        border-color: $bleu;
     }
-
     .input-group {
         width: 130%;
     }
-
     .input-group-addon {
         border-radius: 0px!important;
         background: url(../images_landing/rdv/calendar.png) -3px 0 no-repeat;
         padding: 6px 15px 6px 15px!important;
         background-color: #ffffff;
     }
-
     select.form-control {
         padding: 8px 1px!important;
     }
-
     #planning_maj {
-
         border: none;
         background: #22424d;
         color: #fff;
@@ -943,30 +932,31 @@ li span {
         background: url(../images_landing/rdv/refresh.png) 20px -5px no-repeat;
         padding: 15px;
     }
-
     .lbl {
         text-align: left!important;
     }
     .space {
         display: none;
     }
-
-    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-
+    .table-bordered>thead>tr>th,
+    .table-bordered>tbody>tr>th,
+    .table-bordered>tfoot>tr>th,
+    .table-bordered>thead>tr>td,
+    .table-bordered>tbody>tr>td,
+    .table-bordered>tfoot>tr>td {
         border: 1px solid #8babab!important;
     }
-
-    input:checked + .lbl {
-        color: $bleu ;
+    input:checked+.lbl {
+        color: $bleu;
     }
-
 }
 
 form.ajax {
     position: relative;
 }
 
-.WidgetTarot-Draw, .WidgetTarot-Result {
+.WidgetTarot-Draw,
+.WidgetTarot-Result {
     margin-top: 4em;
 }
 
@@ -975,21 +965,15 @@ form.ajax {
 }
 
 .main-content {
-
     display: flex;
     flex-direction: row;
 }
 
-
 #form_cb {
-
     .action-button {
-
         margin-top: -20px;
     }
-
     .FormField-mg {
-
         margin-left: 3rem;
     }
 }
@@ -997,91 +981,69 @@ form.ajax {
 .img-euro {
     margin-top: 15px;
 }
-@media (min-width: 768px) and (max-width: 980px) {
 
+@media (min-width: 768px) and (max-width: 980px) {
     .FormContainer {
         width: 108%;
     }
-
     #form_tarot {
         padding: 0px;
         margin: 0px;
     }
-
 }
 
-
 @media (max-width: 767px) {
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        #main_container fieldset {
-            min-width: 0;
-            position: static;
-            padding: 0px;
-            margin: 0px;
-            margin-left: 5px;
-        }
-
-        .time-calendar {
-            max-width: 30px;
-        }
-
-        #planning_selection label {
-            padding-left: 0px;
-        }
-
-        .ContentBand.Principal .ContentBand-ColumnHeader {
-            font-size: 2rem;
-        }
-
-
-        .FormContainer {
-            width: 100%;
-        }
-        .carte_name {
-          margin-left: 2em;
-        }
-        .Pop.Pop-Voyant {
-            left: 50%!important;
-            top: -70px!important;
-            margin-left: -60px;
-        }
-
-        #form_tarot {
-            margin: 0;
-            padding: 0;
-        }
-
-        #planning_selection .row {
-
-            margin-right: 0;
-            margin-left: 0;
-        }
-
-        #planning_selection select.form-control {
-          width: 125%;
-         }
-
-        .img-euro {
-            margin-top: 40px;
-            max-width: 260px;
-        }
-
-        .WidgetTarot-ResultMsg {
-
-            font-size: 1.6rem;
-
-        }
-
-        .FormField-mg, #form_cb .FormField-mg {
-
-            margin-left: 1.5rem;
-        }
-
-
+    .main-content {
+        display: flex;
+        flex-direction: column;
     }
+    #main_container fieldset {
+        min-width: 0;
+        position: static;
+        padding: 0px;
+        margin: 0px;
+        margin-left: 5px;
+    }
+    .time-calendar {
+        max-width: 30px;
+    }
+    #planning_selection label {
+        padding-left: 0px;
+    }
+    .ContentBand.Principal .ContentBand-ColumnHeader {
+        font-size: 2rem;
+    }
+    .FormContainer {
+        width: 100%;
+    }
+    .carte_name {
+        margin-left: 2em;
+    }
+    .Pop.Pop-Voyant {
+        left: 50%!important;
+        top: -70px!important;
+        margin-left: -60px;
+    }
+    #form_tarot {
+        margin: 0;
+        padding: 0;
+    }
+    #planning_selection .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #planning_selection select.form-control {
+        width: 125%;
+    }
+    .img-euro {
+        margin-top: 40px;
+        max-width: 260px;
+    }
+    .WidgetTarot-ResultMsg {
+        font-size: 1.6rem;
+    }
+    .FormField-mg,
+    #form_cb .FormField-mg {
+        margin-left: 1.5rem;
+    }
+}
