@@ -1,6 +1,5 @@
 /*form styles*/
 
-
 #main_container {
     margin: 5px auto;
     text-align: center;
@@ -25,12 +24,15 @@
 }
 
 /*Hide all except first fieldset*/
+
 /*#main_container fieldset:not(:first-of-type) {*/
+
 #main_container fieldset:not(:first-of-type) {
     display: none;
 }
 
 /*buttons*/
+
 #main_container .action-button {
     background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
     font-weight: bold;
@@ -41,18 +43,21 @@
     background-position-x: 40px;
 }
 
-#main_container .previous, #main_container .previousSecond {
+#main_container .previous,
+#main_container .previousSecond {
     background: url(../images_landing/rdv/prev.png) transparent 0 0 no-repeat;
 }
 
 /*headings*/
+
 .fs-title {
     font-size: 18px;
     margin-bottom: 20px;
     color: #ffffff;
 }
 
-.fs-title::before, .fs-title::after {
+.fs-title::before,
+.fs-title::after {
     content: url(../images_landing/rdv/line.png);
 }
 
@@ -64,6 +69,7 @@
 }
 
 /*progressbar*/
+
 #progressbar {
     margin-bottom: 10px;
     overflow: hidden;
@@ -95,6 +101,7 @@
 }
 
 /*progressbar connectors*/
+
 #progressbar li:after {
     content: '';
     width: 100%;
@@ -103,7 +110,8 @@
     position: absolute;
     left: -50%;
     top: 9px;
-    z-index: -1; /*put it behind the numbers*/
+    z-index: -1;
+    /*put it behind the numbers*/
 }
 
 #progressbar li:first-child:after {
@@ -112,8 +120,11 @@
 }
 
 /*marking active/completed steps green*/
+
 /*The number of the step and the connector before it = green*/
-#progressbar li.active:before, #progressbar li.active:after {
+
+#progressbar li.active:before,
+#progressbar li.active:after {
     background: #1871b9;
     color: white;
 }
@@ -141,7 +152,8 @@ label.primary {
     font-weight: bold;
 }
 
-.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
     color: #505050;
 }
 
@@ -174,7 +186,7 @@ body.consultation-en-ligne .right-part {
 body.consultation-en-ligne {
     background: url('../images_landing/rdv/bg-consultatione-en-ligne.jpg') no-repeat center top #fff;
     margin: 0;
-    font-family: "Open Sans" ;
+    font-family: "Open Sans";
     font-weight: bold;
 }
 
@@ -310,7 +322,6 @@ body.consultation-en-ligne .subfooter {
     width: 100%;
     font-family: open sans;
     color: #fff;
-
 }
 
 .clear {
@@ -353,45 +364,36 @@ body.consultation-en-ligne .left-part .content .txt-content {
 }
 
 @media (max-width: 1080px) {
-
     .avis img {
-        max-width: 250px !important;;
+        max-width: 250px !important;
+        ;
     }
-
-
     .icon-liste {
         margin-left: 0em!important;
     }
-
 }
 
 @media (max-width: 991px) {
-
     .header-txt {
         font-size: 13pt!important;
     }
-
     body.consultation-en-ligne .main {
         background: none;
     }
-
     body.consultation-en-ligne .right-part form {
         padding: 0px 5px;
     }
-
-    body.consultation-en-ligne .right-part, .left-part{
+    body.consultation-en-ligne .right-part,
+    .left-part {
         margin-left: 0px!important;
         margin-right: 0px!important;
     }
-
     body.consultation-en-ligne .logo {
         text-align: center;
     }
-
     .avis img {
         max-width: 200px !important;
     }
-
     body.consultation-en-ligne .left-part {
         max-width: 300px!important;
     }
@@ -399,38 +401,31 @@ body.consultation-en-ligne .left-part .content .txt-content {
         margin-left: 0px!important;
         max-width: 180px;
     }
-
-
     .header-content {
         max-width: 450px !important;
     }
-
     .header-txt {
-        font-size :12pt;
+        font-size: 12pt;
     }
-
     .euro {
         top: -4em!important;
         left: -2em!important;
     }
-
     li.icone-consultation span {
         right: 0px!important;
     }
-    .imgItem img{
+    .imgItem img {
         max-width: 40px!important;
     }
 }
 
 @media (max-width: 780px) {
-
     li.icone-consultation span {
-        left:50px;
+        left: 50px;
     }
     .header-txt {
         font-size: 11pt!important;
     }
-
     .icon-liste li span {
         top: -50px!important;
         left: 10px!important;
@@ -442,98 +437,78 @@ body.consultation-en-ligne .left-part .content .txt-content {
         margin-left: 0px!important;
         max-width: 150px;
     }
-
     .header-content {
         max-width: 450px !important;
     }
-
-
 }
 
 @media (max-width: 330px) {
-
     .avis img {
         max-width: 85px !important;
         margin-left: 10px !important;
     }
-
     .icon-liste li {
-        top:0px!important;
+        top: 0px!important;
     }
     .menuh-content {
         width: 53%!important;
     }
-
     .info-img img {
         margin-top: 50px;
     }
-
     .header-btn {
-        top:-10px!important;
+        top: -10px!important;
     }
-
 }
 
 @media (max-width: 430px) and (min-width: 340px) {
-
     .avis img {
         max-width: 100px !important;
         margin-left: 10px !important;
     }
-
     p.title-filled {
         font-size: 0.9em!important;
     }
-
     .menuh-content {
         width: 60%!important;
     }
 }
 
 @media (max-width: 767px) and (min-width: 550px) {
-
-
     .avis img {
         max-width: 170px !important;
         margin-left: 20px !important;
         margin-top: 50px;
     }
-
     .img-promo {
         max-width: 220px !important;
     }
-
     body.consultation-en-ligne .left-part h1 {
         font-size: 2.3em!important;
     }
-
     .menuh-content {
         width: 100%!important;
     }
 }
 
 @media (max-width: 550px) and (min-width: 400px) {
-
     .avis img {
         max-width: 120px !important;
-        margin-left: 10px !important;;
+        margin-left: 10px !important;
+        ;
     }
-
     .img-promo {
         max-width: 160px !important;
     }
-
     .menuh-content {
         width: 70%!important;
     }
 }
 
 @media (max-width: 767px) {
-
     .textItem {
         margin-left: 10%;
-     }
-
+    }
     .header-txt {
         display: none;
     }
@@ -547,7 +522,6 @@ body.consultation-en-ligne .left-part .content .txt-content {
         width: 80px;
         display: block!important;
     }
-
     .header-btn .btn-filled {
         background: #b83d56;
         padding: 5px;
@@ -555,7 +529,6 @@ body.consultation-en-ligne .left-part .content .txt-content {
         color: #fff;
         width: 70px;
     }
-
     .menu-vm {
         font-weight: bold;
         font-size: 1.4em;
@@ -563,17 +536,14 @@ body.consultation-en-ligne .left-part .content .txt-content {
     .menu-vm a {
         color: #fff;
     }
-
-    .menuh-content .close{
+    .menuh-content .close {
         font-size: 10em!important;
         color: #ffffff!important;
         margin-top: -24px;
     }
-
     .info-img img {
-      max-width: 25px!important;
-     }
-
+        max-width: 25px!important;
+    }
     .menu-rdv {
         display: none;
     }
@@ -581,19 +551,16 @@ body.consultation-en-ligne .left-part .content .txt-content {
         top: -4em!important;
         left: -2em!important;
     }
-
     p.title-filled {
         font-size: 1.1em!important;
     }
     .header-list {
         margin-top: 15px;
     }
-
     li.icone-recommanded span {
         top: 18px;
         left: 0px!important;
     }
-
     li.icone-consultation span {
         top: 19px;
         left: 40px;
@@ -603,115 +570,92 @@ body.consultation-en-ligne .left-part .content .txt-content {
         left: -10px!important;
         top: -28px!important;
     }
-
     li.icone-consultation span::before {
         left: -47px!important;
     }
-
-    .fs-title::before, .fs-title::after {
+    .fs-title::before,
+    .fs-title::after {
         content: url(../images_landing/rdv/line-m.png);
     }
-
     .widget .time {
         width: inherit!important;
     }
     .splash-msg {
-        position: static !important;;
+        position: static !important;
+        ;
     }
-
     .avis p.title-filled {
-        margin-left: 8em !important;;
+        margin-left: 8em !important;
+        ;
     }
-
     .white {
         padding: 2px !important;
     }
-
     body.consultation-en-ligne .main {
         min-height: 400px;
     }
-
     body.consultation-en-ligne .left-part h1 {
         font-size: 16px;
         width: 100%;
     }
-
     .FormField-TableInputContainer-Cell {
-        white-space: normal !important;;
+        white-space: normal !important;
+        ;
     }
-
-
-    .imgItem img{
+    .imgItem img {
         max-width: 30px!important;
     }
-
     .icon-liste li span {
         margin: 15px 5px 5px 5px!important;
         top: -60px !important;
         left: 10px !important;
     }
-
     .splash-content {
         position: relative;
         top: -50px;
     }
-
-    .splash-msg {
-
-    }
-
-
+    .splash-msg {}
     .header {
         background: #FFF url("../images_landing/rdv/bg-vm.png") no-repeat center top !important;
-        height: 180px !important;;
+        height: 180px !important;
+        ;
         background-size: contain !important;
     }
-
     #main_container fieldset {
         /*width: 130%;*/
         margin-left: 0% !important;
     }
-
     .img-promo {
         margin-left: 0% !important;
     }
-
     .main {
         display: flex;
         flex-direction: column-reverse;
-
     }
-
     .header-content {
         margin-left: 25% !important;
     }
-
     .right-part {
         height: 470px;
     }
-
     .left-part {
         height: 300px;
     }
-
     body.consultation-en-ligne .left-part .content {
         margin: 5px auto;
     }
-
     body.consultation-en-ligne .right-part {
         margin: 5px auto;
     }
-
     body.consultation-en-ligne .left-part {
         max-width: 100%!important;
-
     }
-
 }
 
 /*****************************************************************************************************************/
 
-input[type=checkbox].ace, input[type=radio].ace {
+input[type=checkbox].ace,
+input[type=radio].ace {
     opacity: 0;
     position: absolute;
     z-index: 12;
@@ -731,14 +675,17 @@ input[type=checkbox].ace, input[type=radio].ace {
     color: #333;
 }
 
-#planning_selection input, #planning_selection select, #planning_selection .btn {
+#planning_selection input,
+#planning_selection select,
+#planning_selection .btn {
     border-radius: 0;
 }
 
 .FormField {
     display: block;
     position: relative;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    padding: 0 !important;
 }
 
 .FormField-Label {
@@ -791,20 +738,20 @@ select.FormField-Input {
 .FormField-TableInputContainer.fixed-2-col .FormField-TableInputContainer-Cell {
     width: 33.333%
 }
-
+.gender .FormField-TableInputContainer-Cell {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
 .FormField-TableInputContainer.fixed-3-col .FormField-TableInputContainer-Cell {
     width: 33.333%
-}
-
-.FormField-TableInputContainer.gender {
-    max-width: 300px
 }
 
 .FormField-TableInputContainer.relationship-status {
     max-width: 400px;
 }
 
-.FormField.radio .FormField-Label, .FormField.radio .FormField-Input {
+.FormField.radio .FormField-Label,
+.FormField.radio .FormField-Input {
     display: inline-block;
     width: auto;
     margin-top: 0;
@@ -824,7 +771,7 @@ select.FormField-Input {
     z-index: -1
 }
 
-.FormField-Input:focus + .FormField-Info {
+.FormField-Input:focus+.FormField-Info {
     margin-top: -8rem;
     opacity: 1;
     z-index: 1
@@ -846,7 +793,8 @@ select.FormField-Input {
     border: none
 }
 
-.FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+.FormField-Input:not([type=radio]):focus,
+.FormField-Input:not([type=radio]):focus:invalid {
     outline-width: 0;
     box-shadow: 0 0 6px -1px #050120;
     border-color: transparent
@@ -858,7 +806,8 @@ select.FormField-Input {
     box-shadow: 0 0 6px -1px #050120
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     width: 20px !important;
     height: 20px !important
 }
@@ -902,51 +851,50 @@ input[type="checkbox"], input[type="radio"] {
     top: -100px;
     left: 20px;
     font-size: 1.3em;
-    color: #000;
+    color: #454545;
     text-align: left;
 }
 
-.icon-liste li{
-
+.icon-liste li {
     list-style: none;
     position: relative;
-    top:10px;
+    top: 10px;
 }
 
 li.icone-cray span::before {
-   /* list-style-image: url(../images_landing/rdv/icon-cray.png);*/
+    /* list-style-image: url(../images_landing/rdv/icon-cray.png);*/
     content: url(../images_landing/rdv/icon-cray.png);
     position: absolute;
-    left:-35px;
-
+    left: -35px;
+    top: -2px;
 }
 
 li.icone-screen span::before {
     content: url(../images_landing/rdv/icon-screen.png);
     position: absolute;
-    left: -40px;
+    left: -43px;
     top: -5px;
 }
 
 li.icone-payment span::before {
     content: url(../images_landing/rdv/icon-payment.png);
     position: absolute;
-    left: -40px;
-    top: -5px;
+    left: -38px;
+    top: -6px;
 }
 
 li.icone-hand span::before {
     content: url(../images_landing/rdv/icon-hand.png);
     position: absolute;
     left: -40px;
-    top: -5px;
+    top: -8px;
 }
 
 li.icone-recommanded {
-    list-style :none;
+    list-style: none;
 }
 
-li.icone-recommanded span::before{
+li.icone-recommanded span::before {
     content: url(../images_landing/rdv/stars.png);
     position: absolute;
     left: -115px;
@@ -954,7 +902,6 @@ li.icone-recommanded span::before{
 }
 
 li.icone-consultation span::before {
-
     content: url(../images_landing/rdv/consultation.png);
     position: absolute;
     left: -50px;
@@ -962,12 +909,12 @@ li.icone-consultation span::before {
 }
 
 li.icone-consultation {
-    list-style :none;
+    list-style: none;
 }
 
 li.icone-recommanded span {
     top: 25px;
-    left:7em;
+    left: 7em;
 }
 
 li.icone-consultation span {
@@ -996,7 +943,7 @@ p.title-filled {
     margin-left: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
-    width : 100%;
+    width: 100%;
 }
 
 .header {
@@ -1027,8 +974,7 @@ p.title-filled {
 }
 
 .avis p {
-
-    width: 110px;
+    width: 134px;
     margin-bottom: 20px;
 }
 
@@ -1060,7 +1006,6 @@ p.title-filled {
     position: absolute;
     display: none;
     padding-left: 15px;
-
 }
 
 .imgItem {
@@ -1068,13 +1013,13 @@ p.title-filled {
     padding-left: 15px;
 }
 
-.textItem.current,.imgItem.current {
+.textItem.current,
+.imgItem.current {
     display: inline-block;
     text-align: center;
 }
 
 .info-img {
-
     /*margin-left: 6em;*/
     margin-bottom: 10px;
 }
@@ -1088,7 +1033,7 @@ p.title-filled {
 
 li span {
     position: relative;
-   /* bottom: 10px;*/
+    /* bottom: 10px;*/
 }
 
 .img-promo {
@@ -1117,7 +1062,6 @@ li span {
 }
 
 .img-custmer {
-
     margin-left: 15px !important;
 }
 
@@ -1134,7 +1078,6 @@ li span {
     left: -15px;
 }
 
-
 /****** PLANING *******************/
 
 .input-group-addon {
@@ -1148,14 +1091,12 @@ select.form-control {
 }
 
 #planning_maj {
-
     border: none;
     background: #22424d;
     color: #fff;
     font-weight: bold;
     background: url(../images_landing/rdv/refresh.png) 20px -5px no-repeat;
     padding: 15px;
-
 }
 
 #planning_selection .indicateur {
@@ -1166,20 +1107,25 @@ select.form-control {
     margin-left: -42px!important;
 }
 
-#planning_selection label > * {
+#planning_selection label>* {
     margin: 0px!important;
 }
 
 .lbl {
     text-align: left!important;
 }
+
 .space {
     display: none;
 }
 
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-
- border: 1px solid #8babab!important;
+.table-bordered>thead>tr>th,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>tbody>tr>td,
+.table-bordered>tfoot>tr>td {
+    border: 1px solid #8babab!important;
 }
 
 /***************************MENU *************************************/
@@ -1187,32 +1133,38 @@ select.form-control {
 .menu-rdv {
     background: #b83d56;
     padding: 10px;
-    margin-top: -8px;
+    margin-top: 0;
 }
 
 .menu-content {
-  text-align: center;
+    text-align: center;
 }
 
-.menu-content a#tchat-online ,.menu-content a#tarot ,.menu-vm a{
+.menu-content a#tchat-online,
+.menu-content a#tarot,
+.menu-vm a {
     color: #ffffff!important;
 }
 
-.menu-content a:hover,.menu-content a:active {
+.menu-content a:hover,
+.menu-content a:active {
     text-decoration: none!important;
 }
 
-.menu-vm a:hover,.menu-vm a:active {
+.menu-vm a:hover,
+.menu-vm a:active {
     text-decoration: none!important;
     font-weight: bold!important;
 }
 
-.menu-content a#tchat-online:hover  span,.menu-content a#tchat-online:active span {
+.menu-content a#tchat-online:hover span,
+.menu-content a#tchat-online:active span {
     color: #ffffff!important;
     text-decoration: none!important;
 }
 
-.menu-content a#tarot:hover span,.menu-content a#tarot:active span{
+.menu-content a#tarot:hover span,
+.menu-content a#tarot:active span {
     color: #ffffff!important;
     text-decoration: none!important;
 }
@@ -1222,9 +1174,9 @@ select.form-control {
     margin-right: 3em;
 }
 
-
-.menu-content a,.menu-content a:active{
-   text-decoration: none;
+.menu-content a,
+.menu-content a:active {
+    text-decoration: none;
 }
 
 .menu-content span.active {
@@ -1236,7 +1188,6 @@ select.form-control {
 }
 
 .euro-min {
-
     position: relative;
     top: -20px;
     color: #000000;
@@ -1248,17 +1199,15 @@ select.form-control {
     left: -1em;
 }
 
-
 /***********************MENU MOBILE *************************/
 
 .header-btn {
-
-   display: none;
+    display: none;
 }
 
 .menuh-content .modal-header {
-  padding: 0px!important;
-  border-bottom: none!important;
+    padding: 0px!important;
+    border-bottom: none!important;
 }
 
 /*********************SLIDER  *****/
@@ -1268,7 +1217,6 @@ select.form-control {
     border: none!important;
     margin: 0!important;
 }
-
 
 .icon-liste {
     margin-left: 4em;
