@@ -684,7 +684,8 @@ input[type=radio].ace {
 .FormField {
     display: block;
     position: relative;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
+    padding: 0 !important;
 }
 
 .FormField-Label {
@@ -737,13 +738,12 @@ select.FormField-Input {
 .FormField-TableInputContainer.fixed-2-col .FormField-TableInputContainer-Cell {
     width: 33.333%
 }
-
+.gender .FormField-TableInputContainer-Cell {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
 .FormField-TableInputContainer.fixed-3-col .FormField-TableInputContainer-Cell {
     width: 33.333%
-}
-
-.FormField-TableInputContainer.gender {
-    max-width: 300px
 }
 
 .FormField-TableInputContainer.relationship-status {
@@ -1133,7 +1133,7 @@ select.form-control {
 .menu-rdv {
     background: #b83d56;
     padding: 10px;
-    margin-top: -8px;
+    margin-top: 0;
 }
 
 .menu-content {
