@@ -22,7 +22,7 @@
         <article class="Container">
           <section class="DRI">
             <header class="DRI-Title">
-              <div class="promotion-special">Offre spécial</div>
+              <div class="promotion-special">Offre spéciale</div>
               <h2 class="DRI-PromoTitle">Formulaire<span class="small">pour accéder aux:</span></h2>
               <div class="promotion-tenmin"><p hidden>1€ les 10 premières minutes</p></div>
             </header>
