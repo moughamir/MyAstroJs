@@ -1,6 +1,12 @@
 <?php
 require_once(realpath('include/tools.php'));
 require_once(realpath('rdv_web/planning.php'));
+$pageName = "gv18-rdv";
+$support = "voyance";
+$site = "myastro.fr";
+$source = "gv18";
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+$assets = 'images_landing/grande-voyance/18';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +16,14 @@ require_once(realpath('rdv_web/planning.php'));
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Consultaion en ligne - Grand Voyance 2018</title>
+    <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
+
+    <!--------------------assets  for displaying planning ----------------------------------------->
+  
+    <link href="rdv_web/css/datepicker_5.css" type="text/css" rel="stylesheet"/>
+    <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css" rel="stylesheet"/>
+    <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
+    <!-- End Planning -->
     <link rel="stylesheet" href="css/grande-voyance.css" type="text/css" />
     <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet" />
   </head>
@@ -40,7 +54,7 @@ require_once(realpath('rdv_web/planning.php'));
               <fieldset style="margin-top: 40px;">
                 <h2 class="fs-title">Informations personnelles</h2>
                 <input type="hidden" name="site" value="MyAstro" />
-                <input type="hidden" name="source" value="consultation-en-ligne-1" />
+                <input type="hidden" name="source" value="<?= $source;?>" />
                 <input type="hidden" name="method" value="client_web" />
                 <input type="hidden" name="support" value="rdv-web" />
                 <input type="hidden" name="affiliation" value="Adwords" />
@@ -130,7 +144,6 @@ require_once(realpath('rdv_web/planning.php'));
                 <input type="button" name="next" class="nextSecond action-button" value="Suivant">
               </fieldset>
               <fieldset id="form_cb" style="display: none">
-                <strong class="euro-min">1€ les 10 premières minutes</strong>
                 <h2 class="fs-title">Coordonnées bancaires</h2>
                 <h3 class="fs-subtitle"></h3>
                 <label for="name" class="FormField-Label carte_name">Nom du propriétaire de la carte</label>
@@ -179,8 +192,7 @@ require_once(realpath('rdv_web/planning.php'));
                 <div class="FormField-TableInputContainer FormField-mg ">
                   <div class="FormField-TableInputContainer-Cell">
                     <label for="name" class="FormField-Label">Cryptogramme de sécurité </label>
-                    <input type="text" id="crypto" name="crypto" class="FormField-Input" required/>
-                    <img class="img-crypto" src="../images_landing/rdv/crypto.png">
+                    <input type="text" id="crypto" name="crypto" class="FormField-Input img-crypto" required/><i class="crypto"></i>
                   </div>
                   <div class="FormField-TableInputContainer-Cell">
                     <label for="name" class="FormField-Label"> &nbsp;&nbsp;</label>
@@ -190,8 +202,10 @@ require_once(realpath('rdv_web/planning.php'));
                     </div>
                   </div>
                 </div>
-                <input type="button" name="previous" class="previousSecond action-button" value="Précédent" />
-                <input type="submit" name="submit" class="submit action-button" value="Valider" />
+                <input type="button" name="previous" class="previousSecond action-button" 
+                  value="Précédent"/>
+                <input type="submit" name="submit" id="valider" class="submit action-button"
+                  value="Valider"/>
               </fieldset>
             </form>
           </article>
@@ -202,12 +216,17 @@ require_once(realpath('rdv_web/planning.php'));
     <script src="js/formValidator.js"></script>
     <!-- jQuery easing plugin -->
     <script src="js/jquery.easing.min.js" type="text/javascript"></script>
+    <script src="js/rdv-love-myastro.js"></script>
     <script src="js/tarot-direct-rdv.js"></script>
     <!-- js scripts kgestion for displaying planning -->
     <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
     <script type="text/javascript" src="rdv_web/js/moment_9.js"></script>
     <script type="text/javascript" src="rdv_web/js/bootstrap-datepicker.min_12.js"></script>
     <script type="text/javascript" src="rdv_web/js/bootstrap-datepicker.translatefr_13.js"></script>
+     <!-- #### REMARKETINGS #### -->
+        <?php include('include/remarketing/adwords.php');
+              include('include/remarketing/analytics.php');
+              include('include/remarketing/facebook.php');?>
   </body>
 
 </html>
