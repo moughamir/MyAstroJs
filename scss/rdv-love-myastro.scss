@@ -370,10 +370,10 @@ ul {
 .FormContainer {
   margin: 1.8rem 0;
   color: black;
-  max-width:86rem !important;
-  background: rgba(60,61,79,0.8);
+  max-width: 86rem !important;
+  background: rgba(60, 61, 79, 0.8);
   padding: 0rem;
-  padding-top:0rem;
+  padding-top: 0rem;
 }
 
 .mf {
@@ -463,23 +463,24 @@ ul {
 }
 
 #main_container fieldset {
-
   position: absolute;
 }
 
 #main_container fieldset {
-
   /*stacking fieldsets above each other*/
   min-width: 471px;
 }
 
 /*Hide all except first fieldset*/
+
 /*#main_container fieldset:not(:first-of-type) {*/
+
 #main_container fieldset:not(:first-of-type) {
   display: none;
 }
 
 /*buttons*/
+
 #main_container .action-button {
   background: url(../images_landing/rdv/next.png) transparent 0 0 no-repeat;
   font-weight: bold;
@@ -490,11 +491,13 @@ ul {
   background-position-x: 40px;
 }
 
-#main_container .previous, #main_container .previousSecond {
+#main_container .previous,
+#main_container .previousSecond {
   background: url(../images_landing/rdv/prev.png) transparent 0 0 no-repeat;
 }
 
 /*headings*/
+
 .fs-title {
   font-size: 20px;
   margin-bottom: 20px;
@@ -503,14 +506,12 @@ ul {
   margin-left: 40px;
 }
 
-
 .fs-subtitle {
   font-weight: normal;
   font-size: 13px;
   color: #666;
   margin-bottom: 20px;
 }
-
 
 .col-sm-6 .table {
   background: #fffefe;
@@ -531,7 +532,8 @@ label.primary {
   font-weight: bold;
 }
 
-.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
   color: #505050;
 }
 
@@ -549,9 +551,8 @@ td label.default {
   margin-right: 20px;
 }
 
-
-
-input[type=checkbox].ace, input[type=radio].ace {
+input[type=checkbox].ace,
+input[type=radio].ace {
   opacity: 0;
   position: absolute;
   z-index: 12;
@@ -560,8 +561,6 @@ input[type=checkbox].ace, input[type=radio].ace {
   cursor: pointer;
 }
 
-
-
 .FormField {
   display: block;
   position: relative;
@@ -569,10 +568,8 @@ input[type=checkbox].ace, input[type=radio].ace {
 }
 
 .FormField-mg {
-
   margin-left: 6rem;
 }
-
 
 select.FormField-Input {
   -webkit-box-shadow: none !important;
@@ -605,15 +602,20 @@ select.FormField-Input {
   padding-right: 0
 }
 
-.FormField-TableInputContainer.gender {
-  max-width: 300px
-}
-
 .FormField-TableInputContainer.relationship-status {
   max-width: 400px;
 }
-
-.FormField.radio .FormField-Label, .FormField.radio .FormField-Input {
+.FormField-TableInputContainer.fixed-2-col.gender {
+    display: flex;
+    justify-content: space-evenly;
+}
+.gender .FormField-TableInputContainer-Cell {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+.FormField.radio .FormField-Label,
+.FormField.radio .FormField-Input {
   display: inline-block;
   width: auto;
   margin-top: 0;
@@ -633,7 +635,7 @@ select.FormField-Input {
   z-index: -1
 }
 
-.FormField-Input:focus + .FormField-Info {
+.FormField-Input:focus+.FormField-Info {
   margin-top: -8rem;
   opacity: 1;
   z-index: 1
@@ -655,7 +657,8 @@ select.FormField-Input {
   border: none
 }
 
-.FormField-Input:not([type=radio]):focus, .FormField-Input:not([type=radio]):focus:invalid {
+.FormField-Input:not([type=radio]):focus,
+.FormField-Input:not([type=radio]):focus:invalid {
   outline-width: 0;
   box-shadow: 0 0 6px -1px #050120;
   border-color: transparent
@@ -667,11 +670,11 @@ select.FormField-Input {
   box-shadow: 0 0 6px -1px #050120
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   width: 20px !important;
   height: 20px !important
 }
-
 
 /*.FormField-Input {
   background: #bc91cd;
@@ -1132,7 +1135,6 @@ a.btn-primary {
   text-decoration: none;
 }
 
-
 /************************ICON Style**************************************************/
 
 .icon-liste li span {
@@ -1143,42 +1145,40 @@ a.btn-primary {
   font-weight: bold;
 }
 
-.icon-liste li{
-
+.icon-liste li {
   list-style: none;
   position: relative;
-  top:10px;
+  top: 10px;
 }
 
 li.icone-cray span::before {
   /* list-style-image: url(../images_landing/rdv/icon-cray.png);*/
   content: url(../images_landing/rdv/tarot/icon-cray.png);
   position: absolute;
-  left:-35px;
-
+  left: -35px;
+  top: -2px;
 }
 
 li.icone-screen span::before {
   content: url(../images_landing/rdv/tarot/icon-screen.png);
   position: absolute;
-  left: -40px;
-  top: -5px;
+  left: -42px;
+  top: -3px;
 }
 
 li.icone-payment span::before {
   content: url(../images_landing/rdv/tarot/icon-payment.png);
   position: absolute;
-  left: -40px;
-  top: -5px;
+  left: -36px;
+  top: -6px;
 }
 
 li.icone-hand span::before {
   content: url(../images_landing/rdv/tarot/icon-hand.png);
   position: absolute;
   left: -40px;
-  top: -5px;
+  top: -8px;
 }
-
 
 li span {
   position: relative;
@@ -1198,9 +1198,7 @@ li span {
   top: -34px;
 }
 
-
 .img-custmer {
-
   margin-left: 15px !important;
 }
 
@@ -1231,69 +1229,53 @@ form.ajax {
 /*************************** PLANNING SELECTION *******************/
 
 #planning_selection {
-
   color: #333;
-
   .primary {
-
     border-color: $secondary;
-
     .indicateur:before {
       border-color: $secondary;
     }
-
     .indicateur {
       background-color: $secondary;
     }
   }
-
   .indicateur {
     line-height: 33px;
     width: 25px!important;
   }
-
   .table {
     margin-bottom: 30px !important;
   }
-
-  input,  select, .btn {
-
+  input,
+  select,
+  .btn {
     border-radius: 0;
   }
-
   .indicateur:before {
     margin-left: -42px!important;
   }
-
-  label > * {
+  label>* {
     margin: 0px!important;
   }
-
-  input:checked + .lbl + .indicateur {
+  input:checked+.lbl+.indicateur {
     background-color: $accent;
   }
-
-  input:checked + .lbl + .indicateur:before {
-    border-color:  $accent;
+  input:checked+.lbl+.indicateur:before {
+    border-color: $accent;
   }
-
   .input-group {
     width: 130%;
   }
-
   .input-group-addon {
     border-radius: 0px!important;
     background: url(../images_landing/rdv/calendar.png) -3px 0 no-repeat;
     padding: 6px 15px 6px 15px!important;
     background-color: #ffffff;
   }
-
   select.form-control {
     padding: 6px 1px!important;
   }
-
   #planning_maj {
-
     border: none;
     color: #fff;
     font-weight: bold;
@@ -1301,50 +1283,44 @@ form.ajax {
     padding: 15px;
     font-size: 13px;
   }
-
   .lbl {
     text-align: left!important;
   }
   .space {
     display: none;
   }
-
-  .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-
+  .table-bordered>thead>tr>th,
+  .table-bordered>tbody>tr>th,
+  .table-bordered>tfoot>tr>th,
+  .table-bordered>thead>tr>td,
+  .table-bordered>tbody>tr>td,
+  .table-bordered>tfoot>tr>td {
     border: 1px solid #8babab!important;
   }
-
-  input:checked + .lbl {
-    color: $accent ;
+  input:checked+.lbl {
+    color: $accent;
   }
-
 }
 
 form.ajax {
   position: relative;
 }
 
-.WidgetTarot-Draw, .WidgetTarot-Result {
+.WidgetTarot-Draw,
+.WidgetTarot-Result {
   margin-top: 4em;
 }
 
-
 .main-content {
-
   display: flex;
   flex-direction: row;
 }
 
-
 #form_cb {
-
   .action-button {
-
     margin-top: -20px;
   }
-
   .FormField-mg {
-
     margin-left: 3rem;
   }
 }
@@ -1354,39 +1330,31 @@ form.ajax {
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
-
   .FormContainer {
     width: 108%;
   }
-
   #form_tarot {
     padding: 0px;
     margin: 0px;
   }
-
 }
 
 .carte_name {
   margin-left: 2em;
 }
+
 @media (max-width: 767px) {
-
-
   .fs-title {
     margin-left: 0px;
   }
-
-  .fs-title::before, .fs-title::after {
+  .fs-title::before,
+  .fs-title::after {
     content: url(../images_landing/rdv/line-m.png)!important;
   }
-
-
   .main-content {
     display: flex;
     flex-direction: column;
-
   }
-
   #main_container fieldset {
     min-width: 0;
     position: static;
@@ -1394,20 +1362,15 @@ form.ajax {
     margin: 0px;
     margin-left: 5px;
   }
-
   .time-calendar {
     max-width: 30px;
   }
-
   #planning_selection label {
     padding-left: 0px;
   }
-
   .ContentBand.Principal .ContentBand-ColumnHeader {
     font-size: 2rem;
   }
-
-
   .FormContainer {
     width: 100%;
   }
@@ -1419,39 +1382,29 @@ form.ajax {
     top: -70px!important;
     margin-left: -60px;
   }
-
   #form_tarot {
     margin: 0;
     padding: 0;
   }
-
   #planning_selection .row {
     margin-right: 0;
     margin-left: -20px;
     width: 113%;
   }
-
   #planning_selection select.form-control {
     width: 125%;
   }
-
   .img-euro {
     margin-top: 40px;
     max-width: 260px;
   }
-
   .WidgetTarot-ResultMsg {
-
     font-size: 1.6rem;
-
   }
-
-  .FormField-mg, #form_cb .FormField-mg {
-
+  .FormField-mg,
+  #form_cb .FormField-mg {
     margin-left: 0rem;
   }
-
-
 }
 
 .form-header {
@@ -1461,7 +1414,8 @@ form.ajax {
   color: #ffffff;
 }
 
-.fs-title::before, .fs-title::after {
+.fs-title::before,
+.fs-title::after {
   content: url(../images_landing/rdv/line.png);
 }
 
@@ -1472,12 +1426,9 @@ form.ajax {
 }
 
 #form_cb {
-
   top: -30px;
-
 }
 
 .datepicker {
   color: black;
 }
-

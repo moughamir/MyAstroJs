@@ -39,6 +39,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <link rel="stylesheet" type="text/css" href="css/rdv_web.css"/>
     <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="images_landing/rdv/favicon.png" />
     <?php include('include/header_inc_landing.php'); ?>
 
     <!--------------------assets  for displaying planning ----------------------------------------->
