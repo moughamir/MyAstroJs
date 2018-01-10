@@ -563,6 +563,8 @@ if(empty($err)){
             include('../include/conversion/goformedia.php');
         } elseif($source == 'weedoit'){
             include('../include/conversion/weedoit.php');
+        }elseif($source == 'strandlink'){
+            include('../include/conversion/strandlink.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
