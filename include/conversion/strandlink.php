@@ -22,7 +22,7 @@ if($source == 'strandlink'){
                 $bdd->update($bdd->users, ['conversion' => 1], ['internal_id' => $_SESSION['user_id']]);
             }
             unset($_SESSION['conversion']);
-            unset($_SESSION['strandlink_transactionid']);
+            unset($_SESSION['strandlink_affiliateid']);
 
         }
     }
