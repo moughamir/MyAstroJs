@@ -15,7 +15,7 @@ $trouve = false;
 $reinscription = false;
 $tchatabo_dri =  [
     'tarot-tchat-dri' => ['cookie' => true],
-    'tarot-tchat/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-tchat/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'tarot-tchat/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-tchat/saisie-cb?id=[IDKGESTION]', 'cookie' => true ],
     'tarot-rentree/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-rentree/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'tarot-en-direct/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
@@ -563,6 +563,8 @@ if(empty($err)){
             include('../include/conversion/goformedia.php');
         } elseif($source == 'weedoit'){
             include('../include/conversion/weedoit.php');
+        }elseif($source == 'strandlink'){
+            include('../include/conversion/strandlink.php');
         } else {
             $retour = array();
             $retour['url'] = 'http://'.ROOT_URL.'/conversion';
