@@ -167,6 +167,12 @@ nav {
         }
       }
     }
+    .article-aside {
+      position    : fixed;
+      left        : 50%;
+      top         : 280px;
+      margin-left : -420px;
+    }
   }
   &-love {
     .article-container {
@@ -268,10 +274,10 @@ nav {
     @include respond-to('mobile') {
       margin : 150px 0 50px;
     }
-    .article-side {
+    .article-aside {
       @include respond-to('mobile') {
-        left : 0;
-        top  : -53px;
+        left : 10px;
+        top  : -80px;
       }
     }
     .article-more {
@@ -560,14 +566,15 @@ nav {
   display         : inline-block;
   background      : url($assets + 'scroll.png') center no-repeat;
   background-size : cover;
-  border-radius   : 50%;
+  //border-radius   : 50%;
   width           : 50px;
   height          : 50px;
   //margin: 0 auto;
   filter          : drop-shadow(0 0 1px #3c3c3c);
   animation       : bounce 5s ease-in-out infinite;
   &.scroll-up {
-    background : url($assets + 'scroll-up.png') center no-repeat;
+    background      : url($assets + 'scroll-up.png') center no-repeat;
+    background-size : cover;
   }
 
 }
