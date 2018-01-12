@@ -159,7 +159,7 @@ $sexe = str_replace('femme', 'F', $sexe);
 $prenom = form_firstname($err, $param);
 // Date de naissance & Signe Astrologique --------------------------------------
 $dtn_bdd = $dtn_smf = $dtn_ses = '';
-$need_birthdate = isset($param['optional_birthdate']) ? false : true;;
+$need_birthdate = isset($param['optional_birthdate']) ? false : true;
 $dtn_j = isset($param['jour'])  && !empty($param['jour'])  ? $param['jour']  : false;
 $dtn_m = isset($param['mois'])  && !empty($param['mois'])  ? $param['mois']  : false;
 $dtn_a = isset($param['annee']) && !empty($param['annee']) ? $param['annee'] : false;
