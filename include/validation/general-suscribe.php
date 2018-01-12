@@ -300,11 +300,6 @@ if(empty($err)){
         'reflexSource'      => $rc_source
     );
 
-    echo "<pre>";
-    print_r($post_data);
-    echo "</pre>";
-    die();
-
     if(!in_array($dri, $tchatabo_dri)){
         $post_data['myastroPsychic'] = $voyant;
     }
