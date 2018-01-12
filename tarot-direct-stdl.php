@@ -1,11 +1,9 @@
 <?php
 /*
     ------------------------------------------
-    --   tarot-direct-rc-g = REFLEX CACHE   --
+    --   tarot-direct-stdl = strand link  --
     ------------------------------------------
 
-    Created on : 13 septembre 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
 */
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
@@ -13,6 +11,11 @@ include('include/visual_modules/tarot-direct/design-load.php');
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+
+session_start();
+$_SESSION['strandlink_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['strandlink_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['strandlink_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
