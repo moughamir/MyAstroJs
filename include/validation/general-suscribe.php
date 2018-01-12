@@ -159,7 +159,7 @@ $sexe = str_replace('femme', 'F', $sexe);
 $prenom = form_firstname($err, $param);
 // Date de naissance & Signe Astrologique --------------------------------------
 $dtn_bdd = $dtn_smf = $dtn_ses = '';
-$need_birthdate = isset($param['optional_birthdate']) ? false : true;
+$need_birthdate = isset($param['optional_birthdate']) ? false : true;;
 $dtn_j = isset($param['jour'])  && !empty($param['jour'])  ? $param['jour']  : false;
 $dtn_m = isset($param['mois'])  && !empty($param['mois'])  ? $param['mois']  : false;
 $dtn_a = isset($param['annee']) && !empty($param['annee']) ? $param['annee'] : false;
@@ -175,6 +175,12 @@ if($need_birthdate){
     } else {
         $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
     }
+} else if($dtn_j && $dtn_m && $dtn_a){
+    $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
+    $dtn_smf = $dtn_m."/".$dtn_j."/".$dtn_a; // FORMAT SMARTFOCUS
+    $dtn_ses = $dtn_j."/".$dtn_m."/".$dtn_a; // FORMAT SESSION
+
+    $signe = get_signe_astro($dtn_j, $dtn_m);
 }
 
 // Adresse mail ----------------------------------------------------------------
@@ -293,6 +299,11 @@ if(empty($err)){
         'reflexAffilateId'  => $rc_affiliateid,
         'reflexSource'      => $rc_source
     );
+
+    echo "<pre>";
+    print_r($post_data);
+    echo "</pre>";
+    die();
 
     if(!in_array($dri, $tchatabo_dri)){
         $post_data['myastroPsychic'] = $voyant;
