@@ -175,6 +175,12 @@ if($need_birthdate){
     } else {
         $err['date_naissance'] = 'Merci dʼindiquer votre date de naissance.';
     }
+} else if($dtn_j && $dtn_m && $dtn_a){
+    $dtn_bdd = $dtn_a."-".$dtn_m."-".$dtn_j; // FORMAT BDD MYASTRO
+    $dtn_smf = $dtn_m."/".$dtn_j."/".$dtn_a; // FORMAT SMARTFOCUS
+    $dtn_ses = $dtn_j."/".$dtn_m."/".$dtn_a; // FORMAT SESSION
+
+    $signe = get_signe_astro($dtn_j, $dtn_m);
 }
 
 // Adresse mail ----------------------------------------------------------------
