@@ -18,6 +18,11 @@ $questions = array(
 $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+
+session_start();
+$_SESSION['strandlink_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['strandlink_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['strandlink_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

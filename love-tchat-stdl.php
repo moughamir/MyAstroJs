@@ -13,7 +13,10 @@ $questions = array(
     ['code' => 'lma17_question3', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Désir']
 );
 $assets = 'images_landing/love-tchat';
-
+session_start();
+$_SESSION['strandlink_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
+$_SESSION['strandlink_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
+$_SESSION['strandlink_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
