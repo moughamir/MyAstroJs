@@ -61,6 +61,10 @@ body {
   }
 }
 
+::placeholder {
+  color : #fff;
+}
+
 @mixin v-center {
   display         : flex;
   align-items     : center;
@@ -172,6 +176,20 @@ nav {
       left        : 50%;
       top         : 280px;
       margin-left : -420px;
+      @include respond-to('mobile') {
+        position : absolute;
+        left     : auto;
+        right    : 10px;
+        top      : -50px;
+        width    : 100px;
+        height   : 100px;
+
+        h3 {
+          top   : 0;
+          right : 115px;
+          left  : auto;
+        }
+      }
     }
   }
   &-love {
@@ -812,7 +830,7 @@ nav {
     }
   }
   &-article {
-    background  : #fff;
+    background  : $articleBg;
     width       : 280px;
     padding     : 10px;
     height      : 350px;
