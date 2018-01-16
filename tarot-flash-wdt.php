@@ -3,6 +3,7 @@
  * tarot-flash-wdt == WEDOoIT
  * ------------------------
  */
+session_start();
 $url = 'tarot-flash-wdt';
 $method = 'general-suscribe';
 $support = 'tarot';
