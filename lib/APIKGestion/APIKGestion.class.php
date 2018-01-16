@@ -5,12 +5,12 @@
  * Author     : Laurène Dourdin <2aurene@gmail.com>
  */
 class APIKGestion {
-    
+
     const BASE_URL = 'https://kgestion.kg-com.fr/';
     const GET = 'GET';
     const POST = 'POST';
     const PATCH = 'PATCH';
-    
+
     private function request ($method, $url, $data = array())
     {
         // traverse array and prepare data for posting (key1=value1)
@@ -36,16 +36,16 @@ class APIKGestion {
 
         curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl_connection, CURLOPT_FAILONERROR, true);
-        
+
         if($method == $this::POST){
             curl_setopt($curl_connection, CURLOPT_POST, 1);
         } elseif($method == $this::PATCH){
             curl_setopt($curl_connection, CURLOPT_CUSTOMREQUEST, 'PATCH');
         }
-        
+
         // perform our request
         $result = curl_exec($curl_connection);
-        
+
         // catch error
         if(curl_error($curl_connection)){
             $result = curl_error($curl_connection);
@@ -61,9 +61,9 @@ class APIKGestion {
             return $result;
 
         }
-        
+
     }
-    
+
     public function insertUser($data)
     {
         $url = $this::BASE_URL.'client/api/client';
@@ -84,14 +84,14 @@ class APIKGestion {
     public function updateUser($id, $data)
     {
         $url = $this::BASE_URL.'client/api/client/'.$id;
-        
+
         return $this->request($this::PATCH, $url, $data);
     }
-    
+
     public function registerDRI($id, $data)
     {
         $url = $this::BASE_URL.'client/api/client/dri/'.$id;
-        
+
         return $this->request($this::PATCH, $url, $data);
     }
 

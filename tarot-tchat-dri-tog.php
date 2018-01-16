@@ -138,6 +138,8 @@ if(isset($_SESSION['user_id'])){
        <!-- <script src="js/tarot-draw.js"></script> -->
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
+        <!--Pixel Affiliation -->
+        <?php include_once('include/pixels/gpbl.php');?>
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');
