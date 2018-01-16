@@ -6,7 +6,6 @@ $assets: '/images_landing/pouvoir-des-trois/';
 $promo: $assets+"offre.png";
 // scheme
 $primary: #411575;
-
 /* sidebar element hover, btn, Psychic name, highlight */
 
 $primary-txt: #ffffff;
@@ -38,8 +37,7 @@ html {
 
 body {
   padding: 0;
-  font-family: $courgette;
-  //font-weight: 400;
+  font-family: $courgette; //font-weight: 400;
   //color: #1f1f1f;
   color: #fff;
 }
@@ -90,8 +88,7 @@ body {
   >section {
     display: block;
     text-align: center;
-    margin: 10px auto;
-    //background: rgba(255, 0, 0, 0.1);;
+    margin: 10px auto; //background: rgba(255, 0, 0, 0.1);;
     padding: 10px 0;
   }
 }
@@ -110,13 +107,11 @@ body {
   display: flex;
   overflow: hidden;
   min-height: 300px;
-  width: 100%;
-  //background: rgba(255, 0, 0, 0.1);
+  width: 100%; //background: rgba(255, 0, 0, 0.1);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 
 /*
 .header {
@@ -236,10 +231,8 @@ ul {
 .expander {
   position: absolute;
   width: 150%;
-  height: 150%;
-  //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
-  pointer-events: none;
-  //opacity: 0;
+  height: 150%; //margin: calc(-100vmax * 1.4142 / 2) 0 0 calc(-100vmax * 1.4142 / 2);
+  pointer-events: none; //opacity: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.26);
   -webkit-transform: scale(0);
@@ -383,7 +376,6 @@ ul {
   color: $primary;
   box-shadow: 0 0 6px -1px $primary;
 }
-
 
 /*.FormField-Input {
   background: #bc91cd;
@@ -695,3 +687,87 @@ footer {
     }
   }
 }
+
+.rdv {
+  &-c {
+    max-width: 100%;
+  }
+  .form-header {
+    max-width: 45rem;
+    padding: 5px;
+    background: $primary;
+    color: $primary-txt;
+    text-align: center;
+    font-weight: lighter;
+    width: 80%;
+    margin: 0 auto 2.6rem auto;
+    position: relative;
+    &::before {
+      content: '';
+      display: inline-block;
+      @include square(60px);
+      background: transparent url($assets + "cal.png") no-repeat center;
+      background-size: contain;
+      position: absolute;
+      left: -60px;
+      top: 0;
+    }
+  }
+  .icon {
+    &-liste {
+      list-style: none;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: 2.1rem;
+      &>li {
+        padding: 9px 0 9px 32px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 7px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+    &-cray::before {
+      background-image: url($assets + "cray.png");
+    }
+    &-hand::before {
+      background-image: url($assets + "hand.png");
+    }
+    &-screen::before {
+      background-image: url($assets + "screen.png");
+    }
+    &-payment::before {
+      background-image: url($assets + "payment.png");
+    }
+  }
+  .ico-woman,
+  .ico-man {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  .main-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .appForm {
+    background: $primary;
+  }
+  .fs-title {
+    text-align: center;
+}
+}
+
+//
