@@ -88,7 +88,7 @@ $assets = 'images_landing/grande-voyance/18';
             <main class="article-wrapper">
                 <div class="article-container">
                     <div class="article-two" id="social">
-                        <h3 id="title"><span class="huge">V</span>ie social</h3>
+                        <h3 id="title"><span class="huge">V</span>ie sociale</h3>
                         <div class="social-container">
                             <article class="page-article">
                                 <h3 class="article-headline">Famille</h3>
