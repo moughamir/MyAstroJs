@@ -185,9 +185,10 @@ nav {
         height   : 100px;
 
         h3 {
-          top   : 0;
-          right : 115px;
-          left  : auto;
+          top        : 0;
+          right      : 115px;
+          left       : -200px;
+          text-align : right;
         }
       }
     }
