@@ -6,7 +6,7 @@
  */
 class APIKGestion {
 
-    const BASE_URL = 'https://kgestion.dev.kg-com.fr/app_dev.php/';
+    const BASE_URL = 'https://kgestion.kg-com.fr/';
     const GET = 'GET';
     const POST = 'POST';
     const PATCH = 'PATCH';
@@ -31,10 +31,11 @@ class APIKGestion {
         if(getenv('MYASTRO_CURL_NOSSL')){
             curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
         }
+
+        /////////////////////////////////////////////////////////////////////////
+
         curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl_connection, CURLOPT_FAILONERROR, true);
-        curl_setopt($curl_connection, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, 0);
 
         if($method == $this::POST){
             curl_setopt($curl_connection, CURLOPT_POST, 1);
@@ -48,9 +49,6 @@ class APIKGestion {
         // catch error
         if(curl_error($curl_connection)){
             $result = curl_error($curl_connection);
-            echo "<pre>";
-            print_r($result);
-            echo "</pre>";
         }
 
         // close the connection
@@ -69,7 +67,6 @@ class APIKGestion {
     public function insertUser($data)
     {
         $url = $this::BASE_URL.'client/api/client';
-
         return $this->request($this::POST, $url, $data);
     }
 
