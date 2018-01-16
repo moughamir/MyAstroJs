@@ -47,7 +47,7 @@ if(isset($_SESSION['user_id'])){
                     <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
                         <div class="DRI-Form FormContainer-Fields">
                             <p class="DRI-Sent">
-                                APPEL EN COURS ....<br/>
+                                Appel en cours ....<br/>
                                 Merci, votre demande de rappel a bien été prise en compte.<br/>
                                 <strong>Un voyant vous recontactera dans quelques instants.</strong>
                             </p>
