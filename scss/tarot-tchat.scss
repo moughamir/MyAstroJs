@@ -201,7 +201,7 @@ ul {
 }
 
 // components
-a.btn {
+a.btn:not(.without) {
   margin-left:20px!important;
 }
 
