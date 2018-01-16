@@ -1,7 +1,11 @@
 <?php
+session_start();
 include( 'include/process-dri.php' );
 $targetContent = $_GET['p'];
 $assets        = 'images_landing/grande-voyance/18';
+$_SESSION['sourceDri'] = "facebook_adds";
+$_SESSION['urlDri'] = "gv18";
+$_SESSION['websiteDri'] = "myastro.fr";
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,8 +48,6 @@ $assets        = 'images_landing/grande-voyance/18';
 								<?php } ?>
                                 <div class="FormContainer-Fields">
                                     <div class="FormField">
-                                        <input type="hidden" name="source" value="gv18" />
-                                        <input type="hidden" name="site" value="myastro.fr" />
                                         <input type="text" class="FormField-Input" name="prenom" placeholder="Mon prénom" value="<?= $prenom ?>"/>
                                     </div>
                                     <div class="FormField">
