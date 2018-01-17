@@ -692,6 +692,9 @@ footer {
   font-family: $openSans;
   &-c {
     max-width: 100%;
+    @include respond-to("mobile") {
+      padding: 0;
+    }
   }
   .form-header {
     max-width: 45rem;
@@ -712,6 +715,13 @@ footer {
       position: absolute;
       left: -60px;
       top: 0;
+      @include respond-to("mobile") {
+        display: none;
+      }
+    }
+    @include respond-to("mobile") {
+      width: 100%;
+      font-size: 1.7rem;
     }
   }
   .icon {
@@ -762,10 +772,16 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
+    @include respond-to("mobile") {
+      flex-direction: column;
+    }
   }
   .appForm {
     background: $primary;
     width: 50%;
+    @include respond-to("mobile") {
+      width: 100%;
+    }
   }
   .fs-title {
     text-align: center;
@@ -839,6 +855,16 @@ footer {
   }
   .ace {
     margin-left: -13px;
+  }
+  #planning {
+    @include respond-to("mobile") {
+      display: none;
+    }
+  }
+  #form_cb {
+    @include respond-to("mobile") {
+      display: none;
+    }
   }
   #planning_selection input:checked + .lbl {
     padding: 5px;
@@ -918,6 +944,7 @@ footer {
   }
   #form_periode {
     padding: 1rem;
+    margin-left: 85px;
   }
 }
 
