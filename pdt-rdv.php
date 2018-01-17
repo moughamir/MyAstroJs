@@ -177,9 +177,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
       <?php include('include/footer_copyright.php');?> </p>
   </footer>
   <!-- #### SCRIPTS #### -->
-  <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/i18n/datepicker-fr.js"></script>
+
+  <script src="//cdn.jsdelivr.net/g/lodash@4.17.4"></script>
   <script type="text/javascript" src="js/pouvoir-des-trois.js"></script>
   <script src="js/formValidator.js"></script>
+  <!--script src="js/rdv-love-myastro.js"></script-->
   <!-- #### REMARKETINGS #### -->
   <?php include('include/remarketing/adwords.php');
         include('include/remarketing/analytics.php');
