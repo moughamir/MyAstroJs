@@ -144,6 +144,7 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
                     <input type="hidden" name="cguv" value="1"/>
                     <input type="hidden" name="pays" value="FR"/>
                     <input type="hidden" name="question_code" value=""/>
+                    <input type="hidden" name="convertir" value="1" />
 
 
                     <div class="FormField radio">
