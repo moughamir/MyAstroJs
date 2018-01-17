@@ -5,8 +5,7 @@
 /* large screens */
 /* ------------- */
 
-@include media('>=large-screen') {
-
+@include media(">=large-screen") {
   /* layouts for large screens */
   .#{$kna-namespace}large-hidden {
     display: none !important;
@@ -77,8 +76,7 @@
 /* medium screens */
 /* -------------- */
 
-@include media('>=medium-screen', '<large-screen') {
-
+@include media(">=medium-screen", "<large-screen") {
   /* layouts for medium screens */
   .#{$kna-namespace}medium-hidden {
     display: none !important;
@@ -151,8 +149,7 @@
 /* small screens */
 /* ------------- */
 
-@include media('>=small-screen', '<medium-screen') {
-
+@include media(">=small-screen", "<medium-screen") {
   /* layouts for small screens */
   .#{$kna-namespace}small-hidden {
     display: none !important;
@@ -225,24 +222,22 @@
   .#{$kna-namespace}small-pa0 {
     padding: 0 !important;
   }
-
 }
 
 /* tiny screens */
 /* ------------ */
 
-@include media('<small-screen') {
-
+@include media("<small-screen") {
   /* quick small resolution reset */
   .#{$kna-namespace}mod,
   .#{$kna-namespace}col,
   fieldset {
-    display: block !important;
-    float: none !important;
-    clear: none !important;
-    width: auto !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    display: block;
+    float: none;
+    clear: none;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
     border: 0;
   }
 
@@ -338,5 +333,4 @@
   .#{$kna-namespace}tiny-pa0 {
     padding: 0 !important;
   }
-
 }

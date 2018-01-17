@@ -402,7 +402,12 @@ $(document).ready(function() {
       }
     );
   });
-
+  $("#planning_selection > .row")
+    .first()
+    .addClass("first-row");
+  $("#planning_selection > .row")
+    .eq("1")
+    .addClass("sec-row");
   $("#form_jour").datepicker($.datepicker.regional["fr"]);
   $("#form_jour").on("click", function() {
     $(".ui-state-default").hover(

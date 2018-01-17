@@ -789,16 +789,41 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @include respond-to("mobile") {
+      font-size: 1.7rem;
+    }
     &::before,
     &::after {
       content: "";
       width: 40px;
       display: inline-block;
       border-bottom: 2px solid;
+      @include respond-to("mobile") {
+        width: 28px;
+        border-bottom: 1px solid;
+      }
     }
   }
-
+  .first-row {
+    @include respond-to("mobile") {
+      display: flex !important;
+      width: 100% !important;
+      justify-content: center;
+      flex-direction: column;
+      padding: 5px;
+      align-items: center;
+    }
+  }
+  .sec-row {
+    @include respond-to("mobile") {
+      display: flex !important;
+      justify-content: space-evenly;
+    }
+  }
   .table {
+    @include respond-to("mobile") {
+      width: initial;
+    }
     td {
       border: 1px #306969 solid;
       background: #ffffff;
@@ -809,6 +834,9 @@ footer {
       font-size: 1.6rem;
       > label {
         display: inline-block;
+      }
+      @include respond-to("mobile") {
+        margin: 0;
       }
     }
   }
@@ -907,6 +935,10 @@ footer {
     background: url($assets +"refresh.png") transparent top center no-repeat;
     right: 0;
     position: absolute;
+    @include respond-to("mobile") {
+      position: relative;
+      margin-top: 14px;
+    }
   }
   .space {
     margin: 15px 0;
@@ -945,6 +977,13 @@ footer {
   #form_periode {
     padding: 1rem;
     margin-left: 85px;
+    @include respond-to("mobile") {
+      margin-left: 0;
+      width: 260px;
+      margin-top: 5px;
+      text-align: center;
+      font-size: 1.6rem;
+    }
   }
 }
 
