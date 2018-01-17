@@ -769,6 +769,17 @@ footer {
   }
   .fs-title {
     text-align: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &::before,
+    &::after {
+      content: "";
+      width: 40px;
+      display: inline-block;
+      border-bottom: 2px solid;
+    }
   }
 
   .table {
@@ -874,6 +885,40 @@ footer {
   .space {
     margin: 15px 0;
   }
+  .FormField-TableInputContainer-Cell {
+    display: table-cell;
+    padding-right: 1rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .FormField-Input {
+    border-radius: 1px;
+    box-shadow: none;
+    border: 1px solid #411575;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-group-addon {
+    height: 40px;
+    box-sizing: content-box;
+  }
+  .icon-calendar {
+    width: 40px;
+    height: 40px;
+    background: #e8e8e8 url($assets + "ico-cal.png") no-repeat center;
+    display: inline-block;
+    box-sizing: content-box;
+  }
+  #form_jour {
+    padding: 7px;
+    font-family: "open sans";
+    font-size: 1.6rem;
+  }
+  #form_periode {
+    padding: 1rem;
+  }
 }
 
 // calendar UI
@@ -937,5 +982,10 @@ ui-datepicker-calendar {
 }
 
 #crypto {
-  width: 80px;
+  width: 40%;
+}
+.img-crypto {
+  position: relative;
+  top: -40px;
+  right: -40%;
 }

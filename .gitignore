@@ -1,19 +1,10 @@
-blog/*
-cache/
-cache/*
-logs-perso/*
-nbproject/
-nbproject/*
-yyadmin/cdj/*
-yyadmin/cdjj/*
-yyadmin/media/*
-yyadmin/.htaccess
-/yyadmin/.htaccess
-.htaccess
-.brackets.json
-.idea
 *.map
-desktop.ini
-Thumbs.db
-.htpasswd
-.php_cs.cache
+.htaccess
+.sass-cache/
+Gruntfile.js
+node_modules/abbrev node_modules/amdefine node_modules/ansi-regex node_modules/ansi-styles node_modules/argparse node_modules/array-find-index node_modules/async node_modules/autoprefixer-core node_modules/balanced-match node_modules/body-parser node_modules/brace-expansion node_modules/browserslist node_modules/builtin-modules node_modules/bytes node_modules/camelcase node_modules/camelcase-keys node_modules/caniuse-db node_modules/chalk node_modules/coffee-script node_modules/colors node_modules/concat-map node_modules/content-type node_modules/cross-spawn node_modules/currently-unhandled node_modules/dargs node_modules/dateformat node_modules/debug node_modules/decamelize node_modules/depd node_modules/diff node_modules/ee-first node_modules/error-ex node_modules/es6-promise node_modules/escape-string-regexp node_modules/esprima node_modules/eventemitter2 node_modules/exit node_modules/faye-websocket node_modules/find-up node_modules/findup-sync node_modules/fs.realpath node_modules/gaze node_modules/getobject node_modules/get-stdin node_modules/glob node_modules/globule node_modules/graceful-fs node_modules/grunt node_modules/grunt-autoprefixer node_modules/grunt-contrib-sass node_modules/grunt-contrib-watch node_modules/grunt-known-options node_modules/grunt-legacy-log node_modules/grunt-legacy-log-utils node_modules/grunt-legacy-util node_modules/has-ansi node_modules/hooker node_modules/hosted-git-info node_modules/http-errors node_modules/http-parser-js node_modules/iconv-lite node_modules/indent-string node_modules/inflight node_modules/inherits node_modules/is-arrayish node_modules/is-builtin-module node_modules/isexe node_modules/is-finite node_modules/is-utf8 node_modules/js-base64 node_modules/js-yaml node_modules/livereload-js node_modules/load-json-file node_modules/lodash node_modules/loud-rejection node_modules/lru-cache node_modules/map-obj node_modules/media-typer node_modules/meow node_modules/mime-db node_modules/mime-types node_modules/minimatch node_modules/minimist node_modules/ms node_modules/nopt node_modules/normalize-package-data node_modules/num2fraction node_modules/number-is-nan node_modules/object-assign node_modules/once node_modules/on-finished node_modules/parse-json node_modules/parseurl node_modules/path-exists node_modules/path-is-absolute node_modules/path-type node_modules/pify node_modules/pinkie node_modules/pinkie-promise node_modules/postcss node_modules/qs node_modules/raw-body node_modules/read-pkg node_modules/read-pkg-up node_modules/redent node_modules/repeating node_modules/resolve node_modules/rimraf node_modules/semver node_modules/signal-exit node_modules/source-map node_modules/spdx-correct node_modules/spdx-expression-parse node_modules/spdx-license-ids node_modules/sprintf-js node_modules/statuses node_modules/strip-ansi node_modules/strip-bom node_modules/strip-indent node_modules/supports-color node_modules/tiny-lr node_modules/trim-newlines node_modules/type-is node_modules/underscore.string node_modules/unpipe node_modules/validate-npm-package-license node_modules/websocket-driver node_modules/websocket-extensions node_modules/which node_modules/wrappy
+package-lock.json
+node_modules/
+images/bannieres
+.vscode/
+./css/automne-16.css.map ./css/claude-simple.css.map ./css/cycle-lunaire.css.map ./css/dri-noel-2016.css.map ./css/ete-16.css.map ./css/jour-du-soleil-16.css.map ./css/laura-simple.css.map ./css/louise-grandol.css.map ./css/lucas-simple.css.map ./css/marie-dri.css.map ./css/merci-voyance-tchat.css.map ./css/noel-2016.css.map ./css/nouvelle-lune-16.css.map ./css/numerologie-amour.css.map ./css/numerologie-amour-2017.css.map ./css/offre-exceptionnelle-dri.css.map ./css/oracle-amour-2-v2.css.map ./css/oracles-dri.css.map ./css/pleine-lune-16.css.map ./css/pouvoir-des-trois.css.map ./css/prevision-2017.css.map ./css/rentree16.css.map ./css/saint-patrick.css.map ./css/saint-valentin-2017.css.map ./css/tarot-amour.css.map ./css/tarot-direct.css.map ./css/tarot-direct-amour.css.map ./css/tarot-direct-noel.css.map ./css/tarot-direct-nouvel-an.css.map ./css/tarot-gratuit-16.css.map ./css/tarot-sable.css.map ./css/vendredi13-05-16.css.map ./css/voyance-amour.css.map
