@@ -4,10 +4,12 @@ require_once(realpath('rdv_web/planning.php'));
 $regurl = "pdt-rdv";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "";
+$source = "adwords";
 $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+
 ?>
   <!DOCTYPE html>
   <html lang="fr">
@@ -90,7 +92,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                       <fieldset>
                         <h2 class="fs-title"> Informations personnelles!</h2>
                         <input type="hidden" name="site" value="MyAstro" />
-                        <input type="hidden" name="source" value="<?= $pageName;?>" />
+                        <input type="hidden" name="source" value="<?= $regurl;?>" />
                         <input type="hidden" name="method" value="client_web" />
                         <input type="hidden" name="support" value="rdv-web" />
                         <input type="hidden" name="affiliation" value="<?= $source;?>" />
