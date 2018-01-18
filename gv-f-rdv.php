@@ -16,7 +16,7 @@ $assets   = 'images_landing/grande-voyance/18';
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<title>Consultaion en ligne - Grand Voyance 2018</title>
+		<title>Consultation en ligne - Grand Voyance 2018</title>
 		<link rel="icon" type="image/png" href="<?= $assets; ?>/favicon.png"/>
 		<!--		<link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">-->
 		<!--------------------assets  for displaying planning ----------------------------------------->
