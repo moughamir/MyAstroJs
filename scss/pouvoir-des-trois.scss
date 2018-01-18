@@ -853,18 +853,19 @@ footer {
     z-index: 1;
     line-height: 28px;
     padding: 0 0 0 42px;
+    color: #fff;
     &::before {
       content: "";
       display: inline-flex;
-      background: #e6e6e6;
+      background: #411575;
       width: 60px;
       height: 79px;
       position: absolute;
       z-index: -1;
       left: 14px;
-      transform: rotate(43deg);
+      transform: rotate(36deg);
       top: -20px;
-      border: 1px #306969 solid;
+      border: 1px #4ccdbc solid;
     }
   }
   .action-button {
@@ -924,8 +925,15 @@ footer {
       color: #fff;
     }
   }
-
-  .default,
+  .default {
+    .indicateur {
+      color: #454545;
+      &::before {
+        background: #e6e6e6;
+        border: 1px #306969 solid;
+      }
+    }
+  }
   .purple {
     .indicateur {
       color: #fff;
