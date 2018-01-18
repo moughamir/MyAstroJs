@@ -1,9 +1,10 @@
 <?php
+session_start();
 include( 'include/process-dri.php' );
 $targetContent = $_GET['p'];
 $assets        = 'images_landing/grande-voyance/18';
-$_SESSION['sourceDri'] = "affil_base";
-$_SESSION['urlDri'] = "gv18-dri";
+$_SESSION['sourceDri'] = "reflexcash";
+$_SESSION['urlDri'] = "gv18-rc-dri";
 $_SESSION['websiteDri'] = "myastro.fr";
 ?>
 <!DOCTYPE html>
