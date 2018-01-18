@@ -1,5 +1,5 @@
 <?php
-include( 'include/gv18-tab.php' );
+include( 'include/gv-f-tab.php' );
 $signe = $_GET['p'];
 $assets = 'images_landing/grande-voyance/18';
 ?>
@@ -49,7 +49,7 @@ $assets = 'images_landing/grande-voyance/18';
                             <p class="article-paragraph">{{intro}}</p>
                         </article>
                         <div class="article-more-container">
-                            <a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">
+                            <a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">
                                 <div class="article-more">En savoir plus</div>
                             </a>
                         </div>
@@ -75,7 +75,7 @@ $assets = 'images_landing/grande-voyance/18';
                         <article class="page-article love-s">
                             <h3 class="article-headline">Célib</h3>
                             <p class="article-paragraph" id="single">{{singleParagraph}}</p>
-                            <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">En savoir plus</a></div>
+                            <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">En savoir plus</a></div>
                         </article>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ $assets = 'images_landing/grande-voyance/18';
                             <article class="page-article">
                                 <h3 class="article-headline">Amitié</h3>
                                 <p class="article-paragraph" id="friendship">{{socialFri}}</p>
-                                <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">En savoir plus</a></div>
+                                <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">En savoir plus</a></div>
                             </article>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ $assets = 'images_landing/grande-voyance/18';
                         <article class="page-article">
                             <h3 class="article-headline">Travail</h3>
                             <p class="article-paragraph" id="work">{{workParagraph}}</p>
-                            <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">Je veux en savoir plus</a></div>
+                            <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">Je veux en savoir plus</a></div>
                         </article>
                     </div>
                 </div>
@@ -229,7 +229,7 @@ $assets = 'images_landing/grande-voyance/18';
                         <article class="page-article" id="sifre">
                             <aside class="article-aside"><span class="number">{{luckyNumber}}</span></aside>
                             <p class="article-paragraph">luckyNumberText</p>
-                            <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">Pour en savoir plus</a></div>
+                            <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">Pour en savoir plus</a></div>
                         </article>
                     </div>
                 </div>
@@ -278,14 +278,14 @@ $assets = 'images_landing/grande-voyance/18';
                     <header class="article-header headline headline-adv">Nos conseils</header>
                     <article class="section-addon-content" id="conseils">
                         <p>{{advices}}</p>
-                        <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">Conseils personnalisés</a></div>
+                        <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">Conseils personnalisés</a></div>
                     </article>
                 </div>
                 <div class="article-container addon">
                     <header class="article-header headline headline-obj">Vos objectifs</header>
                     <article class="section-addon-content" id="objectifs">
                         <p>{{objectives}}</p>
-                        <div class="article-more"><a href="/<?=$redirectUrl?>?p=<?=$signe?>" class="dri-cta">Comment atteindre mes objesctifs ?</a></div>
+                        <div class="article-more"><a href="/<?=$redirectUrl?>?<?=join('&', $parms)?>" class="dri-cta">Comment atteindre mes objesctifs ?</a></div>
                     </article>
                 </div>
             </main>

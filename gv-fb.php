@@ -1,5 +1,5 @@
 <?php
-include( 'include/gv18-tab.php' );
+include( 'include/gv-f-tab.php' );
 $signe = $_GET['p'];
 $assets = 'images_landing/grande-voyance/18';
 ?>
@@ -61,116 +61,116 @@ $assets = 'images_landing/grande-voyance/18';
 					<circle class="circumference" r="226.8" style="fill: none;"></circle>
 				</g>
 				<g class="arcs" transform="translate(256,256)">
-					<a xlink:href="/gv-f?p=bel">
+					<a xlink:href="/gv-f?p=bel<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Bélier" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M1.3847052877801002e-14,-226.13953488372093A226.13953488372093,226.13953488372093 0 0,1 113.06976744186044,-195.84258200929958L55.06976744186045,-95.38363517030469A110.13953488372093,110.13953488372093 0 0,0 6.744101442746354e-15,-110.13953488372093Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=tau">
+					<a xlink:href="/gv-f?p=tau<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Taureau" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M113.06976744186044,-195.84258200929958A226.13953488372093,226.13953488372093 0 0,1 195.84258200929955,-113.06976744186046L95.38363517030467,-55.06976744186046A110.13953488372093,110.13953488372093 0 0,0 55.06976744186045,-95.38363517030469Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=gem">
+					<a xlink:href="/gv-f?p=gem<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Gémeaux" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M195.84258200929955,-113.06976744186046A226.13953488372093,226.13953488372093 0 0,1 226.13953488372093,0L110.13953488372093,0A110.13953488372093,110.13953488372093 0 0,0 95.38363517030467,-55.06976744186046Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=can">
+					<a xlink:href="/gv-f?p=can<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Cancer" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M226.13953488372093,0A226.13953488372093,226.13953488372093 0 0,1 195.84258200929958,113.06976744186042L95.38363517030469,55.06976744186044A110.13953488372093,110.13953488372093 0 0,0 110.13953488372093,0Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=lio">
+					<a xlink:href="/gv-f?p=lio<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Lion" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M195.84258200929958,113.06976744186042A226.13953488372093,226.13953488372093 0 0,1 113.06976744186053,195.84258200929952L55.0697674418605,95.38363517030466A110.13953488372093,110.13953488372093 0 0,0 95.38363517030469,55.06976744186044Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=vie">
+					<a xlink:href="/gv-f?p=vie<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Vierge" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M113.06976744186053,195.84258200929952A226.13953488372093,226.13953488372093 0 0,1 1.142731802401733e-13,226.13953488372093L5.565588046251139e-14,110.13953488372093A110.13953488372093,110.13953488372093 0 0,0 55.0697674418605,95.38363517030466Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=bal">
+					<a xlink:href="/gv-f?p=bal<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Balance" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M1.142731802401733e-13,226.13953488372093A226.13953488372093,226.13953488372093 0 0,1 -113.06976744186032,195.84258200929966L-55.0697674418604,95.38363517030473A110.13953488372093,110.13953488372093 0 0,0 5.565588046251139e-14,110.13953488372093Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=sco">
+					<a xlink:href="/gv-f?p=sco<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Scorpion" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M-113.06976744186032,195.84258200929966A226.13953488372093,226.13953488372093 0 0,1 -195.84258200929952,113.06976744186053L-95.38363517030466,55.0697674418605A110.13953488372093,110.13953488372093 0 0,0 -55.0697674418604,95.38363517030473Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=sag">
+					<a xlink:href="/gv-f?p=sag<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Sagittaire" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M-195.84258200929952,113.06976744186053A226.13953488372093,226.13953488372093 0 0,1 -226.13953488372093,2.7694105755602005e-14L-110.13953488372093,1.3488202885492709e-14A110.13953488372093,110.13953488372093 0 0,0 -95.38363517030466,55.0697674418605Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=cap">
+					<a xlink:href="/gv-f?p=cap<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Capricorne" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M-226.13953488372093,2.7694105755602005e-14A226.13953488372093,226.13953488372093 0 0,1 -195.84258200929955,-113.06976744186049L-95.38363517030467,-55.06976744186048A110.13953488372093,110.13953488372093 0 0,0 -110.13953488372093,1.3488202885492709e-14Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=ver">
+					<a xlink:href="/gv-f?p=ver<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Verseau" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M-195.84258200929955,-113.06976744186049A226.13953488372093,226.13953488372093 0 0,1 -113.06976744186038,-195.8425820092996L-55.06976744186042,-95.3836351703047A110.13953488372093,110.13953488372093 0 0,0 -95.38363517030467,-55.06976744186048Z"></path>
 					</a>
-					<a xlink:href="/gv-f?p=poi">
+					<a xlink:href="/gv-f?p=poi<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<path class="arc Poisson" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" d="M-113.06976744186038,-195.8425820092996A226.13953488372093,226.13953488372093 0 0,1 1.5931109609134157e-13,-226.13953488372093L7.7591253711291e-14,-110.13953488372093A110.13953488372093,110.13953488372093 0 0,0 -55.06976744186042,-95.3836351703047Z"></path>
 					</a>
 				</g>
 				<g class="labels" transform="translate(256,256)">
-					<a xlink:href="/gv-f?p=bel">
+					<a xlink:href="/gv-f?p=bel<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Bélier" transform="translate(43.52,-162.41)" text-anchor="middle">Bélier</text>
 					</a>
-					<a xlink:href="/gv-f?p=tau">
+					<a xlink:href="/gv-f?p=tau<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Taureau" transform="translate(118.89,-118.89)" text-anchor="middle">Taureau</text>
 					</a>
-					<a xlink:href="/gv-f?p=gem">
+					<a xlink:href="/gv-f?p=gem<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Gémeaux" transform="translate(162.41,-43.52)" text-anchor="middle">Gémeaux</text>
 					</a>
-					<a xlink:href="/gv-f?p=can">
+					<a xlink:href="/gv-f?p=can<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Cancer" transform="translate(162.41,43.52)" text-anchor="middle">Cancer</text>
 					</a>
-					<a xlink:href="/gv-f?p=lio">
+					<a xlink:href="/gv-f?p=lio<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Lion" transform="translate(118.89,118.89)" text-anchor="middle">Lion</text>
 					</a>
-					<a xlink:href="/gv-f?p=vie">
+					<a xlink:href="/gv-f?p=vie<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Vierge" transform="translate(43.52,162.41)" text-anchor="middle">Vierge</text>
 					</a>
-					<a xlink:href="/gv-f?p=bal">
+					<a xlink:href="/gv-f?p=bal<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Balance" transform="translate(-43.52,162.41)" text-anchor="middle">Balance</text>
 					</a>
-					<a xlink:href="/gv-f?p=sco">
+					<a xlink:href="/gv-f?p=sco<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Scorpion" transform="translate(-118.89,118.89)" text-anchor="middle">Scorpion</text>
 					</a>
-					<a xlink:href="/gv-f?p=sag">
+					<a xlink:href="/gv-f?p=sag<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Sagittaire" transform="translate(-162.41,43.52)" text-anchor="middle">Sagittaire</text>
 					</a>
-					<a xlink:href="/gv-f?p=cap">
+					<a xlink:href="/gv-f?p=cap<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Capricorne" transform="translate(-162.41,-43.52)" text-anchor="middle">Capricorne</text>
 					</a>
-					<a xlink:href="/gv-f?p=ver">
+					<a xlink:href="/gv-f?p=ver<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Verseau" transform="translate(-118.89,-118.89)" text-anchor="middle">Verseau</text>
 					</a>
-					<a xlink:href="/gv-f?p=poi">
+					<a xlink:href="/gv-f?p=poi<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<text class="label Poisson" transform="translate(-43.52,-162.41)" text-anchor="middle">Poisson</text>
 					</a>
 				</g>
 				<g class="containers" transform="translate(256,256)">
-					<a xlink:href="/gv-f?p=bel">
+					<a xlink:href="/gv-f?p=bel<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Bélier" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="219.07" cy="58.7" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=tau">
+					<a xlink:href="/gv-f?p=tau<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Taureau" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="160.37" cy="160.37" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=gem">
+					<a xlink:href="/gv-f?p=gem<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Gémeaux" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="58.7" cy="219.07" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=can">
+					<a xlink:href="/gv-f?p=can<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Cancer" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-58.7" cy="219.07" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=lio">
+					<a xlink:href="/gv-f?p=lio<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Lion" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-160.37" cy="160.37" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=vie">
+					<a xlink:href="/gv-f?p=vie<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Vierge" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-219.07" cy="58.7" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=bal">
+					<a xlink:href="/gv-f?p=bal<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Balance" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-219.07" cy="-58.7" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=sco">
+					<a xlink:href="/gv-f?p=sco<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Scorpion" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-160.37" cy="-160.37" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=sag">
+					<a xlink:href="/gv-f?p=sag<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Sagittaire" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="-58.7" cy="-219.07" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=cap">
+					<a xlink:href="/gv-f?p=cap<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Capricorne" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="58.7" cy="-219.07" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=ver">
+					<a xlink:href="/gv-f?p=ver<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Verseau" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="160.37" cy="-160.37" transform="rotate(-90, 0, 0)"></circle>
 					</a>
-					<a xlink:href="/gv-f?p=poi">
+					<a xlink:href="/gv-f?p=poi<?=count($parms) ? "&".join('&', $parms) : ""?>">
 						<circle class="container Poisson" fill="#8f6083" stroke="rgba(255, 255, 255, 0.2)" r="23.81" cx="219.07" cy="-58.7" transform="rotate(-90, 0, 0)"></circle>
 					</a>
 				</g>
@@ -216,18 +216,18 @@ $assets = 'images_landing/grande-voyance/18';
 		</div>
 		<nav>
 			<ul>
-				<li><a href="/gv-f?p=bel" class="signe-bel">Bélier</a></li>
-				<li><a href="/gv-f?p=tau" class="signe-tau">Taureau</a></li>
-				<li><a href="/gv-f?p=gem" class="signe-gem">Gémeaux</a></li>
-				<li><a href="/gv-f?p=can" class="signe-can">Cancer</a></li>
-				<li><a href="/gv-f?p=lio" class="signe-lio">Lion</a></li>
-				<li><a href="/gv-f?p=vie" class="signe-vie">Vierge</a></li>
-				<li><a href="/gv-f?p=bal" class="signe-bal">Balance</a></li>
-				<li><a href="/gv-f?p=sco" class="signe-sco">Scorpion</a></li>
-				<li><a href="/gv-f?p=sag" class="signe-sag">Sagittaire</a></li>
-				<li><a href="/gv-f?p=cap" class="signe-cap">Capricorne</a></li>
-				<li><a href="/gv-f?p=ver" class="signe-ver">Verseau</a></li>
-				<li><a href="/gv-f?p=poi" class="signe-poi">Poissons</a></li>
+				<li><a href="/gv-f?p=bel<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-bel">Bélier</a></li>
+				<li><a href="/gv-f?p=tau<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-tau">Taureau</a></li>
+				<li><a href="/gv-f?p=gem<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-gem">Gémeaux</a></li>
+				<li><a href="/gv-f?p=can<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-can">Cancer</a></li>
+				<li><a href="/gv-f?p=lio<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-lio">Lion</a></li>
+				<li><a href="/gv-f?p=vie<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-vie">Vierge</a></li>
+				<li><a href="/gv-f?p=bal<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-bal">Balance</a></li>
+				<li><a href="/gv-f?p=sco<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-sco">Scorpion</a></li>
+				<li><a href="/gv-f?p=sag<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-sag">Sagittaire</a></li>
+				<li><a href="/gv-f?p=cap<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-cap">Capricorne</a></li>
+				<li><a href="/gv-f?p=ver<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-ver">Verseau</a></li>
+				<li><a href="/gv-f?p=poi<?=count($parms) ? "&".join('&', $parms) : ""?>" class="signe-poi">Poissons</a></li>
 			</ul>
 		</nav>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>

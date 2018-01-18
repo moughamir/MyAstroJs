@@ -11,9 +11,9 @@ if(isset($_GET['t'])) {
 }
 
 $correspondance = [
-    'tchat' => 'gv18-tchat',
-    'rdv' => 'gv18-rdv',
-    'dri' => 'gv18-dri',
+    'tchat' => 'gv-f-tchat',
+    'rdv' => 'gv-f-rdv',
+    'dri' => 'gv-f-dri',
 ];
 $redirectUrl = !empty($_SESSION["gv"]) ? $correspondance[$_SESSION["gv"]] : '';
 if(empty($redirectUrl)) {
