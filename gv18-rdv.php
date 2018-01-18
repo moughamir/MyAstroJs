@@ -1,11 +1,12 @@
 <?php
 require_once(realpath('include/tools.php'));
 require_once(realpath('rdv_web/planning.php'));
-$pageName = "gv18-rdv";
+$pageName = $form = "gv18-rdv";
+include('include/init-affilbase.php');
 $support = "voyance";
 $site = "myastro.fr";
-$source = "gv18";
-$gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
+
+
 $assets = 'images_landing/grande-voyance/18';
 ?>
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ $assets = 'images_landing/grande-voyance/18';
     <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
 
     <!--------------------assets  for displaying planning ----------------------------------------->
-  
+
     <link href="rdv_web/css/datepicker_5.css" type="text/css" rel="stylesheet"/>
     <link href="rdv_web/css/bootstrap-datetimepicker.min_13.css" type="text/css" rel="stylesheet"/>
     <link href="rdv_web/css/additionnals_1.css" type="text/css" rel="stylesheet"/>
@@ -53,11 +54,12 @@ $assets = 'images_landing/grande-voyance/18';
             <form class="ajax">
               <fieldset style="margin-top: 40px;">
                 <h2 class="fs-title">Informations personnelles</h2>
-                <input type="hidden" name="site" value="MyAstro" />
-                <input type="hidden" name="source" value="<?= $source;?>" />
+                <input type="hidden" name="source" value="<?= $pageName;?>" />
+                <input type="hidden" name="site" value="<?= $site;?>" />
+                <input type="hidden" name="affiliation" value="<?= $source;?>" />
+
                 <input type="hidden" name="method" value="client_web" />
                 <input type="hidden" name="support" value="rdv-web" />
-                <input type="hidden" name="affiliation" value="Adwords" />
                 <input type="hidden" name="dri" value="consultation_web" />
                 <input type="hidden" name="redirect_method" value="reload_form" />
                 <input type="hidden" name="cguv" value="1" />
@@ -127,7 +129,7 @@ $assets = 'images_landing/grande-voyance/18';
                     <label for="tel" class="FormField-Label">Téléphone</label>
                     <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" required/>
                   </div>
-                </div> 
+                </div>
                 <button name="next" class="submit action-button" value="Next" type="submit">Suivant</button>
                 <button name="next" class="next action-button" value="Next" type="button" style="display: none">Suivant</button>
               </fieldset>
@@ -202,7 +204,7 @@ $assets = 'images_landing/grande-voyance/18';
                     </div>
                   </div>
                 </div>
-                <input type="button" name="previous" class="previousSecond action-button" 
+                <input type="button" name="previous" class="previousSecond action-button"
                   value="Précédent"/>
                 <input type="submit" name="submit" id="valider" class="submit action-button"
                   value="Valider"/>

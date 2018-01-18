@@ -1,14 +1,15 @@
 <?php
 session_start();
-$pageName = $form = "gv18-tchat";
-include('include/init-affilbase.php');
+$pageName = "gv-f-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
+$source = "facebook_adds";
 
 $dri = "myastro/offre-gratuite";
 $targetContent = $_GET['p'];
 $dri2 = "gv18-dri?p=".$targetContent;
+
 $assets        = 'images_landing/grande-voyance/18';
 ?>
 <!DOCTYPE html>
