@@ -696,6 +696,13 @@ footer {
       padding: 0;
     }
   }
+
+  select.FormField-Input {
+    font-size: 1.5rem;
+    padding-left: 0px;
+    padding-right: 0px;
+   }
+
   .form-header {
     max-width: 45rem;
     padding: 5px;
@@ -731,6 +738,7 @@ footer {
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
       font-size: 2.1rem;
+      margin-top: 30px;
       & > li {
         padding: 9px 0 9px 32px;
         position: relative;
