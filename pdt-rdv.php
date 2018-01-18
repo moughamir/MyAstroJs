@@ -41,7 +41,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
     <main class="ContentBand">
       <div class="preload">
         <span class="tri hidden"></span>
-      </div>>
+      </div>
       <div class="PageWrapper">
         <section class="section post-test hidden">
           <p>
