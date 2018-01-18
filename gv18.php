@@ -1,4 +1,5 @@
 <?php
+$prefix = 'gv18';
 include( 'include/gv18-tab.php' );
 $signe = $_GET['p'];
 $assets = 'images_landing/grande-voyance/18';

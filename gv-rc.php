@@ -1,5 +1,5 @@
 <?php
-$prefix = 'gv-f';
+$prefix = 'gv-rc';
 include( 'include/gv18-tab.php' );
 $signe = $_GET['p'];
 $assets = 'images_landing/grande-voyance/18';

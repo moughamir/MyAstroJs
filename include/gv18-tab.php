@@ -1,5 +1,6 @@
 <?php
 session_start();
+$prefix = (!empty($prefix) ? $prefix : 'gv18');
 $parms = explode('&', $_SERVER['QUERY_STRING']);
 if(isset($_GET['t'])) {
     $curUrl = strtok($_SERVER["REQUEST_URI"],'?');
@@ -11,9 +12,9 @@ if(isset($_GET['t'])) {
 }
 
 $correspondance = [
-    'tchat' => 'gv18-tchat',
-    'rdv' => 'gv18-rdv',
-    'dri' => 'gv18-dri',
+    'tchat' => $prefix.'-tchat',
+    'rdv' => $prefix.'-rdv',
+    'dri' => $prefix.'-dri',
 ];
 $redirectUrl = !empty($_SESSION["gv"]) ? $correspondance[$_SESSION["gv"]] : '';
 if(empty($redirectUrl)) {
