@@ -105,8 +105,8 @@ function findObj(k, v) {
 
 function writeContent(target) {
   contentObj = zodiac[findObj("_id", target)];
-  let months = contentObj.reading.months;
-  let dates = contentObj.reading.dates;
+  var months = contentObj.reading.months;
+  var dates = contentObj.reading.dates;
   $('#title').html(contentObj.name); // write the name of target sign.
   $('#intro').children('.article-paragraph').html(contentObj.reading.intro); // write proper introduction.
   $('#intro').children('.article-aside').toggleClass('astro-' + target); // change aside background.
@@ -121,7 +121,7 @@ function writeContent(target) {
   // Mois Par Mois
   for (var m = 0, len = months.length; m < len; m++) {
     (function () {
-      let targetM = '#' + (m + 1);
+      var targetM = '#' + (m + 1);
       $(targetM).children('h3').html(months[m].name);
       $(targetM).children('p').html(months[m].text);
     })();

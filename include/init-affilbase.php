@@ -4,7 +4,7 @@
  *
  * Created on : 30 mars 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
-include('tools.php');
+include_once('tools.php');
 require_once('inc/config.php');
 require_once('inc/bdd.php');
 
