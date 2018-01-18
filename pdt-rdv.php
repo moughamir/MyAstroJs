@@ -26,7 +26,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
   <![endif]-->
   </head>
 
-  <body class="main rdv">
+  <body class="main">
     <div class="overlay" id="form-overlay"></div>
     <header class="SiteHeader">
       <div class="PageWrapper">
@@ -37,8 +37,32 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
       <h1>Amour, Travail, Argent</h1>
     </div>
     <main class="ContentBand">
+      <div class="preload">
+        <span class="tri hidden"></span>
+      </div>>
       <div class="PageWrapper">
-        <section class="section">
+        <section class="section post-test hidden">
+          <p>
+            Prenez en main votre Avenir !
+            <br> Grâce au Pouvoir des trois et ses supports divinatoires ancestraux : le pendule, la boule de cristal et le tarot
+            nous allons pouvoir répondre à toutes vos interrogations.
+            <br> Réalisez ce test simple et rapide qui nous permettra de mieux vous connaître.
+            <br> Inscrivez votre prénom ci-dessous pour commencer :
+          </p>
+          <div class="form">
+            <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" value="<?= $prenom;?>" required />
+            <button class="btn start">Commencer</button>
+          </div>
+        </section>
+        <section class="section content hidden">
+          <h2 class="question">QUESTION</h2>
+          <ul id="choices">
+            <li class="choice">PLACEHOLDER</li>
+            <li class="choice">PLACEHOLDER</li>
+            <li class="choice">PLACEHOLDER</li>
+          </ul>
+        </section>
+        <section class="rdv section hidden">
           <article class="FormContainer rdv-c">
             <h3 class="form-header">Je prend mon rendez-vous en ligne !</h3>
             <aside id="main_container" class="widget">
