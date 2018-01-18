@@ -266,8 +266,7 @@ $(document).ready(function() {
   var animating;
 
   $(".next").click(function() {
-    if (animating) return false;
-    animating = true;
+    console.log($(this));
 
     current_fs = $(this).parent();
     next_fs = $(this)
@@ -276,60 +275,23 @@ $(document).ready(function() {
       .next()
       .children(":first");
 
-    //next_fs.show();
-    next_fs.show();
-    current_fs.animate(
-      { opacity: 0 },
-      {
-        step: function(now, mx) {
-          scale = 1 - (1 - now) * 0.2;
-          left = 0 + "%";
-          opacity = 1 - now;
-          current_fs.css({ transform: "scale(" + scale + ")" });
-          next_fs.css({ left: left, opacity: opacity });
-        },
-        duration: 800,
-        complete: function() {
-          current_fs.hide();
-          animating = false;
-        },
-        easing: "easeInOutBack"
-      }
-    );
+    next_fs.toggleClass("nextStep");
+    current_fs.toggleClass("hideThis");
   });
   $(".nextSecond").click(function() {
-    if (animating) return false;
-    animating = true;
+    console.log($(this));
 
     current_fs = $(this).parent();
     next_fs = $(this)
       .parent()
       .next();
 
-    next_fs.show();
-    current_fs.animate(
-      { opacity: 0 },
-      {
-        step: function(now, mx) {
-          scale = 1 - (1 - now) * 0.2;
-          left = 0 + "%";
-          opacity = 1 - now;
-          current_fs.css({ transform: "scale(" + scale + ")" });
-          next_fs.css({ left: left, opacity: opacity });
-        },
-        duration: 800,
-        complete: function() {
-          current_fs.hide();
-          animating = false;
-        },
-        easing: "easeInOutBack"
-      }
-    );
+    next_fs.toggleClass("nextStep");
+    current_fs.toggleClass("nextStep hideThis");
   });
 
   $(".previous").click(function() {
-    if (animating) return false;
-    animating = true;
+    console.log($(this));
 
     current_fs = $(this).parent();
     previous_fs = $(this)
@@ -341,34 +303,12 @@ $(document).ready(function() {
     $("#progressbar li")
       .eq($("fieldset").index(current_fs))
       .removeClass("active");
-
-    previous_fs.show();
-    current_fs.animate(
-      { opacity: 0 },
-      {
-        step: function(now, mx) {
-          scale = 0.8 + (1 - now) * 0.2;
-          left = 0 + "%";
-          opacity = 1 - now;
-          current_fs.css({ left: left });
-          previous_fs.css({
-            transform: "scale(" + scale + ")",
-            opacity: opacity
-          });
-        },
-        duration: 800,
-        complete: function() {
-          current_fs.hide();
-          animating = false;
-        },
-        easing: "easeInOutBack"
-      }
-    );
+    previous_fs.toggleClass("nextStep");
+    current_fs.toggleClass("nextStep hideThis");
   });
 
   $(".previousSecond").click(function() {
-    if (animating) return false;
-    animating = true;
+    console.log($(this));
 
     current_fs = $(this).parent();
     previous_fs = $(this)
@@ -379,29 +319,10 @@ $(document).ready(function() {
       .eq($("fieldset").index(current_fs))
       .removeClass("active");
 
-    previous_fs.show();
-    current_fs.animate(
-      { opacity: 0 },
-      {
-        step: function(now, mx) {
-          scale = 0.8 + (1 - now) * 0.2;
-          left = 0 + "%";
-          opacity = 1 - now;
-          current_fs.css({ left: left });
-          previous_fs.css({
-            transform: "scale(" + scale + ")",
-            opacity: opacity
-          });
-        },
-        duration: 800,
-        complete: function() {
-          current_fs.hide();
-          animating = false;
-        },
-        easing: "easeInOutBack"
-      }
-    );
+    previous_fs.toggleClass("nextStep");
+    current_fs.toggleClass("nextStep hideThis");
   });
+  ///
   $("#planning_selection > .row")
     .first()
     .addClass("first-row");
