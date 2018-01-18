@@ -276,6 +276,9 @@ $(document).ready(function() {
       .children(":first");
 
     next_fs.toggleClass("nextStep");
+    if (next_fs.hasClass("hideThis")) {
+      next_fs.removeClass("hideThis");
+    }
     current_fs.toggleClass("hideThis");
   });
   $(".nextSecond").click(function() {
@@ -287,6 +290,9 @@ $(document).ready(function() {
       .next();
 
     next_fs.toggleClass("nextStep");
+    if (next_fs.hasClass("hideThis")) {
+      next_fs.removeClass("hideThis");
+    }
     current_fs.toggleClass("nextStep hideThis");
   });
 
@@ -303,7 +309,7 @@ $(document).ready(function() {
     $("#progressbar li")
       .eq($("fieldset").index(current_fs))
       .removeClass("active");
-    previous_fs.toggleClass("nextStep");
+    previous_fs.toggleClass("nextStep hideThis");
     current_fs.toggleClass("nextStep hideThis");
   });
 
@@ -319,7 +325,7 @@ $(document).ready(function() {
       .eq($("fieldset").index(current_fs))
       .removeClass("active");
 
-    previous_fs.toggleClass("nextStep");
+    previous_fs.toggleClass("nextStep hideThis");
     current_fs.toggleClass("nextStep hideThis");
   });
   ///
