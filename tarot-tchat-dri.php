@@ -63,21 +63,21 @@ if(isset($_SESSION['user_id'])){
                     <form method="post" class="DRI-FormContainer">
                     <input type="hidden" value="1" name="directCall">
                     <div class="FormContainer DRI-Form">
-                        <div class="FormContainer-Field">
-                            <div class="Fields-Table-Row">
-                                <div class="FormField">
-                                    <input type="hidden" id="name" name="prenom"  value="<?= $prenom ?>" />
-                                    <input type="hidden" id="pays" name="pays"  value="<?= $pays ?>"  />
-                                    <input type="hidden" id="birthdate" name="birthdate"  value="<?= $birthdate ?>"  />
-                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel;?>" required />
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="FormContainer-Field">-->
+<!--                            <div class="Fields-Table-Row">-->
+<!--                                <div class="FormField">-->
+<!--                                    <input type="hidden" id="name" name="prenom"  value="--><?//= $prenom ?><!--" />-->
+<!--                                    <input type="hidden" id="pays" name="pays"  value="--><?//= $pays ?><!--"  />-->
+<!--                                    <input type="hidden" id="birthdate" name="birthdate"  value="--><?//= $birthdate ?><!--"  />-->
+<!--                                    <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="--><?//= $tel;?><!--" required />-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         <div class="offer">
-                            <div class="offer-c">
-                                <input type="submit" class="btn" value="Rappel gratuit" name="demande_rappel">
-                                <div class="offer-tel"></div>
-                            </div>
+<!--                            <div class="offer-c">-->
+<!--                                <input type="submit" class="btn" value="Rappel gratuit" name="demande_rappel">-->
+<!--                                <div class="offer-tel"></div>-->
+<!--                            </div>-->
                             <div class="offer-c">
                                 <a href="https://voyance-en-direct.tv/tarot-tchat/saisie-cb?id=<?= $kgestion_id ?>" class="btn without">Commencer le Tchat</a>
                                 <div class="offer-tchat"></div>
