@@ -260,7 +260,7 @@ function build_zodiac(data, labels) {
   });
   var defs = svg.append("defs");
   defs.selectAll("symbol").data(data.zodiac).enter().append("symbol").attr("viewBox", "0 0 32 32").attr("id", function (d, i) {
-    return data.zodiac[i].utf8;
+    return data.zodiac[i].unicode;
   }).attr("class", function (d, i) {
     return "symbol " + data.zodiac[i].name + " " + data.zodiac[i].element + " " + data.zodiac[i].mode;
   }).attr("data-ldate", function (d, i) {
@@ -301,7 +301,7 @@ function build_zodiac(data, labels) {
   var symbols = symbols_group.selectAll(".symbol").data(circlePositions).enter().append("g").attr("class", function (d, i) {
     return "sign " + data.zodiac[i].name;
   }).attr("transform", "rotate(-90, 0, 0)").append("use").attr("xlink:href", function (d, i) {
-    return "#" + data.zodiac[i].utf8;
+    return "#" + data.zodiac[i].unicode;
   }).attr("width", "32px").attr("height", "32px").attr("fill", "#fff").attr("transform", function (d) {
     return "translate(" + parseInt(d.cx + 16) + " " + parseInt(d.cy - 16) + ") rotate(90, 0, 0)";
   });
