@@ -58,7 +58,8 @@ if(isset($_SESSION['user_id'])){
                     <?php } else { ?>
                         <h2 class="DRI-Form-Title">
                             Vous avez déjà bénéficié de l’offre :<br>
-                            <strong>« 5 minutes de tchat gratuit »</strong>
+                            <strong>« 15 minutes à 1€ »</strong><br>
+                            Veuillez vous connecter sur votre compte pour pouvoir accéder au tchat
                         </h2>
                         <p>
                             Vous pourrez de nouveau profiter de cette offre dans 7 jours.<br>
