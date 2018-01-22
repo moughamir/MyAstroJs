@@ -112,7 +112,7 @@ $(document).ready(function () {
         left = 0 + "%";
         opacity = 1 - now;
         current_fs.css({'transform': 'scale(' + scale + ')'});
-        next_fs.css({'left': left, 'opacity': opacity});
+        next_fs.css({'opacity': opacity});
       },
       duration: 800,
       complete: function () {
@@ -137,7 +137,7 @@ $(document).ready(function () {
         left = 0 + "%";
         opacity = 1 - now;
         current_fs.css({'transform': 'scale(' + scale + ')'});
-        next_fs.css({'left': left, 'opacity': opacity});
+        next_fs.css({'opacity': opacity});
       },
       duration: 800,
       complete: function () {
@@ -163,7 +163,7 @@ $(document).ready(function () {
         scale = 0.8 + (1 - now) * 0.2;
         left = 0 + "%";
         opacity = 1 - now;
-        current_fs.css({'left': left});
+        // current_fs.css({'left': left});
         previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
       },
       duration: 800,
@@ -190,7 +190,7 @@ $(document).ready(function () {
         scale = 0.8 + (1 - now) * 0.2;
         left = 0 + "%";
         opacity = 1 - now;
-        current_fs.css({'left': left});
+        // current_fs.css({'left': left});
         previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
       },
       duration: 800,
