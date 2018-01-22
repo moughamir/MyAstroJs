@@ -54,6 +54,9 @@ $_SESSION['websiteDri'] = "myastro.fr";
                                         <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required/>
                                     </div>
                                     <div class="FormField">
+                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
+                                    </div>
+                                    <div class="FormField">
                                         <div class="FormField-TableInputContainer">
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <select name="pays" id="pays" class="FormField-Input" required>

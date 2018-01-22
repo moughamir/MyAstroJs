@@ -31,6 +31,7 @@ $idkgestion = isset($get['idkgestion']) && !empty($get['idkgestion']) ? $get['id
 $code_promo = isset($get['camp']) && !empty($get['camp']) ? $get['camp'] : false;
 $email_base = isset($get['email']) && !empty($get['email']) ? $get['email'] : false;
 $makeDirectCall = isset($form['directCall']) && !empty($form['directCall']) ? $form['directCall'] : false;
+$hasEmail = isset($form['email']) && !empty($form['email']) ? $form['email'] : "";
 $page    = explode("?", $_SERVER['REQUEST_URI'])[0];
 $urlReg = str_replace('/', "", $page);
 
@@ -170,6 +171,9 @@ if($already_sent){
         );
         if($makeDirectCall) {
             $DRIdata['directCall'] = 1;
+        }
+        if(!empty($hasEmail)) {
+            $DRIdata['email'] = $hasEmail;
         }
         $kgestion_dri = $kgestion->insertDRI($DRIdata);
 
