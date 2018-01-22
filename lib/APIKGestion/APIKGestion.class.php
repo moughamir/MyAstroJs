@@ -102,9 +102,13 @@ class APIKGestion {
         return $this->request($this::POST, $url, $data);
     }
 
-    public function getTracking($id)
+    public function getTracking($id, $getFulltracking = false)
     {
-        $url = $this::BASE_URL.'client/api/client/tracking/'.$id;
+        if($getFulltracking) {
+            $url = $this::BASE_URL.'client/api/client/tracking-full/'.$id;
+        } else {
+            $url = $this::BASE_URL.'client/api/client/tracking/'.$id;
+        }
 
         return $this->request($this::GET, $url);
     }
