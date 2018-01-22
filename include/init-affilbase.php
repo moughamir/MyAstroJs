@@ -21,14 +21,24 @@ $source = 'affil_base';
 $gclid = '';
 $url = $form;
 
+$getFulltracking = isset($getFulltracking) ? $getFulltracking : false;
 if($idkgestion){
     $kgestion = new APIKGestion;
-    $tracking_data = $kgestion->getTracking($idkgestion);
+    $tracking_data = $kgestion->getTracking($idkgestion, $getFulltracking);
     if($tracking_data){
         $api_exec = 1;
         $source = $tracking_data->source;
         $url = $tracking_data->url;
         $gclid = isset($tracking_data->gclid) ? $tracking_data->gclid : '';
+        if(isset($tracking_data->sexe)) {
+            $sexeTracking = $tracking_data->sexe;
+            $prenomTracking = $tracking_data->prenom;
+            $joursTracking = $tracking_data->jours;
+            $moisTracking = $tracking_data->mois;
+            $anneeTracking = $tracking_data->annee;
+            $emailTracking = $tracking_data->email;
+            $telTracking = $tracking_data->tel;
+        }
     }
 }
 

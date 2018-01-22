@@ -12,17 +12,12 @@ include('include/visual_modules/tarot-direct/design-load.php');
 
 // Paramètre formulaire
 $form = $url =  'tarot-direct-rdv';
-$getFulltracking = true;
 include('include/init-affilbase.php');
 require_once(realpath('rdv_web/planning.php'));
 include('include/questions/tarot-direct.php');
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 
-$hasFullTracking = false;
-if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) && !empty($moisTracking) && !empty($anneeTracking) && !empty($emailTracking) && !empty($telTracking)) {
-    $hasFullTracking = true;
-}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -108,7 +103,7 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
         <div class="PageWrapper ContentBand-Table">
             <article class="FormContainer">
                 <div class="Pop Pop-Voyant getFormValue" data-ref-form="voyant" data-method="class"><span
-                        class="Pop-Voyant-Photo"></span></div>
+                            class="Pop-Voyant-Photo"></span></div>
                 <aside id="main_container" class="widget">
                     <div class="content" id="form_tarot">
                         <div class="main-content" >
@@ -131,7 +126,6 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
                             </div>
                             <div >
                                 <form class="ajax" >
-                                    <?php if(!$hasFullTracking) { ?>
                                     <fieldset style="margin-top: 40px;">
 
                                         <h2 class="fs-title"> Informations personnelles!</h2>
@@ -154,17 +148,17 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
                                             <div class="FormField-TableInputContainer fixed-2-col gender">
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <label for="sexe-f" class="FormField-Label "><span
-                                                            class="ico-woman fa fa-venus"></span>
+                                                                class="ico-woman fa fa-venus"></span>
                                                         une femme</label>
                                                     <input type="radio" name="sexe" value="femme" id="sexe-f"
-                                                        class="FormField-Input"/>
+                                                           class="FormField-Input"/>
                                                 </div>
                                                 <div class="FormField-TableInputContainer-Cell">
                                                     <label for="sexe-h" class="FormField-Label"><span
-                                                            class="ico-man fa fa-mars"></span>
+                                                                class="ico-man fa fa-mars"></span>
                                                         un homme</label>
                                                     <input type="radio" name="sexe" value="homme" id="sexe-h"
-                                                        class="FormField-Input"/>
+                                                           class="FormField-Input"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -172,8 +166,8 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <label for="name" class="FormField-Label">Prénom</label>
                                                 <input type="text" id="name" name="prenom" class="FormField-Input"
-                                                    required
-                                                    placeholder="Prénom"/>
+                                                       required
+                                                       placeholder="Prénom"/>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <label class="FormField-Label">Date de naissance</label>
@@ -221,63 +215,39 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
 
                                                 <label for="email" class="FormField-Label">E-mail</label>
                                                 <input id="email" type="email" name="email" class="FormField-Input"
-                                                    required
-                                                    placeholder="E-mail"/>
+                                                       required
+                                                       placeholder="E-mail"/>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <label for="tel" class="FormField-Label">Téléphone</label>
                                                 <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone"
-                                                    class="FormField-Input"
-                                                    required/>
+                                                       class="FormField-Input"
+                                                       required/>
                                             </div>
                                         </div>
                                         <button name="next" class="submit action-button" value="Next" type="submit">
                                             Suivant
                                         </button>
                                         <button name="next" class="next action-button" value="Next" type="button"
-                                            style="display: none">
+                                                style="display: none">
                                             Suivant
                                         </button>
 
                                     </fieldset>
-                                    <?php } ?>
                                 </form>
                                 <form class="ajax" id="rdv_form">
-                                    <fieldset <?php if(!$hasFullTracking) { ?>style="display: none"<?php } ?> class="planning" id="planning">
+                                    <fieldset style="display: none" class="planning" id="planning">
                                         <h2 class="fs-title">Je choisis mon RDV</h2>
-                                        <?php if(!$hasFullTracking) { ?>
-                                            <input type="hidden" name="method" value="consultation_web"/>
-                                            <input type="hidden" name="client_id" id="client_id" value="0"/>
-                                        <?php } else { ?>
-                                            <input type="hidden" name="site" value="MyAstro"/>
-                                            <input type="hidden" name="source" value="<?= $url;?>"/>
-                                            <input type="hidden" name="method" value="consultation_web"/>
-                                            <input type="hidden" name="support" value="rdv-web"/>
-                                            <input type="hidden" name="affiliation" value="<?= $source;?>"/>
-                                            <input type="hidden" name="dri" value="consultation_web"/>
-                                            <input type="hidden" name="redirect_method" value="reload_form"/>
-                                            <input type="hidden" name="tel_needed" value="1" />
-                                            <input type="hidden" name="partenaires" value="1" />
-                                            <input type="hidden" name="cguv" value="1"/>
-                                            <input type="hidden" name="pays" value="FR"/>
-                                            <input type="hidden" name="question_code" value=""/>
-                                            <input type="hidden" name="sexe" value="<?=$sexeTracking?>"/>
-                                            <input type="hidden" name="prenom" value="<?=$prenomTracking?>"/>
-                                            <input type="hidden" name="jour" value="<?=$joursTracking?>"/>
-                                            <input type="hidden" name="mois" value="<?=$moisTracking?>"/>
-                                            <input type="hidden" name="annee" value="<?=$anneeTracking?>"/>
-                                            <input type="hidden" name="email" value="<?=$emailTracking?>"/>
-                                            <input type="hidden" name="tel" value="<?=$telTracking?>"/>
-                                        <?php } ?>
+                                        <input type="hidden" name="method" value="consultation_web"/>
+                                        <input type="hidden" name="client_id" id="client_id" value="0"/>
                                         <div id="planning_selection">
                                             <?= $vue ?>
                                         </div>
-                                        <?php if(!$hasFullTracking) { ?>
-                                            <input type="button" name="previous" class="previous action-button"
-                                                value="Précédent"/>
-                                        <?php } ?>
+
+                                        <input type="button" name="previous" class="previous action-button"
+                                               value="Précédent"/>
                                         <input type="button" name="next" class="nextSecond action-button"
-                                            value="Suivant">
+                                               value="Suivant">
                                     </fieldset>
                                     <fieldset id="form_cb" style="display: none">
                                         <strong class="euro-min">1€ les 10 premières minutes</strong>
@@ -288,14 +258,14 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
                                         <div class="FormField-TableInputContainer FormField-mg">
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="text" id="carte_prenom" name="carte_prenom"
-                                                    class="FormField-Input" required
-                                                    placeholder="Prenom"/>
+                                                       class="FormField-Input" required
+                                                       placeholder="Prenom"/>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <input type="text" id="carte_nom" name="carte_nom"
-                                                    class="FormField-Input"
-                                                    required
-                                                    placeholder="Nom"/>
+                                                       class="FormField-Input"
+                                                       required
+                                                       placeholder="Nom"/>
                                             </div>
                                         </div>
                                         <div class="FormField-TableInputContainer FormField-mg">
@@ -303,8 +273,8 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
 
                                                 <label for="name" class="FormField-Label">Numéro de la carte</label>
                                                 <input type="text" id="carte_num" name="carte_num"
-                                                    class="FormField-Input js-check-luhn"
-                                                    required placeholder="Numéro de la carte"/>
+                                                       class="FormField-Input js-check-luhn"
+                                                       required placeholder="Numéro de la carte"/>
                                             </div>
                                             <div class="FormField-TableInputContainer-Cell">
                                                 <label for="name" class="FormField-Label">Expire Le :</label>
@@ -341,7 +311,7 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
                                                 <label for="name" class="FormField-Label">Cryptogramme de
                                                     sécurité </label>
                                                 <input type="text" id="crypto" name="crypto" class="FormField-Input"
-                                                    required/>
+                                                       required/>
                                                 <img class="img-crypto" src="../images_landing/rdv/crypto.png">
 
                                             </div>
@@ -350,15 +320,15 @@ if (!empty($sexeTracking) && !empty($prenomTracking) && !empty($joursTracking) &
 
                                                 <div class="secureImages">
                                                     <img src="../images/mastercard-visa.png"
-                                                        alt="Mastercard &amp; Visa">
+                                                         alt="Mastercard &amp; Visa">
                                                     <img src="../images/hipay-secure.png" alt="Hipay">
                                                 </div>
                                             </div>
                                         </div>
                                         <input type="button" name="previous" class="previousSecond action-button"
-                                            value="Précédent"/>
+                                               value="Précédent"/>
                                         <input type="button" name="submit" id="valider" class="submit action-button"
-                                            value="Valider"/>
+                                               value="Valider"/>
 
                                     </fieldset>
                                 </form>
