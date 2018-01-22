@@ -1,14 +1,14 @@
 <?php
 session_start();
-$pageName = "gv-f-tchat";
+$pageName = "gv-hm-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "facebook_adds";
+$source = "hamedia";
 
 $dri = "myastro/offre-gratuite";
 $targetContent = $_GET['p'];
-$dri2 = "gv-f-dri?p=".$targetContent;
+$dri2 = "gv-hm-dri?p=".$targetContent;
 
 $assets        = 'images_landing/grande-voyance/18';
 ?>
