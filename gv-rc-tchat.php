@@ -8,7 +8,7 @@ $source = "reflexcash";
 
 $dri = "myastro/offre-gratuite";
 $targetContent = $_GET['p'];
-$dri2 = "gv18-dri?p=".$targetContent;
+$dri2 = "gv-rc-dri?p=".$targetContent;
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
 $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';

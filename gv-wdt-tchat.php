@@ -1,14 +1,15 @@
 <?php
 session_start();
-$pageName = "gv-f-tchat";
+$pageName = "gv-wdt-tchat";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "facebook_adds";
+$source = "weedoit";
 
 $dri = "myastro/offre-gratuite";
 $targetContent = $_GET['p'];
-$dri2 = "gv-f-dri?p=".$targetContent;
+$dri2 = "gv-wdt-dri?p=".$targetContent;
+$_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
 
 $assets        = 'images_landing/grande-voyance/18';
 ?>

@@ -4,7 +4,7 @@ include( 'include/process-dri.php' );
 $targetContent = $_GET['p'];
 $assets        = 'images_landing/grande-voyance/18';
 $_SESSION['sourceDri'] = "reflexcash";
-$_SESSION['urlDri'] = "gv18-rc-dri";
+$_SESSION['urlDri'] = "gv-rc-dri";
 $_SESSION['websiteDri'] = "myastro.fr";
 ?>
 <!DOCTYPE html>
