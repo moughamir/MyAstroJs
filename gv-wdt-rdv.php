@@ -1,10 +1,10 @@
 <?php
 require_once( realpath( 'include/tools.php' ) );
 require_once( realpath( 'rdv_web/planning.php' ) );
-$pageName = $form = "gv-rc-rdv";
+$pageName = $form = "gv-wdt-rdv";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "reflexcash";
+$source = "weedoit";
 
 
 $assets   = 'images_landing/grande-voyance/18';

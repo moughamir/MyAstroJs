@@ -3,8 +3,8 @@ session_start();
 include( 'include/process-dri.php' );
 $targetContent = $_GET['p'];
 $assets        = 'images_landing/grande-voyance/18';
-$_SESSION['sourceDri'] = "facebook_adds";
-$_SESSION['urlDri'] = "gv-f-dri";
+$_SESSION['sourceDri'] = "weedoit";
+$_SESSION['urlDri'] = "gv-wdt-dri";
 $_SESSION['websiteDri'] = "myastro.fr";
 ?>
 <!DOCTYPE html>
@@ -52,9 +52,6 @@ $_SESSION['websiteDri'] = "myastro.fr";
                                     </div>
                                     <div class="FormField">
                                         <input type="tel" id="tel" name="tel" placeholder="Mon N° de téléphone" class="FormField-Input" value="<?= $tel ?>" required/>
-                                    </div>
-                                    <div class="FormField">
-                                        <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
                                     </div>
                                     <div class="FormField">
                                         <div class="FormField-TableInputContainer">
