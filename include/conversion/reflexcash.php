@@ -10,8 +10,8 @@ $log_file       = 'logs-perso/conversion-'.$source.'.txt';
 $urls_conversion = array(
 //    'gv-rc-tchat' => 'test',
     'noel-2017-rc' => ' http://ads.reflexcash.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
-    'tarot-tchat-rc' => 'http://ads.reflexcash.com/aff_lsr?transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
-    'gv-rc-tchat' => 'http://ads.reflexcash.com/aff_lsr?transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'tarot-tchat-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=13722&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'gv-rc-tchat' => 'http://ads.reflexcash.com/aff_lsr?offer_id=13720&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'love-tchat-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=12700&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rentree-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-direct-rc-to' => 'http://b2.a4trk.com/aff_lsr?offer_id=4511&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
