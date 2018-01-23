@@ -1,0 +1,724 @@
+@charset "UTF-8";
+@import "templates/s-landing-roue-signes";
+/* Dossier images */
+
+$img_dir: "../images_landing/nouvel-an-chinois-18/";
+$bg1: $img_dir+"bg1.jpg";
+$bg2: $img_dir+"bg2.png";
+$bg_dri: $img_dir+"bg-dri.png";
+$bg_dri_amour: $img_dir+"bg-dri-amour.png";
+$signe_chinois: $img_dir+"signe-chinois.png";
+$signe_chinois_h: 148;
+$signe_chinois_w: 145;
+$bg_lanterne_w: 556;
+$bg_lanterne_haut_h: 93;
+$bg_lanterne_corps_h: 69 * 7;
+$bg_lanterne_bas_h: 110;
+$bg_lanterne_haut: $img_dir+"bg-lanterne-haut.png";
+$bg_lanterne_corps: $img_dir+"bg-lanterne-corps.png";
+$bg_lanterne_bas: $img_dir+"bg-lanterne-bas.png";
+$bg_lanterne_ponpon: $img_dir+"bg-lanterne-ponpon.png";
+$icon_star: $img_dir+"ico-star.png";
+$icon_gift: $img_dir+"ico-gift.png";
+$icon_lock: $img_dir+"ico-lock.png";
+$icon_trophy: $img_dir+"ico-trophy.png";
+$how_ico_form: $img_dir+"how-ico-form.png";
+$how_ico_phone: $img_dir+"how-ico-phone.png";
+$how_ico_form_amour: $img_dir+"how-ico-form-amour.png";
+$how_ico_phone_amour: $img_dir+"how-ico-phone-amour.png";
+/* Signes */
+
+$rat: $img_dir+"signes/rat.png";
+$serpent: $img_dir+"signes/serpent.png";
+$tigre: $img_dir+"signes/tigre.png";
+$lapin: $img_dir+"signes/lapin.png";
+$cochon: $img_dir+"signes/cochon.png";
+$cheval: $img_dir+"signes/cheval.png";
+$dragon: $img_dir+"signes/dragon.png";
+$chien: $img_dir+"signes/chien.png";
+$singe: $img_dir+"signes/singe.png";
+$chevre: $img_dir+"signes/chevre.png";
+$coq: $img_dir+"signes/coq.png";
+$boeuf: $img_dir+"signes/boeuf.png";
+/* Signes avec Texte */
+
+$rat_txt: $img_dir+"signes_txt/rat.png";
+$serpent_txt: $img_dir+"signes_txt/serpent.png";
+$tigre_txt: $img_dir+"signes_txt/tigre.png";
+$lapin_txt: $img_dir+"signes_txt/lapin.png";
+$cochon_txt: $img_dir+"signes_txt/cochon.png";
+$cheval_txt: $img_dir+"signes_txt/cheval.png";
+$dragon_txt: $img_dir+"signes_txt/dragon.png";
+$chien_txt: $img_dir+"signes_txt/chien.png";
+$singe_txt: $img_dir+"signes_txt/singe.png";
+$chevre_txt: $img_dir+"signes_txt/chevre.png";
+$coq_txt: $img_dir+"signes_txt/coq.png";
+$boeuf_txt: $img_dir+"signes_txt/boeuf.png";
+/* Palette */
+
+$primary: #c91515;
+$txt: #000;
+$bg1_color: #fff7ec;
+$bg2_color: #002c49;
+$bg_dri_color: #adc8ca;
+$bg_dri_amour_color: #f5e2e7;
+$form_bg1_color: #fff7ec;
+$form_bg2_color: rgba(255, 255, 255, .1);
+$orange: $primary;
+$btn_dark_orange: #ED4321;
+$btn_light_orange: #ED6E4A;
+$btn_dark_orange_hover: #ED5835;
+$btn_light_orange_hover: #ED6E4A;
+$brown: #896B47;
+$fushia: #FA0029;
+$btn_dark_fushia: $fushia;
+$btn_light_fushia: #FB7A90;
+$man: #246C6A;
+$woman: $orange;
+body {
+    padding-top: 4rem;
+    background: $bg1_color url($bg1) no-repeat center top;
+    font-family: 'Oxygen', sans-serif;
+    color: $txt;
+    background-size: cover;
+}
+
+body.Step2 {
+    background: $bg2_color url($bg2) no-repeat center top;
+    background-size: cover;
+}
+
+body.DRI {
+    background: $bg_dri_color url($bg_dri) no-repeat center top;
+    background-size: cover;
+    &.Amour {
+        background: $bg_dri_amour_color url($bg_dri_amour) no-repeat center top;
+        background-size: cover;
+    }
+}
+
+a,
+a:hover,
+a:visited {
+    color: $txt;
+    text-decoration: none;
+}
+
+.ContentBand {
+    padding-top: 7.4rem;
+}
+
+/* ---------------------------------- LOGO ---------------------------------- */
+
+.SiteLogo {
+    width: 107px;
+    height: 107px;
+    background-color: transparent;
+    stroke: $primary;
+    stroke-width: 1.5;
+    stroke-miterlimit: 10;
+    fill: $primary;
+    -webkit-filter: drop-shadow( 0px 0px 2px $bg1_color);
+    filter: drop-shadow( 0px 0px 2px $bg1_color);
+}
+
+body.Step2 .SiteLogo {
+    fill: #fff;
+    stroke: #fff;
+    -webkit-filter: drop-shadow( 0px 0px 2px $bg2_color);
+    filter: drop-shadow( 0px 0px 2px $bg2_color);
+}
+
+body.DRI .SiteLogo {
+    -webkit-filter: drop-shadow( 0px 0px 2px $bg_dri_color);
+    filter: drop-shadow( 0px 0px 2px $bg_dri_color);
+}
+
+body.DRI.Amour .SiteLogo {
+    stroke: #ef6f90;
+    fill: #ef6f90;
+    
+}
+
+.PageTitle {
+    max-width: 420px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0 2rem;
+    text-align: left;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3.2rem;
+    font-weight: normal;
+    position: relative;
+    strong {
+        font-size: 4.8rem;
+        font-weight: normal;
+    }
+    &:after {
+        content: '';
+        display: block;
+        height: $signe_chinois_h+px;
+        width: $signe_chinois_w+px;
+        vertical-align: bottom;
+        background: url($signe_chinois) no-repeat center;
+        background-size: contain;
+        position: absolute;
+        right: -48px;
+        top: -50px;
+    }
+}
+
+body.Step2 .PageTitle {
+    display: none;
+}
+
+@media all and (max-width: 660px) {
+    .SiteLogo {
+        height: 87px;
+        width: 87px;
+        left: 50%;
+        margin-left: -44px;
+    }
+    .PageTitle {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .PageTitle {
+        font-size: 2.8rem;
+        strong {
+            font-size: 3.8rem;
+        }
+        &:after {
+            height: ($signe_chinois_h * .72)+px;
+            width: ($signe_chinois_w * .72)+px;
+        }
+    }
+}
+
+/* ------------------------------- FORMULAIRE ------------------------------- */
+
+.Fields-Table-Row {
+    border: 1px solid $txt;
+    &.NoBorder {
+        border: none !important;
+    }
+}
+
+.FormField-Label {
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    .ico-woman {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $woman;
+    }
+    .ico-man {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: $man;
+    }
+}
+
+.FormField-Input {
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: #000;
+}
+
+select.FormField-Input {
+    border: 1px solid $txt;
+    option {
+        background-color: white;
+        color: #000;
+    }
+}
+
+.FormContainer-Submit {
+    min-width: initial;
+    padding: 0.6rem 4rem;
+    border: none;
+    background-color: #c91515;
+    background: linear-gradient(to bottom, #c91515 0%, #e06868 100%);
+    color: #fff;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #ed4321;
+        background: linear-gradient(to bottom, #ed4321 0%, #ed9770 100%);
+    }
+}
+
+body.Step2 .FormContainer-Submit {
+    margin-top: 2rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+body.DRI .FormContainer {
+    position: relative;
+    height: ($bg_lanterne_haut_h + $bg_lanterne_corps_h + $bg_lanterne_bas_h)+px;
+    padding: 0;
+    background-color: transparent;
+    &-Wrapper {
+        position: absolute;
+        height: $bg_lanterne_corps_h+px;
+        width: $bg_lanterne_w+px;
+        left: 50%;
+        margin-top: $bg_lanterne_haut_h+px;
+        margin-bottom: $bg_lanterne_bas_h+px;
+        margin-left: -($bg_lanterne_w / 2)+px;
+        padding: 3rem 6rem;
+        background: transparent url($bg_lanterne_corps) repeat-y center top;
+        color: $brown;
+        &:before {
+            content: "";
+            display: block;
+            height: 90px;
+            width: 556px;
+            position: absolute;
+            left: 0;
+            top: -90px;
+            background: transparent url($bg_lanterne_haut) no-repeat center bottom;
+        }
+        &:after {
+            content: "";
+            display: block;
+            height: 156px;
+            width: 537px;
+            position: absolute;
+            left: 9px;
+            bottom: -154px;
+            background-color: transparent;
+            background-image: url($bg_lanterne_bas);
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+    }
+    &-Fields {
+        padding: 0 4rem;
+    }
+}
+
+body.DRI .Fields-Table-Row {
+    border: 1px solid $primary;
+    color: $primary;
+}
+
+body.DRI select.FormField-Input {
+    border: 1px solid $primary;
+}
+
+body.DRI.Amour .FormContainer-Submit {
+    background-color: $btn_dark_fushia;
+    background: -webkit-linear-gradient(to bottom, $btn_dark_fushia 0%, $btn_light_fushia 100%);
+    background: linear-gradient(to bottom, $btn_dark_fushia 0%, $btn_light_fushia 100%);
+    &:hover {
+        background-color: $btn_light_fushia;
+        background: -webkit-linear-gradient(to bottom, $btn_light_fushia 0%, $btn_dark_fushia 100%);
+        background: linear-gradient(to bottom, $btn_light_fushia 0%, $btn_dark_fushia 100%);
+    }
+}
+
+@import "modules_themes/form-alert-vivid";
+@media all and (max-width: 400px) {
+    body.DRI .FormContainer-Fields {
+        padding: 0rem 7.4rem;
+    }
+}
+
+/* ------------------------------ ROUE SIGNES ------------------------------- */
+
+.FormContainer.Wheel-Core {
+    background-color: $form_bg1_color;
+    background-repeat: no-repeat;
+    background-position: center 1.2rem;
+}
+
+body.Step2 .FormContainer.Wheel-Core {
+    background-color: $form_bg2_color;
+}
+
+.Wheel-Core {
+    padding: 5.8rem 6rem;
+    &-Title {
+        height: auto;
+        max-height: none;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        font-family: 'Kaushan Script', cursive;
+    }
+}
+
+body.Step2 .Wheel-Core {
+    padding-top: 11rem;
+}
+
+.FormSign-Title {
+    line-height: 5.2rem;
+    font-size: 4rem;
+    &-c2 {
+        font-size: 5.3rem;
+        color: $orange;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .Wheel-Core {
+        padding: 4.8rem 9rem;
+    }
+    .FormSign-Title {
+        line-height: 4.2rem;
+        font-size: 3rem;
+        &-c2 {
+            font-size: 4.3rem;
+        }
+    }
+}
+
+@media all and (max-width: 340px) {
+    .Wheel-Core {
+        padding: 4.8rem 10rem;
+    }
+}
+
+.Signe-Name {
+    font-size: 3.5rem;
+    color: $orange;
+}
+
+.Wheel-Item {
+    display: none;
+    background-color: transparent;
+}
+
+body.Step2 .Wheel-Item {
+    display: block;
+}
+
+.Signe-Rat-Txt {
+    background-image: url($rat_txt);
+}
+
+.Signe-Serpent-Txt {
+    background-image: url($serpent_txt);
+}
+
+.Signe-Tigre-Txt {
+    background-image: url($tigre_txt);
+}
+
+.Signe-Lapin-Txt {
+    background-image: url($lapin_txt);
+}
+
+.Signe-Cochon-Txt {
+    background-image: url($cochon_txt);
+}
+
+.Signe-Cheval-Txt {
+    background-image: url($cheval_txt);
+}
+
+.Signe-Dragon-Txt {
+    background-image: url($dragon_txt);
+}
+
+.Signe-Chien-Txt {
+    background-image: url($chien_txt);
+}
+
+.Signe-Singe-Txt {
+    background-image: url($singe_txt);
+}
+
+.Signe-Chevre-Txt {
+    background-image: url($chevre_txt);
+}
+
+.Signe-Coq-Txt {
+    background-image: url($coq_txt);
+}
+
+.Signe-Boeuf-Txt {
+    background-image: url($boeuf_txt);
+}
+
+.Signe-Rat {
+    background-image: url($rat);
+}
+
+.Signe-Serpent {
+    background-image: url($serpent);
+}
+
+.Signe-Tigre {
+    background-image: url($tigre);
+}
+
+.Signe-Lapin {
+    background-image: url($lapin);
+}
+
+.Signe-Cochon {
+    background-image: url($cochon);
+}
+
+.Signe-Cheval {
+    background-image: url($cheval);
+}
+
+.Signe-Dragon {
+    background-image: url($dragon);
+}
+
+.Signe-Chien {
+    background-image: url($chien);
+}
+
+.Signe-Singe {
+    background-image: url($singe);
+}
+
+.Signe-Chevre {
+    background-image: url($chevre);
+}
+
+.Signe-Coq {
+    background-image: url($coq);
+}
+
+.Signe-Boeuf {
+    background-image: url($boeuf);
+}
+
+/* ------------------------------- REASSURANCE ------------------------------ */
+
+.ReassuranceList {
+    background-color: $bg1_color;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+}
+
+body.Step2 .ReassuranceList {
+    background-color: $bg2_color;
+}
+
+body.DRI .ReassuranceList {
+    background-color: $bg_dri_color;
+}
+
+body.DRI.Amour .ReassuranceList {
+    background-color: #f27595;
+}
+
+.ReassuranceList-Item-Img.star {
+    background: transparent url($icon_star) center no-repeat;
+    background-size: contain;
+}
+
+.ReassuranceList-Item-Img.lock {
+    background: transparent url($icon_lock) center no-repeat;
+    background-size: contain;
+}
+
+.ReassuranceList-Item-Img.gift {
+    background: transparent url($icon_gift) center no-repeat;
+    background-size: contain;
+}
+
+.ReassuranceList-Item-Img.trophy {
+    background: transparent url($icon_trophy) center no-repeat;
+    background-size: contain;
+}
+
+.Step2,.DRI {
+    .star {
+        background-image: url($img_dir + 'ico-star-2.png');
+    }
+    .lock {
+        background-image: url($img_dir + 'ico-lock-2.png');
+    }
+    .gift {
+        background-image: url($img_dir + 'ico-gift-2.png');
+    }
+    .trophy {
+        background-image: url($img_dir + 'ico-trophy-2.png');
+    }
+    .ReassuranceList-Item-Txt{color: #fff;}
+}
+
+/* ----------------------------------- DRI ---------------------------------- */
+
+.DRI-Intro {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.DRI-Intro-Title {
+    margin-bottom: 0;
+    text-align: center;
+    color: $orange;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 3rem;
+    hyphens: none;
+}
+
+.DRI-Intro-Text {
+    margin-top: 0;
+    color: #000;
+    font-size: 1.8rem;
+    hyphens: none;
+}
+
+.DRI-Sent {
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.DRI-Slogan {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $orange;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.6rem;
+    hyphens: none;
+}
+
+body.DRI.Amour {
+    .DRI-Intro-Title {
+        color: $txt;
+    }
+    .DRI-Intro-Text,
+    .DRI-Slogan {
+        color: $fushia;
+    }
+}
+
+@media all and (max-width: 660px) {
+    .DRI-Intro-Title {
+        margin-top: 2rem;
+    }
+}
+
+/* ---------------------------------- HOW ----------------------------------- */
+
+.How {
+    margin-top: 2.4rem;
+    color: $orange;
+    &-Header {
+        margin-bottom: 0;
+    }
+    &-Wizard {
+        background-color: transparent;
+        border: none;
+        &Item-Img.form {
+            background: transparent url($how_ico_form) center no-repeat;
+            background-size: contain;
+        }
+        &Item-Img.phone {
+            background: transparent url($how_ico_phone) center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+body.DRI.Amour .How {
+    color: $fushia;
+    &-WizardItem-Img {
+        &.form {
+            background-image: url($how_ico_form_amour);
+        }
+        &.phone {
+            background-image: url($how_ico_phone_amour);
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .How {
+        text-align: center;
+        &-Wizard {
+            margin-bottom: 4rem;
+            &Item {
+                border-left-width: 2.5rem;
+                &::before {
+                    left: -2.6rem;
+                    border-left-width: 2.5rem;
+                }
+                &-Img {
+                    height: 3.6rem;
+                    width: 3.6rem;
+                    margin-top: 2.2rem;
+                    margin-bottom: 2.2rem;
+                }
+            }
+        }
+    }
+}
+
+.lampion {
+    width: 177px;
+    height: 346px;
+    background: transparent url($img_dir+'lampion.png') no-repeat center top;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 15%;
+    margin-top: -50px; //transform: rotate(-10deg);
+    animation: lampion 3s infinite ease-in-out both;
+    animation-timing-function: ease-in-out;
+    transform-origin: 80px 0;
+    z-index: 999;
+}
+
+.Step2 {
+    .lampion {
+        background-image: url($img_dir+'lampion2.png');
+    }
+}
+.Amour {
+    .lampion {
+        background-image: url($img_dir+'lampion3.png');
+    }
+}
+
+.evantail {
+    width: 143px;
+    height: 173px;
+    background: transparent url($img_dir+'evantail.png') no-repeat center top;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    &-a {
+        transform: rotate(-40deg);
+        left: -100px;
+        @extend .evantail;
+    }
+    &-b {
+        transform: rotate(40deg);
+        right: -100px;
+        @extend .evantail;
+    }
+}
+
+@keyframes lampion {
+    0%,
+    100% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    50% {
+        transform: rotate3d(0, 0, 1, 10deg);
+    }
+}
