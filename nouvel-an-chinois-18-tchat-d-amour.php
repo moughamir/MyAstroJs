@@ -44,7 +44,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
             <div class="PageWrapper">
 
                 <div class="DRI-Intro">
-                    <div class="DRI-Intro-Title">Faites-vous rappeler immédiatement</div>
+                    <div class="DRI-Intro-Title"> Pour poursuivre cliquez sur le bouton ci-dessous</div>
                     <div class="DRI-Intro-Text">Nos voyants répondent à vos questions</div>
                 </div>
                 <article class="FormContainer" id="vm-anchor">
@@ -108,11 +108,8 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                             <ul class="How-Wizard">
                                 <li class="How-WizardItem">
                                     <span class="How-WizardItem-Img form"></span>
-                                    <span class="How-WizardItem-Txt">Je remplis le <br/>formulaire</span>
-                                </li>
-                                <li class="How-WizardItem">
-                                    <span class="How-WizardItem-Img phone"></span>
-                                    <span class="How-WizardItem-Txt">Je suis rappelé(e) <br/>immédiatement</span>
+                                    <span class="How-WizardItem-Txt">Cliquez sur le boutton ci-dessus <br/> pour profiter immédiatement des 5 minutes de Tchat GRATUITES
+                                    </span>
                                 </li>
                             </ul>
                         </div>

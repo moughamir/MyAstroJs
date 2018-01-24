@@ -109,7 +109,9 @@ a, a:hover, a:visited {
     padding-top: 7.4rem;
 }
 
-
+.PageWrapper {
+    margin-top: -40px;
+}
 /* ---------------------------------- LOGO ---------------------------------- */
 
 .SiteLogo {
@@ -179,6 +181,7 @@ body.Step2 .PageTitle { display: none;}
     }
     .PageTitle {
         text-align: center;
+        font-size: 2rem
     }
 }
 @media all and (max-width: 400px){
@@ -552,6 +555,11 @@ body.DRI.Amour .How {
             background-image: url($how_ico_phone_amour);
         }
     }
+}
+
+body.DRI .How-WizardItem-Txt {
+    margin: 0!important;
+    top: -7rem;
 }
 
 @media screen and (max-width: 380px){
