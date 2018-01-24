@@ -118,17 +118,17 @@ a, a:hover, a:visited {
     width: 107px;
     height: 107px;
     background-color: transparent;
-    stroke: $txt;
+    stroke: #c91515;
     stroke-width: 1.5;
     stroke-miterlimit: 10;
-    fill: $txt;
-    -webkit-filter: drop-shadow( 0px 0px 2px $bg1_color);
-    filter: drop-shadow( 0px 0px 2px $bg1_color);
+    fill: #c91515;
+    -webkit-filter: drop-shadow( 0px 0px 2px #fff7ec);
+    filter: drop-shadow( 0px 0px 2px #fff7ec);
     margin-left: 2rem;
 }
 body.Step2 .SiteLogo {
-    -webkit-filter: drop-shadow( 0px 0px 2px $bg2_color);
-    filter: drop-shadow( 0px 0px 2px $bg2_color);
+    -webkit-filter: drop-shadow( 0px 0px 2px #fff7ec);
+    filter: drop-shadow( 0px 0px 2px #fff7ec);
 }
 body.DRI .SiteLogo {
     -webkit-filter: drop-shadow( 0px 0px 2px $dri_color);

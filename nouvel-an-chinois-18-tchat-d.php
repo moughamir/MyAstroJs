@@ -10,9 +10,9 @@
 // Paramètre formulaire
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
+$kgestion_id = isset($_SESSION['kgestion_id'])? $_SESSION['kgestion_id'] : '';
 $prenom = isset($_SESSION['prenom'])? $_SESSION['prenom'] : '';
-$tel = isset($_SESSION['tel'])? $_SESSION['tel'] : '';
-
+$tel = isset($_SESSION['phone'])? $_SESSION['phone'] : '';
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
 ?>
 <!DOCTYPE html>
@@ -101,7 +101,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                                 </div>
                                 <!-- SUBMIT -->
                                 <input type="text" name="antisp" value="" style="display: none" />
-                                <a href="https://voyance-en-direct.tv/myastro/offre-gratuite?email=<?= $email ?>" class="FormContainer-Submit"  name="demande_rappel">Commencer le Tchat Gratuit</a>
+                                <a href="https://voyance-en-direct.tv/myastro/offre-gratuite?id=<?= $kgestion_id ?>" class="FormContainer-Submit"  name="demande_rappel">Commencer le Tchat Gratuit</a>
                             </form>
                         </div>
                         <div class="How">

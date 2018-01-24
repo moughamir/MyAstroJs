@@ -1,21 +1,21 @@
 <?php
-    $form = 'nouvel-an-chinois-17';
+    $form = 'nouvel-an-chinois-18-tchat';
     include('include/init-affilbase.php');
     $questions = array(
-        'nac17-boeuf'   => ['code'=>'nac17-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Bœuf"],
-        'nac17-cheval'  => ['code'=>'nac17-cheval', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cheval"],
-        'nac17-chevre'  => ['code'=>'nac17-chevre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est la Chèvre"],
-        'nac17-chien'   => ['code'=>'nac17-chien', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Chien"],
-        'nac17-cochon'  => ['code'=>'nac17-cochon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Cochon"],
-        'nac17-coq'     => ['code'=>'nac17-coq', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Coq"],
-        'nac17-dragon'  => ['code'=>'nac17-dragon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Dragon"],
-        'nac17-lapin'   => ['code'=>'nac17-lapin', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Lapin"],
-        'nac17-rat'     => ['code'=>'nac17-rat', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Rat"],
-        'nac17-serpent' => ['code'=>'nac17-serpent', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Serpent"],
-        'nac17-singe'   => ['code'=>'nac17-singe', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Singe"],
-        'nac17-tigre'   => ['code'=>'nac17-tigre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2017 - Votre signe astrologique chinois est le Tigre"],
+        'nac18-boeuf'   => ['code'=>'nac18-boeuf', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Bœuf"],
+        'nac18-cheval'  => ['code'=>'nac18-cheval', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Cheval"],
+        'nac18-chevre'  => ['code'=>'nac18-chevre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est la Chèvre"],
+        'nac18-chien'   => ['code'=>'nac18-chien', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Chien"],
+        'nac18-cochon'  => ['code'=>'nac18-cochon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Cochon"],
+        'nac18-coq'     => ['code'=>'nac18-coq', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Coq"],
+        'nac18-dragon'  => ['code'=>'nac18-dragon', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Dragon"],
+        'nac18-lapin'   => ['code'=>'nac18-lapin', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Lapin"],
+        'nac18-rat'     => ['code'=>'nac18-rat', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Rat"],
+        'nac18-serpent' => ['code'=>'nac18-serpent', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Serpent"],
+        'nac18-singe'   => ['code'=>'nac18-singe', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Singe"],
+        'nac18-tigre'   => ['code'=>'nac18-tigre', 'subject'=>'signe', 'text'=>"Nouvel an Chinois 2018 - Votre signe astrologique chinois est le Tigre"],
     );
-    $question = $questions['nac17-'.$_SESSION['signe']['code']];
+    $question = $questions['nac18-'.$_SESSION['signe']['code']];
 ?>
                         <script>
                             $('.Wheel-Core').addClass('Signe-<?= ucfirst($_SESSION['signe']['code']) ;?>');

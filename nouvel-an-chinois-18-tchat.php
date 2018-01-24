@@ -41,7 +41,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
         <section class="ContentBand Form Wheel">
             <!-- Logo -->
             <div class="SiteLogo">
-                <img src="images_landing/nouvel-an-chinois-18/tchat/logo.png" alt="">
+                 <?php include('include/myastro-logo-svg.php');?>
             </div>
             <div class="PageWrapper">
                 <!-- Signes Astros -->
