@@ -7,7 +7,6 @@
     * Created on : abderrahime.sanadi@gmail.com
 
 */
-// Paramètre formulaire
 session_start();
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
 $prenom = isset($_SESSION['prenom'])? $_SESSION['prenom'] : '';
@@ -37,7 +36,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="DRI">
+    <body class="DRI Amour">
         <section class="ContentBand">
             <div class="SiteLogo">
                 <img src="images_landing/nouvel-an-chinois-18/tchat/logo.png" alt="">

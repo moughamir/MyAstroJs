@@ -68,7 +68,8 @@ $bg1_color: #625aba;
 $bg2_color: #7b3165;
 $dri_color: #ff3c01;
 $bg_dri_color: #4156d1;
-$bg_dri_amour_color: #312628;
+$dri_amour: #770200;
+$bg_dri_amour_color: #e6b2ba;
 $form_bg1_color: #625aba;
 $form_bg2_color: rgba(255, 255, 255, .1);
 $orange: #7b3165;
@@ -136,6 +137,10 @@ body.DRI.Amour .SiteLogo {
     fill: $fushia;
     -webkit-filter: drop-shadow( 0px 0px 4px $txt);
     filter: drop-shadow( 0px 0px 4px $txt);
+}
+
+body.DRI.Amour .Fields-Table-Row {
+     color: $dri_amour;
 }
 
 .PageTitle {
@@ -307,6 +312,8 @@ body.DRI .FormContainer {
 body.DRI .Fields-Table-Row {
     border: 1px solid $dri_color;
     color: $dri_color;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 body.DRI select.FormField-Input {
     border: 1px solid $dri_color;
@@ -491,7 +498,7 @@ body.DRI.Amour .ReassuranceList {
 .DRI-Slogan {
     margin-bottom: 2rem;
     text-align: center;
-    color: $fushia;
+    color: $dri_amour;
     font-family: 'Kaushan Script', cursive;
     font-size: 2.6rem;
     hyphens: none;
@@ -499,10 +506,10 @@ body.DRI.Amour .ReassuranceList {
 
 body.DRI.Amour {
     .DRI-Intro-Title {
-        color: $fushia;
+        color: $dri_amour;
     }
     .DRI-Intro-Text, .DRI-Slogan {
-        color: $fushia;
+        color: $dri_amour;
     }
 }
 
@@ -517,7 +524,7 @@ body.DRI.Amour {
 
 .How {
     margin-top: 2.4rem;
-    color: $orange;
+    color: $fushia;
     &-Header {
         margin-bottom: 0;
     }
@@ -536,7 +543,7 @@ body.DRI.Amour {
 }
 
 body.DRI.Amour .How {
-    color: $fushia;
+    color: $dri_amour;
     &-WizardItem-Img {
         &.form {
             background-image: url($how_ico_form_amour);
