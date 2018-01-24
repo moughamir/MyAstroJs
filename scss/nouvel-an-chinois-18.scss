@@ -734,15 +734,25 @@ body.DRI.Amour .How {
     background-size: contain;
     display: inline-block;
     position: absolute;
+    @include respond-to("mobile"){
+        width: 72px;
+        height: 87px;
+    }
     &-a {
         transform: rotate(-40deg);
         left: -100px;
         @extend .evantail;
+        @include respond-to("mobile"){
+            left: 100px;
+        }
     }
     &-b {
         transform: rotate(40deg);
         right: -100px;
         @extend .evantail;
+        @include respond-to("mobile"){
+            right: 100px;
+        }
     }
 }
 
