@@ -70,9 +70,9 @@ $btn_light_orange: #ED6E4A;
 $btn_dark_orange_hover: #ED5835;
 $btn_light_orange_hover: #ED6E4A;
 $brown: #896B47;
-$fushia: #FA0029;
+$fushia: #f27595;
 $btn_dark_fushia: $fushia;
-$btn_light_fushia: #FB7A90;
+$btn_light_fushia: lighten($fushia, 10%);
 $man: #246C6A;
 $woman: $orange;
 body {
@@ -137,7 +137,6 @@ body.DRI .SiteLogo {
 body.DRI.Amour .SiteLogo {
     stroke: #ef6f90;
     fill: #ef6f90;
-    
 }
 
 .PageTitle {
@@ -315,6 +314,8 @@ body.DRI .Fields-Table-Row {
     color: $primary;
 }
 
+
+
 body.DRI select.FormField-Input {
     border: 1px solid $primary;
 }
@@ -329,7 +330,17 @@ body.DRI.Amour .FormContainer-Submit {
         background: linear-gradient(to bottom, $btn_light_fushia 0%, $btn_dark_fushia 100%);
     }
 }
+body.Amour {
+.Fields-Table-Row {
+    border: 1px solid #454545;
+    color: #454545;
+    font-weight: 600;
+}
+select.FormField-Input {
+    border: 1px solid #454545;
+}
 
+}
 @import "modules_themes/form-alert-vivid";
 @media all and (max-width: 400px) {
     body.DRI .FormContainer-Fields {
@@ -541,7 +552,8 @@ body.DRI.Amour .ReassuranceList {
     background-size: contain;
 }
 
-.Step2,.DRI {
+.Step2,
+.DRI {
     .star {
         background-image: url($img_dir + 'ico-star-2.png');
     }
@@ -554,7 +566,16 @@ body.DRI.Amour .ReassuranceList {
     .trophy {
         background-image: url($img_dir + 'ico-trophy-2.png');
     }
-    .ReassuranceList-Item-Txt{color: #fff;}
+    .ReassuranceList-Item-Txt {
+        color: #fff;
+    }
+}
+
+.Step2,
+.DRI.Amour {
+    .ReassuranceList-Item {
+        border-color: #fff;
+    }
 }
 
 /* ----------------------------------- DRI ---------------------------------- */
@@ -598,7 +619,7 @@ body.DRI.Amour .ReassuranceList {
 
 body.DRI.Amour {
     .DRI-Intro-Title {
-        color: $txt;
+        color: #f13766;
     }
     .DRI-Intro-Text,
     .DRI-Slogan {
@@ -635,7 +656,7 @@ body.DRI.Amour {
 }
 
 body.DRI.Amour .How {
-    color: $fushia;
+    color: #454545;
     &-WizardItem-Img {
         &.form {
             background-image: url($how_ico_form_amour);
@@ -688,6 +709,7 @@ body.DRI.Amour .How {
         background-image: url($img_dir+'lampion2.png');
     }
 }
+
 .Amour {
     .lampion {
         background-image: url($img_dir+'lampion3.png');
