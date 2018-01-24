@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "templates/s-landing-roue-signes";
+@import "modules/mixins";
 /* Dossier images */
 
 $img_dir: "../images_landing/nouvel-an-chinois-18/";
@@ -81,6 +82,7 @@ body {
     font-family: 'Oxygen', sans-serif;
     color: $txt;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 body.Step2 {
@@ -164,6 +166,13 @@ body.DRI.Amour .SiteLogo {
         position: absolute;
         right: -48px;
         top: -50px;
+        @include respond-to("mobile") {
+            height: 74px;
+            width: 73px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            left: 30px;
+            right: 0;
+        }
     }
 }
 
@@ -188,10 +197,6 @@ body.Step2 .PageTitle {
         font-size: 2.8rem;
         strong {
             font-size: 3.8rem;
-        }
-        &:after {
-            height: ($signe_chinois_h * .72)+px;
-            width: ($signe_chinois_w * .72)+px;
         }
     }
 }
@@ -314,8 +319,6 @@ body.DRI .Fields-Table-Row {
     color: $primary;
 }
 
-
-
 body.DRI select.FormField-Input {
     border: 1px solid $primary;
 }
@@ -330,17 +333,18 @@ body.DRI.Amour .FormContainer-Submit {
         background: linear-gradient(to bottom, $btn_light_fushia 0%, $btn_dark_fushia 100%);
     }
 }
+
 body.Amour {
-.Fields-Table-Row {
-    border: 1px solid #454545;
-    color: #454545;
-    font-weight: 600;
-}
-select.FormField-Input {
-    border: 1px solid #454545;
+    .Fields-Table-Row {
+        border: 1px solid #454545;
+        color: #454545;
+        font-weight: 600;
+    }
+    select.FormField-Input {
+        border: 1px solid #454545;
+    }
 }
 
-}
 @import "modules_themes/form-alert-vivid";
 @media all and (max-width: 400px) {
     body.DRI .FormContainer-Fields {
@@ -702,6 +706,12 @@ body.DRI.Amour .How {
     animation-timing-function: ease-in-out;
     transform-origin: 80px 0;
     z-index: 999;
+    @include respond-to("mobile") {
+        width: 60px;
+        height: 120px;
+        right: 10%;
+        transform-origin: 30px 0;
+    }
 }
 
 .Step2 {
