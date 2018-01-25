@@ -97,7 +97,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     </section>
     <!-- -------------------------------------- FORMULAIRE -------------------------------------- -->
     <article class="ContentBand Form Principal" id="scn-form" style="display:none">
-        <header class="ContentBand-ColumnHeader Title"><img class="time-calendar" src="images_landing/rdv/tarot/time.png"> - Je prend mon
+        <header class="ContentBand-ColumnHeader Title"><img class="time-calendar" src="images_landing/rdv/tarot/time.png"> - Je prends mon
             rendez-vous <strong>en ligne!</strong> -
         </header>
         <div class="PageWrapper ContentBand-Table">
