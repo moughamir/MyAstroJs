@@ -58,7 +58,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 <div class="Wheel-Item n11 Signe-Coq-Txt"></div>
                 <div class="Wheel-Item n12 Signe-Boeuf-Txt"></div>
                 <!-- Fin Signes astro -->
-                <h1 class="PageTitle">2018 annee du <strong>CHIEN</strong></h1>
+                <h1 class="PageTitle">2018 année du <strong>CHIEN</strong></h1>
                 <article class="FormContainer Wheel-Core" id="vm-anchor">
                     <div class="FormContainer overlay Wheel-Core" id="form-overlay"></div>
                     <form id="form-container" class="ajax">
