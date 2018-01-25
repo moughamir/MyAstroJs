@@ -65,7 +65,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         </section>
         <section class="rdv section hidden">
           <article class="FormContainer rdv-c">
-            <h3 class="form-header">Je prend mon rendez-vous en ligne !</h3>
+            <h3 class="form-header">Je prends mon rendez-vous en ligne !</h3>
             <aside id="main_container" class="widget">
               <div id="form_pdt">
                 <div class="main-content">

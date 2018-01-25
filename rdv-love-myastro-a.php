@@ -89,7 +89,7 @@ $assets = 'images_landing/love-tchat';
                 <section class="section hidden">
 
                     <article class="FormContainer">
-                        <h3 class="form-header"> <img class="time-calendar" src="images_landing/rdv/love-tchat/time.png"><strong> Je prend mon
+                        <h3 class="form-header"> <img class="time-calendar" src="images_landing/rdv/love-tchat/time.png"><strong> Je prends mon
                             rendez-vous en ligne!</strong></h3>
                         <aside id="main_container" class="widget">
                             <aside  id="form_love">
