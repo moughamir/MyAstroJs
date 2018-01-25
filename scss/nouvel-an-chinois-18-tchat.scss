@@ -145,6 +145,9 @@ body.DRI.Amour .Fields-Table-Row {
      color: $dri_amour;
 }
 
+.PageWrapper{
+   transform-style: unset !important;
+}
 .PageTitle {
     max-width: 490px;
     margin: auto;
