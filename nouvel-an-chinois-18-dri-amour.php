@@ -36,7 +36,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                     <div class="DRI-Intro-Title">Faites-vous rappeler immédiatement</div>
                     <div class="DRI-Intro-Text">Nos voyants répondent à vos questions</div>
                 </div>
-                <article class="FormContainer" id="vm-anchor">
+                <article class="FormContainer origami" id="vm-anchor">
                     <div class="FormContainer-Wrapper">
                         <div class="DRI-Slogan">Profitez d’une consultation<br>privée pour 1€ seulement</div>
                         <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
@@ -127,8 +127,26 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
 
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/oridomi.min.js"></script>
+        <script type="text/javascript">
+        var origami = new OriDomi('.origami', {
+            hPanels:            6,
+            speed:              0,
+            //ripple:             6,
+            shadingIntesity:    0,
+            shading:            false,
+            maxAngle:           90,
+            shading:            'soft',
+            ripple: false,
+            touchEnabled: false
+        });
+        origami.accordion(90, 'top');
+        
+        setTimeout(function(){
+            origami.unfold().setSpeed(1300);
+        }, 900)
+        </script>
 
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
