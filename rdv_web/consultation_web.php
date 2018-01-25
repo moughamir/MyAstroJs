@@ -3,7 +3,7 @@
 /* ========================================================================== *
  *                               INITIALISATION                               *
  * ========================================================================== */
-$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+//$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
 
 $err = array();
@@ -44,6 +44,11 @@ if($crypto != '' && !preg_match("$[0-9]{3}$", $crypto)){
 
 if($planning_horaire_selection == ''){
     $err['planning_horaire_selection'] = 'Veuillez choisir l\'horaire de la consultation.';
+}
+$date_rdv = new DateTime($planning_horaire_selection);
+
+if($date_rdv <= new DateTime() ){
+    $err['planning_horaire_selection_before'] = 'Vous ne pouvez pas choisir cette heure Veuillez selectionner une autre horaire de la consultation.';
 }
 
 if($client_id == '0'){
