@@ -1223,3 +1223,9 @@ select.form-control {
     color: #454545;
     font-weight: bold;
 }
+
+.custmer-service {
+    float: right;
+    margin-top:-70px;
+    font-weight: bold;
+}

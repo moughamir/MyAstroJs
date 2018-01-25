@@ -322,10 +322,13 @@ $assets = 'images_landing/love-tchat';
                                     </fieldset>
                                 </form>
                              </div>
-                            </div>
-                            </aside>
+
                         </div>
-                    </article>
+                      </aside>
+                 <h4 class="custmer-service" >SERVICE CLIENT : 04.82.53.71.59</h4>
+              </div>
+
+            </article>
                 </section>
             </div>
         </main>

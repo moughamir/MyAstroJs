@@ -1047,3 +1047,18 @@ form.ajax {
         margin-left: 1.5rem;
     }
 }
+
+
+.custmer-service {
+    float: right;
+    color: #2E4980;
+    font-weight: bold;
+
+}
+
+@media screen and (max-width: 544px) {
+
+    .custmer-service {
+        margin-right: 0rem;
+    }
+}

@@ -310,11 +310,12 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
                     <input type="submit" name="submit" class="submit action-button" value="Valider"/>
 
                 </fieldset>
+
             </form>
     </div>
 
-
 </div>
+
 </aside>
 
 </div>
@@ -325,6 +326,7 @@ $gclid = isset($_GET['gclid']) ? $_GET['gclid'] : '';
 
 
 <div class="avis">
+    <h4 class="custmer-service" > SERVICE CLIENT : 04.82.53.71.59</h4>
 
    <div class="splash-content">
 
