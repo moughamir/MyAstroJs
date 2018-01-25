@@ -137,7 +137,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
             shadingIntesity:    0,
             shading:            false,
             maxAngle:           90,
-            shading:            'soft',
+            shading:            false,
             ripple: false,
             touchEnabled: false
         });
