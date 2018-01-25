@@ -3,7 +3,7 @@
 /* ========================================================================== *
  *                               INITIALISATION                               *
  * ========================================================================== */
-//$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
+$bdd = new bdd(DBLOGIN, DBPASS, DBNAME, DBHOST);
 $kgestion = new APIKGestion;
 
 $err = array();
