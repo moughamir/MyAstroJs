@@ -503,6 +503,10 @@ body.consultation-en-ligne .left-part .content .txt-content {
     .menuh-content {
         width: 70%!important;
     }
+
+    .custmer-service {
+        margin-top: -38rem!important;
+    }
 }
 
 @media (max-width: 767px) {
