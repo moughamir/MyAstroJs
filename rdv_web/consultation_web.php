@@ -46,6 +46,12 @@ if($planning_horaire_selection == ''){
     $err['planning_horaire_selection'] = 'Veuillez choisir l\'horaire de la consultation.';
 }
 
+$date_rdv = DateTime::createFromFormat("d/m/Y H:i", $planning_horaire_selection);
+
+if($date_rdv <= new DateTime() ){
+    $err['planning_horaire_selection_before'] = 'Vous ne pouvez pas choisir cette heure Veuillez selectionner une autre horaire de la consultation.';
+}
+
 if($client_id == '0'){
 
     $sexe = isset($param['sexe']) ? $param['sexe'] : '';

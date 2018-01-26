@@ -503,9 +503,17 @@ body.consultation-en-ligne .left-part .content .txt-content {
     .menuh-content {
         width: 70%!important;
     }
+
+    .custmer-service {
+        margin-top: -38rem!important;
+    }
 }
 
 @media (max-width: 767px) {
+
+    .custmer-service {
+        margin-top: -38rem!important;
+     }
     .textItem {
         margin-left: 10%;
     }
@@ -1221,5 +1229,11 @@ select.form-control {
 .icon-liste {
     margin-left: 4em;
     color: #454545;
+    font-weight: bold;
+}
+
+.custmer-service {
+    float: right;
+    margin-top:-70px;
     font-weight: bold;
 }

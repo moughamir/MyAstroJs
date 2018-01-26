@@ -8,11 +8,10 @@ $aff_id = $_SESSION['strandlink_affiliateid'];
 $log_file       = 'logs-perso/conversion-'.$source.'.txt';
 
 $urls_conversion = array(
-    'tarot-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=138&aff_id='.$aff_id,
     'tarot-direct-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=134&aff_id='.$aff_id,
     'pdt-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=132&aff_id='.$aff_id,
     'love-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=130&aff_id='.$aff_id,
-    'tarot-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=130&aff_id='.$aff_id,
+    'tarot-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=138&aff_id='.$aff_id,
 );
 
 if($source == 'strandlink'){

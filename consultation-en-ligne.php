@@ -327,6 +327,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
 
 <div class="avis">
+    <h4 class="custmer-service" > SERVICE CLIENT : 04.82.53.71.59</h4>
 
    <div class="splash-content">
 

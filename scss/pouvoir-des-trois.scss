@@ -1104,3 +1104,17 @@ ui-datepicker-calendar {
     transform: scale(0);
   }
 }
+
+.custmer-service {
+  float: right;
+  margin-right: 7rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 544px) {
+
+  .custmer-service {
+    margin-right: 0rem;
+  }
+}
