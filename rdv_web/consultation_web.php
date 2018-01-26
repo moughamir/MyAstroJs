@@ -45,7 +45,8 @@ if($crypto != '' && !preg_match("$[0-9]{3}$", $crypto)){
 if($planning_horaire_selection == ''){
     $err['planning_horaire_selection'] = 'Veuillez choisir l\'horaire de la consultation.';
 }
-$date_rdv = new DateTime($planning_horaire_selection);
+
+$date_rdv = DateTime::createFromFormat("d/m/Y H:i", $planning_horaire_selection);
 
 if($date_rdv <= new DateTime() ){
     $err['planning_horaire_selection_before'] = 'Vous ne pouvez pas choisir cette heure Veuillez selectionner une autre horaire de la consultation.';
