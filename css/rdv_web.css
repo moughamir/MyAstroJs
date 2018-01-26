@@ -510,6 +510,10 @@ body.consultation-en-ligne .left-part .content .txt-content {
 }
 
 @media (max-width: 767px) {
+
+    .custmer-service {
+        margin-top: -38rem!important;
+     }
     .textItem {
         margin-left: 10%;
     }
