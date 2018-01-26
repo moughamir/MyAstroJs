@@ -236,6 +236,12 @@ elseif(empty($err) && !isset($_COOKIE['consultation_5'])) {
     $err['sys'] = 'vous avez déjà profité 5 fois de l\'offre 10 minutes.';
 }
 
+if (empty($err) && !isset($_COOKIE['consultation_jour'])) {
+    setcookie('consultation_jour', '1', time() + 24*3600, null, null, false, true);
+}else {
+    $err['sys'] = 'Vous pouvez prendre seulement 1 seul rendez-vous web par jour.';
+}
+
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION  COORDONNEE BANCAIRE                         *
  * ========================================================================== */
