@@ -26,6 +26,7 @@ $tchatabo_dri =  [
     'tarot-direct-merci' => ['cookie' => true],
     'tarot-direct-rentree-merci' => ['cookie' => true],
     'quizz-rentree-result?chat=1' => ['cookie' => true],
+    'nouvel-an-chinois-18-tchat-d ' => ['cookie' => true],
 ];
 $dri  = isset($param['dri']) ? urldecode($param['dri']) : false;
 $dri2 = isset($param['dri2']) ? urldecode($param['dri2']) : 'merci-voyance';
