@@ -1551,3 +1551,37 @@ a:visited {
     }
   }
 }
+
+#acces-gv {
+
+
+  .modal-dialog {
+    width: 420px
+   }
+
+  .Button {
+    width: 80%;
+    font-weight: bold;
+  }
+
+  .modal-header {
+    background: #615d5e;
+    line-height:3.428571;
+    color: #ffffff;
+    text-align: center;
+
+    .acces-form-header {
+
+      font-weight: bold;
+    }
+  }
+
+  .psychic {
+   z-index: 9999;
+   }
+
+  .FormContainer {
+    margin-top: 0px;
+  }
+
+}
