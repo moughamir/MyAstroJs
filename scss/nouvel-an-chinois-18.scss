@@ -140,9 +140,11 @@ body.DRI.Amour .SiteLogo {
     stroke: #ef6f90;
     fill: #ef6f90;
 }
-.PageWrapper{
+
+.PageWrapper {
     transform-style: unset !important;
 }
+
 .PageTitle {
     max-width: 420px;
     margin: auto;
@@ -577,6 +579,16 @@ body.DRI.Amour .ReassuranceList {
     }
 }
 
+.Step2 {
+    select.FormField-Input, .Fields-Table-Row {
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .FormField-Input{
+        color: #fff;
+    }
+}
+
 .Step2,
 .DRI.Amour {
     .ReassuranceList-Item {
@@ -736,7 +748,7 @@ body.DRI.Amour .How {
     background-size: contain;
     display: inline-block;
     position: absolute;
-    @include respond-to("mobile"){
+    @include respond-to("mobile") {
         width: 72px;
         height: 87px;
     }
@@ -744,7 +756,7 @@ body.DRI.Amour .How {
         transform: rotate(-40deg);
         left: -100px;
         @extend .evantail;
-        @include respond-to("mobile"){
+        @include respond-to("mobile") {
             left: 100px;
         }
     }
@@ -752,7 +764,7 @@ body.DRI.Amour .How {
         transform: rotate(40deg);
         right: -100px;
         @extend .evantail;
-        @include respond-to("mobile"){
+        @include respond-to("mobile") {
             right: 100px;
         }
     }
