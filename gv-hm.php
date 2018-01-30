@@ -13,10 +13,9 @@ $assets = 'images_landing/grande-voyance/18';
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>La Grande Voyance 2018 - MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets; ?>/favicon.png"/>
+        <link rel="stylesheet" href="css/gv/bootstrap.min.css">
         <link rel="stylesheet" href="css/grande-voyance-dri.css" type="text/css"/>
-        <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/grande-voyance.css" type="text/css"/>
-
 
     </head>
 
@@ -361,12 +360,19 @@ $assets = 'images_landing/grande-voyance/18';
         <script type="text/javascript" src="js/grande-voyance.js"></script>
         <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet"/>
         <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.js"></script>
 
-      <script type="text/javascript" >
-          $("#acces-gv").modal({
-              backdrop: 'static',
-              keyboard: false
-          });
+
+    <script type="text/javascript" >
+
+        if (!Cookies.get('accesFormShown')) {
+
+            $("#acces-gv").modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+
       </script>
     </body>
 

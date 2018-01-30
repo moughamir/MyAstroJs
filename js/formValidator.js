@@ -176,6 +176,8 @@ $(document).ready(function () {
 
                  if (response.hasOwnProperty('acces_form_gv')) {
                     $("#acces-gv").modal('hide');
+                     Cookies.set('accesFormShown', true);
+
                  }
 
                     if (response.hasOwnProperty('error')) {

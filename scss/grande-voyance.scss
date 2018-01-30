@@ -1552,6 +1552,7 @@ a:visited {
   }
 }
 
+
 #acces-gv {
 
   .modal-content {
@@ -1613,3 +1614,12 @@ a:visited {
   }
 
 }
+
+#gvApp .page-header {
+  border-bottom: none;
+  .title {
+    font-family: sans-serif;
+  }
+}
+
+
