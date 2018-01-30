@@ -72,7 +72,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                         <div class="FormContainer-Fields">
                             <!-- ########## identification formulaire ########## -->
                             <input type="hidden" name="method" value="signe-astro-chinois" />
-                            <input type="hidden" name="dri" value="nouvel-an-chinois-18-tel-tchat.php" />
+                            <input type="hidden" name="dri" value="nouvel-an-chinois-18-tel-tchat" />
                             <input type="hidden" name="redirect_method" value="reload_form" />
                             <!-- ############################################### -->
                             <div class="Fields-Table">
