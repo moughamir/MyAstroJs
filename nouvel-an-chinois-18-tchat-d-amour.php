@@ -50,7 +50,7 @@ $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
                 </div>
                 <article class="FormContainer origami" id="vm-anchor">
                     <div class="FormContainer-Wrapper">
-                        <div class="DRI-Slogan">Profitez d’une consultation privée <br> 5 minutes de TCHAT GRATUITS</div>
+                        <div class="DRI-Slogan">Profitez d’une consultation privée <br> 5 minutes de TCHAT GRATUITES</div>
 
                         <div class="FormContainer-Fields">
                             <form method="post">
