@@ -1554,15 +1554,34 @@ a:visited {
 
 #acces-gv {
 
+  .modal-content {
+    top: 150px;
+   }
+
+  .modal-body {
+    padding: 0rem;
+    margin-top: -20px;
+  }
 
   .modal-dialog {
-    width: 420px
+    width: 420px;
    }
 
   .Button {
     width: 80%;
     font-weight: bold;
+    font-size: 16px;
+    padding: 0.5rem;
   }
+
+  .FormContainer {
+    padding: 0rem;
+    background-color: #eee;
+  }
+
+  .FormContainer-Fields {
+    margin-top: 1.5rem;
+   }
 
   .modal-header {
     background: #615d5e;
@@ -1573,6 +1592,7 @@ a:visited {
     .acces-form-header {
 
       font-weight: bold;
+      font-size: 1.6rem;
     }
   }
 
@@ -1581,7 +1601,15 @@ a:visited {
    }
 
   .FormContainer {
-    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .FormField-Input {
+
+    border: 1px solid #8f5f7a;
+    line-height: 1.1;
+    padding: 0.4rem 1.2rem;
   }
 
 }

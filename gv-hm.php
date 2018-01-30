@@ -13,9 +13,10 @@ $assets = 'images_landing/grande-voyance/18';
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>La Grande Voyance 2018 - MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets; ?>/favicon.png"/>
-        <link rel="stylesheet" href="css/grande-voyance.css" type="text/css"/>
         <link rel="stylesheet" href="css/grande-voyance-dri.css" type="text/css"/>
         <link rel="stylesheet" href="rdv_web/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/grande-voyance.css" type="text/css"/>
+
 
     </head>
 

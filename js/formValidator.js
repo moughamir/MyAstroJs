@@ -123,6 +123,8 @@ $(document).ready(function () {
                 }
                 if (response.hasOwnProperty('reload_form')) {
                     // Remplacement du formulaire
+                    $("#acces-gv").modal('hide');
+
                     $.ajax({
                         url: response.reload_form,
                         type: 'POST',
