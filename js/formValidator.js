@@ -123,7 +123,6 @@ $(document).ready(function () {
                 }
                 if (response.hasOwnProperty('reload_form')) {
                     // Remplacement du formulaire
-                    $("#acces-gv").modal('hide');
 
                     $.ajax({
                         url: response.reload_form,
@@ -174,7 +173,12 @@ $(document).ready(function () {
                     }
 
                 }
-                if (response.hasOwnProperty('error')) {
+
+                 if (response.hasOwnProperty('acces_form_gv')) {
+                    $("#acces-gv").modal('hide');
+                 }
+
+                    if (response.hasOwnProperty('error')) {
                     // Affichage des erreurs
                     var alert_form_errors = $(alert_error);
                     var err = response.error;

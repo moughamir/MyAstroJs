@@ -41,12 +41,11 @@ $assets = 'images_landing/grande-voyance/18';
                                     <input type="hidden" name="source" value="gv-hm" />
                                     <input type="hidden" name="method" value="general-suscribe" />
                                     <input type="hidden" name="support" value="voyance" />
-                                    <input type="hidden" name="redirect_method" value="reload_form" />
+                                    <input type="hidden" name="acces_form_popup" value="acces_form_popup" />
                                     <input type="hidden" name="site" value="myastro.fr" />
                                     <input type="hidden" name="affiliation" value="" />
                                     <input type="hidden" name="pays" value="FR" />
-                                    <input type="hidden" name="dri" value="gv-hm" />
-                                    <input type="hidden" name="question_code" value="" />
+                                    <input type="hidden" name="question_code" value="question_1" />
                                     <input type="hidden" name="optional_birthdate" value="1" />
 
                                     <!-- ########## autres champs pré-remplis ########## -->
