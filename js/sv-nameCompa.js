@@ -26,7 +26,9 @@ var letters = {
     other = '{{OTHER}}',
     names = {},
     score = {},
-    submit = $('.btn-submit'),
+    submit = $('.result'),
+    nextQ = $('.next'),
+    qPos = 0,
     person = [],
     path, mapObj;
 var personOne, personTwo;
@@ -56,6 +58,10 @@ $(document).ready(function() {
             score[name] = singleDigitScore;
         }
     }
+    nextQ.on('click', function(){
+        qPos++;
+        console.log(qPos);
+    });
     submit.on('click', function() {
         $(".step-1").addClass('hidden');
         $(".result").removeClass('hidden');

@@ -238,7 +238,17 @@ body {
 		}
 	}
 }
-
+.step-1{
+	article{
+		min-height: 120px;
+	}
+}
+.question{
+	color: $secondary;
+	font-family: $font1;
+	font-size: 2.1rem;
+	padding: 10px 0;
+}
 .FormField-TableInputContainer.gender {
 	max-width: initial;
 	display: flex;

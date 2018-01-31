@@ -65,7 +65,7 @@ $assets = 'images_landing/sv/18/';
                 </div>
               </div>
               </article>
-              <article id="question-2">
+              <article id="question-2" class="hidden">
                 <div class="question">Vous êtes :</div>
                 <div class="FormField radio">
                 <div class="FormField-TableInputContainer fixed-2-col gender">
@@ -81,7 +81,7 @@ $assets = 'images_landing/sv/18/';
                 </div>
               </div>
               </article>
-              <article id="question-3">
+              <article id="question-3" class="hidden">
                 <div class="FormField">
                   <label for="mon-prenom" class="FormField-Label">Votre prénom</label>
                   <input class="name FormField-Input" type="text" name="prenom" placeholder="Votre prénom" value="<?= $prenom;?>" />
@@ -91,43 +91,43 @@ $assets = 'images_landing/sv/18/';
                   <input class="name FormField-Input" type="text" name="conjoint" placeholder="Prénom de l’être aimé" required />
                 </div>
               </article>
-              
-              <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
+              <button class="FormContainer-Submit btn-submit next" />Suivant <span class="arrow"></span></button>
+              <button class="FormContainer-Submit btn-submit result hidden" />voir le résultat</button>
             </section>
             
-        <section class="result hidden">
-        <div class="loveOmeter">0</div>
-        <div class="FormField"> <label for="tel" class="FormField-Label">Mon numéro de téléphone</label> <input id="tel " type="tel" class="FormField-Input" name="tel" required value="<?= $tel;?>" /> </div>
-        <div class="Fields-Table-Row"> <label for="pays" class="FormField-Label">Votre pays</label>
-        <div class="FormField"> <select name="pays" id="pays" class="FormField-Input" required>
-        <option value="" selected>Votre Pays</option>
-        <option value="BE">Belgique</option>
-        <option value="CA">Canada</option>
-        <option value="LU">Luxembourg</option>
-        <option value="CH">Suisse</option>
-        <option value="FR" selected>France Métropolitaine</option>
-        <optgroup label="DOM-TOM">
-        <option value="MQ">Martinique</option>
-        <option value="GP">Guadeloupe</option>
-        <option value="GF">Guyane</option>
-        <option value="RE">La Réunion</option>
-        <option value="YT">Mayotte</option>
-        <option value="PM">St Pierre et Miquelon</option>
-        <option value="BL">St Barthélémy</option>
-        <option value="SM">St Martin</option>
-        <option value="WF">Wallis et Futunua</option>
-        <option value="PF">Polynésie Française</option>
-        <option value="NC">Nouvelle Calédonie</option>
-        </optgroup>
-        <option value="ZZ">Autre</option>
-        </select> </div>
-        </div> <input type="text" name="antisp" value="" style="display: none" /> <button class="FormContainer-Submit" type="submit" name="demande_rappel">Rappel Gratuit</button> </section>
-        </form>
-        </div>
-        </article>
-      </div>
-    </div>
-  </section>
+            <section class="result hidden">
+            <div class="loveOmeter">0</div>
+            <div class="FormField"> <label for="tel" class="FormField-Label">Mon numéro de téléphone</label> <input id="tel " type="tel" class="FormField-Input" name="tel" required value="<?= $tel;?>" /> </div>
+            <div class="Fields-Table-Row"> <label for="pays" class="FormField-Label">Votre pays</label>
+            <div class="FormField"> <select name="pays" id="pays" class="FormField-Input" required>
+            <option value="" selected>Votre Pays</option>
+            <option value="BE">Belgique</option>
+            <option value="CA">Canada</option>
+            <option value="LU">Luxembourg</option>
+            <option value="CH">Suisse</option>
+            <option value="FR" selected>France Métropolitaine</option>
+            <optgroup label="DOM-TOM">
+            <option value="MQ">Martinique</option>
+            <option value="GP">Guadeloupe</option>
+            <option value="GF">Guyane</option>
+            <option value="RE">La Réunion</option>
+            <option value="YT">Mayotte</option>
+            <option value="PM">St Pierre et Miquelon</option>
+            <option value="BL">St Barthélémy</option>
+            <option value="SM">St Martin</option>
+            <option value="WF">Wallis et Futunua</option>
+            <option value="PF">Polynésie Française</option>
+            <option value="NC">Nouvelle Calédonie</option>
+            </optgroup>
+            <option value="ZZ">Autre</option>
+            </select> </div>
+            </div> <input type="text" name="antisp" value="" style="display: none" /> <button class="FormContainer-Submit" type="submit" name="demande_rappel">Rappel Gratuit</button> </section>
+            </form>
+            </div>
+            </article>
+            </div>
+            </div>
+            </section>
 <p class="SiteCopyright">
 <?php include('include/footer_copyright.php');?> </p>
 <!-- #### SCRIPTS #### -->
