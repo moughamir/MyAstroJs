@@ -59,11 +59,27 @@ $assets = 'images_landing/sv/18/';
                   <div class="FormField-TableInputContainer-Cell">
                      <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
                     <label for="sexe-h" class="FormField-Label"><span class="ico-man"><?php include($assets."mars.svg"); ?></span>un homme</label>
-                   
                   </div>
                 </div>
               </div>
-                <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
+              <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
+            </section>
+            
+            <section class="step-2">
+               <div class="FormField radio">
+                <div class="FormField-TableInputContainer fixed-2-col gender">
+                  <div class="FormField-TableInputContainer-Cell">
+                    <input type="radio" name="status" value="couple" id="status-c" class="FormField-Input" />
+                    <label for="status-c" class="FormField-Label "><span class="ico-couple"><?php include($assets."couple.svg"); ?></span>Déja en couple</label>
+                    
+                  </div>
+                  <div class="FormField-TableInputContainer-Cell">
+                     <input type="radio" name="status" value="single" id="status-s" class="FormField-Input" />
+                    <label for="status-s" class="FormField-Label"><span class="ico-single"><?php include($assets."single.svg"); ?></span>Célibataire</label>
+                  </div>
+                </div>
+              </div>
+              <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
             </section>
             
         <section class="result hidden">

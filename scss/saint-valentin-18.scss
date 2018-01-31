@@ -227,7 +227,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	&-woman,
-	&-man {
+	&-man,
+	&-single,
+	&-couple {
 		@extend .ico;
 		margin-right: 8px;
 		svg {
@@ -260,6 +262,7 @@ body {
 		position: absolute;
 		left: -18px;
 		&:checked+label {
+			font-weight: 600;
 			color: $active;
 			svg {
 				fill: $active;
@@ -269,8 +272,6 @@ body {
 }
 
 .FormField-Label {
-	text-transform: uppercase;
-	font-weight: 600;
 	color: $passive;
 	svg {
 		fill: $passive;
