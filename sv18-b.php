@@ -49,7 +49,9 @@ $assets = 'images_landing/sv/18/';
             <form method="post">
               
             <section class="step-1">
-              <div class="FormField radio">
+              <article id="question-1">
+                <div class="question">Vous êtes :</div>
+                <div class="FormField radio">
                 <div class="FormField-TableInputContainer fixed-2-col gender">
                   <div class="FormField-TableInputContainer-Cell">
                     <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
@@ -62,11 +64,10 @@ $assets = 'images_landing/sv/18/';
                   </div>
                 </div>
               </div>
-              <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
-            </section>
-            
-            <section class="step-2">
-               <div class="FormField radio">
+              </article>
+              <article id="question-2">
+                <div class="question">Vous êtes :</div>
+                <div class="FormField radio">
                 <div class="FormField-TableInputContainer fixed-2-col gender">
                   <div class="FormField-TableInputContainer-Cell">
                     <input type="radio" name="status" value="couple" id="status-c" class="FormField-Input" />
@@ -79,6 +80,18 @@ $assets = 'images_landing/sv/18/';
                   </div>
                 </div>
               </div>
+              </article>
+              <article id="question-3">
+                <div class="FormField">
+                  <label for="mon-prenom" class="FormField-Label">Votre prénom</label>
+                  <input class="name FormField-Input" type="text" name="prenom" placeholder="Votre prénom" value="<?= $prenom;?>" />
+                </div>
+                <div class="FormField">
+                  <label for="mon-prenom" class="FormField-Label">Prénom de l’être aimé</label>
+                  <input class="name FormField-Input" type="text" name="conjoint" placeholder="Prénom de l’être aimé" required />
+                </div>
+              </article>
+              
               <button class="FormContainer-Submit btn-submit" value="next"/>Suivant <span class="arrow"></span></button>
             </section>
             
