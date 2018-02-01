@@ -1633,6 +1633,14 @@ a:visited {
   }
 }
 
+@media (max-width: 768px) { // this is the 768px breakpoint
+
+  #acces-gv .modal-header .acces-form-header {
+    font-size: 1.3rem;
+    padding-bottom: 12px;
+  }
+}
+
 @media (min-width: 992px) { // this is the 992px breakpoint
   .modal-dialog {
     max-width: 800px;
