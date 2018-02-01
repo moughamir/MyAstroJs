@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import "s-landing-voyance-2";
+@import "modules/mixins";
+@import "modules/animations";
 /* Palette */
 
 $primary: #6f414b;
@@ -114,11 +116,10 @@ body {
 .SiteLogo {
 	background-color: transparent;
 	fill: $white;
-	height: 110px;
 	stroke: $white;
 	stroke-width: 1.5;
 	stroke-miterlimit: 10;
-	width: 110px;
+	@include square(110px);
 }
 
 .PageLogo {
@@ -216,13 +217,11 @@ body {
 .arrow {
 	display: inline-block;
 	background: transparent url($assets + 'next.png');
-	width: 32px;
-	height: 22px;
+	@include size(32px, 22px)
 }
 
 .ico {
-	height: 46px;
-	width: 46px;
+	@include square(46px);
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -233,22 +232,50 @@ body {
 		@extend .ico;
 		margin-right: 8px;
 		svg {
-			width: 100%;
-			height: 100%;
+			@include square(100%);
 		}
 	}
 }
-.step-1{
-	article{
-		min-height: 120px;
-	}
+
+.step-1 {
+	overflow: hidden;
 }
-.question{
+
+.question {
 	color: $secondary;
 	font-family: $font1;
 	font-size: 2.1rem;
 	padding: 10px 0;
+	&-container {
+		min-height: 186px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		box-sizing: content-box;
+		article {
+			min-height: 100px;
+			width: 100%;
+			position: absolute;
+			top: 28px;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			.radio{
+				transform: translateY(100%);
+			}
+		}
+	}
 }
+
+.nextQuestion {
+	@include moveToLeft(600ms);
+}
+
+.showQuestion {
+	@include moveFromRight(600ms);
+}
+
 .FormField-TableInputContainer.gender {
 	max-width: initial;
 	display: flex;
@@ -365,8 +392,7 @@ body {
 }
 
 .polaroid {
-	width: 30rem;
-	height: 35.5rem;
+	@include size(30rem, 35.5rem);
 	border: 0px solid red;
 }
 

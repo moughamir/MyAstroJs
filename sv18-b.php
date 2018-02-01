@@ -49,50 +49,51 @@ $assets = 'images_landing/sv/18/';
             <form method="post">
               
             <section class="step-1">
-              <article id="question-1">
-                <div class="question">Vous êtes :</div>
-                <div class="FormField radio">
-                <div class="FormField-TableInputContainer fixed-2-col gender">
-                  <div class="FormField-TableInputContainer-Cell">
-                    <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
-                    <label for="sexe-f" class="FormField-Label "><span class="ico-woman"><?php include($assets."venus.svg"); ?></span>une femme</label>
-                    
-                  </div>
-                  <div class="FormField-TableInputContainer-Cell">
-                     <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input" />
-                    <label for="sexe-h" class="FormField-Label"><span class="ico-man"><?php include($assets."mars.svg"); ?></span>un homme</label>
+              <div class="question">Vous êtes :</div>
+              <div class="question-container">
+                <article id="question-1">
+                  <div class="FormField radio">
+                  <div class="FormField-TableInputContainer fixed-2-col gender">
+                    <div class="FormField-TableInputContainer-Cell">
+                      <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
+                      <label for="sexe-f" class="FormField-Label "><span class="ico-woman"><?php include($assets."venus.svg"); ?></span>une femme</label>
+                      
+                    </div>
+                    <div class="FormField-TableInputContainer-Cell">
+                       <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input"/>
+                      <label for="sexe-h" class="FormField-Label"><span class="ico-man"><?php include($assets."mars.svg"); ?></span>un homme</label>
+                    </div>
                   </div>
                 </div>
+                </article>
+                <article id="question-2" class="hidden">
+                  <div class="FormField radio">
+                  <div class="FormField-TableInputContainer fixed-2-col gender">
+                    <div class="FormField-TableInputContainer-Cell">
+                      <input type="radio" name="status" value="couple" id="status-c" class="FormField-Input"  />
+                      <label for="status-c" class="FormField-Label "><span class="ico-couple"><?php include($assets."couple.svg"); ?></span>Déja en couple</label>
+                      
+                    </div>
+                    <div class="FormField-TableInputContainer-Cell">
+                       <input type="radio" name="status" value="single" id="status-s" class="FormField-Input"/>
+                      <label for="status-s" class="FormField-Label"><span class="ico-single"><?php include($assets."single.svg"); ?></span>Célibataire</label>
+                    </div>
+                  </div>
+                </div>
+                </article>
+                <article id="question-3" class="hidden">
+                  <div class="FormField">
+                    <label for="mon-prenom" class="FormField-Label">Votre prénom</label>
+                    <input class="name FormField-Input" type="text" name="prenom" placeholder="Votre prénom" value="<?= $prenom;?>" />
+                  </div>
+                  <div class="FormField">
+                    <label for="mon-prenom" class="FormField-Label">Prénom de l’être aimé</label>
+                    <input class="name FormField-Input" type="text" name="conjoint" placeholder="Prénom de l’être aimé" />
+                  </div>
+                </article>
               </div>
-              </article>
-              <article id="question-2" class="hidden">
-                <div class="question">Vous êtes :</div>
-                <div class="FormField radio">
-                <div class="FormField-TableInputContainer fixed-2-col gender">
-                  <div class="FormField-TableInputContainer-Cell">
-                    <input type="radio" name="status" value="couple" id="status-c" class="FormField-Input" />
-                    <label for="status-c" class="FormField-Label "><span class="ico-couple"><?php include($assets."couple.svg"); ?></span>Déja en couple</label>
-                    
-                  </div>
-                  <div class="FormField-TableInputContainer-Cell">
-                     <input type="radio" name="status" value="single" id="status-s" class="FormField-Input" />
-                    <label for="status-s" class="FormField-Label"><span class="ico-single"><?php include($assets."single.svg"); ?></span>Célibataire</label>
-                  </div>
-                </div>
-              </div>
-              </article>
-              <article id="question-3" class="hidden">
-                <div class="FormField">
-                  <label for="mon-prenom" class="FormField-Label">Votre prénom</label>
-                  <input class="name FormField-Input" type="text" name="prenom" placeholder="Votre prénom" value="<?= $prenom;?>" />
-                </div>
-                <div class="FormField">
-                  <label for="mon-prenom" class="FormField-Label">Prénom de l’être aimé</label>
-                  <input class="name FormField-Input" type="text" name="conjoint" placeholder="Prénom de l’être aimé" required />
-                </div>
-              </article>
-              <button class="FormContainer-Submit btn-submit next" />Suivant <span class="arrow"></span></button>
-              <button class="FormContainer-Submit btn-submit result hidden" />voir le résultat</button>
+              <button class="FormContainer-Submit btn-submit next"/>Suivant <span class="arrow"></span></button>
+              <button class="FormContainer-Submit btn-submit result-cta hidden" />voir le résultat</button>
             </section>
             
             <section class="result hidden">
@@ -121,7 +122,9 @@ $assets = 'images_landing/sv/18/';
             </optgroup>
             <option value="ZZ">Autre</option>
             </select> </div>
-            </div> <input type="text" name="antisp" value="" style="display: none" /> <button class="FormContainer-Submit" type="submit" name="demande_rappel">Rappel Gratuit</button> </section>
+            </div> <input type="text" name="antisp" value="" style="display: none" />
+            <button class="FormContainer-Submit" type="submit" name="demande_rappel">Recevoir l’interpretation par email</button>
+            </section>
             </form>
             </div>
             </article>
