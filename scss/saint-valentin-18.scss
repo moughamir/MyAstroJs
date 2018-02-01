@@ -237,6 +237,47 @@ body {
 	}
 }
 
+.lovers {
+	position: absolute;
+	@include size(960px, 750px);
+	background: transparent url($assets + 'lovers.png') no-repeat center;
+	background-size: contain;
+	top: -110px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -10;
+	animation: fadeIn 2600ms ease-in-out both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	from,
+	50%,
+	to {
+		background-color: $passive;
+	}
+	25%,
+	75% {
+		background-color: lighten($passive, 15%);
+	}
+}
+
+.result-cta,
+button[type="submit"] {
+	animation: flash 900ms infinite both ease;
+	&:hover {
+		animation: none;
+	}
+}
+
 .step-1 {
 	overflow: hidden;
 }
@@ -261,7 +302,7 @@ body {
 			right: 0;
 			left: 0;
 			bottom: 0;
-			.radio{
+			.radio {
 				transform: translateY(100%);
 			}
 		}
@@ -382,6 +423,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	animation: scaleUp 3s ease both;
+}
+
+@keyframes scaleUp {
+	from {
+		transform: scale(.2);
+	}
 }
 
 /* ------------------------------- ANIMATIONS ------------------------------- */

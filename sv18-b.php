@@ -42,13 +42,15 @@ $assets = 'images_landing/sv/18/';
         <article class="FormContainer" id="vm-anchor">
           <h2 class="FormContainer-Header">Testez la compatibilité de vos prénoms :</h2>
           
-          <div class="lovers"></div>
+          
           
           <div class="FormContainer-Fields">
+            <div class="lovers"></div>
             <p class="alert alert-danger" style="display: none"></p>
             <form method="post">
               
             <section class="step-1">
+              
               <div class="question">Vous êtes :</div>
               <div class="question-container">
                 <article id="question-1">
