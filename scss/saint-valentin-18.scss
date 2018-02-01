@@ -19,6 +19,8 @@ $font1: "Open Sans",
 sans-serif;
 $font2: 'Great Vibes',
 cursive;
+$font3: 'Fjalla One',
+sans-serif;
 /* Images */
 
 $img_dir: "/images_landing/sv/18/";
@@ -64,7 +66,7 @@ button {
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 /* --------------------------------- LAYOUT --------------------------------- */
@@ -181,6 +183,10 @@ body {
 	}
 }
 
+.noMaxw {
+	max-width: initial !important;
+}
+
 /* ------------------------------- FOMULAIRE -------------------------------- */
 
 .FormContainer {
@@ -190,8 +196,9 @@ body {
 		padding: 2rem;
 	}
 	&-Header {
-		font-family: $font2;
-		font-size: 4rem;
+		font-family: $font3;
+		font-size: 3rem;
+		color: $primary;
 	}
 	&-Submit {
 		background-color: $secondary;
@@ -212,6 +219,11 @@ body {
 			color: #fff;
 		}
 	}
+}
+
+button[type='submit'] {
+	font-size: 1.6rem;
+	width: auto;
 }
 
 .arrow {
@@ -237,6 +249,23 @@ body {
 	}
 }
 
+.cols-x2 {
+	width: 50%;
+}
+
+.names {
+	font-family: $font2;
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 0;
+	line-height: 1.2;
+	.person-a,
+	.person-b {
+		font-size: 4rem;
+		color: $primary;
+	}
+}
+
 .lovers {
 	position: absolute;
 	@include size(960px, 750px);
@@ -247,6 +276,11 @@ body {
 	transform: translateX(-50%);
 	z-index: -10;
 	animation: fadeIn 2600ms ease-in-out both;
+	&-b {
+		@include size(100%, 464px);
+		background: transparent url($assets + 'lovers-b.png') no-repeat center;
+		background-size: contain;
+	}
 }
 
 @keyframes fadeIn {
@@ -268,6 +302,10 @@ body {
 	75% {
 		background-color: lighten($passive, 15%);
 	}
+}
+
+.result {
+	display: flex;
 }
 
 .result-cta,
@@ -377,6 +415,12 @@ button[type="submit"] {
 .FormField-Input {
 	border: none;
 	transition: all 0.25s ease-in;
+	width: 30rem;
+	margin: 0 auto;
+	font-family: $font1;
+	color: $primary;
+	font-weight: 600;
+	font-size: 1.8rem;
 	&:active,
 	&:focus {
 		box-shadow: 0 0 6px -1px $txt;

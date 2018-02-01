@@ -87,7 +87,9 @@ $(document).ready(function() {
 	submit.on('click', function() {
 		$(".step-1").addClass('hidden');
 		$(".result").removeClass('hidden');
-		$(".FormContainer").addClass('scale');
+		$(".FormContainer").addClass('scale noMaxw');
+		$('.lovers').toggleClass('hidden');
+		$('.FormContainer-Header').css('visibility', 'hidden');
 		$(".more").show();
 		$(".name").each(function() {
 			names[$(this).attr("name")] = $(this).val();
@@ -128,7 +130,7 @@ $(document).ready(function() {
 		else {
 			calculateRate(mapObj, paths.C);
 		}
-		// remplacer le sous-titre par les Prénoms
-		$('.FormContainer-Header').text(capitalize(person[0]) + ' & ' + capitalize(person[1]));
+		$('.person-a').text(capitalize(person[0]));
+		$('.person-b').text(capitalize(person[1]));
 	});
 });
