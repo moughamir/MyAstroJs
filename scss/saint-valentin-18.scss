@@ -83,6 +83,10 @@ body {
 	font-size: 1.4rem;
 	font-weight: 400;
 	padding: 2rem;
+	@include respond-to('mobile'){
+		padding: 0.5rem;
+	}
+	min-height: 100vh;
 }
 
 .ContentBand {
@@ -122,6 +126,9 @@ body {
 	stroke-width: 1.5;
 	stroke-miterlimit: 10;
 	@include square(110px);
+	@include respond-to('mobile'){
+		@include square(80px);
+	}
 }
 
 .PageLogo {
@@ -199,6 +206,9 @@ body {
 		font-family: $font3;
 		font-size: 3rem;
 		color: $primary;
+		@include respond-to('mobile'){
+			font-size: 2.2rem;
+		}
 	}
 	&-Submit {
 		background-color: $secondary;
@@ -315,7 +325,9 @@ button[type="submit"] {
 		animation: none;
 	}
 }
-
+.FormField-TableInputContainer.fixed-2-col .FormField-TableInputContainer-Cell {
+    width: 50%;
+}
 .step-1 {
 	overflow: hidden;
 }
@@ -442,11 +454,7 @@ button[type="submit"] {
 	}
 }
 
-@media screen and (max-width: 640px) {
-	.FormContainer-Header {
-		font-size: 3rem;
-	}
-}
+
 
 @media screen and (max-width: 470px) {
 	.FormContainer {
