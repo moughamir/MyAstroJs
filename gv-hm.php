@@ -23,7 +23,7 @@ $assets = 'images_landing/grande-voyance/18';
 
     <!-- Modal -->
     <div id="acces-gv" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg modal-sm">
 
             <!-- Modal content-->
             <div class="modal-content">
