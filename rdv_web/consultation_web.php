@@ -195,7 +195,6 @@ if($client_id == '0'){
                 } else {
                     $kgestion_id = $kgestion_insert->id;
                     $client_id = $kgestion_id;
-
                 }
             }
 
@@ -218,29 +217,15 @@ if($current_date->format('Y') > $expiration_annee  || ($current_date->format('Y'
     $err['expiration'] = 'la date d\'expiration de la carte bancaire est invalide.';
 }
 
-if (empty($err) && !isset($_COOKIE['consultation_1'])) {
-    setcookie('consultation_1', '1', time() + 6*24*3600, null, null, false, true);
-}
-elseif (empty($err) && !isset($_COOKIE['consultation_2'])) {
-    setcookie('consultation_2', '1', time() + 6*24*3600, null, null, false, true);
-}
-elseif (empty($err) && !isset($_COOKIE['consultation_3'])) {
-    setcookie('consultation_3', '1', time() + 6*24*3600, null, null, false, true);
-}
-elseif (empty($err) && !isset($_COOKIE['consultation_4'])) {
-    setcookie('consultation_4', '1', time() + 6*24*3600, null, null, false, true);
-}
-elseif(empty($err) && !isset($_COOKIE['consultation_5'])) {
-    setcookie('consultation_5', '1', time() + 6*24*3600, null, null, false, true);
-} else {
+elseif(isset($_COOKIE['consultation_5'])) {
     $err['sys'] = 'vous avez déjà profité 5 fois de l\'offre 10 minutes.';
 }
 
-if (empty($err) && !isset($_COOKIE['consultation_jour'])) {
-    setcookie('consultation_jour', '1', time() + 24*3600, null, null, false, true);
-}else {
-    $err['sys'] = 'Vous pouvez prendre seulement 1 seul rendez-vous web par jour.';
-}
+//if (empty($err) && !isset($_COOKIE['consultation_jour'])) {
+//    setcookie('consultation_jour', '1', time() + 24*3600, null, null, false, true);
+//}else {
+//    $err['sys'] = 'Vous pouvez prendre seulement 1 seul rendez-vous web par jour.';
+//}
 
 /* ========================================================================== *
  *                          ENREGISTREMENT KGESTION  COORDONNEE BANCAIRE                         *
@@ -269,8 +254,26 @@ if(empty($err)){
         if(!$kgestion_insert->success){
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
-
-            die(json_encode(array('rdv_added' => $kgestion_insert->message)));
+            if(isset($kgestion_insert->rdv_error)) {
+                die(json_encode(array('rdv_error' => $kgestion_insert->message)));
+            } else {
+                if (empty($err) && !isset($_COOKIE['consultation_1'])) {
+                    setcookie('consultation_1', '1', time() + 6*24*3600, null, null, false, true);
+                }
+                elseif (empty($err) && !isset($_COOKIE['consultation_2'])) {
+                    setcookie('consultation_2', '1', time() + 6*24*3600, null, null, false, true);
+                }
+                elseif (empty($err) && !isset($_COOKIE['consultation_3'])) {
+                    setcookie('consultation_3', '1', time() + 6*24*3600, null, null, false, true);
+                }
+                elseif (empty($err) && !isset($_COOKIE['consultation_4'])) {
+                    setcookie('consultation_4', '1', time() + 6*24*3600, null, null, false, true);
+                }
+                elseif(empty($err) && !isset($_COOKIE['consultation_5'])) {
+                    setcookie('consultation_5', '1', time() + 6*24*3600, null, null, false, true);
+                }
+                die(json_encode(array('rdv_added' => $kgestion_insert->message)));
+            }
 
         }
 
