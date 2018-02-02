@@ -92,6 +92,10 @@ body {
 .ContentBand {
 	margin-top: 0;
 	text-align: center;
+	min-height: calc(100vh - 270px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .PageWrapper {
