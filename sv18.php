@@ -6,7 +6,8 @@
   $method = "general-suscribe";
   $support = "voyance";
   $site = "myastro.fr";
-  $dri = "love-myastro/offre-gratuite";
+$dri = "love-myastro/offre-gratuite";
+$dri2 = "love-myastro/offre-gratuite";
 ?>
 <!doctype html>
 <html lang="en">
@@ -47,11 +48,11 @@
       <div class="ContentBand-Column Form" id="form-container">
         <article class="FormContainer" id="vm-anchor">
           <h2 class="FormContainer-Header">Testez la compatibilité de vos prénoms :</h2>
-          
+
           <div class="FormContainer-Fields">
             <div class="lovers"></div>
             <p class="alert alert-danger" style="display: none"></p>
-            
+
             <form class="ajax" id="form-container">
               <!-- ########## identification formulaire ########## -->
               <input type="hidden" name="source" value="<?= $url;?>" />
@@ -80,7 +81,7 @@
                       <div class="FormField-TableInputContainer-Cell">
                         <input type="radio" name="sexe" value="femme" id="sexe-f" class="FormField-Input" />
                         <label for="sexe-f" class="FormField-Label "><span class="ico-woman"><?php include($assets."venus.svg"); ?></span>une femme</label>
-                        
+
                       </div>
                       <div class="FormField-TableInputContainer-Cell">
                          <input type="radio" name="sexe" value="homme" id="sexe-h" class="FormField-Input"/>
@@ -95,7 +96,7 @@
                       <div class="FormField-TableInputContainer-Cell">
                         <input type="radio" name="status" value="couple" id="status-c" class="FormField-Input"  />
                         <label for="status-c" class="FormField-Label "><span class="ico-couple"><?php include($assets."couple.svg"); ?></span>Déja en couple</label>
-                        
+
                       </div>
                       <div class="FormField-TableInputContainer-Cell">
                          <input type="radio" name="status" value="single" id="status-s" class="FormField-Input"/>
@@ -164,7 +165,7 @@
 </div>
                   <button class="FormContainer-Submit" type="submit" name="valider">Recevoir l’interpretation par email</button>
                 </div>
-                
+
               </section>
             </form>
             </div>
