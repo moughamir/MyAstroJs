@@ -204,9 +204,47 @@ body {
 
 .sm {
 	&-h {
-		@include respond-to('mobile'){
+		@include respond-to('mobile') {
 			display: none;
 		}
+	}
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	z-index: 99;
+	@include size(100vw, 100vh);
+	margin: -2rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #000;
+	.alert {
+		z-index: 9999;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -100%);
+		position: absolute;
+	}
+}
+
+.alert {
+	border-radius: 3px;
+	min-width: 200px;
+	border: 1px solid rgba(242, 242, 242, 0.28);
+	background-color: #bde5f8;
+	border-color: darken(#bde5f8, 10%);
+	text-align: center;
+	&-success {
+		background: #dff2bf;
+		border-color: darken(#dff2bf, 10%);
+	}
+	&-warning {
+		background: #feefb3;
+		border-color: darken(#feefb3, 10%);
+	}
+	&-danger {
+		background: #ffbaba;
+		border-color: darken(#ffbaba, 10%);
 	}
 }
 
