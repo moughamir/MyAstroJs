@@ -205,6 +205,33 @@ $(document).ready(function () {
                     }
                     $(document).trigger('ajax_error');
                 }
+
+                if (response.hasOwnProperty('rdv_error')) {
+                    // Affichage des erreurs
+                    var alert_form_errors = $(alert_error);
+                    var err = response.rdv_error;
+                    $(alert_form_errors).append('<br>' + err);
+                    if (use_form_alert) {
+                        alert_form_errors = false;
+                        form_alert.show();
+                        form_alert.removeClass('hidden');
+                    } else {
+                        $(alert_form_errors).append('<br><i data-dismiss="-" style="cursor:pointer;">Cliquez pour fermer ce message</i>');
+                    }
+
+                    if (!use_modal) {
+                        form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);
+                        if (use_form_alert) {
+                            setTimeout(function () {
+                                form_overlay.fadeOut();
+                            }, 3000);
+                        }
+                    } else {
+                        $('#modal').html(alert_form_errors ? alert_form_errors : alert_error);
+                        $('#modal').modal('show');
+                    }
+                    $(document).trigger('ajax_error');
+                }
                 ;
             },
             error: function () {
