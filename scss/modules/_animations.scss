@@ -5,8 +5,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveToLeft $time+s ease both;
-            animation: moveToLeft $time+s ease both;
+    -webkit-animation: moveToLeft $time ease both;
+            animation: moveToLeft $time ease both;
 }
 @-webkit-keyframes moveToLeft {
     from { }
@@ -21,8 +21,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveFromLeft $time+s ease both;
-            animation: moveFromLeft $time+s ease both;
+    -webkit-animation: moveFromLeft $time ease both;
+            animation: moveFromLeft $time ease both;
 }
 @-webkit-keyframes moveFromLeft {
     from { -webkit-transform: translateX(-100%);}
@@ -35,8 +35,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveToRight $time+s ease both;
-            animation: moveToRight $time+s ease both;
+    -webkit-animation: moveToRight $time ease both;
+            animation: moveToRight $time ease both;
 }
 @-webkit-keyframes moveToRight { 
     from { }
@@ -51,8 +51,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveFromRight $time+s ease both;
-            animation: moveFromRight $time+s ease both;
+    -webkit-animation: moveFromRight $time ease both;
+            animation: moveFromRight $time ease both;
 }
 @-webkit-keyframes moveFromRight {
     from { -webkit-transform: translateX(100%);}
@@ -65,8 +65,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveToTop $time+s ease both;
-            animation: moveToTop $time+s ease both;
+    -webkit-animation: moveToTop $time ease both;
+            animation: moveToTop $time ease both;
 }
 @-webkit-keyframes moveToTop {
     from { }
@@ -81,8 +81,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveFromTop $time+s ease both;
-            animation: moveFromTop $time+s ease both;
+    -webkit-animation: moveFromTop $time ease both;
+            animation: moveFromTop $time ease both;
 }
 @-webkit-keyframes moveFromTop {
     from { -webkit-transform: translateY(-100%);}
@@ -95,8 +95,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveToBottom $time+s ease both;
-            animation: moveToBottom $time+s ease both;
+    -webkit-animation: moveToBottom $time ease both;
+            animation: moveToBottom $time ease both;
 }
 @-webkit-keyframes moveToBottom {
     from { }
@@ -111,8 +111,8 @@
     @if length($time) == 0 {
         $time: 0.6;
     }
-    -webkit-animation: moveFromBottom $time+s ease both;
-            animation: moveFromBottom $time+s ease both;
+    -webkit-animation: moveFromBottom $time ease both;
+            animation: moveFromBottom $time ease both;
 }
 @-webkit-keyframes moveFromBottom {
     from { -webkit-transform: translateY(100%);}
@@ -127,8 +127,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: fade $time+s ease both;
-            animation: fade $time+s ease both;
+    -webkit-animation: fade $time ease both;
+            animation: fade $time ease both;
 }
 @-webkit-keyframes fade {
     from { }
@@ -145,8 +145,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToLeftFade $time+s ease both;
-            animation: moveToLeftFade $time+s ease both;
+    -webkit-animation: moveToLeftFade $time ease both;
+            animation: moveToLeftFade $time ease both;
 }
 @-webkit-keyframes moveToLeftFade {
     from { }
@@ -161,8 +161,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveFromLeftFade $time+s ease both;
-            animation: moveFromLeftFade $time+s ease both;
+    -webkit-animation: moveFromLeftFade $time ease both;
+            animation: moveFromLeftFade $time ease both;
 }
 @-webkit-keyframes moveFromLeftFade {
     from { opacity: 0.3; -webkit-transform: translateX(-100%);}
@@ -175,8 +175,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToRightFade $time+s ease both;
-            animation: moveToRightFade $time+s ease both;
+    -webkit-animation: moveToRightFade $time ease both;
+            animation: moveToRightFade $time ease both;
 }
 @-webkit-keyframes moveToRightFade {
     from { }
@@ -191,8 +191,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveFromRightFade $time+s ease both;
-            animation: moveFromRightFade $time+s ease both;
+    -webkit-animation: moveFromRightFade $time ease both;
+            animation: moveFromRightFade $time ease both;
 }
 @-webkit-keyframes moveFromRightFade {
     from { opacity: 0.3; -webkit-transform: translateX(100%);}
@@ -205,8 +205,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToTopFade $time+s ease both;
-            animation: moveToTopFade $time+s ease both;
+    -webkit-animation: moveToTopFade $time ease both;
+            animation: moveToTopFade $time ease both;
 }
 @-webkit-keyframes moveToTopFade {
     from { }
@@ -221,8 +221,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveFromTopFade $time+s ease both;
-            animation: moveFromTopFade $time+s ease both;
+    -webkit-animation: moveFromTopFade $time ease both;
+            animation: moveFromTopFade $time ease both;
 }
 @-webkit-keyframes moveFromTopFade {
     from { opacity: 0.3; -webkit-transform: translateY(-100%);}
@@ -235,8 +235,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToBottomFade $time+s ease both;
-            animation: moveToBottomFade $time+s ease both;
+    -webkit-animation: moveToBottomFade $time ease both;
+            animation: moveToBottomFade $time ease both;
 }
 @-webkit-keyframes moveToBottomFade {
     from { }
@@ -251,8 +251,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveFromBottomFade $time+s ease both;
-            animation: moveFromBottomFade $time+s ease both;
+    -webkit-animation: moveFromBottomFade $time ease both;
+            animation: moveFromBottomFade $time ease both;
 }
 @-webkit-keyframes moveFromBottomFade {
     from { opacity: 0.3; -webkit-transform: translateY(100%);}
@@ -267,32 +267,32 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToLeft $time+s ease-in-out both;
-            animation: moveToLeft $time+s ease-in-out both;
+    -webkit-animation: moveToLeft $time ease-in-out both;
+            animation: moveToLeft $time ease-in-out both;
 }
 
 @mixin moveToRightEasing($time...){
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToRight $time+s ease-in-out both;
-            animation: moveToRight $time+s ease-in-out both;
+    -webkit-animation: moveToRight $time ease-in-out both;
+            animation: moveToRight $time ease-in-out both;
 }
 
 @mixin moveToTopEasing($time...){
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToTop $time+s ease-in-out both;
-            animation: moveToTop $time+s ease-in-out both;
+    -webkit-animation: moveToTop $time ease-in-out both;
+            animation: moveToTop $time ease-in-out both;
 }
 
 @mixin moveToBottomEasing($time...){
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: moveToBottom $time+s ease-in-out both;
-            animation: moveToBottom $time+s ease-in-out both;
+    -webkit-animation: moveToBottom $time ease-in-out both;
+            animation: moveToBottom $time ease-in-out both;
 }
 
 /* ----------------------------- SCALE AND FADE ----------------------------- */
@@ -301,8 +301,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: scaleDown $time+s ease both;
-            animation: scaleDown $time+s ease both;
+    -webkit-animation: scaleDown $time ease both;
+            animation: scaleDown $time ease both;
 }
 @-webkit-keyframes scaleDown {
     from { }
@@ -317,8 +317,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: scaleDownIn $time+s ease both;
-            animation: scaleDownIn $time+s ease both;
+    -webkit-animation: scaleDownIn $time ease both;
+            animation: scaleDownIn $time ease both;
 }
 @-webkit-keyframes scaleDownIn {
     from { opacity: 0; -webkit-transform: scale(0.1); transform: scale(0.1);}
@@ -333,8 +333,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: scaleDownOut $time+s ease both;
-            animation: scaleDownOut $time+s ease both;
+    -webkit-animation: scaleDownOut $time ease both;
+            animation: scaleDownOut $time ease both;
 }
 @-webkit-keyframes scaleDownOut {
     from { }
@@ -349,8 +349,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: scaleUp $time+s ease both;
-            animation: scaleUp $time+s ease both;
+    -webkit-animation: scaleUp $time ease both;
+            animation: scaleUp $time ease both;
 }
 @-webkit-keyframes scaleUp {
     from { opacity: 0; -webkit-transform: scale(.8);}
@@ -363,8 +363,8 @@
     @if length($time) == 0 {
         $time: 0.7;
     }
-    -webkit-animation: scaleUpOut $time+s ease both;
-            animation: scaleUpOut $time+s ease both;
+    -webkit-animation: scaleUpOut $time ease both;
+            animation: scaleUpOut $time ease both;
 }
 @-webkit-keyframes scaleUpOut {
     0% { opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
@@ -379,8 +379,8 @@
     @if length($time) == 0 {
         $time: 0.5;
     }
-    -webkit-animation: scaleUpDown $time+s ease both;
-            animation: scaleUpDown $time+s ease both;
+    -webkit-animation: scaleUpDown $time ease both;
+            animation: scaleUpDown $time ease both;
 }
 @-webkit-keyframes scaleUpDown {
     from { opacity: 0; -webkit-transform: scale(1.2);}
@@ -393,8 +393,8 @@
     @if length($time) == 0 {
         $time: 0.5;
     }
-    -webkit-animation: scaleDownUp $time+s ease both;
-            animation: scaleDownUp $time+s ease both;
+    -webkit-animation: scaleDownUp $time ease both;
+            animation: scaleDownUp $time ease both;
 }
 @-webkit-keyframes scaleDownUp {
     from { }
@@ -409,8 +409,8 @@
     @if length($time) == 0 {
         $time: 0.4;
     }
-    -webkit-animation: scaleDownCenter $time+s ease-in both;
-            animation: scaleDownCenter $time+s ease-in both;
+    -webkit-animation: scaleDownCenter $time ease-in both;
+            animation: scaleDownCenter $time ease-in both;
 }
 @-webkit-keyframes scaleDownCenter {
     from { }
@@ -425,8 +425,8 @@
     @if length($time) == 0 {
         $time: 0.4;
     }
-    -webkit-animation: scaleUpCenter $time+s ease-out both;
-            animation: scaleUpCenter $time+s ease-out both;
+    -webkit-animation: scaleUpCenter $time ease-out both;
+            animation: scaleUpCenter $time ease-out both;
 }
 @-webkit-keyframes scaleUpCenter {
     from { opacity: 0; -webkit-transform: scale(.7);}
@@ -443,8 +443,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateRightSideFirst $time+s both ease-in;
-            animation: rotateRightSideFirst $time+s both ease-in;
+    -webkit-animation: rotateRightSideFirst $time both ease-in;
+            animation: rotateRightSideFirst $time both ease-in;
 }
 @-webkit-keyframes rotateRightSideFirst {
     0% { }
@@ -463,8 +463,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateLeftSideFirst $time+s both ease-in;
-            animation: rotateLeftSideFirst $time+s both ease-in;
+    -webkit-animation: rotateLeftSideFirst $time both ease-in;
+            animation: rotateLeftSideFirst $time both ease-in;
 }
 @-webkit-keyframes rotateLeftSideFirst {
     0% { }
@@ -484,8 +484,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateTopSideFirst $time+s both ease-in;
-            animation: rotateTopSideFirst $time+s both ease-in;
+    -webkit-animation: rotateTopSideFirst $time both ease-in;
+            animation: rotateTopSideFirst $time both ease-in;
 }
 @-webkit-keyframes rotateTopSideFirst {
     0% { }
@@ -504,8 +504,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateBottomSideFirst $time+s both ease-in;
-            animation: rotateBottomSideFirst $time+s both ease-in;
+    -webkit-animation: rotateBottomSideFirst $time both ease-in;
+            animation: rotateBottomSideFirst $time both ease-in;
 }
 @-webkit-keyframes rotateBottomSideFirst {
     0% { }
@@ -644,8 +644,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipOutRight $time+s both ease-in;
-            animation: flipOutRight $time+s both ease-in;
+    -webkit-animation: flipOutRight $time both ease-in;
+            animation: flipOutRight $time both ease-in;
 }
 @-webkit-keyframes flipOutRight {
     from { }
@@ -662,8 +662,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipInLeft $time+s both ease-out;
-            animation: flipInLeft $time+s both ease-out;
+    -webkit-animation: flipInLeft $time both ease-out;
+            animation: flipInLeft $time both ease-out;
 }
 @-webkit-keyframes flipInLeft {
     from { -webkit-transform: translateZ(-1000px) rotateY(-90deg); opacity: 0.2;}
@@ -678,8 +678,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipOutLeft $time+s both ease-in;
-            animation: flipOutLeft $time+s both ease-in;
+    -webkit-animation: flipOutLeft $time both ease-in;
+            animation: flipOutLeft $time both ease-in;
 }
 @-webkit-keyframes flipOutLeft {
     from { }
@@ -696,8 +696,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipInRight $time+s both ease-out;
-            animation: flipInRight $time+s both ease-out;
+    -webkit-animation: flipInRight $time both ease-out;
+            animation: flipInRight $time both ease-out;
 }
 @-webkit-keyframes flipInRight {
     from { -webkit-transform: translateZ(-1000px) rotateY(90deg); opacity: 0.2;}
@@ -712,8 +712,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipOutTop $time+s both ease-in;
-            animation: flipOutTop $time+s both ease-in;
+    -webkit-animation: flipOutTop $time both ease-in;
+            animation: flipOutTop $time both ease-in;
 }
 @-webkit-keyframes flipOutTop {
     from { }
@@ -730,8 +730,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipInBottom $time+s both ease-out;
-            animation: flipInBottom $time+s both ease-out;
+    -webkit-animation: flipInBottom $time both ease-out;
+            animation: flipInBottom $time both ease-out;
 }
 @-webkit-keyframes flipInBottom {
     from { -webkit-transform: translateZ(-1000px) rotateX(-90deg); opacity: 0.2;}
@@ -746,8 +746,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipOutBottom $time+s both ease-in;
-            animation: flipOutBottom $time+s both ease-in;
+    -webkit-animation: flipOutBottom $time both ease-in;
+            animation: flipOutBottom $time both ease-in;
 }
 @-webkit-keyframes flipOutBottom {
     from { }
@@ -764,8 +764,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: flipInTop $time+s both ease-out;
-            animation: flipInTop $time+s both ease-out;
+    -webkit-animation: flipInTop $time both ease-out;
+            animation: flipInTop $time both ease-out;
 }
 @-webkit-keyframes flipInTop {
     from { -webkit-transform: translateZ(-1000px) rotateX(90deg); opacity: 0.2;}
@@ -782,8 +782,8 @@
     }
     -webkit-transform-origin: 0 0;
             transform-origin: 0 0;
-    -webkit-animation: rotateFall $time+s both ease-in;
-            animation: rotateFall $time+s both ease-in;
+    -webkit-animation: rotateFall $time both ease-in;
+            animation: rotateFall $time both ease-in;
 }
 @-webkit-keyframes rotateFall {
     0% { -webkit-transform: rotateZ(0deg);}
@@ -808,8 +808,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: rotateOutNewspaper $time+s both ease-in;
-            animation: rotateOutNewspaper $time+s both ease-in;
+    -webkit-animation: rotateOutNewspaper $time both ease-in;
+            animation: rotateOutNewspaper $time both ease-in;
 }
 @-webkit-keyframes rotateOutNewspaper {
     from { }
@@ -826,8 +826,8 @@
     }
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
-    -webkit-animation: rotateInNewspaper $time+s both ease-out;
-            animation: rotateInNewspaper $time+s both ease-out;
+    -webkit-animation: rotateInNewspaper $time both ease-out;
+            animation: rotateInNewspaper $time both ease-out;
 }
 @-webkit-keyframes rotateInNewspaper {
     from { -webkit-transform: translateZ(-3000px) rotateZ(-360deg); opacity: 0;}
@@ -844,8 +844,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotatePushLeft $time+s both ease;
-            animation: rotatePushLeft $time+s both ease;
+    -webkit-animation: rotatePushLeft $time both ease;
+            animation: rotatePushLeft $time both ease;
 }
 @-webkit-keyframes rotatePushLeft {
     from { }
@@ -862,8 +862,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotatePushRight $time+s both ease;
-            animation: rotatePushRight $time+s both ease;
+    -webkit-animation: rotatePushRight $time both ease;
+            animation: rotatePushRight $time both ease;
 }
 @-webkit-keyframes rotatePushRight {
     from { }
@@ -880,8 +880,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotatePushTop $time+s both ease;
-            animation: rotatePushTop $time+s both ease;
+    -webkit-animation: rotatePushTop $time both ease;
+            animation: rotatePushTop $time both ease;
 }
 @-webkit-keyframes rotatePushTop {
     from { }
@@ -898,8 +898,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotatePushBottom $time+s both ease;
-            animation: rotatePushBottom $time+s both ease;
+    -webkit-animation: rotatePushBottom $time both ease;
+            animation: rotatePushBottom $time both ease;
 }
 @-webkit-keyframes rotatePushBottom {
     from { }
@@ -918,8 +918,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotatePullRight $time+s both ease;
-            animation: rotatePullRight $time+s both ease;
+    -webkit-animation: rotatePullRight $time both ease;
+            animation: rotatePullRight $time both ease;
 }
 @-webkit-keyframes rotatePullRight {
     from { opacity: 0; -webkit-transform: rotateY(-90deg);}
@@ -934,8 +934,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotatePullLeft $time+s both ease;
-            animation: rotatePullLeft $time+s both ease;
+    -webkit-animation: rotatePullLeft $time both ease;
+            animation: rotatePullLeft $time both ease;
 }
 @-webkit-keyframes rotatePullLeft {
     from { opacity: 0; -webkit-transform: rotateY(90deg);}
@@ -950,8 +950,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotatePullTop $time+s both ease;
-            animation: rotatePullTop $time+s both ease;
+    -webkit-animation: rotatePullTop $time both ease;
+            animation: rotatePullTop $time both ease;
 }
 @-webkit-keyframes rotatePullTop {
     from { opacity: 0; -webkit-transform: rotateX(-90deg);}
@@ -966,8 +966,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotatePullBottom $time+s both ease;
-            animation: rotatePullBottom $time+s both ease;
+    -webkit-animation: rotatePullBottom $time both ease;
+            animation: rotatePullBottom $time both ease;
 }
 @-webkit-keyframes rotatePullBottom {
     from { opacity: 0; -webkit-transform: rotateX(90deg);}
@@ -984,8 +984,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateFoldRight $time+s both ease;
-            animation: rotateFoldRight $time+s both ease;
+    -webkit-animation: rotateFoldRight $time both ease;
+            animation: rotateFoldRight $time both ease;
 }
 @-webkit-keyframes rotateFoldRight {
     from { }
@@ -1002,8 +1002,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateFoldLeft $time+s both ease;
-            animation: rotateFoldLeft $time+s both ease;
+    -webkit-animation: rotateFoldLeft $time both ease;
+            animation: rotateFoldLeft $time both ease;
 }
 @-webkit-keyframes rotateFoldLeft {
     from { }
@@ -1020,8 +1020,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateFoldTop $time+s both ease;
-            animation: rotateFoldTop $time+s both ease;
+    -webkit-animation: rotateFoldTop $time both ease;
+            animation: rotateFoldTop $time both ease;
 }
 @-webkit-keyframes rotateFoldTop {
     from { }
@@ -1038,8 +1038,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateFoldBottom $time+s both ease;
-            animation: rotateFoldBottom $time+s both ease;
+    -webkit-animation: rotateFoldBottom $time both ease;
+            animation: rotateFoldBottom $time both ease;
 }
 @-webkit-keyframes rotateFoldBottom {
     from { }
@@ -1058,8 +1058,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateUnfoldLeft $time+s both ease;
-            animation: rotateUnfoldLeft $time+s both ease;
+    -webkit-animation: rotateUnfoldLeft $time both ease;
+            animation: rotateUnfoldLeft $time both ease;
 }
 @-webkit-keyframes rotateUnfoldLeft {
     from { opacity: 0; -webkit-transform: translateX(-100%) rotateY(-90deg);}
@@ -1074,8 +1074,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateUnfoldRight $time+s both ease;
-            animation: rotateUnfoldRight $time+s both ease;
+    -webkit-animation: rotateUnfoldRight $time both ease;
+            animation: rotateUnfoldRight $time both ease;
 }
 @-webkit-keyframes rotateUnfoldRight {
     from { opacity: 0; -webkit-transform: translateX(100%) rotateY(90deg);}
@@ -1090,8 +1090,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateUnfoldTop $time+s both ease;
-            animation: rotateUnfoldTop $time+s both ease;
+    -webkit-animation: rotateUnfoldTop $time both ease;
+            animation: rotateUnfoldTop $time both ease;
 }
 @-webkit-keyframes rotateUnfoldTop {
     from { opacity: 0; -webkit-transform: translateY(-100%) rotateX(90deg);}
@@ -1106,8 +1106,8 @@
     }
     -webkit-transform-origin: 50% 0;
         transform-origin: 50% 0;
-    -webkit-animation: rotateUnfoldBottom $time+s both ease;
-            animation: rotateUnfoldBottom $time+s both ease;
+    -webkit-animation: rotateUnfoldBottom $time both ease;
+            animation: rotateUnfoldBottom $time both ease;
 }
 @-webkit-keyframes rotateUnfoldBottom {
     from { opacity: 0; -webkit-transform: translateY(100%) rotateX(-90deg);}
@@ -1124,8 +1124,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateRoomLeftOut $time+s both ease;
-            animation: rotateRoomLeftOut $time+s both ease;
+    -webkit-animation: rotateRoomLeftOut $time both ease;
+            animation: rotateRoomLeftOut $time both ease;
 }
 @-webkit-keyframes rotateRoomLeftOut {
     from { }
@@ -1142,8 +1142,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateRoomLeftIn $time+s both ease;
-            animation: rotateRoomLeftIn $time+s both ease;
+    -webkit-animation: rotateRoomLeftIn $time both ease;
+            animation: rotateRoomLeftIn $time both ease;
 }
 @-webkit-keyframes rotateRoomLeftIn {
     from { opacity: .3; -webkit-transform: translateX(100%) rotateY(-90deg);}
@@ -1158,8 +1158,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateRoomRightOut $time+s both ease;
-            animation: rotateRoomRightOut $time+s both ease;
+    -webkit-animation: rotateRoomRightOut $time both ease;
+            animation: rotateRoomRightOut $time both ease;
 }
 @-webkit-keyframes rotateRoomRightOut {
     from { }
@@ -1176,8 +1176,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateRoomRightIn $time+s both ease;
-            animation: rotateRoomRightIn $time+s both ease;
+    -webkit-animation: rotateRoomRightIn $time both ease;
+            animation: rotateRoomRightIn $time both ease;
 }
 @-webkit-keyframes rotateRoomRightIn {
     from { opacity: .3; -webkit-transform: translateX(-100%) rotateY(90deg);}
@@ -1192,8 +1192,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateRoomTopOut $time+s both ease;
-            animation: rotateRoomTopOut $time+s both ease;
+    -webkit-animation: rotateRoomTopOut $time both ease;
+            animation: rotateRoomTopOut $time both ease;
 }
 @-webkit-keyframes rotateRoomTopOut {
     from { }
@@ -1210,8 +1210,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateRoomTopIn $time+s both ease;
-            animation: rotateRoomTopIn $time+s both ease;
+    -webkit-animation: rotateRoomTopIn $time both ease;
+            animation: rotateRoomTopIn $time both ease;
 }
 @-webkit-keyframes rotateRoomTopIn {
     from { opacity: .3; -webkit-transform: translateY(100%) rotateX(90deg);}
@@ -1226,8 +1226,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateRoomBottomOut $time+s both ease;
-            animation: rotateRoomBottomOut $time+s both ease;
+    -webkit-animation: rotateRoomBottomOut $time both ease;
+            animation: rotateRoomBottomOut $time both ease;
 }
 @-webkit-keyframes rotateRoomBottomOut {
     from { }
@@ -1244,8 +1244,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateRoomBottomIn $time+s both ease;
-            animation: rotateRoomBottomIn $time+s both ease;
+    -webkit-animation: rotateRoomBottomIn $time both ease;
+            animation: rotateRoomBottomIn $time both ease;
 }
 @-webkit-keyframes rotateRoomBottomIn {
     from { opacity: .3; -webkit-transform: translateY(-100%) rotateX(-90deg);}
@@ -1262,8 +1262,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateCubeLeftOut $time+s both ease-in;
-            animation: rotateCubeLeftOut $time+s both ease-in;
+    -webkit-animation: rotateCubeLeftOut $time both ease-in;
+            animation: rotateCubeLeftOut $time both ease-in;
 }
 @-webkit-keyframes rotateCubeLeftOut {
     0% { }
@@ -1282,8 +1282,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateCubeLeftIn $time+s both ease-in;
-            animation: rotateCubeLeftIn $time+s both ease-in;
+    -webkit-animation: rotateCubeLeftIn $time both ease-in;
+            animation: rotateCubeLeftIn $time both ease-in;
 }
 @-webkit-keyframes rotateCubeLeftIn {
     0% { opacity: .3; -webkit-transform: translateX(100%) rotateY(90deg);}
@@ -1300,8 +1300,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateCubeRightOut $time+s both ease-in;
-            animation: rotateCubeRightOut $time+s both ease-in;
+    -webkit-animation: rotateCubeRightOut $time both ease-in;
+            animation: rotateCubeRightOut $time both ease-in;
 }
 @-webkit-keyframes rotateCubeRightOut {
     0% { }
@@ -1320,8 +1320,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateCubeRightIn $time+s both ease-in;
-            animation: rotateCubeRightIn $time+s both ease-in;
+    -webkit-animation: rotateCubeRightIn $time both ease-in;
+            animation: rotateCubeRightIn $time both ease-in;
 }
 @-webkit-keyframes rotateCubeRightIn {
     0% { opacity: .3; -webkit-transform: translateX(-100%) rotateY(-90deg);}
@@ -1338,8 +1338,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateCubeTopOut $time+s both ease-in;
-            animation: rotateCubeTopOut $time+s both ease-in;
+    -webkit-animation: rotateCubeTopOut $time both ease-in;
+            animation: rotateCubeTopOut $time both ease-in;
 }
 @-webkit-keyframes rotateCubeTopOut {
     0% { }
@@ -1358,8 +1358,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateCubeTopIn $time+s both ease-in;
-            animation: rotateCubeTopIn $time+s both ease-in;
+    -webkit-animation: rotateCubeTopIn $time both ease-in;
+            animation: rotateCubeTopIn $time both ease-in;
 }
 @-webkit-keyframes rotateCubeTopIn {
     0% { opacity: .3; -webkit-transform: translateY(100%) rotateX(-90deg);}
@@ -1376,8 +1376,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateCubeBottomOut $time+s both ease-in;
-            animation: rotateCubeBottomOut $time+s both ease-in;
+    -webkit-animation: rotateCubeBottomOut $time both ease-in;
+            animation: rotateCubeBottomOut $time both ease-in;
 }
 @-webkit-keyframes rotateCubeBottomOut {
     0% { }
@@ -1396,8 +1396,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateCubeBottomIn $time+s both ease-in;
-            animation: rotateCubeBottomIn $time+s both ease-in;
+    -webkit-animation: rotateCubeBottomIn $time both ease-in;
+            animation: rotateCubeBottomIn $time both ease-in;
 }
 @-webkit-keyframes rotateCubeBottomIn {
     0% { opacity: .3; -webkit-transform: translateY(-100%) rotateX(90deg);}
@@ -1416,8 +1416,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateCarouselLeftOut $time+s both ease;
-            animation: rotateCarouselLeftOut $time+s both ease;
+    -webkit-animation: rotateCarouselLeftOut $time both ease;
+            animation: rotateCarouselLeftOut $time both ease;
 }
 @-webkit-keyframes rotateCarouselLeftOut {
     from { }
@@ -1434,8 +1434,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateCarouselLeftIn $time+s both ease;
-            animation: rotateCarouselLeftIn $time+s both ease;
+    -webkit-animation: rotateCarouselLeftIn $time both ease;
+            animation: rotateCarouselLeftIn $time both ease;
 }
 @-webkit-keyframes rotateCarouselLeftIn {
     from { opacity: .3; -webkit-transform: translateX(200%) scale(.4) rotateY(65deg);}
@@ -1450,8 +1450,8 @@
     }
     -webkit-transform-origin: 0 50%;
             transform-origin: 0 50%;
-    -webkit-animation: rotateCarouselRightOut $time+s both ease;
-            animation: rotateCarouselRightOut $time+s both ease;
+    -webkit-animation: rotateCarouselRightOut $time both ease;
+            animation: rotateCarouselRightOut $time both ease;
 }
 @-webkit-keyframes rotateCarouselRightOut {
     from { }
@@ -1468,8 +1468,8 @@
     }
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
-    -webkit-animation: rotateCarouselRightIn $time+s both ease;
-            animation: rotateCarouselRightIn $time+s both ease;
+    -webkit-animation: rotateCarouselRightIn $time both ease;
+            animation: rotateCarouselRightIn $time both ease;
 }
 @-webkit-keyframes rotateCarouselRightIn {
     from { opacity: .3; -webkit-transform: translateX(-200%) scale(.4) rotateY(-65deg);}
@@ -1484,8 +1484,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateCarouselTopOut $time+s both ease;
-            animation: rotateCarouselTopOut $time+s both ease;
+    -webkit-animation: rotateCarouselTopOut $time both ease;
+            animation: rotateCarouselTopOut $time both ease;
 }
 @-webkit-keyframes rotateCarouselTopOut {
     from { }
@@ -1502,8 +1502,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateCarouselTopIn $time+s both ease;
-            animation: rotateCarouselTopIn $time+s both ease;
+    -webkit-animation: rotateCarouselTopIn $time both ease;
+            animation: rotateCarouselTopIn $time both ease;
 }
 @-webkit-keyframes rotateCarouselTopIn {
     from { opacity: .3; -webkit-transform: translateY(200%) scale(.4) rotateX(-65deg);}
@@ -1518,8 +1518,8 @@
     }
     -webkit-transform-origin: 50% 0;
             transform-origin: 50% 0;
-    -webkit-animation: rotateCarouselBottomOut $time+s both ease;
-            animation: rotateCarouselBottomOut $time+s both ease;
+    -webkit-animation: rotateCarouselBottomOut $time both ease;
+            animation: rotateCarouselBottomOut $time both ease;
 }
 @-webkit-keyframes rotateCarouselBottomOut {
     from { }
@@ -1536,8 +1536,8 @@
     }
     -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
-    -webkit-animation: rotateCarouselBottomIn $time+s both ease;
-            animation: rotateCarouselBottomIn $time+s both ease;
+    -webkit-animation: rotateCarouselBottomIn $time both ease;
+            animation: rotateCarouselBottomIn $time both ease;
 }
 @-webkit-keyframes rotateCarouselBottomIn {
     from { opacity: .3; -webkit-transform: translateY(-200%) scale(.4) rotateX(65deg);}
@@ -1554,8 +1554,8 @@
     }
     -webkit-transform-origin: -50% 50%;
             transform-origin: -50% 50%;
-    -webkit-animation: rotateSidesOut $time+s both ease-in;
-            animation: rotateSidesOut $time+s both ease-in;
+    -webkit-animation: rotateSidesOut $time both ease-in;
+            animation: rotateSidesOut $time both ease-in;
 }
 @-webkit-keyframes rotateSidesOut {
     from { }
@@ -1572,8 +1572,8 @@
     }
     -webkit-transform-origin: 150% 50%;
             transform-origin: 150% 50%;
-    -webkit-animation: rotateSidesIn $time+s both ease-out;
-            animation: rotateSidesIn $time+s both ease-out;
+    -webkit-animation: rotateSidesIn $time both ease-out;
+            animation: rotateSidesIn $time both ease-out;
 }
 @-webkit-keyframes rotateSidesIn {
     from { opacity: 0; -webkit-transform: translateZ(-500px) rotateY(-90deg);}
@@ -1588,8 +1588,8 @@
     @if length($time) == 0 {
         $time: 1;
     }
-    -webkit-animation: rotateSlideOut $time+s both ease;
-            animation: rotateSlideOut $time+s both ease;
+    -webkit-animation: rotateSlideOut $time both ease;
+            animation: rotateSlideOut $time both ease;
 }
 @-webkit-keyframes rotateSlideOut {
     0% { }
@@ -1608,8 +1608,8 @@
     @if length($time) == 0 {
         $time: 1
     }
-    -webkit-animation: rotateSlideIn $time+s both ease;
-            animation: rotateSlideIn $time+s both ease;
+    -webkit-animation: rotateSlideIn $time both ease;
+            animation: rotateSlideIn $time both ease;
 }
 @-webkit-keyframes rotateSlideIn {
     0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%);}
@@ -1625,6 +1625,6 @@
 /* ############################ ANIMATION DELAY ############################# */
 
 @mixin anim-delay($time) {
-    -webkit-animation-delay: $time+s;
-            animation-delay: $time+s;
+    -webkit-animation-delay: $time;
+            animation-delay: $time;
 }
