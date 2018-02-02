@@ -95,11 +95,11 @@ $assets = 'images_landing/sv/18/';
                 <button class="FormContainer-Submit btn-submit result-cta hidden" />voir le résultat</button>
               </section>
               <section class="result hidden">
-                <div class="cols-x2">
+                <div class="cols-x2 sm-h">
                   <div class="lovers-b"></div>
                 </div>
                 <div class="cols-x2">
-                  <h2 class="names"><span class="person-a"></span><br/>&<br/><span class="person-b"></span></h2>
+                  <h2 class="names"><span class="person-a"></span><br class="sm-h"/> & <br class="sm-h"/><span class="person-b"></span></h2>
                   <div class="loveOmeter">0</div>
                   <div class="Fields-Table-Row">
                     <label for="email" class="FormField-Label hidden">Votre email</label>

@@ -83,8 +83,9 @@ body {
 	font-size: 1.4rem;
 	font-weight: 400;
 	padding: 2rem;
-	@include respond-to('mobile'){
+	@include respond-to('mobile') {
 		padding: 0.5rem;
+		overflow-x: hidden;
 	}
 	min-height: 100vh;
 }
@@ -93,9 +94,12 @@ body {
 	margin-top: 0;
 	text-align: center;
 	min-height: calc(100vh - 270px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include respond-to('mobile') {
+		min-height: calc(100vh - 200px);
+	}
 }
 
 .PageWrapper {
@@ -130,7 +134,7 @@ body {
 	stroke-width: 1.5;
 	stroke-miterlimit: 10;
 	@include square(110px);
-	@include respond-to('mobile'){
+	@include respond-to('mobile') {
 		@include square(80px);
 	}
 }
@@ -198,6 +202,12 @@ body {
 	max-width: initial !important;
 }
 
+.sm {
+	&-h {
+		@extend .hidden;
+	}
+}
+
 /* ------------------------------- FOMULAIRE -------------------------------- */
 
 .FormContainer {
@@ -210,7 +220,7 @@ body {
 		font-family: $font3;
 		font-size: 3rem;
 		color: $primary;
-		@include respond-to('mobile'){
+		@include respond-to('mobile') {
 			font-size: 2.2rem;
 		}
 	}
@@ -265,6 +275,9 @@ button[type='submit'] {
 
 .cols-x2 {
 	width: 50%;
+	@include respond-to('mobile') {
+		width: 100%;
+	}
 }
 
 .names {
@@ -277,6 +290,9 @@ button[type='submit'] {
 	.person-b {
 		font-size: 4rem;
 		color: $primary;
+		@include respond-to('mobile') {
+			margin: 0 10px;
+		}
 	}
 }
 
@@ -290,6 +306,9 @@ button[type='submit'] {
 	transform: translateX(-50%);
 	z-index: -10;
 	animation: fadeIn 2600ms ease-in-out both;
+	@include respond-to('mobile') {
+		@include size(432px, 578px);
+	}
 	&-b {
 		@include size(100%, 464px);
 		background: transparent url($assets + 'lovers-b.png') no-repeat center;
@@ -329,9 +348,11 @@ button[type="submit"] {
 		animation: none;
 	}
 }
+
 .FormField-TableInputContainer.fixed-2-col .FormField-TableInputContainer-Cell {
-    width: 50%;
+	width: 50%;
 }
+
 .step-1 {
 	overflow: hidden;
 }
@@ -457,8 +478,6 @@ button[type="submit"] {
 		font-weight: normal;
 	}
 }
-
-
 
 @media screen and (max-width: 470px) {
 	.FormContainer {

@@ -89,7 +89,7 @@ $(document).ready(function() {
 		$(".result").removeClass('hidden');
 		$(".FormContainer").addClass('scale noMaxw');
 		$('.lovers').toggleClass('hidden');
-		$('.FormContainer-Header').css('visibility', 'hidden');
+		$('.FormContainer-Header').css('visibility', 'hidden').addClass('sm-h');
 		$(".more").show();
 		$(".name").each(function() {
 			names[$(this).attr("name")] = $(this).val();
