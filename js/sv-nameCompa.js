@@ -15,16 +15,21 @@ var letters = {
 		H: 8,Q: 8,Z: 8,
 		I: 9,R: 9
 	},
+	questions = {
+		classA: "{'code':'sv_classA','subject':'amour','text':'Résultat A - 50~60%'}",
+		classB: "{'code':'sv_classB','subject':'amour','text':'Résultat B - 70~80%'}",
+		classC: "{'code':'sv_classC','subject':'amour','text':'Résultat C - 90~100%'}"
+	},
+	question_value = '',
 	loveOmeter = function(min, max) {
 		return Math.floor(Math.random() * (max - min) + min);
 	},
+	question = $('#js-question'),
 	paths = {
 		A: loveOmeter(90, 99),
 		B: loveOmeter(70, 80),
 		C: loveOmeter(50, 60)
 	},
-	user = '{{USER}}',
-	other = '{{OTHER}}',
 	names = {},
 	score = {},
 	submit = $('.result-cta'),
@@ -32,7 +37,6 @@ var letters = {
 	qPos = 0,
 	person = [],
 	path, mapObj;
-var personOne, personTwo;
 $(document).ready(function() {
 	function capitalize(str) {
 		return str.replace(/\w\S*/g, function(txt) {
@@ -109,7 +113,7 @@ $(document).ready(function() {
 			return x >= min && x <= max;
 		}
 		// find set of strings and replace them with given ones
-		function calculateRate(mapObj, path) {
+		function calculateRate(path) {
 			var counter = 0,
 				c = 0,
 				i = setInterval(function() {
@@ -122,13 +126,16 @@ $(document).ready(function() {
 				}, 25);
 		}
 		if (between(path, 1, 3)) {
-			calculateRate(mapObj, paths.A);
+			calculateRate(paths.A);
+			question.val(questions.classA);
 		}
 		else if (between(path, 4, 6)) {
-			calculateRate(mapObj, paths.B);
+			calculateRate(paths.B);
+			question.val(questions.classB);
 		}
 		else {
-			calculateRate(mapObj, paths.C);
+			calculateRate(paths.C);
+			question.val(questions.classC);
 		}
 		$('.person-a').text(capitalize(person[0]));
 		$('.person-b').text(capitalize(person[1]));

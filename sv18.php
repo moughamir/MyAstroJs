@@ -1,6 +1,12 @@
 <?php
-include('include/process-dri.php');
-$assets = 'images_landing/sv/18/';
+  include('include/init-affilbase.php');
+  $assets = 'images_landing/sv/18/';
+  $form = 'sv18';
+  $regurl = "sv18";
+  $method = "general-suscribe";
+  $support = "voyance";
+  $site = "myastro.fr";
+  $dri = "love-myastro/offre-gratuite";
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,7 +29,7 @@ $assets = 'images_landing/sv/18/';
 </head>
 
 <body>
-
+<div class="overlay" id="form-overlay"></div>
   <header class="SiteHeader">
     <div class="PageWrapper">
       <div class="SiteLogo">
@@ -46,7 +52,25 @@ $assets = 'images_landing/sv/18/';
             <div class="lovers"></div>
             <p class="alert alert-danger" style="display: none"></p>
             
-            <form method="post">
+            <form class="ajax" id="form-container">
+              <!-- ########## identification formulaire ########## -->
+              <input type="hidden" name="source" value="<?= $url;?>" />
+              <input type="hidden" name="regurl" value="<?= $regurl;?>" />
+              <input type="hidden" name="method" value="<?= $method;?>" />
+              <input type="hidden" name="support" value="<?= $support;?>" />
+              <input type="hidden" name="site" value="<?= $site;?>" />
+              <input type="hidden" name="affiliation" value="<?= $source;?>" />
+              <input type="hidden" name="gclid" value="<?= $gclid;?>" />
+              <input type="hidden" name="dri" value="<?= $dri;?>" />
+              <input type="hidden" name="dri2" value="<?= $dri2;?>" />
+              <!-- ########## autres champs pré-remplis ########## -->
+              <input type="hidden" name="tel_needed" value="1" />
+              <input type="hidden" name="cguv" value="1" />
+              <!--input type="hidden" name="partenaires" value="1" /-->
+              <input type="hidden" name="optional_birthdate" value="1"/>
+              <input type="hidden" name="prenom" id="js-name" />
+              <input type="hidden" name="question_code" id="js-question" />
+              <!-- ############################################### -->
               <section class="step-1">
                 <div class="question">Vous êtes :</div>
                 <div class="question-container">
@@ -107,6 +131,37 @@ $assets = 'images_landing/sv/18/';
                       <input id="email" type="email" name="email" class="FormField-Input" placeholder="Votre Email" required />
                     </div>
                   </div>
+<div class="FormField">
+<label for="pays" class="FormField-Label hidden">Votre pays </label>
+<select name="pays" id="pays" class="FormField-Input" required>
+<option value="" selected>Votre Pays</option>
+<option value="BE">Belgique</option>
+<option value="CA">Canada</option>
+<option value="LU">Luxembourg</option>
+<option value="CH">Suisse</option>
+<option value="FR" selected>France Métropolitaine</option>
+<optgroup label="DOM-TOM">
+<option value="MQ">Martinique</option>
+<option value="GP">Guadeloupe</option>
+<option value="GF">Guyane</option>
+<option value="RE">La Réunion</option>
+<option value="YT">Mayotte</option>
+<option value="PM">St Pierre et Miquelon</option>
+<option value="BL">St Barthélémy</option>
+<option value="SM">St Martin</option>
+<option value="WF">Wallis et Futunua</option>
+<option value="PF">Polynésie Française</option>
+<option value="NC">Nouvelle Calédonie</option>
+</optgroup>
+<option value="ZZ">Autre</option>
+</select>
+</div>
+<div class="Fields-Table-Row">
+<label for="tel" class="FormField-Label hidden">Votre numéro de téléphone</label>
+<div class="FormField">
+<input id="tel" type="tel" name="tel" class="FormField-Input" placeholder="Votre Téléphone" required />
+</div>
+</div>
                   <button class="FormContainer-Submit" type="submit" name="valider">Recevoir l’interpretation par email</button>
                 </div>
                 
@@ -120,8 +175,9 @@ $assets = 'images_landing/sv/18/';
 <p class="SiteCopyright">
 <?php include('include/footer_copyright.php');?> </p>
 <!-- #### SCRIPTS #### -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
 <script type="text/javascript" src="js/sv-nameCompa.js"></script>
+<script src="js/formValidator.js"></script>
 <!-- #### REMARKETINGS #### -->
 <?php include('include/remarketing/adwords.php');
 include('include/remarketing/analytics.php');
