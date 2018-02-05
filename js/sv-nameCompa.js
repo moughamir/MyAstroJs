@@ -16,9 +16,9 @@ var letters = {
 		I: 9,R: 9
 	},
 	questions = {
-		classA: "{'code':'sv_classA','subject':'amour','text':'Résultat A - 50~60%'}",
+		classA: "{'code':'sv_classA','subject':'amour','text':'Résultat A - 90~100%'}",
 		classB: "{'code':'sv_classB','subject':'amour','text':'Résultat B - 70~80%'}",
-		classC: "{'code':'sv_classC','subject':'amour','text':'Résultat C - 90~100%'}"
+		classC: "{'code':'sv_classC','subject':'amour','text':'Résultat C - 50~60%'}"
 	},
 	loveOmeter = function(min, max) {
 		return Math.floor(Math.random() * (max - min) + min);
@@ -146,7 +146,7 @@ $(document).ready(function() {
 		}
 		$('.person-a').text(capitalize(person[0]));
 		$('.person-b').text(capitalize(person[1]));
-			$('html,body').animate({scrollTop: $('.ContentBand').offset().top}, 1000);
+		$('html,body').animate({scrollTop: $('.ContentBand').offset().top}, 1000);
 });
 
 $(document).ready(function(){
