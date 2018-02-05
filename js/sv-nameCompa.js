@@ -20,7 +20,6 @@ var letters = {
 		classB: "{'code':'sv_classB','subject':'amour','text':'Résultat B - 70~80%'}",
 		classC: "{'code':'sv_classC','subject':'amour','text':'Résultat C - 90~100%'}"
 	},
-	question_value = '',
 	loveOmeter = function(min, max) {
 		return Math.floor(Math.random() * (max - min) + min);
 	},
@@ -36,7 +35,7 @@ var letters = {
 	nextQ = $('.next'),
 	qPos = 0,
 	person = [],
-	path, mapObj;
+	path;
 $(document).ready(function() {
 	function capitalize(str) {
 		return str.replace(/\w\S*/g, function(txt) {
@@ -63,26 +62,38 @@ $(document).ready(function() {
 			score[name] = singleDigitScore;
 		}
 	}
+	nextQ.attr("disabled", "disabled");
+	submit.attr("disabled", "disabled");
+	$('input').change(function() {
+		var validated = true,
+			validatedT = true;
+		if ($('#sexe-f:checked').val() === undefined && $('#sexe-h:checked').val() === undefined) {
+			validated = false;
+		}
+		else if (($('input[name="prenom"]').val().length === 0) && ($('input[name="conjoint"]').val().length === 0)) {
+			validatedT = false;
+		}
+		if (validated) {
+			nextQ.removeAttr("disabled");
+		}
+		if (validatedT) {
+			submit.removeAttr("disabled");
+		}
+	});
 	nextQ.on('click', function(e) {
 		e.preventDefault();
 		if (qPos === 0) {
 			$('#question-1').toggleClass('nextQuestion');
 			$('#question-2').toggleClass('hidden showQuestion');
-			console.log('1st click');
 			qPos++;
-			console.log(qPos);
+			nextQ.attr("disabled", "disabled");
 		}
 		else if (qPos === 1) {
 			$('#question-2').toggleClass('showQuestion nextQuestion');
 			$('#question-3').toggleClass('hidden showQuestion');
-			console.log('2nd click');
 			qPos++;
-			console.log(qPos);
 			nextQ.addClass('hidden');
 			submit.toggleClass('hidden');
-		}
-		else if (qPos === 2) {
-			console.error(qPos);
 		}
 		else {
 			console.error(qPos);
@@ -103,10 +114,6 @@ $(document).ready(function() {
 		path = (score[names.prenom.toUpperCase()] + score[names.prenom.toUpperCase()]) / 2;
 		names.prenom = capitalize(names.prenom);
 		names.conjoint = capitalize(names.conjoint);
-		mapObj = {
-			"{{USER}}": names.prenom,
-			"{{OTHER}}": names.conjoint
-		};
 		// NOTE: we may use in future lodash library 
 		// (between) exist in lodash as _.inRange function
 		function between(x, min, max) {
