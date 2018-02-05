@@ -149,9 +149,8 @@ $(document).ready(function() {
 		$('html,body').animate({scrollTop: $('.ContentBand').offset().top}, 1000);
 });
 
-$(document).ready(function(){
-	if($(window).height() < 700){
-		$('html,body').animate({scrollTop: $('.ContentBand').offset().top}, 1000);
-	}
-});
+if($(window).height() < 700){
+	$('html,body').animate({scrollTop: $('.ContentBand').offset().top}, 1000);
+}
+
 });
