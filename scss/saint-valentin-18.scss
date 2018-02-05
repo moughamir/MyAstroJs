@@ -225,6 +225,13 @@ body {
 		transform: translate(-50%, -100%);
 		position: absolute;
 	}
+	@include respond-to('mobile') {
+		margin: 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
 }
 
 .alert {
@@ -288,18 +295,27 @@ body {
 button[type='submit'] {
 	font-size: 1.6rem;
 	width: auto;
+	@include respond-to('mobile') {
+		font-size: 1.4rem;
+	}
 }
-.next{
+
+.next {
 	position: relative;
 }
+
 .arrow {
 	display: inline-block;
-	background: transparent url($assets + 'next.png');
+	background: transparent url($assets + 'next.png') no-repeat center;
+	background-size: contain;
 	@include size(32px, 22px);
 	animation: movenLR 2000ms infinite ease both;
 	position: absolute;
 	right: 30px;
 	top: 15px;
+	@include respond-to('mobile'){
+		width: 18px;
+	}
 }
 
 @keyframes movenLR {
@@ -495,6 +511,7 @@ button[type="submit"] {
 
 .FormField-Label {
 	color: $passive;
+	font-weight: 600;
 	svg {
 		fill: $passive;
 	}
@@ -568,6 +585,9 @@ button[type="submit"] {
 	justify-content: center;
 	align-items: center;
 	animation: scaleUp 3s ease both;
+	@include respond-to('mobile') {
+		font-size: 100px;
+	}
 }
 
 @keyframes scaleUp {
