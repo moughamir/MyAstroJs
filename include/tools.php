@@ -7,6 +7,7 @@ require_once(ROOT_PATH.'/inc/bdd.php');      // New mysql Class From Wordpress :
 require_once(ROOT_PATH.'/lib/Compteur/Compteur.class.php'); // Counter used for EMV groups
 require_once(ROOT_PATH.'/lib/Tracker/Tracker.class.php'); // Tracking users for campains
 //require_once(ROOT_PATH.'/lib/SmartFocus/SmartFocus.class.php'); // Tracking users for campains
+require_once(ROOT_PATH.'/lib/EmailChecker/EmailChecker.class.php'); // API KGESTION
 require_once(ROOT_PATH.'/lib/APIKGestion/APIKGestion.class.php'); // API KGESTION
 require_once(ROOT_PATH.'/lib/APIHamedia/APIHamedia.class.php'); // API HAMEDIA
 //require_once(ROOT_PATH.'/sms/myastro-sms.php'); // sms campains
@@ -99,7 +100,7 @@ function check_captcha($form){
     $secret_key = '6LezqysUAAAAAKeeCRVonxcTAmfZ-S9ke3_OpcLB';
     $captcha_form = $form['g-recaptcha-response'];
     $remote_ip = $_SERVER['REMOTE_ADDR'];
-	
+
     $api_url = 'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.'&response='.$captcha_form.'&remoteip='.$remote_ip;
 
     $decode = json_decode(file_get_contents($api_url), true);
