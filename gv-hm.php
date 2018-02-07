@@ -16,6 +16,8 @@ $assets = 'images_landing/grande-voyance/18';
         <link rel="stylesheet" href="css/gv/bootstrap.min.css">
         <link rel="stylesheet" href="css/grande-voyance-dri.css" type="text/css"/>
         <link rel="stylesheet" href="css/grande-voyance.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 
     </head>
 
