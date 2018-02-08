@@ -59,7 +59,7 @@
                         <p>(i) fournir des informations statistiques au sujet de nos utilisateurs à des tiers. Cependant, ces informations ne seront pas utilisées pour identifier un utilisateur spécifique ;</p>
                         <p>(j) répondre aux questions et plaintes effectuées par vous ou à votre encontre en lien avec le site web ; et</p>
                         <p>Lorsque vous envoyez des informations personnelles à des fins de publication sur notre site web, nous publierons et utiliserons ces informations dans le respect des droits que vous nous accordez.</p>
-                        <p>Toutes les transactions financières effectuées sur notre site web sont traitées par le biais de notre prestataire de services de paiement, SagePay. Vous pouvez passer en revue la politique de confidentialité de SagePay sur www.sagepay.com. Nous ne partagerons dʼinformations avec SagePay que dans la mesure où cela sʼavérera nécessaire aux fins de traitement des paiements que vous effectuerez sur notre site web et de réponse aux plaintes et questions relatives à ces paiements.</p>
+                        <p>Toutes les transactions financières effectuées sur notre site web sont traitées par le biais de notre prestataire de services de paiement, Hipay. Vous pouvez passer en revue la politique de confidentialité de Hipay sur https://hipay.com/fr/. Nous ne partagerons dʼinformations avec Hipay que dans la mesure où cela sʼavérera nécessaire aux fins de traitement des paiements que vous effectuerez sur notre site web et de réponse aux plaintes et questions relatives à ces paiements.</p>
                         <h6>&nbsp;</h6>
 
                         <h2>4. Divulgations</h2>
