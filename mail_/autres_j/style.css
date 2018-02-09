@@ -1,9 +1,0 @@
-body {
-background:#e9e9e9;margin:0;font-family:Arial, Helvetica, sans-serif;font-size:12px;
-}
-#global {
-position:relative;width:950px;margin:0;padding:50px 0;background:#e9e9e9 url(http://www.myastro.fr/mail/j20/images/logo.jpg) left 0 no-repeat;min-height:600px;
-}
-#abstract {
-position:absolute;background:url(http://www.myastro.fr/mail/j20/images/abstract_haut.jpg) top right no-repeat;top:0;left:160px;text-align:center;font-size:10px;width:640px;height:65px;
-}
