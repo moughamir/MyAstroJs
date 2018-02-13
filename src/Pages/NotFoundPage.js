@@ -13,7 +13,7 @@ export default class Astrologie extends Component {
         vertical
         >
           <Container textAlign='center'>
-            <h2>Astrologie</h2>
+            <h2>404</h2>
           </Container>
         </Segment>
       </div>

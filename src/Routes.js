@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, browserHistory } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Home, Voyance, Horoscope, Astrologie, Tarot, Numerologie, NotFound } from './Pages/Pages.jsx';
 
 //const menuItem = ['Voyance', 'Horoscope', 'Astrologie', 'Tarot', 'Numérologie'];

@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import { Component } from 'react';
-import { Container, Divider, Grid, Header, Icon, Image, List, Menu, Segment, Visibility, } from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Container, Image, Menu, Visibility, } from 'semantic-ui-react';
 import HomeButton from './SvgAssets/home.svg';
+
 const Link = require('react-router-dom').NavLink;
 
 const menuStyle = {
@@ -24,50 +24,17 @@ const fixedMenuText = {
   color: '#fff'
 };
 
-const overlayStyle = {
-  float: 'left',
-  margin: '0em 3em 1em 0em',
-};
-
-const fixedOverlayStyle = {
-  ...overlayStyle,
-  position: 'fixed',
-  top: '80px',
-  zIndex: 10,
-};
-
-const overlayMenuStyle = {
-  position: 'relative',
-  left: 0,
-  transition: 'left 0.5s ease',
-};
-
-const fixedOverlayMenuStyle = {
-  ...overlayMenuStyle,
-  left: '800px',
-};
-
 export default class AppNavbar extends Component {
   state = {
     menuFixed: false,
-    overlayFixed: false,
   }
 
-  handleOverlayRef = (c) => {
-    const { overlayRect } = this.state;
 
-    if (!overlayRect) {
-      this.setState({ overlayRect: _.pick(c.getBoundingClientRect(), 'height', 'width') });
-    }
-  }
-
-  stickOverlay = () => this.setState({ overlayFixed: true })
   stickTopMenu = () => this.setState({ menuFixed: true })
-  unStickOverlay = () => this.setState({ overlayFixed: false })
   unStickTopMenu = () => this.setState({ menuFixed: false })
 
   render() {
-    const { menuFixed, overlayFixed, overlayRect } = this.state;
+    const { menuFixed } = this.state;
 
     return (
       <Visibility
@@ -80,9 +47,15 @@ export default class AppNavbar extends Component {
           style={menuFixed ? fixedMenuStyle : menuStyle}
         >
           <Container text style={fixedMenuStyle}>
-            <Menu.Item as='a' href='/'>
-              <Image size='mini' src={HomeButton} />
+            <Menu.Item>
+              <Link to='/'><Image size='mini' src={HomeButton} /></Link>
             </Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/Voyance'>Voyance</Link></Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/Horoscope'>Horoscope</Link></Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/Astrologie'>Astrologie</Link></Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/Tarot'>Tarot</Link></Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/Numerologie'>Numérologie</Link></Menu.Item>
+            <Menu.Item style={menuFixed ? fixedMenuText : null}><Link to='/myastro-tchat'>Tchat</Link></Menu.Item>
           </Container>
         </Menu>
       </Visibility>

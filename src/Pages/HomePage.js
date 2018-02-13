@@ -1,26 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { Container, Divider, Grid, Header, Icon, Image, List, Menu, Segment, Visibility, } from 'semantic-ui-react';
+import { Container, Icon, Image, Menu, Visibility, } from 'semantic-ui-react';
 
-const menuStyle = {
-  border: 'none',
-  borderRadius: 0,
-  boxShadow: 'none',
-  marginBottom: '1em',
-  marginTop: '4em',
-  transition: 'box-shadow 0.5s ease, padding 0.5s ease',
-};
-
-const fixedMenuStyle = {
-  backgroundColor: '#22424d',
-  border: '1px solid #22424d',
-  boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
-  color: '#fff'
-};
-
-const fixedMenuText = {
-  color: '#fff'
-};
 
 const overlayStyle = {
   float: 'left',
@@ -99,52 +80,10 @@ export default class Home extends Component {
   unStickTopMenu = () => this.setState({ menuFixed: false })
 
   render() {
-    const { menuFixed, overlayFixed, overlayRect } = this.state;
+    const { overlayFixed, overlayRect } = this.state;
 
     return (
       <div>
-        {/* Heads up, style below isn't necessary for correct work of example, simply our docs defines other
-            background color.
-          */}
-        <style>{`
-          html, body {
-            background: #fff;
-          }
-        `}</style>
-
-        <Container text fluid style={{ marginTop: '2em' }}>
-          <Header as='h1'>MyAstro</Header>
-          <p>This example shows how to use lazy loaded images, a sticky menu, and a simple text container</p>
-        </Container>
-
-        {/* Attaching the top menu is a simple operation, we only switch `fixed` prop add add another styles if it has
-            gone beyond the scope of visibility
-          */}
-        <Visibility
-          onBottomPassed={this.stickTopMenu}
-          onBottomVisible={this.unStickTopMenu}
-          once={false}
-        >
-          <Menu
-            borderless
-            fixed={menuFixed && 'top'}
-            style={menuFixed ? fixedMenuStyle : menuStyle}
-          >
-            <Container text style={fixedMenuStyle}>
-              <Menu.Item as='a' href='/'>
-                <Image size='mini' src='/logo.png' />
-              </Menu.Item>
-              <Menu.Item header>Home</Menu.Item>
-              <Menu.Item as='a' href='/Voyance' style={menuFixed ? fixedMenuText : null}>Voyance</Menu.Item>
-
-              <Menu.Item as='a' href='/Horoscope' style={menuFixed ? fixedMenuText : null}>Horoscope</Menu.Item>
-              <Menu.Item as='a' href='/Astrologie' style={menuFixed ? fixedMenuText : null}>Astrologie</Menu.Item>
-              <Menu.Item as='a' href='/Tarot' style={menuFixed ? fixedMenuText : null}>Tarot</Menu.Item>
-              <Menu.Item as='a' href='/Numérologie' style={menuFixed ? fixedMenuText : null}>Numérologie</Menu.Item>
-            </Container>
-          </Menu>
-        </Visibility>
-
         <Container text>
           { _.times(3, i => <Paragraph key={i} />) }
 
@@ -202,57 +141,6 @@ export default class Home extends Component {
           { _.times(2, i => <Paragraph key={i} />) }
         </Container>
 
-        <Segment
-          inverted
-          style={{ margin: '5em 0em 0em', padding: '5em 0em' }}
-          vertical
-        >
-          <Container textAlign='center'>
-            <Grid columns={4} divided stackable inverted>
-              <Grid.Row>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 1' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 2' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Group 3' />
-                  <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    <List.Item as='a'>Link Two</List.Item>
-                    <List.Item as='a'>Link Three</List.Item>
-                    <List.Item as='a'>Link Four</List.Item>
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Footer Header' />
-                  <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-            <Divider inverted section />
-            <Image src='/logo.png' centered size='mini' />
-            <List horizontal inverted divided link>
-              <List.Item as='a' href='#'>Site Map</List.Item>
-              <List.Item as='a' href='#'>Contact Us</List.Item>
-              <List.Item as='a' href='#'>Terms and Conditions</List.Item>
-              <List.Item as='a' href='#'>Privacy Policy</List.Item>
-            </List>
-          </Container>
-        </Segment>
       </div>
     );
   }
