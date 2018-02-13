@@ -2,9 +2,6 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { Container, Divider, Grid, Header, Icon, Image, List, Menu, Segment, Visibility, } from 'semantic-ui-react';
 
-//const menuItem = ['Voyance', 'Horoscope', 'Astrologie', 'Tarot', 'Numérologie'];
-
-
 const menuStyle = {
   border: 'none',
   borderRadius: 0,
@@ -116,7 +113,7 @@ export default class Home extends Component {
         `}</style>
 
         <Container text fluid style={{ marginTop: '2em' }}>
-          <Header as='h1'>MyAstro logo</Header>
+          <Header as='h1'>MyAstro</Header>
           <p>This example shows how to use lazy loaded images, a sticky menu, and a simple text container</p>
         </Container>
 
