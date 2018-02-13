@@ -192,61 +192,61 @@ $email = isset($param['email']) ? trim($param['email']) : false;
 //if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,4}$", $email)){
 //    $err['email'] = 'Cette adresse email nʼest pas valide.';
 //}
-if($source !== "adwords") {
-    $sessionCheck = $_SESSION['emailCheck'];
-    $toCheckEmail = true;
-    $fromSession = false;
-    $emailResponse = null;
-    if(isset($sessionCheck) && count($sessionCheck)) {
-        if(array_key_exists($email, $sessionCheck)) {
-            $emailResponse = $sessionCheck[$email];
-            $toCheckEmail = false;
-        }
-    } else {
-        $sessionCheck = [];
-    }
-    $checkDisposable = true;
-    if($toCheckEmail) {
-        $emailResponse = $emailChecker->checkEmail($email);
-        if($emailResponse && !is_array($emailResponse)) {
-            $emailResponse = json_decode($emailResponse, true);
-        }
-        $sessionCheck[$email] = $emailResponse;
-        $_SESSION['emailCheck'] = $sessionCheck;
-    } else {
-        $fromSession = true;
-    }
-    if($emailResponse && count($emailResponse) && $emailResponse['status'] != "") {
-        switch ($emailResponse['status']) {
-            case 'invalid':
-                switch ($emailResponse['error_code']) {
-                    case 'email_address_invalid':
-                        $err['email'] = 'l\'email n\'est pas formaté correctement';
-                        break;
-                    case 'email_domain_invalid':
-                        $err['email'] = 'le domaine n\'existe pas ou n\'est pas capable de recevoir des emails';
-                        break;
-                    case 'email_account_invalid':
-                        $err['email'] = 'le compte email n\'existe pas sur le domaine';
-                        break;
-                }
-                break;
-            default:
-                if($checkDisposable) {
-                    if($emailResponse['disposable'] == 1) {
-                        $err['email'] = 'Les adresses jetables ne sont pas tolérées';
-                    }
-                }
-                break;
-        }
-    } else {
-        $err['email'] = 'Une erreur sur l\'email est survenue.';
-    }
-} else {
+//if($source !== "adwords") {
+//    $sessionCheck = $_SESSION['emailCheck'];
+//    $toCheckEmail = true;
+//    $fromSession = false;
+//    $emailResponse = null;
+//    if(isset($sessionCheck) && count($sessionCheck)) {
+//        if(array_key_exists($email, $sessionCheck)) {
+//            $emailResponse = $sessionCheck[$email];
+//            $toCheckEmail = false;
+//        }
+//    } else {
+//        $sessionCheck = [];
+//    }
+//    $checkDisposable = true;
+//    if($toCheckEmail) {
+//        $emailResponse = $emailChecker->checkEmail($email);
+//        if($emailResponse && !is_array($emailResponse)) {
+//            $emailResponse = json_decode($emailResponse, true);
+//        }
+//        $sessionCheck[$email] = $emailResponse;
+//        $_SESSION['emailCheck'] = $sessionCheck;
+//    } else {
+//        $fromSession = true;
+//    }
+//    if($emailResponse && count($emailResponse) && $emailResponse['status'] != "") {
+//        switch ($emailResponse['status']) {
+//            case 'invalid':
+//                switch ($emailResponse['error_code']) {
+//                    case 'email_address_invalid':
+//                        $err['email'] = 'l\'email n\'est pas formaté correctement';
+//                        break;
+//                    case 'email_domain_invalid':
+//                        $err['email'] = 'le domaine n\'existe pas ou n\'est pas capable de recevoir des emails';
+//                        break;
+//                    case 'email_account_invalid':
+//                        $err['email'] = 'le compte email n\'existe pas sur le domaine';
+//                        break;
+//                }
+//                break;
+//            default:
+//                if($checkDisposable) {
+//                    if($emailResponse['disposable'] == 1) {
+//                        $err['email'] = 'Les adresses jetables ne sont pas tolérées';
+//                    }
+//                }
+//                break;
+//        }
+//    } else {
+//        $err['email'] = 'Une erreur sur l\'email est survenue.';
+//    }
+//} else {
     if(!preg_match("$[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,4}$", $email)){
         $err['email'] = 'Cette adresse email nʼest pas valide.';
     }
-}
+//}
 
 // Numéro de téléphone & Pays --------------------------------------------------
 list($tel, $pays) = form_phone($err, $param);
