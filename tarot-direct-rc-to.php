@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     -------------------------------------------
     --   tarot-direct-rc-to = REFLEX CACHE   --
     -------------------------------------------
@@ -10,7 +10,7 @@
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$dri = "https://voyance-en-direct.tv/tarot-en-direct/saisie-cb?email=[EMAIL]";
+$dri = "https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]";
 include('include/questions/tarot-direct.php');
 session_start();
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
@@ -25,13 +25,13 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="<?= $pict_path;?>favicon.png" />
-        
+
         <!-- Meta Facebook --
         <meta property="og:title" content="Nouvelle Lune = Nouvelle Vie" />
         <meta property="og:type" content="website" />
@@ -39,9 +39,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <meta property="og:image" content="http://www.myastro.fr/images_landing/nouvelle-lune-16/fb-ban.jpg" />
         <meta property="og:description" content="À l’image de son incidence sur le cycle lunaire, auquel elle donne un nouveau départ, la nouvelle lune a des conséquences et des influences similaires sur la vie de chacun d’entre nous." />
         <meta property="og:locale" content="fr_FR" /-->
-        
+
         <link rel="stylesheet" type="text/css" href="<?= $css;?>" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

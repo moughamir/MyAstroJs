@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ------------------------------------
     --   tarot-direct-lon = LONDRES   --
     ------------------------------------
@@ -10,7 +10,7 @@
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$dri = "https://voyance-en-direct.tv/tarot-en-direct/saisie-cb?email=[EMAIL]";
+$dri = "https://voyance-en-direct.tv/tarot-en-direct/offre-gratuite?id=[IDKGESTION]";
 include('include/questions/tarot-direct.php');
 ?>
 <!DOCTYPE html>
@@ -19,13 +19,13 @@ include('include/questions/tarot-direct.php');
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot Direct - Interprétation en live !</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/png" href="<?= $pict_path ?>favicon.png" />
-        
+
         <!-- Meta Facebook --
         <meta property="og:title" content="Nouvelle Lune = Nouvelle Vie" />
         <meta property="og:type" content="website" />
@@ -33,9 +33,9 @@ include('include/questions/tarot-direct.php');
         <meta property="og:image" content="http://www.myastro.fr/images_landing/nouvelle-lune-16/fb-ban.jpg" />
         <meta property="og:description" content="À l’image de son incidence sur le cycle lunaire, auquel elle donne un nouveau départ, la nouvelle lune a des conséquences et des influences similaires sur la vie de chacun d’entre nous." />
         <meta property="og:locale" content="fr_FR" /-->
-        
+
         <link rel="stylesheet" type="text/css" href="<?= $css ?>" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -256,9 +256,9 @@ include('include/questions/tarot-direct.php');
                 </div>
             </section>
         </div>
-        
+
         <p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p>
-        
+
         <!-- #### SCRIPTS #### -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/tarot-draw.js"></script>
@@ -271,7 +271,7 @@ include('include/questions/tarot-direct.php');
         </script>
         <script src="js/tarot-direct-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

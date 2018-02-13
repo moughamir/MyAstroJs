@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
     ---------------------------------
     --   RENTRÉE 2016 = AFFIL-BASE --
     ---------------------------------
@@ -30,15 +30,15 @@ switch ($result) {
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>My Astro - C’est la rentrée ! Venez tester votre moral</title>
-        
+
         <meta name="robots" content="noindex,nofollow" />
-        
+
         <link rel="icon" type="image/jpg" href="logo_myastro_32x32.jpg" />
-        
+
         <link rel="stylesheet" type="text/css" href="css/rentree16.min.css" />
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -53,7 +53,7 @@ switch ($result) {
                 <h1 class="PageLogo bgHeader"><span>C’est la rentrée</span><span>Venez tester votre moral</span></h1>
                 <?php include('include/bloc-socials.php'); ?>
             </header>
-            
+
             <section class="ContentBand">
                 <article class="FormContainer">
                     <div class="FormContainer overlay" id="form-overlay"></div>
@@ -62,21 +62,21 @@ switch ($result) {
                         <p class="Result-Text"><?= $textResult ?></p>
                         <p class="FormContainer-Slogan"><span class="ico-form"></span>Vous allez recevoir votre interprétation complète par email dès demain.</p>
                         <p class="FormContainer-Slogan2">Envie d’en savoir plus immédiatement ?</p>
-                        
+
                         <p class="DRI-Sent" style="margin-bottom: 3rem">
                             Nos voyants sont disponibles de suite sur notre TCHAT !<br />
-                            Profitez dés maintenant de notre offre à <strong>1€</strong> les 15 minutes.
+                            Profitez dés maintenant de notre offre de <strong>5 minutes GRATUITES</strong>.
                         </p>
-                        
-                        <a href="http://www.voyance-en-direct.tv/voyance-par-tchat/saisie-cb?email=<?= urlencode($_SESSION['email'])?>" class="FormContainer-Submit btn-send">Lancer le tchat</a>
+
+                        <a href="http://www.voyance-en-direct.tv/voyance-par-tchat/offre-gratuite?id=<?= urlencode($_SESSION['kgestion_id'])?>" class="FormContainer-Submit btn-send">Lancer le tchat</a>
                     </div>
-                </article>  
+                </article>
             </section>
-            
+
             <footer><p class="SiteCopyright"><?php include('include/footer_copyright.php'); ?></p></footer>
-            
+
         </div><!-- fin de .PageWrapper -->
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

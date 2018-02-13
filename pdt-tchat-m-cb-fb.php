@@ -19,7 +19,7 @@ $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Pouvoir Des Trois - 1€ les 30 minutes</title>
+        <title>Pouvoir Des Trois - 5 mintures gratuites</title>
         <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
         <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet" />
@@ -59,7 +59,7 @@ $question = ['code' => 'pouvoirdestrois_1', 'subject' => 'evenement', 'text' => 
                     <!-- ############################################### -->
                     <section class="Merci-Form">
                         <header class="Merci-Form--header">
-                            <h2>1€ les 30 <span class="cap">minutes</span></h2>
+                            <h2>5 minutes GRATUITES</h2>
                         </header>
                         <div class="FormContainer">
                             <!---->
