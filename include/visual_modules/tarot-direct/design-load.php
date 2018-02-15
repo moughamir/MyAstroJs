@@ -36,7 +36,7 @@ if($force_design && isset($styles[$_GET['css']])){
         $select_style = 'noel';
     } elseif($m == 1 || $m == 12) { // Le reste du mois de décembre et le mois de janvier
         $select_style = 'nouvel-an';
-    } elseif($m == 2 && $j >= 6 && $j <= 19 ){ // Du 6 au 19 février inclus
+    } elseif($m == 2 && $j >= 6 && $j <= 25 ){ // Du 6 au 19 février inclus
         $select_style = 'amour';
     } else { // Par défaut
         $select_style = 'default';
