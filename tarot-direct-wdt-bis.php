@@ -1,6 +1,6 @@
 <?php
 /**
- * tarot-direct-wdt == WEEDOIT
+ * tarot-direct-wdt-bis == WEEDOIT
  * ---------------------------
  * Created on : 18 septembre 2017 By Laurène Dourdin <2aurene@gmail.com>
  */
@@ -8,7 +8,7 @@ session_start();
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-wdt';
+$url = 'tarot-direct-wdt-bis';
 $method = "general-suscribe";
 $support = "tarot";
 $site = "myastro.fr";
@@ -19,6 +19,7 @@ $dri2 = "tarot-direct-dri-tog";
 include('include/questions/tarot-direct.php');
 
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['weedoitbis'] = 1;
 
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
