@@ -10,7 +10,7 @@ if($_SESSION['affiliation'] == 'weedoit' && isset($_SESSION['weedoitreqid'])){
 
 
         if(isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
-            $url = 'https://www.wtrackssl01.fr/tr/tracklead.php?idcpart=16527&reqid='.$_SESSION['weedoitreqid'].'&idr='.$_SESSION['user_id'].'&email='.$_SESSION['email'];
+            $url = 'https://www.wtrackssl01.fr/tr/tracklead.php?idcpart=16527&email='.$_SESSION['email'].'&idr='.$_SESSION['user_id'].'&reqid='.$_SESSION['weedoitreqid'];
             file_get_contents($url);
         }
         else {
