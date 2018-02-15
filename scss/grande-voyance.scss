@@ -1551,3 +1551,101 @@ a:visited {
     }
   }
 }
+
+
+#acces-gv {
+
+  .modal-content {
+    top: 150px;
+   }
+
+  .modal-body {
+    padding: 0rem;
+    margin-top: -20px;
+  }
+
+  .modal-dialog {
+    max-width: 420px;
+   }
+
+  .Button {
+    width: 80%;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+
+  .FormContainer {
+    padding: 0rem;
+    background-color: #eee;
+  }
+
+  .FormContainer-Fields {
+    margin-top: 1.5rem;
+   }
+
+  .modal-header {
+    background: #615d5e;
+    line-height:3.428571;
+    color: #ffffff;
+    text-align: center;
+
+    .acces-form-header {
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+
+  .psychic {
+   z-index: 9999;
+   }
+
+  .FormContainer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .FormField-Input {
+
+    border: 1px solid #8f5f7a;
+    line-height: 1.1;
+    padding: 0.4rem 1.2rem;
+  }
+
+}
+
+#gvApp .page-header {
+  border-bottom: none;
+  .title {
+    font-family: sans-serif;
+  }
+
+}
+#gvApp .headline-obj, #gvApp .headline-adv {
+  text-transform: none;
+}
+
+@media (min-width: 768px) { // this is the 768px breakpoint
+  .modal-dialog {
+    max-width: 600px;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) { // this is the 768px breakpoint
+
+  #acces-gv .modal-header .acces-form-header {
+    font-size: 1.3rem;
+    padding-bottom: 12px;
+  }
+}
+
+@media (min-width: 992px) { // this is the 992px breakpoint
+  .modal-dialog {
+    max-width: 800px;
+  }
+}
+
+
+

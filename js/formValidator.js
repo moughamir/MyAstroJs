@@ -123,6 +123,7 @@ $(document).ready(function () {
                 }
                 if (response.hasOwnProperty('reload_form')) {
                     // Remplacement du formulaire
+
                     $.ajax({
                         url: response.reload_form,
                         type: 'POST',
@@ -172,7 +173,14 @@ $(document).ready(function () {
                     }
 
                 }
-                if (response.hasOwnProperty('error')) {
+
+                 if (response.hasOwnProperty('acces_form_gv')) {
+                    $("#acces-gv").modal('hide');
+                     Cookies.set('accesFormShown', true);
+
+                 }
+
+                    if (response.hasOwnProperty('error')) {
                     // Affichage des erreurs
                     var alert_form_errors = $(alert_error);
                     var err = response.error;

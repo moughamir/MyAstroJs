@@ -13,11 +13,73 @@ $assets = 'images_landing/grande-voyance/18';
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>La Grande Voyance 2018 - MyAstro</title>
         <link rel="icon" type="image/png" href="<?= $assets; ?>/favicon.png"/>
+        <link rel="stylesheet" href="css/gv/bootstrap.min.css">
+        <link rel="stylesheet" href="css/grande-voyance-dri.css" type="text/css"/>
         <link rel="stylesheet" href="css/grande-voyance.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
     </head>
 
     <body class="no-js" id="gvApp">
-        <div class="loading">
+
+    <!-- Modal -->
+    <div id="acces-gv" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"></button>
+                    <h3 class="modal-title acces-form-header">Remplissez le formulaire pour accéder à la grande voyance</h3>
+                </div>
+                <div class="modal-body">
+                        <section class="acces-form">
+
+                            <div class="FormContainer overlay" id="form-overlay"></div>
+                            <article class="FormContainer">
+                                <form method="post" id="form-container" class="ajax">
+                                    <input type="hidden" name="source" value="gv-hm" />
+                                    <input type="hidden" name="method" value="general-suscribe" />
+                                    <input type="hidden" name="support" value="voyance" />
+                                    <input type="hidden" name="acces_form_popup" value="acces_form_popup" />
+                                    <input type="hidden" name="site" value="myastro.fr" />
+                                    <input type="hidden" name="affiliation" value="" />
+                                    <input type="hidden" name="pays" value="FR" />
+                                    <input type="hidden" name="question_code" value="question_1" />
+                                    <input type="hidden" name="optional_birthdate" value="1" />
+
+                                    <!-- ########## autres champs pré-remplis ########## -->
+                                    <input type="hidden" name="convertir" value="1" />
+                                    <input type="hidden" name="cguv" value="1" />
+                                    <input type="hidden" name="partenaires" value="1" />
+                                        <div class="FormContainer-Fields">
+                                            <div class="FormField">
+                                                <input type="text" class="FormField-Input" name="prenom" placeholder="Prénom" required />
+                                            </div>
+                                            <div class="FormField">
+                                                <input type="email" id="email" name="email" placeholder="Email" class="FormField-Input"  required/>
+                                            </div>
+                                            <div class="FormField">
+                                                <input type="tel" id="tel" name="tel" placeholder="Téléphone" class="FormField-Input"  required/>
+                                            </div>
+
+                                            <!-- SUBMIT -->
+                                            <button class="Button" type="submit" name="submit">j'accède à ma voyance 2018</button>
+                                        </div>
+                                </form>
+                        </section>
+                        <div class="psychic"></div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="loading">
             <div id="zodiac-container" class="zodiac"></div>
         </div>
         <nav>
@@ -299,6 +361,21 @@ $assets = 'images_landing/grande-voyance/18';
         <script src="js/formValidator.js"></script>
         <script type="text/javascript" src="js/grande-voyance.js"></script>
         <link href="//fonts.googleapis.com/css?family=Lobster|Open+Sans|Oswald" rel="stylesheet"/>
+        <script type="text/javascript" src="./voyance-gratuite-6_files/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.js"></script>
+
+
+    <script type="text/javascript" >
+
+        if (!Cookies.get('accesFormShown')) {
+
+            $("#acces-gv").modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+
+      </script>
     </body>
 
 </html>
