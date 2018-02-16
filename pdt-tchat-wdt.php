@@ -21,6 +21,7 @@ $questions = array(
 );
 
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 
 $assets = 'images_landing/pouvoir-des-trois';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';

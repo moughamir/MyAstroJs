@@ -10,6 +10,7 @@ $dri = "myastro/offre-gratuite";
 $targetContent = $_GET['p'];
 $dri2 = "gv-wdt-dri?p=".$targetContent;
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 
 $assets        = 'images_landing/grande-voyance/18';
 ?>

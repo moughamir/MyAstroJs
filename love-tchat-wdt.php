@@ -16,6 +16,7 @@ $assets = 'images_landing/love-tchat';
 
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 ?>
 <?php include('include/affiliate-tracker.php');?>
 <!DOCTYPE html>
