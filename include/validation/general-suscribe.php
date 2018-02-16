@@ -60,6 +60,9 @@ $rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_sourc
 if(isset($_SESSION['subid'])) {
     $rc_affiliateid = $_SESSION['subid'];
 }
+if(isset($_SESSION['weedoitreqid'])) {
+    $rc_source = $_SESSION['weedoitreqid'];
+}
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
