@@ -19,6 +19,7 @@ $dri2 = "tarot-direct-dri-tog";
 include('include/questions/tarot-direct.php');
 
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 $_SESSION['weedoitbis'] = 1;
 
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';

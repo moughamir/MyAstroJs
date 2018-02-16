@@ -11,6 +11,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
 
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 
 ?>
 <!DOCTYPE html>
@@ -19,9 +20,9 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <title>Tarot de Noël par MyAstro</title>
-        
+
         <link rel="shortcut icon" type="image/x-icon" href="images_landing/noel-17/favicon.png">
         <link rel="stylesheet" href="css/noel-17.css">
     </head>
@@ -183,7 +184,7 @@ $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
         </script>
         <script src="js/tarot-noel-wizard.js"></script>
         <script src="js/formValidator.js"></script>
-        
+
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
               include('include/remarketing/analytics.php');

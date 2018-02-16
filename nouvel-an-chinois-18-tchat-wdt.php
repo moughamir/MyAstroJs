@@ -15,6 +15,7 @@ $_SESSION['ab_request_url'] = $_SERVER['REQUEST_URI'];
 
 $reassurance_items = [ 'voyant-serieux', 'discretion', 'mail-24h', 'leader' ];
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
