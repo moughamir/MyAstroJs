@@ -16,6 +16,5 @@ if($_SESSION['affiliation'] == 'weedoit' && isset($_SESSION['weedoitreqid'])){
 
         unset($_SESSION['conversion']);
         unset($_SESSION['weedoitreqid']);
-        unset($_SESSION['weedoitbis']);
     }
 }
