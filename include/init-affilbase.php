@@ -30,6 +30,16 @@ if($idkgestion){
         $source = $tracking_data->source;
         $url = $tracking_data->url;
         $gclid = isset($tracking_data->gclid) ? $tracking_data->gclid : '';
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        $_SESSION['pauline_mail'] = 1;
+        if(isset($tracking_data->aff_tracker)) {
+            $_SESSION['affiliate_tracker'] = $tracking_data->aff_tracker;
+        }
+        if(isset($tracking_data->aff_id)) {
+            $_SESSION['affiliate_id'] = $tracking_data->aff_id;
+        }
         if(isset($tracking_data->sexe)) {
             $sexeTracking = $tracking_data->sexe;
             $prenomTracking = $tracking_data->prenom;

@@ -42,7 +42,7 @@ $assets = 'images_landing/love-tchat';
         <main class="ContentBand">
             <div class="PageWrapper">
                 <section class="section post-test">
-                    
+
                         <p>
                         <span class="animate animate-ltr">Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
                     </span>
@@ -86,7 +86,7 @@ $assets = 'images_landing/love-tchat';
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
-                           
+
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
@@ -98,7 +98,6 @@ $assets = 'images_landing/love-tchat';
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
