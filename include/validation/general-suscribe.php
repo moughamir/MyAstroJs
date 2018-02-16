@@ -627,7 +627,12 @@ if(empty($err)){
         } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
         } elseif($source == 'weedoit'){
-            include('../include/conversion/weedoit.php');
+           if(isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
+               include('../include/pixels/weedoit-bis.php');
+           }else{
+               include('../include/conversion/weedoit.php');
+           }
+
         }elseif($source == 'strandlink'){
             include('../include/conversion/strandlink.php');
         } else {
