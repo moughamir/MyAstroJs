@@ -635,7 +635,7 @@ if(empty($err)){
             include('../include/conversion/reflexcash.php');
         } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
-        } elseif($source == 'weedoit'){
+        } elseif($source == 'weedoit' && isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
             include('../include/conversion/weedoit.php');
         }elseif($source == 'strandlink'){
             include('../include/conversion/strandlink.php');
