@@ -53,9 +53,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <nav class="SiteHeader-Nav">
-                    <a href="<?= PROTOCOL.'://'.ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!-- 
+                    <a href="<?= PROTOCOL.'://'.ROOT_URL;?>/charte-de-deontologie" rel="nofollow" target="_blank">Charte déontologique</a> | <!--
                  --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/conditions-generale" rel="nofollow" target="_blank">Conditions générales</a> | <!--
-                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a> 
+                 --><a href="<?= PROTOCOL.'://'.ROOT_URL;?>/paiement-securise" rel="nofollow" target="_blank">Paiement sécurisé</a>
                 </nav>
             </div>
         </header>
@@ -143,7 +143,6 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                 <input type="hidden" name="dri" value="myastro/offre-gratuite" />
                                 <input type="hidden" name="dri2" value="myastro-tchat-dri" />
                                 <!-- ########## autres champs pré-remplis ######### -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />

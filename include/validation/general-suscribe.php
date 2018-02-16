@@ -382,6 +382,10 @@ if(empty($err)){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
+            unset($_SESSION['reflexcash_affiliateid']);
+            unset($_SESSION['affiliate_id']);
+            unset($_SESSION['reflexcash_source']);
+            unset($_SESSION['affiliate_tracker']);
             $kgestion_id = $kgestion_insert->id;
             $newKgestion = $kgestion_insert->new;
         }
@@ -390,8 +394,9 @@ if(empty($err)){
 /* ========================================================================== *
  *                       RECHERCHE PROSPECT SUR KGESTION                       *
  * ========================================================================== */
-$repousse = $doublon = $affiliation = 0;
+$repousse = $doublon = $affiliation  = 0;
 if($newKgestion) {
+    $pauline = isset($_SESSION['pauline_mail']) ? $_SESSION['pauline_mail'] : 0;
     $searchAffiliation = $kgestion->searchProspectAffiliation($kgestion_id);
     if($searchAffiliation && $searchAffiliation->doublon > 0){
         $doublon = 1;
@@ -411,6 +416,10 @@ if($newKgestion) {
     }
     if($repousse == 1 && $doublon == 1) {
         $affiliation = 11;
+    }
+    if($pauline) {
+        unset($_SESSION['pauline_mail']);
+        $affiliation = 12;
     }
 
     $post_data = array(
