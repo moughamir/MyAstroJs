@@ -626,13 +626,8 @@ if(empty($err)){
             include('../include/conversion/reflexcash.php');
         } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
-        } elseif($source == 'weedoit'){
-           if(isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
-               include('../include/pixels/weedoit-bis.php');
-           }else{
-               include('../include/conversion/weedoit.php');
-           }
-
+        } elseif($source == 'weedoit' && isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
+            include('../include/pixels/weedoit.php');
         }elseif($source == 'strandlink'){
             include('../include/conversion/strandlink.php');
         } else {
