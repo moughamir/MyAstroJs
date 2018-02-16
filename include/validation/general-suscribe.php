@@ -61,7 +61,7 @@ if(isset($_SESSION['subid'])) {
     $rc_affiliateid = $_SESSION['subid'];
 }
 if(isset($_SESSION['weedoitreqid'])) {
-    $rc_source = $_SESSION['subid'];
+    $rc_source = $_SESSION['weedoitreqid'];
 }
 
 if(!$website){
