@@ -1,0 +1,471 @@
+// Main Application
+'use strict';
+var app = angular.module('myAstro', ['ngAnimate']);
+
+function GameController($scope, $timeout) {
+  $scope.deck = createDeck();
+  $scope.isGuarding = false;
+  $scope.inGame = false;
+  shine(true);
+
+  $scope.check = function(card) {
+
+    if (currentSessionOpen && previousCard != card && previousCard.item == card.item && !card.isFaceUp) {
+      card.isFaceUp = true;
+      previousCard = null;
+      currentSessionOpen = false;
+      numPairs++;
+      shine(false);
+
+    }
+    else if (currentSessionOpen && previousCard != card && previousCard.item != card.item && !card.isFaceUp) {
+      $scope.isGuarding = true;
+      card.isFaceUp = true;
+      currentSessionOpen = false;
+      $timeout(function() {
+        previousCard.isFaceUp = card.isFaceUp = false;
+        previousCard = null;
+        $scope.isGuarding = $scope.timeLimit ? false : true;
+      }, 1000);
+      shine(false);
+
+    }
+    else {
+      card.isFaceUp = true;
+      currentSessionOpen = true;
+      previousCard = card;
+      shine(false);
+
+    }
+
+    if (numPairs == constants.getNumMatches()) {
+      shine(true);
+      $scope.stopTimer();
+      $('#modal-g').modal('toggle');
+    }
+  }; //end of check()
+
+  // for the timer
+  $scope.timeLimit = 60000;
+  $scope.isCritical = false;
+
+  var timer = null;
+
+  // start the timer as soon as the player presses start
+  $scope.start = function() {
+    // I need to fix this redundancy. I initially did not create this
+    // game with a start button.
+    $scope.deck = createDeck();
+    // set the time of 1 minutes and remove the cards guard
+    $scope.timeLimit = 60000;
+    $scope.isGuarding = false;
+    $scope.inGame = true;
+
+    ($scope.startTimer = function() {
+      $scope.timeLimit -= 1000;
+      $scope.isCritical = $scope.timeLimit <= 10000 ? true : false;
+
+      timer = $timeout($scope.startTimer, 1000);
+      if ($scope.timeLimit === 0) {
+        $scope.stopTimer();
+        $scope.isGuarding = true;
+      }
+    })();
+  };
+  // function to stop the timer
+  $scope.stopTimer = function() {
+    $timeout.cancel(timer);
+    $scope.inGame = false;
+    previousCard = null;
+    currentSessionOpen = false;
+    numPairs = 0;
+  };
+
+}
+
+function ModalController($scope) {
+  $scope.showModal = false;
+  $scope.toggleModal = function() {
+    $scope.showModal = !$scope.showModal;
+  };
+}
+
+GameController.$inject = ["$scope", "$timeout"];
+ModalController.$inject = ["$scope"];
+
+app.controller('ModalController', ModalController);
+app.directive('modal', function() {
+  return {
+    template: '<div class="modal fade" id="modal-g">' +
+      '<div class="modal-dialog">' +
+      '<div class="modal-Container">' +
+      '<div class="modal-content">' +
+      '<div class="modal-body" ng-transclude></div>' +
+      '</div>' +
+      '</div>' +
+      '</div>' +
+      '</div>',
+    restrict: 'E',
+    transclude: true,
+    replace: true,
+    scope: true,
+    link: function postLink(scope, element, attrs) {
+      scope.title = attrs.title;
+
+      scope.$watch(attrs.visible, function(value) {
+        if (value == true)
+          $(element).modal('show');
+        else
+          $(element).modal('hide');
+      });
+
+      $(element).on('shown.bs.modal', function() {
+        scope.$apply(function() {
+          scope.$parent[attrs.visible] = true;
+        });
+      });
+
+      $(element).on('hidden.bs.modal', function() {
+        scope.$apply(function() {
+          scope.$parent[attrs.visible] = false;
+        });
+      });
+    }
+  };
+});
+
+// constant variables
+var constants = new(function() {
+  var rows = 4;
+  var columns = 4;
+  var numMatches = (rows * columns) / 2;
+  this.getRows = function() {
+    return rows;
+  };
+  this.getColumns = function() {
+    return columns;
+  };
+  this.getNumMatches = function() {
+    return numMatches;
+  };
+})();
+
+// Global Variables
+var currentSessionOpen = false;
+var previousCard = null;
+var numPairs = 0;
+
+// this function creates deck of cards that returns an object of cards
+// to the caller
+function createDeck() {
+  var rows = constants.getRows();
+  var cols = constants.getColumns();
+  var key = createRandom();
+  var deck = {};
+  deck.rows = [];
+
+  // create each row
+  for (var i = 0; i < rows; i++) {
+    var row = {};
+    row.cards = [];
+
+    // creat each card in the row
+    for (var j = 0; j < cols; j++) {
+      var card = {};
+      card.isFaceUp = false;
+      card.item = key.pop();
+      row.cards.push(card);
+    }
+    deck.rows.push(row);
+  }
+  return deck;
+}
+
+// used to remove something form an array by index
+function removeByIndex(arr, index) {
+  arr.splice(index, 1);
+}
+
+function insertByIndex(arr, index, item) {
+  arr.splice(index, 0, item);
+}
+
+// creates a random array of items that contain matches
+// for example: [1, 5, 6, 5, 1, 6]
+function createRandom() {
+  var matches = constants.getNumMatches();
+  var pool = [];
+  var answers = [];
+  var astro = ['belier', 'cancer', 'capricorne', 'gemeaux',
+    'poisson', 'taureau', 'verseau', 'vierge'
+  ];
+  // set what kind of item to display
+  var items = astro;
+
+  // create the arrays for random numbers and item holder
+  for (var i = 0; i < matches * 2; i++) {
+    pool.push(i); // random numbers
+  }
+
+  // generate an array with the random items
+  for (var n = 0; n < matches; n++) {
+    // grab random letter from array and remove that letter from the
+    // original array
+    var randLetter = Math.floor((Math.random() * items.length));
+    var letter = items[randLetter];
+    removeByIndex(items, randLetter);
+    // generate two random placements for each item
+    var randPool = Math.floor((Math.random() * pool.length));
+
+    // remove the placeholder from answers and insert the letter into
+    // random slot
+    insertByIndex(answers, pool[randPool], letter);
+
+    // remove random number from pool
+    removeByIndex(pool, randPool);
+
+    // redo this process for the second placement
+    randPool = Math.floor((Math.random() * pool.length));
+    insertByIndex(answers, pool[randPool], letter);
+
+    // remove rand number from pool
+    removeByIndex(pool, randPool);
+  }
+  return answers;
+}
+
+
+
+
+function shine(state) {
+  console.log(state);
+  if (state == true) {
+    console.log(state + ' 2');
+    setInterval(
+      function() {
+        randomShine();
+      }, 300
+    );
+  }
+  else {
+    clearInterval(1);
+
+  }
+
+}
+
+function randomShine() {
+  var cards = $('.card');
+
+  var cardId = Math.floor(Math.random() * cards.length);
+  cards.eq(cardId).addClass('shine');
+  setTimeout(function() {
+    cards.eq(cardId).removeClass('shine');
+  }, 300);
+}
+app.controller("GameController", GameController);
+
+
+(function($) {
+  // DOM elems
+  var $game;
+  var $cups;
+  var $ball;
+  var $gameResult;
+  var $playBtn;
+
+  function initGame() {
+    // Config vars
+    var animSpeed = 400;
+    var intervalSpeed = animSpeed + 100;
+    var nbMaxSwaps = 5;
+
+    // Game vars
+    var posBall;
+    var animsInterval;
+    var cupsWidth = $cups.outerWidth(true);
+    var nbCups = $cups.length;
+    var nbSwaps = 0;
+
+    // Animation
+    function move($elemToMove, dir, depth, nbMoves) {
+      var distanceAnim = cupsWidth * nbMoves / 2;
+      var zindex = 'auto';
+      var scale;
+
+      if (depth > 0) {
+        zindex = 5;
+        scale = 1.25;
+      }
+      else {
+        scale = 0.75;
+        zindex = -5;
+      }
+
+      if (dir === 'left') {
+        dir = '-';
+      }
+      else {
+        dir = '+';
+      }
+
+      $elemToMove
+        .css('z-index', zindex)
+        .transition({
+          x: dir + '=' + distanceAnim,
+          scale: scale
+        }, {
+          duration: animSpeed / 2,
+          easing: 'linear'
+        })
+        .transition({
+          x: dir + '=' + distanceAnim,
+          scale: 1
+        }, {
+          duration: animSpeed / 2,
+          easing: 'linear',
+          complete: function() {
+            $elemToMove.css('z-index', 'auto');
+
+            nbSwaps += 0.5;
+
+            if (nbSwaps >= nbMaxSwaps) {
+              clearInterval(animsInterval);
+              end();
+            }
+          }
+        });
+    }
+
+    function moveToLeft($elemToMove, depth, nbMoves) {
+      move($elemToMove, 'left', depth, nbMoves);
+    }
+
+    function moveToRight($elemToMove, depth, nbMoves) {
+      move($elemToMove, 'right', depth, nbMoves);
+    }
+
+    // Swaps cups position
+    function swapElems($firstCup, $secondCup) {
+      var posFirstCup = $firstCup.data('posCurrent');
+      var posSecondCup = $secondCup.data('posCurrent');
+      var nbMoves = Math.abs(posFirstCup - posSecondCup);
+
+      if (posFirstCup > posSecondCup) {
+        moveToLeft($firstCup, 1, nbMoves);
+        moveToRight($secondCup, 0, nbMoves);
+      }
+      else {
+        moveToRight($firstCup, 0, nbMoves);
+        moveToLeft($secondCup, 1, nbMoves);
+      }
+
+      $firstCup.data('posCurrent', posSecondCup);
+      $secondCup.data('posCurrent', posFirstCup);
+    }
+
+    function animateCups() {
+      var posCups = [];
+      var indexFirstCup = Math.floor(Math.random() * nbCups);
+      var indexSecondCup;
+      var $firstCup;
+      var $secondCup;
+
+      for (var i = 0; i < nbCups; i++) {
+        posCups[i] = i;
+      }
+
+      posCups.splice(indexFirstCup, 1);
+
+      indexSecondCup = posCups[Math.floor(Math.random() * (nbCups - 1))];
+
+      $firstCup = $cups.eq(indexFirstCup);
+      $secondCup = $cups.eq(indexSecondCup);
+
+      swapElems($firstCup, $secondCup);
+    }
+
+
+    // Starts a game
+    function start() {
+      nbSwaps = 0;
+      posBall = Math.floor(Math.random() * nbCups);
+
+      $playBtn.off('click');
+      $game.off('click');
+
+      // Update of cups position
+      $cups.each(function() {
+        var posEnd = $(this).data('posCurrent');
+        $(this).data('posStart', posEnd);
+      });
+
+      // Shows the ball
+      $ball
+        .css('left', posBall * cupsWidth)
+        .fadeIn()
+        .delay(600)
+        .fadeOut(function() {
+          // Cups swaping
+          animsInterval = setInterval(animateCups, intervalSpeed);
+        });
+    }
+
+    // End of game
+    function end() {
+      $playBtn.on('click', start);
+
+      $game.on('click', '.cup', function() {
+        var posStart = $(this).data('posStart');
+        var posEnd = $(this).data('posCurrent');
+
+        // If the ball is found
+        if (posBall === posStart) {
+          $game.off('click', '.cup');
+
+          // Shows the ball
+          $ball
+            .css('left', posEnd * cupsWidth)
+            .stop(true, false)
+            .fadeIn()
+            .delay(600)
+            .fadeOut();
+
+          $gameResult.text('Ball found !');
+        }
+        else {
+          $gameResult.text('Try again !');
+        }
+
+        $gameResult
+          .stop(true, false)
+          .fadeIn()
+          .delay(600)
+          .fadeOut();
+      });
+    }
+
+    function init() {
+      // Init positions
+      $cups.each(function(i) {
+        $(this).data({ posStart: i, posCurrent: i });
+      });
+
+      $playBtn.on('click', start);
+    }
+
+    // Game init
+    init();
+  };
+
+  $(document).ready(function() {
+    $game = $('#game');
+    $cups = $game.find('.cup');
+    $ball = $game.find('.ball');
+    $gameResult = $game.find('#game-result');
+    $playBtn = $('#btn-play');
+
+    initGame();
+  });
+
+})(jQuery);

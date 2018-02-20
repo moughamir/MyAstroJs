@@ -1,0 +1,27 @@
+{
+  "name": "myastro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/omnizya/myastro.git"
+  },
+  "author": "Mohamed Moughamir",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/omnizya/myastro#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1"
+  }
+}

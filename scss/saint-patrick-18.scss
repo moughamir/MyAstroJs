@@ -13,13 +13,13 @@
 @import "modules/fonts";
 //== variables
 //0- dir
-$assets: '/images_landing/saint-patrick-2017/';
+$assets: '/images_landing/saint-patrick-2018/';
 //1- Font face
 $lobster: 'Lobster',
 cursive;
 //2- color scheme
-$primary: #074145;
-$secondary: #53FD19;
+$primary: #ffbe28;
+$secondary: #43372c;
 $c: #094B4D;
 $dark: #2b2b2b;
 $modal-green: #256F6B;
@@ -31,9 +31,9 @@ $card-shadow: 0px 3px 5px 1px rgba(3, 3, 3, 0.5);
 $line-height-base: 1.428571429 !default; // 20/14
 $border-radius-large: 3px;
 // Images
-$background : $assets + 'background.jpg';
-$carte : $assets + 'Saint-Patrick.svg';
-$shine : $assets + 'sp-shine.svg';
+$background: $assets+'background.jpg';
+$carte: $assets+'Saint-Patrick.svg';
+$shine: $assets+'sp-shine.svg';
 // Media queries breakpoints
 // --------------------------------------------------
 // Extra small screen / phone
@@ -94,8 +94,7 @@ main {
   top: 0;
   z-index: 5;
   height: 81px;
-  background: $secondary;
-  //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
+  background: $secondary; //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
   border: none;
   box-shadow: $card-shadow;
 }
@@ -428,8 +427,7 @@ hr {
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0.5px 0.866px 0px rgb( 0, 0, 0);
-  border: none;
-  //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
+  border: none; //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
   background: $secondary;
   box-shadow: $card-shadow;
   width: 263px;
@@ -811,13 +809,61 @@ label {
     }
   }
 }
+
 .DRI-Sent {
-    color: white;
+  color: white;
+  text-align: center;
+  font-family: Oxygen;
+  strong {
+    font-family: "Fjalla One";
+    font-weight: 500;
+    font-size: 19px;
+  }
+}
+
+
+#game {
+  display: inline-block;
+  position: relative;
+  .cup {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 130px solid transparent;
+    height: 0;
+    cursor: pointer;
+    float: left;
+    margin: 0 30px;
+    position: relative;
+    width: 70px;
+  }
+  .ball {
+    display: none;
+    background: #000;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 65px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &-result {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
     text-align: center;
-    font-family: Oxygen;
-    strong {
-        font-family: "Fjalla One";
-        font-weight: 500;
-        font-size: 19px;
-    }
+  }
+}
+#btn-play
+{
+	background: #CCC;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	margin: 20px auto;
+	padding: 5px 15px;
 }
