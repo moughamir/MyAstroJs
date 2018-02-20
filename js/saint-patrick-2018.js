@@ -268,11 +268,11 @@ app.controller("GameController", GameController);
 
 (function($) {
   // DOM elems
-  var $game;
-  var $cups;
-  var $ball;
-  var $gameResult;
-  var $playBtn;
+  var $game,
+    $cups,
+    $ball,
+    $gameResult,
+    $playBtn;
 
   function initGame() {
     // Config vars
@@ -456,7 +456,7 @@ app.controller("GameController", GameController);
 
     // Game init
     init();
-  };
+  }
 
   $(document).ready(function() {
     $game = $('#game');
