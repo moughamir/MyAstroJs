@@ -10,7 +10,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
     <meta name="MobileOptimized" content="320" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="robots" content="noindex,nofollow" />
@@ -77,7 +77,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       </section>
       <section class="two">
         <article class="center-ner">
-          <h3>en cadeau votre étude personnalisée</h3>
+          <h3>en cadeau 10 minutes de voyance achetées = 10 minutes de voyance offertes</h3>
         </article>
         <article class="study">
           <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
