@@ -131,6 +131,15 @@ main {
     color: $primary;
   }
 }
+.gifty{
+  &:before{
+    content: '';
+    @include square(30px);
+    display: inline-block;
+    background: transparent url($assets+'icons/gift.svg') no-repeat center;
+    margin-right: 8px;
+  }
+}
 
 .study {
   width: 100%;
@@ -141,7 +150,7 @@ main {
 }
 
 .article--title {
-  color: white;
+  color: $secondary;
   font-family: "Fjalla One";
   font-size: 26px;
   font-weight: 500;
@@ -151,7 +160,7 @@ main {
 .article--content {
   width: 669px;
   height: auto;
-  color: white;
+  color: $secondary;
   font-family: Oxygen;
   font-size: 14px;
   font-weight: 400;
@@ -173,11 +182,12 @@ main {
   font-size: 20px;
   font-family: "Fjalla One";
   font-weight: 300;
+  color: $secondary;
 }
 
 .article--header {
   margin: 16px auto;
-  color: #fff;
+  color: $secondary;
   text-align: center;
 }
 
@@ -322,7 +332,7 @@ footer {
   margin-top: 4em;
   .attribute {
     margin: 0 auto;
-    color: #fff;
+    color: $secondary;
     font-family: "Open Sans";
     font-size: 14px;
   }
@@ -864,11 +874,20 @@ label {
 }
 
 #btn-play {
-  background: #CCC;
-  border: 0;
+  background: $primary linear-gradient(to top, $primary 0%, $primary 51%, $primary 100%);
+  border: 3px solid $secondary;
+  color: $secondary;
   border-radius: 5px;
   cursor: pointer;
   display: block;
   margin: 20px auto;
-  padding: 5px 15px;
+  padding: 5px 25px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all 1.5s;
+  &:hover{
+    background: $primary;
+    background-position: right center;
+    background: $primary linear-gradient(to top, darken($primary, 10%) 0%, lighten($primary, 10%) 51%, $primary 100%);
+  }
 }

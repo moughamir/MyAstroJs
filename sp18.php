@@ -69,22 +69,24 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               <div class="ball"></div>
               <div id="game-result"></div>
             </div>
-            <button id="btn-play">Play</button>
+            <button id="btn-play">Jouer</button>
           </table>
         </div>
       </article>
       </section>
       <section class="two">
         <article class="center-ner">
-          <h3>en cadeau 10 minutes de voyance achetées = 10 minutes de voyance offertes</h3>
+          <h3 class="gifty">en cadeau 10 minutes de voyance achetées = 10 minutes de voyance offertes</h3>
         </article>
         <article class="study">
-          <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
+          <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
           <p class="article--content">
-            Symbole de la chance, le jour de la Saint Patrick est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que l’année 2018 vous réserve. Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine
-            sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée. Réalisée par un astrologue professionnel, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages
-            et de découvrir toutes les opportunités qui se présenteront à vous tout au long de l’année 2018. L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : profiter et
-            croquer la vie à pleines dents !
+            Symbole de la chance, le jour de la <strong>Saint Patrick</strong> est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que <srong>l’année 2018 vous réserve</strong>.<br/>
+            Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine
+            sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/>
+            Réalisée par un <strong>astrologue professionnel</strong>, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages
+            et de découvrir toutes les opportunités qui se présenteront à vous tout au long de l’année 2018.<br/>
+            L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : <strong>profiter et croquer la vie à pleines dents !</strong>
           </p>
         </article>
       </section>
