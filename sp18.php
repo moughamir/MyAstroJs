@@ -4,8 +4,8 @@ $assets = 'images_landing/saint-patrick-2018';
 $site   = getenv('MYASTRO_ROOT_URL');
 $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
 ?>
-<!DOCTYPE html>
-<html ng-app="myAstro" prefix="og: http://ogp.me/ns#" lang="fr">
+  <!DOCTYPE html>
+  <html ng-app="myAstro" prefix="og: http://ogp.me/ns#" lang="fr">
 
   <head>
     <meta charset="UTF-8" />
@@ -43,37 +43,36 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     </header>
     <main role="main">
       <section class="main-section">
-        <article class="leJeu">
-          <header class="article--header">
-            <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
-            <h2 class="article--subtitle">Allez-vous avoir de la chance et trouver le chaudron magique !</h2>
-          </header>
-          <div class="cntr" ng-controller="GameController">
-            <table class="table-top">
-             <div id="game">
-	<div class="cup">
-		<svg>
-			<use href="#hat" />
-		</svg>
-	</div>
-	<div class="cup">
-		<svg>
-			<use href="#hat" />
-		</svg>
-	</div>
-	<div class="cup">
-		<svg>
-			<use href="#hat" />
-		</svg>
-	</div>
-	<div class="ball"></div>
-	<div id="game-result"></div>
-</div>
-
-<button id="btn-play">Play</button>
-            </table>
-          </div>
-        </article>
+      <article class="leJeu">
+        <header class="article--header">
+          <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
+          <h2 class="article--subtitle">Allez-vous avoir de la chance et trouver le chaudron magique !</h2>
+        </header>
+        <div class="cntr" ng-controller="GameController">
+          <table class="table-top">
+            <div id="game">
+              <div class="cup">
+                <svg>
+                  <use href="#hat" />
+                </svg>
+              </div>
+              <div class="cup">
+                <svg>
+                  <use href="#hat" />
+                </svg>
+              </div>
+              <div class="cup">
+                <svg>
+                  <use href="#hat" />
+                </svg>
+              </div>
+              <div class="ball"></div>
+              <div id="game-result"></div>
+            </div>
+            <button id="btn-play">Play</button>
+          </table>
+        </div>
+      </article>
       </section>
       <section class="two">
         <article class="center-ner">
@@ -147,54 +146,53 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-            <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
-              <p class="alert alert-danger">
-                <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br/>
-                  <?php foreach($err as $msg){
+          <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
+          <p class="alert alert-danger">
+            <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br/>
+            <?php foreach($err as $msg){
                     echo $msg.'<br>';
                   } ?>
-              </p>
-            <?php } ?>
+          </p>
+          <?php } ?>
           <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
             <input type="hidden" value="1" name="directCall">
             <div class="container-90">
               <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
-                <p class="DRI-Sent">
-                  APPEL EN COURS ....<br/>
-                  Merci, votre demande de rappel a bien été prise en compte.<br/>
-                  <strong>Un voyant vous recontactera dans quelques instants.</strong>
-                </p>
+              <p class="DRI-Sent">
+                APPEL EN COURS ....<br/> Merci, votre demande de rappel a bien été prise en compte.<br/>
+                <strong>Un voyant vous recontactera dans quelques instants.</strong>
+              </p>
               <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-          	  <p class="DRI-Sent">
-                    Merci, votre demande a bien été prise en compte.<br/>
-                    <strong>Un voyant vous recontactera dans quelques instants</strong>.
-                  </p>
-                <?php } else { ?>
-                <header class="form--header">
-                  <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement :</h1>
-                  <hr>
-                  <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
-                </header>
-                <article class="form-content">
-                  <!-- Genre -->
-                    <div class="Genre">
-                      <label class="gender-l" for="gendert-f">
+              <p class="DRI-Sent">
+                Merci, votre demande a bien été prise en compte.<br/>
+                <strong>Un voyant vous recontactera dans quelques instants</strong>.
+              </p>
+              <?php } else { ?>
+              <header class="form--header">
+                <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement :</h1>
+                <hr>
+                <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
+              </header>
+              <article class="form-content">
+                <!-- Genre -->
+                <div class="Genre">
+                  <label class="gender-l" for="gendert-f">
                         <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
                         <input type="radio" name="sexe" id="gendert-f" value="F" required />
                       </label>
-                      <label class="gender-l" for="gendert-h">
+                  <label class="gender-l" for="gendert-h">
                         <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
                         <input type="radio" name="sexe" id="gendert-h" value="M" />
                       </label>
-                    </div>
-                  <!-- Prénom -->
-                  <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
-                  <!-- Tel -->
-                  <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
-                  <!-- Pays -->
-                  <div class="pays">
-                    <label for="pays">Votre pays</label>
-                    <select name="pays" id="pays" required>
+                </div>
+                <!-- Prénom -->
+                <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
+                <!-- Tel -->
+                <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
+                <!-- Pays -->
+                <div class="pays">
+                  <label for="pays">Votre pays</label>
+                  <select name="pays" id="pays" required>
                       <option value="BE">Belgique</option>
                       <option value="CA">Canada</option>
                       <option value="LU">Luxembourg</option>
@@ -215,12 +213,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                       </optgroup>
                       <option value="ZZ">Autre</option>
                     </select>
-                  </div>
-                </article>
-                <!-- ### BOUTON SUBMIT -->
-                <input type="text" name="antisp" value="" style="display: none" />
-                <button class="form--btn" type="submit" name="demande_rappel">Découvrir</button>
-            <?php } ?>
+                </div>
+              </article>
+              <!-- ### BOUTON SUBMIT -->
+              <input type="text" name="antisp" value="" style="display: none" />
+              <button class="form--btn" type="submit" name="demande_rappel">Découvrir</button>
+              <?php } ?>
             </div>
           </form>
         </div>
@@ -259,4 +257,5 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           include('include/remarketing/analytics.php');
           include('include/remarketing/facebook.php');?>
   </body>
-</html>
+
+  </html>
