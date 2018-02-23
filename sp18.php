@@ -25,7 +25,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta property="og:description" content="Allez-vous avoir de la chance en 2018 ? Jouez et recevez votre étude personnalisée !" />
     <meta property="og:locale" content="fr_FR" />
 
-    <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+    <link rel="icon" type="image/png" href="<?= $assets ?>/favicon-sp18.png" />
 
     <link href="css/saint-patrick-18.css" rel="stylesheet" />
 
