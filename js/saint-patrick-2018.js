@@ -1,4 +1,7 @@
 // Main Application
+/* global angular  */
+/* global jQuery  */
+/* global $  */
 'use strict';
 var app = angular.module('myAstro', ['ngAnimate']);
 
@@ -6,7 +9,6 @@ function GameController($scope, $timeout) {
   $scope.deck = createDeck();
   $scope.isGuarding = false;
   $scope.inGame = false;
-  shine(true);
 
   $scope.check = function(card) {
 
@@ -15,7 +17,6 @@ function GameController($scope, $timeout) {
       previousCard = null;
       currentSessionOpen = false;
       numPairs++;
-      shine(false);
 
     }
     else if (currentSessionOpen && previousCard != card && previousCard.item != card.item && !card.isFaceUp) {
@@ -27,19 +28,16 @@ function GameController($scope, $timeout) {
         previousCard = null;
         $scope.isGuarding = $scope.timeLimit ? false : true;
       }, 1000);
-      shine(false);
 
     }
     else {
       card.isFaceUp = true;
       currentSessionOpen = true;
       previousCard = card;
-      shine(false);
 
     }
 
     if (numPairs == constants.getNumMatches()) {
-      shine(true);
       $scope.stopTimer();
       $('#modal-g').modal('toggle');
     }
@@ -234,42 +232,13 @@ function createRandom() {
   return answers;
 }
 
-
-
-
-function shine(state) {
-  console.log(state);
-  if (state == true) {
-    console.log(state + ' 2');
-    setInterval(
-      function() {
-        randomShine();
-      }, 300
-    );
-  }
-  else {
-    clearInterval(1);
-
-  }
-
-}
-
-function randomShine() {
-  var cards = $('.card');
-
-  var cardId = Math.floor(Math.random() * cards.length);
-  cards.eq(cardId).addClass('shine');
-  setTimeout(function() {
-    cards.eq(cardId).removeClass('shine');
-  }, 300);
-}
 app.controller("GameController", GameController);
 
 
 (function($) {
   // DOM elems
   var $game,
-    $cups,
+    $hats,
     $ball,
     $gameResult,
     $playBtn;
@@ -283,13 +252,13 @@ app.controller("GameController", GameController);
     // Game vars
     var posBall;
     var animsInterval;
-    var cupsWidth = $cups.outerWidth(true);
-    var nbCups = $cups.length;
+    var hatsWidth = $hats.outerWidth(true);
+    var nbHats = $hats.length;
     var nbSwaps = 0;
 
     // Animation
     function move($elemToMove, dir, depth, nbMoves) {
-      var distanceAnim = cupsWidth * nbMoves / 2;
+      var distanceAnim = hatsWidth * nbMoves / 2;
       var zindex = 'auto';
       var scale;
 
@@ -345,44 +314,44 @@ app.controller("GameController", GameController);
       move($elemToMove, 'right', depth, nbMoves);
     }
 
-    // Swaps cups position
-    function swapElems($firstCup, $secondCup) {
-      var posFirstCup = $firstCup.data('posCurrent');
-      var posSecondCup = $secondCup.data('posCurrent');
-      var nbMoves = Math.abs(posFirstCup - posSecondCup);
+    // Swaps hats position
+    function swapElems($firstHat, $secondHat) {
+      var posFirstHat = $firstHat.data('posCurrent');
+      var posSecondHat = $secondHat.data('posCurrent');
+      var nbMoves = Math.abs(posFirstHat - posSecondHat);
 
-      if (posFirstCup > posSecondCup) {
-        moveToLeft($firstCup, 1, nbMoves);
-        moveToRight($secondCup, 0, nbMoves);
+      if (posFirstHat > posSecondHat) {
+        moveToLeft($firstHat, 1, nbMoves);
+        moveToRight($secondHat, 0, nbMoves);
       }
       else {
-        moveToRight($firstCup, 0, nbMoves);
-        moveToLeft($secondCup, 1, nbMoves);
+        moveToRight($firstHat, 0, nbMoves);
+        moveToLeft($secondHat, 1, nbMoves);
       }
 
-      $firstCup.data('posCurrent', posSecondCup);
-      $secondCup.data('posCurrent', posFirstCup);
+      $firstHat.data('posCurrent', posSecondHat);
+      $secondHat.data('posCurrent', posFirstHat);
     }
 
-    function animateCups() {
-      var posCups = [];
-      var indexFirstCup = Math.floor(Math.random() * nbCups);
-      var indexSecondCup;
-      var $firstCup;
-      var $secondCup;
+    function animateHats() {
+      var posHats = [];
+      var indexFirstHat = Math.floor(Math.random() * nbHats);
+      var indexSecondHat;
+      var $firstHat;
+      var $secondHat;
 
-      for (var i = 0; i < nbCups; i++) {
-        posCups[i] = i;
+      for (var i = 0; i < nbHats; i++) {
+        posHats[i] = i;
       }
 
-      posCups.splice(indexFirstCup, 1);
+      posHats.splice(indexFirstHat, 1);
 
-      indexSecondCup = posCups[Math.floor(Math.random() * (nbCups - 1))];
+      indexSecondHat = posHats[Math.floor(Math.random() * (nbHats - 1))];
 
-      $firstCup = $cups.eq(indexFirstCup);
-      $secondCup = $cups.eq(indexSecondCup);
+      $firstHat = $hats.eq(indexFirstHat);
+      $secondHat = $hats.eq(indexSecondHat);
 
-      swapElems($firstCup, $secondCup);
+      swapElems($firstHat, $secondHat);
     }
 
 
@@ -390,25 +359,25 @@ app.controller("GameController", GameController);
     function start() {
       $playBtn.attr("disabled", true);
       nbSwaps = 0;
-      posBall = Math.floor(Math.random() * nbCups);
+      posBall = Math.floor(Math.random() * nbHats);
 
       $playBtn.off('click');
       $game.off('click');
 
-      // Update of cups position
-      $cups.each(function() {
+      // Update of hats position
+      $hats.each(function() {
         var posEnd = $(this).data('posCurrent');
         $(this).data('posStart', posEnd);
       });
 
       // Shows the ball
       $ball
-        .css('left', posBall * cupsWidth)
+        .css('left', posBall * hatsWidth)
         .fadeIn()
         .delay(600)
         .fadeOut(function() {
-          // Cups swaping
-          animsInterval = setInterval(animateCups, intervalSpeed);
+          // Hats swaping
+          animsInterval = setInterval(animateHats, intervalSpeed);
         });
     }
 
@@ -416,26 +385,26 @@ app.controller("GameController", GameController);
     function end() {
       $playBtn.on('click', start);
 
-      $game.on('click', '.cup', function() {
+      $game.on('click', '.hat', function() {
         var posStart = $(this).data('posStart');
         var posEnd = $(this).data('posCurrent');
 
         // If the ball is found
         if (posBall === posStart) {
-          $game.off('click', '.cup');
+          $game.off('click', '.hat');
 
           // Shows the ball
           $ball
-            .css('left', posEnd * cupsWidth)
+            .css('left', posEnd * hatsWidth)
             .stop(true, false)
             .fadeIn()
             .delay(600)
             .fadeOut();
 
-          $gameResult.text('Ball found !');
+          //$gameResult.text('Ball found !');
         }
         else {
-          $gameResult.text('Try again !');
+          //$gameResult.text('Try again !');
         }
 
         $gameResult
@@ -448,7 +417,7 @@ app.controller("GameController", GameController);
 
     function init() {
       // Init positions
-      $cups.each(function(i) {
+      $hats.each(function(i) {
         $(this).data({ posStart: i, posCurrent: i });
       });
 
@@ -461,7 +430,7 @@ app.controller("GameController", GameController);
 
   $(document).ready(function() {
     $game = $('#game');
-    $cups = $game.find('.cup');
+    $hats = $game.find('.hat');
     $ball = $game.find('.ball');
     $gameResult = $game.find('#game-result');
     $playBtn = $('#btn-play');

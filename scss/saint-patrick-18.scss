@@ -840,12 +840,12 @@ label {
 #game {
   display: inline-block;
   position: relative;
-  .cup {
+  .hat {
     cursor: pointer;
     float: left;
     margin: 0 10px;
     position: relative;
-    @include size(150px,130px);
+    @include size(225px,191px);
     background: transparent url($assets + "hat.svg") no-repeat center;
   }
   .ball {
