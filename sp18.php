@@ -61,7 +61,9 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               </div>
               <div id="game-result"></div>
             </div>
-            <button id="btn-play">Jouer</button>
+            <div class="startbtn" ng-show="inGame == false">
+              <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-disabled="inGame == true" ng-click="start()">Jouer</button>
+            </div>
         </div>
       </article>
       </section>
