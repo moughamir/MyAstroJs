@@ -49,16 +49,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <h2 class="article--subtitle">Allez-vous avoir de la chance et trouver le chaudron magique !</h2>
         </header>
         <div class="cntr" ng-controller="GameController">
-          <table class="table-top">
             <div id="game">
               <div class="cup">
-                <img src="<?= $assets ?>/hat.svg"/>
               </div>
               <div class="cup">
-                <img src="<?= $assets ?>/hat.svg"/>
               </div>
               <div class="cup">
-                <img src="<?= $assets ?>/hat.svg"/>
               </div>
               <div class="ball">
                 <img src="<?= $assets ?>/ball.svg"/>
@@ -66,7 +62,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               <div id="game-result"></div>
             </div>
             <button id="btn-play">Jouer</button>
-          </table>
         </div>
       </article>
       </section>

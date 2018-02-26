@@ -388,6 +388,7 @@ app.controller("GameController", GameController);
 
     // Starts a game
     function start() {
+      $playBtn.attr("disabled", true);
       nbSwaps = 0;
       posBall = Math.floor(Math.random() * nbCups);
 

@@ -841,19 +841,15 @@ label {
   display: inline-block;
   position: relative;
   .cup {
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 130px solid transparent;
-    height: 0;
     cursor: pointer;
     float: left;
-    margin: 0 30px;
+    margin: 0 10px;
     position: relative;
-    width: 70px;
+    @include size(150px,130px);
+    background: transparent url($assets + "hat.svg") no-repeat center;
   }
   .ball {
     display: none;
-    background: #000;
     border-radius: 50%;
     height: 20px;
     width: 20px;
