@@ -43,40 +43,13 @@ function GameController($scope, $timeout) {
     }
   }; //end of check()
 
-  // for the timer
-  $scope.timeLimit = 60000;
-  $scope.isCritical = false;
-
-  var timer = null;
-
   // start the timer as soon as the player presses start
   $scope.start = function() {
     // I need to fix this redundancy. I initially did not create this
     // game with a start button.
     $scope.deck = createDeck();
-    // set the time of 1 minutes and remove the cards guard
-    $scope.timeLimit = 60000;
     $scope.isGuarding = false;
     $scope.inGame = true;
-
-    ($scope.startTimer = function() {
-      $scope.timeLimit -= 1000;
-      $scope.isCritical = $scope.timeLimit <= 10000 ? true : false;
-
-      timer = $timeout($scope.startTimer, 1000);
-      if ($scope.timeLimit === 0) {
-        $scope.stopTimer();
-        $scope.isGuarding = true;
-      }
-    })();
-  };
-  // function to stop the timer
-  $scope.stopTimer = function() {
-    $timeout.cancel(timer);
-    $scope.inGame = false;
-    previousCard = null;
-    currentSessionOpen = false;
-    numPairs = 0;
   };
 
 }
@@ -360,10 +333,15 @@ app.controller("GameController", GameController);
       $playBtn.attr("disabled", true);
       nbSwaps = 0;
       posBall = Math.floor(Math.random() * nbHats);
-
+      console.info($hats === posBall);
       $playBtn.off('click');
       $game.off('click');
 
+      console.info(posBall);
+      console.info($hats.eq(posBall));
+      $hats.eq(posBall).css('z-index', 5).transition({
+        rotate: '24deg'
+      });
       // Update of hats position
       $hats.each(function() {
         var posEnd = $(this).data('posCurrent');

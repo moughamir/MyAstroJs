@@ -50,11 +50,11 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         </header>
         <div class="cntr" ng-controller="GameController">
             <div id="game">
-              <div class="hat">
+              <div class="hat" id="A">
               </div>
-              <div class="hat">
+              <div class="hat" id="B">
               </div>
-              <div class="hat">
+              <div class="hat" id="C">
               </div>
               <div class="ball">
                 <img src="<?= $assets ?>/ball.svg"/>
