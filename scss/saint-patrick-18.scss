@@ -852,12 +852,15 @@ label {
   .ball {
     display: none;
     border-radius: 50%;
-    @include square(60px);
-    margin-left: 90px;
+    @include square(90px);
+    margin-left: 80px;
     position: absolute;
     bottom: 0;
     left: 0;
     //z-index: -9;
+    img{
+      @include square(100%);
+    }
   }
   &-result {
     display: none;

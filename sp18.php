@@ -57,7 +57,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               <div class="hat" id="C">
               </div>
               <div class="ball">
-                <img src="<?= $assets ?>/ball.svg"/>
+                <img src="<?= $assets ?>/chaudron.png"/>
               </div>
               <div id="game-result"></div>
             </div>
