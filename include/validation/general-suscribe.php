@@ -560,11 +560,26 @@ if(empty($err)){
  * ========================================================================== */
 
     if(!$trouve){
-        $kgestion_update = $kgestion->updateUser($kgestion_id, ['myastroId'=>$idindex]);
+        $aSend = ['myastroId'=>$idindex];
+        if($conversion == 2) {
+            $aSend["conversion"] = 1;
+        }
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $aSend);
         if (!$kgestion_update->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
+    } else {
+        $aSend = ['email'=>$email];
+        if($conversion == 2) {
+            $aSend["conversion"] = 1;
+            $kgestion_update = $kgestion->updateUser($kgestion_id, $aSend);
+            if (!$kgestion_update->success){
+                addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
+            }
+        }
+
     }
+
 
 /* ========================================================================== *
  *                              MISE EN SESSION                               *
