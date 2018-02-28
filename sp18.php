@@ -50,11 +50,11 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         </header>
         <div class="cntr" ng-controller="GameController">
             <div id="game">
-              <div class="hat" id="A">
+              <div class="hat" id="A" ng-click="isGuarding || check(card)">
               </div>
-              <div class="hat" id="B">
+              <div class="hat" id="B" ng-click="isGuarding || check(card)">
               </div>
-              <div class="hat" id="C">
+              <div class="hat" id="C" ng-click="isGuarding || check(card)">
               </div>
               <div class="ball">
                 <img src="<?= $assets ?>/chaudron.png"/>
@@ -164,8 +164,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               </p>
               <?php } else { ?>
               <header class="form--header">
-                <h1 class="form--title">vite !!! Notre équipe<br>vous rappelle gratuitement :</h1>
-                <hr>
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
               </header>
               <article class="form-content">
@@ -183,36 +181,12 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <!-- Prénom -->
                 <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
                 <!-- Tel -->
-                <input type="tel" name="tel" id="tel" placeholder="Mon N° de téléphone" required />
-                <!-- Pays -->
-                <div class="pays">
-                  <label for="pays">Votre pays</label>
-                  <select name="pays" id="pays" required>
-                      <option value="BE">Belgique</option>
-                      <option value="CA">Canada</option>
-                      <option value="LU">Luxembourg</option>
-                      <option value="CH">Suisse</option>
-                      <option value="FR" selected>France Métropolitaine</option>
-                      <optgroup label="DOM-TOM">
-                        <option value="MQ">Martinique</option>
-                        <option value="GP">Guadeloupe</option>
-                        <option value="GF">Guyane</option>
-                        <option value="RE">La Réunion</option>
-                        <option value="YT">Mayotte</option>
-                        <option value="PM">St Pierre et Miquelon</option>
-                        <option value="BL">St Barthélémy</option>
-                        <option value="SM">St Martin</option>
-                        <option value="WF">Wallis et Futunua</option>
-                        <option value="PF">Polynésie Française</option>
-                        <option value="NC">Nouvelle Calédonie</option>
-                      </optgroup>
-                      <option value="ZZ">Autre</option>
-                    </select>
-                </div>
+                <input type="email" name="email" id="email" placeholder="Mon email" required />
+
               </article>
               <!-- ### BOUTON SUBMIT -->
-              <input type="text" name="antisp" value="" style="display: none" />
-              <button class="form--btn" type="submit" name="demande_rappel">Découvrir</button>
+              <input type="hidden" name="antisp" value="" />
+              <button class="form--btn" type="submit" name="demande_rappel">Jouer</button>
               <?php } ?>
             </div>
           </form>

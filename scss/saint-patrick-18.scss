@@ -26,6 +26,7 @@ $c: #094B4D;
 $dark: #2b2b2b;
 $modal-green: #256F6B;
 $modal-border: $secondary;
+$modalBg: $secondary;
 $card-face: $secondary;
 $card-border: #064524;
 $card-shadow: 0px 3px 5px 1px rgba(3, 3, 3, 0.5);
@@ -206,100 +207,15 @@ main {
 }
 
 /// The Game
-.card_container {
-  margin: 1px auto;
-  padding: 3px;
-  @include square(100px);
-  line-height: 100px;
-  z-index: 1;
-  perspective: 1000;
-}
 
 td.ng-scope {
   padding: 8px;
-}
-
-.card {
-  background: $primary url($carte) no-repeat 50% 45%;
-  @include square(100%);
-  cursor: pointer;
-  border-radius: 6px;
-  border: none;
-  box-shadow: $card-shadow;
-  transform-style: preserve-3d;
-  transition: all .25s linear;
-  backface-visibility: hidden;
-  &:hover {
-    @extend .shine;
-    background-color: lighten($primary, 5%);
-  }
-}
-
-.face {
-  position: absolute;
-  @include square(100%);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.face.back {
-  display: block;
-  background-color: $card-face;
-  border-radius: 6px;
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  box-shadow: $card-shadow;
-}
-
-.face--image {
-  @include square(85%);
-  position: relative;
-  margin: 0 auto;
-  display: block;
-}
-
-.flip .card {
-  transform: rotateY(180deg);
 }
 
 table {
   margin: 0px auto;
 }
 
-.timer {
-  display: block;
-  margin: 10px auto;
-  position: fixed;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  background-color: $primary;
-  border-radius: 100%;
-  border: 2px solid #064524;
-  font-size: 30px;
-  text-align: center;
-  color: #eec904;
-  top: 15px;
-  left: 15px;
-}
-
-.critical {
-  color: #FF5400;
-  animation: critical 1s infinite ease-in-out;
-}
-/**
-.startbtn {
-  display: block;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}*/
 
 .btn.btn-default.btn-lg {
   width: 200px;
@@ -339,13 +255,11 @@ footer {
     font-size: 14px;
   }
 }
-
 .reassure {
   height: 53px;
   width: 960px;
   margin: 10px auto;
   background: $secondary;
-  //background-image: linear-gradient( 0deg, rgb(224, 220, 220) 0%, rgb(240, 238, 238) 19%, rgb(255, 255, 255) 100%);
   box-shadow: 0px 1px 5px 0px rgb( 0, 0, 0);
   ul {
     height: 100%;
@@ -362,7 +276,7 @@ footer {
       }
       &:before {
         content: '';
-        border-right: 1px solid black;
+        border-right: 1px solid #fff;
         opacity: 0.3;
         margin-right: 21px;
         width: 15px;
@@ -439,21 +353,18 @@ hr {
 .form--btn {
   font-size: 20px;
   font-family: "Oxygen";
-  color: rgb( 0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   text-shadow: 0.5px 0.866px 0px rgb( 0, 0, 0);
-  border: none; //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
-  background: $secondary;
-  box-shadow: $card-shadow;
+  background: transparent;
+  box-shadow: 0 2px 5px -2px rgba(3,3,3,.5);
   width: 263px;
   height: 50px;
   border-radius: 3px;
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
+  border: 3px solid $secondary;
+  color: $secondary;
+  margin: 15px auto 0;
   &:hover {
     background-image: linear-gradient(to top, $secondary 0%, darken($secondary, 10%) 100%);
   }
@@ -583,6 +494,16 @@ label {
   width: 536px;
   height: 400px;
 }
+.modal-content{
+  background-color: $modalBg;
+  border: 5px solid $primary;
+}
+.modal-dialog{
+  width: 1000px;
+}
+.modal-body{
+  width: auto;
+}
 
 .shine {
   background: $primary url($shine) no-repeat 50% 45%;
@@ -627,16 +548,8 @@ label {
   td.ng-scope {
     padding: 0.1px;
   }
-  .card_container {
-    width: 75px;
-    height: 75px;
-    line-height: 100px;
-    z-index: 1;
-    padding: 3px;
-  }
-  .card {
-    background-size: 90%;
-  }
+
+
   .small {
     font-size: 1.3rem;
   }
