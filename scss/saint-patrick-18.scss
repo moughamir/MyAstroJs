@@ -12,6 +12,11 @@
 @import "modules/mixins";
 @import "modules/fonts";
 @import "modules/csshake/tools";
+@mixin v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
 //== variables
 //0- dir
@@ -70,6 +75,26 @@ html {
   min-height: 100%;
   background-size: cover;
   background-attachment: scroll;
+}
+
+.loading {
+  background: url($background) center no-repeat;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  z-index: 9999;
+  top: 0;
+  @include v-center;
+  width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
+  background-size: cover;
+  &-hat {
+    @include size(450px, 382px);
+    background: transparent url($assets + "hat.svg") no-repeat center;
+    animation: shake-rotate .5s ease-in-out infinite;
+  }
 }
 
 @import "modules/modals";
@@ -134,8 +159,9 @@ main {
     color: $primary;
   }
 }
-.gifty{
-  &:before{
+
+.gifty {
+  &:before {
     content: '';
     @include square(30px);
     display: inline-block;
@@ -207,7 +233,6 @@ main {
 }
 
 /// The Game
-
 td.ng-scope {
   padding: 8px;
 }
@@ -255,6 +280,7 @@ footer {
     font-size: 14px;
   }
 }
+
 .reassure {
   height: 53px;
   width: 960px;
@@ -342,10 +368,9 @@ hr {
 }
 
 .form--subtitle {
-  font-size: 19px;
+  font-size: 1.38rem;
   font-family: "Fjalla One";
-  color: rgb( 255, 255, 255);
-  line-height: 1.305;
+  color: $secondary;
   text-align: center;
   font-weight: 500;
 }
@@ -358,15 +383,17 @@ hr {
   text-align: center;
   text-shadow: 0.5px 0.866px 0px rgb( 0, 0, 0);
   background: transparent;
-  box-shadow: 0 2px 5px -2px rgba(3,3,3,.5);
-  width: 263px;
+  box-shadow: 0 2px 5px -2px rgba(3, 3, 3, .5);
+  width: 334px;
   height: 50px;
   border-radius: 3px;
   border: 3px solid $secondary;
   color: $secondary;
   margin: 15px auto 0;
+  transition: all 500ms ease;
   &:hover {
-    background-image: linear-gradient(to top, $secondary 0%, darken($secondary, 10%) 100%);
+    background: linear-gradient(to bottom, darken($primary, 1%) 0%, darken($primary, 5%) 100%);
+    box-shadow: 0 2px 5px 0 rgba(3, 3, 3, .5);
   }
 }
 
@@ -431,13 +458,16 @@ hr {
   border: 1px solid #e6e6e6;
 }
 
-#prenom {
+#prenom,
+#email {
   width: 334px;
-  height: 30px;
-  background-color: #FFF;
-  border: 1px solid #CCC;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  height: 44px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .6), inset 0 1px 3px rgba(0, 0, 0, .3);
   margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 select {
@@ -454,21 +484,13 @@ select {
   margin: 0 5px;
 }
 
-#tel {
-  width: 334px;
-  height: 30px;
-  background-color: #FFF;
-  border: 1px solid #CCC;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
-  margin-top: 10px;
-}
 
 label {
-  color: #BDBEBE;
+  color: $secondary;
   font-family: Oxygen;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 600;
-  font-style: italic;
+  text-transform: uppercase;
 }
 
 .gender-l {
@@ -494,14 +516,17 @@ label {
   width: 536px;
   height: 400px;
 }
-.modal-content{
+
+.modal-content {
   background-color: $modalBg;
   border: 5px solid $primary;
 }
-.modal-dialog{
+
+.modal-dialog {
   width: 1000px;
 }
-.modal-body{
+
+.modal-body {
   width: auto;
 }
 
@@ -694,13 +719,13 @@ label {
     display: none;
   }
   &-popup {
-    display: none;
+    visibility: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    background: #115e5b;
+    background: $secondary;
     width: 470px;
     height: 216px;
     padding: 15px;
@@ -740,6 +765,19 @@ label {
   }
 }
 
+.btn-cta {
+  background: #ffbe28;
+  border: none;
+  padding: .6rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
 .DRI-Sent {
   color: white;
   text-align: center;
@@ -751,11 +789,12 @@ label {
   }
 }
 
-.shakeIt{
-    &:hover{
-      @include do-shake('shake-rotate', 0, 0, 15);
-    }
+.shakeIt {
+  &:hover {
+    @include do-shake('shake-rotate', 0, 0, 15);
+  }
 }
+
 #game {
   display: inline-block;
   position: relative;
@@ -764,7 +803,7 @@ label {
     float: left;
     margin: 0 10px;
     position: relative;
-    @include size(225px,191px);
+    @include size(225px, 191px);
     background: transparent url($assets + "hat.svg") no-repeat center;
 
   }
@@ -777,7 +816,7 @@ label {
     bottom: 0;
     left: 0;
     z-index: -9;
-    img{
+    img {
       @include square(100%);
     }
   }
@@ -804,24 +843,25 @@ label {
   font-size: 2rem;
   text-transform: uppercase;
   transition: all 1.5s;
-  &:hover{
+  &:hover {
     background: lighten($primary, 25%);
     background-position: right center;
     background: $primary linear-gradient(to top, darken($primary, 10%) 0%, darken($primary, 10%) 51%, darken($primary, 10%) 100%);
   }
 }
 
-.reveal{
+.reveal {
   animation: reveal 3s ease;
   transform-origin: top right;
   transition: all .8s ease;
 }
 
-@keyframes reveal{
-  0%, 100%{
+@keyframes reveal {
+  0%,
+  100% {
     transform: rotate(0) translate(0, 0);
   }
-  50%{
+  50% {
     transform: rotate(22deg) translate(50px, -57px);
   }
 

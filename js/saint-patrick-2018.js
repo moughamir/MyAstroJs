@@ -1,8 +1,15 @@
 // Main Application
 /* global angular  */
-/* global jQuery  */
 /* global $  */
 'use strict';
+
+
+$('document').ready(function() {
+  setTimeout(function() {
+    $('.loading').fadeOut(300);
+  }, 1600);
+});
+
 var app = angular.module('myAstro', ['ngAnimate']);
 var $game = $('#game'),
   $hats = $game.find('.hat'),
@@ -21,7 +28,6 @@ var $game = $('#game'),
 function GameController($scope) {
   $scope.isGuarding = false;
   $scope.inGame = false;
-
   // start the timer as soon as the player presses start
   $scope.start = function() {
     $scope.isGuarding = false;
@@ -165,7 +171,7 @@ function GameController($scope) {
       // If the ball is found
       if (posBall === posStart) {
         $game.off('click', '.hat');
-        $hats.eq(posBall).toggleClass('reveal');
+        //$hats.eq(posBall).toggleClass('reveal');
         // Shows the ball
         $ball
           .css('left', posEnd * hatsWidth)
@@ -173,7 +179,7 @@ function GameController($scope) {
           .fadeIn()
           .delay(1600)
           .fadeOut(function() {
-            $('#modal-g').modal('toggle');
+            $('#popup').toggleClass('is-visible');
           });
       }
       else {
@@ -205,6 +211,7 @@ function ModalController($scope) {
     $scope.showModal = !$scope.showModal;
   };
 }
+
 
 GameController.$inject = ["$scope"];
 ModalController.$inject = ["$scope"];
@@ -250,5 +257,7 @@ app.directive('modal', function() {
   };
 });
 
-
 app.controller("GameController", GameController);
+setTimeout(function() {
+  $('#modal-g').modal('toggle');
+}, 600);

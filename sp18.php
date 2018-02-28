@@ -35,6 +35,9 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
   </head>
 
   <body>
+    <div class="loading">
+      <div class="loading-hat"></div>
+    </div>
     <header class="site--header" role="banner">
       <div class="container">
         <img src="<?= $assets ?>/My-ASTRO.svg" alt="My Astro" class="logo">
@@ -43,29 +46,29 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     </header>
     <main role="main">
       <section class="main-section">
-      <article class="leJeu">
-        <header class="article--header">
-          <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
-          <h2 class="article--subtitle">Allez-vous avoir de la chance et trouver le chaudron magique !</h2>
-        </header>
-        <div class="cntr" ng-controller="GameController">
+        <article class="leJeu">
+          <header class="article--header">
+            <h1 class="article--headline">Jour de chance, faites le jeu :</h1>
+            <h2 class="article--subtitle">Allez-vous avoir de la chance et trouver le chaudron magique !</h2>
+          </header>
+          <div class="cntr" ng-controller="GameController">
             <div id="game">
-              <div class="hat" id="A" ng-click="isGuarding || check(card)">
+              <div class="hat" id="A">
               </div>
-              <div class="hat" id="B" ng-click="isGuarding || check(card)">
+              <div class="hat" id="B">
               </div>
-              <div class="hat" id="C" ng-click="isGuarding || check(card)">
+              <div class="hat" id="C">
               </div>
               <div class="ball">
-                <img src="<?= $assets ?>/chaudron.png"/>
+                <img src="<?= $assets ?>/chaudron.png" />
               </div>
               <div id="game-result"></div>
             </div>
             <div class="startbtn" ng-show="inGame == false">
               <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-disabled="inGame == true" ng-click="start()">Jouer</button>
             </div>
-        </div>
-      </article>
+          </div>
+        </article>
       </section>
       <section class="two">
         <article class="center-ner">
@@ -74,12 +77,10 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
         <article class="study">
           <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
           <p class="article--content">
-            Symbole de la chance, le jour de la <strong>Saint Patrick</strong> est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que <srong>l’année 2018 vous réserve</strong>.<br/>
-            Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine
-            sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/>
-            Réalisée par un <strong>astrologue professionnel</strong>, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages
-            et de découvrir toutes les opportunités qui se présenteront à vous tout au long de l’année 2018.<br/>
-            L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : <strong>profiter et croquer la vie à pleines dents !</strong>
+            Symbole de la chance, le jour de la <strong>Saint Patrick</strong> est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que
+            <srong>l’année 2018 vous réserve</strong>.<br/> Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/> Réalisée par un
+              <strong>astrologue professionnel</strong>, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages et de découvrir toutes les opportunités qui se présenteront à vous tout au long
+              de l’année 2018.<br/> L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : <strong>profiter et croquer la vie à pleines dents !</strong>
           </p>
         </article>
       </section>
@@ -132,37 +133,13 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     </footer>
 
     <!-- MODAL -->
-    <div class="modal-popup">
-      <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
-      <p class="modal-text">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
-      <div class="btn-close">Fermer</div>
-    </div>
+
     <div ng-controller="ModalController" class="container">
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
-          <p class="alert alert-danger">
-            <b><i class="fa fa-warning"></i> Une erreur est survenue.</b><br/>
-            <?php foreach($err as $msg){
-                    echo $msg.'<br>';
-                  } ?>
-          </p>
-          <?php } ?>
           <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
-            <input type="hidden" value="1" name="directCall">
             <div class="container-90">
-              <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
-              <p class="DRI-Sent">
-                APPEL EN COURS ....<br/> Merci, votre demande de rappel a bien été prise en compte.<br/>
-                <strong>Un voyant vous recontactera dans quelques instants.</strong>
-              </p>
-              <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
-              <p class="DRI-Sent">
-                Merci, votre demande a bien été prise en compte.<br/>
-                <strong>Un voyant vous recontactera dans quelques instants</strong>.
-              </p>
-              <?php } else { ?>
               <header class="form--header">
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
               </header>
@@ -182,17 +159,20 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
                 <!-- Tel -->
                 <input type="email" name="email" id="email" placeholder="Mon email" required />
-
               </article>
-              <!-- ### BOUTON SUBMIT -->
-              <input type="hidden" name="antisp" value="" />
-              <button class="form--btn" type="submit" name="demande_rappel">Jouer</button>
-              <?php } ?>
+              <button class="form--btn" type="submit" name="play">Jouer</button>
             </div>
           </form>
         </div>
       </modal>
     </div>
+
+    <div id="popup" class="modal-popup">
+      <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
+      <p class="modal-text">entrez le code promo: <strong>PATRICK18</strong><br/> au moment du paiement.</p>
+      <button class="btn-cta">J'en profite</button>
+    </div>
+
     <!-- #### SCRIPTS #### -->
     <script src="//cdn.jsdelivr.net/g/jquery@2.2.4,angularjs@1.5.5(angular.min.js+angular-animate.min.js),bootstrap@3.3.7" charset="utf-8"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
