@@ -339,9 +339,7 @@ app.controller("GameController", GameController);
 
       console.info(posBall);
       console.info($hats.eq(posBall));
-      $hats.eq(posBall).css('z-index', 5).transition({
-        rotate: '24deg'
-      });
+      $hats.eq(posBall).toggleClass('reveal');
       // Update of hats position
       $hats.each(function() {
         var posEnd = $(this).data('posCurrent');
@@ -352,8 +350,10 @@ app.controller("GameController", GameController);
       $ball
         .css('left', posBall * hatsWidth)
         .fadeIn()
-        .delay(600)
+        .delay(1900)
         .fadeOut(function() {
+          $hats.eq(posBall).toggleClass('reveal');
+          //$hats.toggleClass('shakeIt');
           // Hats swaping
           animsInterval = setInterval(animateHats, intervalSpeed);
         });
@@ -370,19 +370,22 @@ app.controller("GameController", GameController);
         // If the ball is found
         if (posBall === posStart) {
           $game.off('click', '.hat');
-
+          $hats.eq(posBall).toggleClass('reveal');
           // Shows the ball
           $ball
             .css('left', posEnd * hatsWidth)
             .stop(true, false)
             .fadeIn()
-            .delay(600)
-            .fadeOut();
+            .delay(1600)
+            .fadeOut(function() {
+              $('.modal-popup').fadeIn();
+            });
 
-          //$gameResult.text('Ball found !');
+          //$gameResult.text('Ball found !'); // toggle modal
+          //
         }
         else {
-          //$gameResult.text('Try again !');
+          //$gameResult.text('Try again !'); //
         }
 
         $gameResult

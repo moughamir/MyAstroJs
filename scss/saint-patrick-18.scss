@@ -11,6 +11,8 @@
 @import "knacss501/_include-media/include-media"; // Media Query mixin
 @import "modules/mixins";
 @import "modules/fonts";
+@import "modules/csshake/tools";
+
 //== variables
 //0- dir
 $assets: '/images_landing/saint-patrick-2018/';
@@ -836,7 +838,11 @@ label {
   }
 }
 
-
+.shakeIt{
+    &:hover{
+      @include do-shake('shake-rotate', 0, 0, 15);
+    }
+}
 #game {
   display: inline-block;
   position: relative;
@@ -847,7 +853,7 @@ label {
     position: relative;
     @include size(225px,191px);
     background: transparent url($assets + "hat.svg") no-repeat center;
-    //    transition: transform 500ms;
+
   }
   .ball {
     display: none;
@@ -857,7 +863,7 @@ label {
     position: absolute;
     bottom: 0;
     left: 0;
-    //z-index: -9;
+    z-index: -9;
     img{
       @include square(100%);
     }
@@ -890,4 +896,20 @@ label {
     background-position: right center;
     background: $primary linear-gradient(to top, darken($primary, 10%) 0%, darken($primary, 10%) 51%, darken($primary, 10%) 100%);
   }
+}
+
+.reveal{
+  animation: reveal 3s ease;
+  transform-origin: top right;
+  transition: all .8s ease;
+}
+
+@keyframes reveal{
+  0%, 100%{
+    transform: rotate(0) translate(0, 0);
+  }
+  50%{
+    transform: rotate(22deg) translate(50px, -57px);
+  }
+
 }
