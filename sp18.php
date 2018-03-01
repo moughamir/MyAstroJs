@@ -138,7 +138,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <modal visible="showModal">
         <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
         <div class="row">
-          <form class="astro-form" accept-charset="utf-8" role="form" method="post" action="">
+          <form class="astro-form" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController">
             <div class="container-90">
               <header class="form--header">
                 <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
@@ -148,19 +148,20 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <div class="Genre">
                   <label class="gender-l" for="gendert-f">
                         <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
-                        <input type="radio" name="sexe" id="gendert-f" value="F" required />
+                        <input type="radio" name="sexe" id="gendert-f" ng-model="sexe" value="F" required />
                       </label>
                   <label class="gender-l" for="gendert-h">
                         <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
-                        <input type="radio" name="sexe" id="gendert-h" value="M" />
+                        <input type="radio" name="sexe" ng-model="sexe" id="gendert-h" value="M" />
                       </label>
                 </div>
                 <!-- Prénom -->
-                <input name="prenom" id="prenom" type="text" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
+                <input name="prenom" id="prenom" type="text" ng-model="name" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
                 <!-- Tel -->
-                <input type="email" name="email" id="email" placeholder="Mon email" required />
+                <input type="email" name="email" id="email" ng-model="email" placeholder="Mon email" required />
+                <input class="form--btn" name="play" type="submit" id="submit" value="Jouer" />
               </article>
-              <button class="form--btn" type="submit" name="play">Jouer</button>
+
             </div>
           </form>
         </div>

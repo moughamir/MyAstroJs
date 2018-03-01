@@ -78,7 +78,7 @@ html {
 }
 
 .loading {
-  background: url($background) center no-repeat;
+  background: #3a6530 url($background) center no-repeat;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -392,8 +392,9 @@ hr {
   margin: 15px auto 0;
   transition: all 500ms ease;
   &:hover {
-    background: linear-gradient(to bottom, darken($primary, 1%) 0%, darken($primary, 5%) 100%);
+    background: $secondary;
     box-shadow: 0 2px 5px 0 rgba(3, 3, 3, .5);
+    color:$primary;
   }
 }
 
@@ -842,11 +843,11 @@ label {
   padding: 5px 25px;
   font-size: 2rem;
   text-transform: uppercase;
-  transition: all 1.5s;
+  transition: all .5s;
   &:hover {
-    background: lighten($primary, 25%);
+    background: $secondary linear-gradient(to top, $secondary 0%, $secondary 51%, $secondary 100%);
     background-position: right center;
-    background: $primary linear-gradient(to top, darken($primary, 10%) 0%, darken($primary, 10%) 51%, darken($primary, 10%) 100%);
+    color: $primary;
   }
 }
 

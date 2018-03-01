@@ -212,6 +212,26 @@ function ModalController($scope) {
   };
 }
 
+function FormController($scope) {
+  $scope.info = {
+    sexe: '',
+    name: '',
+    email: '',
+    promo: 'PATRICK18'
+  };
+  $scope.sexe;
+  $scope.name;
+  $scope.email;
+  $scope.submit = function() {
+    if ($scope.name) {
+      $scope.info.sexe = this.sexe;
+      $scope.info.name = this.name;
+      $scope.info.email = this.email;
+    }
+    console.info($scope.info);
+    $('#modal-g').modal('toggle');
+  };
+}
 
 GameController.$inject = ["$scope"];
 ModalController.$inject = ["$scope"];
@@ -256,8 +276,9 @@ app.directive('modal', function() {
     }
   };
 });
-
+app.controller("FormController", FormController);
 app.controller("GameController", GameController);
+
 setTimeout(function() {
   $('#modal-g').modal('toggle');
 }, 600);
