@@ -28,18 +28,18 @@ $trigger: 'shake-trigger' !default;
 /// @param {Number}  $delay [null]                - animation-delay; valid time value
 /// @param {Number}  $chunk [100%]                - Part of 100% where apply the animation
 @mixin do-shake(
-  $name: 'shake', 
-  $h: 5px, 
-  $v: 5px, 
-  $r: 3deg, 
-  $dur: 100ms, 
-  $precision: .02, 
-  $opacity: false, 
-  $q: infinite, 
-  $t: ease-in-out, 
+  $name: 'shake',
+  $h: 5px,
+  $v: 5px,
+  $r: 3deg,
+  $dur: 100ms,
+  $precision: .02,
+  $opacity: false,
+  $q: infinite,
+  $t: ease-in-out,
   $delay: null,
   $chunk: 100%
-  ) {  
+  ) {
 
   $rotate: 0;
   $move-x: 0;
@@ -59,17 +59,17 @@ $trigger: 'shake-trigger' !default;
         $rotate: apply-random($r);
         $move-x: apply-random($h);
         $move-y: apply-random($v);
-        
+
         #{$step} {
-          transform: translate($move-x, $move-y) rotate($rotate);
+          transform: rotate($rotate);
           @if $opacity { opacity: random(100) / 100; }
         }
-        
+
         $step: $step + $interval;
       }
 
       #{ if($chunk < 100%, (0%, $chunk, 100%), (0%, 100%)) } {
-        transform: translate(0, 0) rotate(0);
+        transform: rotate(0);
       }
 
     }

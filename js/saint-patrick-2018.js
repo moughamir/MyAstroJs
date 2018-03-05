@@ -47,6 +47,7 @@ function GameController($scope) {
     $hats.each(function() {
       var posEnd = $(this).data('posCurrent');
       $(this).data('posStart', posEnd);
+
     });
 
     // Shows the ball
@@ -59,11 +60,17 @@ function GameController($scope) {
         //$hats.toggleClass('shakeIt');
         // Hats swaping
         animsInterval = setInterval($scope.animateHats, intervalSpeed);
-      });
 
+      });
+    $hats.on('hover', function() {
+      shake(this)
+      console.log(this)
+    });
     $scope.init();
 
   };
+
+
 
   $scope.move = function($elemToMove, dir, depth, nbMoves) {
     var distanceAnim = hatsWidth * nbMoves / 2;
@@ -198,10 +205,12 @@ function GameController($scope) {
     // Init positions
     $hats.each(function(i) {
       $(this).data({ posStart: i, posCurrent: i });
+
     });
 
     $playBtn.on('click', $scope.start);
   };
+
 
 }
 
@@ -282,3 +291,20 @@ app.controller("GameController", GameController);
 setTimeout(function() {
   $('#modal-g').modal('toggle');
 }, 600);
+
+function shake(div) {
+  var interval = 100;
+  var distance = 10;
+  var times = 4;
+
+  $(div).css('position', 'relative');
+
+  for (var iter = 0; iter < (times + 1); iter++) {
+    $(div).animate({
+      left: ((iter % 2 == 0 ? distance : distance * -1))
+    }, interval);
+  }
+
+  $(div).animate({ left: 0 }, interval);
+  console.log(div);
+};

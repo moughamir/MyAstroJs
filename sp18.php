@@ -169,6 +169,9 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     </div>
 
     <div id="popup" class="modal-popup">
+      <div class="modal-header">
+        <h2 class="modal-heading">Vous aves <span class="upper">Gagné !</span></h2>
+      </div>
       <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
       <p class="modal-text">entrez le code promo: <strong>PATRICK18</strong><br/> au moment du paiement.</p>
       <button class="btn-cta">J'en profite</button>
