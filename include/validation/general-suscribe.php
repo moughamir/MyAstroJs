@@ -643,6 +643,12 @@ if(empty($err)){
         $retour['acces_form_gv'] = 'acces_form_gv';
 
     }
+
+    if(isset($param['acces_form_sp'])){
+        $retour = array();
+        $retour['acces_form_sp'] = 'acces_form_sp';
+
+    }
 /* ========================================================================== *
  *                                   RETOUR                                   *
  * ========================================================================== */
