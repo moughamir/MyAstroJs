@@ -234,10 +234,8 @@ function FormController($scope) {
     //$('#modal').toggleClass('is-visible');
   };
   $('.modal-redirect').on('click', function() {
-    //var url = window.location.origin;
     var url = "https://www.voyance-en-direct.tv/myastro";
-    //var page = $(this).data('redirect-to');
-    window.location = url + "?sexe=" + $scope.info.sexe + "&name=" + $scope.info.name + "&email=" + $scope.info.email + "&promo=" + $scope.info.promo;
+    window.location = url + "?email=" + $scope.info.email;
   });
 }
 
@@ -271,7 +269,7 @@ function shake(div) {
 
 
 var retry = function() {
-  $('.modal-retry').click(function() {
+  $('.modal-retry').on('click', function() {
     $('#retry').toggleClass('is-visible');
   });
 };

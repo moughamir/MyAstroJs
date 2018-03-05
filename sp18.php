@@ -196,7 +196,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <div class="modal-content">
             <h4 class="modal-headline">10 Minutes achetées <span>=</span> 10 Minutes OFFERTES !!!</h4>
             <p class="modal-text">entrez le code promo: <strong class="highlight">PATRICK18</strong><br/> au moment du paiement.</p>
-            <button class="modal-redirect btn-cta" data-redirect-to="/sp18">J'en profite</button>
+            <button class="modal-redirect btn-cta">J'en profite</button>
           </div>
         </div>
       </div>
