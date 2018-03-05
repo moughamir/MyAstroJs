@@ -143,14 +143,14 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             </div>
             <div class="row">
               <form class="astro-form ajax" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController" method="post" id="form-container">
-                <input type="hidden" name="source" value="sp18-ab" />
+                <input type="hidden" name="source" value="sp18" />
                 <input type="hidden" name="method" value="general-suscribe" />
                 <input type="hidden" name="support" value="voyance" />
                 <input type="hidden" name="acces_form_sp" value="acces_form_sp" />
                 <input type="hidden" name="site" value="myastro.fr" />
-                <input type="hidden" name="affiliation" value="" />
+                <input type="hidden" name="affiliation" value="NATUREL" />
                 <input type="hidden" name="pays" value="FR" />
-                <input type="hidden" name="question_code" value="TBD" />
+                <input type="hidden" name="question_code" value="sp18" />
                 <input type="hidden" name="optional_birthdate" value="1" />
                 <input type="hidden" name="convertir" value="1" />
                 <input type="hidden" name="cguv" value="1" />
