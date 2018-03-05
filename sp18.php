@@ -26,7 +26,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <meta property="og:locale" content="fr_FR" />
 
     <link rel="icon" type="image/png" href="<?= $assets ?>/favicon-sp18.png" />
-
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lobster|Open+Sans" rel="stylesheet">
     <link href="css/saint-patrick-18.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
@@ -64,8 +64,8 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               </div>
               <div id="game-result"></div>
             </div>
-            <div class="startbtn" ng-show="inGame == false">
-              <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-disabled="inGame == true" ng-click="start()">Jouer</button>
+            <div class="startbtn">
+              <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-click="start()">Jouer</button>
             </div>
           </div>
         </article>
@@ -132,49 +132,77 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       </div>
     </footer>
 
-    <!-- MODAL -->
-
-    <div ng-controller="ModalController" class="container">
-      <modal visible="showModal">
-        <div class="row"><img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"></div>
-        <div class="row">
-          <form class="astro-form" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController">
-            <div class="container-90">
-              <header class="form--header">
-                <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
-              </header>
-              <article class="form-content">
-                <!-- Genre -->
-                <div class="Genre">
-                  <label class="gender-l" for="gendert-f">
+    <!-- Startup MODAL -->
+    <div id="modal" class="modal modal-start">
+      <div class="modal-overlay"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-body">
+          <div class="modal-content">
+            <div class="row">
+              <img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"/>
+            </div>
+            <div class="row">
+              <form class="astro-form" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController">
+                <div class="container-90">
+                  <header class="form--header">
+                    <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
+                  </header>
+                  <article class="form-content">
+                    <!-- Genre -->
+                    <div class="Genre">
+                      <label class="gender-l" for="gendert-f">
                         <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
                         <input type="radio" name="sexe" id="gendert-f" ng-model="sexe" value="F" required />
                       </label>
-                  <label class="gender-l" for="gendert-h">
+                      <label class="gender-l" for="gendert-h">
                         <img src="<?= $assets ?>/icons/male.svg" alt="homme"> <span>Homme</span>
                         <input type="radio" name="sexe" ng-model="sexe" id="gendert-h" value="M" />
                       </label>
+                    </div>
+                    <!-- Prénom -->
+                    <input name="prenom" id="prenom" type="text" ng-model="name" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
+                    <!-- Tel -->
+                    <input type="email" name="email" id="email" ng-model="email" placeholder="Mon email" required />
+                    <input class="form--btn" name="play" type="submit" id="submit" value="Jouer" />
+                  </article>
                 </div>
-                <!-- Prénom -->
-                <input name="prenom" id="prenom" type="text" ng-model="name" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
-                <!-- Tel -->
-                <input type="email" name="email" id="email" ng-model="email" placeholder="Mon email" required />
-                <input class="form--btn" name="play" type="submit" id="submit" value="Jouer" />
-              </article>
-
+              </form>
             </div>
-          </form>
+          </div>
         </div>
-      </modal>
-    </div>
-
-    <div id="popup" class="modal-popup">
-      <div class="modal-header">
-        <h2 class="modal-heading">Vous aves <span class="upper">Gagné !</span></h2>
       </div>
-      <h3 class="modal-headline">Votre demande a bien été prise en compte</h3>
-      <p class="modal-text">entrez le code promo: <strong>PATRICK18</strong><br/> au moment du paiement.</p>
-      <button class="btn-cta">J'en profite</button>
+    </div>
+    <!-- Winner -->
+    <div id="popup" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+          <h2 class="modal-heading">Vous aves <span class="upper">Gagné !</span></h2>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-content">
+            <h4 class="modal-headline">10 Minutes achetées = 10 Minutes OFFERTES !!!</h4>
+            <p class="modal-text">entrez le code promo: <strong class="highlight">PATRICK18</strong><br/> au moment du paiement.</p>
+            <button class="modal-redirect btn-cta" data-redirect-to="/sp18">J'en profite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Try Again-->
+    <div id="retry" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          <div class="modal-content">
+            <h4 class="modal-headline">Pas de chance :'(</h4>
+            <p class="modal-text">Pas de Chance :'( , Réessayer</p>
+            <button class="modal-retry btn-cta">Réessayer</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- #### SCRIPTS #### -->

@@ -184,13 +184,14 @@ function GameController($scope) {
           .css('left', posEnd * hatsWidth)
           .stop(true, false)
           .fadeIn()
-          .delay(1600)
+          .delay(600)
           .fadeOut(function() {
             $('#popup').toggleClass('is-visible');
           });
       }
       else {
-        //$gameResult.text('Try again !'); //
+        $('#retry').toggleClass('is-visible');
+        $scope.retry();
       }
 
       $gameResult
@@ -198,6 +199,14 @@ function GameController($scope) {
         .fadeIn()
         .delay(600)
         .fadeOut();
+    });
+  };
+
+  $scope.retry = function() {
+    $('.modal-retry').on('click', function() {
+      $('#retry').toggleClass('is-visible');
+      $scope.inGame = false;
+      $playBtn.text('Réessayer');
     });
   };
 
@@ -214,12 +223,6 @@ function GameController($scope) {
 
 }
 
-function ModalController($scope) {
-  $scope.showModal = false;
-  $scope.toggleModal = function() {
-    $scope.showModal = !$scope.showModal;
-  };
-}
 
 function FormController($scope) {
   $scope.info = {
@@ -238,58 +241,22 @@ function FormController($scope) {
       $scope.info.email = this.email;
     }
     console.info($scope.info);
-    $('#modal-g').modal('toggle');
+    $('#modal').toggleClass('is-visible');
   };
+  $('.modal-redirect').on('click', function() {
+    var url = window.location.origin;
+    var page = $(this).data('redirect-to');
+    window.location = url + page + "?sexe=" + $scope.info.sexe + "&name=" + $scope.info.name + "&email=" + $scope.info.email + "&promo=" + $scope.info.promo;
+  });
 }
 
 GameController.$inject = ["$scope"];
-ModalController.$inject = ["$scope"];
 
-app.controller('ModalController', ModalController);
-app.directive('modal', function() {
-  return {
-    template: '<div class="modal fade" id="modal-g">' +
-      '<div class="modal-dialog">' +
-      '<div class="modal-Container">' +
-      '<div class="modal-content">' +
-      '<div class="modal-body" ng-transclude></div>' +
-      '</div>' +
-      '</div>' +
-      '</div>' +
-      '</div>',
-    restrict: 'E',
-    transclude: true,
-    replace: true,
-    scope: true,
-    link: function postLink(scope, element, attrs) {
-      scope.title = attrs.title;
-
-      scope.$watch(attrs.visible, function(value) {
-        if (value == true)
-          $(element).modal('show');
-        else
-          $(element).modal('hide');
-      });
-
-      $(element).on('shown.bs.modal', function() {
-        scope.$apply(function() {
-          scope.$parent[attrs.visible] = true;
-        });
-      });
-
-      $(element).on('hidden.bs.modal', function() {
-        scope.$apply(function() {
-          scope.$parent[attrs.visible] = false;
-        });
-      });
-    }
-  };
-});
 app.controller("FormController", FormController);
 app.controller("GameController", GameController);
 
 setTimeout(function() {
-  $('#modal-g').modal('toggle');
+  $('#modal').toggleClass('is-visible');
 }, 600);
 
 function shake(div) {
@@ -307,4 +274,4 @@ function shake(div) {
 
   $(div).animate({ left: 0 }, interval);
   console.log(div);
-};
+}
