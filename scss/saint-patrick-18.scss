@@ -22,8 +22,12 @@
 //0- dir
 $assets: '/images_landing/saint-patrick-2018/';
 //1- Font face
-$lobster: 'Lobster',
+$primary-ff: 'Lobster',
 cursive;
+$secondary-ff: 'Fjalla One',
+sans-serif;
+$default-ff: 'Open Sans',
+sans-serif;
 //2- color scheme
 $primary: #ffbe28;
 $secondary: #43372c;
@@ -80,13 +84,10 @@ html {
 .loading {
   background: #3a6530 url($background) center no-repeat;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+  @include size(100vw, 100vh) margin: 0;
   z-index: 9999;
   top: 0;
   @include v-center;
-  width: 100vw;
   flex-direction: column;
   overflow: hidden;
   background-size: cover;
@@ -94,19 +95,21 @@ html {
     @include size(450px, 382px);
     background: transparent url($assets + "hat.svg") no-repeat center;
     animation: shake-rotate .5s ease-in-out infinite;
+    @include respond-to('mobile') {
+      @include size(450px/2, 382px/2);
+    }
   }
 }
 
-@import "modules/modals";
+//@import "modules/modals";
 body {
   overflow-x: hidden;
   min-height: 100%;
+  font-family: $default-ff;
 }
 
 .container {
-  width: 960px;
-  height: 100%;
-  display: flex;
+  @include size(960px, 100%) display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -120,10 +123,8 @@ main {
 /// header
 .site {
   &--header {
-    width: 100%;
-    top: 0;
+    @include size(100%, 81px) top: 0;
     z-index: 5;
-    height: 81px;
     background: $secondary; //background-image: linear-gradient(to top, #e6a513 0%, #eec904 55%, #dfb316 100%);
     border: none;
     box-shadow: $card-shadow;
@@ -137,20 +138,14 @@ main {
 }
 
 .logo {
-  width: 73px;
-  height: 73px;
+  @include square(73px)
 }
 
 
 /// content
 .center-ner {
-  width: 100%;
   background-color: $secondary;
-  height: 60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  @include size(100%, 60px) display: flex;
   justify-content: center;
   align-items: center;
   h3 {
@@ -195,8 +190,7 @@ main {
     color: $secondary;
   }
   &--content {
-    width: 669px;
-    height: auto;
+    @include size(669px, auto);
     color: $secondary;
     font-family: Oxygen;
     font-size: 14px;
@@ -243,8 +237,7 @@ table {
 
 
 .btn.btn-default.btn-lg {
-  width: 200px;
-  height: 60px;
+  @include size(200px, 60px);
   background: $modal-green none repeat scroll 0% 0%;
   color: wheat;
   font-family: Oxygen;
@@ -262,6 +255,9 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @include respond-to('mobile') {
+    min-height: 220px;
+  }
 }
 
 .points {
@@ -282,8 +278,7 @@ footer {
 }
 
 .reassure {
-  height: 53px;
-  width: 960px;
+  @include size(960px, 53px);
   margin: 10px auto;
   background: $secondary;
   box-shadow: 0px 1px 5px 0px rgb( 0, 0, 0);
@@ -305,8 +300,7 @@ footer {
         border-right: 1px solid #fff;
         opacity: 0.3;
         margin-right: 21px;
-        width: 15px;
-        height: 30px;
+        @include size(15px, 30px);
       }
       &:nth-of-type(1)>.elem>.elem-icon {
         margin-right: 4px !important;
@@ -331,8 +325,7 @@ footer {
     color: $primary;
   }
   &-icon {
-    width: 27px;
-    height: auto;
+    @include size(27px, auto);
     margin-right: 6px;
   }
 }
@@ -341,10 +334,13 @@ footer {
 /// FORM
 .astro-form {
   background-color: $primary;
-  width: 381px;
-  height: 416px;
+  @include size(381px, 416px);
   z-index: 48;
   position: relative;
+  .container-90 {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 hr {
@@ -359,11 +355,13 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-8%);
+    height: 60%;
   }
   &--header {
-    top: 15px;
-    margin-bottom: 20px;
+    height: 25%;
+    @include respond-to('mobile') {
+      height: unset;
+    }
   }
   &--title {
     font-size: 20px;
@@ -379,6 +377,9 @@ hr {
     color: $secondary;
     text-align: center;
     font-weight: 500;
+    @include respond-to('mobile') {
+      font-size: 1.2rem;
+    }
   }
 
   &--btn {
@@ -390,13 +391,16 @@ hr {
     text-shadow: 0.5px 0.866px 0px rgb( 0, 0, 0);
     background: transparent;
     box-shadow: 0 2px 5px -2px rgba(3, 3, 3, .5);
-    width: 334px;
-    height: 50px;
+    @include size(334px, 50px);
     border-radius: 3px;
     border: 3px solid $secondary;
     color: $secondary;
     margin: 15px auto 0;
     transition: all 500ms ease;
+    @include respond-to('mobile') {
+      width: 96%;
+      margin: 12px auto !important;
+    }
     &:hover {
       background: $secondary;
       box-shadow: 0 2px 5px 0 rgba(3, 3, 3, .5);
@@ -407,9 +411,7 @@ hr {
 
 .container-90 {
   margin: 0px auto;
-  height: 100%;
-  width: 90%;
-  align-items: stretch;
+  @include size(90%, 100%) align-items: stretch;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -422,8 +424,7 @@ hr {
   align-items: center;
   &>label>img {
     margin-right: 10px;
-    height: 17px;
-    width: 17px;
+    @include square(17px);
   }
 }
 
@@ -435,24 +436,21 @@ hr {
 }
 
 #jour {
-  width: 56px;
-  height: 24px;
+  @include size(56px, 24px);
   background-color: #FFF;
   background-image: linear-gradient(to top, #F2F2F2 0%, #FFF 50%, #FFF 100%);
   border: 1px solid #E6E6E6;
 }
 
 #mois {
-  width: 111px;
-  height: 24px;
+  @include size(111px, 24px);
   background-color: #FFF;
   background-image: linear-gradient(to top, #F2F2F2 0%, #FFF 50%, #FFF 100%);
   border: 1px solid #E6E6E6;
 }
 
 #year {
-  width: 80px;
-  height: 24px;
+  @include size(80px, 24px);
   background-color: white;
   background-image: linear-gradient(to top, #f2f2f2 0%, white 50%, white 100%);
   border: 1px solid #e6e6e6;
@@ -460,8 +458,7 @@ hr {
 
 #prenom,
 #email {
-  width: 334px;
-  height: 44px;
+  @include size(334px, 44px);
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(255, 255, 255, .6), inset 0 1px 3px rgba(0, 0, 0, .3);
@@ -471,8 +468,7 @@ hr {
 }
 
 select {
-  width: 334px;
-  height: 30px;
+  @include size(334px, 30px);
   background-color: #FFF;
   border: 1px solid #CCC;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -499,6 +495,9 @@ label {
   display: inline-flex;
   margin: 5px 25px;
   justify-content: center;
+  @include respond-to('mobile') {
+    margin: initial;
+  }
   input {
     margin: auto 10px !important;
   }
@@ -513,67 +512,201 @@ label {
 
 /// modal
 .modal {
-  &-gif {
-    width: 536px;
-    height: 400px;
+  position: absolute;
+  z-index: 10000; // 1
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  @include square(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.is-visible {
+    visibility: visible;
+    .modal {
+      &-overlay {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+      }
+      &-transition {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
   }
+  &-overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    @include square(100%);
+    background: hsla(0, 0%, 0%, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+  }
+  &-wrapper {
+    position: initial;
+    z-index: 9999;
+    top: unset;
+    left: unset;
+    width: 32em;
+    margin-left: unset;
+    background-color: unset;
+    box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
+    box-sizing: border-box;
+  }
+  &-transition {
+    transition: all 0.3s 0.12s;
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  &-header,
   &-content {
-    background-color: $modalBg;
-    border: 5px solid $primary;
-  }
-  &-dialog {
-    width: 1000px;
+    padding: 1em;
   }
   &-body {
-    width: auto;
-  }
-  &-formSub {
-    display: none;
-  }
-  &-popup {
-    visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
     background: $secondary;
-    @include size(470px, 216px);
-    padding: 15px;
-    text-align: center;
     color: #fff;
-    font-family: "Open Sans";
+    text-align: center;
+  }
+  &-header {
+    position: relative;
+    background-color: $secondary;
+    text-align: center;
+    color: $primary;
+  }
+  &-heading {
+    font-size: 1.6em;
+    font-weight: lighter;
+    font-family: $primary-ff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &::before {
+      content: '';
+      @include square(42px);
+      background: transparent url($assets + 'icons/check.svg') no-repeat center;
+      display: inline-block;
+      position: absolute;
+      left: 115px;
+      @include respond-to('mobile') {
+        left: 18px;
+      }
+    }
+    .upper {
+      font-family: $secondary-ff;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
   }
   &-headline {
-    color: #53fe1a;
-    font-size: 1.25rem;
-    font-family: Lobster;
-    font-weight: normal;
-    padding: 10px 0;
-  }
-  &-text {
-    font-size: 0.9rem;
-    padding: 10px 0;
-  }
-  .btn {
-    &-close {
+    text-decoration: underline;
+    &::before,
+    &::after {
+      content: '';
+      @include square(30px);
+      display: inline-block;
+      background: transparent url($assets + '/icons/gift-s.svg') no-repeat center;
       position: absolute;
-      /* width: 150px; */
-      border: 0.15rem solid #53fd19;
-      padding: 8px;
-      width: 100px;
-      font-size: 1.4rem;
-      color: #53fd19;
-      text-transform: uppercase;
-      left: 50%;
-      transform: translate(-50%);
-      &:hover {
-        color: #115e5b;
-        background: #53fe1a;
-        transition: all 500ms ease;
+      margin-top: -10px
+    }
+    &::before {
+      left: 30px;
+    }
+    &::after {
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+      left: unset;
+      right: 30px;
+    }
+  }
+  &-content {
+    &>*:first-child {
+      margin-top: 0;
+    }
+    &>*:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-start {
+    .modal {
+      &-overlay {
+        background: rgba(255, 255, 255, .4);
+      }
+      &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $secondary;
+        border: 5px dotted $primary;
+        margin: 8px;
+        @include respond-to('mobile') {
+          margin: 2px;
+          padding: 2px;
+        }
+      }
+      &-wrapper {
+        width: 60rem;
+        border: 3px solid $primary;
+        background: $secondary;
+        @include respond-to('mobile') {
+          width: 100%;
+        }
       }
     }
   }
+  &-winner {
+    .modal {
+      &-headline {
+        text-decoration: none;
+        font-size: 1.5rem;
+        &::before,
+        &::after {
+          top: 140px;
+        }
+        span {
+          display: block;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  &-retry {
+    .modal {
+      &-headline {
+        text-decoration: none;
+        font-size: 2rem;
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+  .btn-cta {
+    margin: 0 auto;
+    display: block;
+    transition: all .5s ease;
+    border: 2px solid $secondary;
+    box-sizing: border-box;
+    color: $secondary;
+    &:hover {
+      background-color: $secondary;
+      color: $primary;
+      border: 2px solid $primary;
+
+    }
+  }
+}
+
+.hightlight {
+  background: #fff;
+  color: $secondary;
+  padding: 5px;
 }
 
 .shine {
@@ -596,25 +729,24 @@ label {
     flex-direction: column;
   }
   .reassure {
-    width: 100%;
-    height: auto;
+    @include size(100%, auto);
   }
   .site {
     &--header {
-      height: 58px;
-      width: 100vw;
+      @include size(100vw, 58px);
       border: none !important;
     }
     &-name {
-      font-size: 2em;
+      font-size: 1em;
+      font-weight: lighter;
     }
   }
   .logo {
-    width: 48px;
+    width: 38px;
   }
   .article {
     &--headline {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
     &--subtitle {
       font-size: 1.15rem;
@@ -629,11 +761,10 @@ label {
     font-size: 1.3rem;
   }
   .astro-form {
-    width: 100%;
-    height: unset;
+    @include size(100%, unset);
   }
   .container-90 {
-    width: 95%;
+    width: 90%;
   }
   .form {
     &-content>* {
@@ -761,7 +892,7 @@ label {
 
 
 .btn-cta {
-  background: #ffbe28;
+  background: $primary;
   border: none;
   padding: .6rem 1rem;
   text-transform: uppercase;
@@ -769,9 +900,6 @@ label {
   font-size: 1.2rem;
 }
 
-.is-visible {
-  visibility: visible;
-}
 
 .DRI-Sent {
   color: white;
@@ -800,7 +928,10 @@ label {
     position: relative;
     @include size(225px, 191px);
     background: transparent url($assets + "hat.svg") no-repeat center;
-
+    @include respond-to('mobile') {
+      @include size(75px, 63px);
+      margin: 0 5px;
+    }
   }
   .ball {
     display: none;
@@ -813,6 +944,10 @@ label {
     z-index: -9;
     img {
       @include square(100%);
+    }
+    @include respond-to('mobile') {
+      @include square(30px);
+      margin-left: 28px;
     }
   }
   &-result {

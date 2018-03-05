@@ -78,7 +78,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
           <p class="article--content">
             Symbole de la chance, le jour de la <strong>Saint Patrick</strong> est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que
-            <srong>l’année 2018 vous réserve</strong>.<br/> Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/> Réalisée par un
+            <strong>l’année 2018 vous réserve</strong>.<br/> Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/> Réalisée par un
               <strong>astrologue professionnel</strong>, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages et de découvrir toutes les opportunités qui se présenteront à vous tout au long
               de l’année 2018.<br/> L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : <strong>profiter et croquer la vie à pleines dents !</strong>
           </p>
@@ -142,7 +142,19 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
               <img class="modal-gif" src="<?= $assets ?>/popup.gif" alt="modal gif"/>
             </div>
             <div class="row">
-              <form class="astro-form" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController">
+              <form class="astro-form ajax" accept-charset="utf-8" role="form"  ng-submit="submit()" ng-controller="FormController" method="post" id="form-container">
+                <input type="hidden" name="source" value="sp18-ab" />
+                <input type="hidden" name="method" value="general-suscribe" />
+                <input type="hidden" name="support" value="voyance" />
+                <input type="hidden" name="acces_form_sp" value="acces_form_sp" />
+                <input type="hidden" name="site" value="myastro.fr" />
+                <input type="hidden" name="affiliation" value="" />
+                <input type="hidden" name="pays" value="FR" />
+                <input type="hidden" name="question_code" value="TBD" />
+                <input type="hidden" name="optional_birthdate" value="1" />
+                <input type="hidden" name="convertir" value="1" />
+                <input type="hidden" name="cguv" value="1" />
+                <input type="hidden" name="partenaires" value="1" />
                 <div class="container-90">
                   <header class="form--header">
                     <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
@@ -173,7 +185,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       </div>
     </div>
     <!-- Winner -->
-    <div id="popup" class="modal">
+    <div id="popup" class="modal modal-winner">
       <div class="modal-overlay"></div>
       <div class="modal-wrapper modal-transition">
         <div class="modal-header">
@@ -182,7 +194,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
 
         <div class="modal-body">
           <div class="modal-content">
-            <h4 class="modal-headline">10 Minutes achetées = 10 Minutes OFFERTES !!!</h4>
+            <h4 class="modal-headline">10 Minutes achetées <span>=</span> 10 Minutes OFFERTES !!!</h4>
             <p class="modal-text">entrez le code promo: <strong class="highlight">PATRICK18</strong><br/> au moment du paiement.</p>
             <button class="modal-redirect btn-cta" data-redirect-to="/sp18">J'en profite</button>
           </div>
@@ -190,15 +202,15 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       </div>
     </div>
     <!-- Try Again-->
-    <div id="retry" class="modal">
+    <div id="retry" class="modal modal-retry">
       <div class="modal-overlay"></div>
       <div class="modal-wrapper modal-transition">
         <div class="modal-header">
         </div>
         <div class="modal-body">
           <div class="modal-content">
-            <h4 class="modal-headline">Pas de chance :'(</h4>
-            <p class="modal-text">Pas de Chance :'( , Réessayer</p>
+            <h4 class="modal-headline">Pas de chance</h4>
+            <p class="modal-text"></p>
             <button class="modal-retry btn-cta">Réessayer</button>
           </div>
         </div>
@@ -208,7 +220,9 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
     <!-- #### SCRIPTS #### -->
     <script src="//cdn.jsdelivr.net/g/jquery@2.2.4,angularjs@1.5.5(angular.min.js+angular-animate.min.js),bootstrap@3.3.7" charset="utf-8"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+    <script src="js/formValidator.js"></script>
     <script src="js/saint-patrick-2018.js" charset="utf-8"></script>
+
 
     <!-- #### TRACKINGS #### -->
     <?php include('include/remarketing/adwords.php');

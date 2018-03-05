@@ -4,7 +4,7 @@
  * 07/03/2016
  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     // On commence par cacher la div d'erreur
     if ($('.alert-danger').is(':visible')) {
@@ -12,13 +12,14 @@ $(document).ready(function () {
     }
 
     // Gestion affichage du champs du conjoint
-    var toogle_spouse = function () {
+    var toogle_spouse = function() {
         var flag = false;
         var questions_amour_p2 = ['question_11', 'question_2', 'question_24'];
         if ($(this).prop("tagName") === 'SELECT') {
             var option = $(this).find('option:selected');
             var question = option.val();
-        } else {
+        }
+        else {
             var option = $(this);
             var question = option.val();
         }
@@ -27,30 +28,31 @@ $(document).ready(function () {
                 flag = true;
             }
         }
-        $('.sonprenom').each(function () {
+        $('.sonprenom').each(function() {
             if (flag) {
                 $(this).slideDown();
-//                $(this).find('input').prop('required', true);
-            } else {
+                //                $(this).find('input').prop('required', true);
+            }
+            else {
                 $(this).slideUp();
-//                $(this).find('input').prop('required', false);
+                //                $(this).find('input').prop('required', false);
             }
         });
     };
-    $('div.sonprenom').each(function () {
+    $('div.sonprenom').each(function() {
         if (!$(this).hasClass('show')) {
             $(this).hide();
         }
     });
-    $('#theme_id').each(function () {
+    $('#theme_id').each(function() {
         $(this).change(toogle_spouse);
     });
-    $('.theme_id').each(function () {
+    $('.theme_id').each(function() {
         $(this).change(toogle_spouse);
     });
 
     // Soumission du formulaire
-    $(document).on('submit', 'form.ajax', function (e) {
+    $(document).on('submit', 'form.ajax', function(e) {
         e.preventDefault();
         var ll = 1;
         form = $(this);
@@ -83,7 +85,8 @@ $(document).ready(function () {
             use_modal = false;
             form_overlay.html(alert_loading);
             form_overlay.fadeIn();
-        } else if ($('.modal').not("#menuModal").length < 1) {
+        }
+        else if ($('.modal').not("#menuModal").length < 1) {
             $('body').append('<div id="modal" class="modal"></div>');
         }
         if (use_modal) {
@@ -99,8 +102,8 @@ $(document).ready(function () {
             xhrFields: {
                 withCredentials: true
             },
-            data: {action: 'formValidation', data: $(this).serialize()},
-            success: function (response) {
+            data: { action: 'formValidation', data: $(this).serialize() },
+            success: function(response) {
                 // On reset le tout
                 if (use_modal) {
                     $('#modal').modal('hide');
@@ -127,9 +130,9 @@ $(document).ready(function () {
                     $.ajax({
                         url: response.reload_form,
                         type: 'POST',
-                        success: function (data) {
+                        success: function(data) {
                             $(document).trigger('form_completed_reload');
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 form_container.html(data);
                                 form_overlay.fadeOut();
                                 $(document).trigger('ajax_success');
@@ -138,17 +141,18 @@ $(document).ready(function () {
                     });
                 }
                 if (response.hasOwnProperty('url')) {
-                    // Redirection   
+                    // Redirection
                     var redirect_delay = response.hasOwnProperty('redirect_delay') ? response.redirect_delay : 3000;
                     if (redirect_delay > 0) {
                         if (!use_modal) {
                             form_overlay.html(alert_done);
-                        } else {
+                        }
+                        else {
                             $('#modal').html(alert_done);
                             $('#modal').modal('show');
                         }
                     }
-                    setTimeout(function () {
+                    setTimeout(function() {
                         document.location.replace(response.url);
                     }, redirect_delay);
                 }
@@ -166,7 +170,8 @@ $(document).ready(function () {
 
                     if (!use_modal) {
                         form_overlay.html(msg_done);
-                    } else {
+                    }
+                    else {
                         $('#modal').html(msg_done);
                         $('#modal').modal('show');
                         $('#form_cb').html("<h3> Merci, votre demande a bien été prise en compte.<br/> <strong>Un voyant vous recontactera</strong> </h3>");
@@ -174,13 +179,16 @@ $(document).ready(function () {
 
                 }
 
-                 if (response.hasOwnProperty('acces_form_gv')) {
+                if (response.hasOwnProperty('acces_form_gv')) {
                     $("#acces-gv").modal('hide');
-                     Cookies.set('accesFormShown', true);
+                    Cookies.set('accesFormShown', true);
 
-                 }
+                }
+                if (response.hasOwnProperty('acces_form_sp')) {
+                    $('#modal').toggleClass('is-visible');
+                }
 
-                    if (response.hasOwnProperty('error')) {
+                if (response.hasOwnProperty('error')) {
                     // Affichage des erreurs
                     var alert_form_errors = $(alert_error);
                     var err = response.error;
@@ -188,7 +196,8 @@ $(document).ready(function () {
                         $('input[name="' + key + '"], select[name="' + key + '"]').addClass('has-error');
                         if (use_form_alert) {
                             form_alert.append(err[key]);
-                        } else {
+                        }
+                        else {
                             $(alert_form_errors).append('<br>' + err[key]);
                         }
                     }
@@ -196,18 +205,20 @@ $(document).ready(function () {
                         alert_form_errors = false;
                         form_alert.show();
                         form_alert.removeClass('hidden');
-                    } else {
+                    }
+                    else {
                         $(alert_form_errors).append('<br><i data-dismiss="-" style="cursor:pointer;">Cliquez pour fermer ce message</i>');
                     }
 
                     if (!use_modal) {
                         form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);
                         if (use_form_alert) {
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 form_overlay.fadeOut();
                             }, 3000);
                         }
-                    } else {
+                    }
+                    else {
                         $('#modal').html(alert_form_errors ? alert_form_errors : alert_error);
                         $('#modal').modal('show');
                     }
@@ -223,43 +234,45 @@ $(document).ready(function () {
                         alert_form_errors = false;
                         form_alert.show();
                         form_alert.removeClass('hidden');
-                    } else {
+                    }
+                    else {
                         $(alert_form_errors).append('<br><i data-dismiss="-" style="cursor:pointer;">Cliquez pour fermer ce message</i>');
                     }
 
                     if (!use_modal) {
                         form_overlay.html(alert_form_errors ? alert_form_errors : alert_error);
                         if (use_form_alert) {
-                            setTimeout(function () {
+                            setTimeout(function() {
                                 form_overlay.fadeOut();
                             }, 3000);
                         }
-                    } else {
+                    }
+                    else {
                         $('#modal').html(alert_form_errors ? alert_form_errors : alert_error);
                         $('#modal').modal('show');
                     }
                     $(document).trigger('ajax_error');
-                }
-                ;
+                };
             },
-            error: function () {
+            error: function() {
                 if (!use_modal) {
                     $('#form-overlay').html(alert_error);
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $('#form-overlay').fadeOut();
                     }, 3000);
-                } else {
+                }
+                else {
                     $('#modal').html(alert_error);
                     $('#modal').modal('show');
                 }
             }
         });
-        // -- fin requête ajax 
+        // -- fin requête ajax
 
         return false;
     });
 
-    $('#form-overlay').click(function (e) {
+    $('#form-overlay').click(function(e) {
         $(this).fadeOut();
     });
 });

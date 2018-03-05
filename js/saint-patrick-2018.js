@@ -70,8 +70,6 @@ function GameController($scope) {
 
   };
 
-
-
   $scope.move = function($elemToMove, dir, depth, nbMoves) {
     var distanceAnim = hatsWidth * nbMoves / 2;
     var zindex = 'auto';
@@ -184,14 +182,14 @@ function GameController($scope) {
           .css('left', posEnd * hatsWidth)
           .stop(true, false)
           .fadeIn()
-          .delay(600)
+          .delay(0)
           .fadeOut(function() {
             $('#popup').toggleClass('is-visible');
           });
       }
       else {
         $('#retry').toggleClass('is-visible');
-        $scope.retry();
+        retry();
       }
 
       $gameResult
@@ -202,27 +200,19 @@ function GameController($scope) {
     });
   };
 
-  $scope.retry = function() {
-    $('.modal-retry').on('click', function() {
-      $('#retry').toggleClass('is-visible');
-      $scope.inGame = false;
-      $playBtn.text('Réessayer');
-    });
-  };
 
+  $scope.reset = function() {
+
+  };
   $scope.init = function() {
     // Init positions
     $hats.each(function(i) {
       $(this).data({ posStart: i, posCurrent: i });
-
     });
 
     $playBtn.on('click', $scope.start);
   };
-
-
 }
-
 
 function FormController($scope) {
   $scope.info = {
@@ -241,12 +231,13 @@ function FormController($scope) {
       $scope.info.email = this.email;
     }
     console.info($scope.info);
-    $('#modal').toggleClass('is-visible');
+    //$('#modal').toggleClass('is-visible');
   };
   $('.modal-redirect').on('click', function() {
-    var url = window.location.origin;
-    var page = $(this).data('redirect-to');
-    window.location = url + page + "?sexe=" + $scope.info.sexe + "&name=" + $scope.info.name + "&email=" + $scope.info.email + "&promo=" + $scope.info.promo;
+    //var url = window.location.origin;
+    var url = "https://www.voyance-en-direct.tv/myastro";
+    //var page = $(this).data('redirect-to');
+    window.location = url + "?sexe=" + $scope.info.sexe + "&name=" + $scope.info.name + "&email=" + $scope.info.email + "&promo=" + $scope.info.promo;
   });
 }
 
@@ -275,3 +266,12 @@ function shake(div) {
   $(div).animate({ left: 0 }, interval);
   console.log(div);
 }
+
+//$('.modal-retry').click(function() { $('#retry').toggleClass('is-visible') });
+
+
+var retry = function() {
+  $('.modal-retry').click(function() {
+    $('#retry').toggleClass('is-visible');
+  });
+};
