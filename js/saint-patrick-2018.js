@@ -270,6 +270,6 @@ function shake(div) {
 
 var retry = function() {
   $('.modal-retry').on('click', function() {
-    $('#retry').toggleClass('is-visible');
+    $('#retry').removeClass('is-visible');
   });
 };

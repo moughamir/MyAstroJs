@@ -44,6 +44,7 @@ $line-height-base: 1.428571429 !default; // 20/14
 $border-radius-large: 3px;
 // Images
 $background: $assets+'background.jpg';
+$background-dri: $assets+'background-dri.jpg';
 $carte: $assets+'Saint-Patrick.svg';
 $shine: $assets+'sp-shine.svg';
 // Media queries breakpoints
@@ -74,11 +75,7 @@ $screen-sm-max: ($screen-md-min - 1) !default;
 $screen-md-max: ($screen-lg-min - 1) !default;
 //== style
 html {
-  // Maybe I will optimize this in near future
-  background: url($background) center no-repeat;
   min-height: 100%;
-  background-size: cover;
-  background-attachment: scroll;
 }
 
 .loading {
@@ -101,11 +98,22 @@ html {
   }
 }
 
-//@import "modules/modals";
 body {
+  background: url($background) center no-repeat;
   overflow-x: hidden;
   min-height: 100%;
   font-family: $default-ff;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+.dri {
+  background-image: url($background-dri);
+  .site {
+    &--name {
+      margin-left: initial;
+    }
+  }
 }
 
 .container {
