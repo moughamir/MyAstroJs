@@ -187,7 +187,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       <div class="modal-overlay"></div>
       <div class="modal-wrapper modal-transition">
         <div class="modal-header">
-          <h2 class="modal-heading">Vous aves <span class="upper">Gagné !</span></h2>
+          <h2 class="modal-heading">Vous avez <span class="upper">Gagné !</span></h2>
         </div>
 
         <div class="modal-body">
