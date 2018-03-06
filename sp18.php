@@ -78,9 +78,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
           <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
           <p class="article--content">
             Symbole de la chance, le jour de la <strong>Saint Patrick</strong> est l’occasion idéale pour se pencher sur les opportunités et les coups de pouce que
-            <strong>l’année 2018 vous réserve</strong>.<br/> Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine sur lequel vous souhaitez mettre la lumière pour recevoir votre étude personnalisée.<br/> Réalisée par un
-              <strong>astrologue professionnel</strong>, cette étude vous permettra d’en apprendre plus sur votre situation actuelle, de comprendre l’origine de vos blocages et de découvrir toutes les opportunités qui se présenteront à vous tout au long
-              de l’année 2018.<br/> L’idéal pour ne plus redouter le futur, toujours posséder un coup d’avance sur la destinée et n’avoir plus qu’une chose à faire : <strong>profiter et croquer la vie à pleines dents !</strong>
+            <strong>l’année 2018 vous réserve</strong>.<br/> Vie sentimentale, vie professionnelle, santé financière : vous n’avez qu’à choisir le domaine sur lequel vous souhaitez en savoir d'avantage pour l’année 2018<br/> Plus rapide, plus directe, plus discrète, la voyance par tchat vous permet de discuter et d’échanger en direct avec le voyant de votre choix.<br/> Les avantages du tchat sont nombreux, et n’ont qu’un seul objectif : vous proposer une consultation qui vous donnera entière satisfaction.<br/> L’essayer c’est l’adopter ! Découvrez notre tchat en bénéficiant dès maintenant de <strong>10 minutes de consultation gratuites</strong> !
           </p>
         </article>
       </section>
