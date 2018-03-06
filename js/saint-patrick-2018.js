@@ -36,12 +36,9 @@ function GameController($scope) {
     $playBtn.attr("disabled", true);
     nbSwaps = 0;
     posBall = Math.floor(Math.random() * nbHats);
-    console.info($hats === posBall);
     $playBtn.off('click');
     $game.off('click');
 
-    console.info(posBall);
-    console.info($hats.eq(posBall));
     $hats.eq(posBall).toggleClass('reveal');
     // Update of hats position
     $hats.each(function() {
@@ -50,6 +47,7 @@ function GameController($scope) {
 
     });
 
+    var t = 0
     // Shows the ball
     $ball
       .css('left', posBall * hatsWidth)
@@ -60,12 +58,14 @@ function GameController($scope) {
         //$hats.toggleClass('shakeIt');
         // Hats swaping
         animsInterval = setInterval($scope.animateHats, intervalSpeed);
-
+        setTimeout(function() {
+          // Add Shake effect when user hover on a Hat
+          $hats.mouseenter(function() {
+            shake(this);
+          });
+        }, 800);
       });
-    $hats.on('hover', function() {
-      shake(this)
-      console.log(this)
-    });
+
     $scope.init();
 
   };
@@ -176,7 +176,6 @@ function GameController($scope) {
       // If the ball is found
       if (posBall === posStart) {
         $game.off('click', '.hat');
-        //$hats.eq(posBall).toggleClass('reveal');
         // Shows the ball
         $ball
           .css('left', posEnd * hatsWidth)
@@ -230,8 +229,6 @@ function FormController($scope) {
       $scope.info.name = this.name;
       $scope.info.email = this.email;
     }
-    console.info($scope.info);
-    //$('#modal').toggleClass('is-visible');
   };
   $('.modal-redirect').on('click', function() {
     var url = "https://www.voyance-en-direct.tv/myastro";
@@ -262,10 +259,7 @@ function shake(div) {
   }
 
   $(div).animate({ left: 0 }, interval);
-  console.log(div);
 }
-
-//$('.modal-retry').click(function() { $('#retry').toggleClass('is-visible') });
 
 
 var retry = function() {
