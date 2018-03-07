@@ -717,9 +717,6 @@ label {
   padding: 2px 5px;
 }
 
-.shine {
-  background: $primary url($shine) no-repeat 50% 45%;
-}
 
 /// media Query
 @media (max-width: 960px) {
@@ -871,10 +868,7 @@ label {
     transform: translate(0%, 29%);
     position: initial !important;
   }
-  .shine {
-    background: #074145 url($shine) no-repeat 50% 45%;
-    background-size: 90%;
-  }
+
 }
 
 /// animation
