@@ -19,8 +19,13 @@
 }
 
 //== variables
+
 //0- dir
 $assets: '/images_landing/saint-patrick-2018/';
+$voyant_anissa: $assets + "psych/anissa.jpg";
+$voyant_jean: $assets + "psych/jean.jpg";
+$voyant_marc: $assets + "psych/marc.jpg";
+$voyant_marianne: $assets + "psych/marianne.jpg";
 //1- Font face
 $primary-ff: 'Lobster',
 cursive;
@@ -997,4 +1002,161 @@ label {
     transform: rotate(22deg) translate(50px, -57px);
   }
 
+}
+
+
+.FormContainer {
+  max-width: inherit;
+
+  &-Header {
+    font-family: 'Ubuntu Condensed';
+    color: $secondary;
+    padding-bottom: 3rem;
+  }
+
+  &-Submit {
+    margin-bottom: -5rem;
+    padding: 1rem 4rem;
+    background-color: $secondary;
+    color: $primary;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    border: 0px solid red;
+    transition: all 0.25s ease-in;
+    &:hover {
+      background-color: darken($secondary, 25%);
+    }
+  }
+
+  &.DRI .DRI {
+    &-Intro {
+      font-family: 'Ubuntu Condensed', sans-serif;
+
+      &-Title {
+        color: #ccc;
+        text-transform: uppercase;
+      }
+      &-Text {
+        color: white;
+      }
+    }
+    &-Slogan {
+      background-color: $secondary;
+      color: #fff;
+      span {
+        text-transform: uppercase;
+      }
+    }
+    &-Form {
+      padding: 2rem;
+      background-color: #fff;
+
+      .FormField-Input {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #000;
+      }
+    }
+    &-Sent {
+      color: $secondary;
+      strong {
+        font-weight: normal;
+        color: $primary;
+      }
+    }
+    /* MODULE LISTE VOYANT-E-S */
+    &-list-voyants {
+      margin-bottom: 2rem;
+      h2 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          margin: 0;
+          padding: 0;
+          div {
+            width: 10rem;
+            height: 10rem;
+          }
+          span {
+            text-transform: uppercase;
+            color: $secondary;
+            font-size: 1.8rem;
+          }
+        }
+      }
+      .voyant-marc {
+        background: url($voyant_marc) no-repeat bottom center;
+      }
+      .voyant-anissa {
+        background: url($voyant_anissa) no-repeat bottom center;
+      }
+      .voyant-jean {
+        background: url($voyant_jean) no-repeat bottom center;
+      }
+      .voyant-marianne {
+        background: url($voyant_marianne) no-repeat bottom center;
+      }
+    }
+
+  }
+}
+
+
+.ContentBand {
+  &-title {
+    font-family: $secondary-ff;
+    font-size: 3rem;
+    font-weight: initial;
+    color: $secondary;
+    &::after {
+      content: '';
+      display: flex;
+      border-bottom: 2px solid $secondary;
+      width: 50%;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+.faq {
+  background: rgba(112, 94, 100, .35) url($assets + 'faq.png') no-repeat;
+  background-size: cover;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  color: $secondary;
+  h3 {
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 400;
+    color: $secondary;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li {
+      font-style: italic;
+      font-size: 1.6rem;
+      line-height: 120%;
+      list-style: none;
+      padding: 0 0 10px 50px;
+    }
+    .ico-formulaire {
+      background: transparent url($assets + "icons/form.svg") center left no-repeat;
+    }
+    .ico-standardiste {
+      background: transparent url($assets + "icons/phone.svg") center left no-repeat;
+    }
+  }
 }
