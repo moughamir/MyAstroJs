@@ -153,7 +153,6 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <input type="hidden" name="pays" value="FR" />
                 <input type="hidden" name="question_code" value="sp18" />
                 <input type="hidden" name="optional_birthdate" value="1" />
-                <input type="hidden" name="convertir" value="1" />
                 <input type="hidden" name="cguv" value="1" />
                 <input type="hidden" name="partenaires" value="1" />
                 <div class="container-90">
