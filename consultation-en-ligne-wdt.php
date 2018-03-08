@@ -31,6 +31,7 @@ $questions = array(
 
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';
+$_SESSION['subid'] = isset($_GET['subid']) ? $_GET['subid'] : '';
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">

@@ -77,7 +77,7 @@ $assets = 'images_landing/tarot-tchat';
                     </section>
                     <article class="session-result hidden"></article>
                 </div>
-                
+
             </section>
             <section class="section content hidden">
                 <h2 class="question">Sélectionnez 5 cartes</h2>
@@ -97,7 +97,6 @@ $assets = 'images_landing/tarot-tchat';
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ########## -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="tel_needed" value="0" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />

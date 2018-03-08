@@ -48,7 +48,6 @@ $assets        = 'images_landing/grande-voyance/18';
               <input type="hidden" name="dri" value="<?= $dri;?>" />
               <input type="hidden" name="dri2" value="<?= $dri2;?>" />
               <!-- ########## autres champs pré-remplis ########## -->
-              <input type="hidden" name="convertir" value="1" />
               <input type="hidden" name="cguv" value="1" />
               <input type="hidden" name="partenaires" value="1" />
 

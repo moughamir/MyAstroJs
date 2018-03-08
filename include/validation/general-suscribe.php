@@ -57,6 +57,12 @@ $voyant  = isset($param['voyant']) ? $param['voyant'] : '';
 // ---- TRACKING REFLEX
 $rc_affiliateid = isset($_SESSION['reflexcash_affiliateid']) ? $_SESSION['reflexcash_affiliateid'] : (isset($_SESSION['affiliate_id']) ? $_SESSION['affiliate_id']:'');
 $rc_source = isset($_SESSION['reflexcash_source']) ? $_SESSION['reflexcash_source'] : (isset($_SESSION['affiliate_tracker']) ? $_SESSION['affiliate_tracker']:'');
+if(isset($_SESSION['subid'])) {
+    $rc_affiliateid = $_SESSION['subid'];
+}
+if(isset($_SESSION['weedoitreqid'])) {
+    $rc_source = $_SESSION['weedoitreqid'];
+}
 
 if(!$website){
     addFormLog($bdd, $page, 'WARNING', 'Missing Website, setting <myastro.fr> by default');
@@ -379,6 +385,10 @@ if(empty($err)){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur insertion user > '.json_encode($kgestion_insert));
             $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
         } else {
+            unset($_SESSION['reflexcash_affiliateid']);
+            unset($_SESSION['affiliate_id']);
+            unset($_SESSION['reflexcash_source']);
+            unset($_SESSION['affiliate_tracker']);
             $kgestion_id = $kgestion_insert->id;
             $newKgestion = $kgestion_insert->new;
         }
@@ -387,8 +397,9 @@ if(empty($err)){
 /* ========================================================================== *
  *                       RECHERCHE PROSPECT SUR KGESTION                       *
  * ========================================================================== */
-$repousse = $doublon = $affiliation = 0;
+$repousse = $doublon = $affiliation  = 0;
 if($newKgestion) {
+    $pauline = isset($_SESSION['pauline_mail']) ? $_SESSION['pauline_mail'] : 0;
     $searchAffiliation = $kgestion->searchProspectAffiliation($kgestion_id);
     if($searchAffiliation && $searchAffiliation->doublon > 0){
         $doublon = 1;
@@ -408,6 +419,10 @@ if($newKgestion) {
     }
     if($repousse == 1 && $doublon == 1) {
         $affiliation = 11;
+    }
+    if($pauline) {
+        unset($_SESSION['pauline_mail']);
+        $affiliation = 12;
     }
 
     $post_data = array(
@@ -545,11 +560,26 @@ if(empty($err)){
  * ========================================================================== */
 
     if(!$trouve){
-        $kgestion_update = $kgestion->updateUser($kgestion_id, ['myastroId'=>$idindex]);
+        $aSend = ['myastroId'=>$idindex];
+        if($conversion == 2) {
+            $aSend["conversion"] = 1;
+        }
+        $kgestion_update = $kgestion->updateUser($kgestion_id, $aSend);
         if (!$kgestion_update->success){
             addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
         }
+    } else {
+        $aSend = ['email'=>$email];
+        if($conversion == 2) {
+            $aSend["conversion"] = 1;
+            $kgestion_update = $kgestion->updateUser($kgestion_id, $aSend);
+            if (!$kgestion_update->success){
+                addFormLog($bdd, $page, 'ERROR', '[API KGESTION] Erreur update user '.$idindex.' > '.json_encode($kgestion_update));
+            }
+        }
+
     }
+
 
 /* ========================================================================== *
  *                              MISE EN SESSION                               *
@@ -626,7 +656,7 @@ if(empty($err)){
             include('../include/conversion/reflexcash.php');
         } elseif($source == 'goformedia'){
             include('../include/conversion/goformedia.php');
-        } elseif($source == 'weedoit'){
+        } elseif($source == 'weedoit' && isset($_SESSION['weedoitbis']) && $_SESSION['weedoitbis'] == 1){
             include('../include/conversion/weedoit.php');
         }elseif($source == 'strandlink'){
             include('../include/conversion/strandlink.php');
