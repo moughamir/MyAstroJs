@@ -231,8 +231,8 @@ function FormController($scope) {
     }
   };
   $('.modal-redirect').on('click', function() {
-    var url = "https://www.voyance-en-direct.tv/myastro";
-    window.location = url + "?email=" + $scope.info.email;
+    var url = "https://www.voyance-en-direct.tv/myastro/offre-gratuite";
+    window.location = url + "?id=" + $("#idk").val();
   });
 }
 
