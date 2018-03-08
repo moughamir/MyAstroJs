@@ -161,7 +161,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                     <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
                   </header>
                   <article class="form-content">
-                      <input type="hidden" name="idk" value="0"  />
+                      <input type="hidden" id="idk" value="0"  />
 
                       <!-- Genre -->
                     <div class="Genre">
