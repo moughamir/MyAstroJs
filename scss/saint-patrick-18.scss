@@ -19,13 +19,12 @@
 }
 
 //== variables
-
 //0- dir
 $assets: '/images_landing/saint-patrick-2018/';
-$voyant_anissa: $assets + "psych/anissa.jpg";
-$voyant_jean: $assets + "psych/jean.jpg";
-$voyant_marc: $assets + "psych/marc.jpg";
-$voyant_marianne: $assets + "psych/marianne.jpg";
+$voyant_anissa: $assets+"psych/anissa.jpg";
+$voyant_jean: $assets+"psych/jean.jpg";
+$voyant_marc: $assets+"psych/marc.jpg";
+$voyant_marianne: $assets+"psych/marianne.jpg";
 //1- Font face
 $primary-ff: 'Lobster',
 cursive;
@@ -1004,7 +1003,7 @@ label {
 
 }
 
-
+// DRI
 .FormContainer {
   max-width: inherit;
 
@@ -1021,10 +1020,12 @@ label {
     color: $primary;
     font-size: 2.2rem;
     text-transform: uppercase;
-    border: 0px solid red;
     transition: all 0.25s ease-in;
     &:hover {
       background-color: darken($secondary, 25%);
+    }
+    @include respond-to('mobile') {
+      padding: 1rem 2rem;
     }
   }
 
@@ -1056,6 +1057,8 @@ label {
         font-weight: bold;
         font-size: 1.4rem;
         color: #000;
+        width: 100% !important;
+        padding: 5px;
       }
     }
     &-Sent {
@@ -1069,47 +1072,67 @@ label {
     &-list-voyants {
       margin-bottom: 2rem;
       h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 500;
+        color: $secondary;
+        font-family: $secondary-ff;
+        @include respond-to('mobile') {
+          font-size: 2rem;
+        }
       }
       ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin: 0;
         padding: 0;
         list-style: none;
+        @include respond-to('mobile') {
+          justify-content: space-between;
+        }
         li {
           margin: 0;
           padding: 0;
+          width: 7rem;
+          @include respond-to('mobile') {
+            width: 6rem;
+
+          }
           div {
-            width: 10rem;
-            height: 10rem;
+            width: 7rem;
+            height: 7rem;
+
           }
           span {
             text-transform: uppercase;
             color: $secondary;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            @include respond-to('mobile') {
+              font-size: 1rem;
+            }
           }
         }
       }
       .voyant-marc {
         background: url($voyant_marc) no-repeat bottom center;
+        background-size: cover;
       }
       .voyant-anissa {
         background: url($voyant_anissa) no-repeat bottom center;
+        background-size: cover;
       }
       .voyant-jean {
         background: url($voyant_jean) no-repeat bottom center;
+        background-size: cover;
       }
       .voyant-marianne {
         background: url($voyant_marianne) no-repeat bottom center;
+        background-size: cover;
       }
     }
 
   }
 }
-
 
 .ContentBand {
   &-title {
@@ -1125,6 +1148,13 @@ label {
       margin: 20px auto 0;
     }
   }
+}
+
+.PageWrapper-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .faq {
@@ -1145,6 +1175,10 @@ label {
     align-items: center;
     margin: 0;
     padding: 0;
+    @include respond-to('mobile'){
+      flex-direction: column;
+align-items: flex-start;
+    }
     li {
       font-style: italic;
       font-size: 1.6rem;
@@ -1154,9 +1188,31 @@ label {
     }
     .ico-formulaire {
       background: transparent url($assets + "icons/form.svg") center left no-repeat;
+      @include respond-to('mobile'){
+        background-size: 40px;
+      }
     }
     .ico-standardiste {
       background: transparent url($assets + "icons/phone.svg") center left no-repeat;
+      @include respond-to('mobile'){
+        background-size: 40px;
+      }
     }
   }
+}
+
+[class*="grid-2"]>* {
+  width: calc(100% * 1 / 2 - 9rem - .01px);
+  margin-left: unset;
+  @include respond-to('mobile') {
+    width: 100%;
+  }
+}
+
+.DescText-Content ul>*,
+.faq ul>* {
+  @include respond-to('mobile') {
+    width: unset;
+  }
+
 }

@@ -19,7 +19,7 @@ var source = 'scss/saint-patrick-18.scss',
 
 gulp.task('sass', function() {
   return gulp
-    .src(source)
+    .src([source, 'scss/sp18-dri.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
