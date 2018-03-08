@@ -69,6 +69,8 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             </div>
             <div class="startbtn">
               <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-click="start()">Jouer</button>
+               <input type="hidden" id="idk" name="idk" value="0" />
+
             </div>
           </div>
         </article>
