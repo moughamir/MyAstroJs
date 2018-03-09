@@ -676,7 +676,7 @@ if(empty($err)){
 
     if(isset($param['acces_form_sp'])){
         $retour = array();
-        $retour['acces_form_sp'] = 'acces_form_sp';
+        $retour['acces_form_sp'] = $kgestion_id;
 
     }
 /* ========================================================================== *
