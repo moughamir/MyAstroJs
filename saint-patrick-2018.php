@@ -76,7 +76,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
       </section>
       <section class="two">
         <article class="center-ner">
-          <h3 class="gifty">en cadeau 10 minutes de voyance achetées = 10 minutes de voyance offertes</h3>
+          <h3 class="gifty">en cadeau 10 minutes de voyance offertes</h3>
         </article>
         <article class="study">
           <h1 class="article--title">Amour, travail, argent : la chance sera-t-elle avec vous en 2018 ?</h1>
