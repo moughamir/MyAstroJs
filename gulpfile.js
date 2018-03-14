@@ -5,9 +5,9 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
-var source = 'scss/saint-patrick-18.scss',
-  assetsSource = 'images_landing/saint-patrick-2018/*',
-  assetsTarget = 'images_landing/saint-patrick-2018/',
+var source = 'scss/printemps-18.scss',
+  assetsSource = 'images_landing/printemps-18/*',
+  assetsTarget = 'images_landing/printemps-18/',
   target = './css/',
   sassOptions = {
     errLogToConsole: true,
@@ -38,10 +38,10 @@ gulp.task('imagemin', () =>
 
 gulp.task('watch', function() {
   return gulp
-    .watch([source, assetsSource], ['sass', 'imagemin'])
+    .watch([source], ['sass'])
     .on('change', function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
 });
 
-gulp.task('default', ['sass', 'imagemin', 'watch']);
+gulp.task('default', ['sass', 'watch']);
