@@ -37,29 +37,38 @@ include('include/process-dri.php');
           <article class="dri ">
             <!-- Post Form Modal-->
             <div class="FormContainer overlay" id="form-overlay"></div>
-            <article class="modal hidden">
-                <div class="modal-container scaleUp">
-                    <h2 class="modal-title">Votre demande a bien été prise en compte</h2>
-                    <p class="modal-message">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
-                    <button class="btn modal-btn">Fermer</button>
-                </div>
-            </article>
+
             <article class="FormContainer center">
-              <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos prévisions AMOUREUSES par EMAIL</h1>
+                <?php if($state != 'MAIL_SENT' && $state != 'MAIL_ALREADY_SENT'){ ?>
+
+                <h1 class="form-title sign-name">Merci, vous allez recevoir la suite de vos prévisions AMOUREUSES par EMAIL</h1>
               <p class="message">Si vous ne souhaitez pas attendre d’avantage, notre équipe est à votre disposition et peut vous rappeller <span class="highlight">gratuitement</span>, il vous suffit d’inscrire votre numéro de téléphone dans le formulaire ci-dessous :</p>
               <div class="img-center">
                 <img src="images_landing/printemps-18/10-free.png" alt="Les 10 premières minutes gratuites" class="10-free">
               </div><br>
+                <?php }  ?>
                 <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
                     <p class="DRI-Sent">
                         APPEL EN COURS ....<br/>
-                        Merci, votre demande de rappel a bien été prise en compte.<br/>
-                        <strong>Un voyant vous recontactera dans quelques instants.</strong>
+                        <article class="modal ">
+
+                        <div class="modal-container scaleUp">
+                            <h2 class="modal-title">Votre demande a bien été prise en compte</h2>
+                             <p class="modal-message">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
+                            <button class="btn modal-btn">Fermer</button>
+                          </div>
+                          </div>
                     </p>
                 <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                     <p class="message">
-                        Merci, votre demande a bien été prise en compte.<br/>
-                        <strong class="highlight">Un voyant vous recontactera dans quelques instants</strong>.
+                        <article class="modal">
+                            <div class="modal-container scaleUp">
+                                <h2 class="modal-title">Votre demande a bien été prise en compte</h2>
+                <p class="modal-message">Vous allez rapidement être contacté par un de nos experts-voyants.</p>
+                <button class="btn modal-btn">Fermer</button>
+                </div>
+                </div>
+            </article>
                     </p>
                 <?php } else { ?>
                     <?php if(!empty($err) || $state == 'MAIL_ERROR'){ ?>
