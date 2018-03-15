@@ -72,25 +72,30 @@ if(!$source){
     addFormLog($bdd, $page, 'WARNING', 'Missing Source, setting <naturel> by default');
     $source = 'naturel';
 }
-if(!$formurl){
-    addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
-    $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.Url du formulaire manquant';
+$urlReg = str_replace($serverName . '/', "", $page);
+if((in_array($_SERVER['HTTP_HOST'], ["myastro.local","myastro.fr","www.myastro.fr"])) && $urlReg == "") {
+    $regformurl_kgs = "accueil";
 } else {
-    // Recherche de l'url kgestion
-    $urlReg = str_replace($serverName . '/', "", $page);
-    $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="' . $urlReg . '"';
-    $regformurl_kgs = $bdd->get_var($tracking_qry);
-    if (!isset($regformurl_kgs)) {
-        addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
-        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+    if(!$formurl){
+        addFormLog($bdd, $page, 'ERROR', 'Url du formulaire manquant');
+        $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.Url du formulaire manquant';
     } else {
-        $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="' . $formurl . '"';
-        $formurl_kgs = $bdd->get_var($tracking_qry);
-        if (!isset($formurl_kgs)) {
-            $formurl_kgs = $regformurl_kgs;
+        // Recherche de l'url kgestion
+        $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="' . $urlReg . '"';
+        $regformurl_kgs = $bdd->get_var($tracking_qry);
+        if (!isset($regformurl_kgs)) {
+            addFormLog($bdd, $page, 'ERROR', 'Correspondance Url Kgestion non trouvée');
+            $err['sys'] = 'Système indisponible, veuillez réessayer plus tard.';
+        } else {
+            $tracking_qry = 'SELECT stf_formurl_kgestion FROM source_to_formurl WHERE stf_source_myastro ="' . $formurl . '"';
+            $formurl_kgs = $bdd->get_var($tracking_qry);
+            if (!isset($formurl_kgs)) {
+                $formurl_kgs = $regformurl_kgs;
+            }
         }
     }
 }
+
 
 /* ========================================================================== *
  *                        TRAITEMENT DES DONNÉES ASTRO                        *
