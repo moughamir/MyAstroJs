@@ -1,23 +1,18 @@
 <?php
-/**
- * pdt-tchat-a == ADWORDS
- * ----------------------
- * Created on : 04 avril 2017 By Mohamed Moughamir <hello@omnizya.com>
- */
-$pageName = "pdt-tchat-zcorp";
+$pageName = "love-tchat-aff10";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
 $source = "zcorp";
-$dri = "pouvoir-des-trois/offre-gratuite";
-$dri2 = "pdt-tchat-dri";
+$dri = "love-myastro/offre-gratuite";
+$dri2 = "love-tchat-dri";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
 $questions = array(
-    ['code' => 'pdt_amour', 'subject' => 'sentimental', 'text' => 'Pouvoir des Trois - Amour'],
-    ['code' => 'pdt_argent', 'subject' => 'financier', 'text' => 'Pouvoir des Trois - Argent'],
-    ['code' => 'pdt_travail', 'subject' => 'professionnel', 'text' => 'Pouvoir des Trois - Travail']
+    ['code' => 'lma17_question1', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Passion'],
+    ['code' => 'lma17_question2', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Pureté'],
+    ['code' => 'lma17_question3', 'subject' => 'sentimental', 'text' => 'Love MyAstro - Désir']
 );
-$assets = 'images_landing/pouvoir-des-trois';
+$assets = 'images_landing/love-tchat';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,10 +21,10 @@ $assets = 'images_landing/pouvoir-des-trois';
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, nofollow" />
-        <title>Pouvoir Des Trois - Prenez en main votre Avenir</title>
+        <title>Love MyAstro | Découvrez votre avenir amoureux</title>
         <link rel="icon" type="image/png" href="<?= $assets;?>/favicon.png" />
-        <link rel="stylesheet" href="css/pouvoir-des-trois.css" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Courgette|Open+Sans" rel="stylesheet" />
+        <link rel="stylesheet" href="css/love-tchat.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Open+Sans:400,600" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="https://cdn.jsdelivr.net/g/html5shiv@3.7.3,respond@1.4.2"></script>
         <![endif]-->
@@ -42,23 +37,37 @@ $assets = 'images_landing/pouvoir-des-trois';
             </div>
         </header>
         <div class="title">
-            <h1>Amour, Travail, Argent</h1>
+            <h1>Allez-vous être heureux en AMOUR ?</h1>
         </div>
         <main class="ContentBand">
-            <div class="preload">
-                <span class="tri hidden"></span>
-            </div>
             <div class="PageWrapper">
-                <section class="section post-test hidden">
-                    <p>
-                        Prenez en main votre Avenir !<br>
-                        Grâce au Pouvoir des trois et ses supports divinatoires ancestraux : le pendule, la boule de cristal et le tarot nous allons pouvoir répondre à toutes vos interrogations.<br>
-                        Réalisez ce test simple et rapide qui nous permettra de mieux vous connaître.<br>
-                        Inscrivez votre prénom ci-dessous pour commencer :
+                <section class="section post-test">
+
+                        <p>
+                        <span class="animate animate-ltr">Quand l'amour avec un grand A va-t-il<br/>se décider à pointer le bout de son nez?<br>
+                    </span>
+                    <span class="animate animate-rtl">
+                        <span class="highlight-primary curved">Découvrez votre avenir amoureux</span><br/>
+                    </span>
+                    <span class="animate animate-ltr animate-delayed-a">
+                        <span class="highlight-primary">3 min</span> pour savoir<br>
+                    </span>
+                    <span class="animate animate-rtl animate-delayed-a">
+                        <span class="highlight-secondary">et c'est gratuit !</span>
+                    </span>
                     </p>
                     <div class="form">
-                        <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
-                        <button class="btn start">Commencer</button>
+                        <div class="helper"></div>
+                        <span class="animate animate-ltr animate-delayed-b">
+                            <input type="text" name="js-name" class="FormField-Input" placeholder="Votre prénom" required />
+                        </span>
+                        <span class="animate animate-rtl animate-delayed-b">
+                            <button class="btn start">Commencer</button>
+                        </span>
+                    </div>
+                    <div class="circlet-container">
+                        <div class="circlet animate-ltr animate-delayed-c"><img src="<?= $assets?>/venus.svg"/></div>
+                        <div class="circlet animate-rtl animate-delayed-c"><img src="<?= $assets?>/mars.svg"/></div>
                     </div>
                 </section>
                 <section class="section content hidden">
@@ -71,12 +80,13 @@ $assets = 'images_landing/pouvoir-des-trois';
                 </section>
                 <section class="section hidden">
                     <article class="final-step">
+                         <div class="promo"></div>
                         <p class="result"></p>
                         <a href="#FormContainer" class="read-more">savoir la suite</a>
                     </article>
                     <article class="FormContainer">
                         <form id="form-container" class="ajax">
-                            <div class="promo"></div>
+
                             <div class="FormContainer-Fields Fields-Table">
                                 <p class="alert alert-danger" style="display: none"></p>
                                 <!-- ########## identification formulaire ########## -->
@@ -91,8 +101,8 @@ $assets = 'images_landing/pouvoir-des-trois';
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />
                                 <input type="hidden" name="partenaires" value="1" />
-                                <input type="hidden" name="prenom" id="js-name" /><!-- rempli par pouvoir-des-trois.js -->
-                                <input type="hidden" name="question_code" id="js-question" /><!-- rempli par pouvoir-des-trois.js -->
+                                <input type="hidden" name="prenom" id="js-name" /><!-- rempli par love-tchat.js -->
+                                <input type="hidden" name="question_code" id="js-question" /><!-- rempli par love-tchat.js -->
                                 <!-- ############################################### -->
                                 <div class="Fields-Table-Row">
                                     <label for="email" class="FormField-Label hidden">Votre email</label>
@@ -191,7 +201,7 @@ $assets = 'images_landing/pouvoir-des-trois';
         </footer>
         <!-- #### SCRIPTS #### -->
         <script src="https://cdn.jsdelivr.net/g/lodash@4.17.4,jquery@3.1.1"></script>
-        <script type="text/javascript" src="js/pouvoir-des-trois.js"></script>
+        <script type="text/javascript" src="js/love-tchat.js"></script>
         <script src="js/formValidator.js"></script>
         <!-- #### REMARKETINGS #### -->
         <?php include('include/remarketing/adwords.php');
