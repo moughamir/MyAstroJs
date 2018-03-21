@@ -4,11 +4,10 @@ $form = $url = $pageName= 'vpt';
 include('include/init-affilbase.php');
 
 $method = 'general-suscribe';
-$support = 'voyance';
+$support = "voyance";
 $site = 'myastro.fr';
-$dri = 'tarot-tchat-dri';
-$dri2 = 'tarot-tchat-dri-tog';
-$assets = 'images_landing/tarot-tchat';
+$dri = "voyance-par-tchat/offre-gratuite";
+$dri2 = "merci";
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +48,7 @@ $assets = 'images_landing/tarot-tchat';
       </div>
       <div class="col-right">
         <div class="form-container">
-          <form method="post" class="af-form-wrapper inscription_form" action="">
+          <form method="post" class="af-form-wrapper ajax-form" action="">
               <!-- ########## identification formulaire ########## -->
               <input type="hidden" name="source" value="<?= $pageName;?>" />
               <input type="hidden" name="method" value="<?= $method;?>" />
