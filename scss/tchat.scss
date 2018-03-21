@@ -1,0 +1,595 @@
+@import "modules/mixins";
+
+$assets: '/images_landing/tchat/';
+$primary: #0a111b;
+$text: #0e1721;
+$form: #0c1721;
+$ff-primary: 'Courgette',
+cursive;
+$ff-secondary: 'PT Sans',
+sans-serif;
+$pageBackground: $assets+'background.jpg';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: $ff-secondary;
+}
+
+body {
+  background: $primary url($pageBackground) no-repeat center;
+  background-size: cover;
+  min-height: 100%;
+  margin: auto !important;
+  @include respond-to('mobile'){
+    overflow-x: hidden;
+  }
+}
+
+.col {
+  &-left {
+    @include size(486px, 500px);
+    display: inline-block;
+    position: relative;
+    @include respond-to('mobile') {
+      margin-top: 62px;
+      @include size(100vw, 250px);
+    }
+  }
+  &-right {
+    width: 50%;
+    @include respond-to('mobile') {
+      width: 100vw;
+    }
+  }
+}
+
+.holder {
+  position: absolute;
+  &-tr {
+    top: 0;
+    right: 0;
+    background: #fff url($assets + 'rightImage.jpg') center no-repeat;
+    background-size: cover;
+    border: 4px solid #fff;
+    z-index: 9;
+    @include size(288px, 222px);
+    @include respond-to('mobile') {
+      @include size((288px/2), (222px/2));
+      top: -76px;
+      right: 15px;
+    }
+  }
+  &-bl {
+    bottom: 0;
+    left: 0;
+    background: #d0d1d5 url($assets + 'leftImage.jpg') center no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    @include size(440px, 474px);
+    @include respond-to('mobile') {
+      @include size(100vw, 330px);
+    }
+  }
+  &-md {
+    bottom: 50px;
+    right: 50px;
+    @include respond-to('mobile') {
+      bottom: 10px;
+      right: 25px;
+    }
+    ul {
+      list-style: none;
+    }
+  }
+}
+
+$subjects:((amour, 'ico-amour.png'), (travail, 'ico-travail.png'), (argent, 'ico-argent.png'));
+
+@each $subject,
+$bg in $subjects {
+  #ref-#{$subject} {
+    &::before {
+      content: '';
+      display: inline-block;
+      @include square(28px);
+      margin-right: 10px;
+      background: transparent url($assets + $bg) no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-family: $ff-secondary;
+}
+
+.subject {
+  @include font-size(25px);
+  color: $text;
+  font-family: $ff-primary;
+  padding: 8px;
+}
+
+.pageWrapper {
+  max-width: 64rem;
+  margin: 0 auto;
+  height: calc(100vh - 146px);
+}
+
+.leading {
+  width: 100%;
+  background: #9f2970;
+  text-align: center;
+  padding: 10px;
+  margin: 15px auto;
+  p {
+    font-family: $ff-secondary;
+    @include font-size(30px);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: lighter;
+    span {
+      font-weight: bold;
+    }
+    @include respond-to('mobile') {
+      @include font-size(20px);
+      margin: 0;
+    }
+  }
+}
+
+.flex {
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    transform: translateY(12%);
+    position: initial;
+    @include respond-to('mobile') {
+      transform: unset;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
+h1,
+h2 {
+  width: 450px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+h1 {
+  font-size: 27px;
+  margin-top: 30px;
+}
+
+h2 {
+  margin-top: -10px;
+  margin-bottom: -5px;
+}
+
+
+.inner_form {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  h1 {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #0D1721;
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.af {
+  &-element {
+    margin-top: 5px;
+  }
+  &-selectWrap,
+  &-radioWrap,
+  &-textWrap,
+  &-dateWrap {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  &-dateWrap {
+    &>div {
+      display: table;
+      width: 100%;
+    }
+  }
+}
+
+.form-datepart {
+  display: table-cell;
+  padding: 0 5px 0 0;
+}
+
+.conjoint {
+  display: none;
+}
+
+.previewLabel {
+  display: block;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  margin-right: 15px;
+  font-family: 'Courgette', cursive;
+  font-size: 16px;
+  &[for="emailfield"],
+  &[for="paysfield"],
+  &[for="phonefield"] {
+    display: none;
+  }
+}
+
+
+
+input[type=text].form-control,
+select.form-control {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.af-dateWrap .af-dateWrap .form-datepart {
+  display: table-cell;
+  padding-right: 8px;
+}
+
+.af-dateWrap .form-datepart:last-child {
+  padding-right: 0;
+}
+
+.af-element.buttonContainer {
+  position: absolute;
+  margin: 20px auto auto;
+  left: 50%;
+  transform: translateX(-50%);
+  @include respond-to('mobile') {
+    position: relative;
+    margin: 24px auto;
+    transform: unset;
+    left: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.buttonContainer button {
+  display: inline-block;
+  border: 0;
+  border-radius: 7px;
+  background-image: linear-gradient( 0deg, rgb(124, 21, 83) 0%, rgb(175, 50, 125) 100%);
+  width: 267px;
+  height: 86px;
+  color: #fff;
+  font-family: $ff-secondary;
+  @include font-size(22px);
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0px 0px 12px 0px #fff;
+  transition: box-shadow ease .3s;
+  &:hover {
+    background-image: linear-gradient( 180deg, rgb(124, 21, 83) 0%, rgb(175, 50, 125) 100%);
+    box-shadow: 0px 0 20px -4px #fff;
+  }
+  span {
+    font-weight: bold;
+    display: block;
+  }
+}
+
+.form-radio-inline {
+  text-align: center;
+}
+
+.form-radio-inline .af-element-radio {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.form-radio-inline .af-element-radio:last-child {
+  margin-right: 0;
+}
+
+.inscription_form input,
+.inscription_form select {
+  max-width: none;
+}
+
+#date_naissance_m,
+#naissanceConjointm {
+  max-width: none !important;
+}
+
+.alert {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 6px 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.alert-danger {
+  background-color: rgb(217, 83, 79);
+}
+
+.alert-warning {
+  background-color: #F0AD4E;
+}
+
+.alert-success {
+  background-color: #5CB85C;
+}
+
+.btn {
+  width: 254px;
+  height: 73px;
+  margin-top: 15px;
+  margin-left: 0;
+  background: transparent url("images/btn-reponse.png") no-repeat scroll 0% 0%;
+  display: inline-block;
+  line-height: 22px;
+  border: medium none;
+  cursor: pointer;
+}
+
+
+#ctn_accord {
+  font-size: 12px;
+  /* width: 410px !important; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -moz-transition: -moz-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  transition: transform .3s ease-out;
+}
+
+.modal-dialog {
+  width: 600px;
+  margin: 30px auto;
+  position: relative;
+}
+
+a.logo-form {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+#inner-form-frame {
+  background-color: #0D1721;
+  color: white;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: left;
+  font-style: normal;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: #0D1721;
+    @include size(100%,
+    45px);
+    @include respond-to('mobile') {
+      display: none;
+    }
+  }
+}
+
+.flexElm {
+  display: flex;
+  align-items: center;
+}
+
+.flexLabel {
+  margin: 15px 0;
+  flex-grow: 1;
+}
+
+.af-radioWrap.form-radio-inline {
+  width: auto;
+}
+
+#inner-form-frame h2 {
+  color: #27A7DB;
+  font-size: 22px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  width: auto;
+  font-family: 'Courgette', cursive;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-style: normal;
+}
+
+.right_form {
+  position: relative;
+}
+
+#overImg {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+@media(max-width: 950px) {
+  #inner-form-frame {
+    width: 100%;
+  }
+}
+
+@media(max-width: 780px) {
+
+  #inner-form-frame {
+    width: auto;
+    text-align: left;
+  }
+
+  .previewLabel,
+  .af-selectWrap,
+  .af-radioWrap,
+  .af-textWrap,
+  .af-dateWrap {
+    width: 100%;
+  }
+}
+
+/* ---------------------------------------- TEST ------------------------------------- */
+
+.innerinner_formTest {
+  background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+
+.CartoucheNoir {
+  width: 80%;
+  padding: 1px 0 10px 0;
+  background-color: #0c1721;
+  margin: auto;
+}
+
+
+
+.RemplissezFormulaire {
+  color: #27abe1;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+  font-family: Courgette;
+}
+
+.RemplissezFormulaire .p {
+  margin: 0;
+}
+
+
+.previewLabelTest {
+  display: block;
+  margin-left: 10px;
+  color: white;
+  font-size: 16px;
+  float: left;
+  font-family: Courgette;
+}
+
+
+previewLabelTest {
+  width: 100%;
+  float: left;
+
+}
+
+
+.af-elementTest {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.af-elementTest-radio {
+  width: 150px;
+  float: left;
+}
+
+#ctn_accordTest {
+  font-size: 12px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.TexteForm {
+  text-align: left;
+}
+
+.form-horizontal .form-group {
+  margin: 5px 0 !important;
+  padding: 0 !important;
+}
+
+.btn {
+  padding: 17px 80px !important;
+  ;
+}
+
+
+awf_field-52387483Test {
+  float: right;
+}
+
+
+.af-formTest {
+  text-align: end;
+  margin: 0 2% 0 2%;
+}
