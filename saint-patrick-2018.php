@@ -1,10 +1,10 @@
 <?php
-include("include/process-dri.php");
+
+$pageName = $form = "sp18";
+
+include('include/init-affilbase.php');
 $assets = 'images_landing/saint-patrick-2018';
 $site   = getenv('MYASTRO_ROOT_URL');
-$url = 'saint-patrick-2018-can';
-$method = 'general-suscribe';
-$source = "base_externe";
 $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
 ?>
   <!DOCTYPE html>
@@ -69,8 +69,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
             </div>
             <div class="startbtn">
               <button id="btn-play" type="button" class="btn btn-default btn-lg" ng-click="start()">Jouer</button>
-               <input type="hidden" id="idk" name="idk" value="0" />
-
+                <input type="hidden" id="idk" name="idk" value="0" />
             </div>
           </div>
         </article>
@@ -156,13 +155,15 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                 <input type="hidden" name="question_code" value="sp18" />
                 <input type="hidden" name="optional_birthdate" value="1" />
                 <input type="hidden" name="cguv" value="1" />
+                <input type="hidden" name="gclid" value="<?= $gclid;?>" />
                 <input type="hidden" name="partenaires" value="1" />
                 <div class="container-90">
                   <header class="form--header">
                     <h2 class="form--subtitle">Allez-vous avoir de la chance en 2018 ?</h2>
                   </header>
                   <article class="form-content">
-                    <!-- Genre -->
+
+                      <!-- Genre -->
                     <div class="Genre">
                       <label class="gender-l" for="gendert-f">
                         <img src="<?= $assets ?>/icons/female.svg" alt="femme"> <span>Femme</span>
@@ -174,7 +175,7 @@ $email  = isset($_SESSION['email'])? $_SESSION['email']: '';
                       </label>
                     </div>
                     <!-- Prénom -->
-                    <input name="prenom" id="prenom" type="text" ng-model="name" class="" placeholder="Mon prénom" value="<?= $prenom ?>" required />
+                    <input name="prenom" id="prenom" type="text" ng-model="name" class="" placeholder="Mon prénom" value="" required />
                     <!-- Tel -->
                     <input type="email" name="email" id="email" ng-model="email" placeholder="Mon email" required />
                     <input class="form--btn" name="play" type="submit" id="submit" value="Jouer" />

@@ -185,7 +185,10 @@ $(document).ready(function() {
 
                 }
                 if (response.hasOwnProperty('acces_form_sp')) {
+
+                    $("#idk").val(response.acces_form_sp);
                     $('#modal').toggleClass('is-visible');
+
                 }
 
                 if (response.hasOwnProperty('error')) {
