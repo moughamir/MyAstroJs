@@ -169,7 +169,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                       <div>
                         <!-- display table indispensable -->
                         <div class="form-datepart">
-                          <select name="date_naissance_j" class="form-control" id="date_naissance_j" required="">
+                          <select name="jour" class="form-control" id="jour" required="">
                             <option disabled="" selected="" value="">Jour</option>
                             <option value="1">01</option>
                             <option value="2">02</option>
@@ -205,7 +205,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                           </select>
                         </div>
                         <div class="form-datepart">
-                          <select name="date_naissance_m" class="form-control" id="date_naissance_m" required="">
+                          <select name="mois" class="form-control" id="mois" required="">
                             <option disabled="" selected="" value="">Mois</option>
                             <option value="01">Janvier</option>
                             <option value="02">Février</option>
@@ -222,7 +222,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                           </select>
                         </div>
                         <div class="form-datepart">
-                          <select name="date_naissance_a" class="form-control" id="date_naissance_a" required="">
+                          <select name="annee" class="form-control" id="annee" required="">
                             <option disabled="" selected="" value="">Année</option>
                             <option value="2000">2000</option>
                             <option value="1999">1999</option>
