@@ -17,7 +17,7 @@ $pageBackground: $assets+'background.jpg';
 }
 
 html {
-  height: 100%;
+  height: 105%;
   font-family: $ff-secondary;
 }
 
@@ -109,6 +109,8 @@ footer {
   text-align: center;
   color: #fff;
   font-family: $ff-secondary;
+  padding: 15px 0;
+  margin-top: 15px;
 }
 
 .subject {
@@ -151,7 +153,6 @@ footer {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    transform: translateY(12%);
     position: initial;
     @include respond-to('mobile') {
       transform: unset;
@@ -205,7 +206,7 @@ h2 {
 
 .af {
   &-element {
-    margin-top: 5px;
+    margin-top: 10px;
   }
   &-selectWrap,
   &-radioWrap,
@@ -371,8 +372,7 @@ select.form-control {
 
 #ctn_accord {
   font-size: 12px;
-  /* width: 410px !important; */
-  margin: 0 auto;
+  margin: 10px auto 0;
   text-align: center;
 }
 
