@@ -23,9 +23,9 @@ $dri2 = "merci";
   </head>
 
   <body>
-    <a href="https://www.voyance-par-tchat.com/" class="logo-form">
-                <img src="https://www.voyance-par-tchat.com/wp-content/themes/tchat/images/logo-voyance.png" alt="logo voyance par tchat" width="329" height="84" />
-            </a>
+    <a href="#" class="logo-form">
+      <img src="https://www.voyance-par-tchat.com/wp-content/themes/tchat/images/logo-voyance.png" alt="logo voyance par tchat" width="329" height="84" />
+    </a>
     <div class="pageWrapper">
     <div class="leading">
       <p>vous avez une question ? <span>Nous avons la réponse</span></p>
@@ -48,7 +48,8 @@ $dri2 = "merci";
       </div>
       <div class="col-right">
         <div class="form-container">
-          <form method="post" class="af-form-wrapper ajax-form" action="">
+          <div class="form-container overlay" id="form-overlay"></div>
+          <form method="post" class="af-form-wrapper ajax-form ajax">
               <!-- ########## identification formulaire ########## -->
               <input type="hidden" name="source" value="<?= $pageName;?>" />
               <input type="hidden" name="method" value="<?= $method;?>" />
@@ -369,7 +370,7 @@ $dri2 = "merci";
                         </p>
                   </div>
                   <div class="af-element buttonContainer">
-                  <button type="submit" name="valider" value="1">accéder au <span>tchat gratuit</span></button>
+                  <button class="FormContainer-Submit" type="submit" name="valider">accéder au <span>tchat gratuit</span></button>
                 </div>
                 </div>
 
@@ -383,6 +384,13 @@ $dri2 = "merci";
      <footer>
             <p>Copyright © 2018 Voyance par tchat</p>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			  <script src="js/formValidator.js"></script>
+        <script type="text/javascript" src="js/vpt.js"></script>
+        <!-- #### REMARKETINGS #### -->
+        <?php include('include/remarketing/adwords.php');
+              include('include/remarketing/analytics.php');
+              include('include/remarketing/facebook.php'); ?>
   </body>
 
 </html>
