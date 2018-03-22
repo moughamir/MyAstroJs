@@ -108,7 +108,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                             <label class="previewLabel" for="naissanceConjoint">&gt; Sa date de naissance :</label>
                             <div class="af-dateWrap"><div><!-- display table indispensable -->
                                     <div class="form-datepart">
-                                        <select name="conjoint_date_naissance_j" class="form-control" id="naissanceConjoint">
+                                        <select name="jour_c" class="form-control" id="jour_c">
                                             <option disabled selected value="">Jour</option>
                                             <?php for($i=1;$i<=31;$i++){ ?>
                                                 <option value="<?= $i ?>"><?= sprintf('%02d', $i) ?></option>
@@ -116,7 +116,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         </select>
                                     </div>
                                     <div class="form-datepart">
-                                        <select name="conjoint_date_naissance_m" class="form-control" id="naissanceConjointm">
+                                        <select name="mois_c" class="form-control" id="mois_c">
                                             <option disabled selected value="">Mois</option>
                                             <option value="01">Janvier</option>
                                             <option value="02">Février</option>
@@ -133,7 +133,7 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
                                         </select>
                                     </div>
                                     <div class="form-datepart">
-                                        <select name="conjoint_date_naissance_a" class="form-control" id="naissanceConjointa">
+                                        <select name="annee_c" class="form-control" id="annee_c">
                                             <option disabled selected value="">Année</option>
                                             <?php for($i=date('Y')-18;$i>=1900;$i--){ ?>
                                                 <option value="<?= $i ?>"><?= $i ?></option>
@@ -391,6 +391,14 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
      <footer>
             <p>Copyright © 2018 Voyance par tchat</p>
         </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/formValidator.js"></script>
+    <script type="text/javascript" src="js/vpt.js"></script>
+    <!-- #### REMARKETINGS #### -->
+    <?php include('include/remarketing/adwords.php');
+    include('include/remarketing/analytics.php');
+    include('include/remarketing/facebook.php'); ?>
   </body>
 
 </html>
