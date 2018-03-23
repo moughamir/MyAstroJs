@@ -47,7 +47,8 @@ $dri2 = "merci";
       </div>
       <div class="col-right">
         <div class="form-container">
-          <form method="post" class="af-form-wrapper ajax-form" action="">
+            <div class="form-container overlay" id="form-overlay"></div>
+            <form method="post" class="af-form-wrapper ajax-form ajax">
               <!-- ########## identification formulaire ########## -->
               <input type="hidden" name="source" value="<?= $url;?>" />
               <input type="hidden" name="method" value="<?= $method;?>" />
