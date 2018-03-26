@@ -7,7 +7,7 @@ $method = 'general-suscribe';
 $support = "voyance";
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
-$dri2 = "merci";
+$dri2 = "vpt-dri";
 ?>
 
 <!DOCTYPE html>

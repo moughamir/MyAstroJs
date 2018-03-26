@@ -7,7 +7,7 @@ $source = "weedoit";
 
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
-$dri2 = "merci";
+$dri2 = "vpt-dri";
 
 session_start();
 $_SESSION['weedoitreqid'] = isset($_GET['reqid']) ? $_GET['reqid'] : '';

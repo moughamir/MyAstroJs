@@ -8,7 +8,7 @@ $source = "reflexcash";
 
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
-$dri2 = "merci";
+$dri2 = "vpt-dri";
 
 $_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
 $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
