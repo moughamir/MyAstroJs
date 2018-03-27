@@ -1,6 +1,6 @@
 <?php
 include("include/process-dri.php");
-$assets = 'images_landing/love-tchat';
+$assets = 'images_landing/tchat';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -102,7 +102,7 @@ $assets = 'images_landing/love-tchat';
                         <div></div>
                          <br/>
                         <!-- SUBMIT -->
-                        <div class="buttonContainer">
+                        <div class="af-element buttonContainer">
                             <button class="FormContainer-Submit icon-phone" type="submit" name="demande_rappel">Rappel Gratuit</button>
 
                         </div>
