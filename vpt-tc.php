@@ -1,20 +1,12 @@
 <?php
-session_start();
 
-$form = $url = 'vpt-rc';
+$form = $url = 'vpt-tc';
 $method = 'general-suscribe';
 $support = "voyance";
-$source = "reflexcash";
-
+$source = "tricom";
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
 $dri2 = "vpt-dri";
-
-$_SESSION['reflexcash_transactionid'] = isset($_GET['t1']) ? $_GET['t1'] : '';
-$_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
-$_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
-$prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
-$email = isset($_GET['email']) ? $_GET['email'] : '';
 $assets = 'images_landing/tchat';
 
 ?>
@@ -28,9 +20,8 @@ $assets = 'images_landing/tchat';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voyance Par Tchat | MyAstro</title>
     <link href="https://fonts.googleapis.com/css?family=Courgette|PT+Sans" rel="stylesheet">
-      <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
-
-      <link rel="stylesheet" href="css/tchat.css" type="text/css" />
+    <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
+    <link rel="stylesheet" href="css/tchat.css" type="text/css" />
   </head>
 
   <body>
@@ -60,7 +51,6 @@ $assets = 'images_landing/tchat';
       <div class="col-right">
         <div class="form-container">
             <div class="form-container overlay" id="form-overlay"></div>
-
             <form method="post" class="af-form-wrapper ajax-form ajax">
               <!-- ########## identification formulaire ########## -->
               <input type="hidden" name="source" value="<?= $url;?>" />
@@ -77,7 +67,6 @@ $assets = 'images_landing/tchat';
               <input type="hidden" name="prenom" id="js-name" />
               <input type="hidden" name="question_code"  value="" />
               <input type="hidden" name="optional_birthdate" value="0" />
-              <input type="hidden" name="convertir" value="1" />
               <!-- ############################################### -->
             <div class="af-form">
               <div class="af-body af-standards">
@@ -396,7 +385,7 @@ $assets = 'images_landing/tchat';
     </div>
      <footer>
             <p>Copyright © 2018 Voyance par tchat</p>
-        </footer>
+     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/formValidator.js"></script>
