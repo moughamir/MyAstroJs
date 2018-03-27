@@ -365,12 +365,7 @@ $assets = 'images_landing/tchat';
                     </div>
                   </div>
                   <div class="af-element" id="ctn_accord">
-                        <p>
-                            <input type="checkbox" name="cguv" required checked /> J’accepte les conditions générales d'utilisation.
-                        </p>
-                        <p style="visibility: hidden;">
-                            <input  type="checkbox" name="partenaires" checked /> Je souhaite recevoir les offres des partenaires.
-                        </p>
+
                   </div>
                   <div class="af-element buttonContainer">
                   <button class="FormContainer-Submit" type="submit" name="valider">accéder au <span>tchat gratuit</span></button>
