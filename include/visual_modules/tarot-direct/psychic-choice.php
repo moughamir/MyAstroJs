@@ -30,7 +30,7 @@ $psychics_bdd = array(
 
 $def_psychics = ['sonia', 'christelle'];
 
-if(date('Ymd') >= 20161226){
+if(date('Ymd') >= 20161226 and date('m') != 03){
     $def_psychics = ['veronique', 'olivier'];
 }
 

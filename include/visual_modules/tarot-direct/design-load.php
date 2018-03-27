@@ -22,6 +22,9 @@ $styles = array(
     'rentree-17' => [
         'css' => 'css/tarot-direct-rentree.css',
         'dir' => 'images_landing/tarot-direct-rentree/'
+    ],'mars-18' => [
+        'css' => 'css/tarot-direct-mars-18.css',
+        'dir' => 'images_landing/tarot-direct-mars-18/'
     ],
 );
 
@@ -38,6 +41,8 @@ if($force_design && isset($styles[$_GET['css']])){
         $select_style = 'nouvel-an';
     } elseif($m == 2 && $j >= 6 && $j <= 25 ){ // Du 6 au 19 février inclus
         $select_style = 'amour';
+    } elseif($m == 3 && $j >= 6 && $j <= 31 ){
+        $select_style = 'mars-18';
     } else { // Par défaut
         $select_style = 'default';
     }
