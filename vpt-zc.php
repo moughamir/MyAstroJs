@@ -7,6 +7,8 @@ $source = "zcorp";
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
 $dri2 = "vpt-dri";
+$assets = 'images_landing/tchat';
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,9 @@ $dri2 = "vpt-dri";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voyance Par Tchat | MyAstro</title>
     <link href="https://fonts.googleapis.com/css?family=Courgette|PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/tchat.css" type="text/css" />
+      <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
+
+      <link rel="stylesheet" href="css/tchat.css" type="text/css" />
   </head>
 
   <body>

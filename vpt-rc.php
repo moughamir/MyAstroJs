@@ -15,6 +15,8 @@ $_SESSION['reflexcash_affiliateid'] = isset($_GET['t2']) ? $_GET['t2'] : '';
 $_SESSION['reflexcash_source'] = isset($_GET['t3']) ? $_GET['t3'] : '';
 $prenom = isset($_GET['prenom']) ? $_GET['prenom'] : '';
 $email = isset($_GET['email']) ? $_GET['email'] : '';
+$assets = 'images_landing/tchat';
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,9 @@ $email = isset($_GET['email']) ? $_GET['email'] : '';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voyance Par Tchat | MyAstro</title>
     <link href="https://fonts.googleapis.com/css?family=Courgette|PT+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/tchat.css" type="text/css" />
+      <link rel="icon" type="image/png" href="<?= $assets ?>/favicon.png" />
+
+      <link rel="stylesheet" href="css/tchat.css" type="text/css" />
   </head>
 
   <body>
