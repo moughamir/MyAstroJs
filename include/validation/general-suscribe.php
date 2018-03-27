@@ -24,6 +24,7 @@ $tchatabo_dri =  [
 //    'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'myastro/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => false ],
     'pouvoir-des-trois/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
+    'voyance-par-tchat/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/voyance-par-tchat/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
     'love-myastro/offre-gratuite' => [ 'url' => 'https://voyance-en-direct.tv/love-myastro/offre-gratuite?id=[IDKGESTION]', 'cookie' => true ],
 //    'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/saisie-cb?id=[IDKGESTION]', 'cookie' => false ],
     'pouvoir-des-trois/saisie-cb' => [ 'url' => 'https://voyance-en-direct.tv/pouvoir-des-trois/offre-gratuite?id=[IDKGESTION]', 'cookie' => false ],

@@ -29,6 +29,7 @@ $urls_conversion = array(
     'pdt-tchat-rc-cb' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8908&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-flash-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8960&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
     'tarot-flash-rc-cb' => 'http://ads.reflexcash.com/aff_lsr?offer_id=8960&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
+    'vpt-rc' => 'http://ads.reflexcash.com/aff_lsr?offer_id=12700&transaction_id='.$id_transaction.'&security_token=1e126cec34726cab5a0731b4d1376eeb',
 );
 
 if($source == 'reflexcash' && isset($id_transaction)){

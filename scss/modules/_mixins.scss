@@ -223,3 +223,14 @@ $prefixes: ()) {
   } // Output standard non-prefixed declaration
   #{$property}: $value;
 }
+// Font Size
+// source: https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
