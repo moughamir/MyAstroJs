@@ -374,14 +374,7 @@ $assets = 'images_landing/tchat';
                       <input name="tel" class="form-control" id="phonefield" placeholder="Votre numéro de téléphone" required="" type="text">
                     </div>
                   </div>
-                  <div class="af-element" id="ctn_accord">
-                        <p>
-                            <input type="checkbox" name="cguv" required checked /> J’accepte les conditions générales d'utilisation.
-                        </p>
-                        <p style="visibility: hidden;">
-                            <input  type="checkbox" name="partenaires" checked /> Je souhaite recevoir les offres des partenaires.
-                        </p>
-                  </div>
+
                   <div class="af-element buttonContainer">
                   <button type="submit" name="valider" value="1">accéder au <span>tchat gratuit</span></button>
                 </div>
