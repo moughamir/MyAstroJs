@@ -10,8 +10,8 @@
 
 /* Images */
 $img_dir : "../images_landing/tarot-direct-mars-18/";
-$background : $img_dir + "background.png";
-$header: $img_dir + "header-degrade.jpg";
+$background : $img_dir + "background.jpg";
+$header: $img_dir + "header-degrade.png";
 $logo : $img_dir + "logo.png";
 $dos_carte : $img_dir + "cardback.png";
 $place_carte : $img_dir + "cardplace.png";
@@ -58,10 +58,10 @@ body {
     background-image: none;
     
     .ContentBand-ColumnHeader {
-        background-color: black;
+        background: url($header) repeat-y center;
         box-shadow: 0 0 10px 1px $lightgrey;
         font-size: 2.5rem;
-        color: white;
+        color: $rose;
     }
 }
 .ContentBand.Arrowed {
@@ -181,7 +181,7 @@ body {
     border-left: none;
     border-right: none;
     border-color: $lightgrey;
-    color: black;
+    color: $rose;
     font-weight: bold;
     
     &:before, &:after {
@@ -294,7 +294,6 @@ body {
 .FormContainer-Submit {
     background-color: $rose;
     color: white;
-    border: 2px solid black;
     transition: all 0.5s ease-in;
     
     &:hover{
@@ -492,6 +491,7 @@ input[type="checkbox"], input[type="radio"] {
         text-transform: uppercase;
         font-family: 'Raleway';
         color: black;
+        display: none;
         strong {
             color: $yellow;
         }
@@ -500,7 +500,7 @@ input[type="checkbox"], input[type="radio"] {
     .Merci-Text {
         font-size: 2rem;
         font-weight: bold;
-        color: $brown;
+        color: #ffffff;
         hyphens: none;
     }
     
@@ -522,4 +522,8 @@ input[type="checkbox"], input[type="radio"] {
     .Merci-Text {
         font-size: 1.7rem;
     }
+}
+
+.WidgetTarot-Card {
+    height: 285px!important;
 }
