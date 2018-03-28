@@ -97,8 +97,8 @@ body {
     
     &-Slogan1 {
         padding: 1.2rem 0;
-        font-family: 'Great Vibes', cursive;
-        font-size: 4rem;
+        font-family: 'indie Flower', cursive;
+        font-size: 28px;
         line-height: 4.6rem;
         color: #fa787c;
     }
@@ -261,7 +261,7 @@ body {
 
 .WidgetTarot-ResultMsg {
     font-weight: bold;
-    color: black;
+    color: $rose;
 }
 
 /* ----------------------------- [ POP VOYANT ] ----------------------------- */
@@ -338,7 +338,7 @@ input[type="checkbox"], input[type="radio"] {
         &-Tel {
             font-size: 2.8rem;
             text-decoration: underline;
-            color: $yellow;
+            color: $rose;
             
             &:hover {
                 color: black;
@@ -406,10 +406,10 @@ input[type="checkbox"], input[type="radio"] {
         width: 80%;
         margin: 3rem auto 0;
         padding: 1rem;
-        border: 2px solid $yellow;
+        border: 2px solid $rose;
         text-align: center;
         font-size: 2rem;
-        color: $yellow;
+        color: $rose;
         hyphens: none;
     }
     
@@ -418,6 +418,7 @@ input[type="checkbox"], input[type="radio"] {
     }
     
     &-Form {
+        color: $rose;
         & p {
             margin: 1rem 0;
             text-align: center;
@@ -430,7 +431,7 @@ input[type="checkbox"], input[type="radio"] {
             text-align: center;
             font-family: 'Lobster';
             font-weight: normal;
-            color: black;
+            color: $rose;
             hyphens: none;
 
             & strong {
@@ -445,7 +446,7 @@ input[type="checkbox"], input[type="radio"] {
             font-family: 'Lobster';
             font-weight: normal;
             font-size: 2.8rem;
-            color: $brown;
+            color: $rose;
         }
         
         &Container {
