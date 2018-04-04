@@ -30,9 +30,9 @@ $psychics_bdd = array(
 
 $def_psychics = ['sonia', 'christelle'];
 
-if(date('Ymd') >= 20161226 and date('m') != 03){
+/*if(date('Ymd') >= 20161226 and date('m') != 04){
     $def_psychics = ['veronique', 'olivier'];
-}
+}*/
 
 if(strpos($_SERVER['REQUEST_URI'],'/tarot-direct-rentree') !== false){
     $def_psychics = ['margaux', 'dimitri'];
