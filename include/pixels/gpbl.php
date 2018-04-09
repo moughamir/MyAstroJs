@@ -15,5 +15,8 @@ if($gpbl == "gpbl" && isset($_SESSION['conversion']) && $_SESSION['conversion'] 
 		$_SESSION['affiliation'] = "";
 		unset($_SESSION['conversion']);
 	}
+
+	echo '<img src="https://www.nut901-poqp.com/tracking/cpx.php?idc=31&type=cpl&tracking=nodata" width="1" height="1" border="0" />';
+
 }
 ?>
