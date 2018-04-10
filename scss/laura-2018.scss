@@ -1,0 +1,1027 @@
+@charset "UTF-8";
+@import "knacss444/knacss";
+//
+$assets: '../images_landing/laura/';
+$voyants: ( 1: $assets + 'voyant-noa.jpg',
+2: $assets + 'voyant-linda.jpg',
+3: $assets + 'voyant-francis.jpg',
+4: $assets + 'voyant-carmela.jpg');
+//
+$background: #f9e8f7;
+$contrast: #cd9eaf;
+$primary: #f9158b;
+$textColor: #454545;
+//
+$ff-default: 'Open Sans', sans-serif;
+$ff-additional : 'Lobster', cursive;
+//
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: Arial, sans-serif;
+  background: $background;
+}
+
+.PageWrapper {
+  display: table;
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.ContentBand {
+  margin-top: 5.5rem;
+  margin-bottom: 4rem;
+}
+
+.ContentBand-Column {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 50%;
+}
+
+.DescText-Title {
+  margin-top: 0;
+}
+
+.DescText-Title-Legend {
+  margin-top: 0;
+  padding: 1.2rem 1.8rem;
+  background-color: grey;
+}
+
+.DescText-Content {
+  background: silver;
+  padding: 1.2rem 1.8rem;
+}
+
+.alert {
+  display: block;
+  padding: .8rem 1.2rem;
+  margin: 0 0 2rem;
+  border: 1px solid;
+}
+
+.fa img {
+  display: none;
+}
+
+.Column-Form {
+  text-align: right;
+}
+
+.FormContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem 3rem 3rem;
+  margin: auto;
+  text-align: left;
+  background-color: grey;
+
+  &.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: none;
+    height: 100%;
+    z-index: 2;
+  }
+}
+
+.FormContainer-Header {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: inherit;
+}
+
+.FormContainer-Slogan {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.FormContainer-Fields {
+  padding: 0 2rem;
+}
+
+.FormContainer-Submit {
+  display: block;
+  min-width: 60%;
+  margin: 3rem auto auto;
+  font-family: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.FormContainer.DRI {
+  background-color: transparent;
+  text-align: center;
+
+  .DRI-Intro {
+    padding: 2rem;
+    background-color: #d3d3d3;
+
+    * {
+      margin: 0;
+      font-family: inherit;
+      font-weight: 400;
+    }
+  }
+
+  .DRI-Intro-Title {
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 3px dotted;
+    font-size: 2.2rem;
+  }
+
+  .DRI-Intro-Text {
+    font-size: 2rem;
+  }
+
+  .DRI-Slogan {
+    padding: 1rem 2rem;
+    margin: 0;
+    font-size: 2.2rem;
+    font-family: inherit;
+    font-weight: 400;
+  }
+
+  .DRI-Sent {
+    padding: 2rem;
+    font-family: inherit;
+    font-size: 2rem;
+  }
+}
+
+.FormField {
+  display: block;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.FormField-Label {
+  display: block;
+  margin-bottom: .2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.FormField-Input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+
+  &.radio {
+    display: inline-block;
+  }
+}
+
+.FormField-TableInputContainer {
+  display: table;
+  width: 100%;
+  margin: auto;
+}
+
+.FormField-TableInputContainer-Cell {
+  display: table-cell;
+  padding-right: 1rem;
+  text-align: center;
+  white-space: nowrap;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.FormField-TableInputContainer {
+  &.fixed-2-col .FormField-TableInputContainer-Cell,
+  &.fixed-3-col .FormField-TableInputContainer-Cell {
+    width: 33.333%;
+  }
+
+  &.gender {
+    max-width: 300px;
+  }
+
+  &.relationship-status {
+    max-width: 400px;
+  }
+}
+
+.FormField.radio {
+  .FormField-Input,
+  .FormField-Label {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0 0.2rem;
+  }
+}
+
+.FormField-Info {
+  display: block;
+  position: absolute;
+  margin-top: -3.7rem;
+  padding: .8rem 1.4rem;
+  background-color: #fff;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.FormField-Input:focus+.FormField-Info {
+  margin-top: -8rem;
+  opacity: 1;
+  z-index: 1;
+}
+
+.How {
+  padding: 0 3rem;
+}
+
+.How-Wizard {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem;
+  height: 8rem;
+  box-sizing: content-box;
+  border: 1px solid;
+  background-color: #fff;
+}
+
+.How-WizardItem {
+  height: 8rem;
+  position: relative;
+  box-sizing: border-box;
+  border-left-color: inherit;
+  border-right: 0;
+  display: inline-block;
+  border: 4rem solid transparent;
+
+  &:before {
+    display: inline-block;
+    border: 4rem solid transparent;
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: -4.1rem;
+    border-left-color: #fff;
+    border-right: 0;
+  }
+
+  &:first-child {
+    border: none;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  >* {
+    display: inline-block;
+    position: relative;
+    top: -4rem;
+  }
+}
+
+.How-WizardItem-Img {
+  width: 5rem;
+  height: 5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  float: left;
+  background-color: grey;
+}
+
+.How-WizardItem-Txt {
+  line-height: 2rem;
+  margin: 2rem 1rem;
+  height: 4rem;
+}
+
+.ReassuranceList {
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.ReassuranceList-Item {
+  display: table-cell;
+  border-right: 1px solid;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.ReassuranceList-Item-Img {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 2rem;
+  background-color: #fff;
+}
+
+.ReassuranceList-Item-Txt {
+  display: inline-block;
+}
+
+.ReassuranceList-Item {
+  &:last-child {
+    border-right: 0;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.SiteCopyright {
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .How-Wizard {
+    height: auto;
+    width: 100%;
+  }
+
+  .How-WizardItem {
+    display: block;
+    border: none;
+
+    >* {
+      position: static;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .How-Wizard {
+    height: auto;
+  }
+
+  .How-WizardItem {
+    display: block;
+    border: none;
+
+    >* {
+      position: static;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .ReassuranceList-Item {
+    padding: 0 1rem;
+  }
+
+  .ReassuranceList-Item-Img {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .WidgetBand {
+    padding-top: 1.5rem;
+  }
+
+  .ContentBand-Column {
+    &.WidgetBand-DescText {
+      width: 100%;
+      padding-right: 0;
+
+      .ContentBand-ColumnHeader {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 2rem;
+        text-align: left;
+      }
+
+      .DescText {
+        display: table-cell;
+      }
+    }
+
+    &.FormBand-Form {
+      text-align: center;
+    }
+  }
+
+  .ReassuranceList-Item {
+    font-size: 1.3rem;
+  }
+
+  .FormContainer-Submit {
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .How-WizardItem {
+    border-left-width: 2.5rem;
+
+    &::before {
+      border-left-width: 2.5rem;
+    }
+  }
+
+  .ContentBand {
+    margin-top: 3rem;
+  }
+
+  .How {
+    text-align: center;
+  }
+
+  .How-Header,
+  .ReassuranceList {
+    text-align: left;
+  }
+
+  .How-Wizard {
+    margin-bottom: 4rem;
+  }
+
+  .How-WizardItem::before {
+    left: -2.6rem;
+  }
+
+  .ReassuranceList-Item {
+    display: inline-block;
+    border-right: none;
+    margin-bottom: 1rem;
+  }
+
+  .FormContainer-Fields {
+    padding: 0;
+  }
+
+  .FormContainer-Submit {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .ContentBand {
+    margin-bottom: 3rem;
+  }
+
+  .ContentBand-Column {
+    display: table;
+    width: 100%;
+    margin: auto;
+
+    &.Form {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .How {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .PageWrapper {
+    padding: 0;
+  }
+
+  .How-Header {
+    font-size: 2rem;
+  }
+
+  .FormContainer-Header {
+    font-size: 2.5rem;
+  }
+
+  .FormContainer-Submit {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .relationship-status .FormField-TableInputContainer-Cell {
+    display: block;
+    margin-left: 20%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .DescText-Title-Legend {
+    font-size: 1.7rem;
+  }
+
+  .FormContainer-Header {
+    font-size: 2.3rem;
+  }
+}
+
+
+
+h2,
+h3 {
+  color: $contrast;
+  font-family: Raleway, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+submit {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.SiteHeader {
+  display: inline-block;
+  width: 100%;
+}
+
+.SiteLogo {
+  background: url($assets + 'logo.svg') center no-repeat;
+  background-size: contain;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
+  display: block;
+
+  h1 {
+    opacity: 0;
+  }
+}
+
+.ContentBand {
+  max-width: 100rem;
+  margin: 0 auto 2rem;
+
+  .PageWrapper {
+    background: url($assets + 'bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  .PageWrapper-bg {
+    margin: 0 auto;
+    padding: 3rem auto;
+    max-width: 52rem;
+    text-align: center;
+  }
+}
+
+.DescText-Title {
+  background-color: $contrast;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: Arial, sans-serif;
+  font-weight: lighter;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.faq ul,
+.liste-voyants ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+.highlight{
+  &-primary{
+    color: $primary;
+  }
+  &-bold{
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.DescText-Subtitle {
+  color: $textColor;
+  text-align: center;
+  font-size: 3rem;
+  font-family: $ff-additional;
+  font-weight: lighter;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.liste-voyants {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  margin: 0 auto;
+
+  h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    color: $textColor;
+    font-weight: 400;
+    margin: 1rem auto;
+  }
+
+  ul {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    list-style: none;
+
+    li {
+      div {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      span {
+        color: $textColor;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @each $voyant,
+  $image in $voyants {
+    .voyant-#{$voyant} {
+      background: url($image) center no-repeat;
+    }
+  }
+
+}
+
+.FormContainer {
+  max-width: inherit;
+}
+
+.FormContainer-Header {
+  font-family: 'Ubuntu Condensed';
+  color: $contrast;
+  background: url($assets + 'fleche.png') bottom center no-repeat;
+}
+
+.FormContainer-Submit {
+  padding: 1rem 4rem;
+  background-color: $primary;
+  color: #fff;
+  font-size: 2.2rem;
+  border: 0 solid red;
+  -webkit-transition: all .25s ease-in;
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    background-color: darken($primary, 15%);
+  }
+}
+
+.FormContainer.DRI {
+  .DRI-Intro-Title {
+    color: #ccc;
+    text-transform: uppercase;
+  }
+
+  .DRI-Intro-Text {
+    color: #fff;
+  }
+
+  .DRI-Slogan {
+    background-color: #feeaea;
+    color: #fff;
+  }
+
+  .DRI-Form {
+    padding: 2rem;
+    background-color: transparent;
+
+    .FormField-Input {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #bbb;
+    }
+  }
+
+  .DRI-Sent {
+    color: #fff;
+
+    strong {
+      font-weight: 400;
+      color: $primary;
+    }
+  }
+}
+
+.FormField-Input {
+  border: 1px solid #ccc;
+
+  &:not([type=radio]):focus {
+    outline-width: 0;
+    border-color: transparent;
+
+    &:invalid {
+      outline-width: 0;
+      border-color: transparent;
+    }
+  }
+
+  &:active,
+  &:focus {
+    background-color: #fa2e54;
+  }
+}
+
+.FormField-Info {
+  border: none;
+  color: #ccc;
+  box-shadow: 0 0 6px -1px #ccc;
+}
+
+input {
+  &[type=checkbox],
+  &[type=radio] {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.faq {
+  padding: 1rem 2.5rem;
+  color: #6d6c6a;
+  background: $contrast;
+  background: #cd9eaf;
+  text-align: left;
+  font-weight: 600;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-style: italic;
+      font-size: 1.6rem;
+      font-family: $ff-default;
+      line-height: 1.2;
+      list-style: none;
+      padding: 5px 0 5px 6rem;
+      color: #fff;
+      min-width: 20rem;
+    }
+
+    .ico-formulaire {
+      background: url($assets + 'ico-form.svg') center left no-repeat;
+    }
+
+    .ico-standardiste {
+      background: url($assets + 'ico-phone.svg') center left no-repeat;
+    }
+  }
+}
+
+.bloc-avatar {
+  background: url($assets + 'laura.png') bottom right no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 41rem;
+  height: 28rem;
+  border: none;
+  color: #fff;
+
+  h2 {
+    color: #fff;
+    font-family: Courgette, sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  p {
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+    text-align: right;
+  }
+}
+
+.ReassuranceList {
+  background-color: $textColor;
+  color: #fff;
+}
+
+.ReassuranceList-Item-Img {
+  &.star {
+    background: url($assets + 'ico-star.png') center no-repeat;
+    background-size: contain;
+  }
+
+  &.lock {
+    background: url($assets + 'ico-lock.png') center no-repeat;
+    background-size: contain;
+  }
+
+  &.gift {
+    background: url($assets + 'ico-gift.png') center no-repeat;
+    background-size: contain;
+  }
+
+  &.trophy {
+    background: url($assets + 'ico-trophy.png') center no-repeat;
+    background-size: contain;
+  }
+}
+
+.alert {
+  border-radius: 5px;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.SiteCopyright {
+  color: $textColor;
+}
+
+@media screen and (max-width: 900px) {
+  .bloc-avatar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main-voyant {
+    height: inherit;
+    text-align: center;
+
+    h2 {
+      height: inherit;
+      text-align: center;
+    }
+  }
+
+  .PageWrapper {
+    display: inherit;
+    padding: 0 2rem;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .SiteLogo {
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .flex-mobile,
+  .liste-voyants ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+  }
+
+  .flex-mobile {
+    border: 0 solid red;
+    display: flex;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .FormContainer {
+    padding: 0;
+  }
+
+  .colD,
+  .colG {
+    margin: 0;
+    width: 100%;
+  }
+
+  .main-voyant {
+    background-image: none;
+    margin: 1rem 0 2rem;
+
+    h2 {
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+  }
+
+  .liste-voyants {
+    h2 {
+      padding: 2rem 0;
+    }
+
+    ul li {
+      display: flex;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  .DescText-Content {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .faq {
+    width: 100%;
+  }
+
+  .DescText-Content v h3,
+  .faq v h3 {
+    font-size: 1.8rem;
+  }
+
+  .DescText-Content ul>*,
+  .faq ul>* {
+    width: calc(100% * 1 / 2 - 2rem - .01px);
+  }
+
+  .DescText-Content ul>.flex-item-double,
+  .faq ul>.flex-item-double {
+    width: calc(100% * 2 / 2 - 2rem);
+  }
+
+  .DRI-Form {
+    margin-bottom: 4rem;
+  }
+}
