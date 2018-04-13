@@ -3,10 +3,14 @@
     ------------------------------------------------------------
     --      DRI POST-MAIL = LUCAS-SIMPLE = AFFIL BASE     --
     ------------------------------------------------------------
-    Created on : 22 juillet 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+session_start();
+ini_set('display_errors',0);
+$_SESSION['user_id'] = "4444";
+$_SESSION['kgestion_id'] = "0000";
+$_SESSION['email'] = "abdo@mail.com";
+$_SESSION['source'] = "abdoil.com";
+
 include('include/process-dri.php');
 ?>
 <!doctype html>
@@ -16,13 +20,13 @@ include('include/process-dri.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>MyAstro - Lucas 2016</title>
+        <title>MyAstro - Lucas 2018</title>
 
         <meta name="robots" content="noindex,nofollow" />
 
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
 
-        <link rel="stylesheet" type="text/css" href="css/lucas-simple.min.css">
+        <link rel="stylesheet" type="text/css" href="css/lucas-dri-18.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,6 +40,8 @@ include('include/process-dri.php');
         <header class="SiteHeader">
             <div class="PageWrapper">
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
+                <span class="g-title">n’attendez plus, vous devez en savoir plus !</span>
+
             </div>
         </header>
         <section class="ContentBand">
@@ -65,21 +71,22 @@ include('include/process-dri.php');
                             <h2>Nos voyants sont à votre écoute&nbsp;!</h2>
                             <ul class="grid-4-tiny-2-small-2-medium-4">
                                 <li>
-                                    <div class="voyant-francis" ></div>
-                                    <span>Francis</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-zohra"></div>
-                                    <span>Zohra</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-soufiane"></div>
-                                    <span>Soufiane</span>
+                                    <div class="voyant-mark" ></div>
+                                    <span>MARK</span>
                                 </li>
                                 <li>
                                     <div class="voyant-benedicte"></div>
                                     <span>Bénédicte</span>
                                 </li>
+                                <li>
+                                    <div class="voyant-claude"></div>
+                                    <span>CLAUDE</span>
+                                </li>
+                                <li>
+                                    <div class="voyant-aline"></div>
+                                    <span>ALINE</span>
+                                </li>
+
                             </ul>
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
