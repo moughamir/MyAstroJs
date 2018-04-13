@@ -4,12 +4,6 @@
     --      DRI POST-MAIL = LUCAS-SIMPLE = AFFIL BASE     --
     ------------------------------------------------------------
 */
-session_start();
-ini_set('display_errors',0);
-$_SESSION['user_id'] = "4444";
-$_SESSION['kgestion_id'] = "0000";
-$_SESSION['email'] = "abdo@mail.com";
-$_SESSION['source'] = "abdoil.com";
 
 include('include/process-dri.php');
 ?>
