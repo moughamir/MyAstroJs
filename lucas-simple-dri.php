@@ -6,10 +6,6 @@
 */
 
 ini_set("display_errors",0);
-/*$_SESSION['kgestion_id'] = '4444444';
-$_SESSION['email'] = 'vvvvvvvvv@mmm.com';
-$_SESSION['user_id'] = '4444444';
-$_SESSION['source'] = '4444444';*/
 
 include('include/process-dri.php');
 ?>
@@ -25,6 +21,7 @@ include('include/process-dri.php');
         <meta name="robots" content="noindex,nofollow" />
 
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="css/lucas-dri-18.css">
 
@@ -38,7 +35,7 @@ include('include/process-dri.php');
 
     <body>
         <header class="SiteHeader">
-            <div class="PageWrapper" style="display: flex;">
+            <div class="PageWrapper flx" >
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
                 <span class="g-title">n’attendez plus, vous devez en savoir plus !</span>
 
@@ -48,11 +45,16 @@ include('include/process-dri.php');
             <div class="PageWrapper grid-2-tiny-1-small-1-medium-1 flex-mobile">
                 <div class="colG">
                     <div class="TextContent">
-                        <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous rappeler gratuitement<br/>par un voyant professionnel.</h2></header>
+                        <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous <strong>rappeler</strong> gratuitement<br/>par un voyant professionnel.</h2>
+                        </header>
+
+                        <div class="underline" >
+                            <img  src="images_landing/lucas-18/underline.png">
+                        </div>
                         <article class="DescText">
                             <div class="DescText-Content">
                                 <p><b>Une question</b> sur votre avenir ou sur celui d'un être cher&nbsp;?<br/>L'un de nos voyants reconnus vous recontacte dans les plus brefs délais et vous éclaire sur vos doutes.</p>
-                                <p>Votre couple va-t-il durer&nbsp;? Votre travail va-t-il évoluer&nbsp;?<br/>Aurez-vous des enfants&nbsp;? N'hésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
+                                <p>Votre r va-t-il durer&nbsp;? Votre travail va-t-il évoluer&nbsp;?<br/>Aurez-vous des enfants&nbsp;? N'hésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
                             </div>
                         </article>
                     </div>

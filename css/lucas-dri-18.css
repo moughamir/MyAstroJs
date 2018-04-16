@@ -2096,10 +2096,6 @@ body {
     background-size: cover
 }
 
-h2, h3 {
-    font-family: Courgette, cursive
-}
-
 h1, h2, h3, h4, h5, h6, submit {
     -webkit-hyphens: none;
     -moz-hyphens: none;
@@ -2114,12 +2110,12 @@ h1, h2, h3, h4, h5, h6, submit {
 }
 
 .SiteLogo {
-    background: url(../images_landing/lucas-18/logo-MYASTRO.svg) center no-repeat;
+    background: url(../images_landing/lucas-18/logo-MYASTRO.png) center no-repeat;
     background-size: contain;
     width: 10rem;
     height: 10rem;
     display: block;
-    margin-left: -11rem;
+    margin-left: -27rem;
 }
 
 .FormContainer.DRI .DRI-list-voyants ul, .faq ul, .main-voyant {
@@ -2137,7 +2133,7 @@ h1, h2, h3, h4, h5, h6, submit {
     position: relative;
     margin-bottom: -3.25rem;
     margin-right: -.3rem;
-    height: 24rem;
+    height: 17rem;
     display: flex;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
@@ -2156,13 +2152,13 @@ h1, h2, h3, h4, h5, h6, submit {
 
 .ContentBand-title {
     font-size: 2rem;
-    height: 10rem;
     text-align: center;
     padding-top: 5rem;
     color: #454545;
-    text-transform: uppercase;
     font-family: sans-serif;
     margin-left: 3rem;
+    font-size: 24px;
+    margin: 0 auto;
 }
 
 .DescText {
@@ -2310,8 +2306,8 @@ h1, h2, h3, h4, h5, h6, submit {
 
 .FormContainer.DRI .DRI-list-voyants ul li span {
     text-transform: uppercase;
-    color: #fff;
-    font-size: 1.8rem
+    color: #454545;
+    font-size: 1.8rem;
 }
 
 .FormContainer.DRI .DRI-list-voyants .voyant-mark {
@@ -2554,11 +2550,11 @@ input[type=checkbox], input[type=radio] {
 }
 
 .g-title {
-    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
     text-align: center;
     color: #454545;
     text-transform: uppercase;
-    font-family: sans-serif;
     margin: 0 auto;
 
 }
@@ -2566,4 +2562,24 @@ input[type=checkbox], input[type=radio] {
 .DRI-check {
     background: url(../images_landing/lucas-18/check-box.png) center left no-repeat;
     padding-left: 3rem;
+}
+
+div.underline {
+
+    height: 40px;
+
+}
+
+div.underline img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.flx {
+    display: flex!important;
+}
+
+.ContentBand-title strong {
+    text-transform: uppercase;
 }
