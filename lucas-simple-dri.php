@@ -5,6 +5,12 @@
     ------------------------------------------------------------
 */
 
+ini_set("display_errors",0);
+/*$_SESSION['kgestion_id'] = '4444444';
+$_SESSION['email'] = 'vvvvvvvvv@mmm.com';
+$_SESSION['user_id'] = '4444444';
+$_SESSION['source'] = '4444444';*/
+
 include('include/process-dri.php');
 ?>
 <!doctype html>
@@ -32,7 +38,7 @@ include('include/process-dri.php');
 
     <body>
         <header class="SiteHeader">
-            <div class="PageWrapper">
+            <div class="PageWrapper" style="display: flex;">
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
                 <span class="g-title">n’attendez plus, vous devez en savoir plus !</span>
 
@@ -88,12 +94,13 @@ include('include/process-dri.php');
                             <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
                                 <p class="DRI-Sent">
                                     APPEL EN COURS ....<br/>
-                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <span class="DRI-check">Merci, votre demande de rappel a bien été prise en compte.</span><br/>
                                     <strong>Un voyant vous recontactera dans quelques instants.</strong>
                                 </p>
                             <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
-                                    Merci, votre demande a bien été prise en compte.<br/>
+                                    <span class="DRI-check"> votre demande a bien été prise en compte.</span><br/>
+
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>

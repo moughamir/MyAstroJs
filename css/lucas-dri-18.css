@@ -2119,7 +2119,7 @@ h1, h2, h3, h4, h5, h6, submit {
     width: 10rem;
     height: 10rem;
     display: block;
-    margin-left: -26rem;
+    margin-left: -11rem;
 }
 
 .FormContainer.DRI .DRI-list-voyants ul, .faq ul, .main-voyant {
@@ -2262,12 +2262,15 @@ h1, h2, h3, h4, h5, h6, submit {
 }
 
 .FormContainer.DRI .DRI-Sent {
-    color: #0f1528
+    color: #30a665;
+
 }
 
 .FormContainer.DRI .DRI-Sent strong {
-    font-weight: 400;
-    color: #30a665
+    font-weight: 300;
+    color: #0f1528;
+    font-size: 15px;
+
 }
 
 .FormContainer.DRI .DRI-list-voyants {
@@ -2557,7 +2560,10 @@ input[type=checkbox], input[type=radio] {
     text-transform: uppercase;
     font-family: sans-serif;
     margin: 0 auto;
-    position: relative;
-    top: -9rem;
-    left: 20rem;
+
+}
+
+.DRI-check {
+    background: url(../images_landing/lucas-18/check-box.png) center left no-repeat;
+    padding-left: 3rem;
 }
