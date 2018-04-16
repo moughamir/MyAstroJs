@@ -12,6 +12,7 @@ $urls_conversion = array(
     'pdt-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=132&aff_id='.$aff_id,
     'love-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=130&aff_id='.$aff_id,
     'tarot-tchat-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=138&aff_id='.$aff_id,
+    'vpt-stdl' => 'http://tracking.strandlink.com/aff_lsr?offer_id=138&aff_id='.$aff_id,
 );
 
 if($source == 'strandlink'){
