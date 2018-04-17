@@ -7,7 +7,7 @@
 // Paramètres design
 include('include/visual_modules/tarot-direct/design-load.php');
 // Paramètre formulaire
-$url = 'tarot-direct-gf';
+$url = 'tarot-direct-tc';
 $method = "general-suscribe";
 $support = "tarot";
 $site = "myastro.fr";
