@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "knacss444/knacss";
+@import "modules/mixins";
 //
 $assets: '../images_landing/laura/';
 $voyants: ( 1: $assets + 'voyant-noa.jpg',
@@ -12,8 +13,10 @@ $contrast: #cd9eaf;
 $primary: #f9158b;
 $textColor: #454545;
 //
-$ff-default: 'Open Sans', sans-serif;
-$ff-additional : 'Lobster', cursive;
+$ff-default: 'Open Sans',
+sans-serif;
+$ff-additional: 'Lobster',
+cursive;
 //
 html {
   height: 100%;
@@ -571,6 +574,11 @@ submit {
   height: 10rem;
   margin: 1rem auto;
   display: block;
+  @include respond-to('mobile'){
+    width: 5rem;
+    height: 5rem;
+    margin: .5rem auto;
+  }
 
   h1 {
     opacity: 0;
@@ -604,6 +612,9 @@ submit {
   height: inherit;
   margin: 0 auto;
   padding: 0.5rem;
+  @include respond-to("mobile"){
+    font-size: 1.7rem;
+  }
 }
 
 .faq ul,
@@ -612,11 +623,12 @@ submit {
   display: -webkit-flex;
   display: -ms-flexbox;
 }
-.highlight{
-  &-primary{
+
+.highlight {
+  &-primary {
     color: $primary;
   }
-  &-bold{
+  &-bold {
     text-transform: uppercase;
     font-weight: 700;
   }
@@ -630,6 +642,9 @@ submit {
   font-weight: lighter;
   margin: 0 auto;
   padding: 1rem 0;
+  @include respond-to("mobile"){
+    font-size: 1.9rem;
+  }
 }
 
 .liste-voyants {
@@ -650,7 +665,10 @@ submit {
     text-align: center;
     color: $textColor;
     font-weight: 400;
-    margin: 1rem auto;
+    margin: 1rem 5px;
+    padding: 2.02rem 0.2rem;
+    background: transparent url($assets + 'headline.png') no-repeat center;
+    background-size: cover;
   }
 
   ul {
@@ -674,6 +692,7 @@ submit {
       span {
         color: $textColor;
         font-size: 1.8rem;
+        text-transform: uppercase;
       }
     }
   }
@@ -709,6 +728,9 @@ submit {
   &:hover {
     background-color: darken($primary, 15%);
   }
+  @include respond-to("mobile"){
+    width: 100%;
+  }
 }
 
 .FormContainer.DRI {
@@ -729,12 +751,15 @@ submit {
   .DRI-Form {
     padding: 2rem;
     background-color: transparent;
+    @include respond-to("mobile"){
+      padding: 1rem 0 0 0;
+    }
 
     .FormField-Input {
       text-align: center;
       font-weight: 700;
       font-size: 1.4rem;
-      color: #bbb;
+      color: $primary;
     }
   }
 
@@ -763,7 +788,7 @@ submit {
 
   &:active,
   &:focus {
-    background-color: #fa2e54;
+    //color: #fff;
   }
 }
 
@@ -785,9 +810,9 @@ input {
   padding: 1rem 2.5rem;
   color: #6d6c6a;
   background: $contrast;
-  background: #cd9eaf;
   text-align: left;
   font-weight: 600;
+  margin: 10px 0;
   ul {
     display: flex;
     justify-content: space-around;
@@ -804,6 +829,10 @@ input {
       padding: 5px 0 5px 6rem;
       color: #fff;
       min-width: 20rem;
+      @include respond-to("mobile"){
+        font-size: 1.3rem;
+        padding: 5px 0 5px 5rem;
+      }
     }
 
     .ico-formulaire {
@@ -830,20 +859,30 @@ input {
   h2 {
     color: #fff;
     font-family: Courgette, sans-serif;
-    font-size: 1.75rem;
     text-align: center;
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 5px #ede55a);
+    text-shadow: 0 0 3px #3c3c3c;
+    font-weight: 500;
+    position: absolute;
+    right: 6px;
+    top: 60%;
   }
 
   p {
     position: absolute;
-    left: 3rem;
     bottom: 0;
     text-align: right;
+    right: 1rem;
+    font-size: 1.8rem;
+    span{
+      font-size: 1.12rem;
+    }
   }
 }
 
 .ReassuranceList {
-  background-color: $textColor;
+  background-color: $contrast;
   color: #fff;
 }
 

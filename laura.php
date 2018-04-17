@@ -114,8 +114,8 @@ include('include/process-dri.php');
 
         </div>
         <div class="bloc-avatar">
-          <h2>Il est temps de prendre<br/>votre vie en main !</h2>
-          <p>Laura,<br> Voyante-tarologue professionnelle</p>
+          <h2>il est temps de prendre <br/>votre vie en main !</h2>
+          <p>Laura,<br> <span>Voyante-tarologue professionnelle</span></p>
         </div>
       </div>
     </section>
