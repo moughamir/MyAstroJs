@@ -3,12 +3,13 @@
     ------------------------------------------------------------
     --      DRI POST-MAIL = LUCAS-SIMPLE = AFFIL BASE     --
     ------------------------------------------------------------
-    Created on : 22 juillet 2016
-    Author     : Laurène Dourdin <2aurene@gmail.com>
-                 Guillaume Deschamps <guillaumedeschamps75@gmail.com>
 */
+
+ini_set("display_errors",0);
+
 include('include/process-dri.php');
 ?>
+<!-- created by sanadi abderrahime << abderrahime.sanadi@gmail.com >> -->
 <!doctype html>
 <html lang="fr">
     <head>
@@ -16,13 +17,14 @@ include('include/process-dri.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>MyAstro - Lucas 2016</title>
+        <title>MyAstro - Lucas 2018</title>
 
         <meta name="robots" content="noindex,nofollow" />
 
         <link rel="icon" type="image/png" href="logo_myastro_32x32.jpg" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="css/lucas-simple.min.css">
+        <link rel="stylesheet" type="text/css" href="css/lucas-dri-18.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,19 +36,26 @@ include('include/process-dri.php');
 
     <body>
         <header class="SiteHeader">
-            <div class="PageWrapper">
+            <div class="PageWrapper flx" >
                 <span class="SiteLogo"><h1>My ASTRO</h1></span>
+                <span class="g-title">n’attendez plus, vous devez en savoir plus !</span>
+
             </div>
         </header>
         <section class="ContentBand">
             <div class="PageWrapper grid-2-tiny-1-small-1-medium-1 flex-mobile">
                 <div class="colG">
                     <div class="TextContent">
-                        <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous rappeler gratuitement<br/>par un voyant professionnel.</h2></header>
+                        <header class="main-voyant"><h2 class="ContentBand-title">Faites-vous <strong>rappeler</strong> gratuitement<br/>par un voyant professionnel.</h2>
+                        </header>
+
+                        <div class="underline" >
+                            <img  src="images_landing/lucas-18/underline.png">
+                        </div>
                         <article class="DescText">
                             <div class="DescText-Content">
                                 <p><b>Une question</b> sur votre avenir ou sur celui d'un être cher&nbsp;?<br/>L'un de nos voyants reconnus vous recontacte dans les plus brefs délais et vous éclaire sur vos doutes.</p>
-                                <p>Votre couple va-t-il durer&nbsp;? Votre travail va-t-il évoluer&nbsp;?<br/>Aurez-vous des enfants&nbsp;? N'hésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
+                                <p>Votre r va-t-il durer&nbsp;? Votre travail va-t-il évoluer&nbsp;?<br/>Aurez-vous des enfants&nbsp;? N'hésitez pas à discuter de ce qui vous intéresse lors de votre séance de voyance par téléphone.</p>
                             </div>
                         </article>
                     </div>
@@ -65,21 +74,22 @@ include('include/process-dri.php');
                             <h2>Nos voyants sont à votre écoute&nbsp;!</h2>
                             <ul class="grid-4-tiny-2-small-2-medium-4">
                                 <li>
-                                    <div class="voyant-francis" ></div>
-                                    <span>Francis</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-zohra"></div>
-                                    <span>Zohra</span>
-                                </li>
-                                <li>
-                                    <div class="voyant-soufiane"></div>
-                                    <span>Soufiane</span>
+                                    <div class="voyant-mark" ></div>
+                                    <span>MARK</span>
                                 </li>
                                 <li>
                                     <div class="voyant-benedicte"></div>
                                     <span>Bénédicte</span>
                                 </li>
+                                <li>
+                                    <div class="voyant-claude"></div>
+                                    <span>CLAUDE</span>
+                                </li>
+                                <li>
+                                    <div class="voyant-aline"></div>
+                                    <span>ALINE</span>
+                                </li>
+
                             </ul>
                         </div>
                         <h2 class="DRI-Slogan">Vos 10 premières minutes <span>gratuites</span></h2>
@@ -87,12 +97,13 @@ include('include/process-dri.php');
                             <?php if($directCall && ($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT')){ ?>
                                 <p class="DRI-Sent">
                                     APPEL EN COURS ....<br/>
-                                    Merci, votre demande de rappel a bien été prise en compte.<br/>
+                                    <span class="DRI-check">Merci, votre demande de rappel a bien été prise en compte.</span><br/>
                                     <strong>Un voyant vous recontactera dans quelques instants.</strong>
                                 </p>
                             <?php } else if($state == 'MAIL_SENT' || $state == 'MAIL_ALREADY_SENT'){ ?>
                                 <p class="DRI-Sent">
-                                    Merci, votre demande a bien été prise en compte.<br/>
+                                    <span class="DRI-check"> votre demande a bien été prise en compte.</span><br/>
+
                                     <strong>Un voyant vous recontactera dans quelques instants</strong>.
                                 </p>
                             <?php } else { ?>
