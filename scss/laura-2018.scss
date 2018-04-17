@@ -574,7 +574,7 @@ submit {
   height: 10rem;
   margin: 1rem auto;
   display: block;
-  @include respond-to('mobile'){
+  @include respond-to('mobile') {
     width: 5rem;
     height: 5rem;
     margin: .5rem auto;
@@ -612,7 +612,7 @@ submit {
   height: inherit;
   margin: 0 auto;
   padding: 0.5rem;
-  @include respond-to("mobile"){
+  @include respond-to("mobile") {
     font-size: 1.7rem;
   }
 }
@@ -642,7 +642,7 @@ submit {
   font-weight: lighter;
   margin: 0 auto;
   padding: 1rem 0;
-  @include respond-to("mobile"){
+  @include respond-to("mobile") {
     font-size: 1.9rem;
   }
 }
@@ -728,7 +728,7 @@ submit {
   &:hover {
     background-color: darken($primary, 15%);
   }
-  @include respond-to("mobile"){
+  @include respond-to("mobile") {
     width: 100%;
   }
 }
@@ -751,7 +751,7 @@ submit {
   .DRI-Form {
     padding: 2rem;
     background-color: transparent;
-    @include respond-to("mobile"){
+    @include respond-to("mobile") {
       padding: 1rem 0 0 0;
     }
 
@@ -829,7 +829,7 @@ input {
       padding: 5px 0 5px 6rem;
       color: #fff;
       min-width: 20rem;
-      @include respond-to("mobile"){
+      @include respond-to("mobile") {
         font-size: 1.3rem;
         padding: 5px 0 5px 5rem;
       }
@@ -852,7 +852,7 @@ input {
   bottom: 0;
   right: 0;
   width: 41rem;
-  height: 28rem;
+  height: 44rem;
   border: none;
   color: #fff;
 
@@ -860,23 +860,23 @@ input {
     color: #fff;
     font-family: Courgette, sans-serif;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     filter: drop-shadow(0 0 5px #ede55a);
     text-shadow: 0 0 3px #3c3c3c;
     font-weight: 500;
     position: absolute;
     right: 6px;
-    top: 60%;
+    top: 72%;
   }
 
   p {
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     text-align: right;
     right: 1rem;
-    font-size: 1.8rem;
-    span{
-      font-size: 1.12rem;
+    font-size: 1.6rem;
+    span {
+      font-size: 1.4rem;
     }
   }
 }
