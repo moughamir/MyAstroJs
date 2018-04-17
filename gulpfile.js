@@ -5,9 +5,9 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
-var source = 'scss/tchat.scss',
-  assetsSource = 'images_landing/printemps-18/*',
-  assetsTarget = 'images_landing/printemps-18/',
+var source = 'scss/printemps-18.scss',
+  assetsSource = 'images_landing/laura/*',
+  assetsTarget = 'images_landing/laura/',
   target = './css/',
   sassOptions = {
     errLogToConsole: true,
