@@ -10,7 +10,7 @@ $url = 'tarot-direct-lbg';
 $method = "general-suscribe";
 $support = "tarot";
 $site = "myastro.fr";
-$source = "Local_business_group";
+$source = "lbg";
 $dri = "tarot-direct-merci";
 $dri2 = "tarot-direct-dri-tog";
 include('include/questions/tarot-direct.php');

@@ -7,7 +7,7 @@ $url = 'tarot-flash-lbg';
 $method = 'general-suscribe';
 $support = 'tarot';
 $site = 'myastro.fr';
-$source = "Local_business_group";
+$source = "lbg";
 $dri = 'myastro/offre-gratuite';
 $dri2 = 'myastro-tchat-dri';
 
@@ -142,7 +142,6 @@ $questions = array(
                                 <input type="hidden" name="dri" value="<?= $dri;?>" />
                                 <input type="hidden" name="dri2" value="<?= $dri2;?>" />
                                 <!-- ########## autres champs pré-remplis ######### -->
-                                <input type="hidden" name="convertir" value="1" />
                                 <input type="hidden" name="gclid" value="<?= isset($_GET['gclid']) ? $_GET['gclid'] : '';?>" />
                                 <input type="hidden" name="tel_needed" value="1" />
                                 <input type="hidden" name="cguv" value="1" />

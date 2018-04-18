@@ -5,7 +5,7 @@ $form = $url = $pageName= 'tarot-tchat-lbg';
 $method = 'general-suscribe';
 $support = 'tarot';
 $site = 'myastro.fr';
-$source = "Local_business_group";
+$source = "lbg";
 
 $dri = 'tarot-tchat-dri';
 $dri2 = 'tarot-tchat-dri-tog';

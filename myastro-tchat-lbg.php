@@ -10,7 +10,7 @@ $pageName = "myastro-tchat-lbg";
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "Local_business_group";
+$source = "lbg";
 $question = ['code' => 'tchatmyastro_1', 'subject' => 'evenement', 'text' => 'Campagne Tchat mini formulaire'];
 
 

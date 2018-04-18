@@ -3,7 +3,7 @@
 $form = $url = 'vpt-lbg';
 $method = 'general-suscribe';
 $support = "voyance";
-$source = "Local_business_group";
+$source = "lbg";
 $site = 'myastro.fr';
 $dri = "voyance-par-tchat/offre-gratuite";
 $dri2 = "vpt-dri";

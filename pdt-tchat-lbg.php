@@ -7,7 +7,7 @@ $url = 'pdt-tchat-lbg';
 $method = "general-suscribe";
 $support = "voyance";
 $site = "myastro.fr";
-$source = "Local_business_group";
+$source = "lbg";
 $dri = "pouvoir-des-trois/offre-gratuite";
 $dri2 = "pdt-tchat-dri";
 // A titre indicatif, le champs question_code est rempli par javascript, voir pouvoir-des-trois.js
