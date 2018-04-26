@@ -2,7 +2,7 @@
 session_start();
 $prenom = isset($_SESSION['prenom'])? $_SESSION['prenom'] : '';
 $email = isset($_SESSION['email'])? $_SESSION['email'] : '';
-$url = 'https://voyance-en-direct.tv/myastro/offre-gratuite?email='.$email;
+$url = 'https://voyance-en-direct.tv/love-myastro/offre-gratuite?email='.$email;
 ?>
 <!doctype html>
 <html lang="fr">
