@@ -1,5 +1,5 @@
 <?php
-$url = 'printemps-18-ac-hm';
+$url = 'printemps-18-tchat-ac-hm';
 $question = ['code' => 'printemps18_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2018'];
 $regurl = $url;
 $method = "general-suscribe";

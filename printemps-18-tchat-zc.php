@@ -1,5 +1,5 @@
 <?php
-$url = 'printemps-18-zc';
+$url = 'printemps-18-tchat-zc';
 $question = ['code' => 'printemps18_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2018'];
 $regurl = $url;
 $source = "zcorp";

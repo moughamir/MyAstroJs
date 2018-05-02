@@ -1,7 +1,7 @@
 <?php
-$form = 'printemps-18-rc';
+$url = 'printemps-18-tchat-rc';
 $question = ['code' => 'printemps18_question', 'subject' => 'evenement', 'text' => 'Compagne Printemps des Amours 2018'];
-$url = $regurl = $form;
+$regurl = $url;
 $method = "general-suscribe";
 $source = "reflexcash";
 
