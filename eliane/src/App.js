@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import style from './variables';
@@ -11,8 +10,10 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="container-960">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
+            <h1 className="App-title">La voyance d'<span>Éliane</span></h1>
+            <div className="bloc-spe">
+            Médium Tarologue
+            </div>
           </div>
         </header>
         <section className="col-2 col-left" style={style.leftSide}></section>
