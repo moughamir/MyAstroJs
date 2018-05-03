@@ -5,9 +5,9 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 
-var source = 'scss/printemps-18.scss',
-  assetsSource = 'images_landing/laura/*',
-  assetsTarget = 'images_landing/laura/',
+var source = 'scss/eliane.scss',
+  assetsSource = 'images_landing/eliane/*',
+  assetsTarget = 'images_landing/eliane/',
   target = './css/',
   sassOptions = {
     errLogToConsole: true,
@@ -19,7 +19,7 @@ var source = 'scss/printemps-18.scss',
 
 gulp.task('sass', function() {
   return gulp
-    .src([source, 'scss/sp18-dri.scss'])
+    .src([source, 'scss/eliane.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))

@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-color: transparent;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+}
+
+.container-960 {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #0b1129;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.col-2 {
+  width: 50%;
+  min-height: 100vh;
+}
+
+.col-left {
+  background: #c1c5d1;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.col-right {
+  float: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
