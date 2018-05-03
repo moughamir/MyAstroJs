@@ -61,11 +61,17 @@
   display: flex;
   align-items: center;
 }
-.bloc-psy--info{
+
+.bloc-psy--info {
   color: #454545;
   font-size: 22px;
   text-align: right;
 }
+
+.bloc-form {
+  width: 35rem;
+}
+
 .App-title {
   /*font-size: 1.5em;*/
   font-size: 55px;
@@ -106,4 +112,44 @@
   float: right;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-right p {
+  color: #454545;
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  font-size: 25px;
+  color: #454545;
+  transition: all .8s ease;
+}
+
+li:hover {
+  color: #0b1129;
+}
+.ico {
+  width: 50px;
+  height: 50px;
+  background: #eceff1;
+  border-radius: 50%;
+  transition: all .8s ease;
+  filter: drop-shadow(0 0 1px #121212)
+}
+
+.ico:hover {
+  background: #0b1129;
 }
