@@ -133,13 +133,28 @@ li {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+}
+
+.btn-select {
+  align-items: center;
   font-size: 25px;
   color: #454545;
   transition: all .8s ease;
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-li:hover {
+.btn-select:hover {
   color: #0b1129;
+}
+.btn-select:hover .ico {
+  background: #0b1129;
+  color: #ffffff;
 }
 .ico {
   width: 50px;
@@ -147,9 +162,9 @@ li:hover {
   background: #eceff1;
   border-radius: 50%;
   transition: all .8s ease;
-  filter: drop-shadow(0 0 1px #121212)
+  filter: drop-shadow(0 0 1px #121212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ico:hover {
-  background: #0b1129;
-}
