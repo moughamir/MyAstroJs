@@ -61,26 +61,26 @@ class App extends React.Component {
         <LeftSection info={this.state.psych} itemStyle={style.leftSide} />
         <RightSection itemStyle={style.rightSide}>
           <article className='bloc-form'>
-        <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
-        <p>Pour commencer</p>
-        <h3>Choissiez votre domaine :</h3>
-        <div>
-          <ul>
-          {
-            Domaines.map((item, index) => {
-              return (
-              <li key={index}>
-                <button className="btn-select" data-ref={item.ref} onClick={this.setDomain}>
-                  <i className={'ico ' + item.icon} ></i>
-                  <span className='item-name'>{item.name}</span>
-                </button>
-              </li>
-              );
-            })
-          }
-          </ul>
-        </div>
-      </article>
+            <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
+            <p>Pour commencer</p>
+            <h3>Choissiez votre domaine :</h3>
+            <div>
+              <ul>
+              {
+                Domaines.map((item, index) => {
+                  return (
+                  <li key={index}>
+                    <button className="btn-select" data-ref={item.ref} onClick={this.setDomain}>
+                      <i className={'ico ' + item.icon} ></i>
+                      <span className='item-name'>{item.name}</span>
+                    </button>
+                  </li>
+                  );
+                })
+              }
+              </ul>
+            </div>
+          </article>
         </RightSection>
       </div>);
   }
