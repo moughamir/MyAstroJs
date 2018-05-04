@@ -4,7 +4,7 @@ import './assets/icons/flaticon.css';
 import style from './variables';
 import psychImage from './assets/psych.png';
 
-import {LeftSection} from './components/Sections';
+import {LeftSection, RightSection} from './components/Sections';
 
 
 class App extends React.Component {
@@ -58,30 +58,30 @@ class App extends React.Component {
             </div>
           </div>
         </header>
-        <LeftSection info={this.state.psych} />
-        <section className="col-2 col-right" style={style.rightSide}>
+        <LeftSection info={this.state.psych} itemStyle={style.leftSide} />
+        <RightSection itemStyle={style.rightSide}>
           <article className='bloc-form'>
-            <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
-            <p>Pour commencer</p>
-            <h3>Choissiez votre domaine :</h3>
-            <div>
-              <ul>
-              {
-                Domaines.map((item, index) => {
-                  return (
-                  <li key={index}>
-                    <button className="btn-select" data-ref={item.ref} onClick={this.setDomain}>
-                      <i className={'ico ' + item.icon} ></i>
-                      <span className='item-name'>{item.name}</span>
-                    </button>
-                  </li>
-                  );
-                })
-              }
-              </ul>
-            </div>
-          </article>
-        </section>
+        <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
+        <p>Pour commencer</p>
+        <h3>Choissiez votre domaine :</h3>
+        <div>
+          <ul>
+          {
+            Domaines.map((item, index) => {
+              return (
+              <li key={index}>
+                <button className="btn-select" data-ref={item.ref} onClick={this.setDomain}>
+                  <i className={'ico ' + item.icon} ></i>
+                  <span className='item-name'>{item.name}</span>
+                </button>
+              </li>
+              );
+            })
+          }
+          </ul>
+        </div>
+      </article>
+        </RightSection>
       </div>);
   }
 }

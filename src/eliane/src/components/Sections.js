@@ -1,11 +1,12 @@
 import React from 'react';
-import style from '../variables';
+//import style from '../variables';
 
 class LeftSection extends React.Component{
   render(){
     const psych = this.props.info;
+    const style = this.props.itemStyle;
     return (
-      <section className="col-2 col-left" style={style.leftSide}>
+      <section className="col-2 col-left" style={style}>
         <aside className="bloc-psy">
           <img src={psych.image} alt={psych.name}/>
           <div className="bloc-psy--info">
@@ -18,7 +19,13 @@ class LeftSection extends React.Component{
 }
 
 class RightSection extends React.Component{
-
+render(){
+  const style = this.props.itemStyle;
+  return (
+    <section className="col-2 col-right" style={style}>
+      {this.props.children}
+    </section>);
+}
 }
 
-export {LeftSection, RightSection}
+export {LeftSection, RightSection};
