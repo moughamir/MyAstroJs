@@ -4,6 +4,8 @@ import './assets/icons/flaticon.css';
 import style from './variables';
 import psychImage from './assets/psych.png';
 
+import {LeftSection} from './components/Sections';
+
 
 class App extends React.Component {
   constructor() {
@@ -56,14 +58,7 @@ class App extends React.Component {
             </div>
           </div>
         </header>
-        <section className="col-2 col-left" style={style.leftSide}>
-          <aside className="bloc-psy">
-            <img src={this.state.psych.image} alt={this.state.psych.name}/>
-            <div className="bloc-psy--info">
-            <p>{this.state.psych.name}, <br/> {this.state.psych.speciality}</p>
-            </div>
-          </aside>
-        </section>
+        <LeftSection info={this.state.psych} />
         <section className="col-2 col-right" style={style.rightSide}>
           <article className='bloc-form'>
             <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
