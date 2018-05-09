@@ -1,10 +1,11 @@
 import React from 'react';
+
 import './App.css';
 import './assets/icons/flaticon.css';
 import style from './variables';
 import psychImage from './assets/psych.png';
 
-import {LeftSection, RightSection} from './components/Sections';
+import { LeftSection, RightSection } from './components/Sections';
 
 
 class App extends React.Component {
@@ -37,11 +38,11 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log('Component Did Upadate : ' + this.state.target);
+    console.log('Component Did Update : ' + this.state.target);
   }
 
-  setDomain(ref){
-    this.setState({target: ref.target.dataset.ref});
+  setDomain(ref) {
+    this.setState({ target: ref.target.dataset.ref });
   }
 
 

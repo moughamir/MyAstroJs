@@ -1,6 +1,7 @@
 import React from 'react';
 //import style from '../variables';
 
+
 class LeftSection extends React.Component{
   render(){
     const psych = this.props.info;
