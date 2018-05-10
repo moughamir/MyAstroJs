@@ -25,5 +25,14 @@ var target = '';
 
 console.log('H')
 
-var $item = document.getElementsByClassName('item-select');
-console.log($item)
+const $item =  document.querySelectorAll('.item-select');
+
+document.addEventListener('DOMContentLoaded', function() {
+  // click button to set target domain and display next step
+  [].forEach.call($item, function(el) {
+  el.addEventListener('click', function() {
+    target = el.children[0].dataset.ref
+    console.log(target)
+  })
+})
+})

@@ -28,7 +28,7 @@
         </aside>
       </section>
       <section class="col-2 col-right">
-        <article class='bloc-form'>
+        <article class='bloc-form' id="intro">
           <p>Bonjour,<br/>Je suis Éliane voyante intuitive, mais le mot médium doit davantage vous parler. Cartomancienne, j’ai régulièrement recours au tarot de Marseille pour m’apporter un supportphysique et approfondir mes visions et mes ressentis.<br/> Voilà maintenant plus de trente années que me sont apparus mes dons de médiumnité pour la première fois.<br/> Une aventure qui m’a fait redécouvrir l’Humain, une notion que je place au centre de toutes mes consultations.<br/> Parce que sans vous mes visions n’ont plus aucune signification, vous êtes la clé de toute ma passion.</p>
           <p>Pour commencer</p>
           <h3>Choissiez votre domaine :</h3>
@@ -55,6 +55,9 @@
             </ul>
           </div>
         </article>
+        <article class='bloc-form' id="theme"></article>
+        <article class='bloc-form' id="form"></article>
+        <article class='bloc-form' id="dri"></article>
       </section>
     </div>
 

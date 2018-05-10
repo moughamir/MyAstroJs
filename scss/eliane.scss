@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
+
+$ff-primary:'Parisienne',
+cursive;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.App {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &-logo {
+    height: 80px;
+  }
+
+  &-header {
+    background-color: transparent;
+    height: 124px;
+    padding: 24px 0;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: content-box;
+    z-index: 999;
+  }
+  &-intro {
+    font-size: large;
+  }
+  &-title {
+    /*font-size: 1.5em;*/
+    font-size: 55px;
+    color: #e5b878;
+    margin: 0 0 0 -15%;
+
+    span {
+      font-family: $ff-primary;
+      font-size: 78px;
+      margin-top: -50px;
+      display: block;
+      margin-left: 43%;
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+.container-960 {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #0b1129;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    height: 160px;
+    display: block;
+    border: 6px solid;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 4px -2px #000;
+    z-index: 1;
+  }
+}
+
+.bloc {
+  &-spe {
+    color: #0b1129;
+    font-size: 20px;
+    background: #e5b878;
+    padding: 7px 14px;
+    z-index: 1;
+    position: absolute;
+    display: block;
+    width: 120px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-psy {
+    display: flex;
+    align-items: center;
+    &--info {
+      color: #454545;
+      font-size: 22px;
+      text-align: right;
+    }
+  }
+  &-form {
+    width: 35rem;
+  }
+}
+
+.col {
+  &-2 {
+    width: 50%;
+    min-height: 100vh;
+  }
+  &-left {
+    background: #c1c5d1 url(../images_landing/eliane/bg-left.png) no-repeat center;
+    float: left;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    padding-top: 172px;
+    position: relative;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  &-right {
+    float: right;
+    background: transparent url(../images_landing/eliane/bg-right.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 172px;
+    position: relative;
+    box-sizing: border-box;
+
+    p {
+      color: #454545;
+      font-size: 18px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.btn {
+  &-select {
+    align-items: center;
+    font-size: 25px;
+    color: #454545;
+    transition: all .8s ease;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      color: #0b1129;
+
+      .ico {
+        background: #0b1129;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.ico {
+  width: 50px;
+  height: 50px;
+  background: #eceff1;
+  border-radius: 50%;
+  transition: all .8s ease;
+  filter: drop-shadow(0 0 1px #121212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*Flaticon*/
+	@font-face {
+	  font-family: "Flaticon";
+	  src: url("../fonts/Flaticon/Flaticon.eot");
+	  src: url("../fonts/Flaticon/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon/Flaticon.woff") format("woff"), url("../fonts/Flaticon/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon/Flaticon.svg#Flaticon") format("svg");
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	  @font-face {
+	    font-family: "Flaticon";
+	    src: url("../fonts/Flaticon/Flaticon.svg#Flaticon") format("svg");
+	  }
+	}
+
+	[class^="flaticon-"]:before,
+	[class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
+	  font-family: Flaticon;
+	  font-size: 1.9rem;
+	  font-style: normal;
+	  /*margin-left: 20px;*/
+	}
+
+	.flaticon-bag:before {
+	  content: "\f100";
+	  margin-left: -6px;
+	}
+
+	.flaticon-case:before {
+	  content: "\f101";
+	}
+
+	.flaticon-heart:before {
+	  content: "\f102";
+	  margin-top: 6px;
+	  margin-left: -1px;
+	}
