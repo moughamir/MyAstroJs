@@ -6,7 +6,43 @@ import style from './variables';
 import psychImage from './assets/psych.png';
 
 import { LeftSection, RightSection } from './components/Sections';
+//import {StepOne} from './components/Views/stepOne';
 
+
+function StepContainer(props){
+  const target = props.domaine;
+  if (target === 'love') {
+      return <h1>Love</h1>;
+    }
+    else if (target === 'work') {
+      return <h1>Work</h1>;
+    }
+    else if (target === 'money') {
+      return <h1>Money</h1>;
+    }
+    else return (
+      <article className='bloc-form'>
+            <p dangerouslySetInnerHTML={{__html: props.intro}}></p>
+            <p>Pour commencer</p>
+            <h3>Choissiez votre domaine :</h3>
+            <div>
+              <ul>
+              {
+                props.doms.map((item, index) => {
+                  return (
+                      <li key={index}>
+                        <button className="btn-select" data-ref={item.ref} >
+                          <i className={'ico ' + item.icon} ></i>
+                          <span className='item-name'>{item.name}</span>
+                        </button>
+                      </li>
+                    );
+                })
+              }
+              </ul>
+            </div>
+          </article>);
+}
 
 class App extends React.Component {
   constructor() {
@@ -38,7 +74,10 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
+    const $this = this
     console.log('Component Did Update : ' + this.state.target);
+    const name = this.state.domaine.find(function(x) { return x.ref === $this.state.target })
+    document.title = `${this.state.psych.name.split(' ')[0]} - ${name.name} | MyAstro`
   }
 
   setDomain(ref) {
@@ -47,7 +86,7 @@ class App extends React.Component {
 
 
   render() {
-    const Domaines = this.state.domaine;
+    //const Domaines = this.state.domaine;
 
     return (
       <div className="App">
@@ -61,27 +100,7 @@ class App extends React.Component {
         </header>
         <LeftSection info={this.state.psych} itemStyle={style.leftSide} />
         <RightSection itemStyle={style.rightSide}>
-          <article className='bloc-form'>
-            <p dangerouslySetInnerHTML={{__html: this.state.intro}}></p>
-            <p>Pour commencer</p>
-            <h3>Choissiez votre domaine :</h3>
-            <div>
-              <ul>
-              {
-                Domaines.map((item, index) => {
-                  return (
-                  <li key={index}>
-                    <button className="btn-select" data-ref={item.ref} onClick={this.setDomain}>
-                      <i className={'ico ' + item.icon} ></i>
-                      <span className='item-name'>{item.name}</span>
-                    </button>
-                  </li>
-                  );
-                })
-              }
-              </ul>
-            </div>
-          </article>
+         <StepContainer intro={this.state.intro} doms={this.state.domaine} domaine={this.state.target}/>
         </RightSection>
       </div>);
   }
